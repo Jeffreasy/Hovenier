@@ -3,13 +3,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import Accordion from '../../components/ui/Accordion.astro'
 import { getCollection } from 'astro:content'
 
-const items = await getCollection('faq', ({ data }) => !data.draft)
+import type { CollectionEntry } from 'astro:content'
+
+const items = await getCollection('faq', ({ data }: CollectionEntry<'faq'>) => !data.draft)
 
 // Group by category
-const grouped = items.reduce<Record<string, typeof items>>((acc, item) => {
+type FaqItem = CollectionEntry<'faq'>
+const grouped = items.reduce<Record<string, FaqItem[]>>((acc: Record<string, FaqItem[]>, item: FaqItem) => {
   const cat = item.data.category
   if (!acc[cat]) acc[cat] = []
-  acc[cat].push(item)
+  acc[cat]!.push(item)
   return acc
 }, {})
 
@@ -32,7 +35,7 @@ const seo = {
           <h2 class="faq-category-title">{category}</h2>
           <div class="faq-list">
             {faqs.map((faq) => (
-              <a href={`/faq/${faq.slug}`} class="faq-row">
+              <a href={`/faq/${faq.id.replace(/\.md$/, '')}`} class="faq-row">
                 <span class="faq-item-question">{faq.data.question}</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M9 18l6-6-6-6"/>

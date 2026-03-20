@@ -193,7 +193,7 @@ const homeSchema = JSON.stringify({
         </div>
         <div class="blog-grid">
           {recentPosts.map((post) => (
-            <Card href={`/blog/${post.slug}`} class="blog-card reveal">
+            <Card href={`/blog/${post.id.replace(/\.md$/, '')}`} class="blog-card reveal">
               <div class="blog-card-body">
                 <Badge label={post.data.category} variant="primary" />
                 <h3 class="blog-card-title">{post.data.title}</h3>

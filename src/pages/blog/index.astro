@@ -26,7 +26,7 @@ const seo = {
 
       <div class="articles-grid">
         {sorted.map((post) => (
-          <Card href={`/blog/${post.slug}`} class="article-card reveal">
+          <Card href={`/blog/${post.id.replace(/\.md$/, '')}`} class="article-card reveal">
             <div class="article-card-body">
               <Badge label={post.data.category} variant="primary" />
               <h2 class="article-card-title">{post.data.title}</h2>
