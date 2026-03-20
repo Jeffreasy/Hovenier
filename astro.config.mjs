@@ -30,7 +30,10 @@ export default defineConfig({
 
   // ── Integrations ────────────────────────────────────────────────────────────
   integrations: [
-    clerk(),           // Clerk auth — must be first
+    clerk({
+      signInUrl:  '/inloggen',
+      signUpUrl:  '/registreren',
+    }),           // Clerk auth — must be first
     react(),
     sitemap(),
   ],
