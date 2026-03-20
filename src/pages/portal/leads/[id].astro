@@ -2,8 +2,7 @@
 export const prerender = false
 import { UserButton } from '@clerk/astro/components'
 
-const user = (Astro.locals as Record<string, unknown> & { auth?: () => { userId?: string } }).auth?.()
-const clerkId = user?.userId ?? ''
+const { userId: clerkId } = Astro.locals.auth()
 const { id } = Astro.params
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 ---
@@ -14,6 +13,8 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lead detail — Hovenier Portal</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body class="portal-body">
@@ -117,9 +118,8 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
             format: 'json',
           }),
         })
-        // Reload UI
         loadLead()
-      } catch(err) {
+      } catch {
         alert('Status bijwerken mislukt, probeer opnieuw.')
       }
     }
@@ -131,38 +131,77 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 </html>
 
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body.portal-body { min-height: 100vh; background: #F5F3EF; font-family: 'Inter', sans-serif; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  body.portal-body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #EDF2EC;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% -10%, rgba(70,110,60,0.15) 0%, transparent 60%),
+      #0D1F12;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
   .portal-header {
-    background: white;
-    border-bottom: 1px solid #E5E5E5;
-    position: sticky; top: 0; z-index: 50;
+    background: rgba(13,31,18,0.72);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
-  .portal-header-inner {
-    max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
-    height: 60px; display: flex; align-items: center; justify-content: space-between;
-  }
-  .portal-back {
-    font-size: 0.875rem; color: #5B7553; font-weight: 600; text-decoration: none;
-  }
-  .portal-back:hover { text-decoration: underline; }
 
+  .portal-header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .portal-back {
+    font-size: 0.875rem;
+    color: var(--color-secondary, #C4A96A);
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .portal-back:hover { opacity: 0.75; text-decoration: none; }
+
+  .portal-user { margin-left: auto; }
+
+  /* ── Main ── */
   .portal-main { padding: 2.5rem 1.5rem; }
   .portal-container { max-width: 900px; margin: 0 auto; }
 
+  /* ── States ── */
   .loading-state, .error-state {
-    text-align: center; padding: 3rem; color: #6B7280;
-    background: white; border-radius: 12px; border: 1px solid #E5E5E5;
+    text-align: center;
+    padding: 3rem;
+    color: rgba(237,242,236,0.40);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
   }
 
-  /* Lead detail */
+  /* ── Lead header ── */
   .lead-header { margin-bottom: 1.5rem; }
+
   .lead-naam {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #EDF2EC;
   }
 
+  /* ── Detail grid ── */
   .detail-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -171,53 +210,86 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   }
 
   .detail-card {
-    background: white;
-    border: 1px solid #E5E5E5;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.09);
     border-radius: 12px;
     padding: 1.5rem;
+    transition: border-color 0.15s;
   }
+
   .detail-card h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.875rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #6B7280;
+    letter-spacing: 0.10em;
+    font-weight: 700;
+    color: rgba(196,169,106,0.60);
     margin-bottom: 1rem;
   }
+
   .detail-list { display: flex; flex-direction: column; gap: 0.625rem; }
   .detail-list > div { display: flex; gap: 0.5rem; font-size: 0.9rem; }
-  .detail-list dt { color: #6B7280; min-width: 90px; flex-shrink: 0; }
-  .detail-list dd { font-weight: 500; }
-  .detail-list a { color: #5B7553; }
+  .detail-list dt { color: rgba(237,242,236,0.40); min-width: 90px; flex-shrink: 0; }
+  .detail-list dd { font-weight: 500; color: rgba(237,242,236,0.85); }
+  .detail-list a { color: #C4A96A; text-decoration: none; }
+  .detail-list a:hover { text-decoration: underline; }
 
+  /* ── Status card ── */
   .status-card { margin-top: 0; }
   .status-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
   .status-btn {
     padding: 0.5rem 1rem;
-    border: 2px solid #E5E5E5;
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 8px;
-    background: white;
+    background: rgba(255,255,255,0.04);
     cursor: pointer;
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: capitalize;
+    color: rgba(237,242,236,0.55);
     transition: all 0.15s;
   }
-  .status-btn:hover { border-color: #5B7553; }
-  .status-btn--active { border-color: #5B7553; background: #E8F0E4; color: #3D5438; }
 
-  .lead-status {
-    display: inline-flex; font-size: 0.75rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em;
-    padding: 0.2rem 0.6rem; border-radius: 99px;
+  .status-btn:hover {
+    border-color: rgba(196,169,106,0.35);
+    color: rgba(237,242,236,0.85);
+    background: rgba(255,255,255,0.07);
   }
-  .lead-status--nieuw    { background: #DBEAFE; color: #1D4ED8; }
-  .lead-status--contact  { background: #FEF3C7; color: #D97706; }
-  .lead-status--gesloten { background: #D1FAE5; color: #065F46; }
 
+  .status-btn--active {
+    border-color: rgba(110,158,101,0.45);
+    background: rgba(110,158,101,0.12);
+    color: #EDF2EC;
+  }
+
+  /* ── Status badges ── */
+  .lead-status {
+    display: inline-flex;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+  }
+
+  .lead-status--nieuw    { background: rgba(59,130,246,0.15);  color: #93C5FD; }
+  .lead-status--contact  { background: rgba(251,191,36,0.15);  color: #FCD34D; }
+  .lead-status--gesloten { background: rgba(52,211,153,0.15);  color: #6EE7B7; }
+
+  /* ── Notities ── */
   .notities {
-    margin-top: 1rem; padding: 0.75rem; background: #F5F3EF;
-    border-radius: 8px; font-size: 0.875rem; color: #4A4A4A;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: rgba(237,242,236,0.55);
+    line-height: 1.6;
   }
 
   @media (max-width: 640px) {

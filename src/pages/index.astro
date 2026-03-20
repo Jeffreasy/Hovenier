@@ -8,7 +8,6 @@ import { SITE, SOCIAL_PROOF } from '../lib/constants'
 import { getCollection } from 'astro:content'
 import { formatDate } from '../lib/utils'
 
-// Fetch featured blog posts
 const allPosts = await getCollection('blog', ({ data }) => !data.draft)
 const recentPosts = allPosts
   .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
@@ -33,11 +32,15 @@ const homeSchema = JSON.stringify({
 ---
 
 <BaseLayout {seo} schema={homeSchema}>
+
   <!-- ════════════════════ HERO ════════════════════ -->
   <section class="hero" aria-label="Zoek een hovenier">
     <div class="container hero-inner">
-      <div class="hero-text reveal">
-        <Badge label="Gratis · Vrijblijvend · Snel" variant="success" />
+      <div class="hero-text reveal-up">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Gratis · Vrijblijvend · Snel
+        </div>
         <h1 class="hero-title">
           Vind de beste hovenier<br/>
           <em class="hero-accent">in jouw buurt</em>
@@ -46,13 +49,21 @@ const homeSchema = JSON.stringify({
           Vergelijk lokale hoveniers op prijs en kwaliteit.
           Ontvang binnen 48 uur gratis offertes van maximaal 3 professionals.
         </p>
+        <div class="hero-trust">
+          <span>⭐ {SOCIAL_PROOF.rating} gemiddeld</span>
+          <span class="trust-dot" aria-hidden="true"></span>
+          <span>{SOCIAL_PROOF.reviews}+ reviews</span>
+          <span class="trust-dot" aria-hidden="true"></span>
+          <span>{SOCIAL_PROOF.hoveniers} hoveniers</span>
+        </div>
       </div>
 
       <!-- Search card -->
-      <div class="hero-search reveal delay-200">
+      <div class="hero-search glass-card--shimmer reveal-scale delay-200">
+        <p class="search-card-title">Wat wil jij laten doen?</p>
         <form class="search-form" action="/offerte" method="get">
           <div class="search-field-group">
-            <label for="postcode" class="search-label">Jouw postcode</label>
+            <label for="postcode" class="search-label">Postcode</label>
             <input
               id="postcode"
               name="postcode"
@@ -65,7 +76,7 @@ const homeSchema = JSON.stringify({
             />
           </div>
           <div class="search-field-group">
-            <label for="dienst" class="search-label">Wat wil je laten doen?</label>
+            <label for="dienst" class="search-label">Type werkzaamheid</label>
             <select id="dienst" name="dienst" class="search-select" required>
               <option value="" disabled selected>Kies een dienst</option>
               <option value="tuinaanleg">Tuinaanleg</option>
@@ -88,26 +99,26 @@ const homeSchema = JSON.stringify({
     </div>
   </section>
 
-  <!-- ════════════════════ SOCIAL PROOF ════════════════════ -->
-  <section class="social-proof section-gap" aria-label="Platform statistieken">
+  <!-- ════════════════════ STATS ════════════════════ -->
+  <section class="stats-section section-gap" aria-label="Platform statistieken">
     <div class="container">
-      <div class="stats-grid reveal">
-        <div class="stat-item">
+      <div class="stats-grid reveal-up">
+        <div class="stat-item reveal-fade delay-100">
           <strong class="stat-number">{SOCIAL_PROOF.offertes}</strong>
           <span class="stat-label">Offertes aangevraagd</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-item">
+        <div class="stat-item reveal-fade delay-200">
           <strong class="stat-number">{SOCIAL_PROOF.hoveniers}</strong>
           <span class="stat-label">Actieve hoveniers</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-item">
+        <div class="stat-item reveal-fade delay-300">
           <strong class="stat-number">⭐ {SOCIAL_PROOF.rating}</strong>
           <span class="stat-label">Gemiddelde beoordeling</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-item">
+        <div class="stat-item reveal-fade delay-400">
           <strong class="stat-number">{SOCIAL_PROOF.reviews}+</strong>
           <span class="stat-label">Beoordelingen</span>
         </div>
@@ -118,14 +129,16 @@ const homeSchema = JSON.stringify({
   <!-- ════════════════════ HOE HET WERKT ════════════════════ -->
   <section class="how-it-works section-gap" aria-label="Hoe het werkt">
     <div class="container">
-      <h2 class="section-title reveal">Hoe het werkt</h2>
+      <p class="section-label reveal">Hoe het werkt</p>
+      <h2 class="section-title reveal">In 3 stappen jouw hovenier gevonden</h2>
       <div class="steps-grid">
         {[
-          { num: '1', title: 'Vul je wensen in', desc: 'Postcode, type werkzaamheid en jouw budget. In 2 minuten ingevuld.' },
-          { num: '2', title: 'Ontvang offertes', desc: 'Binnen 48 uur maximaal 3 offertes van hoveniers bij jou in de buurt.' },
-          { num: '3', title: 'Kies jouw hovenier', desc: 'Vergelijk op prijs en kwaliteit. Beslis zonder druk.' },
-        ].map((step) => (
-          <div class="step-card reveal">
+          { num: '1', title: 'Vul je wensen in', desc: 'Postcode, type werkzaamheid en jouw budget. In 2 minuten ingevuld.', icon: '📋' },
+          { num: '2', title: 'Ontvang offertes', desc: 'Binnen 48 uur maximaal 3 offertes van hoveniers bij jou in de buurt.', icon: '📬' },
+          { num: '3', title: 'Kies jouw hovenier', desc: 'Vergelijk op prijs en kwaliteit. Beslis zonder druk.', icon: '✅' },
+        ].map((step, i) => (
+          <div class={`step-card reveal-up delay-${(i+1)*100}`}>
+            <div class="step-icon">{step.icon}</div>
             <div class="step-num" aria-hidden="true">{step.num}</div>
             <h3 class="step-title">{step.title}</h3>
             <p class="step-desc">{step.desc}</p>
@@ -138,6 +151,7 @@ const homeSchema = JSON.stringify({
   <!-- ════════════════════ CALCULATORS ════════════════════ -->
   <section class="calculators section-gap" aria-label="Handige tools">
     <div class="container">
+      <p class="section-label reveal">Gratis tools</p>
       <h2 class="section-title reveal">Bereken je kosten</h2>
       <p class="section-subtitle reveal">Gebruik onze gratis tools voor een directe prijsindicatie.</p>
       <div class="calc-grid">
@@ -163,14 +177,14 @@ const homeSchema = JSON.stringify({
             href: '/tools/subsidie-check',
             cta: 'Check subsidies',
           },
-        ].map((calc) => (
-          <Card href={calc.href} class="calc-card reveal">
+        ].map((calc, i) => (
+          <Card href={calc.href} class={`calc-card reveal delay-${(i+1)*100}`}>
             <div class="calc-icon" aria-hidden="true">{calc.icon}</div>
             <h3 class="calc-title">{calc.title}</h3>
             <p class="calc-desc">{calc.desc}</p>
             <span class="calc-link">
               {calc.cta}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </span>
@@ -186,14 +200,14 @@ const homeSchema = JSON.stringify({
       <div class="container">
         <div class="section-header reveal">
           <div>
-            <h2 class="section-title">Tuingids & tips</h2>
-            <p class="section-subtitle">Praktische adviezen van tuinexperts voor Nederlandse tuinen.</p>
+            <p class="section-label">Tuingids &amp; tips</p>
+            <h2 class="section-title">Praktisch tuinadvies</h2>
           </div>
           <Button href="/blog" variant="secondary">Alle artikelen</Button>
         </div>
         <div class="blog-grid">
-          {recentPosts.map((post) => (
-            <Card href={`/blog/${post.id.replace(/\.md$/, '')}`} class="blog-card reveal">
+          {recentPosts.map((post, i) => (
+            <Card href={`/blog/${post.id.replace(/\.md$/, '')}`} class={`blog-card reveal delay-${(i+1)*100}`}>
               <div class="blog-card-body">
                 <Badge label={post.data.category} variant="primary" />
                 <h3 class="blog-card-title">{post.data.title}</h3>
@@ -213,30 +227,30 @@ const homeSchema = JSON.stringify({
   <section class="section-gap" aria-label="Offerte aanvragen">
     <div class="container">
       <div class="cta-banner reveal">
+        <div class="cta-banner-bg" aria-hidden="true"></div>
         <div class="cta-banner-text">
-          <h2>Klaar om te vergelijken?</h2>
-          <p>Vraag nu gratis offertes aan. Binnen 48 uur bericht van 3 hoveniers uit jouw regio.</p>
+          <p class="section-label" style="color: rgba(196,169,106,0.70)">Klaar?</p>
+          <h2>Vergelijk gratis en vrijblijvend</h2>
+          <p>Binnen 48 uur bericht van 3 hoveniers uit jouw regio. Geen verplichtingen.</p>
         </div>
         <Button href="/offerte" size="lg">Vraag gratis offertes aan</Button>
       </div>
     </div>
   </section>
+
 </BaseLayout>
 
 <style>
-  /* ─── HERO ───────────────────────────────────────────────── */
+  /* ─── HERO ──────────────────────────────────────────────────────────── */
   .hero {
-    background: linear-gradient(145deg, var(--color-primary-light) 0%, var(--color-neutral-100) 60%);
-    border-bottom: 1px solid rgba(91,117,83,0.12);
-    padding: 4rem 0;
+    padding: 5rem 0 4rem;
+    position: relative;
   }
-
-  @media (min-width: 768px) { .hero { padding: 5rem 0 4rem; } }
 
   .hero-inner {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
   }
 
   @media (min-width: 900px) {
@@ -246,69 +260,130 @@ const homeSchema = JSON.stringify({
     }
   }
 
-  .hero-text { display: flex; flex-direction: column; gap: 1rem; }
+  .hero-text { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  /* Badge pill */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.875rem;
+    background: rgba(110,158,101,0.12);
+    border: 1px solid rgba(110,158,101,0.28);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+    align-self: flex-start;
+  }
+
+  .hero-badge-dot {
+    width: 6px; height: 6px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(110,158,101,0.60);
+    animation: pulse-dot 2.5s ease-in-out infinite;
+  }
 
   .hero-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.1;
-    margin: 0.5rem 0 0;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #EDF2EC;
+    margin: 0;
   }
 
   .hero-accent {
-    color: var(--color-primary);
     font-style: normal;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #E8C87A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .hero-subtitle {
     font-size: 1.0625rem;
-    color: var(--color-neutral-700);
-    max-width: 480px;
+    color: rgba(237,242,236,0.65);
+    max-width: 440px;
     margin: 0;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
-  /* ─── SEARCH CARD ──────────────────────────────────────── */
-  .hero-search {
-    background: white;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
-    padding: 1.75rem;
-  }
-
-  .search-form {
+  .hero-trust {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 0.8125rem;
+    color: rgba(237,242,236,0.45);
+    font-weight: 500;
   }
+
+  .trust-dot {
+    width: 3px; height: 3px;
+    background: rgba(237,242,236,0.30);
+    border-radius: 50%;
+  }
+
+  /* ─── SEARCH CARD ───────────────────────────────────────────────────── */
+  .hero-search {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.40), 0 0 0 1px rgba(255,255,255,0.05) inset;
+  }
+
+  .search-card-title {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(237,242,236,0.70);
+    margin: 0 0 1.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .search-form { display: flex; flex-direction: column; gap: 1rem; }
 
   .search-label {
     display: block;
     font-family: var(--font-heading);
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: var(--color-neutral-700);
+    color: rgba(237,242,236,0.55);
     margin-bottom: 0.375rem;
+    letter-spacing: 0.03em;
   }
 
   .search-input,
   .search-select {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 2px solid var(--color-neutral-200);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: var(--radius-md);
     font-family: var(--font-body);
     font-size: 1rem;
-    color: var(--color-neutral-900);
-    background: var(--color-neutral-100);
-    transition: border-color var(--transition-fast);
+    color: #EDF2EC;
+    background: rgba(255,255,255,0.06);
+    transition: border-color var(--transition-fast), background var(--transition-fast);
     appearance: none;
+  }
+
+  .search-input::placeholder { color: rgba(237,242,236,0.30); }
+
+  .search-select option {
+    background: #142619;
+    color: #EDF2EC;
   }
 
   .search-input:focus,
   .search-select:focus {
     outline: none;
-    border-color: var(--color-primary);
-    background: white;
+    border-color: rgba(196,169,106,0.45);
+    background: rgba(255,255,255,0.10);
   }
 
   .search-btn {
@@ -317,41 +392,52 @@ const homeSchema = JSON.stringify({
     justify-content: center;
     gap: 0.5rem;
     width: 100%;
-    padding: 0.875rem 1.5rem;
-    background-color: var(--color-secondary);
-    color: var(--color-neutral-900);
+    padding: 0.9rem 1.5rem;
+    background: var(--color-secondary);
+    color: #1C1400;
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 700;
     border: none;
     border-radius: var(--radius-md);
     cursor: pointer;
+    box-shadow: 0 4px 16px rgba(196,169,106,0.30);
     transition: all var(--transition-fast);
     margin-top: 0.25rem;
   }
 
   .search-btn:hover {
-    background-color: var(--color-secondary-dark);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    background: var(--color-secondary-dark);
+    box-shadow:
+      0 8px 28px rgba(196,169,106,0.50),
+      0 2px 8px  rgba(196,169,106,0.25);
+    transform: translateY(-2px) scale(1.01);
+  }
+
+  .search-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(196,169,106,0.25);
+    transition-duration: 0.08s;
   }
 
   .search-note {
-    font-size: 0.8rem;
-    color: var(--color-neutral-600);
+    font-size: 0.78rem;
+    color: rgba(237,242,236,0.35);
     text-align: center;
     margin: 0.75rem 0 0;
   }
 
-  /* ─── STATS ─────────────────────────────────────────────── */
+  /* ─── STATS ─────────────────────────────────────────────────────────── */
   .stats-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0;
-    background: white;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.09);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-sm);
     overflow: hidden;
   }
 
@@ -362,36 +448,34 @@ const homeSchema = JSON.stringify({
     gap: 0.25rem;
     padding: 1.5rem 2rem;
     flex: 1;
-    min-width: 140px;
+    min-width: 130px;
   }
 
   .stat-number {
     font-family: var(--font-heading);
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--color-primary-dark);
+    color: var(--color-secondary);
   }
 
   .stat-label {
-    font-size: 0.8rem;
-    color: var(--color-neutral-600);
+    font-size: 0.78rem;
+    color: rgba(237,242,236,0.45);
     text-align: center;
   }
 
   .stat-divider {
     width: 1px;
-    background: var(--color-neutral-200);
+    background: rgba(255,255,255,0.07);
     margin: 1rem 0;
   }
 
-  /* ─── HOW IT WORKS ──────────────────────────────────────── */
-  .how-it-works { background-color: var(--color-primary-light); }
-
+  /* ─── HOW IT WORKS ──────────────────────────────────────────────────── */
   .steps-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
+    gap: 1.25rem;
+    margin-top: 2rem;
   }
 
   @media (min-width: 768px) {
@@ -399,39 +483,53 @@ const homeSchema = JSON.stringify({
   }
 
   .step-card {
-    background: white;
-    border-radius: var(--radius-lg);
-    padding: 1.75rem;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
     position: relative;
+    transition: border-color var(--transition-base), transform var(--transition-base);
+  }
+
+  .step-card:hover {
+    border-color: rgba(196,169,106,0.25);
+    transform: translateY(-3px);
+  }
+
+  .step-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
   }
 
   .step-num {
-    width: 2.5rem;
-    height: 2.5rem;
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
     font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
   }
 
   .step-title {
     font-size: 1.0625rem;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem;
+    color: #EDF2EC;
   }
 
   .step-desc {
-    color: var(--color-neutral-600);
+    color: rgba(237,242,236,0.55);
     font-size: 0.9rem;
     margin: 0;
+    line-height: 1.65;
   }
 
-  /* ─── CALCULATORS ───────────────────────────────────────── */
+  /* ─── CALCULATORS ──────────────────────────────────────────────────── */
   .calc-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -445,18 +543,16 @@ const homeSchema = JSON.stringify({
 
   :global(.calc-card) { display: flex; flex-direction: column; gap: 0.75rem; }
 
-  .calc-icon { font-size: 2rem; }
+  .calc-icon { font-size: 2.25rem; }
 
-  .calc-title {
-    font-size: 1.0625rem;
-    margin: 0;
-  }
+  .calc-title { font-size: 1.0625rem; margin: 0; color: #EDF2EC; }
 
   .calc-desc {
-    color: var(--color-neutral-600);
+    color: rgba(237,242,236,0.52);
     font-size: 0.875rem;
     margin: 0;
     flex: 1;
+    line-height: 1.65;
   }
 
   .calc-link {
@@ -464,13 +560,18 @@ const homeSchema = JSON.stringify({
     align-items: center;
     gap: 0.375rem;
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     margin-top: auto;
+    transition: gap var(--transition-fast);
   }
 
-  /* ─── BLOG ──────────────────────────────────────────────── */
+  :global(.calc-card:hover) .calc-link {
+    gap: 0.5rem;
+  }
+
+  /* ─── SECTION HEADERS ──────────────────────────────────────────────── */
   .section-header {
     display: flex;
     align-items: flex-end;
@@ -480,13 +581,18 @@ const homeSchema = JSON.stringify({
     margin-bottom: 2rem;
   }
 
-  .section-title { margin-bottom: 0.25rem; }
-
-  .section-subtitle {
-    color: var(--color-neutral-600);
-    margin: 0;
+  .section-title {
+    margin-bottom: 0.25rem;
+    color: #EDF2EC;
   }
 
+  .section-subtitle {
+    color: rgba(237,242,236,0.52);
+    margin: 0.25rem 0 0;
+    font-size: 1rem;
+  }
+
+  /* ─── BLOG ─────────────────────────────────────────────────────────── */
   .blog-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -501,34 +607,32 @@ const homeSchema = JSON.stringify({
     .blog-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
-  .blog-card-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+  .blog-card-body { display: flex; flex-direction: column; gap: 0.625rem; }
 
-  .blog-card-title {
-    font-size: 1rem;
-    margin: 0;
-  }
+  .blog-card-title { font-size: 1rem; margin: 0; color: #EDF2EC; }
 
   .blog-card-desc {
     font-size: 0.875rem;
-    color: var(--color-neutral-600);
+    color: rgba(237,242,236,0.50);
     margin: 0;
     flex: 1;
+    line-height: 1.6;
   }
 
   .blog-card-date {
-    font-size: 0.8rem;
-    color: var(--color-neutral-400);
+    font-size: 0.78rem;
+    color: rgba(237,242,236,0.30);
     margin-top: 0.25rem;
   }
 
-  /* ─── CTA BANNER ────────────────────────────────────────── */
+  /* ─── CTA BANNER ────────────────────────────────────────────────────── */
   .cta-banner {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: white;
+    position: relative;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-top: 2px solid var(--color-secondary);
     border-radius: var(--radius-2xl);
     padding: 3rem;
     display: flex;
@@ -536,16 +640,28 @@ const homeSchema = JSON.stringify({
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(196,169,106,0.08);
   }
 
+  /* Ambient glow */
+  .cta-banner-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 10% 50%, rgba(110,158,101,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .cta-banner-text { position: relative; }
+
   .cta-banner-text h2 {
-    color: white;
+    color: #EDF2EC;
     margin-bottom: 0.5rem;
   }
 
   .cta-banner-text p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(237,242,236,0.55);
     margin: 0;
-    max-width: 500px;
+    max-width: 480px;
   }
 </style>

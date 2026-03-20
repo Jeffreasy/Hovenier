@@ -3,13 +3,14 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=24.0.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev":        "astro dev",
+    "build":      "astro check && astro build",
+    "preview":    "astro preview",
+    "astro":      "astro",
+    "type-check": "astro check"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",

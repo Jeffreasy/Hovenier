@@ -3,6 +3,8 @@ import LocalLayout from '../../layouts/LocalLayout.astro'
 import { getCollection } from 'astro:content'
 import type { Stad, FAQItem } from '../../lib/types'
 
+export const prerender = true
+
 export async function getStaticPaths() {
   const steden = await getCollection('steden')
   return steden.map((stad) => ({
@@ -108,16 +110,20 @@ const seo = {
 
   .offerte-btn:hover {
     background-color: var(--color-secondary-dark);
+    box-shadow: 0 4px 20px rgba(196,169,106,0.35);
+    transform: translateY(-1px);
     text-decoration: none;
   }
 
   .sidebar-tip {
-    background: var(--color-primary-light);
+    background: rgba(110,158,101,0.08);
+    border: 1px solid rgba(110,158,101,0.20);
+    border-left: 3px solid rgba(110,158,101,0.40);
     border-radius: var(--radius-md);
     padding: 1rem;
     font-size: 0.875rem;
   }
 
-  .sidebar-tip strong { display: block; margin-bottom: 0.25rem; }
-  .sidebar-tip p { margin: 0; color: var(--color-neutral-700); }
+  .sidebar-tip strong { display: block; margin-bottom: 0.375rem; color: rgba(237,242,236,0.85); }
+  .sidebar-tip p { margin: 0; color: rgba(237,242,236,0.50); line-height: 1.6; }
 </style>

@@ -5,6 +5,8 @@ import { getCollection, getEntry } from 'astro:content'
 import { getReadingTime } from '../../lib/utils'
 import { render } from 'astro:content'
 
+export const prerender = true
+
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft)
   return posts.map((post) => ({
@@ -58,11 +60,11 @@ const seo = {
 <style>
   .toc-title {
     font-family: var(--font-heading);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-neutral-600);
+    letter-spacing: 0.10em;
+    color: rgba(196,169,106,0.60);
     margin: 0 0 0.75rem;
   }
 
@@ -76,13 +78,14 @@ const seo = {
   }
 
   .toc-item a {
-    font-size: 0.875rem;
-    color: var(--color-neutral-700);
+    font-size: 0.8125rem;
+    color: rgba(237,242,236,0.48);
     text-decoration: none;
     line-height: 1.4;
+    transition: color var(--transition-fast);
   }
 
-  .toc-item a:hover { color: var(--color-primary); }
+  .toc-item a:hover { color: rgba(237,242,236,0.85); }
 
   .toc-depth-3 { padding-left: 1rem; }
 </style>

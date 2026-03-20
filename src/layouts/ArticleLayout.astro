@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro'
 import CTABlock from '../components/ui/CTABlock.astro'
 import type { SEOMeta } from '../lib/types'
-import { formatDate, getReadingTime } from '../lib/utils'
+import { formatDate } from '../lib/utils'
 
 interface Props {
   seo: SEOMeta
@@ -29,7 +29,6 @@ const {
   relatedPosts = [],
 } = Astro.props
 
-// Article schema markup
 const articleSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -90,18 +89,14 @@ const articleSchema = JSON.stringify({
 
     <!-- Content + sidebar -->
     <div class="article-body container">
-      <!-- Table of contents slot -->
       <aside class="article-toc">
         <div class="toc-sticky">
           <slot name="toc" />
         </div>
       </aside>
 
-      <!-- Main content -->
       <div class="article-content prose">
         <slot />
-
-        <!-- Mid-article CTA -->
         <CTABlock
           title="Wil je weten wat jouw tuin kost?"
           description="Gebruik onze gratis calculator voor een directe prijsindicatie."
@@ -153,7 +148,8 @@ const articleSchema = JSON.stringify({
 
 <style>
   .article-header {
-    background-color: var(--color-primary-light);
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
     padding: 3rem 0 2rem;
   }
 
@@ -165,25 +161,27 @@ const articleSchema = JSON.stringify({
   }
 
   .article-category {
-    background-color: var(--color-primary);
-    color: white;
+    background: rgba(110,158,101,0.15);
+    color: var(--color-primary);
+    border: 1px solid rgba(110,158,101,0.25);
     font-family: var(--font-heading);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
     border-radius: var(--radius-full);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.07em;
   }
 
   .article-title {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     margin-bottom: 1rem;
+    color: #EDF2EC;
   }
 
   .article-description {
     font-size: 1.125rem;
-    color: var(--color-neutral-700);
+    color: rgba(237,242,236,0.62);
     max-width: 640px;
     margin-bottom: 1.5rem;
   }
@@ -193,7 +191,7 @@ const articleSchema = JSON.stringify({
     align-items: center;
     gap: 0.75rem;
     font-size: 0.875rem;
-    color: var(--color-neutral-600);
+    color: rgba(237,242,236,0.40);
   }
 
   .article-image img {
@@ -210,14 +208,10 @@ const articleSchema = JSON.stringify({
   }
 
   @media (min-width: 1024px) {
-    .article-body {
-      grid-template-columns: 240px 1fr;
-    }
+    .article-body { grid-template-columns: 240px 1fr; }
   }
 
-  .article-toc {
-    display: none;
-  }
+  .article-toc { display: none; }
 
   @media (min-width: 1024px) {
     .article-toc { display: block; }
@@ -227,7 +221,7 @@ const articleSchema = JSON.stringify({
   .article-author {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 2px solid var(--color-primary-light);
+    border-top: 1px solid rgba(255,255,255,0.08);
   }
 
   .author-block {
@@ -236,22 +230,20 @@ const articleSchema = JSON.stringify({
     align-items: flex-start;
   }
 
-  .author-avatar {
-    font-size: 2.5rem;
-    flex-shrink: 0;
-  }
+  .author-avatar { font-size: 2.5rem; flex-shrink: 0; }
 
   .author-info strong {
     display: block;
     font-family: var(--font-heading);
     font-size: 1rem;
     margin-bottom: 0.25rem;
+    color: #EDF2EC;
   }
 
   .author-info p {
     margin: 0;
     font-size: 0.875rem;
-    color: var(--color-neutral-600);
+    color: rgba(237,242,236,0.50);
   }
 
   .related-grid {
@@ -265,33 +257,35 @@ const articleSchema = JSON.stringify({
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    background: white;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: var(--radius-lg);
     padding: 1.25rem;
-    box-shadow: var(--shadow-sm);
     text-decoration: none;
     color: inherit;
-    transition: box-shadow var(--transition-base), transform var(--transition-base);
+    transition: border-color var(--transition-base), transform var(--transition-base);
   }
 
   .related-card:hover {
-    box-shadow: var(--shadow-md);
+    border-color: rgba(255,255,255,0.20);
     transform: translateY(-2px);
     text-decoration: none;
   }
 
   .related-category {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.07em;
   }
 
   .related-title {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--color-neutral-900);
+    color: rgba(237,242,236,0.80);
   }
 </style>

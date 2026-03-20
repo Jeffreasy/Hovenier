@@ -3,6 +3,9 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
 ---
 
 <footer class="site-footer">
+  <!-- Divider glow lijn -->
+  <div class="footer-glow-line" aria-hidden="true"></div>
+
   <div class="container footer-grid">
     <!-- Brand column -->
     <div class="footer-brand">
@@ -28,11 +31,11 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
 
     <!-- Services -->
     <nav aria-label="Diensten">
-      <h3 class="footer-heading">Diensten</h3>
+      <h3 class="footer-heading">Tools</h3>
       <ul class="footer-list" role="list">
         <li><a href="/steden" class="footer-link">Steden overzicht</a></li>
         <li><a href="/tools/tuinkosten-calculator" class="footer-link">Tuinkosten Calculator</a></li>
-        <li><a href="/blog" class="footer-link">Tuingids & tips</a></li>
+        <li><a href="/blog" class="footer-link">Tuingids &amp; tips</a></li>
         <li><a href="/faq" class="footer-link">Veelgestelde vragen</a></li>
       </ul>
     </nav>
@@ -45,6 +48,7 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
         <li><a href="/over-ons" class="footer-link">Over ons</a></li>
         <li><a href="/privacybeleid" class="footer-link">Privacybeleid</a></li>
         <li><a href="/algemene-voorwaarden" class="footer-link">Algemene voorwaarden</a></li>
+        <li><a href="/inloggen" class="footer-link footer-link--portal">🔐 Hovenier portal</a></li>
       </ul>
       <p class="footer-contact">
         <a href={`mailto:${SITE.email}`} class="footer-link">{SITE.email}</a>
@@ -67,9 +71,22 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
 
 <style>
   .site-footer {
-    background-color: var(--color-primary-dark);
-    color: var(--color-primary-light);
+    position: relative;
+    background: rgba(8, 18, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     margin-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .footer-glow-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(196,169,106,0.35), transparent);
   }
 
   .footer-grid {
@@ -96,32 +113,35 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
     font-family: var(--font-heading);
     font-size: 1.125rem;
     font-weight: 700;
-    color: white;
+    color: #EDF2EC;
     margin-bottom: 0.75rem;
   }
 
   .footer-tagline {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: var(--color-secondary-light);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
     margin: 0 0 0.5rem;
+    opacity: 0.85;
   }
 
   .footer-desc {
     font-size: 0.875rem;
-    color: var(--color-primary-light);
-    opacity: 0.8;
+    color: rgba(237,242,236,0.45);
     line-height: 1.6;
     margin: 0;
   }
 
   .footer-heading {
     font-family: var(--font-heading);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-secondary-light);
+    letter-spacing: 0.12em;
+    color: var(--color-secondary);
+    opacity: 0.70;
     margin: 0 0 1rem;
   }
 
@@ -136,22 +156,29 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
 
   .footer-link {
     font-size: 0.875rem;
-    color: var(--color-primary-light);
+    color: rgba(237,242,236,0.50);
     text-decoration: none;
-    opacity: 0.8;
-    transition: opacity var(--transition-fast);
+    transition: color var(--transition-fast);
   }
 
   .footer-link:hover {
-    opacity: 1;
-    color: white;
+    color: #EDF2EC;
     text-decoration: none;
+  }
+
+  .footer-link--portal {
+    color: rgba(196,169,106,0.55);
+    margin-top: 0.375rem;
+  }
+
+  .footer-link--portal:hover {
+    color: var(--color-secondary);
   }
 
   .footer-contact { margin-top: 1rem; }
 
   .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
 
   .footer-bottom-inner {
@@ -167,6 +194,6 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
   .footer-disclaimer {
     margin: 0;
     font-size: 0.75rem;
-    opacity: 0.6;
+    color: rgba(237,242,236,0.28);
   }
 </style>

@@ -2,17 +2,8 @@
 export const prerender = false
 import { UserButton } from '@clerk/astro/components'
 
-// Auth — middleware zorgt ervoor dat je hier alleen binnenkomt als ingelogd
-const user = (Astro.locals as Record<string, unknown> & { auth?: () => { userId?: string } }).auth?.()
-const clerkId = user?.userId ?? ''
-
-// Fetch leads van Convex
-// NOTE: We fetchen server-side via de Convex HTTP endpoint
-// In een latere iteratie kun je hier de Convex client SDK gebruiken.
+const { userId: clerkId } = Astro.locals.auth()
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
-
-// Voor server-side data fetching van Convex queries gebruiken we de REST API
-// Tijdelijk: leeg array — data wordt geladen via client-side island
 const leads: unknown[] = []
 ---
 
@@ -22,6 +13,7 @@ const leads: unknown[] = []
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dashboard — Hovenier Portal</title>
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
@@ -45,7 +37,6 @@ const leads: unknown[] = []
   <main class="portal-main">
     <div class="portal-container">
 
-      <!-- Page header -->
       <div class="page-header">
         <h1>Jouw leads</h1>
         <p class="page-sub">Overzicht van alle offerte-aanvragen die bij jou passen.</p>
@@ -54,9 +45,9 @@ const leads: unknown[] = []
       <!-- Stats -->
       <div class="stats-row">
         {[
-          { label: 'Nieuw',     emoji: '🔵', id: 'nieuw' },
-          { label: 'In contact',emoji: '🟡', id: 'contact' },
-          { label: 'Gesloten',  emoji: '🟢', id: 'gesloten' },
+          { label: 'Nieuw',      emoji: '🔵', id: 'nieuw' },
+          { label: 'In contact', emoji: '🟡', id: 'contact' },
+          { label: 'Gesloten',   emoji: '🟢', id: 'gesloten' },
         ].map((s) => (
           <div class="stat-card" id={`stat-${s.id}`}>
             <span class="stat-emoji">{s.emoji}</span>
@@ -66,7 +57,7 @@ const leads: unknown[] = []
         ))}
       </div>
 
-      <!-- Leads lijst (geladen via client-side script) -->
+      <!-- Leads lijst -->
       <div id="leads-list" class="leads-list">
         <div class="leads-loading">
           <span>⏳</span> Leads laden…
@@ -76,26 +67,18 @@ const leads: unknown[] = []
     </div>
   </main>
 
-  <!-- Client-side script: laadt leads via Convex HTTP -->
   <script define:vars={{ convexUrl, clerkId }}>
     async function loadLeads() {
       const list = document.getElementById('leads-list')
       if (!list) return
-
       try {
-        // Convex query via HTTP API (read-only)
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            path: 'leads:getMyLeads',
-            args: { clerkId },
-            format: 'json',
-          }),
+          body: JSON.stringify({ path: 'leads:getMyLeads', args: { clerkId }, format: 'json' }),
         })
         const { value: leads } = await res.json()
 
-        // Update stats
         const counts = { nieuw: 0, contact: 0, gesloten: 0 }
         leads.forEach(l => { if (l.status in counts) counts[l.status]++ })
         Object.entries(counts).forEach(([k, v]) => {
@@ -103,12 +86,8 @@ const leads: unknown[] = []
           if (el) el.textContent = String(v)
         })
 
-        // Render leads
         if (!leads.length) {
-          list.innerHTML = `<div class="leads-empty">
-            <span>📭</span>
-            <p>Nog geen leads toegewezen. Je ontvangt een e-mail zodra er een aanvraag binnenkomt.</p>
-          </div>`
+          list.innerHTML = `<div class="leads-empty"><span>📭</span><p>Nog geen leads toegewezen. Je ontvangt een e-mail zodra er een aanvraag binnenkomt.</p></div>`
           return
         }
 
@@ -125,12 +104,10 @@ const leads: unknown[] = []
             </div>
           </a>
         `).join('')
-
-      } catch (err) {
+      } catch {
         list.innerHTML = `<div class="leads-empty"><span>⚠</span><p>Laden mislukt. Ververs de pagina.</p></div>`
       }
     }
-
     loadLeads()
   </script>
 
@@ -138,23 +115,29 @@ const leads: unknown[] = []
 </html>
 
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body.portal-body {
     min-height: 100vh;
-    background: #F5F3EF;
     font-family: 'Inter', sans-serif;
-    color: #2D2D2D;
+    color: #EDF2EC;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% -10%, rgba(70,110,60,0.15) 0%, transparent 60%),
+      #0D1F12;
+    -webkit-font-smoothing: antialiased;
   }
 
-  /* Header */
+  /* ── Header ── */
   .portal-header {
-    background: white;
-    border-bottom: 1px solid #E5E5E5;
+    background: rgba(13,31,18,0.72);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     position: sticky;
     top: 0;
     z-index: 50;
   }
+
   .portal-header-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -164,77 +147,95 @@ const leads: unknown[] = []
     align-items: center;
     gap: 1.5rem;
   }
+
   .portal-logo {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #3D5438;
+    color: #EDF2EC;
     text-decoration: none;
     flex-shrink: 0;
   }
+
   .portal-nav { display: flex; gap: 0.25rem; margin-left: 1rem; }
+
   .portal-nav-link {
     padding: 0.375rem 0.75rem;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #6B7280;
+    color: rgba(237,242,236,0.55);
     text-decoration: none;
     transition: all 0.15s;
   }
-  .portal-nav-link:hover { background: #E8F0E4; color: #3D5438; }
-  .portal-nav-link--active { background: #E8F0E4; color: #3D5438; font-weight: 600; }
+
+  .portal-nav-link:hover { background: rgba(255,255,255,0.07); color: #EDF2EC; }
+
+  .portal-nav-link--active {
+    background: rgba(110,158,101,0.15);
+    color: #EDF2EC;
+    font-weight: 600;
+  }
+
   .portal-user { margin-left: auto; }
 
-  /* Main */
+  /* ── Main ── */
   .portal-main { padding: 2.5rem 1.5rem; }
   .portal-container { max-width: 1100px; margin: 0 auto; }
 
-  /* Page header */
   .page-header { margin-bottom: 2rem; }
-  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; }
-  .page-sub { margin-top: 0.375rem; color: #6B7280; }
+  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #EDF2EC; }
+  .page-sub { margin-top: 0.375rem; color: rgba(237,242,236,0.45); }
 
-  /* Stats */
+  /* ── Stat cards ── */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-bottom: 2rem;
   }
+
   .stat-card {
-    background: white;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 12px;
     padding: 1.25rem;
-    border: 1px solid #E5E5E5;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    transition: border-color 0.15s;
   }
-  .stat-emoji { font-size: 1.25rem; }
-  .stat-label { font-size: 0.8rem; color: #6B7280; font-weight: 500; }
-  .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #3D5438; }
 
-  /* Leads */
-  .leads-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .stat-card:hover { border-color: rgba(196,169,106,0.25); }
+
+  .stat-emoji { font-size: 1.25rem; }
+  .stat-label { font-size: 0.8rem; color: rgba(237,242,236,0.45); font-weight: 500; }
+  .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #C4A96A; }
+
+  /* ── Lead list ── */
+  .leads-list { display: flex; flex-direction: column; gap: 0.625rem; }
+
   .leads-loading, .leads-empty {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
     padding: 3rem;
-    background: white;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 12px;
-    color: #6B7280;
+    color: rgba(237,242,236,0.40);
     font-size: 0.9rem;
     text-align: center;
-    border: 1px solid #E5E5E5;
   }
+
   .leads-empty span { font-size: 2rem; }
 
   .lead-card {
-    background: white;
-    border: 1px solid #E5E5E5;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
     border-radius: 10px;
     padding: 1rem 1.25rem;
     display: flex;
@@ -244,27 +245,34 @@ const leads: unknown[] = []
     color: inherit;
     transition: all 0.15s;
   }
-  .lead-card:hover { border-color: #5B7553; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+
+  .lead-card:hover {
+    border-color: rgba(196,169,106,0.30);
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-1px);
+  }
+
   .lead-card-left { display: flex; flex-direction: column; gap: 0.25rem; }
-  .lead-naam { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
-  .lead-meta { font-size: 0.8rem; color: #6B7280; }
-  .lead-card-right { display: flex; align-items: center; gap: 0.5rem; color: #6B7280; }
-  .lead-budget { font-size: 0.875rem; color: #5B7553; font-weight: 600; }
+  .lead-naam { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: #EDF2EC; }
+  .lead-meta { font-size: 0.8rem; color: rgba(237,242,236,0.40); }
+  .lead-card-right { display: flex; align-items: center; gap: 0.5rem; color: rgba(237,242,236,0.35); }
+  .lead-budget { font-size: 0.875rem; color: #C4A96A; font-weight: 600; }
 
   .lead-status {
     display: inline-flex;
     align-items: center;
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     padding: 0.15rem 0.5rem;
     border-radius: 99px;
     width: fit-content;
   }
-  .lead-status--nieuw    { background: #DBEAFE; color: #1D4ED8; }
-  .lead-status--contact  { background: #FEF3C7; color: #D97706; }
-  .lead-status--gesloten { background: #D1FAE5; color: #065F46; }
+
+  .lead-status--nieuw    { background: rgba(59,130,246,0.15);  color: #93C5FD; }
+  .lead-status--contact  { background: rgba(251,191,36,0.15);  color: #FCD34D; }
+  .lead-status--gesloten { background: rgba(52,211,153,0.15);  color: #6EE7B7; }
 
   @media (max-width: 640px) {
     .stats-row { grid-template-columns: 1fr; }

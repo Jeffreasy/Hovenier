@@ -13,7 +13,6 @@ interface Props {
 
 const { seo, title, intro, faqs = [] } = Astro.props
 
-// FAQ schema markup
 const faqSchema = faqs.length > 0 ? JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -42,10 +41,10 @@ const faqSchema = faqs.length > 0 ? JSON.stringify({
       </div>
     </section>
 
-    <!-- Result CTA (shown after calculator output) -->
+    <!-- Result CTA -->
     <slot name="result-cta" />
 
-    <!-- SEO explanation text -->
+    <!-- SEO text -->
     <section class="tool-explainer section-gap">
       <div class="container prose">
         <slot name="explainer" />
@@ -81,28 +80,30 @@ const faqSchema = faqs.length > 0 ? JSON.stringify({
 
 <style>
   .tool-header {
-    background: linear-gradient(150deg, var(--color-primary-light) 0%, var(--color-neutral-100) 100%);
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
     padding: 3rem 0 2.5rem;
-    border-bottom: 1px solid var(--color-primary-light);
   }
 
-  .tool-title {
-    margin-bottom: 0.75rem;
-  }
+  .tool-title { color: #EDF2EC; margin-bottom: 0.75rem; }
 
   .tool-intro {
     font-size: 1.125rem;
-    color: var(--color-neutral-700);
+    color: rgba(237,242,236,0.60);
     max-width: 600px;
     margin: 0;
   }
 
+  /* Island container: glass wrapper for React calculators */
   .tool-island-inner {
-    background: white;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255,255,255,0.11);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg);
     padding: 2rem;
     max-width: 760px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.30);
   }
 
   .tool-faq-list {

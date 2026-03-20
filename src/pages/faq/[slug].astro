@@ -5,6 +5,8 @@ import { getCollection } from 'astro:content'
 import { getEntry } from 'astro:content'
 import { render } from 'astro:content'
 
+export const prerender = true
+
 export async function getStaticPaths() {
   const items = await getCollection('faq', ({ data }) => !data.draft)
   return items.map((item) => ({

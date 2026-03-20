@@ -9,10 +9,14 @@ import { SignIn } from '@clerk/astro/components'
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inloggen — Tuinplatform Hovenier Portal</title>
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body class="auth-body">
+  <!-- Background grain -->
+  <div class="auth-grain" aria-hidden="true"></div>
+
   <div class="auth-wrapper">
     <div class="auth-brand">
       <a href="/" class="auth-logo">🌿 Tuinplatform</a>
@@ -25,17 +29,36 @@ import { SignIn } from '@clerk/astro/components'
   </div>
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body.auth-body {
       min-height: 100vh;
-      background: #F5F3EF;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Inter', sans-serif;
       padding: 2rem 1rem;
+      color: #EDF2EC;
+      background:
+        radial-gradient(ellipse 90% 70% at 50% -10%, rgba(70,110,60,0.20) 0%, transparent 55%),
+        #0D1F12;
+      -webkit-font-smoothing: antialiased;
     }
+
+    /* very subtle grain texture */
+    .auth-grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
     .auth-wrapper {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -43,18 +66,22 @@ import { SignIn } from '@clerk/astro/components'
       width: 100%;
       max-width: 480px;
     }
+
     .auth-brand { text-align: center; }
+
     .auth-logo {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 1.5rem;
       font-weight: 700;
-      color: #3D5438;
+      color: #EDF2EC;
       text-decoration: none;
+      letter-spacing: -0.01em;
     }
+
     .auth-brand p {
       margin-top: 0.375rem;
       font-size: 0.875rem;
-      color: #6B7280;
+      color: rgba(237,242,236,0.40);
     }
   </style>
 </body>

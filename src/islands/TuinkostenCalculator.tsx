@@ -162,7 +162,7 @@ const TuinkostenCalculator: FC = () => {
       )}
 
       <style>{`
-        .calc-wrapper { font-family: 'Inter', sans-serif; }
+        .calc-wrapper { font-family: 'Inter', sans-serif; color: #EDF2EC; }
 
         .calc-progress {
           display: flex;
@@ -184,8 +184,8 @@ const TuinkostenCalculator: FC = () => {
           width: 2rem;
           height: 2rem;
           border-radius: 50%;
-          background: #E5E5E5;
-          color: #6B7280;
+          background: rgba(255,255,255,0.10);
+          color: rgba(237,242,236,0.40);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -194,20 +194,20 @@ const TuinkostenCalculator: FC = () => {
           transition: all 0.2s;
         }
 
-        .prog-step--done .prog-dot  { background: #5B7553; color: white; }
-        .prog-step--active .prog-dot { background: #5B7553; color: white; box-shadow: 0 0 0 4px #E8F0E4; }
+        .prog-step--done .prog-dot  { background: #6E9E65; color: #EDF2EC; }
+        .prog-step--active .prog-dot { background: #C4A96A; color: #1C1400; box-shadow: 0 0 0 4px rgba(196,169,106,0.20); }
 
         .prog-label {
           font-size: 0.7rem;
-          color: #6B7280;
+          color: rgba(237,242,236,0.35);
           text-align: center;
           white-space: nowrap;
         }
 
         .calc-step { display: flex; flex-direction: column; gap: 1.25rem; }
 
-        .step-title { margin: 0; font-size: 1.25rem; }
-        .step-hint  { margin: 0; font-size: 0.875rem; color: #6B7280; }
+        .step-title { margin: 0; font-size: 1.25rem; color: #EDF2EC; }
+        .step-hint  { margin: 0; font-size: 0.875rem; color: rgba(237,242,236,0.45); }
 
         /* m² slider */
         .m2-display {
@@ -216,7 +216,8 @@ const TuinkostenCalculator: FC = () => {
           gap: 0.25rem;
           justify-content: center;
           padding: 1.5rem;
-          background: #E8F0E4;
+          background: rgba(110,158,101,0.10);
+          border: 1px solid rgba(110,158,101,0.20);
           border-radius: 12px;
         }
 
@@ -224,15 +225,15 @@ const TuinkostenCalculator: FC = () => {
           font-size: 3.5rem;
           font-weight: 700;
           font-family: 'Plus Jakarta Sans', sans-serif;
-          color: #3D5438;
+          color: #C4A96A;
           line-height: 1;
         }
 
-        .m2-unit { font-size: 1.5rem; color: #5B7553; font-weight: 600; }
+        .m2-unit { font-size: 1.5rem; color: rgba(196,169,106,0.70); font-weight: 600; }
 
         .m2-slider {
           width: 100%;
-          accent-color: #5B7553;
+          accent-color: #C4A96A;
           cursor: pointer;
           height: 6px;
         }
@@ -241,7 +242,7 @@ const TuinkostenCalculator: FC = () => {
           display: flex;
           justify-content: space-between;
           font-size: 0.75rem;
-          color: #9CA3AF;
+          color: rgba(237,242,236,0.30);
         }
 
         /* Services */
@@ -257,19 +258,19 @@ const TuinkostenCalculator: FC = () => {
           align-items: center;
           gap: 0.5rem;
           padding: 1rem;
-          border: 2px solid #E5E5E5;
+          border: 1px solid rgba(255,255,255,0.10);
           border-radius: 12px;
-          background: white;
+          background: rgba(255,255,255,0.05);
           cursor: pointer;
           font-size: 0.875rem;
           font-weight: 600;
           transition: all 0.15s;
           text-align: center;
-          color: #2D2D2D;
+          color: rgba(237,242,236,0.60);
         }
 
-        .service-btn:hover { border-color: #5B7553; background: #E8F0E4; }
-        .service-btn--selected { border-color: #5B7553; background: #E8F0E4; color: #3D5438; }
+        .service-btn:hover { border-color: rgba(196,169,106,0.35); background: rgba(255,255,255,0.08); color: #EDF2EC; }
+        .service-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.12); color: #EDF2EC; }
 
         .service-icon { font-size: 1.5rem; }
 
@@ -282,19 +283,19 @@ const TuinkostenCalculator: FC = () => {
           align-items: flex-start;
           gap: 0.25rem;
           padding: 1rem 1.25rem;
-          border: 2px solid #E5E5E5;
+          border: 1px solid rgba(255,255,255,0.10);
           border-radius: 12px;
-          background: white;
+          background: rgba(255,255,255,0.05);
           cursor: pointer;
           text-align: left;
           transition: all 0.15s;
         }
 
-        .quality-btn strong { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: #2D2D2D; }
-        .quality-btn span   { font-size: 0.8rem; color: #6B7280; }
-        .quality-btn:hover { border-color: #5B7553; background: #E8F0E4; }
-        .quality-btn--selected { border-color: #5B7553; background: #E8F0E4; }
-        .quality-btn--selected strong { color: #3D5438; }
+        .quality-btn strong { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: rgba(237,242,236,0.80); }
+        .quality-btn span   { font-size: 0.8rem; color: rgba(237,242,236,0.42); }
+        .quality-btn:hover { border-color: rgba(196,169,106,0.35); background: rgba(255,255,255,0.08); }
+        .quality-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.12); }
+        .quality-btn--selected strong { color: #EDF2EC; }
 
         /* Navigation */
         .calc-nav {
@@ -307,7 +308,7 @@ const TuinkostenCalculator: FC = () => {
           flex: 1;
           padding: 0.75rem 1.5rem;
           background: #C4A96A;
-          color: #2D2D2D;
+          color: #1C1400;
           border: none;
           border-radius: 8px;
           font-family: 'Plus Jakarta Sans', sans-serif;
@@ -315,27 +316,29 @@ const TuinkostenCalculator: FC = () => {
           font-weight: 700;
           cursor: pointer;
           transition: all 0.15s;
+          box-shadow: 0 2px 12px rgba(196,169,106,0.25);
         }
 
         .calc-next-btn:hover:not(:disabled) {
           background: #A88B4A;
           transform: translateY(-1px);
+          box-shadow: 0 4px 20px rgba(196,169,106,0.35);
         }
 
-        .calc-next-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .calc-next-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
         .calc-back-btn {
           padding: 0.75rem 1rem;
           background: transparent;
-          border: 2px solid #E5E5E5;
+          border: 1px solid rgba(255,255,255,0.10);
           border-radius: 8px;
-          color: #6B7280;
+          color: rgba(237,242,236,0.45);
           font-size: 0.875rem;
           cursor: pointer;
           transition: all 0.15s;
         }
 
-        .calc-back-btn:hover { border-color: #5B7553; color: #5B7553; }
+        .calc-back-btn:hover { border-color: rgba(196,169,106,0.35); color: rgba(237,242,236,0.80); }
 
         /* Result */
         .calc-result { display: flex; flex-direction: column; gap: 1.25rem; }
@@ -346,7 +349,7 @@ const TuinkostenCalculator: FC = () => {
           gap: 0.5rem;
           font-size: 0.8rem;
           font-weight: 600;
-          color: #5B7553;
+          color: #C4A96A;
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
@@ -355,25 +358,26 @@ const TuinkostenCalculator: FC = () => {
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
-          background: #E8F0E4;
+          background: rgba(110,158,101,0.10);
+          border: 1px solid rgba(110,158,101,0.20);
           border-radius: 12px;
           padding: 1.5rem;
         }
 
-        .result-label { font-size: 0.875rem; color: #6B7280; }
+        .result-label { font-size: 0.875rem; color: rgba(237,242,236,0.45); }
 
         .result-price {
           font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 2rem;
           font-weight: 700;
-          color: #3D5438;
+          color: #C4A96A;
         }
 
         .result-breakdown {
           display: flex;
           flex-direction: column;
           gap: 0;
-          border: 1px solid #E5E5E5;
+          border: 1px solid rgba(255,255,255,0.09);
           border-radius: 8px;
           overflow: hidden;
         }
@@ -383,15 +387,16 @@ const TuinkostenCalculator: FC = () => {
           justify-content: space-between;
           padding: 0.75rem 1rem;
           font-size: 0.875rem;
-          border-bottom: 1px solid #E5E5E5;
+          border-bottom: 1px solid rgba(255,255,255,0.07);
+          color: rgba(237,242,236,0.65);
         }
 
         .breakdown-row:last-child { border-bottom: none; }
-        .breakdown-amount { font-weight: 600; color: #3D5438; }
+        .breakdown-amount { font-weight: 600; color: #C4A96A; }
 
         .result-disclaimer {
           font-size: 0.75rem;
-          color: #9CA3AF;
+          color: rgba(237,242,236,0.30);
           margin: 0;
           line-height: 1.5;
         }
@@ -401,7 +406,7 @@ const TuinkostenCalculator: FC = () => {
           width: 100%;
           padding: 0.875rem 1.5rem;
           background: #C4A96A;
-          color: #2D2D2D;
+          color: #1C1400;
           text-align: center;
           text-decoration: none;
           border-radius: 8px;
@@ -409,11 +414,13 @@ const TuinkostenCalculator: FC = () => {
           font-size: 1rem;
           font-weight: 700;
           transition: all 0.15s;
+          box-shadow: 0 2px 12px rgba(196,169,106,0.25);
         }
 
         .result-cta-btn:hover {
           background: #A88B4A;
           text-decoration: none;
+          box-shadow: 0 4px 20px rgba(196,169,106,0.35);
         }
       `}</style>
     </div>

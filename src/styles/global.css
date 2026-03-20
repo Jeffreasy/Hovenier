@@ -2,81 +2,104 @@
 
 /* ============================================================
    DESIGN SYSTEM — Hovenier Platform
+   Theme: Dark Nature Glass
+   Canvas: Deep Forest Night  |  Glass: Frosted Sage  |  Accent: Warm Sand
    ============================================================ */
 
 @theme {
-  /* --- Kleuren --- */
-  --color-primary:          #5B7553;
-  --color-primary-dark:     #3D5438;
-  --color-primary-light:    #E8F0E4;
+  /* --- Kleuren: Dark Nature Glass palette --- */
+  --color-canvas:           #0D1F12;      /* diep nachtgroen — primair canvas */
+  --color-canvas-mid:       #142619;      /* middelste laag */
+  --color-canvas-light:     #1C3421;      /* lichtste donkere laag */
 
+  --color-glass-10:         rgba(255,255,255,0.04);
+  --color-glass-20:         rgba(255,255,255,0.08);
+  --color-glass-40:         rgba(255,255,255,0.13);
+  --color-glass-border:     rgba(255,255,255,0.10);
+  --color-glass-border-bright: rgba(255,255,255,0.22);
+
+  /* Brand groen — keep coherent with logo */
+  --color-primary:          #6E9E65;      /* lichter voor dark mode leesbaarheid */
+  --color-primary-dark:     #4A7043;
+  --color-primary-light:    rgba(110,158,101,0.15);
+  --color-primary-glow:     rgba(110,158,101,0.30);
+
+  /* Warm sand — accenten, CTA's */
   --color-secondary:        #C4A96A;
   --color-secondary-dark:   #A88B4A;
-  --color-secondary-light:  #F5ECCA;
+  --color-secondary-light:  rgba(196,169,106,0.15);
+  --color-secondary-glow:   rgba(196,169,106,0.35);
 
-  --color-neutral-900:      #2D2D2D;
-  --color-neutral-700:      #4A4A4A;
-  --color-neutral-600:      #6B7280;
-  --color-neutral-400:      #9CA3AF;
-  --color-neutral-200:      #E5E5E5;
-  --color-neutral-100:      #F5F3EF;
+  /* Tekst — licht op donker canvas */
+  --color-text-primary:     #EDF2EC;      /* bijna-wit met warmte */
+  --color-text-secondary:   rgba(237,242,236,0.65);
+  --color-text-muted:       rgba(237,242,236,0.40);
+
+  --color-neutral-900:      #EDF2EC;      /* tekst op donker bg */
+  --color-neutral-700:      rgba(237,242,236,0.75);
+  --color-neutral-600:      rgba(237,242,236,0.55);
+  --color-neutral-400:      rgba(237,242,236,0.35);
+  --color-neutral-200:      rgba(255,255,255,0.10);
+  --color-neutral-100:      rgba(255,255,255,0.05);
 
   --color-white:            #FFFFFF;
 
-  --color-success:          #22C55E;
-  --color-success-light:    #DCFCE7;
-  --color-warning:          #F59E0B;
-  --color-warning-light:    #FEF3C7;
-  --color-error:            #EF4444;
-  --color-error-light:      #FEE2E2;
+  --color-success:          #34D399;
+  --color-success-light:    rgba(52,211,153,0.15);
+  --color-warning:          #FBBF24;
+  --color-warning-light:    rgba(251,191,36,0.15);
+  --color-error:            #F87171;
+  --color-error-light:      rgba(248,113,113,0.15);
 
   /* --- Typografie --- */
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-body:    "Inter", sans-serif;
 
   /* --- Font sizes (mobiel-first) --- */
-  --text-xs:    0.75rem;    /* 12px */
-  --text-sm:    0.875rem;   /* 14px */
-  --text-base:  1rem;       /* 16px */
-  --text-lg:    1.125rem;   /* 18px */
-  --text-xl:    1.25rem;    /* 20px */
-  --text-2xl:   1.5rem;     /* 24px */
-  --text-3xl:   1.875rem;   /* 30px */
-  --text-4xl:   2.25rem;    /* 36px */
-  --text-5xl:   3rem;       /* 48px */
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   1.875rem;
+  --text-4xl:   2.25rem;
+  --text-5xl:   3rem;
 
   /* --- Spacing (8-point grid) --- */
-  --spacing-1:  0.25rem;   /* 4px */
-  --spacing-2:  0.5rem;    /* 8px */
-  --spacing-3:  0.75rem;   /* 12px */
-  --spacing-4:  1rem;      /* 16px */
-  --spacing-5:  1.25rem;   /* 20px */
-  --spacing-6:  1.5rem;    /* 24px */
-  --spacing-8:  2rem;      /* 32px */
-  --spacing-10: 2.5rem;    /* 40px */
-  --spacing-12: 3rem;      /* 48px */
-  --spacing-16: 4rem;      /* 64px */
-  --spacing-20: 5rem;      /* 80px */
-  --spacing-24: 6rem;      /* 96px */
+  --spacing-1:  0.25rem;
+  --spacing-2:  0.5rem;
+  --spacing-3:  0.75rem;
+  --spacing-4:  1rem;
+  --spacing-5:  1.25rem;
+  --spacing-6:  1.5rem;
+  --spacing-8:  2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
 
   /* --- Border radius --- */
-  --radius-sm:  4px;
-  --radius-md:  8px;
-  --radius-lg:  12px;
-  --radius-xl:  16px;
-  --radius-2xl: 24px;
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+  --radius-2xl: 28px;
   --radius-full: 9999px;
 
-  /* --- Shadows --- */
-  --shadow-sm:   0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
-  --shadow-md:   0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
-  --shadow-lg:   0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
-  --shadow-xl:   0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.06);
+  /* --- Glass shadows --- */
+  --shadow-sm:  0 2px 8px 0 rgba(0,0,0,0.25);
+  --shadow-md:  0 4px 24px 0 rgba(0,0,0,0.35), 0 1px 4px rgba(0,0,0,0.25);
+  --shadow-lg:  0 12px 40px 0 rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.30);
+  --shadow-xl:  0 24px 64px 0 rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.30);
+  --shadow-glow-gold: 0 0 32px rgba(196,169,106,0.20), 0 0 8px rgba(196,169,106,0.10);
+  --shadow-glow-green: 0 0 32px rgba(110,158,101,0.20);
 
   /* --- Transitions --- */
   --transition-fast:   150ms ease-out;
   --transition-base:   250ms ease-out;
-  --transition-slow:   400ms ease-out;
+  --transition-slow:   400ms cubic-bezier(0.22, 1, 0.36, 1);
 
   /* --- Container --- */
   --container-content: 720px;
@@ -85,7 +108,7 @@
 }
 
 /* ============================================================
-   BASE STYLES
+   BASE — Dark canvas + grain texture
    ============================================================ */
 
 *, *::before, *::after {
@@ -95,8 +118,8 @@
 html {
   font-family: var(--font-body);
   font-size: 16px;
-  color: var(--color-neutral-900);
-  background-color: var(--color-neutral-100);
+  color: var(--color-text-primary);
+  background-color: var(--color-canvas);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -106,6 +129,24 @@ body {
   margin: 0;
   min-height: 100vh;
   line-height: 1.7;
+
+  /* Subtle radial gradient canvas — depth zonder mesh gradient cliché */
+  background:
+    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(70,110,60,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 90%,  rgba(40,80,35,0.14) 0%, transparent 50%),
+    var(--color-canvas);
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
 }
 
 /* ============================================================
@@ -116,46 +157,100 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-neutral-900);
+  color: var(--color-text-primary);
   margin-top: 0;
 }
 
-h1 { font-size: clamp(2rem, 4vw, 2.5rem); }
-h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
 h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 600; }
 h4 { font-size: 1.125rem; font-weight: 600; }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  color: var(--color-text-secondary);
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-secondary-dark);
   text-decoration: underline;
 }
 
 /* ============================================================
-   ARTIKEL TYPOGRAFIE (voor blog en pillar pages)
+   GLAS UTILITIES — herbruikbaar in alle componenten
+   ============================================================ */
+
+.glass {
+  background: var(--color-glass-20);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+}
+
+.glass-sm {
+  background: var(--color-glass-10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-md);
+}
+
+.glass-card {
+  background: var(--color-glass-20);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.glass-card:hover {
+  border-color: var(--color-glass-border-bright);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-green);
+  transform: translateY(-2px);
+}
+
+/* Goud-gekleurde accent rand bovenaan */
+.glass-card--gold {
+  border-top: 2px solid var(--color-secondary);
+  box-shadow: var(--shadow-md), var(--shadow-glow-gold);
+}
+
+/* ============================================================
+   ARTIKEL TYPOGRAFIE (blog / pillar pages)
    ============================================================ */
 
 .prose {
   max-width: var(--container-content);
   font-size: 1.125rem;
   line-height: 1.8;
+  color: var(--color-text-secondary);
 }
 
-.prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
-.prose h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+.prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-text-primary); }
+.prose h3 { margin-top: 2rem;   margin-bottom: 0.75rem; color: var(--color-text-primary); }
 .prose p  { margin-bottom: 1.25rem; }
 .prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
 .prose li { margin-bottom: 0.5rem; }
+
+/* Code in prose */
+.prose code {
+  background: var(--color-glass-20);
+  border: 1px solid var(--color-glass-border);
+  padding: 0.15em 0.5em;
+  border-radius: var(--radius-sm);
+  font-size: 0.875em;
+  color: var(--color-secondary);
+}
 
 /* ============================================================
    UTILITY CLASSES
@@ -180,6 +275,8 @@ a:hover {
 .section-gap {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -189,18 +286,51 @@ a:hover {
   }
 }
 
+/* Badge / pill */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-glass-20);
+  border: 1px solid var(--color-glass-border-bright);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+/* Section label */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-glass-border-bright), transparent);
+  margin: 0;
+}
+
 /* ============================================================
    FOCUS STATES (toegankelijkheid)
    ============================================================ */
 
 :focus-visible {
-  outline: 3px solid var(--color-primary);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
 /* ============================================================
-   ANIMATIES
+   ANIMATIES — Dark Nature Glow & Motion System
    ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
@@ -210,20 +340,407 @@ a:hover {
   }
 }
 
-/* Scroll-reveal klasse (wordt door JS toegevoegd) */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+/* ── Ambient Orb Drift ───────────────────────────────────────── */
+
+@keyframes orb-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(5%, 3%) scale(1.05); }
+  50%  { transform: translate(3%, 8%) scale(0.97); }
+  75%  { transform: translate(-3%, 4%) scale(1.03); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
+@keyframes orb-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  30%  { transform: translate(-4%, -5%) scale(1.06); }
+  60%  { transform: translate(4%, -3%) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes orb-drift-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  40%  { transform: translate(6%, 4%) scale(1.04); }
+  70%  { transform: translate(-2%, 7%) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ── Glow Pulse Keyframes ────────────────────────────────────── */
+
+@keyframes pulse-glow-green {
+  0%, 100% {
+    box-shadow:
+      0 0 16px rgba(110,158,101,0.12),
+      0 0 4px  rgba(110,158,101,0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(110,158,101,0.28),
+      0 0 16px rgba(110,158,101,0.16),
+      0 0 4px  rgba(110,158,101,0.10);
+  }
+}
+
+@keyframes pulse-glow-gold {
+  0%, 100% {
+    box-shadow:
+      0 0 16px rgba(196,169,106,0.15),
+      0 0 4px  rgba(196,169,106,0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(196,169,106,0.35),
+      0 0 16px rgba(196,169,106,0.20),
+      0 0 4px  rgba(196,169,106,0.12);
+  }
+}
+
+/* Keep legacy pulse-glow for existing usage */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(196,169,106,0.15); }
+  50%       { box-shadow: 0 0 28px rgba(196,169,106,0.35), 0 0 8px rgba(196,169,106,0.20); }
+}
+
+/* ── Shimmer Border Animation ────────────────────────────────── */
+
+@keyframes shimmer-border {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* ── Entrance / Reveal animations ───────────────────────────── */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Float ───────────────────────────────────────────────────── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-5px) rotate(0.5deg); }
+  66%       { transform: translateY(-3px) rotate(-0.5deg); }
+}
+
+/* ── Button micro-interaction ────────────────────────────────── */
+
+@keyframes btn-press {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+/* ── Stat counter number punch ───────────────────────────────── */
+
+@keyframes number-punch {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.08); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ── Badge pulse dot ─────────────────────────────────────────── */
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.5); opacity: 0.6; }
+}
+
+/* ============================================================
+   SCROLL REVEAL SYSTEM
+   ============================================================ */
+
+/* Base reveal (bestaand — backwards compatibel) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Stagger delay helpers */
+/* Stagger delays */
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+
+/* Reveal variant — fade from below */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal variant — opacity only */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.reveal-fade.visible {
+  opacity: 1;
+}
+
+/* Reveal variant — scale in */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.45s ease-out, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================================
+   GLOW UTILITIES
+   ============================================================ */
+
+/* Ambient glow pulse classes */
+.animate-pulse-green {
+  animation: pulse-glow-green 4s ease-in-out infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-glow-gold 3.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Glow card enhancements ──────────────────────────────────── */
+
+/* Green pulsing glow on card hover */
+.glass-card {
+  background: var(--color-glass-20);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition:
+    border-color 0.25s ease-out,
+    box-shadow   0.30s ease-out,
+    transform    0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(110,158,101,0.30);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 32px rgba(110,158,101,0.16),
+    0 0 12px rgba(110,158,101,0.08);
+  transform: translateY(-4px);
+}
+
+/* Gold-accented card */
+.glass-card--gold {
+  border-top: 2px solid var(--color-secondary);
+  box-shadow: var(--shadow-md), var(--shadow-glow-gold);
+}
+
+.glass-card--gold:hover {
+  border-color: rgba(196,169,106,0.40);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 40px rgba(196,169,106,0.22),
+    0 0 12px rgba(196,169,106,0.12);
+}
+
+/* ── Shimmer border card ─────────────────────────────────────── */
+.glass-card--shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card--shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(196,169,106,0.0) 0%,
+    rgba(196,169,106,0.45) 30%,
+    rgba(110,158,101,0.35) 60%,
+    rgba(196,169,106,0.0) 100%
+  );
+  background-size: 300% 300%;
+  animation: shimmer-border 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Input focus glow ────────────────────────────────────────── */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(110,158,101,0.50) !important;
+  box-shadow:
+    0 0 0 3px rgba(110,158,101,0.12),
+    0 0 16px rgba(110,158,101,0.10) !important;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+/* ── Ambient orb base style ──────────────────────────────────── */
+.ambient-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* ── Navigation link hover animation ────────────────────────── */
+.nav-link-glow {
+  position: relative;
+  transition: color 0.2s ease-out;
+}
+
+.nav-link-glow::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-secondary);
+  transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 0 6px rgba(196,169,106,0.60);
+}
+
+.nav-link-glow:hover::after {
+  width: 100%;
+}
+
+/* ── Micro: Primaire knop glow ───────────────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform    0.18s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow   0.20s ease-out,
+    background   0.18s ease-out;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.18) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 6px 24px rgba(196,169,106,0.40),
+    0 2px 8px  rgba(196,169,106,0.25);
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(196,169,106,0.20);
+  transition-duration: 0.08s;
+}
+
+/* ── Section label glow ──────────────────────────────────────── */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 20px rgba(196,169,106,0.40);
+}
+
+/* ── Badge glow ──────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-glass-20);
+  border: 1px solid var(--color-glass-border-bright);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  box-shadow: 0 0 12px rgba(196,169,106,0.12), inset 0 1px 0 rgba(255,255,255,0.06);
+}

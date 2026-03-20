@@ -14,26 +14,29 @@ const { label, variant = 'neutral' } = Astro.props
     display: inline-flex;
     align-items: center;
     font-family: var(--font-heading);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
     border-radius: var(--radius-full);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.07em;
   }
 
   .badge-primary {
-    background-color: var(--color-primary-light);
-    color: var(--color-primary-dark);
+    background: rgba(110,158,101,0.15);
+    color: var(--color-primary);
+    border: 1px solid rgba(110,158,101,0.25);
   }
 
   .badge-neutral {
-    background-color: var(--color-neutral-200);
-    color: var(--color-neutral-700);
+    background: rgba(255,255,255,0.08);
+    color: rgba(237,242,236,0.60);
+    border: 1px solid rgba(255,255,255,0.10);
   }
 
   .badge-success {
-    background-color: var(--color-success-light);
-    color: #166534;
+    background: rgba(52,211,153,0.12);
+    color: #34D399;
+    border: 1px solid rgba(52,211,153,0.20);
   }
 </style>

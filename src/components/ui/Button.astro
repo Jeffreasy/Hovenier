@@ -22,7 +22,6 @@ const {
 const baseStyles = [
   'inline-flex items-center justify-center gap-2',
   'font-heading font-semibold',
-  'border-2',
   'transition-all duration-200',
   'cursor-pointer',
   'no-underline',
@@ -58,39 +57,48 @@ const classes = [baseStyles, variantClasses[variant], sizeClasses[size], classNa
 )}
 
 <style>
-  /* Primary: warm zand achtergrond, donkere tekst */
+  /* Primary: warm zand — hoofdactie */
   :global(.btn-primary) {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    color: var(--color-neutral-900);
+    background: var(--color-secondary);
+    border: none;
+    color: #1C1400;
+    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
   }
   :global(.btn-primary:hover:not(:disabled)) {
-    background-color: var(--color-secondary-dark);
-    border-color: var(--color-secondary-dark);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    background: var(--color-secondary-dark);
+    box-shadow: 0 4px 20px rgba(196,169,106,0.40);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #1C1400;
   }
   :global(.btn-primary:active) { transform: translateY(0); }
 
-  /* Secondary: groene outline */
+  /* Secondary: glass outline — secundaire actie op donker canvas */
   :global(.btn-secondary) {
-    background-color: transparent;
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: rgba(237,242,236,0.85);
   }
   :global(.btn-secondary:hover:not(:disabled)) {
-    background-color: var(--color-primary-light);
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.28);
+    color: #EDF2EC;
     transform: translateY(-1px);
+    text-decoration: none;
   }
 
-  /* Ghost: geen border */
+  /* Ghost: transparant, subtiel */
   :global(.btn-ghost) {
-    background-color: transparent;
-    border-color: transparent;
-    color: var(--color-primary);
+    background: transparent;
+    border: none;
+    color: var(--color-secondary);
   }
   :global(.btn-ghost:hover:not(:disabled)) {
-    background-color: var(--color-primary-light);
+    background: rgba(196,169,106,0.10);
+    text-decoration: none;
+    color: var(--color-secondary);
   }
 
   /* Sizes */
@@ -105,14 +113,14 @@ const classes = [baseStyles, variantClasses[variant], sizeClasses[size], classNa
     border-radius: var(--radius-md);
   }
   :global(.btn-lg) {
-    padding: 0.875rem 1.75rem;
+    padding: 0.875rem 1.875rem;
     font-size: 1.0625rem;
     border-radius: var(--radius-md);
   }
 
   :global(button:disabled),
   :global(a[aria-disabled="true"]) {
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
   }

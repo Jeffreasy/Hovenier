@@ -236,18 +236,18 @@ const OfferteFormulier: FC = () => {
 }
 
 const formStyles = `
-  .of-wrapper { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; gap: 1.5rem; }
+  .of-wrapper { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; gap: 1.5rem; color: #EDF2EC; }
 
   .of-progress {
-    height: 4px;
-    background: #E5E5E5;
+    height: 3px;
+    background: rgba(255,255,255,0.10);
     border-radius: 99px;
     overflow: hidden;
   }
 
   .of-progress-bar {
     height: 100%;
-    background: #5B7553;
+    background: #C4A96A;
     border-radius: 99px;
     transition: width 0.3s ease;
   }
@@ -257,15 +257,15 @@ const formStyles = `
     justify-content: space-between;
     align-items: center;
     font-size: 0.8rem;
-    color: #6B7280;
+    color: rgba(237,242,236,0.45);
   }
 
-  .of-step-label { font-weight: 600; color: #5B7553; }
+  .of-step-label { font-weight: 600; color: #C4A96A; }
 
   .of-step { display: flex; flex-direction: column; gap: 1rem; }
 
-  .of-title { margin: 0; font-size: 1.25rem; font-family: 'Plus Jakarta Sans', sans-serif; }
-  .of-hint { margin: 0; font-size: 0.875rem; color: #6B7280; }
+  .of-title { margin: 0; font-size: 1.25rem; font-family: 'Plus Jakarta Sans', sans-serif; color: #EDF2EC; }
+  .of-hint { margin: 0; font-size: 0.875rem; color: rgba(237,242,236,0.45); }
 
   .of-options-grid {
     display: grid;
@@ -275,19 +275,19 @@ const formStyles = `
 
   .of-option-btn {
     padding: 0.875rem;
-    border: 2px solid #E5E5E5;
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 8px;
-    background: white;
+    background: rgba(255,255,255,0.05);
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #2D2D2D;
+    color: rgba(237,242,236,0.65);
     transition: all 0.15s;
     text-align: center;
   }
 
-  .of-option-btn:hover { border-color: #5B7553; background: #E8F0E4; }
-  .of-option-btn--selected { border-color: #5B7553; background: #E8F0E4; color: #3D5438; }
+  .of-option-btn:hover { border-color: rgba(196,169,106,0.40); background: rgba(255,255,255,0.08); color: #EDF2EC; }
+  .of-option-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.12); color: #EDF2EC; }
 
   .of-input-group {
     display: flex;
@@ -298,22 +298,24 @@ const formStyles = `
   .of-input {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 2px solid #E5E5E5;
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 8px;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
-    background: #F5F3EF;
-    transition: border-color 0.15s;
+    color: #EDF2EC;
+    background: rgba(255,255,255,0.06);
+    transition: border-color 0.15s, background 0.15s;
   }
 
+  .of-input::placeholder { color: rgba(237,242,236,0.25); }
   .of-input--lg { font-size: 1.5rem; padding: 1rem 1.25rem; }
-  .of-input:focus { outline: none; border-color: #5B7553; background: white; }
-  .of-input--error { border-color: #EF4444; }
+  .of-input:focus { outline: none; border-color: rgba(196,169,106,0.45); background: rgba(255,255,255,0.09); }
+  .of-input--error { border-color: rgba(248,113,113,0.50); }
 
   .of-input-suffix {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #5B7553;
+    color: #C4A96A;
     flex-shrink: 0;
   }
 
@@ -321,19 +323,19 @@ const formStyles = `
 
   .of-budget-btn {
     padding: 0.875rem 1.25rem;
-    border: 2px solid #E5E5E5;
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 8px;
-    background: white;
+    background: rgba(255,255,255,0.05);
     cursor: pointer;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: #2D2D2D;
+    color: rgba(237,242,236,0.65);
     text-align: left;
     transition: all 0.15s;
   }
 
-  .of-budget-btn:hover { border-color: #5B7553; background: #E8F0E4; }
-  .of-budget-btn--selected { border-color: #5B7553; background: #E8F0E4; color: #3D5438; }
+  .of-budget-btn:hover { border-color: rgba(196,169,106,0.35); background: rgba(255,255,255,0.08); color: #EDF2EC; }
+  .of-budget-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.12); color: #EDF2EC; }
 
   .of-fields { display: flex; flex-direction: column; gap: 1rem; }
   .of-field  { display: flex; flex-direction: column; gap: 0.375rem; }
@@ -342,18 +344,18 @@ const formStyles = `
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.875rem;
     font-weight: 600;
-    color: #4A4A4A;
+    color: rgba(237,242,236,0.55);
   }
 
   .of-error {
     font-size: 0.8rem;
-    color: #EF4444;
+    color: #F87171;
     margin: 0;
   }
 
   .of-privacy {
     font-size: 0.75rem;
-    color: #9CA3AF;
+    color: rgba(237,242,236,0.30);
     margin: 0;
   }
 
@@ -361,14 +363,14 @@ const formStyles = `
     display: flex;
     gap: 0.75rem;
     padding-top: 0.5rem;
-    border-top: 1px solid #E5E5E5;
+    border-top: 1px solid rgba(255,255,255,0.08);
   }
 
   .of-next-btn {
     flex: 1;
     padding: 0.875rem 1.5rem;
     background: #C4A96A;
-    color: #2D2D2D;
+    color: #1C1400;
     border: none;
     border-radius: 8px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -376,22 +378,23 @@ const formStyles = `
     font-weight: 700;
     cursor: pointer;
     transition: all 0.15s;
+    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
   }
 
-  .of-next-btn:hover { background: #A88B4A; }
+  .of-next-btn:hover { background: #A88B4A; box-shadow: 0 4px 20px rgba(196,169,106,0.35); transform: translateY(-1px); }
 
   .of-back-btn {
     padding: 0.875rem 1rem;
     background: transparent;
-    border: 2px solid #E5E5E5;
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 8px;
-    color: #6B7280;
+    color: rgba(237,242,236,0.45);
     font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.15s;
   }
 
-  .of-back-btn:hover { border-color: #5B7553; color: #5B7553; }
+  .of-back-btn:hover { border-color: rgba(196,169,106,0.35); color: rgba(237,242,236,0.80); }
 `
 
 const successStyles = `
@@ -403,25 +406,27 @@ const successStyles = `
     gap: 1rem;
     padding: 2rem 0;
     font-family: 'Inter', sans-serif;
+    color: #EDF2EC;
   }
 
   .success-icon { font-size: 3.5rem; }
-  .of-success h2 { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-  .of-success p { margin: 0; color: #4A4A4A; max-width: 420px; }
+  .of-success h2 { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; color: #EDF2EC; }
+  .of-success p { margin: 0; color: rgba(237,242,236,0.55); max-width: 420px; }
 
   .of-home-btn {
     display: inline-flex;
     padding: 0.75rem 1.5rem;
-    background: #E8F0E4;
-    color: #3D5438;
+    background: #C4A96A;
+    color: #1C1400;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     margin-top: 0.5rem;
     transition: all 0.15s;
+    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
   }
 
-  .of-home-btn:hover { background: #d4e4ce; }
+  .of-home-btn:hover { background: #A88B4A; box-shadow: 0 4px 20px rgba(196,169,106,0.35); }
 `
 
 export default OfferteFormulier

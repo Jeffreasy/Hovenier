@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import { defineConfig, passthroughImageService } from 'astro/config'
 import react from '@astrojs/react'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
@@ -10,7 +10,23 @@ import clerk from '@clerk/astro'
 export default defineConfig({
   // ── Deployment ──────────────────────────────────────────────────────────────
   site: 'https://www.tuinplatform.nl',
-  adapter: vercel(),
+  output: 'server',
+  adapter: vercel({
+    webAnalytics:   { enabled: true },   // Gratis Vercel Analytics
+    imageService:   true,                // Vercel Image Optimization (v3 API)
+    isr: {
+      // Blog, steden en FAQ: 1 uur cache (ISR), homepage: 30 min
+      expiration: 3600,
+    },
+  }),
+
+  // ── Image service ───────────────────────────────────────────────────────────
+  image: {
+    service: passthroughImageService(),  // Vercel doet image-resizing via CDN
+  },
+
+  // ── Build ───────────────────────────────────────────────────────────────────
+  compressHTML: true,
 
   // ── Integrations ────────────────────────────────────────────────────────────
   integrations: [
@@ -22,5 +38,21 @@ export default defineConfig({
   // ── Vite ────────────────────────────────────────────────────────────────────
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            // Convex in eigen chunk — grote library, zelden veranderd
+            if (id.includes('node_modules/convex')) return 'convex'
+            // React ecosystem in eigen chunk
+            if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) return 'react'
+            // Clerk auth in eigen chunk
+            if (id.includes('node_modules/@clerk')) return 'clerk'
+          },
+        },
+      },
+      // Verhoog chunk warning threshold (Convex is groot)
+      chunkSizeWarningLimit: 600,
+    },
   },
 })

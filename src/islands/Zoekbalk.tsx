@@ -100,7 +100,7 @@ const Zoekbalk: FC = () => {
       <p className="zoekbalk-note">🔒 Gratis en vrijblijvend — geen spam</p>
 
       <style>{`
-        .zoekbalk-form { font-family: 'Inter', sans-serif; }
+        .zoekbalk-form { font-family: 'Inter', sans-serif; color: #EDF2EC; }
 
         .zoekbalk-fields {
           display: flex;
@@ -116,30 +116,38 @@ const Zoekbalk: FC = () => {
 
         .zoekbalk-label {
           font-family: 'Plus Jakarta Sans', sans-serif;
-          font-size: 0.875rem;
+          font-size: 0.8rem;
           font-weight: 600;
-          color: #4A4A4A;
+          color: rgba(237,242,236,0.55);
+          letter-spacing: 0.03em;
         }
 
         .zoekbalk-input,
         .zoekbalk-select {
           width: 100%;
           padding: 0.75rem 1rem;
-          border: 2px solid #E5E5E5;
+          border: 1px solid rgba(255,255,255,0.12);
           border-radius: 8px;
           font-size: 1rem;
           font-family: 'Inter', sans-serif;
-          background: #F5F3EF;
-          color: #2D2D2D;
-          transition: border-color 0.15s;
+          background: rgba(255,255,255,0.06);
+          color: #EDF2EC;
+          transition: border-color 0.15s, background 0.15s;
           appearance: none;
+        }
+
+        .zoekbalk-input::placeholder { color: rgba(237,242,236,0.30); }
+
+        .zoekbalk-select option {
+          background: #142619;
+          color: #EDF2EC;
         }
 
         .zoekbalk-input:focus,
         .zoekbalk-select:focus {
           outline: none;
-          border-color: #5B7553;
-          background: white;
+          border-color: rgba(196,169,106,0.45);
+          background: rgba(255,255,255,0.10);
         }
 
         .zoekbalk-btn {
@@ -150,7 +158,7 @@ const Zoekbalk: FC = () => {
           width: 100%;
           padding: 0.875rem 1.5rem;
           background: #C4A96A;
-          color: #2D2D2D;
+          color: #1C1400;
           border: none;
           border-radius: 8px;
           font-family: 'Plus Jakarta Sans', sans-serif;
@@ -159,23 +167,24 @@ const Zoekbalk: FC = () => {
           cursor: pointer;
           transition: all 0.15s;
           margin-top: 0.25rem;
+          box-shadow: 0 4px 16px rgba(196,169,106,0.30);
         }
 
         .zoekbalk-btn:hover {
           background: #A88B4A;
-          transform: translateY(-1px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 24px rgba(196,169,106,0.45);
         }
 
         .zoekbalk-error {
           font-size: 0.8rem;
-          color: #EF4444;
+          color: #F87171;
           margin: 0.5rem 0 0;
         }
 
         .zoekbalk-note {
-          font-size: 0.8rem;
-          color: #9CA3AF;
+          font-size: 0.78rem;
+          color: rgba(237,242,236,0.35);
           text-align: center;
           margin: 0.75rem 0 0;
         }

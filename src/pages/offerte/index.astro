@@ -12,8 +12,9 @@ const seo = {
   <div class="offerte-page section-gap">
     <div class="container offerte-inner">
       <div class="offerte-hero reveal">
-        <h1>Gratis offertes aanvragen</h1>
-        <p>Vul je wensen in en ontvang binnen 48 uur maximaal 3 offertes van hoveniers bij jou in de buurt.</p>
+        <p class="section-label">Gratis & vrijblijvend</p>
+        <h1>Vraag offertes aan</h1>
+        <p class="offerte-sub">Vul je wensen in en ontvang binnen 48 uur maximaal 3 offertes van hoveniers bij jou in de buurt.</p>
         <div class="offerte-trust">
           <span>✅ Gratis en vrijblijvend</span>
           <span>🔒 Geen spam</span>
@@ -43,12 +44,13 @@ const seo = {
     }
   }
 
-  .offerte-hero h1 { margin-bottom: 0.75rem; }
+  .offerte-hero h1 { margin: 0.25rem 0 0.75rem; }
 
-  .offerte-hero p {
+  .offerte-sub {
     font-size: 1.0625rem;
-    color: var(--color-neutral-700);
+    color: rgba(237,242,236,0.58);
     margin: 0 0 1.25rem;
+    line-height: 1.7;
   }
 
   .offerte-trust {
@@ -57,13 +59,18 @@ const seo = {
     gap: 1rem;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-primary-dark);
+    color: var(--color-primary);
+    opacity: 0.80;
   }
 
+  /* Glass container for the React island */
   .offerte-card {
-    background: white;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255,255,255,0.11);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.35);
     padding: 2rem;
   }
 </style>
