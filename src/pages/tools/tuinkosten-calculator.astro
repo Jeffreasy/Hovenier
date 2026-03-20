@@ -1,7 +1,7 @@
 ---
 import ToolLayout from '../../layouts/ToolLayout.astro'
 import type { FAQItem } from '../../lib/types'
-import TuinkostenCalculator from '../../islands/TuinkostenCalculator'
+import TuinkostenCalc from '../../islands/TuinkostenCalculator.tsx'
 
 const seo = {
   title: 'Tuinkosten Calculator — wat kost jouw tuin?',
@@ -33,5 +33,5 @@ const faqs: FAQItem[] = [
   intro="Voer jouw tuingegevens in en ontvang direct een prijsindicatie. Gratis en vrijblijvend."
   faqs={faqs}
 >
-  <TuinkostenCalculator client:load slot="tool" />
+  <TuinkostenCalc client:load slot="tool" />
 </ToolLayout>

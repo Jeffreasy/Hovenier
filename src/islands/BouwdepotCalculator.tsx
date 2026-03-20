@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { useState, type FormEvent } from 'react'
+import { useState } from 'react'
 import { estimateBouwdepotGardenShare } from '../lib/pricing'
 import { formatCurrency } from '../lib/utils'
 import { sharedCalcStyles } from './SchuttingCalculator'

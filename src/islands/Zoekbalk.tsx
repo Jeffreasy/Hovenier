@@ -1,4 +1,4 @@
-import { useState, type FC, type FormEvent } from 'react'
+import { useState, type FC } from 'react'
 import type { ServiceType } from '../lib/types'
 
 /**
@@ -22,7 +22,7 @@ const Zoekbalk: FC = () => {
   const [dienst, setDienst]     = useState<ServiceType | ''>('')
   const [error, setError]       = useState('')
 
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
 
     if (!/^\d{4}\s?[A-Za-z]{2}$/.test(postcode.trim())) {
