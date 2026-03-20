@@ -1,5 +1,5 @@
 import { z, defineCollection } from 'astro:content'
-import { glob, file } from 'astro/loaders'
+import { glob } from 'astro/loaders'
 
 // ─── Blog ─────────────────────────────────────────────────────────────────────
 
@@ -31,6 +31,8 @@ const faqCollection = defineCollection({
 })
 
 // ─── Steden ──────────────────────────────────────────────────────────────────
+// NOTE: Hardcoded JSON voor nu. Wordt verplaatst naar CMS (Sanity/Storyblok)
+// zodra het aantal steden >30 groeit of niet-developers content bijwerken.
 
 const stedenCollection = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/steden' }),
@@ -47,8 +49,27 @@ const stedenCollection = defineCollection({
   }),
 })
 
+// ─── Subsidies ───────────────────────────────────────────────────────────────
+// NOTE: Wordt uitgebreid naar 30+ gemeenten in fase 2. Per gemeente een .md
+// bestand zodat niet-developers (redacteuren) het zelf kunnen bijwerken.
+
+const subsidiesCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/subsidies' }),
+  schema: z.object({
+    naam:        z.string(),
+    gemeente:    z.string(),
+    provincie:   z.string(),
+    type:        z.string(),
+    bedrag:      z.string(),
+    aanvraagUrl: z.string().url(),
+    geldigTot:   z.coerce.date().optional(),
+    actief:      z.boolean().default(true),
+  }),
+})
+
 export const collections = {
-  blog:   blogCollection,
-  faq:    faqCollection,
-  steden: stedenCollection,
+  blog:      blogCollection,
+  faq:       faqCollection,
+  steden:    stedenCollection,
+  subsidies: subsidiesCollection,
 }
