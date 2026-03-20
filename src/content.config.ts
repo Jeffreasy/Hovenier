@@ -62,7 +62,7 @@ const subsidiesCollection = defineCollection({
     provincie:   z.string(),
     type:        z.string(),
     bedrag:      z.string(),
-    aanvraagUrl: z.string().url(),
+    aanvraagUrl: z.string(),
     geldigTot:   z.coerce.date().optional(),
     actief:      z.boolean().default(true),
   }),

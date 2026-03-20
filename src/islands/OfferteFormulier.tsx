@@ -225,10 +225,19 @@ const OfferteFormulier: FC = () => {
             ← Terug
           </button>
         )}
-        <button type="button" className="of-next-btn" onClick={next}>
-          {step < TOTAL_STEPS ? 'Volgende →' : 'Verstuur aanvraag ✓'}
+        <button type="button" className="of-next-btn" onClick={next} disabled={loading}>
+          {loading
+            ? 'Verzenden...'
+            : step < TOTAL_STEPS ? 'Volgende →' : 'Verstuur aanvraag ✓'
+          }
         </button>
       </div>
+
+      {submitError && (
+        <p role="alert" style={{ color: '#FF6B6B', fontSize: '0.875rem', textAlign: 'center', margin: 0 }}>
+          ⚠️ {submitError}
+        </p>
+      )}
 
       <style>{formStyles}</style>
     </div>

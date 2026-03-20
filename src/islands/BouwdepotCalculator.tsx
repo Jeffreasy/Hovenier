@@ -22,7 +22,7 @@ const BouwdepotCalculator: FC = () => {
   const [waarde,  setWaarde]  = useState(350000)
   const [result,  setResult]  = useState<ReturnType<typeof estimateBouwdepotGardenShare> | null>(null)
 
-  function calculate(e: FormEvent) {
+  function calculate(e: { preventDefault(): void }) {
     e.preventDefault()
     setResult(estimateBouwdepotGardenShare(depot, m2, waarde))
   }
