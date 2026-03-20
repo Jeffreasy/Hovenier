@@ -1,0 +1,37 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro'
+import type { FAQItem } from '../../lib/types'
+import TuinkostenCalculator from '../../islands/TuinkostenCalculator'
+
+const seo = {
+  title: 'Tuinkosten Calculator — wat kost jouw tuin?',
+  description: 'Bereken gratis wat tuinaanleg, bestrating of beplanting kost. Voer je m² in en ontvang een directe prijsindicatie per onderdeel.',
+}
+
+const faqs: FAQItem[] = [
+  {
+    question: 'Klopt de berekening exact?',
+    answer: 'De calculator geeft een indicatie op basis van gemiddelde markttarieven. De exacte prijs hangt af van de specifieke situatie, materialkeuze en regio. Vraag altijd meerdere offertes op voor een precieze prijs.',
+    category: 'calculator',
+  },
+  {
+    question: 'Welke kosten zijn niet inbegrepen?',
+    answer: 'De calculator houdt geen rekening met afvoerkosten van puin en afval, vergunningen of speciale grondwerkzaamheden. Vraag je hovenier hier expliciet naar.',
+    category: 'calculator',
+  },
+  {
+    question: 'Hoe vraag ik offertes aan?',
+    answer: 'Klik op "Vraag gratis offertes aan" na jouw berekening. Je vult je contactgegevens in en ontvangt binnen 48 uur maximaal 3 offertes van hoveniers in jouw regio.',
+    category: 'offerte',
+  },
+]
+---
+
+<ToolLayout
+  {seo}
+  title="Tuinkosten Calculator"
+  intro="Voer jouw tuingegevens in en ontvang direct een prijsindicatie. Gratis en vrijblijvend."
+  faqs={faqs}
+>
+  <TuinkostenCalculator client:load slot="tool" />
+</ToolLayout>

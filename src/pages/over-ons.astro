@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Button from '../components/ui/Button.astro'
+import { SOCIAL_PROOF } from '../lib/constants'
+
+const seo = {
+  title: 'Over Tuinplatform — Hoe wij hoveniers en huiseigenaren koppelen',
+  description: 'Tuinplatform koppelt huiseigenaren aan betrouwbare hoveniers. Ontdek hoe ons platform werkt en waarom ' + SOCIAL_PROOF.offertes + ' offertes zijn aangevraagd.',
+}
+---
+
+<BaseLayout {seo}>
+  <div class="about-page">
+    <!-- Hero -->
+    <header class="about-hero">
+      <div class="container">
+        <h1 class="reveal">Wij koppelen jou aan<br/> de beste hovenier in jouw buurt</h1>
+        <p class="about-intro reveal delay-100">
+          Tuinplatform is een onafhankelijk platform waarop huiseigenaren gratis offertes aanvragen
+          bij lokale hoveniers. Transparant, snel en vrijblijvend.
+        </p>
+      </div>
+    </header>
+
+    <!-- Hoe het werkt -->
+    <section class="section-gap">
+      <div class="container">
+        <h2 class="reveal">Hoe het werkt</h2>
+        <div class="how-grid">
+          {[
+            { icon: '🔍', title: 'Jij stelt je vraag', desc: 'Vul in wat je wilt laten doen, wat je budget is en waar je woont.' },
+            { icon: '🤝', title: 'Wij zoeken voor jou', desc: 'Ons platform matcht jouw aanvraag met beschikbare hoveniers in jouw regio.' },
+            { icon: '📋', title: 'Jij vergelijkt', desc: 'Ontvang meerdere offertes en kies de hovenier die het beste bij jou past.' },
+          ].map((step) => (
+            <div class="how-item reveal">
+              <div class="how-icon" aria-hidden="true">{step.icon}</div>
+              <h3>{step.title}</h3>
+              <p>{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="about-stats section-gap">
+      <div class="container">
+        <div class="stats-row">
+          {[
+            { val: SOCIAL_PROOF.offertes, label: 'Aangevraagde offertes' },
+            { val: SOCIAL_PROOF.hoveniers, label: 'Aangesloten hoveniers' },
+            { val: `${SOCIAL_PROOF.rating} / 5`, label: 'Gemiddelde beoordeling' },
+          ].map((s) => (
+            <div class="about-stat reveal">
+              <strong>{s.val}</strong>
+              <span>{s.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-gap">
+      <div class="container" style="text-align: center;">
+        <h2 class="reveal">Klaar om te starten?</h2>
+        <p class="reveal delay-100">Vraag gratis en vrijblijvend offertes aan bij hoveniers bij jou in de buurt.</p>
+        <Button href="/offerte" size="lg">Vraag gratis offertes aan</Button>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    background: linear-gradient(145deg, var(--color-primary-light), var(--color-neutral-100));
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(91,117,83,0.12);
+  }
+
+  .about-hero h1 { max-width: 600px; }
+
+  .about-intro {
+    font-size: 1.125rem;
+    color: var(--color-neutral-700);
+    max-width: 540px;
+    margin: 1rem 0 0;
+  }
+
+  .how-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .how-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .how-item {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .how-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .how-item h3 { margin-bottom: 0.5rem; }
+  .how-item p  { margin: 0; color: var(--color-neutral-600); }
+
+  .about-stats { background: var(--color-primary-dark); }
+
+  .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .about-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: white;
+  }
+
+  .about-stat strong {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .about-stat span {
+    font-size: 0.875rem;
+    opacity: 0.8;
+  }
+</style>

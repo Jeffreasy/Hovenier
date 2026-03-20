@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Accordion from '../../components/ui/Accordion.astro'
+import { getCollection } from 'astro:content'
+import { getEntry } from 'astro:content'
+import { render } from 'astro:content'
+
+export async function getStaticPaths() {
+  const items = await getCollection('faq', ({ data }) => !data.draft)
+  return items.map((item) => ({
+    params: { slug: item.id.replace(/\.md$/, '') },
+    props: { item },
+  }))
+}
+
+const { item } = Astro.props
+const { Content } = await render(item)
+
+// FAQ schema
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [{
+    '@type': 'Question',
+    name: item.data.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.body ?? '',
+    },
+  }],
+})
+
+const seo = {
+  title: item.data.question,
+  description: `Antwoord op de vraag: ${item.data.question}. Lees het volledige antwoord op Tuinplatform.`,
+}
+---
+
+<BaseLayout {seo} {schema}>
+  <div class="faq-page section-gap">
+    <div class="container faq-inner">
+      <nav class="faq-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/faq">FAQ</a> / <span>{item.data.category}</span>
+      </nav>
+
+      <article>
+        <h1 class="faq-question">{item.data.question}</h1>
+        <div class="prose faq-answer">
+          <Content />
+        </div>
+      </article>
+
+      <div class="faq-cta">
+        <a href="/offerte" class="faq-cta-btn">Vraag gratis offertes aan →</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .faq-inner { max-width: 760px; }
+
+  .faq-breadcrumb {
+    font-size: 0.875rem;
+    color: var(--color-neutral-600);
+    margin-bottom: 2rem;
+  }
+
+  .faq-breadcrumb a {
+    color: var(--color-primary);
+  }
+
+  .faq-question { margin-bottom: 1.5rem; }
+
+  .faq-answer {
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .faq-cta {
+    margin-top: 2.5rem;
+  }
+
+  .faq-cta-btn {
+    display: inline-flex;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-neutral-900);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .faq-cta-btn:hover {
+    background-color: var(--color-secondary-dark);
+    text-decoration: none;
+  }
+</style>

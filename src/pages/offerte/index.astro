@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import OfferteFormulier from '../../islands/OfferteFormulier'
+
+const seo = {
+  title: 'Gratis offertes aanvragen — Tuinplatform',
+  description: 'Vraag gratis offertes aan bij hoveniers in jouw regio. Vul je wensen in en ontvang binnen 48 uur maximaal 3 passende offertes.',
+}
+---
+
+<BaseLayout {seo}>
+  <div class="offerte-page section-gap">
+    <div class="container offerte-inner">
+      <div class="offerte-hero reveal">
+        <h1>Gratis offertes aanvragen</h1>
+        <p>Vul je wensen in en ontvang binnen 48 uur maximaal 3 offertes van hoveniers bij jou in de buurt.</p>
+        <div class="offerte-trust">
+          <span>✅ Gratis en vrijblijvend</span>
+          <span>🔒 Geen spam</span>
+          <span>⏱ 2 minuten</span>
+        </div>
+      </div>
+
+      <div class="offerte-card reveal delay-100">
+        <OfferteFormulier client:load />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .offerte-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 860px;
+  }
+
+  @media (min-width: 768px) {
+    .offerte-inner {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+  .offerte-hero h1 { margin-bottom: 0.75rem; }
+
+  .offerte-hero p {
+    font-size: 1.0625rem;
+    color: var(--color-neutral-700);
+    margin: 0 0 1.25rem;
+  }
+
+  .offerte-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+
+  .offerte-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: 2rem;
+  }
+</style>

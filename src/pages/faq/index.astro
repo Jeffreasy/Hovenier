@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Accordion from '../../components/ui/Accordion.astro'
+import { getCollection } from 'astro:content'
+
+const items = await getCollection('faq', ({ data }) => !data.draft)
+
+// Group by category
+const grouped = items.reduce<Record<string, typeof items>>((acc, item) => {
+  const cat = item.data.category
+  if (!acc[cat]) acc[cat] = []
+  acc[cat].push(item)
+  return acc
+}, {})
+
+const seo = {
+  title: 'Veelgestelde vragen over hoveniers en tuinaanleg',
+  description: 'Antwoorden op de meest gestelde vragen over hoveniers, tuinaanleg, tarieven en het aanvragen van offertes.',
+}
+---
+
+<BaseLayout {seo}>
+  <div class="faq-index section-gap">
+    <div class="container">
+      <header class="faq-header reveal">
+        <h1>Veelgestelde vragen</h1>
+        <p>Vind snel het antwoord op je vraag, of vraag gratis offertes aan via het platform.</p>
+      </header>
+
+      {Object.entries(grouped).map(([category, faqs]) => (
+        <section class="faq-category reveal" aria-label={category}>
+          <h2 class="faq-category-title">{category}</h2>
+          <div class="faq-list">
+            {faqs.map((faq) => (
+              <a href={`/faq/${faq.slug}`} class="faq-row">
+                <span class="faq-item-question">{faq.data.question}</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .faq-header { margin-bottom: 3rem; }
+  .faq-header p { font-size: 1.125rem; color: var(--color-neutral-600); margin: 0; }
+
+  .faq-category { margin-bottom: 2.5rem; }
+
+  .faq-category-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-neutral-600);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary-light);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: white;
+  }
+
+  .faq-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    color: var(--color-neutral-900);
+    border-bottom: 1px solid var(--color-neutral-200);
+    transition: background-color var(--transition-fast);
+    gap: 1rem;
+  }
+
+  .faq-row:last-child { border-bottom: none; }
+
+  .faq-row:hover {
+    background-color: var(--color-primary-light);
+    text-decoration: none;
+  }
+
+  .faq-item-question {
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+  svg { flex-shrink: 0; color: var(--color-primary); }
+</style>

@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Card from '../../components/ui/Card.astro'
+import Badge from '../../components/ui/Badge.astro'
+import { getCollection } from 'astro:content'
+import { formatDate } from '../../lib/utils'
+
+const posts = await getCollection('blog', ({ data }) => !data.draft)
+const sorted = posts.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+
+const seo = {
+  title: 'Tuingids — Tips en adviezen voor jouw tuin',
+  description: 'Praktische tuinartikelen over aanleg, onderhoud, bestrating, beplanting en kosten. Geschreven door Nederlandse tuinexperts.',
+}
+---
+
+<BaseLayout {seo}>
+  <div class="blog-index section-gap">
+    <div class="container">
+      <header class="blog-header reveal">
+        <h1>Tuingids</h1>
+        <p class="blog-intro">
+          Praktische adviezen voor Nederlandse tuineigenaren. Van tuinaanleg tot onderhoud, en van kosten tot subsidies.
+        </p>
+      </header>
+
+      <div class="articles-grid">
+        {sorted.map((post) => (
+          <Card href={`/blog/${post.slug}`} class="article-card reveal">
+            <div class="article-card-body">
+              <Badge label={post.data.category} variant="primary" />
+              <h2 class="article-card-title">{post.data.title}</h2>
+              <p class="article-card-desc">{post.data.description}</p>
+              <time class="article-card-date" datetime={post.data.publishDate.toISOString()}>
+                {formatDate(post.data.publishDate)}
+              </time>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-header { margin-bottom: 3rem; }
+  .blog-intro {
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  :global(.article-card) { height: 100%; }
+  .article-card-body { display: flex; flex-direction: column; gap: 0.5rem; }
+  .article-card-title { font-size: 1rem; margin: 0.25rem 0; }
+  .article-card-desc  { font-size: 0.875rem; color: var(--color-neutral-600); margin: 0; flex: 1; }
+  .article-card-date  { font-size: 0.8rem; color: var(--color-neutral-400); }
+</style>

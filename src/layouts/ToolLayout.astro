@@ -1,0 +1,115 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import CTABlock from '../components/ui/CTABlock.astro'
+import Accordion from '../components/ui/Accordion.astro'
+import type { SEOMeta, FAQItem } from '../lib/types'
+
+interface Props {
+  seo: SEOMeta
+  title: string
+  intro: string
+  faqs?: FAQItem[]
+}
+
+const { seo, title, intro, faqs = [] } = Astro.props
+
+// FAQ schema markup
+const faqSchema = faqs.length > 0 ? JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+}) : undefined
+---
+
+<BaseLayout seo={seo} schema={faqSchema}>
+  <div class="tool-layout">
+    <!-- Tool Header -->
+    <header class="tool-header">
+      <div class="container">
+        <h1 class="tool-title">{title}</h1>
+        <p class="tool-intro">{intro}</p>
+      </div>
+    </header>
+
+    <!-- Interactive tool (React island) -->
+    <section class="tool-island section-gap">
+      <div class="container tool-island-inner">
+        <slot name="tool" />
+      </div>
+    </section>
+
+    <!-- Result CTA (shown after calculator output) -->
+    <slot name="result-cta" />
+
+    <!-- SEO explanation text -->
+    <section class="tool-explainer section-gap">
+      <div class="container prose">
+        <slot name="explainer" />
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    {faqs.length > 0 && (
+      <section class="tool-faq section-gap">
+        <div class="container">
+          <h2>Veelgestelde vragen</h2>
+          <div class="tool-faq-list">
+            {faqs.map((faq) => (
+              <Accordion question={faq.question} answer={faq.answer} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Bottom CTA -->
+    <div class="container" style="padding-bottom: 4rem;">
+      <CTABlock
+        title="Klaar voor een echte offerte?"
+        description="Op basis van jouw berekening kunnen we direct passende hoveniers voor je zoeken."
+        href="/offerte"
+        cta="Vraag gratis offertes aan"
+        variant="banner"
+      />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-header {
+    background: linear-gradient(150deg, var(--color-primary-light) 0%, var(--color-neutral-100) 100%);
+    padding: 3rem 0 2.5rem;
+    border-bottom: 1px solid var(--color-primary-light);
+  }
+
+  .tool-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .tool-intro {
+    font-size: 1.125rem;
+    color: var(--color-neutral-700);
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .tool-island-inner {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: 2rem;
+    max-width: 760px;
+  }
+
+  .tool-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 760px;
+    margin-top: 1.5rem;
+  }
+</style>

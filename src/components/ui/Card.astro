@@ -1,0 +1,52 @@
+---
+interface Props {
+  href?: string
+  hover?: boolean
+  padding?: 'sm' | 'md' | 'lg'
+  class?: string
+}
+
+const {
+  href,
+  hover = true,
+  padding = 'md',
+  class: className = '',
+} = Astro.props
+
+const paddingMap = { sm: 'card-p-sm', md: 'card-p-md', lg: 'card-p-lg' }
+const classes = ['card', hover ? 'card-hover' : '', paddingMap[padding], className]
+  .filter(Boolean)
+  .join(' ')
+---
+
+{href ? (
+  <a href={href} class={classes} style="text-decoration: none; color: inherit;">
+    <slot />
+  </a>
+) : (
+  <div class={classes}>
+    <slot />
+  </div>
+)}
+
+<style>
+  :global(.card) {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  :global(.card-hover) {
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+
+  :global(.card-hover:hover) {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  :global(.card-p-sm) { padding: 1rem; }
+  :global(.card-p-md) { padding: 1.5rem; }
+  :global(.card-p-lg) { padding: 2rem; }
+</style>

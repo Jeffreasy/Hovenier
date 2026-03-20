@@ -1,0 +1,297 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import CTABlock from '../components/ui/CTABlock.astro'
+import type { SEOMeta } from '../lib/types'
+import { formatDate, getReadingTime } from '../lib/utils'
+
+interface Props {
+  seo: SEOMeta
+  title: string
+  description: string
+  publishDate: Date
+  updatedDate?: Date
+  category: string
+  readingTime?: number
+  image?: string
+  imageAlt?: string
+  relatedPosts?: { title: string; href: string; category: string }[]
+}
+
+const {
+  seo,
+  title,
+  description,
+  publishDate,
+  updatedDate,
+  category,
+  image,
+  imageAlt = title,
+  relatedPosts = [],
+} = Astro.props
+
+// Article schema markup
+const articleSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: image ? [image] : undefined,
+  datePublished: publishDate.toISOString(),
+  dateModified: (updatedDate ?? publishDate).toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: 'Tuinplatform',
+    url: 'https://www.tuinplatform.nl',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tuinplatform',
+    url: 'https://www.tuinplatform.nl',
+  },
+})
+---
+
+<BaseLayout seo={{ ...seo, ogType: 'article', ogImage: image }} schema={articleSchema}>
+  <article class="article-layout">
+    <!-- Article header -->
+    <header class="article-header">
+      <div class="container">
+        <div class="article-meta">
+          <span class="article-category">{category}</span>
+          <span class="article-reading-time">
+            <slot name="reading-time" />
+          </span>
+        </div>
+
+        <h1 class="article-title">{title}</h1>
+        <p class="article-description">{description}</p>
+
+        <div class="article-byline">
+          <span>Tuinplatform Redactie</span>
+          <span aria-hidden="true">·</span>
+          <time datetime={publishDate.toISOString()}>
+            {formatDate(publishDate)}
+          </time>
+          {updatedDate && (
+            <span class="article-updated">
+              Bijgewerkt op <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
+            </span>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured image -->
+    {image && (
+      <div class="article-image">
+        <img src={image} alt={imageAlt} width="1200" height="630" loading="eager" />
+      </div>
+    )}
+
+    <!-- Content + sidebar -->
+    <div class="article-body container">
+      <!-- Table of contents slot -->
+      <aside class="article-toc">
+        <div class="toc-sticky">
+          <slot name="toc" />
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <div class="article-content prose">
+        <slot />
+
+        <!-- Mid-article CTA -->
+        <CTABlock
+          title="Wil je weten wat jouw tuin kost?"
+          description="Gebruik onze gratis calculator voor een directe prijsindicatie."
+          href="/tools/tuinkosten-calculator"
+          cta="Bereken je tuinkosten"
+          variant="inline"
+        />
+      </div>
+    </div>
+
+    <!-- Auteur-blok -->
+    <div class="article-author container">
+      <div class="author-block">
+        <div class="author-avatar" aria-hidden="true">🌿</div>
+        <div class="author-info">
+          <strong>Tuinplatform Redactie</strong>
+          <p>Onze redactie bestaat uit tuinexperts en hoveniers die praktische adviezen schrijven voor Nederlandse tuineigenaren.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related posts -->
+    {relatedPosts.length > 0 && (
+      <section class="article-related container">
+        <h2>Gerelateerde artikelen</h2>
+        <div class="related-grid">
+          {relatedPosts.map((post) => (
+            <a href={post.href} class="related-card">
+              <span class="related-category">{post.category}</span>
+              <span class="related-title">{post.title}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Bottom CTA -->
+    <div class="container" style="padding-bottom: 4rem;">
+      <CTABlock
+        title="Vraag gratis offertes aan"
+        description="Vergelijk hoveniers in jouw buurt en vind de beste prijs."
+        href="/offerte"
+        cta="Vergelijk hoveniers"
+        variant="banner"
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header {
+    background-color: var(--color-primary-light);
+    padding: 3rem 0 2rem;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-category {
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .article-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .article-description {
+    font-size: 1.125rem;
+    color: var(--color-neutral-700);
+    max-width: 640px;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-byline {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-neutral-600);
+  }
+
+  .article-image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .article-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-top: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    .article-body {
+      grid-template-columns: 240px 1fr;
+    }
+  }
+
+  .article-toc {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .article-toc { display: block; }
+    .toc-sticky { position: sticky; top: 6rem; }
+  }
+
+  .article-author {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--color-primary-light);
+  }
+
+  .author-block {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .author-avatar {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .author-info strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .author-info p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--color-neutral-600);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+
+  .related-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .related-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .related-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-neutral-900);
+  }
+</style>

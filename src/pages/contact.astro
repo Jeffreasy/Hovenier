@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Button from '../components/ui/Button.astro'
+import { SITE } from '../lib/constants'
+
+const seo = {
+  title: 'Contact — Tuinplatform',
+  description: 'Neem contact op met Tuinplatform. Heb je een vraag over onze diensten of wil je meer weten over hoe ons platform werkt?',
+}
+---
+
+<BaseLayout {seo}>
+  <div class="contact-page section-gap">
+    <div class="container contact-inner">
+      <header class="contact-header reveal">
+        <h1>Contact</h1>
+        <p>Heb je een vraag? Stuur ons een bericht en we reageren binnen 1 werkdag.</p>
+      </header>
+
+      <div class="contact-grid">
+        <form class="contact-form reveal" action="#" method="post">
+          <div class="form-field">
+            <label for="naam">Jouw naam</label>
+            <input id="naam" name="naam" type="text" placeholder="Jan de Vries" required />
+          </div>
+          <div class="form-field">
+            <label for="email">E-mailadres</label>
+            <input id="email" name="email" type="email" placeholder="jan@voorbeeld.nl" required />
+          </div>
+          <div class="form-field">
+            <label for="onderwerp">Onderwerp</label>
+            <input id="onderwerp" name="onderwerp" type="text" placeholder="Vraag over..." required />
+          </div>
+          <div class="form-field">
+            <label for="bericht">Bericht</label>
+            <textarea id="bericht" name="bericht" rows={5} placeholder="Jouw bericht..." required></textarea>
+          </div>
+          <Button type="submit" size="lg">Verstuur bericht</Button>
+        </form>
+
+        <aside class="contact-info reveal">
+          <div class="info-block">
+            <span class="info-icon" aria-hidden="true">📧</span>
+            <div>
+              <strong>E-mail</strong>
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            </div>
+          </div>
+          <div class="info-block">
+            <span class="info-icon" aria-hidden="true">⏱</span>
+            <div>
+              <strong>Reactietijd</strong>
+              <p>Binnen 1 werkdag</p>
+            </div>
+          </div>
+          <div class="info-note">
+            <strong>Ben je hovenier?</strong>
+            <p>Wil je als hovenier leads ontvangen via ons platform? Stuur een e-mail met "Hovenier aanmelding" als onderwerp.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-inner { max-width: 900px; }
+  .contact-header { margin-bottom: 2.5rem; }
+  .contact-header p { font-size: 1.125rem; color: var(--color-neutral-600); margin: 0; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr 300px; }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .form-field label {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-neutral-700);
+  }
+
+  .form-field input,
+  .form-field textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background: var(--color-neutral-100);
+    transition: border-color var(--transition-fast);
+    resize: vertical;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: white;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-block {
+    display: flex;
+    gap: 0.875rem;
+    align-items: flex-start;
+  }
+
+  .info-icon { font-size: 1.5rem; flex-shrink: 0; }
+
+  .info-block strong { display: block; font-family: var(--font-heading); }
+  .info-block a, .info-block p { margin: 0; font-size: 0.9375rem; color: var(--color-neutral-600); }
+
+  .info-note {
+    background: var(--color-primary-light);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+  }
+
+  .info-note strong { display: block; font-family: var(--font-heading); margin-bottom: 0.25rem; }
+  .info-note p { margin: 0; font-size: 0.875rem; color: var(--color-neutral-700); }
+</style>

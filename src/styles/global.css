@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN SYSTEM — Hovenier Platform
+   ============================================================ */
+
+@theme {
+  /* --- Kleuren --- */
+  --color-primary:          #5B7553;
+  --color-primary-dark:     #3D5438;
+  --color-primary-light:    #E8F0E4;
+
+  --color-secondary:        #C4A96A;
+  --color-secondary-dark:   #A88B4A;
+  --color-secondary-light:  #F5ECCA;
+
+  --color-neutral-900:      #2D2D2D;
+  --color-neutral-700:      #4A4A4A;
+  --color-neutral-600:      #6B7280;
+  --color-neutral-400:      #9CA3AF;
+  --color-neutral-200:      #E5E5E5;
+  --color-neutral-100:      #F5F3EF;
+
+  --color-white:            #FFFFFF;
+
+  --color-success:          #22C55E;
+  --color-success-light:    #DCFCE7;
+  --color-warning:          #F59E0B;
+  --color-warning-light:    #FEF3C7;
+  --color-error:            #EF4444;
+  --color-error-light:      #FEE2E2;
+
+  /* --- Typografie --- */
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body:    "Inter", sans-serif;
+
+  /* --- Font sizes (mobiel-first) --- */
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.25rem;    /* 20px */
+  --text-2xl:   1.5rem;     /* 24px */
+  --text-3xl:   1.875rem;   /* 30px */
+  --text-4xl:   2.25rem;    /* 36px */
+  --text-5xl:   3rem;       /* 48px */
+
+  /* --- Spacing (8-point grid) --- */
+  --spacing-1:  0.25rem;   /* 4px */
+  --spacing-2:  0.5rem;    /* 8px */
+  --spacing-3:  0.75rem;   /* 12px */
+  --spacing-4:  1rem;      /* 16px */
+  --spacing-5:  1.25rem;   /* 20px */
+  --spacing-6:  1.5rem;    /* 24px */
+  --spacing-8:  2rem;      /* 32px */
+  --spacing-10: 2.5rem;    /* 40px */
+  --spacing-12: 3rem;      /* 48px */
+  --spacing-16: 4rem;      /* 64px */
+  --spacing-20: 5rem;      /* 80px */
+  --spacing-24: 6rem;      /* 96px */
+
+  /* --- Border radius --- */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* --- Shadows --- */
+  --shadow-sm:   0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-md:   0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  --shadow-lg:   0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+  --shadow-xl:   0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.06);
+
+  /* --- Transitions --- */
+  --transition-fast:   150ms ease-out;
+  --transition-base:   250ms ease-out;
+  --transition-slow:   400ms ease-out;
+
+  /* --- Container --- */
+  --container-content: 720px;
+  --container-wide:    1200px;
+  --container-full:    1440px;
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-100);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   TYPOGRAFIE
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-neutral-900);
+  margin-top: 0;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 600; }
+h4 { font-size: 1.125rem; font-weight: 600; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   ARTIKEL TYPOGRAFIE (voor blog en pillar pages)
+   ============================================================ */
+
+.prose {
+  max-width: var(--container-content);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+.prose h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+.prose p  { margin-bottom: 1.25rem; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose li { margin-bottom: 0.5rem; }
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section-gap {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-gap {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* ============================================================
+   FOCUS STATES (toegankelijkheid)
+   ============================================================ */
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   ANIMATIES
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scroll-reveal klasse (wordt door JS toegevoegd) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay helpers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }

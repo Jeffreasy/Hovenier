@@ -1,0 +1,116 @@
+---
+interface Props {
+  question: string
+  answer: string
+  open?: boolean
+}
+
+const { question, answer, open = false } = Astro.props
+const id = `faq-${Math.random().toString(36).slice(2, 9)}`
+---
+
+<div class="accordion">
+  <button
+    class="accordion-trigger"
+    aria-expanded={open ? 'true' : 'false'}
+    aria-controls={id}
+    type="button"
+  >
+    <span class="accordion-question">{question}</span>
+    <svg
+      class="accordion-icon"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </button>
+
+  <div
+    id={id}
+    class="accordion-panel"
+    aria-hidden={open ? 'false' : 'true'}
+  >
+    <div class="accordion-content">
+      <p>{answer}</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.accordion-trigger').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true'
+      const panel = document.getElementById(trigger.getAttribute('aria-controls') ?? '')
+
+      trigger.setAttribute('aria-expanded', String(!expanded))
+      if (panel) panel.setAttribute('aria-hidden', String(expanded))
+    })
+  })
+</script>
+
+<style>
+  .accordion {
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--color-white);
+  }
+
+  .accordion-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-neutral-900);
+    transition: background-color var(--transition-fast);
+  }
+
+  .accordion-trigger:hover {
+    background-color: var(--color-primary-light);
+  }
+
+  .accordion-icon {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    transition: transform var(--transition-fast);
+  }
+
+  .accordion-trigger[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+  }
+
+  .accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+  }
+
+  .accordion-panel[aria-hidden="false"] {
+    max-height: 500px;
+  }
+
+  .accordion-content {
+    padding: 0 1.25rem 1rem;
+    color: var(--color-neutral-700);
+    line-height: 1.7;
+  }
+
+  .accordion-content p:last-child { margin-bottom: 0; }
+</style>

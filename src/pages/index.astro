@@ -1,0 +1,551 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Button from '../components/ui/Button.astro'
+import Card from '../components/ui/Card.astro'
+import Badge from '../components/ui/Badge.astro'
+import Accordion from '../components/ui/Accordion.astro'
+import { SITE, SOCIAL_PROOF } from '../lib/constants'
+import { getCollection } from 'astro:content'
+import { formatDate } from '../lib/utils'
+
+// Fetch featured blog posts
+const allPosts = await getCollection('blog', ({ data }) => !data.draft)
+const recentPosts = allPosts
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+  .slice(0, 3)
+
+const seo = {
+  title: 'Hovenier vinden en vergelijken — gratis offertes',
+  description: 'Vind de beste hovenier in jouw buurt. Vergelijk tarieven, lees reviews en vraag gratis offertes aan. Nu al ' + SOCIAL_PROOF.offertes + ' offertes aangevraagd.',
+}
+
+const homeSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/offerte?postcode={postcode}`,
+    'query-input': 'required name=postcode',
+  },
+})
+---
+
+<BaseLayout {seo} schema={homeSchema}>
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero" aria-label="Zoek een hovenier">
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <Badge label="Gratis · Vrijblijvend · Snel" variant="success" />
+        <h1 class="hero-title">
+          Vind de beste hovenier<br/>
+          <em class="hero-accent">in jouw buurt</em>
+        </h1>
+        <p class="hero-subtitle">
+          Vergelijk lokale hoveniers op prijs en kwaliteit.
+          Ontvang binnen 48 uur gratis offertes van maximaal 3 professionals.
+        </p>
+      </div>
+
+      <!-- Search card -->
+      <div class="hero-search reveal delay-200">
+        <form class="search-form" action="/offerte" method="get">
+          <div class="search-field-group">
+            <label for="postcode" class="search-label">Jouw postcode</label>
+            <input
+              id="postcode"
+              name="postcode"
+              type="text"
+              placeholder="bijv. 1234 AB"
+              autocomplete="postal-code"
+              maxlength="7"
+              class="search-input"
+              required
+            />
+          </div>
+          <div class="search-field-group">
+            <label for="dienst" class="search-label">Wat wil je laten doen?</label>
+            <select id="dienst" name="dienst" class="search-select" required>
+              <option value="" disabled selected>Kies een dienst</option>
+              <option value="tuinaanleg">Tuinaanleg</option>
+              <option value="onderhoud">Onderhoud</option>
+              <option value="bestrating">Bestrating / terras</option>
+              <option value="beplanting">Beplanting</option>
+              <option value="schutting">Schutting / afscheiding</option>
+              <option value="overig">Iets anders</option>
+            </select>
+          </div>
+          <button type="submit" class="search-btn">
+            Vergelijk hoveniers
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+        <p class="search-note">🔒 Gratis en vrijblijvend — geen spam</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ SOCIAL PROOF ════════════════════ -->
+  <section class="social-proof section-gap" aria-label="Platform statistieken">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <strong class="stat-number">{SOCIAL_PROOF.offertes}</strong>
+          <span class="stat-label">Offertes aangevraagd</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="stat-number">{SOCIAL_PROOF.hoveniers}</strong>
+          <span class="stat-label">Actieve hoveniers</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="stat-number">⭐ {SOCIAL_PROOF.rating}</strong>
+          <span class="stat-label">Gemiddelde beoordeling</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="stat-number">{SOCIAL_PROOF.reviews}+</strong>
+          <span class="stat-label">Beoordelingen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ HOE HET WERKT ════════════════════ -->
+  <section class="how-it-works section-gap" aria-label="Hoe het werkt">
+    <div class="container">
+      <h2 class="section-title reveal">Hoe het werkt</h2>
+      <div class="steps-grid">
+        {[
+          { num: '1', title: 'Vul je wensen in', desc: 'Postcode, type werkzaamheid en jouw budget. In 2 minuten ingevuld.' },
+          { num: '2', title: 'Ontvang offertes', desc: 'Binnen 48 uur maximaal 3 offertes van hoveniers bij jou in de buurt.' },
+          { num: '3', title: 'Kies jouw hovenier', desc: 'Vergelijk op prijs en kwaliteit. Beslis zonder druk.' },
+        ].map((step) => (
+          <div class="step-card reveal">
+            <div class="step-num" aria-hidden="true">{step.num}</div>
+            <h3 class="step-title">{step.title}</h3>
+            <p class="step-desc">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ CALCULATORS ════════════════════ -->
+  <section class="calculators section-gap" aria-label="Handige tools">
+    <div class="container">
+      <h2 class="section-title reveal">Bereken je kosten</h2>
+      <p class="section-subtitle reveal">Gebruik onze gratis tools voor een directe prijsindicatie.</p>
+      <div class="calc-grid">
+        {[
+          {
+            icon: '📐',
+            title: 'Tuinkosten Calculator',
+            desc: 'Bereken wat tuinaanleg, bestrating of beplanting jou kost op basis van m² en kwaliteitsniveau.',
+            href: '/tools/tuinkosten-calculator',
+            cta: 'Bereken gratis',
+          },
+          {
+            icon: '🏡',
+            title: 'Schutting Kosten Delen',
+            desc: 'Bereken de schuttingkosten en deel de berekening direct via WhatsApp met je buurman.',
+            href: '/tools/schutting-kosten-calculator',
+            cta: 'Bekijk tool',
+          },
+          {
+            icon: '💰',
+            title: 'Subsidie Check',
+            desc: 'Voer je postcode in en ontdek welke groensubsidies beschikbaar zijn in jouw gemeente.',
+            href: '/tools/subsidie-check',
+            cta: 'Check subsidies',
+          },
+        ].map((calc) => (
+          <Card href={calc.href} class="calc-card reveal">
+            <div class="calc-icon" aria-hidden="true">{calc.icon}</div>
+            <h3 class="calc-title">{calc.title}</h3>
+            <p class="calc-desc">{calc.desc}</p>
+            <span class="calc-link">
+              {calc.cta}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ BLOG ════════════════════ -->
+  {recentPosts.length > 0 && (
+    <section class="blog-preview section-gap" aria-label="Tuingids artikelen">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <h2 class="section-title">Tuingids & tips</h2>
+            <p class="section-subtitle">Praktische adviezen van tuinexperts voor Nederlandse tuinen.</p>
+          </div>
+          <Button href="/blog" variant="secondary">Alle artikelen</Button>
+        </div>
+        <div class="blog-grid">
+          {recentPosts.map((post) => (
+            <Card href={`/blog/${post.slug}`} class="blog-card reveal">
+              <div class="blog-card-body">
+                <Badge label={post.data.category} variant="primary" />
+                <h3 class="blog-card-title">{post.data.title}</h3>
+                <p class="blog-card-desc">{post.data.description}</p>
+                <time class="blog-card-date" datetime={post.data.publishDate.toISOString()}>
+                  {formatDate(post.data.publishDate)}
+                </time>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ════════════════════ CTA BANNER ════════════════════ -->
+  <section class="section-gap" aria-label="Offerte aanvragen">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="cta-banner-text">
+          <h2>Klaar om te vergelijken?</h2>
+          <p>Vraag nu gratis offertes aan. Binnen 48 uur bericht van 3 hoveniers uit jouw regio.</p>
+        </div>
+        <Button href="/offerte" size="lg">Vraag gratis offertes aan</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ─── HERO ───────────────────────────────────────────────── */
+  .hero {
+    background: linear-gradient(145deg, var(--color-primary-light) 0%, var(--color-neutral-100) 60%);
+    border-bottom: 1px solid rgba(91,117,83,0.12);
+    padding: 4rem 0;
+  }
+
+  @media (min-width: 768px) { .hero { padding: 5rem 0 4rem; } }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .hero-text { display: flex; flex-direction: column; gap: 1rem; }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin: 0.5rem 0 0;
+  }
+
+  .hero-accent {
+    color: var(--color-primary);
+    font-style: normal;
+  }
+
+  .hero-subtitle {
+    font-size: 1.0625rem;
+    color: var(--color-neutral-700);
+    max-width: 480px;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* ─── SEARCH CARD ──────────────────────────────────────── */
+  .hero-search {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: 1.75rem;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-neutral-700);
+    margin-bottom: 0.375rem;
+  }
+
+  .search-input,
+  .search-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-neutral-900);
+    background: var(--color-neutral-100);
+    transition: border-color var(--transition-fast);
+    appearance: none;
+  }
+
+  .search-input:focus,
+  .search-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: white;
+  }
+
+  .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-neutral-900);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-top: 0.25rem;
+  }
+
+  .search-btn:hover {
+    background-color: var(--color-secondary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .search-note {
+    font-size: 0.8rem;
+    color: var(--color-neutral-600);
+    text-align: center;
+    margin: 0.75rem 0 0;
+  }
+
+  /* ─── STATS ─────────────────────────────────────────────── */
+  .stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 1.5rem 2rem;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--color-neutral-600);
+    text-align: center;
+  }
+
+  .stat-divider {
+    width: 1px;
+    background: var(--color-neutral-200);
+    margin: 1rem 0;
+  }
+
+  /* ─── HOW IT WORKS ──────────────────────────────────────── */
+  .how-it-works { background-color: var(--color-primary-light); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .steps-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .step-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    position: relative;
+  }
+
+  .step-num {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-size: 1.0625rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-desc {
+    color: var(--color-neutral-600);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* ─── CALCULATORS ───────────────────────────────────────── */
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .calc-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  :global(.calc-card) { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .calc-icon { font-size: 2rem; }
+
+  .calc-title {
+    font-size: 1.0625rem;
+    margin: 0;
+  }
+
+  .calc-desc {
+    color: var(--color-neutral-600);
+    font-size: 0.875rem;
+    margin: 0;
+    flex: 1;
+  }
+
+  .calc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: auto;
+  }
+
+  /* ─── BLOG ──────────────────────────────────────────────── */
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-title { margin-bottom: 0.25rem; }
+
+  .section-subtitle {
+    color: var(--color-neutral-600);
+    margin: 0;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .blog-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .blog-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .blog-card-title {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .blog-card-desc {
+    font-size: 0.875rem;
+    color: var(--color-neutral-600);
+    margin: 0;
+    flex: 1;
+  }
+
+  .blog-card-date {
+    font-size: 0.8rem;
+    color: var(--color-neutral-400);
+    margin-top: 0.25rem;
+  }
+
+  /* ─── CTA BANNER ────────────────────────────────────────── */
+  .cta-banner {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    border-radius: var(--radius-2xl);
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .cta-banner-text h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-banner-text p {
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+    max-width: 500px;
+  }
+</style>

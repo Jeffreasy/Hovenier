@@ -1,0 +1,123 @@
+---
+import LocalLayout from '../../layouts/LocalLayout.astro'
+import { getCollection } from 'astro:content'
+import type { Stad, FAQItem } from '../../lib/types'
+
+export async function getStaticPaths() {
+  const steden = await getCollection('steden')
+  return steden.map((stad) => ({
+    params: { stad: stad.data.slug },
+    props: { stadData: stad.data },
+  }))
+}
+
+const { stadData } = Astro.props
+const stad = stadData as Stad & {
+  description: string
+  aantalHoveniers?: number
+  gemiddeldePrijs?: string
+}
+
+const faqs: FAQItem[] = [
+  {
+    question: `Wat kost een hovenier in ${stad.naam}?`,
+    answer: `In ${stad.naam} liggen de tarieven van hoveniers gemiddeld tussen de ${stad.gemiddeldePrijs ?? '€45 – €75 per uur'}. Factoren zoals het type werkzaamheden, de grootte van je tuin en het gekozen materiaal bepalen de uiteindelijke prijs.`,
+    category: 'kosten',
+  },
+  {
+    question: `Hoe vind ik een betrouwbare hovenier in ${stad.naam}?`,
+    answer: `Via Tuinplatform vergelijk je eenvoudig hoveniers in ${stad.naam}. Vul je wensen in, ontvang gratis offertes en kies de hovenier die het beste bij je past. Alle aangesloten hoveniers zijn gescreend.`,
+    category: 'platform',
+  },
+  {
+    question: `Hoe snel kan een hovenier komen in ${stad.naam}?`,
+    answer: `Dat verschilt per hovenier en seizoen. In het voorjaar (april–mei) is het drukker. Via ons platform geef je je gewenste startdatum op — hoveniers die beschikbaar zijn reageren direct.`,
+    category: 'planning',
+  },
+]
+
+const seo = {
+  title: `Hovenier in ${stad.naam} — vergelijk en vind de beste | Tuinplatform`,
+  description: stad.description,
+  canonical: `/steden/${stad.slug}`,
+}
+---
+
+<LocalLayout
+  {seo}
+  {stad}
+  aantalHoveniers={stad.aantalHoveniers}
+  gemiddeldePrijs={stad.gemiddeldePrijs}
+  faqs={faqs}
+>
+  <div slot="offerte-form">
+    <a href={`/offerte?stad=${stad.slug}`} class="offerte-btn">
+      Ontvang 3 gratis offertes →
+    </a>
+  </div>
+
+  <div slot="content">
+    <h2>Hovenier zoeken in {stad.naam}</h2>
+    <p>
+      Ben je op zoek naar een vakkundige hovenier in {stad.naam}?
+      Via Tuinplatform vergelijk je eenvoudig {stad.aantalHoveniers ?? 10}+ hoveniers op prijs en kwaliteit.
+    </p>
+    <h3>Populaire werkzaamheden in {stad.naam}</h3>
+    <ul>
+      <li><strong>Tuinaanleg</strong> — volledige inrichting van nieuwe tuinen, vaak bij nieuwbouw</li>
+      <li><strong>Bestrating</strong> — terras, oprit of pad aanleggen in gebakken klinkers, tegels of steen</li>
+      <li><strong>Beplanting</strong> — border, haag, bosschage of klimplanten</li>
+      <li><strong>Tuinonderhoud</strong> — seizoensgebonden onderhoud, maaien, snoeien, wieden</li>
+      <li><strong>Schutting</strong> — plaatsen of vervangen van schuttingen en tuinafscheidingen</li>
+    </ul>
+    <h3>Gemiddelde tarieven in {stad.regio}</h3>
+    <p>
+      In de regio {stad.regio} betaal je gemiddeld {stad.gemiddeldePrijs ?? '€45 – €75 per uur'} voor een hovenier.
+      De definitieve prijs hangt af van de complexiteit, de materialen en de grootte van het project.
+    </p>
+  </div>
+
+  <div slot="sidebar">
+    <div class="sidebar-tip">
+      <strong>💡 Tip</strong>
+      <p>Vraag altijd minimaal 3 offertes op. Prijsverschillen van 20–40% zijn normaal in deze branche.</p>
+    </div>
+    <div class="sidebar-tip">
+      <strong>📅 Beste periode</strong>
+      <p>Boek je hovenier in {stad.naam} bij voorkeur buiten het seizoen (november–februari) voor betere beschikbaarheid en lagere prijzen.</p>
+    </div>
+  </div>
+</LocalLayout>
+
+<style>
+  .offerte-btn {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-neutral-900);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .offerte-btn:hover {
+    background-color: var(--color-secondary-dark);
+    text-decoration: none;
+  }
+
+  .sidebar-tip {
+    background: var(--color-primary-light);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .sidebar-tip strong { display: block; margin-bottom: 0.25rem; }
+  .sidebar-tip p { margin: 0; color: var(--color-neutral-700); }
+</style>
