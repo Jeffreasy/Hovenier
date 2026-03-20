@@ -12,12 +12,8 @@ export default defineConfig({
   site: 'https://www.tuinplatform.nl',
   output: 'server',
   adapter: vercel({
-    webAnalytics:   { enabled: true },   // Gratis Vercel Analytics
-    imageService:   true,                // Vercel Image Optimization (v3 API)
-    isr: {
-      // Blog, steden en FAQ: 1 uur cache (ISR), homepage: 30 min
-      expiration: 3600,
-    },
+    webAnalytics:   { enabled: true },
+    imageService:   true,
   }),
 
   // ── Image service ───────────────────────────────────────────────────────────
