@@ -20,6 +20,8 @@ const OfferteFormulier: FC = () => {
   const [form, setForm] = useState<FormState>({})
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const [loading, setLoading] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
@@ -48,9 +50,24 @@ const OfferteFormulier: FC = () => {
     else handleSubmit()
   }
 
-  function handleSubmit() {
-    setSubmitted(true)
-    // TODO: POST to API
+  async function handleSubmit() {
+    setLoading(true)
+    setSubmitError('')
+    try {
+      const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+      const res = await fetch(`${convexUrl}/submit-lead`, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(form),
+      })
+      const data = await res.json() as { ok: boolean; error?: string; matched?: boolean }
+      if (!res.ok || !data.ok) throw new Error(data.error ?? 'Onbekende fout')
+      setSubmitted(true)
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Verzenden mislukt, probeer opnieuw.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const progress = ((step - 1) / (TOTAL_STEPS - 1)) * 100
