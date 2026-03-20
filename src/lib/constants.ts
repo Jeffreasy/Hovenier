@@ -1,4 +1,4 @@
-import type { ServiceType, QualityLevel } from './types'
+import type { ServiceType } from './types'
 
 // ─── Diensten ─────────────────────────────────────────────────────────────────
 
@@ -37,25 +37,6 @@ export const TIMING_OPTIONS = [
   { value: 'binnen-3-maanden',  label: 'Binnen 3 maanden' },
   { value: 'geen-haast',        label: 'Geen haast, ik oriënteer me' },
 ]
-
-// ─── Kwaliteit ────────────────────────────────────────────────────────────────
-
-export const QUALITY_OPTIONS: Record<QualityLevel, { label: string; description: string; multiplier: number }> = {
-  basis:   { label: 'Basis',   description: 'Functioneel en betaalbaar', multiplier: 1.0 },
-  midden:  { label: 'Midden',  description: 'Goede prijs-kwaliteitverhouding', multiplier: 1.45 },
-  premium: { label: 'Premium', description: 'Hoogwaardige materialen', multiplier: 2.0 },
-}
-
-// ─── Kosten Indicaties (€ per m²) ────────────────────────────────────────────
-
-export const COST_PER_M2: Record<ServiceType, { min: number; max: number; label: string }> = {
-  bestrating: { min: 40,  max: 80,  label: 'Bestrating' },
-  beplanting: { min: 15,  max: 35,  label: 'Beplanting' },
-  tuinaanleg: { min: 50,  max: 120, label: 'Tuinaanleg' },
-  onderhoud:  { min: 5,   max: 15,  label: 'Onderhoud (per beurt)' },
-  schutting:  { min: 30,  max: 90,  label: 'Schutting (per meter)' },
-  overig:     { min: 20,  max: 60,  label: 'Overig' },
-}
 
 // ─── Steden (Fase 1 – Top 10) ────────────────────────────────────────────────
 

@@ -1,6 +1,6 @@
 import { useState, type FC } from 'react'
-import type { ServiceType, QualityLevel, TuinkostenOutput } from '../lib/types'
-import { COST_PER_M2, QUALITY_OPTIONS } from '../lib/constants'
+import type { ServiceType, QualityLevel } from '../lib/types'
+import { calculateGardenCosts, QUALITY_OPTIONS, type CalculationResult } from '../lib/pricing'
 import { formatRange } from '../lib/utils'
 
 const GARDEN_SERVICES: { value: ServiceType; label: string; icon: string }[] = [
@@ -10,26 +10,13 @@ const GARDEN_SERVICES: { value: ServiceType; label: string; icon: string }[] = [
   { value: 'schutting',  label: 'Schutting',   icon: '🪵' },
 ]
 
-function calculateCosts(m2: number, services: ServiceType[], quality: QualityLevel): TuinkostenOutput {
-  const multiplier = QUALITY_OPTIONS[quality].multiplier
-  const breakdown = services.map((s) => {
-    const base = COST_PER_M2[s]
-    return {
-      label: base.label,
-      min: Math.round(base.min * m2 * multiplier),
-      max: Math.round(base.max * m2 * multiplier),
-    }
-  })
-  const totals = breakdown.reduce((acc, b) => ({ min: acc.min + b.min, max: acc.max + b.max }), { min: 0, max: 0 })
-  return { min: totals.min, max: totals.max, breakdown }
-}
 
 const TuinkostenCalculator: FC = () => {
-  const [step, setStep] = useState<1 | 2 | 3 | 4>(1)
-  const [m2, setM2] = useState(50)
+  const [step, setStep]       = useState<1 | 2 | 3 | 4>(1)
+  const [m2, setM2]           = useState(50)
   const [services, setServices] = useState<ServiceType[]>(['bestrating'])
   const [quality, setQuality] = useState<QualityLevel>('midden')
-  const [result, setResult] = useState<TuinkostenOutput | null>(null)
+  const [result, setResult]   = useState<CalculationResult | null>(null)
 
   function toggleService(s: ServiceType) {
     setServices((prev) =>
@@ -38,7 +25,7 @@ const TuinkostenCalculator: FC = () => {
   }
 
   function calculate() {
-    const r = calculateCosts(m2, services, quality)
+    const r = calculateGardenCosts(m2, services, quality)
     setResult(r)
     setStep(4)
   }
