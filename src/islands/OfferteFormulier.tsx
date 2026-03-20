@@ -1,5 +1,5 @@
 import { useState, type FC } from 'react'
-import type { ServiceType, BudgetRange, StartTiming, OfferteData } from '../lib/types'
+import type { BudgetRange, StartTiming, OfferteData } from '../lib/types'
 import { SERVICE_OPTIONS, BUDGET_OPTIONS, TIMING_OPTIONS } from '../lib/constants'
 import { isValidPostcode } from '../lib/utils'
 

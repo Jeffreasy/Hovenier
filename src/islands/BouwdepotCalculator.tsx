@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import { estimateBouwdepotGardenShare } from '../lib/pricing'
 import { formatCurrency } from '../lib/utils'
 import { sharedCalcStyles } from './SchuttingCalculator'
@@ -22,7 +22,7 @@ const BouwdepotCalculator: FC = () => {
   const [waarde,  setWaarde]  = useState(350000)
   const [result,  setResult]  = useState<ReturnType<typeof estimateBouwdepotGardenShare> | null>(null)
 
-  function calculate(e: React.FormEvent) {
+  function calculate(e: FormEvent) {
     e.preventDefault()
     setResult(estimateBouwdepotGardenShare(depot, m2, waarde))
   }

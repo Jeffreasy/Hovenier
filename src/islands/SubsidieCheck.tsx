@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import { sharedCalcStyles } from './SchuttingCalculator'
 
 /**
@@ -43,7 +43,7 @@ const SubsidieCheck: FC = () => {
   const [results,  setResults]  = useState<SubsidieResult[] | null>(null)
   const [loading,  setLoading]  = useState(false)
 
-  async function handleCheck(e: React.FormEvent) {
+  async function handleCheck(e: FormEvent) {
     e.preventDefault()
     setLoading(true)
 

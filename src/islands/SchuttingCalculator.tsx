@@ -1,11 +1,9 @@
 import type { FC } from 'react'
 import {
   SCHUTTING_MATERIALS,
-  QUALITY_OPTIONS,
   calculateSchuttingCosts,
   type SchuttingMaterial,
 } from '../lib/pricing'
-import type { QualityLevel } from '../lib/types'
 import { formatRange } from '../lib/utils'
 import { useState } from 'react'
 
@@ -21,7 +19,6 @@ const SchuttingCalculator: FC = () => {
   const [meters,   setMeters]   = useState(10)
   const [hoogte,   setHoogte]   = useState(1.8)
   const [material, setMaterial] = useState<SchuttingMaterial>(SCHUTTING_MATERIALS[0]!)
-  const [quality,  setQuality]  = useState<QualityLevel>('midden')
   const [step,     setStep]     = useState<1 | 2 | 3>(1)
 
   const result = calculateSchuttingCosts(meters, material, hoogte)

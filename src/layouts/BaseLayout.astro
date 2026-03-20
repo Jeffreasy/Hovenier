@@ -58,7 +58,7 @@ const ogImage = seo.ogImage ?? `${SITE.url}/og-default.jpg`
     />
 
     <!-- Schema JSON-LD slot -->
-    {schema && <script type="application/ld+json" set:html={schema} />}
+    {schema && <script is:inline type="application/ld+json" set:html={schema} />}
 
     <!-- Custom schema slot (via slot="schema") -->
     <slot name="schema" />

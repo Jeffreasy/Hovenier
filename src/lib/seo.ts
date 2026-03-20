@@ -6,7 +6,7 @@
  */
 
 import { SITE } from './constants'
-import type { Stad, FAQItem } from './types'
+import type { FAQItem } from './types'
 
 // ─── Article Schema ───────────────────────────────────────────────────────────
 
