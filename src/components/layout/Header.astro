@@ -6,8 +6,23 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
   <div class="container header-inner">
     <!-- Logo -->
     <a href="/" class="header-logo" aria-label={`${SITE.name} – homepage`}>
-      <span class="logo-icon" aria-hidden="true">🌿</span>
-      <span class="logo-text">{SITE.name}</span>
+      {/* Icon op mobiel, horizontaal logo op desktop */}
+      <img
+        src="/tuinhub-logo-horizontal-light.svg"
+        alt={SITE.name}
+        class="logo-img logo-img--desktop"
+        width="140"
+        height="36"
+        loading="eager"
+      />
+      <img
+        src="/tuinhub-icon-original.svg"
+        alt={SITE.name}
+        class="logo-img logo-img--mobile"
+        width="32"
+        height="32"
+        loading="eager"
+      />
     </a>
 
     <!-- Desktop navigation -->
@@ -147,15 +162,17 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     flex-shrink: 0;
   }
 
-  .logo-icon { font-size: 1.375rem; }
-
-  .logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #EDF2EC;
-    letter-spacing: -0.01em;
+  /* Logo afbeeldingen – responsive */
+  .logo-img {
+    display: block;
+    height: 32px;
+    width: auto;
+    object-fit: contain;
   }
+
+  /* Desktop: horizontaal logo zichtbaar, icon verborgen */
+  .logo-img--desktop { display: block; }
+  .logo-img--mobile  { display: none;  }
 
   /* ── Desktop nav ───────────────────────────────────────────────────────── */
   .header-nav { flex: 1; }
@@ -229,6 +246,15 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
 
   @media (min-width: 768px) {
     .header-login { display: inline-flex; }
+    /* Desktop: toon horizontaal logo, verberg icon */
+    .logo-img--desktop { display: block; height: 36px; }
+    .logo-img--mobile  { display: none;  }
+  }
+
+  /* Mobiel: verberg horizontaal logo, toon icon */
+  @media (max-width: 767px) {
+    .logo-img--desktop { display: none;  }
+    .logo-img--mobile  { display: block; height: 28px; }
   }
 
   .header-login:hover {

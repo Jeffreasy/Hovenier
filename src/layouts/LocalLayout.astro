@@ -22,14 +22,14 @@ const {
 const localSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: `Tuinplatform – Hoveniers in ${stad.naam}`,
+  name: `TuinHub – Hoveniers in ${stad.naam}`,
   description: seo.description,
   areaServed: {
     '@type': 'City',
     name: stad.naam,
     containedInPlace: { '@type': 'AdministrativeArea', name: stad.provincie },
   },
-  url: `https://www.tuinplatform.nl/steden/${stad.slug}`,
+  url: `https://www.tuinhub.nl/steden/${stad.slug}`,
 })
 
 const faqSchema = faqs.length > 0 ? JSON.stringify({

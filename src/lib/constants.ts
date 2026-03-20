@@ -67,9 +67,9 @@ export const SOCIAL_PROOF = {
 // ─── Site Info ────────────────────────────────────────────────────────────────
 
 export const SITE = {
-  name:        'Tuinplatform',
+  name:        'TuinHub',
   tagline:     'Vind de beste hovenier in jouw regio',
   description: 'Vergelijk hoveniers in jouw buurt. Vraag gratis offertes aan voor tuinaanleg, onderhoud, bestrating en meer.',
-  url:         'https://www.tuinplatform.nl',
-  email:       'info@tuinplatform.nl',
+  url:         'https://www.tuinhub.nl',
+  email:       'info@tuinhub.nl',
 }

@@ -1,0 +1,49 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro'
+import type { FAQItem } from '../../lib/types'
+import SchuttingCalc from '../../islands/SchuttingCalculator.tsx'
+
+export const prerender = true
+
+const seo = {
+  title: 'Schutting Kosten Calculator — wat kost een schutting laten plaatsen?',
+  description: 'Bereken gratis wat een nieuwe schutting kost. Kies uw materiaal, lengte en hoogte voor een directe prijsindicatie inclusief fundering. Deel de berekening via WhatsApp met uw buurman.',
+}
+
+const faqs: FAQItem[] = [
+  {
+    question: 'Wat kost een schutting gemiddeld per meter?',
+    answer: 'De kosten voor een houten schutting (vuren) liggen gemiddeld tussen de €80 en €130 per strekkende meter inclusief plaatsing en fundering. Composiet en cortenstaal zijn duurder: €150–€350 per meter. De calculator geeft een nauwkeurige indicatie op basis van uw keuzes.',
+    category: 'calculator',
+  },
+  {
+    question: 'Heb ik een vergunning nodig voor een schutting?',
+    answer: 'In de meeste gevallen heeft u geen omgevingsvergunning nodig voor een schutting tot 2 meter hoog in uw achtertuin, mits niet direct aan de voorgevel. Voor een schutting hoger dan 2 meter of in een beschermd stadsgebied is in veel gemeenten wél een vergunning vereist. De calculator waarschuwt u hierover automatisch.',
+    category: 'vergunning',
+  },
+  {
+    question: 'Kan ik de kosten delen met mijn buurman?',
+    answer: 'Ja — juridisch gezien zijn aangrenzende eigenaren in Nederland verplicht om gezamenlijk bij te dragen aan een erfafscheiding (art. 5:49 BW). Via de "Deel via WhatsApp" knop verstuurt u de exacte berekening direct naar uw buurman, zodat u samen een beslissing kunt nemen.',
+    category: 'kosten',
+  },
+  {
+    question: 'Zijn de opgegeven prijzen inclusief btw?',
+    answer: 'De calculator toont indicatieprijzen op basis van Nederlandse markttarieven 2025. De meeste hoveniers hanteren tarieven exclusief 21% btw voor particuliere opdrachtgevers. Vraag altijd naar een gespecificeerde offerte voor de exacte prijs inclusief btw.',
+    category: 'calculator',
+  },
+  {
+    question: 'Welk materiaal duurt het langst mee?',
+    answer: 'Composiet en cortenstaal gaan het langst mee: 25–40 jaar bij goed onderhoud. Hardhout (bijv. iroko of bangkirai) doet het ook goed: 20–30 jaar. Vuren (geïmpregneerd) heeft een levensduur van 10–20 jaar. Toogplanken zijn onderhoudsarm maar gaan gemiddeld 10–15 jaar mee.',
+    category: 'materiaal',
+  },
+]
+---
+
+<ToolLayout
+  {seo}
+  title="Schutting Kosten Calculator"
+  intro="Bereken direct wat een nieuwe schutting kost — inclusief fundering en plaatsing. Deel de berekening via WhatsApp met uw buurman."
+  faqs={faqs}
+>
+  <SchuttingCalc client:load slot="tool" />
+</ToolLayout>

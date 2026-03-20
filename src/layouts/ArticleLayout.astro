@@ -39,13 +39,13 @@ const articleSchema = JSON.stringify({
   dateModified: (updatedDate ?? publishDate).toISOString(),
   author: {
     '@type': 'Organization',
-    name: 'Tuinplatform',
-    url: 'https://www.tuinplatform.nl',
+    name: 'TuinHub',
+    url: 'https://www.tuinhub.nl',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Tuinplatform',
-    url: 'https://www.tuinplatform.nl',
+    name: 'TuinHub',
+    url: 'https://www.tuinhub.nl',
   },
 })
 ---
@@ -66,7 +66,7 @@ const articleSchema = JSON.stringify({
         <p class="article-description">{description}</p>
 
         <div class="article-byline">
-          <span>Tuinplatform Redactie</span>
+          <span>TuinHub Redactie</span>
           <span aria-hidden="true">·</span>
           <time datetime={publishDate.toISOString()}>
             {formatDate(publishDate)}
@@ -112,7 +112,7 @@ const articleSchema = JSON.stringify({
       <div class="author-block">
         <div class="author-avatar" aria-hidden="true">🌿</div>
         <div class="author-info">
-          <strong>Tuinplatform Redactie</strong>
+          <strong>TuinHub Redactie</strong>
           <p>Onze redactie bestaat uit tuinexperts en hoveniers die praktische adviezen schrijven voor Nederlandse tuineigenaren.</p>
         </div>
       </div>

@@ -68,11 +68,11 @@ export function getPostcodePrefix(postcode: string): string {
 
 // ─── SEO helpers ──────────────────────────────────────────────────────────────
 
-export function buildTitle(pageTitle: string, siteName = 'Tuinplatform'): string {
+export function buildTitle(pageTitle: string, siteName = 'TuinHub'): string {
   return `${pageTitle} | ${siteName}`
 }
 
-export function buildCanonical(path: string, base = 'https://www.tuinplatform.nl'): string {
+export function buildCanonical(path: string, base = 'https://www.tuinhub.nl'): string {
   return `${base}${path.startsWith('/') ? path : '/' + path}`
 }
 

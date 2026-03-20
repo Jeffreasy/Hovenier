@@ -1,0 +1,86 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro'
+import type { FAQItem } from '../../lib/types'
+import SubsidieCheckIsland from '../../islands/SubsidieCheck.tsx'
+import type { SubsidieData } from '../../islands/SubsidieCheck.tsx'
+import { getCollection } from 'astro:content'
+
+export const prerender = true
+
+// ─── Load subsidies from content collection ─────────────────────────────────
+
+const allSubsidies = await getCollection('subsidies', ({ data }) => data.actief)
+
+// Extract plain text description from markdown body (strip headings, bullets, blockquotes)
+const subsidieData: SubsidieData[] = allSubsidies.map((entry) => {
+  const plainBody = (entry.body ?? '')
+    .split('\n')
+    .filter((line) => {
+      const trimmed = line.trim()
+      return (
+        trimmed.length > 0 &&
+        !trimmed.startsWith('#') &&
+        !trimmed.startsWith('-') &&
+        !trimmed.startsWith('>') &&
+        !/^\d+\./.test(trimmed)
+      )
+    })
+    .slice(0, 2)
+    .join(' ')
+    .replace(/\*\*/g, '')
+    .replace(/\*/g, '')
+    .trim()
+
+  return {
+    gemeente:    entry.data.gemeente,
+    naam:        entry.data.naam,
+    bedrag:      entry.data.bedrag,
+    aanvraagUrl: entry.data.aanvraagUrl,
+    body:        plainBody,
+  }
+})
+
+// ─── SEO ────────────────────────────────────────────────────────────────────
+
+const seo = {
+  title: 'Subsidie Check — welke tuinsubsidies zijn beschikbaar in jouw gemeente?',
+  description: 'Voer uw postcode in en ontdek direct welke groensubsidies uw gemeente aanbiedt voor tuinvergroening, geveltuinen en het verwijderen van tegels. Gratis en actueel.',
+}
+
+const faqs: FAQItem[] = [
+  {
+    question: 'Welke gemeenten bieden tuinsubsidies aan?',
+    answer: 'Steeds meer Nederlandse gemeenten bieden subsidies voor tuinvergroening. De meeste subsidies zijn bedoeld voor het vervangen van tegels of beton door groen. Amsterdam, Rotterdam, Den Haag, Utrecht, Eindhoven, Tilburg, Groningen, Almere, Breda en Nijmegen doen al mee. Voer uw postcode in om de actuele subsidies in uw gemeente te zien.',
+    category: 'subsidie',
+  },
+  {
+    question: 'Hoeveel subsidie kan ik verwachten?',
+    answer: 'De subsidie varieert per gemeente, maar ligt typisch tussen de €150 en €350 eenmalig. Sommige gemeenten werken met tegoedbonnen voor planten. De exacte bedragen staan per gemeente vermeld in de resultaten.',
+    category: 'subsidie',
+  },
+  {
+    question: 'Moet ik de subsidie aanvragen vóór of na de werkzaamheden?',
+    answer: 'Dit verschilt per gemeente. De meeste gemeenten vereisen dat u de subsidie aanvraagt vóórdat u begint. Enkele gemeenten, zoals Almere, werken met een declaratiemodel waarbij u achteraf bewijs indient. Het is altijd veilig om vooraf contact op te nemen met uw gemeente.',
+    category: 'aanvraag',
+  },
+  {
+    question: 'Wat zijn de meest voorkomende voorwaarden?',
+    answer: 'De meest voorkomende eisen zijn: minimaal 8–12 m² verharding verwijderen, geen kunstgras plaatsen, woonachtig zijn in de gemeente en één aanvraag per adres per jaar. Sommige gemeenten stimuleren inheemse plantensoorten extra.',
+    category: 'voorwaarden',
+  },
+  {
+    question: 'Mijn gemeente staat er niet bij — ben ik dan uitgesloten?',
+    answer: 'We ondersteunen momenteel de 10 grootste steden van ons platform. Maar ook andere gemeenten bieden subsidies aan. Zoek op "[uw gemeentenaam] subsidie tuinvergroening" of kijk op de website van uw gemeente. De landelijke subsidiewijzer op rvo.nl is ook een goede startpagina.',
+    category: 'subsidie',
+  },
+]
+---
+
+<ToolLayout
+  {seo}
+  title="Subsidie Check"
+  intro="Voer uw postcode in en ontdek direct welke groensubsidies beschikbaar zijn in uw gemeente. Actueel en gratis."
+  faqs={faqs}
+>
+  <SubsidieCheckIsland client:load slot="tool" subsidies={subsidieData} />
+</ToolLayout>
