@@ -25,16 +25,63 @@ export default defineSchema({
     .index('by_hovenier',       ['toegewezenAan'])
     .index('by_hovenier_status',['toegewezenAan', 'status']),
 
-  // ── Hoveniers ─────────────────────────────────────────────────────────────
+  // ── Hoveniers (ingelogde hovenier-accounts via Clerk) ─────────────────────
   hoveniers: defineTable({
-    clerkId:      v.string(),   // Clerk userId (uniek)
-    naam:         v.string(),   // Bedrijfsnaam
-    email:        v.string(),
-    telefoon:     v.optional(v.string()),
-    regio:        v.array(v.string()),  // postcodegebieden, bijv. ["10", "11", "12"]
-    specialisaties: v.array(v.string()), // ServiceType[]
-    actief:       v.boolean(),
+    clerkId:        v.string(),   // Clerk userId (uniek)
+    naam:           v.string(),   // Bedrijfsnaam
+    email:          v.string(),
+    telefoon:       v.optional(v.string()),
+    regio:          v.array(v.string()),       // postcodegebieden, bijv. ["10", "11", "12"]
+    specialisaties: v.array(v.string()),       // ServiceType[]
+    actief:         v.boolean(),
   })
     .index('by_clerk_id', ['clerkId'])
     .index('by_actief',   ['actief']),
+
+  // ── Bedrijven (Google Places dataset — 5067 hoveniersbedrijven) ────────────
+  // Gebruikt voor: lokale landingspagina's, matching, zoekresultaten
+  bedrijven: defineTable({
+    // Uit Google Places
+    naam:           v.string(),
+    straat:         v.optional(v.string()),
+    stad:           v.optional(v.string()),
+    provincie:      v.optional(v.string()),
+    website:        v.optional(v.string()),
+    telefoon:       v.optional(v.string()),
+    googleMapsUrl:  v.string(),
+    googleScore:    v.optional(v.float64()),
+    aantalReviews:  v.optional(v.number()),
+    categorieen:    v.array(v.string()),
+    hoofdCategorie: v.optional(v.string()),
+    googlePlaceId:  v.optional(v.string()),
+
+    // Gegenereerd bij import
+    slug:           v.string(),
+    specialisaties: v.array(v.string()),
+    isActief:       v.boolean(),
+    importedAt:     v.number(),   // ms timestamp
+
+    // Fase 2
+    postcode:       v.optional(v.string()),
+    lat:            v.optional(v.float64()),
+    lng:            v.optional(v.float64()),
+    beschrijving:   v.optional(v.string()),
+  })
+    .index('by_provincie',       ['provincie'])
+    .index('by_stad',            ['stad'])
+    .index('by_slug',            ['slug'])
+    .index('by_googlePlaceId',   ['googlePlaceId'])
+    .index('by_provincie_score', ['provincie', 'googleScore']),
+
+  // ── Steden (voor dynamische content op lokale landingspagina's) ────────────
+  steden: defineTable({
+    naam:           v.string(),
+    provincie:      v.string(),
+    slug:           v.string(),
+    aantalHoveniers: v.number(),
+    prioriteit:     v.number(),
+    gemiddeldePrijs: v.optional(v.string()),
+  })
+    .index('by_slug',      ['slug'])
+    .index('by_provincie', ['provincie']),
 })
