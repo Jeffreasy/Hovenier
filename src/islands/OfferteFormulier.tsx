@@ -35,8 +35,9 @@ const OfferteFormulier: FC = () => {
     if (step === 3 && !form.budget) e.budget = 'Kies een budgetrange'
     if (step === 4 && !form.timing) e.timing = 'Kies een startmoment'
     if (step === 5) {
+      const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
       if (!form.naam?.trim())  e.naam = 'Vul je naam in'
-      if (!form.email?.includes('@')) e.email = 'Vul een geldig e-mailadres in'
+      if (!form.email || !EMAIL_RE.test(form.email)) e.email = 'Vul een geldig e-mailadres in'
       if (!form.telefoon?.trim()) e.telefoon = 'Vul je telefoonnummer in'
       if (!form.postcode || !isValidPostcode(form.postcode)) e.postcode = 'Vul een geldige postcode in (bijv. 1234 AB)'
     }
@@ -92,7 +93,15 @@ const OfferteFormulier: FC = () => {
     <div className="of-wrapper">
       {/* Progress bar */}
       <div className="of-progress">
-        <div className="of-progress-bar" style={{ width: `${progress}%` }} role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} />
+        <div
+          className="of-progress-bar"
+          style={{ width: `${progress}%` }}
+          role="progressbar"
+          aria-valuenow={progress}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`Stap ${step} van ${TOTAL_STEPS} — ${STEP_LABELS[step - 1]}`}
+        />
       </div>
 
       {/* Step indicator */}
@@ -193,17 +202,19 @@ const OfferteFormulier: FC = () => {
           <p className="of-hint">Zodat hoveniers contact met je kunnen opnemen.</p>
           <div className="of-fields">
             {[
-              { id: 'naam',     label: 'Naam',         type: 'text',  placeholder: 'Jan de Vries',      value: form.naam },
-              { id: 'email',    label: 'E-mailadres',  type: 'email', placeholder: 'jan@voorbeeld.nl',  value: form.email },
-              { id: 'telefoon', label: 'Telefoonnummer', type: 'tel', placeholder: '06 12 34 56 78',    value: form.telefoon },
-              { id: 'postcode', label: 'Postcode',     type: 'text',  placeholder: '1234 AB',           value: form.postcode },
-            ].map(({ id, label, type, placeholder, value }) => (
+              { id: 'naam',     label: 'Naam',           type: 'text',  placeholder: 'Jan de Vries',     autoComplete: 'name',        spellCheck: false, value: form.naam },
+              { id: 'email',    label: 'E-mailadres',    type: 'email', placeholder: 'jan@voorbeeld.nl', autoComplete: 'email',       spellCheck: false, value: form.email },
+              { id: 'telefoon', label: 'Telefoonnummer', type: 'tel',   placeholder: '06 12 34 56 78',   autoComplete: 'tel',         spellCheck: false, value: form.telefoon },
+              { id: 'postcode', label: 'Postcode',       type: 'text',  placeholder: '1234 AB',          autoComplete: 'postal-code', spellCheck: false, value: form.postcode },
+            ].map(({ id, label, type, placeholder, autoComplete, spellCheck, value }) => (
               <div key={id} className="of-field">
                 <label htmlFor={id} className="of-label">{label}</label>
                 <input
                   id={id}
                   type={type}
                   placeholder={placeholder}
+                  autoComplete={autoComplete}
+                  spellCheck={spellCheck}
                   value={(value as string) ?? ''}
                   onChange={(e) => update(id as keyof FormState, e.target.value)}
                   className={`of-input ${errors[id] ? 'of-input--error' : ''}`}
@@ -221,14 +232,14 @@ const OfferteFormulier: FC = () => {
       {/* Navigation */}
       <div className="of-nav">
         {step > 1 && (
-          <button type="button" className="of-back-btn" onClick={() => setStep((s) => s - 1)}>
-            ← Terug
+          <button type="button" className="of-back-btn" onClick={() => setStep((s) => s - 1)} aria-label="Vorige stap">
+            <span aria-hidden="true">←</span> Terug
           </button>
         )}
         <button type="button" className="of-next-btn" onClick={next} disabled={loading}>
           {loading
-            ? 'Verzenden...'
-            : step < TOTAL_STEPS ? 'Volgende →' : 'Verstuur aanvraag ✓'
+            ? 'Verzenden…'
+            : step < TOTAL_STEPS ? 'Volgende' : 'Verstuur aanvraag'
           }
         </button>
       </div>
@@ -291,7 +302,7 @@ const formStyles = `
     font-size: 0.9rem;
     font-weight: 600;
     color: rgba(237,242,236,0.65);
-    transition: all 0.15s;
+    transition: border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;
     text-align: center;
   }
 
@@ -340,7 +351,7 @@ const formStyles = `
     font-weight: 600;
     color: rgba(237,242,236,0.65);
     text-align: left;
-    transition: all 0.15s;
+    transition: border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;
   }
 
   .of-budget-btn:hover { border-color: rgba(196,169,106,0.35); background: rgba(255,255,255,0.08); color: #EDF2EC; }
@@ -386,7 +397,7 @@ const formStyles = `
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.15s ease-out;
     box-shadow: 0 2px 12px rgba(196,169,106,0.25);
   }
 
@@ -400,7 +411,7 @@ const formStyles = `
     color: rgba(237,242,236,0.45);
     font-size: 0.875rem;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: border-color 0.15s ease-out, color 0.15s ease-out;
   }
 
   .of-back-btn:hover { border-color: rgba(196,169,106,0.35); color: rgba(237,242,236,0.80); }

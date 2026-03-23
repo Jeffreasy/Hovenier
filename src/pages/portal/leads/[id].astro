@@ -2,7 +2,8 @@
 export const prerender = false
 import { UserButton } from '@clerk/astro/components'
 
-const { userId: clerkId } = Astro.locals.auth()
+const { getToken } = Astro.locals.auth()
+const clerkToken = await getToken({ template: 'convex' }) ?? ''
 const { id } = Astro.params
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 ---
@@ -36,7 +37,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     </div>
   </main>
 
-  <script define:vars={{ convexUrl, clerkId, id }}>
+  <script define:vars={{ convexUrl, clerkToken, id }}>
     async function loadLead() {
       const container = document.getElementById('lead-detail')
       if (!container) return
@@ -44,10 +45,13 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       try {
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${clerkToken}`,
+          },
           body: JSON.stringify({
             path: 'leads:getLeadById',
-            args: { id, clerkId },
+            args: { id },
             format: 'json',
           }),
         })
@@ -111,10 +115,13 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       try {
         await fetch(`${convexUrl}/api/mutation`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${clerkToken}`,
+          },
           body: JSON.stringify({
             path: 'leads:updateLeadStatus',
-            args: { id: leadId, clerkId, status },
+            args: { id: leadId, status },
             format: 'json',
           }),
         })
@@ -250,7 +257,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     font-weight: 600;
     text-transform: capitalize;
     color: rgba(237,242,236,0.55);
-    transition: all 0.15s;
+    transition: border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;
   }
 
   .status-btn:hover {

@@ -8,6 +8,8 @@ import { SignUp } from '@clerk/astro/components'
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0D1F12" />
+  <meta name="color-scheme" content="dark" />
   <title>Registreren als hovenier — TuinHub</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +20,15 @@ import { SignUp } from '@clerk/astro/components'
 
   <div class="auth-wrapper">
     <div class="auth-brand">
-      <a href="/" class="auth-logo">🌿 TuinHub</a>
+      <a href="/" class="auth-logo" aria-label="TuinHub — homepage">
+        <img
+          src="/tuinhub-logo-horizontal-light.svg"
+          alt="TuinHub"
+          width="140"
+          height="36"
+          loading="eager"
+        />
+      </a>
       <p>Registreer jouw hoveniersbedrijf</p>
     </div>
     <SignUp

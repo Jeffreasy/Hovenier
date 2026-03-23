@@ -2,7 +2,8 @@
 export const prerender = false
 import { UserButton } from '@clerk/astro/components'
 
-const { userId: clerkId } = Astro.locals.auth()
+const { getToken } = Astro.locals.auth()
+const clerkToken = await getToken({ template: 'convex' }) ?? ''
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 ---
 
@@ -89,7 +90,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     </div>
   </main>
 
-  <script define:vars={{ convexUrl, clerkId }}>
+  <script define:vars={{ convexUrl, clerkToken }}>
     const form = document.getElementById('profiel-form')
     const feedback = document.getElementById('form-feedback')
 
@@ -97,8 +98,11 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       try {
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ path: 'hoveniers:getMe', args: { clerkId }, format: 'json' }),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${clerkToken}`,
+          },
+          body: JSON.stringify({ path: 'hoveniers:getMe', args: {}, format: 'json' }),
         })
         const { value: profiel } = await res.json()
         if (!profiel) return
@@ -126,10 +130,13 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       try {
         const res = await fetch(`${convexUrl}/api/mutation`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${clerkToken}`,
+          },
           body: JSON.stringify({
             path: 'hoveniers:upsertHovenier',
-            args: { clerkId, naam: form.naam.value, email: form.email.value, telefoon: form.telefoon.value || undefined, regio, specialisaties },
+            args: { naam: form.naam.value, email: form.email.value, telefoon: form.telefoon.value || undefined, regio, specialisaties },
             format: 'json',
           }),
         })

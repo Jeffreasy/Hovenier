@@ -9,7 +9,7 @@ import clerk from '@clerk/astro'
 // https://astro.build/config
 export default defineConfig({
   // ── Deployment ──────────────────────────────────────────────────────────────
-  site: 'https://www.tuinplatform.nl',
+  site: 'https://www.tuinhub.nl',
   output: 'server',
   adapter: vercel({
     webAnalytics:   { enabled: true },

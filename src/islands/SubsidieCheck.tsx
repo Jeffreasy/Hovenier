@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import { useState } from 'react'
 import { sharedCalcStyles } from './SchuttingCalculator'
+import { isValidPostcode } from '../lib/utils'
 
 /**
  * SubsidieCheck — Volledig geïmplementeerd
@@ -102,7 +103,7 @@ function findGemeente(postcode: string): string | null {
 }
 
 function validatePostcode(value: string): boolean {
-  return /^\d{4}\s?[A-Za-z]{2}$/.test(value.trim())
+  return isValidPostcode(value.trim())
 }
 
 const SubsidieCheck: FC<Props> = ({ subsidies }) => {
@@ -141,9 +142,9 @@ const SubsidieCheck: FC<Props> = ({ subsidies }) => {
 
       <form onSubmit={handleSubmit} noValidate>
         <div className="calc-step">
-          <h2 className="step-title" style={{ marginBottom: '0.25rem' }}>Wat is uw postcode?</h2>
+          <h2 className="step-title" style={{ marginBottom: '0.25rem' }}>Wat is je postcode?</h2>
           <p style={{ margin: '0 0 1rem', fontSize: '0.875rem', color: 'rgba(237,242,236,0.50)' }}>
-            Wij zoeken automatisch de subsidies die beschikbaar zijn in uw gemeente.
+            We zoeken automatisch de subsidies die beschikbaar zijn in jouw gemeente.
           </p>
 
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
@@ -211,7 +212,7 @@ const SubsidieCheck: FC<Props> = ({ subsidies }) => {
               </p>
               <p className="no-results-sub">
                 {gemeente
-                  ? 'Uw gemeente biedt mogelijk wel subsidies aan — check uw gemeentewebsite.'
+                  ? 'Jouw gemeente biedt mogelijk wel subsidies aan — check de gemeentewebsite.'
                   : 'We ondersteunen momenteel: Amsterdam, Rotterdam, Den Haag, Utrecht, Eindhoven, Tilburg, Groningen, Almere, Breda en Nijmegen. Meer steden volgen.'
                 }
               </p>

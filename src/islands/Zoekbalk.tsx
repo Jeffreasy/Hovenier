@@ -1,5 +1,6 @@
 import { useState, type FC } from 'react'
 import type { ServiceType } from '../lib/types'
+import { isValidPostcode } from '../lib/utils'
 
 /**
  * Zoekbalk — Homepage search bar island
@@ -25,7 +26,7 @@ const Zoekbalk: FC = () => {
   function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
 
-    if (!/^\d{4}\s?[A-Za-z]{2}$/.test(postcode.trim())) {
+    if (!isValidPostcode(postcode.trim())) {
       setError('Vul een geldige postcode in (bijv. 1234 AB)')
       return
     }
@@ -132,7 +133,7 @@ const Zoekbalk: FC = () => {
           font-family: 'Inter', sans-serif;
           background: rgba(255,255,255,0.06);
           color: #EDF2EC;
-          transition: border-color 0.15s, background 0.15s;
+          transition: border-color 0.15s ease-out, background-color 0.15s ease-out;
           appearance: none;
         }
 
@@ -165,7 +166,7 @@ const Zoekbalk: FC = () => {
           font-size: 1rem;
           font-weight: 700;
           cursor: pointer;
-          transition: all 0.15s;
+          transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.15s ease-out;
           margin-top: 0.25rem;
           box-shadow: 0 4px 16px rgba(196,169,106,0.30);
         }

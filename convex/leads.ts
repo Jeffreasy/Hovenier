@@ -1,7 +1,12 @@
 import { mutation, query } from './_generated/server'
 import { v } from 'convex/values'
 
-// ── Submit een nieuwe lead (publiek) ─────────────────────────────────────────
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+const POSTCODE_RE = /^\d{4}\s?[A-Za-z]{2}$/
+const VALID_STATUSES = ['nieuw', 'contact', 'gesloten'] as const
+const VALID_DIENSTEN = ['tuinaanleg', 'onderhoud', 'bestrating', 'beplanting', 'schutting', 'overig']
+
+// ── Submit een nieuwe lead (publiek, geen auth vereist) ───────────────────────
 
 export const submitLead = mutation({
   args: {
@@ -15,6 +20,20 @@ export const submitLead = mutation({
     timing:   v.string(),
   },
   handler: async (ctx, args) => {
+    // Server-side validatie — client kan omzeild worden
+    if (!EMAIL_RE.test(args.email.trim())) {
+      throw new Error('Ongeldig e-mailadres')
+    }
+    if (!POSTCODE_RE.test(args.postcode.trim())) {
+      throw new Error('Ongeldige postcode (verwacht: 1234 AB)')
+    }
+    if (args.m2 < 1 || args.m2 > 10000) {
+      throw new Error('Ongeldige tuingrootte')
+    }
+    if (!VALID_DIENSTEN.includes(args.dienst)) {
+      throw new Error('Ongeldige dienst')
+    }
+
     // Normaliseer postcode naar "1234 AB" formaat
     const postcode = args.postcode.trim().toUpperCase().replace(/(\d{4})\s*([A-Z]{2})/, '$1 $2')
 
@@ -42,15 +61,19 @@ export const submitLead = mutation({
 
 export const getMyLeads = query({
   args: {
-    clerkId: v.string(),
-    status:  v.optional(v.union(v.literal('nieuw'), v.literal('contact'), v.literal('gesloten'))),
+    status: v.optional(v.union(v.literal('nieuw'), v.literal('contact'), v.literal('gesloten'))),
   },
-  handler: async (ctx, { clerkId, status }) => {
-    const q = ctx.db
+  handler: async (ctx, { status }) => {
+    const identity = await ctx.auth.getUserIdentity()
+    if (!identity) return []
+
+    const clerkId = identity.subject
+
+    const leads = await ctx.db
       .query('leads')
       .withIndex('by_hovenier', (q) => q.eq('toegewezenAan', clerkId))
-
-    const leads = await q.order('desc').collect()
+      .order('desc')
+      .collect()
 
     return status ? leads.filter((l) => l.status === status) : leads
   },
@@ -59,10 +82,15 @@ export const getMyLeads = query({
 // ── Eén lead ophalen ─────────────────────────────────────────────────────────
 
 export const getLeadById = query({
-  args: { id: v.id('leads'), clerkId: v.string() },
-  handler: async (ctx, { id, clerkId }) => {
+  args: { id: v.id('leads') },
+  handler: async (ctx, { id }) => {
+    const identity = await ctx.auth.getUserIdentity()
+    if (!identity) return null
+
+    const clerkId = identity.subject
     const lead = await ctx.db.get(id)
-    // Security: hovenier mag alleen eigen leads zien
+
+    // Security: hovenier mag alleen eigen leads zien (IDOR preventie)
     if (!lead || lead.toegewezenAan !== clerkId) return null
     return lead
   },
@@ -72,16 +100,21 @@ export const getLeadById = query({
 
 export const updateLeadStatus = mutation({
   args: {
-    id:      v.id('leads'),
-    clerkId: v.string(),
-    status:  v.union(v.literal('nieuw'), v.literal('contact'), v.literal('gesloten')),
+    id:       v.id('leads'),
+    status:   v.union(v.literal('nieuw'), v.literal('contact'), v.literal('gesloten')),
     notities: v.optional(v.string()),
   },
-  handler: async (ctx, { id, clerkId, status, notities }) => {
+  handler: async (ctx, { id, status, notities }) => {
+    const identity = await ctx.auth.getUserIdentity()
+    if (!identity) throw new Error('Niet ingelogd')
+
+    const clerkId = identity.subject
     const lead = await ctx.db.get(id)
+
     if (!lead || lead.toegewezenAan !== clerkId) {
       throw new Error('Niet geautoriseerd')
     }
+
     await ctx.db.patch(id, { status, ...(notities !== undefined ? { notities } : {}) })
   },
 })

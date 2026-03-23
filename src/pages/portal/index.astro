@@ -2,9 +2,9 @@
 export const prerender = false
 import { UserButton } from '@clerk/astro/components'
 
-const { userId: clerkId } = Astro.locals.auth()
+const { getToken } = Astro.locals.auth()
+const clerkToken = await getToken({ template: 'convex' }) ?? ''
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
-const leads: unknown[] = []
 ---
 
 <!doctype html>
@@ -67,15 +67,18 @@ const leads: unknown[] = []
     </div>
   </main>
 
-  <script define:vars={{ convexUrl, clerkId }}>
+  <script define:vars={{ convexUrl, clerkToken }}>
     async function loadLeads() {
       const list = document.getElementById('leads-list')
       if (!list) return
       try {
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ path: 'leads:getMyLeads', args: { clerkId }, format: 'json' }),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${clerkToken}`,
+          },
+          body: JSON.stringify({ path: 'leads:getMyLeads', args: {}, format: 'json' }),
         })
         const { value: leads } = await res.json()
 
