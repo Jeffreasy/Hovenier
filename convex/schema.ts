@@ -17,9 +17,13 @@ export default defineSchema({
     timing:  v.string(),    // StartTiming
 
     // Status & routing
-    status:          v.union(v.literal('nieuw'), v.literal('contact'), v.literal('gesloten')),
+    status:          v.union(v.literal('nieuw'), v.literal('klant_gesproken'), v.literal('gematcht'), v.literal('vervallen')),
     toegewezenAan:   v.optional(v.string()),  // Clerk userId van hovenier
     notities:        v.optional(v.string()),
+
+    // Concierge MVP
+    admin_notes:        v.optional(v.string()),   // belnotities
+    matched_bedrijf_id: v.optional(v.id('bedrijven')),  // referentie naar gescrapete bedrijven
   })
     .index('by_status',         ['status'])
     .index('by_hovenier',       ['toegewezenAan'])

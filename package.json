@@ -6,10 +6,10 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "dev":        "astro dev",
-    "build":      "astro check && astro build",
-    "preview":    "astro preview",
-    "astro":      "astro",
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "type-check": "astro check"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "convex": "^1.34.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "resend": "^6.9.4",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
   }
