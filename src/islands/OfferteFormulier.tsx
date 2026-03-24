@@ -54,7 +54,7 @@ const OfferteFormulier: FC = () => {
     setLoading(true)
     setSubmitError('')
     try {
-      const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+      const convexUrl = (import.meta.env.PUBLIC_CONVEX_URL ?? '').replace('.convex.cloud', '.convex.site')
       const res = await fetch(`${convexUrl}/submit-lead`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
