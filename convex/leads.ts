@@ -1,9 +1,8 @@
 import { mutation, query } from './_generated/server'
 import { v } from 'convex/values'
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+const EMAIL_RE   = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 const POSTCODE_RE = /^\d{4}\s?[A-Za-z]{2}$/
-const VALID_STATUSES = ['nieuw', 'contact', 'gesloten'] as const
 const VALID_DIENSTEN = ['tuinaanleg', 'onderhoud', 'bestrating', 'beplanting', 'schutting', 'overig']
 
 // ── Submit een nieuwe lead (publiek, geen auth vereist) ───────────────────────

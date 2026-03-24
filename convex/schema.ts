@@ -69,6 +69,7 @@ export default defineSchema({
   })
     .index('by_provincie',       ['provincie'])
     .index('by_stad',            ['stad'])
+    .index('by_stad_score',      ['stad', 'googleScore'])
     .index('by_slug',            ['slug'])
     .index('by_googlePlaceId',   ['googlePlaceId'])
     .index('by_provincie_score', ['provincie', 'googleScore']),

@@ -1,0 +1,52 @@
+---
+// Sitemap voor alle 5.067 hovenier-profielpagina's
+// Gepagineerd via Convex getAllSlugs query
+
+export const prerender = true
+
+const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+const base      = import.meta.env.SITE ?? 'https://tuinhub.nl'
+
+// Verzamel alle slugs via gepagineerd ophalen
+const slugs: string[] = []
+
+if (convexUrl) {
+  let cursor: string | null = null
+  let isDone = false
+
+  while (!isDone) {
+    const body = JSON.stringify({
+      path:   'bedrijven:getAllSlugs',
+      args:   { cursor: cursor ?? undefined },
+      format: 'json',
+    })
+
+    try {
+      const res  = await fetch(`${convexUrl}/api/query`, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+        signal: AbortSignal.timeout(10_000),
+      })
+      const data = await res.json() as {
+        value: { slugs: string[]; continueCursor: string; isDone: boolean }
+      }
+      slugs.push(...data.value.slugs)
+      cursor = data.value.continueCursor
+      isDone = data.value.isDone
+    } catch {
+      break
+    }
+  }
+}
+
+const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${slugs.map((slug) => `  <url>
+    <loc>${base}/hoveniers/${slug}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`).join('\n')}
+</urlset>`
+---
+{xml}

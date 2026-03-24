@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Button from '../components/ui/Button.astro'
 import Card from '../components/ui/Card.astro'
 import Badge from '../components/ui/Badge.astro'
+import Zoekbalk from '../islands/Zoekbalk'
 import { SITE, SOCIAL_PROOF } from '../lib/constants'
 import { getCollection } from 'astro:content'
 import { formatDate } from '../lib/utils'
@@ -59,41 +60,7 @@ const homeSchema = JSON.stringify({
 
       <!-- Search card -->
       <div class="hero-search glass-card--shimmer reveal-scale delay-200">
-        <p class="search-card-title">Wat wil jij laten doen?</p>
-        <form class="search-form" action="/offerte" method="get">
-          <div class="search-field-group">
-            <label for="postcode" class="search-label">Postcode</label>
-            <input
-              id="postcode"
-              name="postcode"
-              type="text"
-              placeholder="bijv. 1234 AB"
-              autocomplete="postal-code"
-              maxlength="7"
-              class="search-input"
-              required
-            />
-          </div>
-          <div class="search-field-group">
-            <label for="dienst" class="search-label">Type werkzaamheid</label>
-            <select id="dienst" name="dienst" class="search-select" required>
-              <option value="" disabled selected>Kies een dienst</option>
-              <option value="tuinaanleg">Tuinaanleg</option>
-              <option value="onderhoud">Onderhoud</option>
-              <option value="bestrating">Bestrating / terras</option>
-              <option value="beplanting">Beplanting</option>
-              <option value="schutting">Schutting / afscheiding</option>
-              <option value="overig">Iets anders</option>
-            </select>
-          </div>
-          <button type="submit" class="search-btn">
-            Vergelijk hoveniers
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </form>
-        <p class="search-note">🔒 Gratis en vrijblijvend — geen spam</p>
+        <Zoekbalk client:load />
       </div>
     </div>
   </section>

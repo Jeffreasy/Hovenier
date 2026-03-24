@@ -1,0 +1,436 @@
+---
+export const prerender = false
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const { slug } = Astro.params
+
+// Haal bedrijf op via Convex HTTP API
+const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+let bedrijf: Record<string, any> | null = null
+
+if (convexUrl && slug) {
+  try {
+    const res = await fetch(`${convexUrl}/api/query`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        path:   'bedrijven:getBySlug',
+        args:   { slug },
+        format: 'json',
+      }),
+    })
+    const data = await res.json()
+    bedrijf = data.value ?? null
+  } catch {
+    // graceful degradation — 404 hieronder
+  }
+}
+
+if (!bedrijf) {
+  return Astro.redirect('/404', 302)
+}
+
+// Categorie labels (vóór seo nodig voor hoofdLabel)
+const catLabel: Record<string, string> = {
+  'Tuin': 'Tuin',
+  'Tuin- en landschapaannemer': 'Tuinaannemer',
+  'Tuin- en landschapsaannemer': 'Tuinaannemer',
+  'Hoveniersbedrijf': 'Hovenier',
+  'Hovenier': 'Hovenier',
+  'Landschapsarchitect': 'Landschapsarchitect',
+  'Boomverzorging': 'Boomverzorging',
+}
+
+const hoofdLabel = catLabel[bedrijf.hoofdCategorie] ?? bedrijf.hoofdCategorie ?? 'Hovenier'
+
+const seo = {
+  title: `${bedrijf.naam} — ${hoofdLabel} in ${bedrijf.stad ?? 'Nederland'} | TuinHub`,
+  description: `${bedrijf.naam} in ${bedrijf.stad ?? 'Nederland'} · Google score ${bedrijf.googleScore ?? '?'}/5 · ${bedrijf.aantalReviews ?? 0} reviews. Vraag gratis offerte aan via TuinHub.`,
+}
+
+// Bouw offerte URL
+const offerteUrl = `/offerte?${new URLSearchParams({
+  postcode: bedrijf.postcode ?? '',
+  stad:     (bedrijf.stad ?? '').toLowerCase(),
+}).toString()}`
+
+
+
+
+// Genereer template beschrijving als beschrijving ontbreekt
+const scoreText    = bedrijf.googleScore ? `een Google-score van ${bedrijf.googleScore.toFixed(1)}/5` : 'professionele service'
+const reviewText   = bedrijf.aantalReviews ? ` op basis van ${bedrijf.aantalReviews} klantbeoordelingen` : ''
+const stadtText    = bedrijf.stad ? ` in ${bedrijf.stad}${bedrijf.provincie ? ` (${bedrijf.provincie})` : ''}` : ' in Nederland'
+const beschrijving = bedrijf.beschrijving ??
+  `${bedrijf.naam} is een professioneel ${hoofdLabel.toLowerCase()}-bedrijf${stadtText}. ` +
+  `Met ${scoreText}${reviewText} staan zij bekend om vakmanschap en betrouwbaarheid. ` +
+  `Vraag via TuinHub vrijblijvend een offerte aan en vergelijk tot 3 hoveniers gratis.`
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: bedrijf.naam,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: bedrijf.stad ?? '',
+    addressRegion: bedrijf.provincie ?? '',
+    postalCode: bedrijf.postcode ?? '',
+    addressCountry: 'NL',
+  },
+  url: bedrijf.website ?? undefined,
+  telephone: bedrijf.telefoon ?? undefined,
+  aggregateRating: bedrijf.googleScore ? {
+    '@type': 'AggregateRating',
+    ratingValue: bedrijf.googleScore,
+    reviewCount: bedrijf.aantalReviews ?? 1,
+    bestRating: 5,
+    worstRating: 1,
+  } : undefined,
+})
+---
+
+<BaseLayout {seo}>
+  <script is:inline type="application/ld+json" set:html={jsonLd} />
+
+  <section class="profiel-section section-gap">
+    <div class="container profiel-container">
+
+      <!-- Breadcrumb -->
+      <nav class="profiel-breadcrumb" aria-label="Navigatie">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        {bedrijf.stad && <><a href={`/steden/${(bedrijf.stad).toLowerCase()}`}>{bedrijf.stad}</a><span aria-hidden="true">›</span></>}
+        <span aria-current="page">{bedrijf.naam}</span>
+      </nav>
+
+      <!-- Hero -->
+      <header class="profiel-hero glass-card">
+        <div class="profiel-hero-body">
+          <div class="profiel-badge">{hoofdLabel}</div>
+          <h1 class="profiel-naam">{bedrijf.naam}</h1>
+
+          {bedrijf.googleScore && (
+            <div class="profiel-score" aria-label={`Google score: ${bedrijf.googleScore} uit 5`}>
+              <span class="profiel-stars" aria-hidden="true">
+                {'★'.repeat(Math.round(bedrijf.googleScore))}{'☆'.repeat(5 - Math.round(bedrijf.googleScore))}
+              </span>
+              <strong>{bedrijf.googleScore.toFixed(1)}</strong>
+              <span class="profiel-reviews">
+                {bedrijf.aantalReviews ? `${bedrijf.aantalReviews} Google-reviews` : 'op Google'}
+              </span>
+            </div>
+          )}
+
+          <div class="profiel-meta-row">
+            {bedrijf.stad && <span class="profiel-meta-item">📍 {bedrijf.stad}{bedrijf.provincie ? `, ${bedrijf.provincie}` : ''}</span>}
+            {bedrijf.postcode && <span class="profiel-meta-item">📮 {bedrijf.postcode}</span>}
+            {bedrijf.telefoon && <span class="profiel-meta-item">📞 <a href={`tel:${bedrijf.telefoon}`}>{bedrijf.telefoon}</a></span>}
+          </div>
+
+          <!-- Template/eigen beschrijving -->
+          <p class="profiel-beschrijving">{beschrijving}</p>
+        </div>
+
+        <div class="profiel-cta">
+          <a href={offerteUrl} class="profiel-offerte-btn">
+            Offerte aanvragen →
+          </a>
+          {bedrijf.googleMapsUrl && (
+            <a href={bedrijf.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="profiel-maps-btn">
+              Bekijk op Google Maps ↗
+            </a>
+          )}
+          {bedrijf.website && (
+            <a
+              href={bedrijf.website.startsWith('http') ? bedrijf.website : `https://${bedrijf.website}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profiel-maps-btn"
+            >
+              Website bezoeken ↗
+            </a>
+          )}
+        </div>
+      </header>
+
+      <!-- Info grid -->
+      <div class="profiel-grid">
+        <!-- Specialisaties -->
+        {bedrijf.categorieen?.length > 0 && (
+          <div class="profiel-card">
+            <h2 class="profiel-card-title">Specialisaties</h2>
+            <ul class="profiel-cat-list">
+              {bedrijf.categorieen.map((cat: string) => (
+                <li class="profiel-cat-item">{catLabel[cat] ?? cat}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Locatie info -->
+        <div class="profiel-card">
+          <h2 class="profiel-card-title">Locatie</h2>
+          <div class="profiel-info-list">
+            {bedrijf.stad && <div class="profiel-info-row"><span>Stad</span><strong>{bedrijf.stad}</strong></div>}
+            {bedrijf.provincie && <div class="profiel-info-row"><span>Provincie</span><strong>{bedrijf.provincie}</strong></div>}
+            {bedrijf.postcode && <div class="profiel-info-row"><span>Postcode</span><strong>{bedrijf.postcode}</strong></div>}
+          </div>
+        </div>
+
+        <!-- Contact -->
+        {(bedrijf.telefoon || bedrijf.website) && (
+          <div class="profiel-card">
+            <h2 class="profiel-card-title">Contact</h2>
+            <div class="profiel-info-list">
+              {bedrijf.telefoon && (
+                <div class="profiel-info-row">
+                  <span>Telefoon</span>
+                  <a href={`tel:${bedrijf.telefoon}`} class="profiel-link">{bedrijf.telefoon}</a>
+                </div>
+              )}
+              {bedrijf.website && (
+                <div class="profiel-info-row">
+                  <span>Website</span>
+                  <a
+                    href={bedrijf.website.startsWith('http') ? bedrijf.website : `https://${bedrijf.website}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="profiel-link"
+                  >
+                    {bedrijf.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="profiel-bottom-cta glass-card">
+        <div>
+          <h2>Interesse in {bedrijf.naam}?</h2>
+          <p>Vraag via TuinHub een gratis en vrijblijvende offerte aan. Je ontvangt binnen 48 uur maximaal 3 offertes.</p>
+        </div>
+        <a href={offerteUrl} class="profiel-offerte-btn">
+          Offerte aanvragen →
+        </a>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .profiel-section { padding-top: 2rem; }
+  .profiel-container { max-width: 900px; }
+
+  .profiel-beschrijving {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: rgba(237,242,236,0.55);
+    margin: 0.875rem 0 0;
+    max-width: 520px;
+  }
+
+  .profiel-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: rgba(237,242,236,0.40);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .profiel-breadcrumb a { color: rgba(237,242,236,0.55); text-decoration: none; }
+  .profiel-breadcrumb a:hover { color: #EDF2EC; }
+  .profiel-breadcrumb [aria-current] { color: #EDF2EC; }
+
+  .profiel-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .profiel-hero-body { flex: 1; min-width: 240px; }
+
+  .profiel-badge {
+    display: inline-flex;
+    padding: 0.25rem 0.75rem;
+    background: rgba(110,158,101,0.12);
+    border: 1px solid rgba(110,158,101,0.25);
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(110,158,101,0.85);
+    margin-bottom: 0.75rem;
+  }
+
+  .profiel-naam {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.375rem, 3vw, 1.875rem);
+    font-weight: 800;
+    color: #EDF2EC;
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+  }
+
+  .profiel-score {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
+  }
+  .profiel-stars { color: #C4A96A; letter-spacing: -1px; font-size: 1.125rem; }
+  .profiel-score strong { color: #C4A96A; font-weight: 700; font-size: 1.125rem; }
+  .profiel-reviews { color: rgba(237,242,236,0.40); font-size: 0.875rem; }
+
+  .profiel-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+  }
+  .profiel-meta-item {
+    font-size: 0.875rem;
+    color: rgba(237,242,236,0.55);
+  }
+  .profiel-meta-item a { color: inherit; }
+
+  .profiel-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    min-width: 200px;
+  }
+
+  .profiel-offerte-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    background: #C4A96A;
+    color: #1C1400;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.15s ease-out;
+    white-space: nowrap;
+  }
+  .profiel-offerte-btn:hover { background: #A88B4A; }
+
+  .profiel-maps-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.25rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    color: rgba(237,242,236,0.60);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.15s ease-out, color 0.15s ease-out;
+    white-space: nowrap;
+  }
+  .profiel-maps-btn:hover {
+    border-color: rgba(255,255,255,0.25);
+    color: rgba(237,242,236,0.90);
+  }
+
+  .profiel-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .profiel-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .profiel-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .profiel-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+
+  .profiel-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgba(237,242,236,0.50);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.875rem;
+  }
+
+  .profiel-cat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .profiel-cat-item {
+    padding: 0.25rem 0.625rem;
+    background: rgba(110,158,101,0.10);
+    border: 1px solid rgba(110,158,101,0.20);
+    border-radius: 99px;
+    font-size: 0.8rem;
+    color: rgba(110,158,101,0.85);
+  }
+
+  .profiel-info-list { display: flex; flex-direction: column; gap: 0.625rem; }
+  .profiel-info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  .profiel-info-row span { color: rgba(237,242,236,0.40); }
+  .profiel-info-row strong { color: #EDF2EC; font-weight: 600; text-align: right; }
+  .profiel-link {
+    color: #C4A96A;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 180px;
+  }
+  .profiel-link:hover { text-decoration: underline; }
+
+  .profiel-bottom-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  .profiel-bottom-cta h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #EDF2EC;
+    margin: 0 0 0.375rem;
+  }
+  .profiel-bottom-cta p {
+    color: rgba(237,242,236,0.50);
+    font-size: 0.875rem;
+    margin: 0;
+    max-width: 480px;
+  }
+</style>

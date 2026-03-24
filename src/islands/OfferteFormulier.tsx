@@ -1,4 +1,4 @@
-import { useState, type FC } from 'react'
+import { useState, useEffect, type FC } from 'react'
 import type { BudgetRange, StartTiming, OfferteData } from '../lib/types'
 import { SERVICE_OPTIONS, BUDGET_OPTIONS, TIMING_OPTIONS } from '../lib/constants'
 import { isValidPostcode } from '../lib/utils'
@@ -15,13 +15,35 @@ const STEP_LABELS = [
 
 type FormState = Partial<OfferteData>
 
+/** Lees URL-params eenmalig bij mount (lazy initialiser = geen re-render). */
+function readUrlParams(): { form: FormState; step: number; stad: string } {
+  const params = new URLSearchParams(window.location.search)
+  const postcode = params.get('postcode')?.trim() ?? ''
+  const dienst   = params.get('dienst')?.trim()   ?? ''
+  const stad     = params.get('stad')?.trim()      ?? ''
+  const form: FormState = {}
+  if (postcode) form.postcode = postcode
+  if (dienst)   form.dienst   = dienst as FormState['dienst']
+  const step = dienst ? 2 : 1
+  return { form, step, stad }
+}
+
 const OfferteFormulier: FC = () => {
   const [step, setStep] = useState(1)
   const [form, setForm] = useState<FormState>({})
+  const [stad, setStad] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState('')
+
+  // Lees URL-params na hydration (client-only) — werkt correct met Astro SSR + client:load
+  useEffect(() => {
+    const { form: initialForm, step: initialStep, stad: initialStad } = readUrlParams()
+    if (Object.keys(initialForm).length > 0) setForm(initialForm)
+    if (initialStep > 1) setStep(initialStep)
+    if (initialStad) setStad(initialStad)
+  }, [])
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
@@ -56,12 +78,25 @@ const OfferteFormulier: FC = () => {
     setSubmitError('')
     try {
       const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
-      const res = await fetch(`${convexUrl}/submit-lead`, {
+      // HTTP actions draaien op .convex.site — derive van de cloud URL
+      const siteUrl = convexUrl.replace('.convex.cloud', '.convex.site')
+      if (!siteUrl) throw new Error('Configuratiefout — probeer de pagina te herladen.')
+
+      const res = await fetch(`${siteUrl}/submit-lead`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify(form),
       })
-      const data = await res.json() as { ok: boolean; error?: string; matched?: boolean }
+
+      // Lees als tekst eerst zodat een lege of HTML response geen cryptische fout geeft
+      const text = await res.text()
+      let data: { ok: boolean; error?: string } = { ok: false }
+      try {
+        data = JSON.parse(text)
+      } catch {
+        throw new Error(res.ok ? 'Onverwachte serverrespons — probeer opnieuw.' : `Serverfout (${res.status})`)
+      }
+
       if (!res.ok || !data.ok) throw new Error(data.error ?? 'Onbekende fout')
       setSubmitted(true)
     } catch (err) {
@@ -91,6 +126,14 @@ const OfferteFormulier: FC = () => {
 
   return (
     <div className="of-wrapper">
+
+      {/* Stad-context banner */}
+      {stad && (
+        <div className="of-stad-banner" role="note">
+          📍 Je vraagt offertes aan voor hoveniers in <strong>{stad.charAt(0).toUpperCase() + stad.slice(1)}</strong>
+        </div>
+      )}
+
       {/* Progress bar */}
       <div className="of-progress">
         <div
@@ -257,6 +300,19 @@ const OfferteFormulier: FC = () => {
 
 const formStyles = `
   .of-wrapper { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; gap: 1.5rem; color: #EDF2EC; }
+
+  .of-stad-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(110,158,101,0.10);
+    border: 1px solid rgba(110,158,101,0.25);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: rgba(237,242,236,0.75);
+  }
+  .of-stad-banner strong { color: #EDF2EC; }
 
   .of-progress {
     height: 3px;

@@ -1,0 +1,119 @@
+---
+export const prerender = false
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ZoekResultaten from '../../islands/ZoekResultaten'
+import { getCollection } from 'astro:content'
+
+// Lees URL params
+const postcode = Astro.url.searchParams.get('postcode')?.trim() ?? ''
+const dienst   = Astro.url.searchParams.get('dienst')?.trim()   ?? ''
+let   stadParam = Astro.url.searchParams.get('stad')?.trim()    ?? ''
+
+// ── Postcode → stad resolven via PDOK Locatieserver (gratis, NL overheids-API) ─
+if (!stadParam && postcode) {
+  try {
+    const pdokUrl = `https://api.pdok.nl/bzk/locatieserver/search/v3_1/suggest?q=${encodeURIComponent(postcode)}&fq=type:postcode&fl=woonplaatsnaam,postcode&rows=1`
+    const pdokRes = await fetch(pdokUrl, {
+      headers: { 'Accept': 'application/json' },
+      signal:  AbortSignal.timeout(3000),
+    })
+    if (pdokRes.ok) {
+      const pdokData = await pdokRes.json() as {
+        response?: { docs?: Array<{ woonplaatsnaam?: string }> }
+      }
+      const woonplaats = pdokData.response?.docs?.[0]?.woonplaatsnaam
+      if (woonplaats) stadParam = woonplaats
+    }
+  } catch {
+    // PDOK niet beschikbaar — ga verder zonder stad
+  }
+}
+
+// Match gevonden stad aan onze steden-collectie (voor slug)
+const steden = await getCollection('steden')
+const gevondenStad = stadParam
+  ? steden.find(
+      (s) =>
+        s.data.naam.toLowerCase() === stadParam.toLowerCase() ||
+        s.data.slug === stadParam.toLowerCase()
+    )
+  : null
+
+const stadNaam = gevondenStad?.data.naam ?? stadParam
+const stadSlug = gevondenStad?.data.slug ?? stadParam.toLowerCase()
+
+
+const dienstLabels: Record<string, string> = {
+  tuinaanleg:  'Tuinaanleg',
+  onderhoud:   'Tuinonderhoud',
+  bestrating:  'Bestrating / terras',
+  beplanting:  'Beplanting',
+  schutting:   'Schutting',
+  overig:      'Overig',
+}
+
+const seo = {
+  title: `Hoveniers ${stadNaam ? `in ${stadNaam}` : 'in jouw regio'} — TuinHub`,
+  description: `Vergelijk hoveniersbedrijven ${stadNaam ? `in ${stadNaam}` : 'bij jou in de buurt'} op Google score en reviews. Vraag gratis offertes aan.`,
+}
+---
+
+<BaseLayout {seo}>
+  <section class="zoeken-section section-gap">
+    <div class="container">
+
+      <!-- Breadcrumb context -->
+      <nav class="zoeken-breadcrumb" aria-label="Zoekcontext">
+        <span>
+          {postcode && <><strong>{postcode}</strong> · </>}
+          {dienst && <>{dienstLabels[dienst] ?? dienst} · </>}
+          {stadNaam ? <>{stadNaam}</> : 'Nederland'}
+        </span>
+        <a href="/" class="zoeken-change">← Zoekopdracht aanpassen</a>
+      </nav>
+
+      <!-- ZoekResultaten island -->
+      <ZoekResultaten
+        postcode={postcode}
+        dienst={dienst}
+        stad={stadNaam}
+        stadSlug={stadSlug}
+        client:load
+      />
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .zoeken-section { padding-top: 2.5rem; }
+
+  .zoeken-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: rgba(237,242,236,0.55);
+  }
+
+  .zoeken-breadcrumb strong {
+    color: #EDF2EC;
+    font-weight: 600;
+  }
+
+  .zoeken-change {
+    color: var(--color-secondary, #C4A96A);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+  .zoeken-change:hover { text-decoration: underline; }
+</style>

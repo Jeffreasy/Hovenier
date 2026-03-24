@@ -1,6 +1,7 @@
 ---
 import LocalLayout from '../../layouts/LocalLayout.astro'
 import { getCollection } from 'astro:content'
+import BedrijvenLijst from '../../islands/BedrijvenLijst'
 import type { Stad, FAQItem } from '../../lib/types'
 
 export const prerender = true
@@ -53,7 +54,7 @@ const seo = {
   faqs={faqs}
 >
   <div slot="offerte-form">
-    <a href={`/offerte?stad=${stad.slug}`} class="offerte-btn">
+    <a href={`/offerte?stad=${stad.slug}&postcode=`} class="offerte-btn">
       Ontvang 3 gratis offertes →
     </a>
   </div>
@@ -77,6 +78,16 @@ const seo = {
       In de regio {stad.regio} betaal je gemiddeld {stad.gemiddeldePrijs ?? '€45 – €75 per uur'} voor een hovenier.
       De definitieve prijs hangt af van de complexiteit, de materialen en de grootte van het project.
     </p>
+
+    {/* Echte bedrijven uit Convex */}
+    <div style="margin-top: 2rem;">
+      <BedrijvenLijst
+        stad={stad.naam}
+        slug={stad.slug}
+        limit={6}
+        client:load
+      />
+    </div>
   </div>
 
   <div slot="sidebar">

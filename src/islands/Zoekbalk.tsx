@@ -36,7 +36,7 @@ const Zoekbalk: FC = () => {
     }
 
     const params = new URLSearchParams({ postcode: postcode.trim(), dienst })
-    window.location.href = `/offerte?${params.toString()}`
+    window.location.href = `/zoeken?${params.toString()}`
   }
 
   return (
