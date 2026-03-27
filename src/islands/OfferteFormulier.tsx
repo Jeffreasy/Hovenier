@@ -106,7 +106,7 @@ const OfferteFormulier: FC = () => {
   const progress = ((step - 1) / (TOTAL_STEPS - 1)) * 100
 
   return (
-    <div className="flex flex-col gap-6 font-body text-charcoal">
+    <div className="flex flex-col gap-6 font-body text-charcoal w-full min-w-0 overflow-hidden">
 
       {/* Stad-context banner */}
       {stad && (
@@ -176,7 +176,8 @@ const OfferteFormulier: FC = () => {
               placeholder="bijv. 80"
               value={form.m2 ?? ''}
               onChange={(e) => update('m2', Number(e.target.value))}
-              className="w-full px-5 py-4 border border-border rounded-md text-2xl bg-white text-charcoal placeholder:text-charcoal-muted/40 transition-colors duration-150 focus:outline-none focus:border-primary-500 focus:ring-3 focus:ring-primary-100"
+              className="px-5 py-4 border border-border rounded-md text-2xl bg-white text-charcoal placeholder:text-charcoal-muted/40 transition-colors duration-150 focus:outline-none focus:border-primary-500 focus:ring-3 focus:ring-primary-100"
+              style={{ width: '100%', boxSizing: 'border-box' }}
               aria-label="Tuingrootte in m²"
             />
             <span className="text-xl font-bold text-primary-500 shrink-0">m²</span>
