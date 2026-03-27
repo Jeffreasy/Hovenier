@@ -258,8 +258,9 @@ const OfferteFormulier: FC = () => {
                   spellCheck={false}
                   value={(value as string) ?? ''}
                   onChange={(e) => update(id as keyof FormState, e.target.value)}
-                  className={`w-full px-4 py-3 border rounded-md text-base bg-white text-charcoal placeholder:text-charcoal-muted/40 transition-colors duration-150 focus:outline-none focus:border-primary-500 focus:ring-3 focus:ring-primary-100
+                  className={`px-4 py-3 border rounded-md text-base bg-white text-charcoal placeholder:text-charcoal-muted/40 transition-colors duration-150 focus:outline-none focus:border-primary-500 focus:ring-3 focus:ring-primary-100
                     ${errors[id] ? 'border-error' : 'border-border'}`}
+                  style={{ width: '100%', boxSizing: 'border-box' }}
                 />
                 {errors[id] && <p className="text-xs text-error m-0">{errors[id]}</p>}
               </div>
