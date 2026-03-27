@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const seo = {
+  title: 'Bedankt voor uw aanvraag — TuinHub',
+  description: 'Uw offerte-aanvraag is ontvangen. We nemen binnen 24 uur contact op.',
+  noindex: true,
+}
+---
+
+<BaseLayout {seo}>
+  <div class="bedankt-page section-gap">
+    <div class="container bedankt-inner">
+      <div class="bedankt-card reveal">
+        <div class="bedankt-icon" aria-hidden="true">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="28" fill="rgba(110,158,101,0.15)" />
+            <path d="M17 28.5L24.5 36L39 21" stroke="#6E9E65" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <h1>Bedankt voor uw aanvraag!</h1>
+
+        <p class="bedankt-text">
+          We hebben uw gegevens in goede orde ontvangen. We bekijken uw project
+          zorgvuldig en nemen (indien nodig) kort telefonisch contact op om de
+          details af te stemmen. Daarna zoeken we in ons netwerk naar de beste
+          hoveniers voor uw klus.
+        </p>
+
+        <p class="bedankt-email">
+          U ontvangt ook een bevestiging per e-mail.
+        </p>
+
+        <div class="bedankt-actions">
+          <a href="/" class="bedankt-btn bedankt-btn--primary">Terug naar home</a>
+          <a href="/tools/tuinkosten-calculator" class="bedankt-btn bedankt-btn--secondary">Tuinkosten calculator</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .bedankt-inner {
+    max-width: 620px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .bedankt-card {
+    text-align: center;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255,255,255,0.11);
+    border-radius: var(--radius-xl, 16px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .bedankt-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .bedankt-card h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #EDF2EC;
+    margin: 0;
+  }
+
+  .bedankt-text {
+    color: rgba(237,242,236,0.58);
+    line-height: 1.75;
+    max-width: 480px;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .bedankt-email {
+    color: rgba(237,242,236,0.40);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .bedankt-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    justify-content: center;
+  }
+
+  .bedankt-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: all 0.15s ease-out;
+  }
+
+  .bedankt-btn--primary {
+    background: #C4A96A;
+    color: #1C1400;
+    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
+  }
+
+  .bedankt-btn--primary:hover {
+    background: #A88B4A;
+    box-shadow: 0 4px 20px rgba(196,169,106,0.35);
+    transform: translateY(-1px);
+  }
+
+  .bedankt-btn--secondary {
+    background: rgba(255,255,255,0.06);
+    color: rgba(237,242,236,0.65);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+
+  .bedankt-btn--secondary:hover {
+    border-color: rgba(196,169,106,0.35);
+    color: #EDF2EC;
+  }
+</style>

@@ -32,7 +32,6 @@ const OfferteFormulier: FC = () => {
   const [step, setStep] = useState(1)
   const [form, setForm] = useState<FormState>({})
   const [stad, setStad] = useState('')
-  const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState('')
@@ -98,7 +97,7 @@ const OfferteFormulier: FC = () => {
       }
 
       if (!res.ok || !data.ok) throw new Error(data.error ?? 'Onbekende fout')
-      setSubmitted(true)
+      window.location.href = '/offerte/bedankt'
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Verzenden mislukt, probeer opnieuw.')
     } finally {
@@ -107,22 +106,6 @@ const OfferteFormulier: FC = () => {
   }
 
   const progress = ((step - 1) / (TOTAL_STEPS - 1)) * 100
-
-  if (submitted) {
-    return (
-      <div className="of-success">
-        <div className="success-icon" aria-hidden="true">✅</div>
-        <h2>Aanvraag ontvangen!</h2>
-        <p>
-          Bedankt voor je aanvraag. Je ontvangt binnen <strong>48 uur</strong> maximaal
-          3 offertes van hoveniers bij jou in de buurt.
-        </p>
-        <p>We sturen een bevestiging naar <strong>{form.email}</strong></p>
-        <a href="/" className="of-home-btn">← Terug naar home</a>
-        <style>{successStyles}</style>
-      </div>
-    )
-  }
 
   return (
     <div className="of-wrapper">
@@ -471,38 +454,6 @@ const formStyles = `
   }
 
   .of-back-btn:hover { border-color: rgba(196,169,106,0.35); color: rgba(237,242,236,0.80); }
-`
-
-const successStyles = `
-  .of-success {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem 0;
-    font-family: 'Inter', sans-serif;
-    color: #EDF2EC;
-  }
-
-  .success-icon { font-size: 3.5rem; }
-  .of-success h2 { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; color: #EDF2EC; }
-  .of-success p { margin: 0; color: rgba(237,242,236,0.55); max-width: 420px; }
-
-  .of-home-btn {
-    display: inline-flex;
-    padding: 0.75rem 1.5rem;
-    background: #C4A96A;
-    color: #1C1400;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    margin-top: 0.5rem;
-    transition: all 0.15s;
-    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
-  }
-
-  .of-home-btn:hover { background: #A88B4A; box-shadow: 0 4px 20px rgba(196,169,106,0.35); }
 `
 
 export default OfferteFormulier

@@ -1,9 +1,20 @@
-import { mutation, query } from './_generated/server'
+import { mutation, query, internalQuery } from './_generated/server'
 import { v } from 'convex/values'
+import { internal } from './_generated/api'
 
 const EMAIL_RE   = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 const POSTCODE_RE = /^\d{4}\s?[A-Za-z]{2}$/
+const VALID_STATUSES = ['nieuw', 'klant_gesproken', 'gematcht', 'vervallen'] as const
 const VALID_DIENSTEN = ['tuinaanleg', 'onderhoud', 'bestrating', 'beplanting', 'schutting', 'overig']
+
+// ── Internal: lead ophalen voor achtergrond-actions ─────────────────────────
+
+export const getLead = internalQuery({
+  args: { leadId: v.id('leads') },
+  handler: async (ctx, { leadId }) => {
+    return await ctx.db.get(leadId)
+  },
+})
 
 // ── Submit een nieuwe lead (publiek, geen auth vereist) ───────────────────────
 
@@ -52,6 +63,9 @@ export const submitLead = mutation({
       toegewezenAan: match?.clerkId,
     })
 
+    // Fire-and-forget: e-mails worden async afgehandeld na commit
+    await ctx.scheduler.runAfter(0, internal.emails.sendLeadNotifications, { leadId })
+
     return { leadId, matched: !!match }
   },
 })
@@ -60,7 +74,7 @@ export const submitLead = mutation({
 
 export const getMyLeads = query({
   args: {
-    status: v.optional(v.union(v.literal('nieuw'), v.literal('contact'), v.literal('gesloten'))),
+    status: v.optional(v.union(v.literal('nieuw'), v.literal('klant_gesproken'), v.literal('gematcht'), v.literal('vervallen'))),
   },
   handler: async (ctx, { status }) => {
     const identity = await ctx.auth.getUserIdentity()
@@ -100,7 +114,7 @@ export const getLeadById = query({
 export const updateLeadStatus = mutation({
   args: {
     id:       v.id('leads'),
-    status:   v.union(v.literal('nieuw'), v.literal('contact'), v.literal('gesloten')),
+    status:   v.union(v.literal('nieuw'), v.literal('klant_gesproken'), v.literal('gematcht'), v.literal('vervallen')),
     notities: v.optional(v.string()),
   },
   handler: async (ctx, { id, status, notities }) => {
