@@ -44,7 +44,7 @@ const catLabel: Record<string, string> = {
 const hoofdLabel = catLabel[bedrijf.hoofdCategorie] ?? bedrijf.hoofdCategorie ?? 'Hovenier'
 
 const seo = {
-  title: `${bedrijf.naam} — ${hoofdLabel} in ${bedrijf.stad ?? 'Nederland'} | TuinHub`,
+  title: `${bedrijf.naam} | ${hoofdLabel} in ${bedrijf.stad ?? 'Nederland'} | TuinHub`,
   description: `${bedrijf.naam} in ${bedrijf.stad ?? 'Nederland'} · Google score ${bedrijf.googleScore ?? '?'}/5 · ${bedrijf.aantalReviews ?? 0} reviews. Vraag gratis offerte aan via TuinHub.`,
 }
 
