@@ -60,7 +60,7 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
       .catch(() => { setError(true); setLoading(false) })
   }, [stad])
 
-  function buildOffertUrl(b: Bedrijf): string {
+  function buildOffertUrl(_b: Bedrijf): string {
     const p = new URLSearchParams({ postcode, dienst, stad: stadSlug })
     return `/offerte?${p.toString()}`
   }

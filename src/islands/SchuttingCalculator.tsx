@@ -39,8 +39,6 @@ const SchuttingCalculator: FC = () => {
 
   const result      = calculateSchuttingCosts(meters, material, hoogte)
   const needsPermit = hoogte >= 2.0
-  const buurmanAandeel = buurman ? Math.round(result.min / 2) : null
-
   function shareWhatsApp() {
     const splitTekst = buurman
       ? `\n Jouw aandeel (50%): ${formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}`
