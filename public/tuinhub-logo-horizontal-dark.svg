@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="120" viewBox="0 0 480 120">
-  <!-- Dark background -->
-  <rect width="480" height="120" fill="#1A1D1F"/>
-  
   <!-- Icon scaled down -->
   <g transform="translate(20, 10) scale(0.0879)">
     <!-- Circle with nodes (light gray for dark bg) -->
