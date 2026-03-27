@@ -9,9 +9,9 @@ geldigTot: 2026-12-31
 actief: true
 ---
 
-# Tegels Eruit — Planten Erin (Amsterdam)
+# Tegels Eruit, Planten Erin (Amsterdam)
 
-De gemeente Amsterdam stimuleert inwoners om verharding in de tuin te vervangen door groen. Hiervoor is de subsidieregeling **"Tegels Eruit — Planten Erin"** beschikbaar.
+De gemeente Amsterdam stimuleert inwoners om verharding in de tuin te vervangen door groen. Hiervoor is de subsidieregeling **"Tegels Eruit, Planten Erin"** beschikbaar.
 
 ## Voorwaarden
 

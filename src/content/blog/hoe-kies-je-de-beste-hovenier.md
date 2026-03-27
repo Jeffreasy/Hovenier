@@ -6,7 +6,7 @@ category: tips
 featured: true
 ---
 
-Een goede hovenier vinden begint met weten wat je wil. Of het nu gaat om volledige tuinaanleg of periodiek onderhoud — de juiste professional maakt het verschil.
+Een goede hovenier vinden begint met weten wat je wil. Of het nu gaat om volledige tuinaanleg of periodiek onderhoud, de juiste professional maakt het verschil.
 
 ## Controleer altijd referenties
 

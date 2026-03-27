@@ -31,4 +31,4 @@ Tot **€250** eenmalig.
 3. Voer de werkzaamheden uit na goedkeuring
 4. Stuur bewijs op (voor/na foto's + factuur)
 
-> **Let op:** De regeling is populair — aanvragen in het eerste kwartaal van het jaar.
+> **Let op:** De regeling is populair. Vraag aan in het eerste kwartaal van het jaar.

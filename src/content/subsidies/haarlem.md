@@ -31,4 +31,4 @@ Tot **€300** eenmalig.
 3. Voer de werkzaamheden uit na goedkeuring
 4. Stuur bewijs in
 
-> **Tip:** Kies bij voorkeur bloeiende planten voor bestuivers — Haarlem beloont dit.
+> **Tip:** Kies bij voorkeur bloeiende planten voor bestuivers. Haarlem beloont dit.

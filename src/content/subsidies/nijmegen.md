@@ -31,4 +31,4 @@ Tot **€225** eenmalig. Hogere bijdrage bij gebruik van inheemse gewassen.
 3. Voer de werkzaamheden uit
 4. Lever bewijs aan (foto's + factuur)
 
-> **Extra:** Nijmegen organiseert elk voorjaar een gratis plantenruildag — ideaal om inheemse planten gratis te verkrijgen.
+> **Extra:** Nijmegen organiseert elk voorjaar een gratis plantenruildag. Ideaal om inheemse planten gratis te verkrijgen.

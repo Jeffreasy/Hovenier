@@ -31,4 +31,4 @@ Tot **€160** eenmalig.
 3. Voer de werkzaamheden uit
 4. Stuur bewijs op binnen 3 maanden na afronding
 
-> **Tip:** Breda biedt ook gratis advies via de gemeentelijke tuinvizier — vraag ernaar bij uw aanvraag.
+> **Tip:** Breda biedt ook gratis advies via de gemeentelijke tuinvizier. Vraag ernaar bij uw aanvraag.
