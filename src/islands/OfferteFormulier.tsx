@@ -106,7 +106,7 @@ const OfferteFormulier: FC = () => {
   const progress = ((step - 1) / (TOTAL_STEPS - 1)) * 100
 
   return (
-    <div className="flex flex-col gap-6 font-body text-charcoal w-full min-w-0 overflow-hidden">
+    <div className="flex flex-col gap-6 font-body text-charcoal" style={{ width: '100%', maxWidth: '100%', minWidth: 0, boxSizing: 'border-box', overflow: 'hidden' }}>
 
       {/* Stad-context banner */}
       {stad && (
