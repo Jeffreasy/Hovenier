@@ -7,13 +7,13 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     <!-- Logo -->
     <a href="/" class="header-logo" aria-label={`${SITE.name} - homepage`}>
       <img
-        src="/tuinhub-logo-horizontal-dark.svg"
+        src="/tuinhub-logo-horizontal-light.svg"
         alt={SITE.name}
         class="logo-img logo-img--desktop"
         loading="eager"
       />
       <img
-        src="/tuinhub-logo-horizontal-dark.svg"
+        src="/tuinhub-logo-horizontal-light.svg"
         alt={SITE.name}
         class="logo-img logo-img--mobile"
         loading="eager"
@@ -125,21 +125,18 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
 </script>
 
 <style>
-  /* ── Clean light nav bar ───────────────────────────────────────────────── */
+  /* ── Dark nav bar ─────────────────────────────────────────────────────── */
   .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
-    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    background: var(--color-charcoal);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: box-shadow var(--transition-base);
   }
 
   .site-header.header-scrolled {
-    border-bottom-color: var(--color-border);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   }
 
   /* ── Layout ────────────────────────────────────────────────────────────── */
@@ -190,7 +187,7 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-charcoal-light);
+    color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
     border-radius: var(--radius-md);
     position: relative;
@@ -204,7 +201,7 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     left: 0.75rem;
     right: 0.75rem;
     height: 2px;
-    background: var(--color-primary-500);
+    background: var(--color-primary-400);
     border-radius: 1px;
     transform: scaleX(0);
     transform-origin: left;
@@ -212,8 +209,8 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
   }
 
   .nav-link:hover {
-    color: var(--color-charcoal);
-    background: var(--color-canvas-alt);
+    color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.08);
     text-decoration: none;
   }
 
@@ -230,10 +227,10 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-charcoal-muted);
+    color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     white-space: nowrap;
     flex-shrink: 0;
     transition: all var(--transition-fast);
@@ -251,9 +248,9 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
   }
 
   .header-login:hover {
-    color: var(--color-charcoal);
-    border-color: var(--color-border-hover);
-    background: var(--color-canvas-alt);
+    color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
     text-decoration: none;
   }
 
@@ -279,12 +276,12 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--color-charcoal-light);
+    color: rgba(255, 255, 255, 0.7);
     margin-left: auto;
     transition: color var(--transition-fast);
   }
 
-  .mobile-menu-btn:hover { color: var(--color-charcoal); }
+  .mobile-menu-btn:hover { color: rgba(255, 255, 255, 0.95); }
 
   @media (min-width: 768px) {
     .mobile-menu-btn { display: none; }
@@ -293,8 +290,8 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
   /* ── Mobile menu ───────────────────────────────────────────────────────── */
   .mobile-menu {
     display: none;
-    border-top: 1px solid var(--color-border);
-    background: var(--color-white);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--color-charcoal);
   }
 
   .mobile-menu[aria-hidden="false"] { display: block; }
@@ -311,14 +308,14 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--color-charcoal-light);
+    color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
     transition: all var(--transition-fast);
   }
 
   .mobile-link:hover {
-    color: var(--color-charcoal);
-    background: var(--color-canvas-alt);
+    color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.08);
     text-decoration: none;
   }
 
@@ -344,7 +341,7 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
 
   .mobile-divider {
     height: 1px;
-    background: var(--color-border);
+    background: rgba(255, 255, 255, 0.08);
     margin: 0.25rem 1.25rem;
   }
 
@@ -356,13 +353,13 @@ import { NAV_LINKS, SITE } from '../../lib/constants'
     font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-charcoal-muted);
+    color: rgba(255, 255, 255, 0.45);
     text-decoration: none;
     transition: all var(--transition-fast);
   }
 
   .mobile-login:hover {
-    color: var(--color-primary-600);
+    color: var(--color-primary-300);
     text-decoration: none;
   }
 </style>

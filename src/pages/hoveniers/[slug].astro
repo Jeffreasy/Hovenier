@@ -50,7 +50,7 @@ const catLabel: Record<string, string> = {
 const hoofdLabel = catLabel[bedrijf.hoofdCategorie] ?? bedrijf.hoofdCategorie ?? 'Hovenier'
 
 const seo = {
-  title: `${bedrijf.naam} | ${hoofdLabel} in ${bedrijf.stad ?? 'Nederland'} | TuinHub`,
+  title: `${bedrijf.naam} | ${hoofdLabel} in ${bedrijf.stad ?? 'Nederland'}`,
   description: `${bedrijf.naam} in ${bedrijf.stad ?? 'Nederland'} · Google score ${bedrijf.googleScore ?? '?'}/5 · ${bedrijf.aantalReviews ?? 0} reviews. Vraag gratis offerte aan via TuinHub.`,
 }
 
@@ -129,7 +129,7 @@ const jsonLd = JSON.stringify({
           {bedrijf.googleScore && (
             <div class="profiel-score" aria-label={`Google score: ${bedrijf.googleScore} uit 5`}>
               <span class="profiel-stars" aria-hidden="true">
-                {Array.from({ length: fullStars }).map((_, i) => (
+                {Array.from({ length: fullStars }).map(() => (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
@@ -141,7 +141,7 @@ const jsonLd = JSON.stringify({
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b" clip-path="url(#half)"/>
                   </svg>
                 )}
-                {Array.from({ length: emptyStars }).map((_, i) => (
+                {Array.from({ length: emptyStars }).map(() => (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="#e2e8f0" stroke="none">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>

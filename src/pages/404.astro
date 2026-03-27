@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const seo = {
+  title: 'Pagina niet gevonden',
+  description: 'De pagina die je zoekt bestaat niet of is verplaatst. Zoek een hovenier of ga terug naar de homepage.',
+  noindex: true,
+}
+---
+
+<BaseLayout {seo}>
+  <div class="not-found section-gap">
+    <div class="container not-found-inner">
+      <div class="not-found-icon" aria-hidden="true">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.3-4.3"/>
+          <path d="M8 11h6"/>
+        </svg>
+      </div>
+
+      <h1>Pagina niet gevonden</h1>
+      <p class="not-found-text">
+        De pagina die je zoekt bestaat niet of is verplaatst.
+        Geen zorgen — gebruik de zoekbalk of ga terug naar de homepage.
+      </p>
+
+      <div class="not-found-actions">
+        <a href="/" class="btn-primary not-found-btn">
+          Naar de homepage
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/offerte" class="not-found-btn not-found-btn--secondary">
+          Offerte aanvragen
+        </a>
+        <a href="/steden" class="not-found-btn not-found-btn--secondary">
+          Alle steden bekijken
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found-inner {
+    max-width: 560px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .not-found-icon {
+    color: var(--color-charcoal-muted);
+    opacity: 0.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .not-found-inner h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
+  .not-found-text {
+    color: var(--color-charcoal-light);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 440px;
+  }
+
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .not-found-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: all 0.15s ease-out;
+  }
+
+  .not-found-btn--secondary {
+    background: var(--color-canvas-alt);
+    color: var(--color-charcoal-light);
+    border: 1px solid var(--color-border);
+  }
+
+  .not-found-btn--secondary:hover {
+    border-color: var(--color-border-hover);
+    color: var(--color-charcoal);
+    background: var(--color-canvas-muted);
+    text-decoration: none;
+  }
+</style>
