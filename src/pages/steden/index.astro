@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Card from '../../components/ui/Card.astro'
+import { getCollection } from 'astro:content'
+
+export const prerender = true
+
+const steden = await getCollection('steden')
+
+// Groepeer per provincie, sorteer op naam
+const provincies = new Map<string, typeof steden>()
+for (const stad of steden) {
+  const prov = stad.data.provincie
+  if (!provincies.has(prov)) provincies.set(prov, [])
+  provincies.get(prov)!.push(stad)
+}
+
+// Sorteer provincies alfabetisch en steden binnen elke provincie
+const sortedProvincies = [...provincies.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([prov, list]) => [prov, list.sort((a, b) => a.data.naam.localeCompare(b.data.naam))] as const)
+
+const totalSteden = steden.length
+
+const seo = {
+  title: 'Alle steden — vind een hovenier bij jou in de buurt | TuinHub',
+  description: `Bekijk alle ${totalSteden} steden waar TuinHub actief is. Vind en vergelijk hoveniers in jouw stad en vraag gratis offertes aan.`,
+}
+---
+
+<BaseLayout {seo}>
+  <div class="steden-index section-gap">
+    <div class="container">
+      <header class="steden-header reveal">
+        <h1>Alle steden</h1>
+        <p class="steden-intro">
+          TuinHub is actief in {totalSteden} steden door heel Nederland.
+          Zoek jouw stad en vind direct hoveniers bij jou in de buurt.
+        </p>
+      </header>
+
+      <div class="search-wrapper reveal">
+        <input
+          type="text"
+          id="steden-zoek"
+          placeholder="Zoek jouw stad..."
+          autocomplete="off"
+        />
+        <span class="search-count" id="search-count">{totalSteden} steden</span>
+      </div>
+
+      <div id="steden-lijst">
+        {sortedProvincies.map(([provincie, list]) => (
+          <section class="provincie-section reveal" data-provincie={provincie}>
+            <h2 class="provincie-titel">{provincie} <span class="provincie-count">({list.length})</span></h2>
+            <div class="steden-grid">
+              {list.map((stad) => (
+                <a
+                  href={`/steden/${stad.data.slug}`}
+                  class="stad-link"
+                  data-naam={stad.data.naam.toLowerCase()}
+                >
+                  <span class="stad-naam">{stad.data.naam}</span>
+                  {stad.data.aantalHoveniers && (
+                    <span class="stad-count">{stad.data.aantalHoveniers}+ hoveniers</span>
+                  )}
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <p class="no-results" id="no-results" style="display:none;">
+        Geen steden gevonden. Probeer een andere zoekterm.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const input = document.getElementById('steden-zoek') as HTMLInputElement
+  const count = document.getElementById('search-count')!
+  const noResults = document.getElementById('no-results')!
+  const sections = document.querySelectorAll('.provincie-section')
+  const links = document.querySelectorAll('.stad-link') as NodeListOf<HTMLAnchorElement>
+
+  input.addEventListener('input', () => {
+    const q = input.value.toLowerCase().trim()
+    let visible = 0
+
+    links.forEach((link) => {
+      const match = !q || link.dataset.naam!.includes(q)
+      link.style.display = match ? '' : 'none'
+      if (match) visible++
+    })
+
+    sections.forEach((section) => {
+      const hasVisible = section.querySelector('.stad-link:not([style*="display: none"])')
+      ;(section as HTMLElement).style.display = hasVisible ? '' : 'none'
+    })
+
+    count.textContent = `${visible} steden`
+    noResults.style.display = visible === 0 ? '' : 'none'
+  })
+</script>
+
+<style>
+  .steden-header { margin-bottom: 2rem; }
+  .steden-intro {
+    font-size: 1.125rem;
+    color: rgba(237,242,236,0.55);
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .search-wrapper {
+    position: relative;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+  }
+
+  #steden-zoek {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius-md);
+    color: rgba(237,242,236,0.90);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color var(--transition-fast);
+  }
+
+  #steden-zoek:focus {
+    border-color: rgba(110,158,101,0.50);
+  }
+
+  #steden-zoek::placeholder {
+    color: rgba(237,242,236,0.35);
+  }
+
+  .search-count {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: rgba(237,242,236,0.30);
+  }
+
+  .provincie-titel {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
+    color: rgba(237,242,236,0.80);
+  }
+
+  .provincie-count {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: rgba(237,242,236,0.35);
+  }
+
+  .provincie-section {
+    margin-bottom: 2rem;
+  }
+
+  .steden-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .steden-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .steden-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .stad-link {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: rgba(237,242,236,0.70);
+    font-size: 0.9rem;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .stad-link:hover {
+    background: rgba(110,158,101,0.12);
+    color: rgba(237,242,236,0.95);
+    text-decoration: none;
+  }
+
+  .stad-naam { font-weight: 500; }
+
+  .stad-count {
+    font-size: 0.75rem;
+    color: rgba(237,242,236,0.25);
+  }
+
+  .no-results {
+    text-align: center;
+    color: rgba(237,242,236,0.40);
+    padding: 3rem 0;
+    font-size: 1rem;
+  }
+</style>
