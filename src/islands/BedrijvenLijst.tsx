@@ -70,7 +70,7 @@ const BedrijvenLijst: FC<Props> = ({ stad, slug, limit = 6 }) => {
     <div className="bl-wrapper">
       <h2 className="bl-title">Top hoveniers in {stad}</h2>
       <p className="bl-subtitle">
-        Gesorteerd op Google-score — {bedrijven.length} bedrijven gevonden
+        Gesorteerd op Google-score, {bedrijven.length} bedrijven gevonden
       </p>
 
       <ul className="bl-grid" role="list">

@@ -82,7 +82,7 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
       <div className="zr-empty">
         <div className="zr-empty-icon" aria-hidden="true">🔍</div>
         <h2>Geen hoveniers gevonden{stad ? ` in ${stad}` : ''}</h2>
-        <p>Vraag een algemene offerte aan — we koppelen je aan hoveniers in jouw regio.</p>
+        <p>Vraag een algemene offerte aan. We koppelen je aan hoveniers in jouw regio.</p>
         <a href={`/offerte?postcode=${encodeURIComponent(postcode)}&dienst=${encodeURIComponent(dienst)}`} className="zr-cta-btn">
           Vraag gratis offerte aan →
         </a>
@@ -99,7 +99,7 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
             {stad ? `Hoveniers in ${stad}` : 'Populaire hoveniers in Nederland'}
           </h1>
           <p className="zr-subtitle">
-            {bedrijven.length} {stad ? `hoveniersbedrijven gevonden` : `topbedrijven geselecteerd`} — gesorteerd op Google score
+            {bedrijven.length} {stad ? `hoveniersbedrijven gevonden` : `topbedrijven geselecteerd`}, gesorteerd op Google score
           </p>
         </div>
         <a

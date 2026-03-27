@@ -79,7 +79,7 @@ const OfferteFormulier: FC = () => {
       const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       // HTTP actions draaien op .convex.site — derive van de cloud URL
       const siteUrl = convexUrl.replace('.convex.cloud', '.convex.site')
-      if (!siteUrl) throw new Error('Configuratiefout — probeer de pagina te herladen.')
+      if (!siteUrl) throw new Error('Configuratiefout, probeer de pagina te herladen.')
 
       const res = await fetch(`${siteUrl}/submit-lead`, {
         method:  'POST',
@@ -93,7 +93,7 @@ const OfferteFormulier: FC = () => {
       try {
         data = JSON.parse(text)
       } catch {
-        throw new Error(res.ok ? 'Onverwachte serverrespons — probeer opnieuw.' : `Serverfout (${res.status})`)
+        throw new Error(res.ok ? 'Onverwachte serverrespons, probeer opnieuw.' : `Serverfout (${res.status})`)
       }
 
       if (!res.ok || !data.ok) throw new Error(data.error ?? 'Onbekende fout')

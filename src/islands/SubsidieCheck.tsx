@@ -197,7 +197,7 @@ const SubsidieCheck: FC<Props> = ({ subsidies }) => {
               <span className="gemeente-icon">📍</span>
               <div>
                 <strong>{gemeente}</strong>
-                <span>{results.length === 0 ? ' — geen subsidies gevonden' : ` — ${results.length} subsidie${results.length !== 1 ? 's' : ''} beschikbaar`}</span>
+                <span>{results.length === 0 ? ': geen subsidies gevonden' : `: ${results.length} subsidie${results.length !== 1 ? 's' : ''} beschikbaar`}</span>
               </div>
             </div>
           )}
@@ -212,7 +212,7 @@ const SubsidieCheck: FC<Props> = ({ subsidies }) => {
               </p>
               <p className="no-results-sub">
                 {gemeente
-                  ? 'Jouw gemeente biedt mogelijk wel subsidies aan — check de gemeentewebsite.'
+                  ? 'Jouw gemeente biedt mogelijk wel subsidies aan. Check de gemeentewebsite.'
                   : 'We ondersteunen momenteel: Amsterdam, Rotterdam, Den Haag, Utrecht, Eindhoven, Tilburg, Groningen, Almere, Breda en Nijmegen. Meer steden volgen.'
                 }
               </p>
@@ -251,7 +251,7 @@ const SubsidieCheck: FC<Props> = ({ subsidies }) => {
           {results.length > 0 && (
             <div className="subsidie-tip">
               <span>💡</span>
-              <p>Vraag eerst subsidie aan <em>vóór</em> u begint met de werkzaamheden — dit is bij de meeste gemeenten verplicht.</p>
+              <p>Vraag eerst subsidie aan <em>vóór</em> u begint met de werkzaamheden. Dit is bij de meeste gemeenten verplicht.</p>
             </div>
           )}
         </div>

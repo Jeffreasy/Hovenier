@@ -33,7 +33,7 @@ const MATERIAL_INFO: Record<string, MaterialInfo> = {
   hardhout:    { id: 'hardhout',    icon: '🌳', levensduur: '20–30 jaar', onderhoud: '2× per 5 jaar oliën', duurzaamheid: 'Middel' },
   composiet:   { id: 'composiet',   icon: '♻️', levensduur: '25–40 jaar', onderhoud: 'Nauwelijks onderhoud', duurzaamheid: 'Hoog' },
   beton:       { id: 'beton',       icon: '🏗️', levensduur: '30–50 jaar', onderhoud: 'Praktisch onderhoudsvr.', duurzaamheid: 'Hoog' },
-  metaal:      { id: 'metaal',      icon: '⚙️', levensduur: '40–60 jaar', onderhoud: 'Geen — roest mooi', duurzaamheid: 'Hoog' },
+  metaal:      { id: 'metaal',      icon: '⚙️', levensduur: '40–60 jaar', onderhoud: 'Geen, roest mooi', duurzaamheid: 'Hoog' },
   toogplanken: { id: 'toogplanken', icon: '🪜', levensduur: '10–15 jaar', onderhoud: 'Jaarlijks behandelen', duurzaamheid: 'Laag' },
 }
 
@@ -60,7 +60,7 @@ const SchuttingCalculator: FC = () => {
       ? `\n🤝 Jouw aandeel (50%): ${formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}`
       : ''
     const text = encodeURIComponent(
-      `🏡 Schutting kostenberekening — TuinHub.nl\n\n` +
+      `🏡 Schutting kostenberekening via TuinHub.nl\n\n` +
       `📏 ${meters} meter ${material.label} (${String(hoogte).replace('.', ',')}m hoog)\n` +
       `💰 Totaal: ${formatRange(result.min, result.max)}${splitTekst}\n\n` +
       `📋 Specificatie:\n` +
@@ -208,7 +208,7 @@ const SchuttingCalculator: FC = () => {
           <div className="result-badge">📊 Jouw schutting indicatie</div>
 
           <div className="result-total">
-            <span className="result-label">{meters} meter {material.label} — hoogte {String(hoogte).replace('.', ',')}m</span>
+            <span className="result-label">{meters} meter {material.label}, hoogte {String(hoogte).replace('.', ',')}m</span>
             <strong className="result-price">{formatRange(result.min, result.max)}</strong>
             {buurman && (
               <span className="result-split">

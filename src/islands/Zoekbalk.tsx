@@ -98,7 +98,7 @@ const Zoekbalk: FC = () => {
         </p>
       )}
 
-      <p className="zoekbalk-note">🔒 Gratis en vrijblijvend — geen spam</p>
+      <p className="zoekbalk-note">🔒 Gratis en vrijblijvend, geen spam</p>
 
       <style>{`
         .zoekbalk-form { font-family: 'Inter', sans-serif; color: #EDF2EC; }
