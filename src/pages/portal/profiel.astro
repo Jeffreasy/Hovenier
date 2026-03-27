@@ -12,6 +12,8 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
   <title>Mijn profiel | Hovenier Portal</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +23,10 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 
   <header class="portal-header">
     <div class="portal-header-inner">
-      <a href="/" class="portal-logo">🌿 TuinHub</a>
+      <a href="/" class="portal-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#008d51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 8-7.5 8-13-2 1-3.5 1-5.5 0C10 8.5 8 11 7 14c-1.5 3-2 5-2 6"/><path d="M12 20c-2-2.5-3-5-3-8 2 .5 3.5 1 5 .5"/></svg>
+        <span>TuinHub</span>
+      </a>
       <nav class="portal-nav">
         <a href="/portal" class="portal-nav-link">Dashboard</a>
         <a href="/portal/profiel" class="portal-nav-link portal-nav-link--active">Mijn profiel</a>
@@ -121,7 +126,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     form.addEventListener('submit', async (e) => {
       e.preventDefault()
       const btn = form.querySelector('.save-btn')
-      btn.textContent = 'Opslaan…'
+      btn.textContent = 'Opslaan...'
       btn.disabled = true
 
       const regio = form.regio.value.split(',').map(s => s.trim()).filter(Boolean)
@@ -141,11 +146,11 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           }),
         })
         if (!res.ok) throw new Error()
-        feedback.textContent = '✅ Profiel opgeslagen!'
+        feedback.textContent = 'Profiel opgeslagen!'
         feedback.className = 'feedback feedback--success'
         feedback.hidden = false
       } catch {
-        feedback.textContent = '❌ Opslaan mislukt, probeer opnieuw.'
+        feedback.textContent = 'Opslaan mislukt, probeer opnieuw.'
         feedback.className = 'feedback feedback--error'
         feedback.hidden = false
       } finally {
@@ -167,19 +172,15 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   body.portal-body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    color: #EDF2EC;
-    background:
-      radial-gradient(ellipse 80% 60% at 20% -10%, rgba(70,110,60,0.15) 0%, transparent 60%),
-      #0D1F12;
+    color: #282d31;
+    background: #f8fafc;
     -webkit-font-smoothing: antialiased;
   }
 
   /* ── Header ── */
   .portal-header {
-    background: rgba(13,31,18,0.72);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
     position: sticky;
     top: 0;
     z-index: 50;
@@ -196,10 +197,13 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   }
 
   .portal-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #EDF2EC;
+    color: #282d31;
     text-decoration: none;
     flex-shrink: 0;
   }
@@ -211,16 +215,16 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     border-radius: 8px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: rgba(237,242,236,0.55);
+    color: #64748b;
     text-decoration: none;
     transition: all 0.15s;
   }
 
-  .portal-nav-link:hover { background: rgba(255,255,255,0.07); color: #EDF2EC; }
+  .portal-nav-link:hover { background: #f1f5f9; color: #282d31; }
 
   .portal-nav-link--active {
-    background: rgba(110,158,101,0.15);
-    color: #EDF2EC;
+    background: rgba(0,141,81,0.08);
+    color: #008d51;
     font-weight: 600;
   }
 
@@ -231,22 +235,20 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   .portal-container { max-width: 720px; margin: 0 auto; }
 
   .page-header { margin-bottom: 2rem; }
-  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #EDF2EC; }
-  .page-sub { margin-top: 0.375rem; color: rgba(237,242,236,0.45); }
+  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #282d31; }
+  .page-sub { margin-top: 0.375rem; color: #64748b; }
 
   /* ── Profile form card ── */
   .profiel-card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.10);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 14px;
     overflow: hidden;
   }
 
   .form-section {
     padding: 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .form-section:last-of-type { border-bottom: none; }
@@ -257,23 +259,23 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     text-transform: uppercase;
     letter-spacing: 0.10em;
     font-weight: 700;
-    color: rgba(196,169,106,0.65);
+    color: #008d51;
     margin-bottom: 1rem;
   }
 
   .hint {
     font-size: 0.8rem;
-    color: rgba(237,242,236,0.38);
+    color: #94a3b8;
     margin-bottom: 0.75rem;
     line-height: 1.6;
   }
 
   .hint code {
-    background: rgba(255,255,255,0.08);
+    background: #f1f5f9;
     padding: 0.1em 0.4em;
     border-radius: 4px;
     font-size: 0.85em;
-    color: rgba(237,242,236,0.65);
+    color: #475569;
   }
 
   .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -282,23 +284,23 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   .field label {
     font-size: 0.8rem;
     font-weight: 600;
-    color: rgba(237,242,236,0.55);
+    color: #475569;
     letter-spacing: 0.02em;
   }
 
   .field input {
     padding: 0.65rem 0.875rem;
-    border: 1px solid rgba(255,255,255,0.10);
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     font-size: 0.9rem;
     font-family: 'Inter', sans-serif;
-    color: #EDF2EC;
-    background: rgba(255,255,255,0.05);
-    transition: border-color 0.15s, background 0.15s;
+    color: #282d31;
+    background: #ffffff;
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
 
-  .field input::placeholder { color: rgba(237,242,236,0.22); }
-  .field input:focus { outline: none; border-color: rgba(196,169,106,0.40); background: rgba(255,255,255,0.09); }
+  .field input::placeholder { color: #cbd5e1; }
+  .field input:focus { outline: none; border-color: #008d51; box-shadow: 0 0 0 3px rgba(0,141,81,0.10); }
 
   /* ── Specialisaties ── */
   .specialisaties-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.625rem; }
@@ -308,19 +310,20 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     align-items: center;
     gap: 0.5rem;
     padding: 0.625rem 0.875rem;
-    border: 1px solid rgba(255,255,255,0.09);
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.875rem;
     font-weight: 500;
-    color: rgba(237,242,236,0.60);
+    color: #64748b;
     transition: all 0.15s;
   }
 
   .spec-option:has(input:checked) {
-    border-color: rgba(110,158,101,0.45);
-    background: rgba(110,158,101,0.12);
-    color: #EDF2EC;
+    border-color: #008d51;
+    background: rgba(0,141,81,0.06);
+    color: #008d51;
+    font-weight: 600;
   }
 
   .spec-option input { display: none; }
@@ -334,30 +337,27 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     margin: 0 1.5rem;
   }
 
-  .feedback--success { background: rgba(52,211,153,0.12); color: #34D399; border: 1px solid rgba(52,211,153,0.20); }
-  .feedback--error   { background: rgba(248,113,113,0.12); color: #F87171; border: 1px solid rgba(248,113,113,0.20); }
+  .feedback--success { background: rgba(16,185,129,0.08); color: #059669; border: 1px solid rgba(16,185,129,0.20); }
+  .feedback--error   { background: rgba(220,38,38,0.08); color: #dc2626; border: 1px solid rgba(220,38,38,0.20); }
 
   /* ── Actions ── */
-  .form-actions { padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
+  .form-actions { padding: 1.5rem; border-top: 1px solid #e2e8f0; }
 
   .save-btn {
     padding: 0.75rem 2rem;
-    background: #C4A96A;
-    color: #1C1400;
+    background: #008d51;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
     transition: all 0.15s;
   }
 
   .save-btn:hover:not(:disabled) {
-    background: #A88B4A;
-    box-shadow: 0 4px 20px rgba(196,169,106,0.35);
-    transform: translateY(-1px);
+    background: #007a46;
   }
 
   .save-btn:disabled { opacity: 0.5; cursor: not-allowed; }

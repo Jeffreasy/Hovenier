@@ -80,30 +80,28 @@ const faqSchema = faqs.length > 0 ? JSON.stringify({
 
 <style>
   .tool-header {
-    background: rgba(255,255,255,0.04);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: var(--color-canvas-alt);
+    border-bottom: 1px solid var(--color-border);
     padding: 3rem 0 2.5rem;
   }
 
-  .tool-title { color: #EDF2EC; margin-bottom: 0.75rem; }
+  .tool-title { color: var(--color-charcoal); margin-bottom: 0.75rem; }
 
   .tool-intro {
     font-size: 1.125rem;
-    color: rgba(237,242,236,0.60);
+    color: var(--color-charcoal-light);
     max-width: 600px;
     margin: 0;
   }
 
-  /* Island container: glass wrapper for React calculators */
+  /* Clean card wrapper for React calculators */
   .tool-island-inner {
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(20px) saturate(140%);
-    -webkit-backdrop-filter: blur(20px) saturate(140%);
-    border: 1px solid rgba(255,255,255,0.11);
-    border-radius: var(--radius-xl);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-box);
     padding: 2rem;
     max-width: 760px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.30);
+    box-shadow: var(--shadow-md);
   }
 
   .tool-faq-list {

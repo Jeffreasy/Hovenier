@@ -36,7 +36,7 @@ const OfferteFormulier: FC = () => {
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState('')
 
-  // Lees URL-params na hydration (client-only) — werkt correct met Astro SSR + client:load
+  // Lees URL-params na hydration (client-only)
   useEffect(() => {
     const { form: initialForm, step: initialStep, stad: initialStad } = readUrlParams()
     if (Object.keys(initialForm).length > 0) setForm(initialForm)
@@ -77,7 +77,6 @@ const OfferteFormulier: FC = () => {
     setSubmitError('')
     try {
       const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
-      // HTTP actions draaien op .convex.site — derive van de cloud URL
       const siteUrl = convexUrl.replace('.convex.cloud', '.convex.site')
       if (!siteUrl) throw new Error('Configuratiefout, probeer de pagina te herladen.')
 
@@ -87,7 +86,6 @@ const OfferteFormulier: FC = () => {
         body:    JSON.stringify(form),
       })
 
-      // Lees als tekst eerst zodat een lege of HTML response geen cryptische fout geeft
       const text = await res.text()
       let data: { ok: boolean; error?: string } = { ok: false }
       try {
@@ -108,19 +106,23 @@ const OfferteFormulier: FC = () => {
   const progress = ((step - 1) / (TOTAL_STEPS - 1)) * 100
 
   return (
-    <div className="of-wrapper">
+    <div className="flex flex-col gap-6 font-body text-charcoal">
 
       {/* Stad-context banner */}
       {stad && (
-        <div className="of-stad-banner" role="note">
-          📍 Je vraagt offertes aan voor hoveniers in <strong>{stad.charAt(0).toUpperCase() + stad.slice(1)}</strong>
+        <div className="flex items-center gap-2 py-3 px-4 bg-primary-50 border border-primary-200 rounded-md text-sm text-charcoal-light" role="note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-500 shrink-0">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Je vraagt offertes aan voor hoveniers in <strong className="text-charcoal font-semibold">{stad.charAt(0).toUpperCase() + stad.slice(1)}</strong>
         </div>
       )}
 
       {/* Progress bar */}
-      <div className="of-progress">
+      <div className="h-1 bg-canvas-muted rounded-full overflow-hidden">
         <div
-          className="of-progress-bar"
+          className="h-full bg-primary-500 rounded-full transition-[width] duration-300 ease-out"
           style={{ width: `${progress}%` }}
           role="progressbar"
           aria-valuenow={progress}
@@ -131,21 +133,25 @@ const OfferteFormulier: FC = () => {
       </div>
 
       {/* Step indicator */}
-      <div className="of-step-info">
-        <span className="of-step-count">Stap {step} van {TOTAL_STEPS}</span>
-        <span className="of-step-label">{STEP_LABELS[step - 1]}</span>
+      <div className="flex justify-between items-center text-xs text-charcoal-muted">
+        <span>Stap {step} van {TOTAL_STEPS}</span>
+        <span className="font-semibold text-primary-500">{STEP_LABELS[step - 1]}</span>
       </div>
 
       {/* Step 1 — Dienst */}
       {step === 1 && (
-        <div className="of-step">
-          <h2 className="of-title">Wat wil je laten doen?</h2>
-          <div className="of-options-grid">
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Wat wil je laten doen?</h2>
+          <div className="grid grid-cols-2 gap-2.5">
             {SERVICE_OPTIONS.map(({ value, label }) => (
               <button
                 key={value}
                 type="button"
-                className={`of-option-btn ${form.dienst === value ? 'of-option-btn--selected' : ''}`}
+                className={`py-3.5 px-3 border rounded-md text-sm font-semibold text-center cursor-pointer transition-colors duration-150
+                  ${form.dienst === value
+                    ? 'border-primary-500 bg-primary-50 text-primary-700'
+                    : 'border-border bg-white text-charcoal-light hover:border-primary-300 hover:bg-primary-50/50'
+                  }`}
                 onClick={() => update('dienst', value)}
                 aria-pressed={form.dienst === value}
               >
@@ -153,15 +159,15 @@ const OfferteFormulier: FC = () => {
               </button>
             ))}
           </div>
-          {errors.dienst && <p className="of-error">{errors.dienst}</p>}
+          {errors.dienst && <p className="text-xs text-error m-0">{errors.dienst}</p>}
         </div>
       )}
 
       {/* Step 2 — m² */}
       {step === 2 && (
-        <div className="of-step">
-          <h2 className="of-title">Hoe groot is je tuin?</h2>
-          <div className="of-input-group">
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Hoe groot is je tuin?</h2>
+          <div className="flex items-center gap-3">
             <input
               id="m2"
               type="number"
@@ -170,25 +176,29 @@ const OfferteFormulier: FC = () => {
               placeholder="bijv. 80"
               value={form.m2 ?? ''}
               onChange={(e) => update('m2', Number(e.target.value))}
-              className="of-input of-input--lg"
+              className="w-full px-5 py-4 border border-border rounded-md text-2xl bg-white text-charcoal placeholder:text-charcoal-muted/40 transition-colors duration-150 focus:outline-none focus:border-primary-500 focus:ring-3 focus:ring-primary-100"
               aria-label="Tuingrootte in m²"
             />
-            <span className="of-input-suffix">m²</span>
+            <span className="text-xl font-bold text-primary-500 shrink-0">m²</span>
           </div>
-          {errors.m2 && <p className="of-error">{errors.m2}</p>}
+          {errors.m2 && <p className="text-xs text-error m-0">{errors.m2}</p>}
         </div>
       )}
 
       {/* Step 3 — Budget */}
       {step === 3 && (
-        <div className="of-step">
-          <h2 className="of-title">Wat is jouw budget?</h2>
-          <div className="of-budget-list">
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Wat is jouw budget?</h2>
+          <div className="flex flex-col gap-2">
             {BUDGET_OPTIONS.map(({ value, label }) => (
               <button
                 key={value}
                 type="button"
-                className={`of-budget-btn ${form.budget === value ? 'of-budget-btn--selected' : ''}`}
+                className={`py-3.5 px-5 border rounded-md text-[0.9375rem] font-semibold text-left cursor-pointer transition-colors duration-150
+                  ${form.budget === value
+                    ? 'border-primary-500 bg-primary-50 text-primary-700'
+                    : 'border-border bg-white text-charcoal-light hover:border-primary-300 hover:bg-primary-50/50'
+                  }`}
                 onClick={() => update('budget', value as BudgetRange)}
                 aria-pressed={form.budget === value}
               >
@@ -196,20 +206,24 @@ const OfferteFormulier: FC = () => {
               </button>
             ))}
           </div>
-          {errors.budget && <p className="of-error">{errors.budget}</p>}
+          {errors.budget && <p className="text-xs text-error m-0">{errors.budget}</p>}
         </div>
       )}
 
       {/* Step 4 — Timing */}
       {step === 4 && (
-        <div className="of-step">
-          <h2 className="of-title">Wanneer wil je starten?</h2>
-          <div className="of-budget-list">
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Wanneer wil je starten?</h2>
+          <div className="flex flex-col gap-2">
             {TIMING_OPTIONS.map(({ value, label }) => (
               <button
                 key={value}
                 type="button"
-                className={`of-budget-btn ${form.timing === value ? 'of-budget-btn--selected' : ''}`}
+                className={`py-3.5 px-5 border rounded-md text-[0.9375rem] font-semibold text-left cursor-pointer transition-colors duration-150
+                  ${form.timing === value
+                    ? 'border-primary-500 bg-primary-50 text-primary-700'
+                    : 'border-border bg-white text-charcoal-light hover:border-primary-300 hover:bg-primary-50/50'
+                  }`}
                 onClick={() => update('timing', value as StartTiming)}
                 aria-pressed={form.timing === value}
               >
@@ -217,243 +231,86 @@ const OfferteFormulier: FC = () => {
               </button>
             ))}
           </div>
-          {errors.timing && <p className="of-error">{errors.timing}</p>}
+          {errors.timing && <p className="text-xs text-error m-0">{errors.timing}</p>}
         </div>
       )}
 
       {/* Step 5 — Contactgegevens */}
       {step === 5 && (
-        <div className="of-step">
-          <h2 className="of-title">Jouw gegevens</h2>
-          <p className="of-hint">Zodat hoveniers contact met je kunnen opnemen.</p>
-          <div className="of-fields">
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Jouw gegevens</h2>
+          <p className="m-0 text-sm text-charcoal-muted">Zodat hoveniers contact met je kunnen opnemen.</p>
+          <div className="flex flex-col gap-4">
             {[
-              { id: 'naam',     label: 'Naam',           type: 'text',  placeholder: 'Jan de Vries',     autoComplete: 'name',        spellCheck: false, value: form.naam },
-              { id: 'email',    label: 'E-mailadres',    type: 'email', placeholder: 'jan@voorbeeld.nl', autoComplete: 'email',       spellCheck: false, value: form.email },
-              { id: 'telefoon', label: 'Telefoonnummer', type: 'tel',   placeholder: '06 12 34 56 78',   autoComplete: 'tel',         spellCheck: false, value: form.telefoon },
-              { id: 'postcode', label: 'Postcode',       type: 'text',  placeholder: '1234 AB',          autoComplete: 'postal-code', spellCheck: false, value: form.postcode },
-            ].map(({ id, label, type, placeholder, autoComplete, spellCheck, value }) => (
-              <div key={id} className="of-field">
-                <label htmlFor={id} className="of-label">{label}</label>
+              { id: 'naam',     label: 'Naam',           type: 'text',  placeholder: 'Jan de Vries',     autoComplete: 'name',        value: form.naam },
+              { id: 'email',    label: 'E-mailadres',    type: 'email', placeholder: 'jan@voorbeeld.nl', autoComplete: 'email',       value: form.email },
+              { id: 'telefoon', label: 'Telefoonnummer', type: 'tel',   placeholder: '06 12 34 56 78',   autoComplete: 'tel',         value: form.telefoon },
+              { id: 'postcode', label: 'Postcode',       type: 'text',  placeholder: '1234 AB',          autoComplete: 'postal-code', value: form.postcode },
+            ].map(({ id, label, type, placeholder, autoComplete, value }) => (
+              <div key={id} className="flex flex-col gap-1.5">
+                <label htmlFor={id} className="font-heading text-sm font-semibold text-charcoal-light">{label}</label>
                 <input
                   id={id}
                   type={type}
                   placeholder={placeholder}
                   autoComplete={autoComplete}
-                  spellCheck={spellCheck}
+                  spellCheck={false}
                   value={(value as string) ?? ''}
                   onChange={(e) => update(id as keyof FormState, e.target.value)}
-                  className={`of-input ${errors[id] ? 'of-input--error' : ''}`}
+                  className={`w-full px-4 py-3 border rounded-md text-base bg-white text-charcoal placeholder:text-charcoal-muted/40 transition-colors duration-150 focus:outline-none focus:border-primary-500 focus:ring-3 focus:ring-primary-100
+                    ${errors[id] ? 'border-error' : 'border-border'}`}
                 />
-                {errors[id] && <p className="of-error">{errors[id]}</p>}
+                {errors[id] && <p className="text-xs text-error m-0">{errors[id]}</p>}
               </div>
             ))}
           </div>
-          <p className="of-privacy">
-            🔒 Je gegevens worden alleen gedeeld met max. 3 hoveniers. Geen spam.
+          <p className="flex items-center gap-1.5 text-xs text-charcoal-muted m-0">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-500 shrink-0">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Je gegevens worden alleen gedeeld met max. 3 hoveniers. Geen spam.
           </p>
         </div>
       )}
 
       {/* Navigation */}
-      <div className="of-nav">
+      <div className="flex gap-3 pt-2 border-t border-border">
         {step > 1 && (
-          <button type="button" className="of-back-btn" onClick={() => setStep((s) => s - 1)} aria-label="Vorige stap">
-            <span aria-hidden="true">←</span> Terug
+          <button
+            type="button"
+            className="py-3.5 px-4 bg-transparent border border-border rounded-md text-sm text-charcoal-muted cursor-pointer transition-colors duration-150 hover:border-border-hover hover:text-charcoal"
+            onClick={() => setStep((s) => s - 1)}
+            aria-label="Vorige stap"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Terug
           </button>
         )}
-        <button type="button" className="of-next-btn" onClick={next} disabled={loading}>
+        <button
+          type="button"
+          className="flex-1 py-3.5 px-6 bg-primary-500 text-white border-none rounded-md font-heading text-base font-bold cursor-pointer transition-colors duration-150 hover:bg-primary-600 disabled:opacity-60 disabled:cursor-not-allowed"
+          onClick={next}
+          disabled={loading}
+        >
           {loading
-            ? 'Verzenden…'
+            ? 'Verzenden\u2026'
             : step < TOTAL_STEPS ? 'Volgende' : 'Verstuur aanvraag'
           }
         </button>
       </div>
 
       {submitError && (
-        <p role="alert" style={{ color: '#FF6B6B', fontSize: '0.875rem', textAlign: 'center', margin: 0 }}>
-          ⚠️ {submitError}
+        <p role="alert" className="text-sm text-error text-center m-0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          {submitError}
         </p>
       )}
-
-      <style>{formStyles}</style>
     </div>
   )
 }
-
-const formStyles = `
-  .of-wrapper { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; gap: 1.5rem; color: #EDF2EC; }
-
-  .of-stad-banner {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-    background: rgba(110,158,101,0.10);
-    border: 1px solid rgba(110,158,101,0.25);
-    border-radius: 8px;
-    font-size: 0.875rem;
-    color: rgba(237,242,236,0.75);
-  }
-  .of-stad-banner strong { color: #EDF2EC; }
-
-  .of-progress {
-    height: 3px;
-    background: rgba(255,255,255,0.10);
-    border-radius: 99px;
-    overflow: hidden;
-  }
-
-  .of-progress-bar {
-    height: 100%;
-    background: #C4A96A;
-    border-radius: 99px;
-    transition: width 0.3s ease;
-  }
-
-  .of-step-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;
-    color: rgba(237,242,236,0.45);
-  }
-
-  .of-step-label { font-weight: 600; color: #C4A96A; }
-
-  .of-step { display: flex; flex-direction: column; gap: 1rem; }
-
-  .of-title { margin: 0; font-size: 1.25rem; font-family: 'Plus Jakarta Sans', sans-serif; color: #EDF2EC; }
-  .of-hint { margin: 0; font-size: 0.875rem; color: rgba(237,242,236,0.45); }
-
-  .of-options-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.625rem;
-  }
-
-  .of-option-btn {
-    padding: 0.875rem;
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 8px;
-    background: rgba(255,255,255,0.05);
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: rgba(237,242,236,0.65);
-    transition: border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;
-    text-align: center;
-  }
-
-  .of-option-btn:hover { border-color: rgba(196,169,106,0.40); background: rgba(255,255,255,0.08); color: #EDF2EC; }
-  .of-option-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.12); color: #EDF2EC; }
-
-  .of-input-group {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .of-input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    color: #EDF2EC;
-    background: rgba(255,255,255,0.06);
-    transition: border-color 0.15s, background 0.15s;
-  }
-
-  .of-input::placeholder { color: rgba(237,242,236,0.25); }
-  .of-input--lg { font-size: 1.5rem; padding: 1rem 1.25rem; }
-  .of-input:focus { outline: none; border-color: rgba(196,169,106,0.45); background: rgba(255,255,255,0.09); }
-  .of-input--error { border-color: rgba(248,113,113,0.50); }
-
-  .of-input-suffix {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #C4A96A;
-    flex-shrink: 0;
-  }
-
-  .of-budget-list { display: flex; flex-direction: column; gap: 0.5rem; }
-
-  .of-budget-btn {
-    padding: 0.875rem 1.25rem;
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 8px;
-    background: rgba(255,255,255,0.05);
-    cursor: pointer;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: rgba(237,242,236,0.65);
-    text-align: left;
-    transition: border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;
-  }
-
-  .of-budget-btn:hover { border-color: rgba(196,169,106,0.35); background: rgba(255,255,255,0.08); color: #EDF2EC; }
-  .of-budget-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.12); color: #EDF2EC; }
-
-  .of-fields { display: flex; flex-direction: column; gap: 1rem; }
-  .of-field  { display: flex; flex-direction: column; gap: 0.375rem; }
-
-  .of-label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: rgba(237,242,236,0.55);
-  }
-
-  .of-error {
-    font-size: 0.8rem;
-    color: #F87171;
-    margin: 0;
-  }
-
-  .of-privacy {
-    font-size: 0.75rem;
-    color: rgba(237,242,236,0.30);
-    margin: 0;
-  }
-
-  .of-nav {
-    display: flex;
-    gap: 0.75rem;
-    padding-top: 0.5rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .of-next-btn {
-    flex: 1;
-    padding: 0.875rem 1.5rem;
-    background: #C4A96A;
-    color: #1C1400;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.15s ease-out;
-    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
-  }
-
-  .of-next-btn:hover { background: #A88B4A; box-shadow: 0 4px 20px rgba(196,169,106,0.35); transform: translateY(-1px); }
-
-  .of-back-btn {
-    padding: 0.875rem 1rem;
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 8px;
-    color: rgba(237,242,236,0.45);
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: border-color 0.15s ease-out, color 0.15s ease-out;
-  }
-
-  .of-back-btn:hover { border-color: rgba(196,169,106,0.35); color: rgba(237,242,236,0.80); }
-`
 
 export default OfferteFormulier

@@ -13,9 +13,9 @@ const seo = {
     <div class="container bedankt-inner">
       <div class="bedankt-card reveal">
         <div class="bedankt-icon" aria-hidden="true">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="28" cy="28" r="28" fill="rgba(110,158,101,0.15)" />
-            <path d="M17 28.5L24.5 36L39 21" stroke="#6E9E65" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="28" r="28" fill="var(--color-primary-50)" />
+            <path d="M17 28.5L24.5 36L39 21" stroke="var(--color-primary-500)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
 
@@ -33,7 +33,7 @@ const seo = {
         </p>
 
         <div class="bedankt-actions">
-          <a href="/" class="bedankt-btn bedankt-btn--primary">Terug naar home</a>
+          <a href="/" class="btn-primary bedankt-btn">Terug naar home</a>
           <a href="/tools/tuinkosten-calculator" class="bedankt-btn bedankt-btn--secondary">Tuinkosten calculator</a>
         </div>
       </div>
@@ -50,12 +50,10 @@ const seo = {
 
   .bedankt-card {
     text-align: center;
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(20px) saturate(140%);
-    -webkit-backdrop-filter: blur(20px) saturate(140%);
-    border: 1px solid rgba(255,255,255,0.11);
-    border-radius: var(--radius-xl, 16px);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-box);
+    box-shadow: var(--shadow-md);
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
@@ -63,19 +61,17 @@ const seo = {
     gap: 1.25rem;
   }
 
-  .bedankt-icon {
-    margin-bottom: 0.5rem;
-  }
+  .bedankt-icon { margin-bottom: 0.5rem; }
 
   .bedankt-card h1 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: #EDF2EC;
+    color: var(--color-charcoal);
     margin: 0;
   }
 
   .bedankt-text {
-    color: rgba(237,242,236,0.58);
+    color: var(--color-charcoal-light);
     line-height: 1.75;
     max-width: 480px;
     margin: 0;
@@ -83,7 +79,7 @@ const seo = {
   }
 
   .bedankt-email {
-    color: rgba(237,242,236,0.40);
+    color: var(--color-charcoal-muted);
     font-size: 0.875rem;
     margin: 0;
   }
@@ -98,34 +94,23 @@ const seo = {
 
   .bedankt-btn {
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.9375rem;
     text-decoration: none;
     transition: all 0.15s ease-out;
   }
 
-  .bedankt-btn--primary {
-    background: #C4A96A;
-    color: #1C1400;
-    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
-  }
-
-  .bedankt-btn--primary:hover {
-    background: #A88B4A;
-    box-shadow: 0 4px 20px rgba(196,169,106,0.35);
-    transform: translateY(-1px);
-  }
-
   .bedankt-btn--secondary {
-    background: rgba(255,255,255,0.06);
-    color: rgba(237,242,236,0.65);
-    border: 1px solid rgba(255,255,255,0.10);
+    background: var(--color-canvas-alt);
+    color: var(--color-charcoal-light);
+    border: 1px solid var(--color-border);
   }
 
   .bedankt-btn--secondary:hover {
-    border-color: rgba(196,169,106,0.35);
-    color: #EDF2EC;
+    border-color: var(--color-border-hover);
+    color: var(--color-charcoal);
+    background: var(--color-canvas-muted);
   }
 </style>

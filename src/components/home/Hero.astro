@@ -1,0 +1,150 @@
+---
+import Zoekbalk from '../../islands/Zoekbalk'
+import { SOCIAL_PROOF } from '../../lib/constants'
+---
+
+<section class="hero" aria-label="Zoek een hovenier">
+  <div class="container hero-inner">
+    <div class="hero-text reveal-up">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Gratis, vrijblijvend, snel
+      </div>
+      <h1 class="hero-title">
+        Vind de beste hovenier<br/>
+        <span class="hero-accent">in jouw buurt</span>
+      </h1>
+      <p class="hero-subtitle">
+        Vergelijk lokale hoveniers op prijs en kwaliteit.
+        Ontvang binnen 48 uur gratis offertes van maximaal 3 professionals.
+      </p>
+    </div>
+
+    <!-- Search card — centered, full width -->
+    <div class="hero-search reveal-scale delay-200">
+      <Zoekbalk client:load />
+    </div>
+
+    <div class="hero-trust reveal-fade delay-300">
+      <span class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        {SOCIAL_PROOF.rating} gemiddeld
+      </span>
+      <span class="trust-dot" aria-hidden="true"></span>
+      <span>{SOCIAL_PROOF.reviews}+ reviews</span>
+      <span class="trust-dot" aria-hidden="true"></span>
+      <span>{SOCIAL_PROOF.hoveniers} hoveniers</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 4rem 0 3rem;
+    background: var(--color-canvas);
+  }
+
+  @media (min-width: 768px) {
+    .hero { padding: 5rem 0 4rem; }
+  }
+
+  /* Centered single-column layout */
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  /* Badge pill */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.3rem 0.75rem;
+    background: var(--color-primary-50);
+    border: 1px solid var(--color-primary-200);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-primary-700);
+  }
+
+  .hero-badge svg {
+    color: var(--color-primary-500);
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
+  .hero-accent {
+    color: var(--color-primary-500);
+  }
+
+  .hero-subtitle {
+    font-size: 1.0625rem;
+    color: var(--color-charcoal-light);
+    max-width: 480px;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* Search card — full width, centered */
+  .hero-search {
+    width: 100%;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-box);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 0.8125rem;
+    color: var(--color-charcoal-muted);
+    font-weight: 500;
+  }
+
+  .trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .trust-item svg {
+    color: #f59e0b;
+  }
+
+  .trust-dot {
+    width: 3px;
+    height: 3px;
+    background: var(--color-charcoal-muted);
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+</style>

@@ -1,4 +1,5 @@
 import { useState, useEffect, type FC } from 'react'
+import StarRating from './StarRating'
 
 interface Bedrijf {
   _id:            string
@@ -18,14 +19,15 @@ interface Bedrijf {
 interface Props {
   postcode: string
   dienst:   string
-  stad:     string   // display naam van de stad
-  stadSlug: string   // slug voor URL
+  stad:     string
+  stadSlug: string
 }
 
 const CATEGORIE_LABELS: Record<string, string> = {
   'Tuin': 'Tuin',
   'Tuin- en landschapaannemer': 'Tuinaannemer',
   'Tuin- en landschapsaannemer': 'Tuinaannemer',
+  'Tuin- en landschapsarchitect': 'Tuinaannemer',
   'Hoveniersbedrijf': 'Hovenier',
   'Hovenier': 'Hovenier',
   'Landschapsarchitect': 'Landschapsarchitect',
@@ -33,6 +35,7 @@ const CATEGORIE_LABELS: Record<string, string> = {
   'Boomverzorgingsdienst': 'Boomverzorging',
   'Tuinaannemer': 'Tuinaannemer',
   'Tuinonderhoud': 'Tuinonderhoud',
+  'Tuinman': 'Tuinman',
 }
 
 const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
@@ -44,7 +47,6 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
     const convexUrl = (import.meta as Record<string, any>).env?.PUBLIC_CONVEX_URL ?? ''
     if (!convexUrl) { setLoading(false); return }
 
-    // Als stad bekend: zoek per stad. Anders: top nationaal als fallback
     const path = stad ? 'bedrijven:zoekBedrijven' : 'bedrijven:getTopBedrijven'
     const args = stad ? { stad, limit: 12 } : { limit: 12 }
 
@@ -64,96 +66,104 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
   }
 
   if (loading) return (
-    <div className="zr-wrapper">
-      <div className="zr-header">
-        <div className="zr-skeleton zr-skeleton--title" />
-      </div>
-      <div className="zr-grid">
+    <div className="max-w-[1100px] mx-auto">
+      <div className="h-8 w-70 rounded-md bg-canvas-muted mb-8" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
         {Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="zr-card zr-card--skeleton" aria-hidden="true" />
+          <div key={i} className="h-[180px] rounded-lg bg-canvas-muted animate-pulse" aria-hidden="true" />
         ))}
       </div>
-      <style>{styles}</style>
     </div>
   )
 
   if (error || bedrijven.length === 0) return (
-    <div className="zr-wrapper">
-      <div className="zr-empty">
-        <div className="zr-empty-icon" aria-hidden="true">🔍</div>
-        <h2>Geen hoveniers gevonden{stad ? ` in ${stad}` : ''}</h2>
-        <p>Vraag een algemene offerte aan. We koppelen je aan hoveniers in jouw regio.</p>
-        <a href={`/offerte?postcode=${encodeURIComponent(postcode)}&dienst=${encodeURIComponent(dienst)}`} className="zr-cta-btn">
-          Vraag gratis offerte aan →
+    <div className="max-w-[1100px] mx-auto">
+      <div className="text-center py-16 px-8 flex flex-col items-center gap-4">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-border-hover mb-2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.3-4.3"/>
+        </svg>
+        <h2 className="font-heading text-charcoal m-0">Geen hoveniers gevonden{stad ? ` in ${stad}` : ''}</h2>
+        <p className="text-charcoal-muted m-0 max-w-[400px]">Vraag een algemene offerte aan. We koppelen je aan hoveniers in jouw regio.</p>
+        <a
+          href={`/offerte?postcode=${encodeURIComponent(postcode)}&dienst=${encodeURIComponent(dienst)}`}
+          className="inline-flex items-center gap-1 py-3 px-6 bg-primary-500 text-white rounded-md font-heading font-bold no-underline transition-colors duration-200 hover:bg-primary-600"
+        >
+          Vraag gratis offerte aan
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
         </a>
       </div>
-      <style>{styles}</style>
     </div>
   )
 
   return (
-    <div className="zr-wrapper">
-      <div className="zr-header">
+    <div className="max-w-[1100px] mx-auto font-body text-charcoal">
+      <div className="flex items-end justify-between flex-wrap gap-4 mb-8">
         <div>
-          <h1 className="zr-title">
+          <h1 className="font-heading text-[clamp(1.5rem,3vw,2rem)] font-bold text-charcoal m-0 mb-1">
             {stad ? `Hoveniers in ${stad}` : 'Populaire hoveniers in Nederland'}
           </h1>
-          <p className="zr-subtitle">
+          <p className="text-sm text-charcoal-muted m-0">
             {bedrijven.length} {stad ? `hoveniersbedrijven gevonden` : `topbedrijven geselecteerd`}, gesorteerd op Google score
           </p>
         </div>
         <a
           href={`/offerte?postcode=${encodeURIComponent(postcode)}&dienst=${encodeURIComponent(dienst)}&stad=${encodeURIComponent(stadSlug)}`}
-          className="zr-algemeen-btn"
+          className="inline-flex items-center py-2.5 px-5 border-[1.5px] border-primary-500 rounded-md text-primary-500 text-sm font-semibold no-underline font-heading whitespace-nowrap transition-colors duration-200 hover:bg-primary-50 hover:text-primary-600"
         >
           Vraag algemene offerte aan
         </a>
       </div>
 
-      <ul className="zr-grid" role="list">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 list-none p-0 mb-10" role="list">
         {bedrijven.map((b, i) => (
-          <li key={b._id} className="zr-card" role="listitem">
-            {/* Rank badge voor top 3 */}
+          <li key={b._id} className="relative bg-white border border-border rounded-lg p-5 flex flex-col gap-2.5 transition-colors duration-200 hover:border-border-hover hover:shadow-md" role="listitem">
             {i < 3 && (
-              <div className="zr-rank" aria-label={`#${i + 1} hoogste score`}>
+              <div className="absolute top-3.5 right-3.5 bg-primary-50 border border-primary-200 text-primary-500 text-[0.7rem] font-bold py-0.5 px-2 rounded-full font-heading tracking-wide" aria-label={`#${i + 1} hoogste score`}>
                 #{i + 1}
               </div>
             )}
 
-            <div className="zr-card-top">
-              <div className="zr-naam">{b.naam}</div>
+            <div className="flex flex-col gap-1.5 pr-10">
+              <div className="font-heading text-base font-bold text-charcoal leading-tight">{b.naam}</div>
               {b.hoofdCategorie && (
-                <span className="zr-badge">
+                <span className="inline-flex self-start py-0.5 px-2.5 bg-primary-50 border border-primary-200 rounded-full text-[0.7rem] font-semibold text-primary-700 tracking-wide">
                   {CATEGORIE_LABELS[b.hoofdCategorie] ?? b.hoofdCategorie}
                 </span>
               )}
             </div>
 
-            <div className="zr-score-row">
+            <div className="flex items-center gap-1.5 text-[0.8125rem]">
               {b.googleScore ? (
                 <>
-                  <span className="zr-stars" aria-hidden="true">
-                    {'★'.repeat(Math.round(b.googleScore))}{'☆'.repeat(5 - Math.round(b.googleScore))}
-                  </span>
-                  <strong className="zr-score">{b.googleScore.toFixed(1)}</strong>
+                  <StarRating score={b.googleScore} />
+                  <strong className="text-charcoal font-bold">{b.googleScore.toFixed(1)}</strong>
                   {b.aantalReviews && (
-                    <span className="zr-reviews">({b.aantalReviews} reviews)</span>
+                    <span className="text-charcoal-muted">({b.aantalReviews} reviews)</span>
                   )}
                 </>
               ) : (
-                <span className="zr-no-score">Nog geen reviews</span>
+                <span className="text-[#94a3b8] italic">Nog geen reviews</span>
               )}
             </div>
 
             {b.postcode && (
-              <div className="zr-meta">📍 {b.postcode}{b.stad ? ` · ${b.stad}` : ''}</div>
+              <div className="text-[0.8rem] text-charcoal-muted flex items-center gap-1">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                {b.postcode}{b.stad ? `, ${b.stad}` : ''}
+              </div>
             )}
 
-            <div className="zr-actions">
-              <a href={buildOffertUrl(b)} className="zr-btn zr-btn--primary">
+            <div className="flex gap-2 mt-1 flex-wrap">
+              <a href={buildOffertUrl(b)} className="inline-flex items-center py-1.5 px-3.5 rounded-md text-[0.8125rem] font-semibold no-underline font-heading bg-primary-500 text-white transition-colors duration-200 hover:bg-primary-600">
                 Offerte aanvragen
               </a>
-              <a href={`/hoveniers/${b.slug}`} className="zr-btn zr-btn--ghost">
+              <a href={`/hoveniers/${b.slug}`} className="inline-flex items-center py-1.5 px-3.5 rounded-md text-[0.8125rem] font-semibold no-underline font-heading bg-transparent border border-border text-charcoal-light transition-colors duration-200 hover:border-border-hover hover:bg-canvas-alt hover:text-charcoal">
                 Bekijk profiel
               </a>
               {b.website && (
@@ -161,10 +171,13 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
                   href={b.website.startsWith('http') ? b.website : `https://${b.website}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="zr-btn zr-btn--ghost"
+                  className="inline-flex items-center gap-0.5 py-1.5 px-3 rounded-md text-[0.8125rem] font-semibold no-underline font-heading bg-transparent border border-border text-charcoal-muted transition-colors duration-200 hover:border-border-hover hover:bg-canvas-alt hover:text-charcoal"
                   aria-label={`Website van ${b.naam}`}
                 >
-                  Website ↗
+                  Website
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                  </svg>
                 </a>
               )}
             </div>
@@ -172,269 +185,20 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
         ))}
       </ul>
 
-      <div className="zr-footer">
-        <p>Niet gevonden wat je zoekt?</p>
+      <div className="flex items-center gap-5 p-8 bg-canvas-alt border border-border rounded-lg flex-wrap">
+        <p className="m-0 text-[0.9375rem] text-charcoal-light flex-1 min-w-[180px]">Niet gevonden wat je zoekt?</p>
         <a
           href={`/offerte?postcode=${encodeURIComponent(postcode)}&dienst=${encodeURIComponent(dienst)}&stad=${encodeURIComponent(stadSlug)}`}
-          className="zr-cta-btn"
+          className="inline-flex items-center gap-1 py-3 px-6 bg-primary-500 text-white rounded-md font-heading font-bold no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-600"
         >
-          Ontvang 3 gratis offertes →
+          Ontvang 3 gratis offertes
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
         </a>
       </div>
-
-      <style>{styles}</style>
     </div>
   )
 }
-
-const styles = `
-  .zr-wrapper {
-    font-family: 'Inter', sans-serif;
-    color: #EDF2EC;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .zr-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .zr-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 700;
-    color: #EDF2EC;
-    margin: 0 0 0.25rem;
-  }
-
-  .zr-subtitle {
-    font-size: 0.875rem;
-    color: rgba(237,242,236,0.45);
-    margin: 0;
-  }
-
-  .zr-skeleton--title {
-    height: 2rem;
-    width: 280px;
-    border-radius: 6px;
-    background: rgba(255,255,255,0.08);
-  }
-
-  .zr-algemeen-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.6rem 1.25rem;
-    border: 1px solid rgba(196,169,106,0.35);
-    border-radius: 8px;
-    color: #C4A96A;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    transition: border-color 0.15s ease-out, background-color 0.15s ease-out;
-    white-space: nowrap;
-  }
-  .zr-algemeen-btn:hover {
-    background: rgba(196,169,106,0.08);
-    border-color: rgba(196,169,106,0.55);
-  }
-
-  .zr-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.875rem;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2.5rem;
-  }
-
-  @media (min-width: 640px) {
-    .zr-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (min-width: 1024px) {
-    .zr-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-
-  .zr-card {
-    position: relative;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 12px;
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    transition: border-color 0.15s ease-out, background-color 0.15s ease-out, transform 0.15s ease-out;
-  }
-  .zr-card:hover {
-    border-color: rgba(196,169,106,0.30);
-    background: rgba(255,255,255,0.07);
-    transform: translateY(-2px);
-  }
-
-  .zr-card--skeleton {
-    height: 180px;
-    background: linear-gradient(
-      90deg,
-      rgba(255,255,255,0.05) 25%,
-      rgba(255,255,255,0.09) 50%,
-      rgba(255,255,255,0.05) 75%
-    );
-    background-size: 200% 100%;
-    animation: zr-shimmer 1.4s infinite;
-  }
-  @keyframes zr-shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  .zr-rank {
-    position: absolute;
-    top: 0.875rem;
-    right: 0.875rem;
-    background: rgba(196,169,106,0.15);
-    border: 1px solid rgba(196,169,106,0.30);
-    color: #C4A96A;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0.2rem 0.5rem;
-    border-radius: 99px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    letter-spacing: 0.04em;
-  }
-
-  .zr-card-top {
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
-    padding-right: 2.5rem; /* ruimte voor rank badge */
-  }
-
-  .zr-naam {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #EDF2EC;
-    line-height: 1.3;
-  }
-
-  .zr-badge {
-    display: inline-flex;
-    align-self: flex-start;
-    padding: 0.18rem 0.6rem;
-    background: rgba(110,158,101,0.12);
-    border: 1px solid rgba(110,158,101,0.25);
-    border-radius: 99px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: rgba(110,158,101,0.85);
-    letter-spacing: 0.03em;
-  }
-
-  .zr-score-row {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    font-size: 0.8125rem;
-  }
-
-  .zr-stars { color: #C4A96A; letter-spacing: -1px; }
-  .zr-score { color: #C4A96A; font-weight: 700; }
-  .zr-reviews { color: rgba(237,242,236,0.35); }
-  .zr-no-score { color: rgba(237,242,236,0.28); font-style: italic; }
-
-  .zr-meta {
-    font-size: 0.8rem;
-    color: rgba(237,242,236,0.38);
-  }
-
-  .zr-actions {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.25rem;
-    flex-wrap: wrap;
-  }
-
-  .zr-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.45rem 0.875rem;
-    border-radius: 6px;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
-  }
-  .zr-btn--primary { background: #C4A96A; color: #1C1400; }
-  .zr-btn--primary:hover { background: #A88B4A; }
-  .zr-btn--ghost {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.12);
-    color: rgba(237,242,236,0.55);
-  }
-  .zr-btn--ghost:hover {
-    border-color: rgba(255,255,255,0.25);
-    color: rgba(237,242,236,0.85);
-  }
-
-  .zr-footer {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    padding: 2rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    flex-wrap: wrap;
-  }
-
-  .zr-footer p {
-    margin: 0;
-    font-size: 0.9375rem;
-    color: rgba(237,242,236,0.55);
-    flex: 1;
-    min-width: 180px;
-  }
-
-  .zr-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem 1.5rem;
-    background: #C4A96A;
-    color: #1C1400;
-    border-radius: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background-color 0.15s ease-out;
-  }
-  .zr-cta-btn:hover { background: #A88B4A; }
-
-  .zr-empty {
-    text-align: center;
-    padding: 4rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  .zr-empty-icon { font-size: 3rem; }
-  .zr-empty h2 { font-family: 'Plus Jakarta Sans', sans-serif; color: #EDF2EC; margin: 0; }
-  .zr-empty p { color: rgba(237,242,236,0.50); margin: 0; max-width: 400px; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .zr-card--skeleton { animation: none; }
-    .zr-card, .zr-btn, .zr-algemeen-btn, .zr-cta-btn { transition: none; }
-  }
-`
 
 export default ZoekResultaten

@@ -1,4 +1,5 @@
 import { useState, useEffect, type FC } from 'react'
+import StarRating from './StarRating'
 
 interface Bedrijf {
   _id:            string
@@ -16,8 +17,8 @@ interface Bedrijf {
 }
 
 interface Props {
-  stad:   string  // display naam, bijv. "Amsterdam"
-  slug:   string  // query key, bijv. "amsterdam"
+  stad:   string
+  slug:   string
   limit?: number
 }
 
@@ -25,11 +26,13 @@ const CATEGORIE_LABELS: Record<string, string> = {
   'Tuin': 'Tuin',
   'Tuin- en landschapaannemer': 'Tuinaannemer',
   'Tuin- en landschapsaannemer': 'Tuinaannemer',
+  'Tuin- en landschapsarchitect': 'Tuinaannemer',
   'Hoveniersbedrijf': 'Hovenier',
   'Hovenier': 'Hovenier',
   'Landschapsarchitect': 'Landschapsarchitect',
   'Boomverzorging': 'Boomverzorging',
   'Boomverzorgingsdienst': 'Boomverzorging',
+  'Tuinman': 'Tuinman',
 }
 
 const BedrijvenLijst: FC<Props> = ({ stad, slug, limit = 6 }) => {
@@ -56,64 +59,72 @@ const BedrijvenLijst: FC<Props> = ({ stad, slug, limit = 6 }) => {
   }, [stad, limit])
 
   if (loading) return (
-    <div className="bl-grid">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {Array.from({ length: 3 }).map((_, i) => (
-        <div key={i} className="bl-skeleton" aria-hidden="true" />
+        <div key={i} className="h-[130px] rounded-lg bg-canvas-muted animate-pulse" aria-hidden="true" />
       ))}
-      <style>{styles}</style>
     </div>
   )
 
   if (error || bedrijven.length === 0) return null
 
   return (
-    <div className="bl-wrapper">
-      <h2 className="bl-title">Top hoveniers in {stad}</h2>
-      <p className="bl-subtitle">
+    <div className="font-body text-charcoal">
+      <h2 className="font-heading text-[1.375rem] font-bold text-charcoal mb-1">Top hoveniers in {stad}</h2>
+      <p className="text-sm text-charcoal-muted mb-5">
         Gesorteerd op Google-score, {bedrijven.length} bedrijven gevonden
       </p>
 
-      <ul className="bl-grid" role="list">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-none p-0 mb-5" role="list">
         {bedrijven.map((b, i) => (
-          <li key={b._id} className="bl-card">
-            {/* Rank badge voor top 3 */}
-            {i < 3 && <div className="bl-rank" aria-label={`#${i + 1}`}>#{i + 1}</div>}
+          <li key={b._id} className="relative bg-white border border-border rounded-lg p-4 flex flex-col gap-2 transition-colors duration-200 hover:border-border-hover hover:shadow-md">
+            {i < 3 && (
+              <div className="absolute top-3 right-3.5 bg-primary-50 border border-primary-200 text-primary-500 text-[0.65rem] font-bold py-0.5 px-2 rounded-full font-heading tracking-wide" aria-label={`#${i + 1}`}>
+                #{i + 1}
+              </div>
+            )}
 
-            <div className="bl-card-top">
-              <div className="bl-naam">{b.naam}</div>
+            <div className="flex flex-col gap-1 pr-9">
+              <div className="font-heading text-[0.9375rem] font-bold text-charcoal leading-tight">{b.naam}</div>
               {b.hoofdCategorie && (
-                <span className="bl-badge">
+                <span className="inline-flex self-start py-0.5 px-2.5 bg-primary-50 border border-primary-200 rounded-full text-[0.68rem] font-semibold text-primary-700 tracking-wide">
                   {CATEGORIE_LABELS[b.hoofdCategorie] ?? b.hoofdCategorie}
                 </span>
               )}
             </div>
 
-            <div className="bl-score-row">
+            <div className="flex items-center gap-1.5 text-[0.8rem]">
               {b.googleScore ? (
                 <>
-                  <span className="bl-stars" aria-hidden="true">
-                    {'★'.repeat(Math.round(b.googleScore))}{'☆'.repeat(5 - Math.round(b.googleScore))}
-                  </span>
-                  <strong className="bl-score">{b.googleScore.toFixed(1)}</strong>
+                  <StarRating score={b.googleScore} />
+                  <strong className="text-charcoal font-bold">{b.googleScore.toFixed(1)}</strong>
                   {b.aantalReviews && (
-                    <span className="bl-reviews">({b.aantalReviews})</span>
+                    <span className="text-charcoal-muted">({b.aantalReviews})</span>
                   )}
                 </>
               ) : (
-                <span className="bl-no-score">Nog geen score</span>
+                <span className="text-[#94a3b8] text-[0.78rem] italic">Nog geen score</span>
               )}
             </div>
 
-            {b.postcode && <div className="bl-meta">📍 {b.postcode}</div>}
+            {b.postcode && (
+              <div className="text-[0.78rem] text-charcoal-muted flex items-center gap-1">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                {b.postcode}
+              </div>
+            )}
 
-            <div className="bl-actions">
+            <div className="flex gap-1.5 mt-1 flex-wrap">
               <a
                 href={`/offerte?postcode=${encodeURIComponent(b.postcode ?? '')}&stad=${encodeURIComponent(slug)}`}
-                className="bl-btn bl-btn--primary"
+                className="inline-flex items-center py-1.5 px-3 rounded-md text-[0.78rem] font-semibold no-underline font-heading bg-primary-500 text-white transition-colors duration-200 hover:bg-primary-600"
               >
                 Offerte aanvragen
               </a>
-              <a href={`/hoveniers/${b.slug}`} className="bl-btn bl-btn--ghost">
+              <a href={`/hoveniers/${b.slug}`} className="inline-flex items-center py-1.5 px-3 rounded-md text-[0.78rem] font-semibold no-underline font-heading bg-transparent border border-border text-charcoal-light transition-colors duration-200 hover:border-border-hover hover:bg-canvas-alt hover:text-charcoal">
                 Profiel
               </a>
               {b.googleMapsUrl && (
@@ -121,10 +132,13 @@ const BedrijvenLijst: FC<Props> = ({ stad, slug, limit = 6 }) => {
                   href={b.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bl-btn bl-btn--icon"
-                  aria-label={`Google Maps — ${b.naam}`}
+                  className="inline-flex items-center gap-0.5 py-1.5 px-2.5 rounded-md text-[0.78rem] font-semibold no-underline font-heading bg-transparent border border-border text-charcoal-muted transition-colors duration-200 hover:border-border-hover hover:text-charcoal hover:bg-canvas-alt"
+                  aria-label={`Google Maps - ${b.naam}`}
                 >
-                  Maps ↗
+                  Maps
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                  </svg>
                 </a>
               )}
             </div>
@@ -132,188 +146,14 @@ const BedrijvenLijst: FC<Props> = ({ stad, slug, limit = 6 }) => {
         ))}
       </ul>
 
-      <a href={`/zoeken?stad=${encodeURIComponent(slug)}&dienst=&postcode=`} className="bl-more">
-        Bekijk alle hoveniers in {stad} →
+      <a href={`/zoeken?stad=${encodeURIComponent(slug)}&dienst=&postcode=`} className="inline-flex items-center gap-1 text-sm font-semibold text-primary-500 no-underline font-heading transition-colors duration-150 hover:text-primary-600 hover:underline">
+        Bekijk alle hoveniers in {stad}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
       </a>
-
-      <style>{styles}</style>
     </div>
   )
 }
-
-const styles = `
-  .bl-wrapper { font-family: 'Inter', sans-serif; color: #EDF2EC; }
-
-  .bl-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.375rem;
-    font-weight: 700;
-    color: #EDF2EC;
-    margin: 0 0 0.25rem;
-  }
-  .bl-subtitle {
-    font-size: 0.875rem;
-    color: rgba(237,242,236,0.40);
-    margin: 0 0 1.25rem;
-  }
-
-  .bl-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.25rem;
-  }
-  @media (min-width: 580px) {
-    .bl-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  .bl-skeleton {
-    height: 130px;
-    border-radius: 10px;
-    background: linear-gradient(
-      90deg,
-      rgba(255,255,255,0.05) 25%,
-      rgba(255,255,255,0.09) 50%,
-      rgba(255,255,255,0.05) 75%
-    );
-    background-size: 200% 100%;
-    animation: bl-shimmer 1.4s infinite;
-  }
-  @keyframes bl-shimmer {
-    0%   { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  .bl-card {
-    position: relative;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 10px;
-    padding: 1rem 1.125rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    transition: border-color 0.15s ease-out, background-color 0.15s ease-out, transform 0.15s ease-out;
-  }
-  .bl-card:hover {
-    border-color: rgba(196,169,106,0.30);
-    background: rgba(255,255,255,0.07);
-    transform: translateY(-1px);
-  }
-
-  .bl-rank {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.875rem;
-    background: rgba(196,169,106,0.15);
-    border: 1px solid rgba(196,169,106,0.25);
-    color: #C4A96A;
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 0.15rem 0.45rem;
-    border-radius: 99px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    letter-spacing: 0.04em;
-  }
-
-  .bl-card-top {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    padding-right: 2.25rem;
-  }
-
-  .bl-naam {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: #EDF2EC;
-    line-height: 1.3;
-  }
-
-  .bl-badge {
-    display: inline-flex;
-    align-self: flex-start;
-    padding: 0.15rem 0.55rem;
-    background: rgba(110,158,101,0.10);
-    border: 1px solid rgba(110,158,101,0.22);
-    border-radius: 99px;
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: rgba(110,158,101,0.80);
-    letter-spacing: 0.03em;
-  }
-
-  .bl-score-row {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.8rem;
-  }
-  .bl-stars { color: #C4A96A; letter-spacing: -1px; }
-  .bl-score { color: #C4A96A; font-weight: 700; }
-  .bl-reviews { color: rgba(237,242,236,0.35); }
-  .bl-no-score { color: rgba(237,242,236,0.28); font-size: 0.78rem; font-style: italic; }
-
-  .bl-meta { font-size: 0.78rem; color: rgba(237,242,236,0.35); }
-
-  .bl-actions {
-    display: flex;
-    gap: 0.375rem;
-    margin-top: 0.25rem;
-    flex-wrap: wrap;
-  }
-
-  .bl-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.4rem 0.75rem;
-    border-radius: 6px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
-  }
-  .bl-btn--primary { background: #C4A96A; color: #1C1400; }
-  .bl-btn--primary:hover { background: #A88B4A; }
-  .bl-btn--ghost {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.12);
-    color: rgba(237,242,236,0.55);
-  }
-  .bl-btn--ghost:hover {
-    border-color: rgba(255,255,255,0.25);
-    color: rgba(237,242,236,0.85);
-  }
-  .bl-btn--icon {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.09);
-    color: rgba(237,242,236,0.35);
-    padding: 0.4rem 0.6rem;
-  }
-  .bl-btn--icon:hover {
-    border-color: rgba(255,255,255,0.20);
-    color: rgba(237,242,236,0.70);
-  }
-
-  .bl-more {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #C4A96A;
-    text-decoration: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
-  .bl-more:hover { text-decoration: underline; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .bl-skeleton { animation: none; }
-    .bl-card, .bl-btn { transition: none; }
-  }
-`
 
 export default BedrijvenLijst

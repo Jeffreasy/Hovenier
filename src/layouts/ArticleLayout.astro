@@ -67,7 +67,7 @@ const articleSchema = JSON.stringify({
 
         <div class="article-byline">
           <span>TuinHub Redactie</span>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">&middot;</span>
           <time datetime={publishDate.toISOString()}>
             {formatDate(publishDate)}
           </time>
@@ -110,7 +110,9 @@ const articleSchema = JSON.stringify({
     <!-- Auteur-blok -->
     <div class="article-author container">
       <div class="author-block">
-        <div class="author-avatar" aria-hidden="true">🌿</div>
+        <div class="author-avatar" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 8-7.5 8-13-2 1-3.5 1-5.5 0C10 8.5 8 11 7 14c-1.5 3-2 5-2 6"/><path d="M12 20c-2-2.5-3-5-3-8 2 .5 3.5 1 5 .5"/></svg>
+        </div>
         <div class="author-info">
           <strong>TuinHub Redactie</strong>
           <p>Onze redactie bestaat uit tuinexperts en hoveniers die praktische adviezen schrijven voor Nederlandse tuineigenaren.</p>
@@ -148,8 +150,8 @@ const articleSchema = JSON.stringify({
 
 <style>
   .article-header {
-    background: rgba(255,255,255,0.04);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: var(--color-canvas-alt);
+    border-bottom: 1px solid var(--color-border);
     padding: 3rem 0 2rem;
   }
 
@@ -161,9 +163,9 @@ const articleSchema = JSON.stringify({
   }
 
   .article-category {
-    background: rgba(110,158,101,0.15);
-    color: var(--color-primary);
-    border: 1px solid rgba(110,158,101,0.25);
+    background: var(--color-primary-50);
+    color: var(--color-primary-700);
+    border: 1px solid var(--color-primary-200);
     font-family: var(--font-heading);
     font-size: 0.7rem;
     font-weight: 700;
@@ -176,12 +178,12 @@ const articleSchema = JSON.stringify({
   .article-title {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     margin-bottom: 1rem;
-    color: #EDF2EC;
+    color: var(--color-charcoal);
   }
 
   .article-description {
     font-size: 1.125rem;
-    color: rgba(237,242,236,0.62);
+    color: var(--color-charcoal-light);
     max-width: 640px;
     margin-bottom: 1.5rem;
   }
@@ -191,7 +193,7 @@ const articleSchema = JSON.stringify({
     align-items: center;
     gap: 0.75rem;
     font-size: 0.875rem;
-    color: rgba(237,242,236,0.40);
+    color: var(--color-charcoal-muted);
   }
 
   .article-image img {
@@ -221,7 +223,7 @@ const articleSchema = JSON.stringify({
   .article-author {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid var(--color-border);
   }
 
   .author-block {
@@ -230,20 +232,20 @@ const articleSchema = JSON.stringify({
     align-items: flex-start;
   }
 
-  .author-avatar { font-size: 2.5rem; flex-shrink: 0; }
+  .author-avatar { color: var(--color-primary-500); flex-shrink: 0; }
 
   .author-info strong {
     display: block;
     font-family: var(--font-heading);
     font-size: 1rem;
     margin-bottom: 0.25rem;
-    color: #EDF2EC;
+    color: var(--color-charcoal);
   }
 
   .author-info p {
     margin: 0;
     font-size: 0.875rem;
-    color: rgba(237,242,236,0.50);
+    color: var(--color-charcoal-light);
   }
 
   .related-grid {
@@ -257,10 +259,8 @@ const articleSchema = JSON.stringify({
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.10);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     padding: 1.25rem;
     text-decoration: none;
@@ -269,7 +269,7 @@ const articleSchema = JSON.stringify({
   }
 
   .related-card:hover {
-    border-color: rgba(255,255,255,0.20);
+    border-color: var(--color-primary-300);
     transform: translateY(-2px);
     text-decoration: none;
   }
@@ -277,7 +277,7 @@ const articleSchema = JSON.stringify({
   .related-category {
     font-size: 0.7rem;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: var(--color-primary-500);
     text-transform: uppercase;
     letter-spacing: 0.07em;
   }
@@ -286,6 +286,6 @@ const articleSchema = JSON.stringify({
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.9rem;
-    color: rgba(237,242,236,0.80);
+    color: var(--color-charcoal);
   }
 </style>

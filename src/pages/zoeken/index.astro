@@ -25,7 +25,7 @@ if (!stadParam && postcode) {
       if (woonplaats) stadParam = woonplaats
     }
   } catch {
-    // PDOK niet beschikbaar — ga verder zonder stad
+    // PDOK niet beschikbaar
   }
 }
 
@@ -41,7 +41,6 @@ const gevondenStad = stadParam
 
 const stadNaam = gevondenStad?.data.naam ?? stadParam
 const stadSlug = gevondenStad?.data.slug ?? stadParam.toLowerCase()
-
 
 const dienstLabels: Record<string, string> = {
   tuinaanleg:  'Tuinaanleg',
@@ -69,7 +68,12 @@ const seo = {
           {dienst && <>{dienstLabels[dienst] ?? dienst} · </>}
           {stadNaam ? <>{stadNaam}</> : 'Nederland'}
         </span>
-        <a href="/" class="zoeken-change">← Zoekopdracht aanpassen</a>
+        <a href="/" class="zoeken-change">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:0.25rem">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Zoekopdracht aanpassen
+        </a>
       </nav>
 
       <!-- ZoekResultaten island -->
@@ -96,24 +100,30 @@ const seo = {
     gap: 0.75rem;
     margin-bottom: 2rem;
     padding: 0.75rem 1rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
+    background: var(--color-canvas-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     font-size: 0.875rem;
-    color: rgba(237,242,236,0.55);
+    color: var(--color-charcoal-light);
   }
 
   .zoeken-breadcrumb strong {
-    color: #EDF2EC;
+    color: var(--color-charcoal);
     font-weight: 600;
   }
 
   .zoeken-change {
-    color: var(--color-secondary, #C4A96A);
+    color: var(--color-primary-500);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.8125rem;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.15s ease-out;
   }
-  .zoeken-change:hover { text-decoration: underline; }
+  .zoeken-change:hover {
+    color: var(--color-primary-600);
+    text-decoration: underline;
+  }
 </style>

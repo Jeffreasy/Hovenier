@@ -21,7 +21,7 @@ const {
 
 const baseStyles = [
   'inline-flex items-center justify-center gap-2',
-  'font-heading font-semibold',
+  'font-heading',
   'transition-all duration-200',
   'cursor-pointer',
   'no-underline',
@@ -57,48 +57,54 @@ const classes = [baseStyles, variantClasses[variant], sizeClasses[size], classNa
 )}
 
 <style>
-  /* Primary: warm zand — hoofdactie */
+  /* Primary: trustworthy green */
   :global(.btn-primary) {
-    background: var(--color-secondary);
+    background: var(--color-primary-500);
     border: none;
-    color: #1C1400;
-    box-shadow: 0 2px 12px rgba(196,169,106,0.25);
+    color: var(--color-white);
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
   }
   :global(.btn-primary:hover:not(:disabled)) {
-    background: var(--color-secondary-dark);
-    box-shadow: 0 4px 20px rgba(196,169,106,0.40);
-    transform: translateY(-2px);
+    background: var(--color-primary-600);
+    box-shadow: var(--shadow-md);
     text-decoration: none;
-    color: #1C1400;
+    color: var(--color-white);
   }
-  :global(.btn-primary:active) { transform: translateY(0); }
+  :global(.btn-primary:active) {
+    background: var(--color-primary-700);
+    box-shadow: var(--shadow-xs);
+  }
+  :global(.btn-primary:focus-visible) {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
+  }
 
-  /* Secondary: glass outline — secundaire actie op donker canvas */
+  /* Secondary: outlined green */
   :global(.btn-secondary) {
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.18);
-    color: rgba(237,242,236,0.85);
+    background: transparent;
+    border: 1.5px solid var(--color-primary-500);
+    color: var(--color-primary-500);
+    font-weight: 600;
   }
   :global(.btn-secondary:hover:not(:disabled)) {
-    background: rgba(255,255,255,0.12);
-    border-color: rgba(255,255,255,0.28);
-    color: #EDF2EC;
-    transform: translateY(-1px);
+    background: var(--color-primary-50);
+    border-color: var(--color-primary-600);
+    color: var(--color-primary-600);
     text-decoration: none;
   }
 
-  /* Ghost: transparant, subtiel */
+  /* Ghost: transparent, subtle */
   :global(.btn-ghost) {
     background: transparent;
     border: none;
-    color: var(--color-secondary);
+    color: var(--color-primary-500);
+    font-weight: 600;
   }
   :global(.btn-ghost:hover:not(:disabled)) {
-    background: rgba(196,169,106,0.10);
+    background: var(--color-primary-50);
     text-decoration: none;
-    color: var(--color-secondary);
+    color: var(--color-primary-600);
   }
 
   /* Sizes */

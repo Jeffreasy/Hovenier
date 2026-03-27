@@ -12,6 +12,8 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
   <title>Dashboard | Hovenier Portal</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +24,10 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   <!-- Header -->
   <header class="portal-header">
     <div class="portal-header-inner">
-      <a href="/" class="portal-logo">🌿 TuinHub</a>
+      <a href="/" class="portal-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#008d51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 8-7.5 8-13-2 1-3.5 1-5.5 0C10 8.5 8 11 7 14c-1.5 3-2 5-2 6"/><path d="M12 20c-2-2.5-3-5-3-8 2 .5 3.5 1 5 .5"/></svg>
+        <span>TuinHub</span>
+      </a>
       <nav class="portal-nav">
         <a href="/portal" class="portal-nav-link portal-nav-link--active">Dashboard</a>
         <a href="/portal/profiel" class="portal-nav-link">Mijn profiel</a>
@@ -45,14 +50,14 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       <!-- Stats -->
       <div class="stats-row">
         {[
-          { label: 'Nieuw',      emoji: '🔵', id: 'nieuw' },
-          { label: 'In contact', emoji: '🟡', id: 'contact' },
-          { label: 'Gesloten',   emoji: '🟢', id: 'gesloten' },
+          { label: 'Nieuw',      color: '#3b82f6', id: 'nieuw' },
+          { label: 'In contact', color: '#f59e0b', id: 'contact' },
+          { label: 'Gesloten',   color: '#10b981', id: 'gesloten' },
         ].map((s) => (
           <div class="stat-card" id={`stat-${s.id}`}>
-            <span class="stat-emoji">{s.emoji}</span>
+            <span class="stat-dot" style={`background: ${s.color};`}></span>
             <span class="stat-label">{s.label}</span>
-            <strong class="stat-value" id={`count-${s.id}`}>—</strong>
+            <strong class="stat-value" id={`count-${s.id}`}>&mdash;</strong>
           </div>
         ))}
       </div>
@@ -60,7 +65,8 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       <!-- Leads lijst -->
       <div id="leads-list" class="leads-list">
         <div class="leads-loading">
-          <span>⏳</span> Leads laden…
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+          Leads laden...
         </div>
       </div>
 
@@ -90,7 +96,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
         })
 
         if (!leads.length) {
-          list.innerHTML = `<div class="leads-empty"><span>📭</span><p>Nog geen leads toegewezen. Je ontvangt een e-mail zodra er een aanvraag binnenkomt.</p></div>`
+          list.innerHTML = `<div class="leads-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><p>Nog geen leads toegewezen. Je ontvangt een e-mail zodra er een aanvraag binnenkomt.</p></div>`
           return
         }
 
@@ -108,7 +114,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           </a>
         `).join('')
       } catch {
-        list.innerHTML = `<div class="leads-empty"><span>⚠</span><p>Laden mislukt. Ververs de pagina.</p></div>`
+        list.innerHTML = `<div class="leads-empty"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>Laden mislukt. Ververs de pagina.</p></div>`
       }
     }
     loadLeads()
@@ -123,19 +129,15 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   body.portal-body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    color: #EDF2EC;
-    background:
-      radial-gradient(ellipse 80% 60% at 20% -10%, rgba(70,110,60,0.15) 0%, transparent 60%),
-      #0D1F12;
+    color: #282d31;
+    background: #f8fafc;
     -webkit-font-smoothing: antialiased;
   }
 
   /* ── Header ── */
   .portal-header {
-    background: rgba(13,31,18,0.72);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
     position: sticky;
     top: 0;
     z-index: 50;
@@ -152,10 +154,13 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   }
 
   .portal-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #EDF2EC;
+    color: #282d31;
     text-decoration: none;
     flex-shrink: 0;
   }
@@ -167,16 +172,16 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     border-radius: 8px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: rgba(237,242,236,0.55);
+    color: #64748b;
     text-decoration: none;
     transition: all 0.15s;
   }
 
-  .portal-nav-link:hover { background: rgba(255,255,255,0.07); color: #EDF2EC; }
+  .portal-nav-link:hover { background: #f1f5f9; color: #282d31; }
 
   .portal-nav-link--active {
-    background: rgba(110,158,101,0.15);
-    color: #EDF2EC;
+    background: rgba(0,141,81,0.08);
+    color: #008d51;
     font-weight: 600;
   }
 
@@ -187,8 +192,8 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   .portal-container { max-width: 1100px; margin: 0 auto; }
 
   .page-header { margin-bottom: 2rem; }
-  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #EDF2EC; }
-  .page-sub { margin-top: 0.375rem; color: rgba(237,242,236,0.45); }
+  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #282d31; }
+  .page-sub { margin-top: 0.375rem; color: #64748b; }
 
   /* ── Stat cards ── */
   .stats-row {
@@ -199,10 +204,8 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   }
 
   .stat-card {
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.10);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1.25rem;
     display: flex;
@@ -211,11 +214,11 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     transition: border-color 0.15s;
   }
 
-  .stat-card:hover { border-color: rgba(196,169,106,0.25); }
+  .stat-card:hover { border-color: #cbd5e1; }
 
-  .stat-emoji { font-size: 1.25rem; }
-  .stat-label { font-size: 0.8rem; color: rgba(237,242,236,0.45); font-weight: 500; }
-  .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #C4A96A; }
+  .stat-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .stat-label { font-size: 0.8rem; color: #64748b; font-weight: 500; }
+  .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #008d51; }
 
   /* ── Lead list ── */
   .leads-list { display: flex; flex-direction: column; gap: 0.625rem; }
@@ -226,19 +229,22 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     align-items: center;
     gap: 0.75rem;
     padding: 3rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
-    color: rgba(237,242,236,0.40);
+    color: #64748b;
     font-size: 0.9rem;
     text-align: center;
   }
 
-  .leads-empty span { font-size: 2rem; }
+  .leads-empty svg { color: #94a3b8; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spin { animation: spin 1s linear infinite; }
 
   .lead-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.09);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 10px;
     padding: 1rem 1.25rem;
     display: flex;
@@ -250,16 +256,16 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   }
 
   .lead-card:hover {
-    border-color: rgba(196,169,106,0.30);
-    background: rgba(255,255,255,0.08);
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     transform: translateY(-1px);
   }
 
   .lead-card-left { display: flex; flex-direction: column; gap: 0.25rem; }
-  .lead-naam { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: #EDF2EC; }
-  .lead-meta { font-size: 0.8rem; color: rgba(237,242,236,0.40); }
-  .lead-card-right { display: flex; align-items: center; gap: 0.5rem; color: rgba(237,242,236,0.35); }
-  .lead-budget { font-size: 0.875rem; color: #C4A96A; font-weight: 600; }
+  .lead-naam { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: #282d31; }
+  .lead-meta { font-size: 0.8rem; color: #94a3b8; }
+  .lead-card-right { display: flex; align-items: center; gap: 0.5rem; color: #94a3b8; }
+  .lead-budget { font-size: 0.875rem; color: #008d51; font-weight: 600; }
 
   .lead-status {
     display: inline-flex;
@@ -273,9 +279,9 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     width: fit-content;
   }
 
-  .lead-status--nieuw    { background: rgba(59,130,246,0.15);  color: #93C5FD; }
-  .lead-status--contact  { background: rgba(251,191,36,0.15);  color: #FCD34D; }
-  .lead-status--gesloten { background: rgba(52,211,153,0.15);  color: #6EE7B7; }
+  .lead-status--nieuw    { background: rgba(59,130,246,0.10);  color: #2563eb; }
+  .lead-status--contact  { background: rgba(245,158,11,0.10);  color: #d97706; }
+  .lead-status--gesloten { background: rgba(16,185,129,0.10);  color: #059669; }
 
   @media (max-width: 640px) {
     .stats-row { grid-template-columns: 1fr; }

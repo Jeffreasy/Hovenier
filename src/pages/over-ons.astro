@@ -30,12 +30,12 @@ const seo = {
         <h2 class="reveal">Hoe het werkt</h2>
         <div class="how-grid">
           {[
-            { icon: '🔍', title: 'Jij stelt je vraag', desc: 'Vul in wat je wilt laten doen, wat je budget is en waar je woont.' },
-            { icon: '🤝', title: 'Wij zoeken voor jou', desc: 'Ons platform matcht jouw aanvraag met beschikbare hoveniers in jouw regio.' },
-            { icon: '📋', title: 'Jij vergelijkt', desc: 'Ontvang meerdere offertes en kies de hovenier die het beste bij jou past.' },
+            { title: 'Jij stelt je vraag', desc: 'Vul in wat je wilt laten doen, wat je budget is en waar je woont.', icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>' },
+            { title: 'Wij zoeken voor jou', desc: 'Ons platform matcht jouw aanvraag met beschikbare hoveniers in jouw regio.', icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' },
+            { title: 'Jij vergelijkt', desc: 'Ontvang meerdere offertes en kies de hovenier die het beste bij jou past.', icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>' },
           ].map((step, i) => (
             <div class={`how-item reveal delay-${(i+1)*100}`}>
-              <div class="how-icon" aria-hidden="true">{step.icon}</div>
+              <div class="how-icon" aria-hidden="true" set:html={step.icon} />
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
             </div>
@@ -66,7 +66,7 @@ const seo = {
     <section class="section-gap">
       <div class="container" style="text-align: center;">
         <h2 class="reveal">Klaar om te starten?</h2>
-        <p class="reveal delay-100" style="color: rgba(237,242,236,0.58); margin-bottom: 1.5rem;">Vraag gratis en vrijblijvend offertes aan bij hoveniers bij jou in de buurt.</p>
+        <p class="reveal delay-100" style="color: var(--color-charcoal-light); margin-bottom: 1.5rem;">Vraag gratis en vrijblijvend offertes aan bij hoveniers bij jou in de buurt.</p>
         <Button href="/offerte" size="lg">Vraag gratis offertes aan</Button>
       </div>
     </section>
@@ -75,16 +75,16 @@ const seo = {
 
 <style>
   .about-hero {
-    background: rgba(255,255,255,0.03);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: var(--color-canvas-alt);
+    border-bottom: 1px solid var(--color-border);
     padding: 4rem 0;
   }
 
-  .about-hero h1 { max-width: 600px; color: #EDF2EC; }
+  .about-hero h1 { max-width: 600px; color: var(--color-charcoal); }
 
   .about-intro {
     font-size: 1.125rem;
-    color: rgba(237,242,236,0.55);
+    color: var(--color-charcoal-light);
     max-width: 540px;
     margin: 1rem 0 0;
   }
@@ -101,29 +101,27 @@ const seo = {
   }
 
   .how-item {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: var(--radius-xl);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-box);
     padding: 1.75rem;
     transition: border-color var(--transition-base), transform var(--transition-base);
   }
 
   .how-item:hover {
-    border-color: rgba(196,169,106,0.22);
+    border-color: var(--color-primary-300);
     transform: translateY(-2px);
   }
 
-  .how-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-  .how-item h3 { margin-bottom: 0.5rem; color: #EDF2EC; }
-  .how-item p { margin: 0; color: rgba(237,242,236,0.52); font-size: 0.9rem; }
+  .how-icon { color: var(--color-primary-500); margin-bottom: 0.75rem; }
+  .how-item h3 { margin-bottom: 0.5rem; color: var(--color-charcoal); }
+  .how-item p { margin: 0; color: var(--color-charcoal-light); font-size: 0.9rem; }
 
-  /* Stats dark section */
+  /* Stats section */
   .about-stats {
-    background: rgba(8,18,10,0.60);
-    border-top: 1px solid rgba(255,255,255,0.06);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: var(--color-canvas-alt);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .stats-row {
@@ -144,11 +142,11 @@ const seo = {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: var(--color-primary-500);
   }
 
   .about-stat span {
     font-size: 0.875rem;
-    color: rgba(237,242,236,0.45);
+    color: var(--color-charcoal-muted);
   }
 </style>

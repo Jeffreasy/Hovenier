@@ -7,65 +7,51 @@ import {
 import { formatRange } from '../lib/utils'
 import { useState } from 'react'
 
-/**
- * SchuttingCalculator — Volledig geïmplementeerd
- *
- * Features:
- * - 4-staps flow met progress bar: lengte → hoogte/buurman → materiaal → resultaat
- * - Materiaal details: levensduur, onderhoud, duurzaamheid
- * - Buurman cost-split berekening (art. 5:49 BW)
- * - WhatsApp-deelfunctie voor buurman
- * - Vergunningswaarschuwing bij hoogte ≥ 2.0m
- * - Fundering + materiaalkosten in breakdown
- */
-
-// Extended material data met extra context voor de gebruiker
 interface MaterialInfo {
   id:            string
-  icon:          string
+  label:         string
   levensduur:    string
   onderhoud:     string
-  duurzaamheid:  string
 }
 
 const MATERIAL_INFO: Record<string, MaterialInfo> = {
-  vuren:       { id: 'vuren',       icon: '🪵', levensduur: '10–20 jaar', onderhoud: 'Jaarlijks behandelen', duurzaamheid: 'Laag' },
-  hardhout:    { id: 'hardhout',    icon: '🌳', levensduur: '20–30 jaar', onderhoud: '2× per 5 jaar oliën', duurzaamheid: 'Middel' },
-  composiet:   { id: 'composiet',   icon: '♻️', levensduur: '25–40 jaar', onderhoud: 'Nauwelijks onderhoud', duurzaamheid: 'Hoog' },
-  beton:       { id: 'beton',       icon: '🏗️', levensduur: '30–50 jaar', onderhoud: 'Praktisch onderhoudsvr.', duurzaamheid: 'Hoog' },
-  metaal:      { id: 'metaal',      icon: '⚙️', levensduur: '40–60 jaar', onderhoud: 'Geen, roest mooi', duurzaamheid: 'Hoog' },
-  toogplanken: { id: 'toogplanken', icon: '🪜', levensduur: '10–15 jaar', onderhoud: 'Jaarlijks behandelen', duurzaamheid: 'Laag' },
+  vuren:       { id: 'vuren',       label: 'Hout',        levensduur: '10-20 jaar', onderhoud: 'Jaarlijks behandelen' },
+  hardhout:    { id: 'hardhout',    label: 'Hardhout',    levensduur: '20-30 jaar', onderhoud: '2x per 5 jaar olien' },
+  composiet:   { id: 'composiet',   label: 'Composiet',   levensduur: '25-40 jaar', onderhoud: 'Nauwelijks onderhoud' },
+  beton:       { id: 'beton',       label: 'Beton',       levensduur: '30-50 jaar', onderhoud: 'Praktisch onderhoudsvr.' },
+  metaal:      { id: 'metaal',      label: 'Cortenstaal', levensduur: '40-60 jaar', onderhoud: 'Geen, roest mooi' },
+  toogplanken: { id: 'toogplanken', label: 'Toogplanken', levensduur: '10-15 jaar', onderhoud: 'Jaarlijks behandelen' },
 }
 
 const HOOGTE_OPTIONS = [
   { value: 1.2, label: '1,2 meter', desc: 'Lage erfscheiding' },
   { value: 1.5, label: '1,5 meter', desc: 'Standaard laag' },
   { value: 1.8, label: '1,8 meter', desc: 'Standaard hoog' },
-  { value: 2.0, label: '2,0 meter', desc: 'Maximum vrij bouw ⚠️' },
+  { value: 2.0, label: '2,0 meter', desc: 'Maximum vrij bouw' },
 ]
 
 const SchuttingCalculator: FC = () => {
-  const [step,          setStep]         = useState<1 | 2 | 3 | 4>(1)
-  const [meters,        setMeters]       = useState(10)
-  const [hoogte,        setHoogte]       = useState(1.8)
-  const [buurman,       setBuurman]      = useState(false)
-  const [material,      setMaterial]     = useState<SchuttingMaterial>(SCHUTTING_MATERIALS[0]!)
+  const [step,     setStep]     = useState<1 | 2 | 3 | 4>(1)
+  const [meters,   setMeters]   = useState(10)
+  const [hoogte,   setHoogte]   = useState(1.8)
+  const [buurman,  setBuurman]  = useState(false)
+  const [material, setMaterial] = useState<SchuttingMaterial>(SCHUTTING_MATERIALS[0]!)
 
-  const result        = calculateSchuttingCosts(meters, material, hoogte)
-  const needsPermit   = hoogte >= 2.0
+  const result      = calculateSchuttingCosts(meters, material, hoogte)
+  const needsPermit = hoogte >= 2.0
   const buurmanAandeel = buurman ? Math.round(result.min / 2) : null
 
   function shareWhatsApp() {
     const splitTekst = buurman
-      ? `\n🤝 Jouw aandeel (50%): ${formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}`
+      ? `\n Jouw aandeel (50%): ${formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}`
       : ''
     const text = encodeURIComponent(
-      `🏡 Schutting kostenberekening via TuinHub.nl\n\n` +
-      `📏 ${meters} meter ${material.label} (${String(hoogte).replace('.', ',')}m hoog)\n` +
-      `💰 Totaal: ${formatRange(result.min, result.max)}${splitTekst}\n\n` +
-      `📋 Specificatie:\n` +
-      result.breakdown.map(b => `  • ${b.label}: ${formatRange(b.min, b.max)}`).join('\n') +
-      `\n\n🔗 Bereken zelf: tuinhub.nl/tools/schutting-kosten-calculator`
+      `Schutting kostenberekening via TuinHub.nl\n\n` +
+      `${meters} meter ${material.label} (${String(hoogte).replace('.', ',')}m hoog)\n` +
+      `Totaal: ${formatRange(result.min, result.max)}${splitTekst}\n\n` +
+      `Specificatie:\n` +
+      result.breakdown.map(b => `  - ${b.label}: ${formatRange(b.min, b.max)}`).join('\n') +
+      `\n\nBereken zelf: tuinhub.nl/tools/schutting-kosten-calculator`
     )
     window.open(`https://wa.me/?text=${text}`, '_blank', 'noopener,noreferrer')
   }
@@ -73,173 +59,219 @@ const SchuttingCalculator: FC = () => {
   const STEPS = ['Lengte', 'Hoogte & buurman', 'Materiaal', 'Resultaat']
 
   return (
-    <div className="calc-wrapper">
+    <div className="font-body text-charcoal">
 
-      {/* ── Progress bar ── */}
-      <div className="calc-progress" role="progressbar" aria-valuenow={step} aria-valuemin={1} aria-valuemax={4}>
+      {/* Progress bar */}
+      <div className="flex items-center mb-8" role="progressbar" aria-valuenow={step} aria-valuemin={1} aria-valuemax={4}>
         {STEPS.map((label, i) => (
-          <div key={label} className={`prog-step ${step > i + 1 ? 'prog-step--done' : ''} ${step === i + 1 ? 'prog-step--active' : ''}`}>
-            <div className="prog-dot">{step > i + 1 ? '✓' : i + 1}</div>
-            <span className="prog-label">{label}</span>
+          <div key={label} className="flex flex-col items-center flex-1 gap-1.5">
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-200
+              ${step > i + 1 ? 'bg-primary-500 text-white' : ''}
+              ${step === i + 1 ? 'bg-primary-500 text-white ring-4 ring-primary-100' : ''}
+              ${step <= i ? 'bg-canvas-muted text-charcoal-muted' : ''}
+            `}>
+              {step > i + 1 ? (
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              ) : i + 1}
+            </div>
+            <span className={`text-[0.7rem] text-center font-medium
+              ${step === i + 1 ? 'text-primary-500' : ''}
+              ${step > i + 1 ? 'text-primary-500' : ''}
+              ${step <= i ? 'text-charcoal-muted' : ''}
+            `}>{label}</span>
           </div>
         ))}
       </div>
 
-      {/* ── Step 1 — Lengte ── */}
+      {/* Step 1 — Lengte */}
       {step === 1 && (
-        <div className="calc-step">
-          <h2 className="step-title">Hoeveel strekkende meter schutting?</h2>
-          <p className="step-hint">Tip: meet de totale grenslengte inclusief eventuele zijkanten.</p>
-          <div className="m2-display">
-            <span className="m2-value">{meters}</span>
-            <span className="m2-unit">meter</span>
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Hoeveel strekkende meter schutting?</h2>
+          <p className="m-0 text-sm text-charcoal-muted">Tip: meet de totale grenslengte inclusief eventuele zijkanten.</p>
+          <div className="flex items-baseline gap-1 justify-center py-6 bg-primary-50 border border-primary-200 rounded-lg">
+            <span className="text-[3.5rem] font-bold font-heading text-primary-500 leading-none">{meters}</span>
+            <span className="text-2xl text-primary-300 font-semibold">meter</span>
           </div>
           <input
             type="range" min={2} max={100} step={1} value={meters}
             onChange={(e) => setMeters(Number(e.target.value))}
-            className="m2-slider"
+            className="w-full accent-primary-500 cursor-pointer h-1.5"
             aria-label="Lengte in strekkende meters"
           />
-          <div className="m2-labels"><span>2 m</span><span>50 m</span><span>100 m</span></div>
-          <button type="button" className="calc-next-btn" onClick={() => setStep(2)} style={{ marginTop: '1.25rem' }}>
-            Volgende →
+          <div className="flex justify-between text-xs text-charcoal-muted"><span>2 m</span><span>50 m</span><span>100 m</span></div>
+          <button type="button" className="mt-3 flex-1 py-3 px-6 bg-primary-500 text-white border-none rounded-md font-heading text-base font-bold cursor-pointer transition-colors duration-150 hover:bg-primary-600" onClick={() => setStep(2)}>
+            Volgende
           </button>
         </div>
       )}
 
-      {/* ── Step 2 — Hoogte + buurman ── */}
+      {/* Step 2 — Hoogte + buurman */}
       {step === 2 && (
-        <div className="calc-step">
-          <h2 className="step-title">Hoogte & kostenverdeling</h2>
+        <div className="flex flex-col gap-5">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Hoogte & kostenverdeling</h2>
 
           <div>
-            <p className="field-label">Gewenste hoogte</p>
-            <div className="hoogte-grid">
+            <p className="m-0 mb-2.5 text-sm font-semibold text-charcoal-light font-heading">Gewenste hoogte</p>
+            <div className="grid grid-cols-2 gap-2">
               {HOOGTE_OPTIONS.map((opt) => (
                 <button
                   key={opt.value}
                   type="button"
-                  className={`hoogte-btn ${hoogte === opt.value ? 'hoogte-btn--selected' : ''}`}
+                  className={`flex flex-col items-start gap-0.5 py-3 px-4 border rounded-md cursor-pointer text-left w-full transition-colors duration-150
+                    ${hoogte === opt.value
+                      ? 'border-primary-500 bg-primary-50'
+                      : 'border-border bg-white hover:border-primary-300 hover:bg-primary-50/50'
+                    }`}
                   onClick={() => setHoogte(opt.value)}
                   aria-pressed={hoogte === opt.value}
                 >
-                  <strong>{opt.label}</strong>
-                  <span>{opt.desc}</span>
+                  <strong className={`font-heading text-sm ${hoogte === opt.value ? 'text-primary-700' : 'text-charcoal'}`}>{opt.label}</strong>
+                  <span className="text-xs text-charcoal-muted">{opt.desc}</span>
                 </button>
               ))}
             </div>
           </div>
 
           {needsPermit && (
-            <div className="permit-warning" role="alert">
-              <span>⚠️</span>
-              <p>Bij 2,0 meter is in veel gemeenten een <strong>omgevingsvergunning</strong> vereist. Controleer dit bij uw gemeente vóór aanvang.</p>
+            <div className="flex gap-3 items-start bg-warning-light border border-warning/25 rounded-md py-3.5 px-4 text-sm text-charcoal-light" role="alert">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-warning shrink-0 mt-0.5">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+              <p className="m-0 leading-snug">Bij 2,0 meter is in veel gemeenten een <strong className="text-charcoal font-semibold">omgevingsvergunning</strong> vereist. Controleer dit bij uw gemeente.</p>
             </div>
           )}
 
-          <div className="buurman-toggle">
-            <label className="toggle-label" htmlFor="sc-buurman">
-              <span className="toggle-icon">🤝</span>
-              <div>
-                <strong>Kosten delen met buurman</strong>
-                <p>Wettelijk recht op kostensplitsing (art. 5:49 BW) bij grensmuur</p>
+          <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
+            <label className="flex items-center gap-3.5 cursor-pointer" htmlFor="sc-buurman">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary-500 shrink-0">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <div className="flex-1">
+                <strong className="block font-heading text-[0.9375rem] text-charcoal mb-0.5">Kosten delen met buurman</strong>
+                <p className="m-0 text-[0.775rem] text-charcoal-muted leading-snug">Wettelijk recht op kostensplitsing (art. 5:49 BW) bij grensmuur</p>
               </div>
-              <div className="toggle-switch-wrap">
-                <input
-                  type="checkbox"
-                  id="sc-buurman"
-                  checked={buurman}
-                  onChange={(e) => setBuurman(e.target.checked)}
-                  className="toggle-input"
-                />
-                <span className={`toggle-switch ${buurman ? 'toggle-switch--on' : ''}`} aria-hidden="true" />
+              <div className="shrink-0">
+                <input type="checkbox" id="sc-buurman" checked={buurman} onChange={(e) => setBuurman(e.target.checked)} className="sr-only peer" />
+                <span className={`block w-[42px] h-6 rounded-full relative transition-colors duration-200 cursor-pointer
+                  ${buurman ? 'bg-primary-500' : 'bg-border-hover'}
+                  after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:w-[18px] after:h-[18px] after:rounded-full after:bg-white after:transition-transform after:duration-200
+                  ${buurman ? 'after:translate-x-[18px]' : ''}
+                `} aria-hidden="true" />
               </div>
             </label>
           </div>
 
-          <div className="calc-nav" style={{ marginTop: '1.25rem' }}>
-            <button className="calc-back-btn" onClick={() => setStep(1)}>← Terug</button>
-            <button className="calc-next-btn" onClick={() => setStep(3)}>Kies materiaal →</button>
+          <div className="flex gap-3 mt-1">
+            <button className="py-3 px-4 bg-transparent border border-border rounded-md text-sm text-charcoal-muted cursor-pointer transition-colors duration-150 hover:border-border-hover hover:text-charcoal" onClick={() => setStep(1)}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Terug
+            </button>
+            <button className="flex-1 py-3 px-6 bg-primary-500 text-white border-none rounded-md font-heading text-base font-bold cursor-pointer transition-colors duration-150 hover:bg-primary-600" onClick={() => setStep(3)}>
+              Kies materiaal
+            </button>
           </div>
         </div>
       )}
 
-      {/* ── Step 3 — Materiaal ── */}
+      {/* Step 3 — Materiaal */}
       {step === 3 && (
-        <div className="calc-step">
-          <h2 className="step-title">Welk materiaal?</h2>
-          <p className="step-hint">Kies het materiaal dat past bij uw budget en wensen.</p>
-          <div className="material-grid">
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-xl font-heading font-bold text-charcoal">Welk materiaal?</h2>
+          <p className="m-0 text-sm text-charcoal-muted">Kies het materiaal dat past bij uw budget en wensen.</p>
+          <div className="flex flex-col gap-2">
             {SCHUTTING_MATERIALS.map((m) => {
               const info = MATERIAL_INFO[m.id]!
               return (
                 <button
                   key={m.id}
                   type="button"
-                  className={`material-btn ${material.id === m.id ? 'material-btn--selected' : ''}`}
+                  className={`flex flex-col gap-2.5 py-4 px-4.5 border rounded-lg cursor-pointer text-left w-full transition-colors duration-150
+                    ${material.id === m.id
+                      ? 'border-primary-500 bg-primary-50'
+                      : 'border-border bg-white hover:border-primary-300 hover:bg-primary-50/50'
+                    }`}
                   onClick={() => setMaterial(m)}
                   aria-pressed={material.id === m.id}
                 >
-                  <div className="material-header">
-                    <span className="material-icon" aria-hidden="true">{info.icon}</span>
+                  <div className="flex items-center gap-3">
                     <div>
-                      <strong className="material-name">{m.label}</strong>
-                      <span className="material-price">€{m.min}–€{m.max} / m</span>
+                      <strong className={`block font-heading text-[0.9375rem] font-bold ${material.id === m.id ? 'text-primary-700' : 'text-charcoal'}`}>{m.label}</strong>
+                      <span className="text-xs text-charcoal-muted">{'\u20AC'}{m.min}-{'\u20AC'}{m.max} / m</span>
                     </div>
                   </div>
-                  <div className="material-meta">
-                    <span>⏱ {info.levensduur}</span>
-                    <span>🔧 {info.onderhoud}</span>
+                  <div className="flex gap-4 text-[0.775rem] text-charcoal-muted pt-1 border-t border-border-light">
+                    <span className="flex items-center gap-1">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      {info.levensduur}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                      {info.onderhoud}
+                    </span>
                   </div>
                 </button>
               )
             })}
           </div>
-          <div className="calc-nav" style={{ marginTop: '1.25rem' }}>
-            <button className="calc-back-btn" onClick={() => setStep(2)}>← Terug</button>
-            <button className="calc-next-btn" onClick={() => setStep(4)}>Bereken kosten →</button>
+          <div className="flex gap-3 mt-1">
+            <button className="py-3 px-4 bg-transparent border border-border rounded-md text-sm text-charcoal-muted cursor-pointer transition-colors duration-150 hover:border-border-hover hover:text-charcoal" onClick={() => setStep(2)}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Terug
+            </button>
+            <button className="flex-1 py-3 px-6 bg-primary-500 text-white border-none rounded-md font-heading text-base font-bold cursor-pointer transition-colors duration-150 hover:bg-primary-600" onClick={() => setStep(4)}>
+              Bereken kosten
+            </button>
           </div>
         </div>
       )}
 
-      {/* ── Step 4 — Resultaat ── */}
+      {/* Step 4 — Resultaat */}
       {step === 4 && (
-        <div className="calc-result">
-          <div className="result-badge">📊 Jouw schutting indicatie</div>
+        <div className="flex flex-col gap-4">
+          <span className="text-xs font-semibold text-primary-500 uppercase tracking-wide">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+            Jouw schutting indicatie
+          </span>
 
-          <div className="result-total">
-            <span className="result-label">{meters} meter {material.label}, hoogte {String(hoogte).replace('.', ',')}m</span>
-            <strong className="result-price">{formatRange(result.min, result.max)}</strong>
+          <div className="flex flex-col gap-1.5 bg-primary-50 border border-primary-200 rounded-lg p-6">
+            <span className="text-sm text-charcoal-muted">{meters} meter {material.label}, hoogte {String(hoogte).replace('.', ',')}m</span>
+            <strong className="font-heading text-[2rem] font-bold text-primary-500">{formatRange(result.min, result.max)}</strong>
             {buurman && (
-              <span className="result-split">
-                🤝 Jouw aandeel (50%): <strong>{formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}</strong>
+              <span className="text-sm text-charcoal-light mt-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Jouw aandeel (50%): <strong className="text-primary-600">{formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}</strong>
               </span>
             )}
           </div>
 
           {needsPermit && (
-            <div className="permit-warning" role="note">
-              <span>⚠️</span>
-              <p>Vergeet de <strong>omgevingsvergunning</strong> niet aan te vragen voor schuttingen van 2m+.</p>
+            <div className="flex gap-3 items-start bg-warning-light border border-warning/25 rounded-md py-3.5 px-4 text-sm text-charcoal-light" role="note">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-warning shrink-0 mt-0.5">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+              <p className="m-0 leading-snug">Vergeet de <strong className="text-charcoal font-semibold">omgevingsvergunning</strong> niet aan te vragen voor schuttingen van 2m+.</p>
             </div>
           )}
 
-          <div className="result-breakdown">
+          <div className="flex flex-col border border-border rounded-md overflow-hidden">
             {result.breakdown.map((item) => (
-              <div key={item.label} className="breakdown-row">
+              <div key={item.label} className="flex justify-between py-3 px-4 text-sm border-b border-border last:border-b-0 text-charcoal-light">
                 <span>{item.label}</span>
-                <span className="breakdown-amount">{formatRange(item.min, item.max)}</span>
+                <span className="font-semibold text-charcoal">{formatRange(item.min, item.max)}</span>
               </div>
             ))}
             {buurman && (
-              <div className="breakdown-row breakdown-row--split">
-                <span>🤝 Buurman aandeel (50%)</span>
-                <span className="breakdown-amount">−{formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}</span>
+              <div className="flex justify-between py-3 px-4 text-sm border-b border-border text-primary-500">
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  Buurman aandeel (50%)
+                </span>
+                <span className="font-semibold">-{formatRange(Math.round(result.min / 2), Math.round(result.max / 2))}</span>
               </div>
             )}
-            <div className="breakdown-row breakdown-row--total">
-              <strong>{buurman ? 'Jouw kosten (50%)' : 'Totaal indicatie'}</strong>
-              <strong className="breakdown-amount">
+            <div className="flex justify-between py-3 px-4 text-sm bg-canvas-alt">
+              <strong className="text-charcoal">{buurman ? 'Jouw kosten (50%)' : 'Totaal indicatie'}</strong>
+              <strong className="text-primary-600">
                 {buurman
                   ? formatRange(Math.round(result.min / 2), Math.round(result.max / 2))
                   : formatRange(result.min, result.max)
@@ -248,17 +280,18 @@ const SchuttingCalculator: FC = () => {
             </div>
           </div>
 
-          <p className="result-disclaimer">
+          <p className="text-[0.775rem] text-charcoal-muted m-0 leading-relaxed px-1">
             Inclusief plaatsing en fundering. Excl. sloopreis oud scherm, vergunningskosten en grondwerkzaamheden.
             Tarieven 2025, excl. btw.
           </p>
 
           {/* WhatsApp delen */}
-          <div className="whatsapp-section">
-            <p className="whatsapp-label">
-              {buurman ? '📤 Stuur de berekening naar uw buurman' : '📤 Deel de berekening via WhatsApp'}
+          <div className="bg-[#f0fdf4] border border-[#bbf7d0] rounded-lg p-4.5 flex flex-col gap-2.5">
+            <p className="m-0 text-sm font-semibold text-charcoal font-heading">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1 text-primary-500"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+              {buurman ? 'Stuur de berekening naar uw buurman' : 'Deel de berekening via WhatsApp'}
             </p>
-            <button type="button" className="whatsapp-btn" onClick={shareWhatsApp} aria-label="Deel via WhatsApp">
+            <button type="button" className="flex items-center justify-center gap-2.5 py-3 px-5 bg-[#25D366] text-white border-none rounded-md font-heading text-[0.9375rem] font-bold cursor-pointer transition-colors duration-150 hover:bg-[#1da851]" onClick={shareWhatsApp} aria-label="Deel via WhatsApp">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
@@ -266,157 +299,17 @@ const SchuttingCalculator: FC = () => {
             </button>
           </div>
 
-          <a href="/offerte" className="result-cta-btn">
-            📬 Vraag gratis offertes aan
+          <a href="/offerte" className="block w-full py-3.5 px-6 bg-primary-500 text-white text-center no-underline rounded-md font-heading text-base font-bold transition-colors duration-150 hover:bg-primary-600">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Vraag gratis offertes aan
           </a>
-          <button className="calc-back-btn" onClick={() => setStep(1)} style={{ marginTop: '0.75rem', width: '100%' }}>
+          <button className="w-full py-3 px-4 bg-transparent border border-border rounded-md text-sm text-charcoal-muted cursor-pointer transition-colors duration-150 hover:border-border-hover hover:text-charcoal" onClick={() => setStep(1)}>
             Opnieuw berekenen
           </button>
         </div>
       )}
-
-      <style>{schuttingStyles}</style>
     </div>
   )
 }
-
-// ─── Shared styles (exported for SubsidieCheck + BouwdepotCalculator) ─────────
-
-export const sharedCalcStyles = `
-  .calc-placeholder { font-family: 'Inter', sans-serif; color: #EDF2EC; }
-  .calc-step { display: flex; flex-direction: column; gap: 1rem; }
-  .step-title { margin: 0; font-size: 1.25rem; font-family: 'Plus Jakarta Sans', sans-serif; color: #EDF2EC; }
-  .step-hint { margin: 0; font-size: 0.85rem; color: rgba(237,242,236,0.42); }
-  .m2-display { display: flex; align-items: baseline; gap: 0.25rem; justify-content: center; padding: 1.5rem; background: rgba(110,158,101,0.10); border: 1px solid rgba(110,158,101,0.20); border-radius: 12px; }
-  .m2-value { font-size: 3.5rem; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif; color: #C4A96A; line-height: 1; }
-  .m2-unit { font-size: 1.5rem; color: rgba(196,169,106,0.70); font-weight: 600; }
-  .m2-slider { width: 100%; accent-color: #C4A96A; cursor: pointer; height: 6px; }
-  .m2-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(237,242,236,0.30); }
-  .quality-grid { display: flex; flex-direction: column; gap: 0.5rem; }
-  .quality-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 0.25rem; padding: 0.875rem 1.25rem; border: 1px solid rgba(255,255,255,0.10); border-radius: 8px; background: rgba(255,255,255,0.05); cursor: pointer; text-align: left; transition: border-color 0.15s ease-out, background-color 0.15s ease-out; width: 100%; }
-  .quality-btn strong { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9375rem; color: rgba(237,242,236,0.80); }
-  .quality-btn span { font-size: 0.8rem; color: rgba(237,242,236,0.42); }
-  .quality-btn:hover { border-color: rgba(196,169,106,0.35); background: rgba(255,255,255,0.08); }
-  .quality-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.12); }
-  .quality-btn--selected strong { color: #EDF2EC; }
-  .calc-nav { display: flex; gap: 0.75rem; }
-  .calc-next-btn { flex: 1; padding: 0.75rem 1.5rem; background: #C4A96A; color: #1C1400; border: none; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.15s ease-out; box-shadow: 0 2px 12px rgba(196,169,106,0.25); }
-  .calc-next-btn:hover { background: #A88B4A; box-shadow: 0 4px 20px rgba(196,169,106,0.35); transform: translateY(-1px); }
-  .calc-back-btn { padding: 0.75rem 1rem; background: transparent; border: 1px solid rgba(255,255,255,0.10); border-radius: 8px; color: rgba(237,242,236,0.45); font-size: 0.875rem; cursor: pointer; transition: border-color 0.15s ease-out, color 0.15s ease-out; font-family: 'Inter', sans-serif; }
-  .calc-back-btn:hover { border-color: rgba(196,169,106,0.35); color: rgba(237,242,236,0.80); }
-  .calc-result { display: flex; flex-direction: column; gap: 1rem; }
-  .result-badge { font-size: 0.8rem; font-weight: 600; color: #C4A96A; text-transform: uppercase; letter-spacing: 0.05em; }
-  .result-total { display: flex; flex-direction: column; gap: 0.375rem; background: rgba(110,158,101,0.10); border: 1px solid rgba(110,158,101,0.20); border-radius: 12px; padding: 1.5rem; }
-  .result-label { font-size: 0.875rem; color: rgba(237,242,236,0.45); }
-  .result-price { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 700; color: #C4A96A; }
-  .result-breakdown { display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; overflow: hidden; }
-  .breakdown-row { display: flex; justify-content: space-between; padding: 0.75rem 1rem; font-size: 0.875rem; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(237,242,236,0.65); }
-  .breakdown-row:last-child { border-bottom: none; }
-  .breakdown-row--total { background: rgba(255,255,255,0.04); }
-  .breakdown-row--total strong { color: #EDF2EC; }
-  .breakdown-amount { font-weight: 600; color: #C4A96A; }
-  .result-cta-btn { width: 100%; padding: 0.875rem 1.5rem; background: #C4A96A; color: #1C1400; text-align: center; text-decoration: none; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 700; transition: all 0.15s; box-shadow: 0 2px 12px rgba(196,169,106,0.25); display: block; }
-  .result-cta-btn:hover { background: #A88B4A; text-decoration: none; box-shadow: 0 4px 20px rgba(196,169,106,0.35); }
-`
-
-// ─── Component-specific styles ─────────────────────────────────────────────
-
-const schuttingStyles = `
-  .calc-wrapper { font-family: 'Inter', sans-serif; color: #EDF2EC; }
-  .calc-step { display: flex; flex-direction: column; gap: 1.125rem; }
-  .step-title { margin: 0; font-size: 1.25rem; font-family: 'Plus Jakarta Sans', sans-serif; color: #EDF2EC; }
-  .step-hint { margin: 0; font-size: 0.85rem; color: rgba(237,242,236,0.40); }
-  .field-label { margin: 0 0 0.625rem; font-size: 0.875rem; font-weight: 600; color: rgba(237,242,236,0.65); font-family: 'Plus Jakarta Sans', sans-serif; }
-
-  .calc-progress {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    margin-bottom: 2rem;
-    overflow: hidden;
-  }
-  .prog-step { display: flex; flex-direction: column; align-items: center; gap: 0.375rem; flex: 1; }
-  .prog-dot { width: 2rem; height: 2rem; border-radius: 50%; background: rgba(255,255,255,0.10); color: rgba(237,242,236,0.40); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; transition: all 0.2s; }
-  .prog-step--done .prog-dot  { background: #6E9E65; color: #EDF2EC; }
-  .prog-step--active .prog-dot { background: #C4A96A; color: #1C1400; box-shadow: 0 0 0 4px rgba(196,169,106,0.20); }
-  .prog-label { font-size: 0.7rem; color: rgba(237,242,236,0.35); text-align: center; font-weight: 500; }
-  .prog-step--active .prog-label { color: #C4A96A; }
-  .prog-step--done .prog-label  { color: #6E9E65; }
-
-  .m2-display { display: flex; align-items: baseline; gap: 0.25rem; justify-content: center; padding: 1.5rem; background: rgba(110,158,101,0.10); border: 1px solid rgba(110,158,101,0.20); border-radius: 12px; }
-  .m2-value { font-size: 3.5rem; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif; color: #C4A96A; line-height: 1; }
-  .m2-unit { font-size: 1.5rem; color: rgba(196,169,106,0.70); font-weight: 600; }
-  .m2-slider { width: 100%; accent-color: #C4A96A; cursor: pointer; height: 6px; }
-  .m2-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(237,242,236,0.30); }
-
-  .hoogte-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-  .hoogte-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 0.125rem; padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.10); border-radius: 8px; background: rgba(255,255,255,0.04); cursor: pointer; text-align: left; transition: all 0.15s; width: 100%; }
-  .hoogte-btn strong { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: rgba(237,242,236,0.80); }
-  .hoogte-btn span { font-size: 0.75rem; color: rgba(237,242,236,0.38); }
-  .hoogte-btn:hover { border-color: rgba(196,169,106,0.30); background: rgba(255,255,255,0.07); }
-  .hoogte-btn--selected { border-color: rgba(196,169,106,0.55); background: rgba(196,169,106,0.10); }
-  .hoogte-btn--selected strong { color: #C4A96A; }
-
-  .buurman-toggle { background: rgba(110,158,101,0.07); border: 1px solid rgba(110,158,101,0.18); border-radius: 12px; padding: 1rem; }
-  .toggle-label { display: flex; align-items: center; gap: 0.875rem; cursor: pointer; }
-  .toggle-icon { font-size: 1.5rem; flex-shrink: 0; }
-  .toggle-label > div { flex: 1; }
-  .toggle-label strong { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9375rem; color: #EDF2EC; margin-bottom: 0.125rem; }
-  .toggle-label p { margin: 0; font-size: 0.775rem; color: rgba(237,242,236,0.42); line-height: 1.5; }
-  .toggle-switch-wrap { flex-shrink: 0; }
-  .toggle-input { position: absolute; opacity: 0; width: 0; height: 0; }
-  .toggle-switch { display: block; width: 42px; height: 24px; border-radius: 99px; background: rgba(255,255,255,0.15); position: relative; transition: background 0.2s; cursor: pointer; }
-  .toggle-switch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: white; transition: transform 0.2s; }
-  .toggle-switch--on { background: #6E9E65; }
-  .toggle-switch--on::after { transform: translateX(18px); }
-
-  .material-grid { display: flex; flex-direction: column; gap: 0.5rem; }
-  .material-btn { display: flex; flex-direction: column; gap: 0.625rem; padding: 1rem 1.125rem; border: 1px solid rgba(255,255,255,0.10); border-radius: 10px; background: rgba(255,255,255,0.04); cursor: pointer; text-align: left; transition: all 0.15s; width: 100%; }
-  .material-btn:hover { border-color: rgba(196,169,106,0.30); background: rgba(255,255,255,0.07); }
-  .material-btn--selected { border-color: rgba(110,158,101,0.50); background: rgba(110,158,101,0.10); }
-  .material-header { display: flex; align-items: center; gap: 0.75rem; }
-  .material-icon { font-size: 1.375rem; flex-shrink: 0; }
-  .material-name { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9375rem; font-weight: 700; color: rgba(237,242,236,0.85); }
-  .material-btn--selected .material-name { color: #EDF2EC; }
-  .material-price { font-size: 0.8rem; color: rgba(237,242,236,0.42); }
-  .material-meta { display: flex; gap: 1rem; font-size: 0.775rem; color: rgba(237,242,236,0.38); padding-top: 0.25rem; border-top: 1px solid rgba(255,255,255,0.06); }
-
-  .calc-nav { display: flex; gap: 0.75rem; }
-  .calc-next-btn { flex: 1; padding: 0.75rem 1.5rem; background: #C4A96A; color: #1C1400; border: none; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.15s ease-out; box-shadow: 0 2px 12px rgba(196,169,106,0.25); }
-  .calc-next-btn:hover { background: #A88B4A; box-shadow: 0 4px 20px rgba(196,169,106,0.35); transform: translateY(-1px); }
-  .calc-back-btn { padding: 0.75rem 1rem; background: transparent; border: 1px solid rgba(255,255,255,0.10); border-radius: 8px; color: rgba(237,242,236,0.45); font-size: 0.875rem; cursor: pointer; transition: border-color 0.15s ease-out, color 0.15s ease-out; font-family: 'Inter', sans-serif; }
-  .calc-back-btn:hover { border-color: rgba(196,169,106,0.35); color: rgba(237,242,236,0.80); }
-
-  .calc-result { display: flex; flex-direction: column; gap: 1rem; }
-  .result-badge { font-size: 0.8rem; font-weight: 600; color: #C4A96A; text-transform: uppercase; letter-spacing: 0.05em; }
-  .result-total { display: flex; flex-direction: column; gap: 0.375rem; background: rgba(110,158,101,0.10); border: 1px solid rgba(110,158,101,0.20); border-radius: 12px; padding: 1.5rem; }
-  .result-label { font-size: 0.875rem; color: rgba(237,242,236,0.45); }
-  .result-price { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 700; color: #C4A96A; }
-  .result-split { font-size: 0.875rem; color: rgba(237,242,236,0.65); margin-top: 0.25rem; }
-  .result-split strong { color: #86C97D; }
-
-  .result-breakdown { display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; overflow: hidden; }
-  .breakdown-row { display: flex; justify-content: space-between; padding: 0.75rem 1rem; font-size: 0.875rem; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(237,242,236,0.65); }
-  .breakdown-row:last-child { border-bottom: none; }
-  .breakdown-row--split { color: rgba(134,201,125,0.70); }
-  .breakdown-row--total { background: rgba(255,255,255,0.04); }
-  .breakdown-row--total strong { color: #EDF2EC; }
-  .breakdown-amount { font-weight: 600; color: #C4A96A; }
-
-  .result-disclaimer { font-size: 0.775rem; color: rgba(237,242,236,0.30); margin: 0; line-height: 1.6; padding: 0 0.25rem; }
-
-  .whatsapp-section { background: rgba(37,211,102,0.06); border: 1px solid rgba(37,211,102,0.20); border-radius: 12px; padding: 1.125rem; display: flex; flex-direction: column; gap: 0.625rem; }
-  .whatsapp-label { margin: 0; font-size: 0.875rem; font-weight: 600; color: rgba(237,242,236,0.70); font-family: 'Plus Jakarta Sans', sans-serif; }
-  .whatsapp-btn { display: flex; align-items: center; justify-content: center; gap: 0.625rem; padding: 0.75rem 1.25rem; background: #25D366; color: #fff; border: none; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9375rem; font-weight: 700; cursor: pointer; transition: all 0.15s; box-shadow: 0 2px 12px rgba(37,211,102,0.20); }
-  .whatsapp-btn:hover { background: #1da851; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(37,211,102,0.30); }
-
-  .permit-warning { display: flex; gap: 0.75rem; align-items: flex-start; background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.875rem 1rem; font-size: 0.875rem; color: rgba(237,242,236,0.70); }
-  .permit-warning span { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
-  .permit-warning p { margin: 0; line-height: 1.55; }
-  .permit-warning strong { color: #FCD34D; }
-
-  .result-cta-btn { width: 100%; padding: 0.875rem 1.5rem; background: #C4A96A; color: #1C1400; text-align: center; text-decoration: none; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 700; transition: all 0.15s; box-shadow: 0 2px 12px rgba(196,169,106,0.25); display: block; }
-  .result-cta-btn:hover { background: #A88B4A; text-decoration: none; box-shadow: 0 4px 20px rgba(196,169,106,0.35); }
-`
 
 export default SchuttingCalculator

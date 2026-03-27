@@ -13,7 +13,11 @@ const { title, description, href, cta, variant = 'inline' } = Astro.props
 <div class={`cta-block cta-block--${variant}`}>
   <div class="cta-block__content">
     <div class="cta-block__icon" aria-hidden="true">
-      {variant === 'banner' ? '🌿' : '📊'}
+      {variant === 'banner' ? (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      ) : (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+      )}
     </div>
     <div>
       <strong class="cta-block__title">{title}</strong>
@@ -35,9 +39,9 @@ const { title, description, href, cta, variant = 'inline' } = Astro.props
   }
 
   .cta-block--inline {
-    background: rgba(110,158,101,0.10);
-    border: 1px solid rgba(110,158,101,0.25);
-    border-left: 3px solid var(--color-primary);
+    background: var(--color-primary-50);
+    border: 1px solid var(--color-primary-200);
+    border-left: 3px solid var(--color-primary-500);
     padding: 1.25rem 1.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -47,22 +51,21 @@ const { title, description, href, cta, variant = 'inline' } = Astro.props
   }
 
   .cta-block--banner {
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-top: 2px solid var(--color-secondary);
+    background: var(--color-charcoal);
+    border: 1px solid var(--color-charcoal);
     padding: 2rem 2.5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.30);
   }
 
   .cta-block__content { display: flex; align-items: center; gap: 1rem; }
-  .cta-block__icon { font-size: 1.75rem; flex-shrink: 0; }
+  .cta-block__icon { flex-shrink: 0; }
+
+  .cta-block--inline .cta-block__icon { color: var(--color-primary-500); }
+  .cta-block--banner .cta-block__icon { color: rgba(255,255,255,0.65); }
 
   .cta-block__title {
     display: block;
@@ -70,14 +73,18 @@ const { title, description, href, cta, variant = 'inline' } = Astro.props
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
-    color: var(--color-text-primary);
   }
+
+  .cta-block--inline .cta-block__title { color: var(--color-charcoal); }
+  .cta-block--banner .cta-block__title { color: var(--color-white); }
 
   .cta-block__description {
     margin: 0;
     font-size: 0.875rem;
-    color: var(--color-text-secondary);
   }
+
+  .cta-block--inline .cta-block__description { color: var(--color-charcoal-light); }
+  .cta-block--banner .cta-block__description { color: rgba(255,255,255,0.65); }
 
   .cta-block__button {
     display: inline-flex;
@@ -90,19 +97,17 @@ const { title, description, href, cta, variant = 'inline' } = Astro.props
     font-size: 0.9375rem;
     text-decoration: none;
     white-space: nowrap;
-    background: var(--color-secondary);
-    color: #1C1400;
+    background: var(--color-primary-500);
+    color: var(--color-white);
     border: none;
-    box-shadow: 0 2px 12px rgba(196,169,106,0.20);
     transition: all var(--transition-base);
     flex-shrink: 0;
   }
 
   .cta-block__button:hover {
-    background: var(--color-secondary-dark);
-    box-shadow: 0 4px 20px rgba(196,169,106,0.35);
+    background: var(--color-primary-600);
     transform: translateY(-1px);
     text-decoration: none;
-    color: #1C1400;
+    color: var(--color-white);
   }
 </style>

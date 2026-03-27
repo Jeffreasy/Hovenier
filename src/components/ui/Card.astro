@@ -31,23 +31,20 @@ const classes = ['card', hover ? 'card-hover' : '', paddingMap[padding], classNa
 
 <style>
   :global(.card) {
-    background: rgba(255,255,255,0.07);
-    backdrop-filter: blur(16px) saturate(140%);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-box);
     overflow: hidden;
     color: inherit;
   }
 
   :global(.card-hover) {
-    transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
   }
 
   :global(.card-hover:hover) {
-    border-color: rgba(255,255,255,0.20);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.35), 0 0 24px rgba(110,158,101,0.12);
-    transform: translateY(-3px);
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-md);
   }
 
   :global(.card-p-sm) { padding: 1rem; }
