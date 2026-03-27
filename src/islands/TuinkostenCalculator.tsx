@@ -66,7 +66,8 @@ const TuinkostenCalculator: FC = () => {
           <input
             type="range" min={10} max={500} step={5} value={m2}
             onChange={(e) => setM2(Number(e.target.value))}
-            className="w-full accent-primary-500 cursor-pointer h-1.5"
+            className="accent-primary-500 cursor-pointer h-1.5"
+            style={{ width: '100%', boxSizing: 'border-box' }}
             aria-label="Tuingrootte in m²"
           />
           <div className="flex justify-between text-xs text-charcoal-muted"><span>10 m²</span><span>500 m²</span></div>
