@@ -33,8 +33,8 @@ const Zoekbalk: FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="font-body text-charcoal" aria-label="Hovenier zoeken">
-      <div className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} noValidate className="font-body text-charcoal w-full max-w-full overflow-hidden" aria-label="Hovenier zoeken">
+      <div className="flex flex-col gap-4 w-full">
         {/* Postcode */}
         <div className="flex flex-col gap-1.5">
           <label htmlFor="zb-postcode" className="font-heading text-[0.8rem] font-semibold text-charcoal-light tracking-wide">
