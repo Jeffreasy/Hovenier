@@ -87,7 +87,8 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
         <p className="text-charcoal-muted m-0 max-w-[400px]">Vraag een algemene offerte aan. We koppelen je aan hoveniers in jouw regio.</p>
         <a
           href={`/offerte?postcode=${encodeURIComponent(postcode)}&dienst=${encodeURIComponent(dienst)}`}
-          className="inline-flex items-center gap-1 py-3 px-6 bg-primary-500 text-white rounded-md font-heading font-bold no-underline transition-colors duration-200 hover:bg-primary-600"
+          className="inline-flex items-center gap-1 py-3 px-6 bg-primary-500 rounded-md font-heading font-bold no-underline transition-colors duration-200 hover:bg-primary-600"
+          style={{ color: '#ffffff' }}
         >
           Vraag gratis offerte aan
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -160,7 +161,7 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
             )}
 
             <div className="flex gap-2 mt-1 flex-wrap">
-              <a href={buildOffertUrl(b)} className="inline-flex items-center py-1.5 px-3.5 rounded-md text-[0.8125rem] font-semibold no-underline font-heading bg-primary-500 text-white transition-colors duration-200 hover:bg-primary-600">
+              <a href={buildOffertUrl(b)} className="inline-flex items-center py-1.5 px-3.5 rounded-md text-[0.8125rem] font-semibold no-underline font-heading bg-primary-500 transition-colors duration-200 hover:bg-primary-600" style={{ color: '#ffffff' }}>
                 Offerte aanvragen
               </a>
               <a href={`/hoveniers/${b.slug}`} className="inline-flex items-center py-1.5 px-3.5 rounded-md text-[0.8125rem] font-semibold no-underline font-heading bg-transparent border border-border text-charcoal-light transition-colors duration-200 hover:border-border-hover hover:bg-canvas-alt hover:text-charcoal">
@@ -189,7 +190,8 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
         <p className="m-0 text-[0.9375rem] text-charcoal-light flex-1 min-w-[180px]">Niet gevonden wat je zoekt?</p>
         <a
           href={`/offerte?postcode=${encodeURIComponent(postcode)}&dienst=${encodeURIComponent(dienst)}&stad=${encodeURIComponent(stadSlug)}`}
-          className="inline-flex items-center gap-1 py-3 px-6 bg-primary-500 text-white rounded-md font-heading font-bold no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-600"
+          className="inline-flex items-center gap-1 py-3 px-6 bg-primary-500 rounded-md font-heading font-bold no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-600"
+          style={{ color: '#ffffff' }}
         >
           Ontvang 3 gratis offertes
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
