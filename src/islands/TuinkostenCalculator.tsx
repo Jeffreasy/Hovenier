@@ -32,7 +32,7 @@ const TuinkostenCalculator: FC = () => {
   const STEPS = ['Tuingrootte', 'Werkzaamheden', 'Kwaliteit']
 
   return (
-    <div className="font-body text-charcoal">
+    <div className="font-body text-charcoal" style={{ width: '100%', maxWidth: '100%', minWidth: 0, boxSizing: 'border-box', overflow: 'hidden' }}>
       {/* Progress */}
       <div className="flex items-center mb-8" role="progressbar" aria-valuenow={step} aria-valuemin={1} aria-valuemax={4}>
         {STEPS.map((label, i) => (
@@ -124,11 +124,12 @@ const TuinkostenCalculator: FC = () => {
               <button
                 key={k}
                 type="button"
-                className={`flex flex-col items-start gap-1 py-4 px-5 border rounded-lg cursor-pointer text-left w-full transition-colors duration-150
+                className={`flex flex-col items-start gap-1 py-4 px-5 border rounded-lg cursor-pointer text-left transition-colors duration-150
                   ${quality === k
                     ? 'border-primary-500 bg-primary-50'
                     : 'border-border bg-white hover:border-primary-300 hover:bg-primary-50/50'
                   }`}
+                style={{ width: '100%', boxSizing: 'border-box' }}
                 onClick={() => setQuality(k)}
                 aria-pressed={quality === k}
               >
@@ -175,12 +176,12 @@ const TuinkostenCalculator: FC = () => {
             Dit is een vrijblijvende indicatie op basis van gemiddelde markttarieven voor {m2} m² in kwaliteitsniveau "{QUALITY_OPTIONS[quality].label}".
           </p>
 
-          <a href="/offerte" className="block w-full py-3.5 px-6 bg-primary-500 text-white text-center no-underline rounded-md font-heading text-base font-bold transition-colors duration-150 hover:bg-primary-600">
+          <a href="/offerte" className="block py-3.5 px-6 bg-primary-500 text-white text-center no-underline rounded-md font-heading text-base font-bold transition-colors duration-150 hover:bg-primary-600" style={{ width: '100%', boxSizing: 'border-box' }}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             Vraag gratis offertes aan op basis van deze berekening
           </a>
 
-          <button className="w-full py-3 px-4 bg-transparent border border-border rounded-md text-sm text-charcoal-muted cursor-pointer transition-colors duration-150 hover:border-border-hover hover:text-charcoal" onClick={() => setStep(1)}>
+          <button className="py-3 px-4 bg-transparent border border-border rounded-md text-sm text-charcoal-muted cursor-pointer transition-colors duration-150 hover:border-border-hover hover:text-charcoal" style={{ width: '100%', boxSizing: 'border-box' }} onClick={() => setStep(1)}>
             Opnieuw berekenen
           </button>
         </div>
