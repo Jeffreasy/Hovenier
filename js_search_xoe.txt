@@ -1,0 +1,10 @@
+ProblemAttachments:!0,supportsSymbolAttachments:!0,supportsTerminalAttachments:!0},l6n=g(6380,null),xoe=class extends ne{static{a6n=this}static{this.CONTRIBS=[]}get domNode(){return this.G}get visible(){
+llect(e,si.None)}delegateScrollFromMouseWheelEvent(e){this.H.delegateScrollFromMouseWheelEvent(e)}};xoe=a6n=dqu([mE(4,yr),mE(5,dt),mE(6,Be),mE(7,ot),mE(8,ve),mE(9,ic),mE(10,$h),mE(11,fa),mE(12,Gn),mE(13,
+9,KE),mE(20,_f),mE(21,XB),mE(22,aoa),mE(23,cv),mE(24,yI),mE(25,pbt),mE(26,iti),mE(27,tn),mE(28,Za)],xoe);var c6n=function(t,e,i,n){var s=arguments.length,r=s<3?e:n===null?n=Object.getOwnPropertyDescripto
+t));const b=n.createChild(new Rc([ot,this.scopedContextKeyService]),this.b);this.f=b.createInstance(xoe,e,{isInlineChat:!0},{autoScroll:!0,defaultElementHeight:32,renderStyle:"minimal",renderInputOnTop:!
+s.scopedContextKeyService])));Ti.inChatEditor.bindTo(this.b).set(!0),this.a=this.D(i.createInstance(xoe,Or.Chat,void 0,{autoScroll:n=>n!==ia.Ask,renderFollowups:!0,supportsFileReferences:!0,clear:()=>thi
+this.Kc(i);const r=this.D(this.Fb.createChild(new Rc([ot,this.zb])));this.f=this.D(r.createInstance(xoe,Or.Chat,{viewId:this.id},{autoScroll:a=>a!==ia.Ask,renderFollowups:!0,supportsFileReferences:!0,cle
+s.D(this.j.createChild(new Rc([ot,this.D(this.m.createScoped(e))])));this.b=this.D(i.createInstance(xoe,Or.Chat,{isQuickChat:!0},{autoScroll:!0,renderInputOnTop:!0,renderStyle:"compact",menus:{inputSideT
+(this.a.inputEditor.setValue(i),this.a.inputEditor.setPosition({lineNumber:1,column:i.length+1}))}};xoe.CONTRIBS.push(b4n,Lld);var v4n=class extends ne{constructor(e,i){super(),this.a=e,this.b=i,this.id=
+Input()}}),r=this.a.inputEditor.getValue(),o=this.a.lastSelectedAgent}))}};v4n=tda([LGe(1,ve)],v4n),xoe.CONTRIBS.push(v4n);var Bld=function(t,e,i,n){var s=arguments.length,r=s<3?e:n===null?n=Object.getOw
+u,1),di(KE,TOn,1),di(EQ,zFu,1),di(XB,A5n,1),di(vWe,S5n,1),di(iti,M3n,1),di(pwn,mwn,1),di(aoa,NPn,1),xoe.CONTRIBS.push(Hge);var ecd=function(t,e,i,n){var s=arguments.length,r=s<3?e:n===null?n=Object.getOw

@@ -1,0 +1,19 @@
+eServerClient.getInstance().client,t=(new Date).toISOString().replace(/[.:-]/g,"_"),n=u.join(g,t);c.mkdirSync(n,{recursive:!0});const i=u.join(n,"language-server.trace"),o=u.join(n,"goroutine.pprof"),r=u.j
+NG TRACE");const b=a.JetskiTrace.getTraceJson(),R=async(e,t)=>{const i=u.join(n,e);await c.promises.mkdir(n,{recursive:!0}),await c.promises.writeFile(i,t)},S=R("ext-host.json",b??""),A=R("workbench.json",
+tSettingsJsonPathForApplication)((0,g.getCurrentAppType)()),o=u.default.dirname(i);await l.promises.mkdir(o,{recursive:!0});try{const e=n.replace(/,\s*([}\]])/g,"$1"),i=JSON.parse(e),o={};Object.keys(i).fo
+ybindingsJsonPathForApplication)((0,g.getCurrentAppType)()),i=u.default.dirname(n);await l.promises.mkdir(i,{recursive:!0}),await l.promises.writeFile(n,t)}(e)}catch(e){(0,d.sentryCaptureException)(e),cons
+ction(e){const t=(0,g.getSnippetsPathForApplication)((0,g.getCurrentAppType)());if(await l.promises.mkdir(t,{recursive:!0}),e===g.AppType.Cider){let e={};try{e=await c.commands.executeCommand("ciderutils.g
+n,i]of Object.entries(e)){const e=u.default.dirname(n),o=u.default.basename(n);try{await l.promises.mkdir(u.default.join(t,e),{recursive:!0}),await l.promises.writeFile(u.default.join(t,e,o),i)}catch(e){h.
+dule?e:{default:e}}e.exports=t.default},17989:(e,t,n)=>{"use strict";const i=n(76982),{appendFile:o,mkdir:r,readFile:s,readdir:a,rm:c,writeFile:l}=n(91943),{Minipass:u}=n(51270),d=n(16928),h=n(50289),g=n(5
+.size),e()},t=>e(t))})}}async function f(e,t){const n=h(u.join(e,"tmp"),t.tmpPrefix);return await r.mkdir(u.dirname(n),{recursive:!0}),{target:n,moved:!1}}async function E(e,t,n){const i=o(t,n),a=u.dirname
+(i);return m.has(i)||m.set(i,r.mkdir(a,{recursive:!0}).then(async()=>(await s(e.target,i,{overwrite:!1}),e.moved=!0,e.moved)).catch(e=>{
+24),{constants:{errno:{EEXIST:g,EISDIR:m,EINVAL:p,ENOTDIR:f}}}=n(70857),{chmod:E,copyFile:b,lstat:R,mkdir:S,readdir:A,readlink:V,stat:I,symlink:C,unlink:_,utimes:v}=n(91943),{dirname:y,isAbsolute:N,join:Z,
+t)}catch(e){return void a.window.showErrorMessage(`Failed to backup antigravity directory: ${e}`)}c.mkdirSync(e,{recursive:!0}),c.writeFileSync(l.join(e,"DEMO_MODE.txt"),`Demo mode enabled at ${(new Date).
+.exports.rm,e.exports.rm.content=r.content,e.exports.clearMemoized=a,e.exports.tmp={},e.exports.tmp.mkdir=c.mkdir,e.exports.tmp.withTmp=c.withTmp,e.exports.verify=s,e.exports.verify.lastRun=s.lastRun},2884
+i.default)("v3",48,o.default);t.default=s},33300:(e,t,n)=>{const{join:i,sep:o}=n(16928),r=n(30182),{mkdir:s,mkdtemp:a,rm:c}=n(91943);e.exports=async(e,t,n)=>{const l=r(n,{copy:["tmpPrefix"]});await s(e,{re
+0589)})},35248:(e,t,n)=>{"use strict";const{withTempDir:i}=n(54191),o=n(91943),r=n(16928);e.exports.mkdir=async function(e,t={}){const{tmpPrefix:n}=t,i=r.join(e,"tmp");await o.mkdir(i,{recursive:!0,owner:"
+catch(e){return"ENOENT"!==e.code}})(t))throw new Error(`The destination file exists: ${t}`);await c.mkdir(i(t),{recursive:!0});try{await c.rename(e,t)}catch(i){if("EXDEV"!==i.code&&"EPERM"!==i.code)throw i
+spaceID)(),t=(0,X.getLogFilePath)(e);v.logger.info(`Persistent LS logs will be written to: ${t}`),h.mkdirSync(p.default.dirname(t),{recursive:!0}),J=h.openSync(t,"w"),v.logger.info("Successfully created lo
+(r.default.homedir(),".gemini","antigravity-demo-archive",`antigravity-demo-${n}`);return o.default.mkdirSync(i,{recursive:!0}),o.default.existsSync(e)&&o.default.renameSync(e,i),i}},90853:(e,t,n)=>{"use s
+e iconv.enableStreamingAPI(require('stream')); to enable it.")}},93207:(e,t,n)=>{"use strict";const{mkdir:i,readFile:o,rm:r,stat:s,truncate:a,writeFile:c}=n(91943),l=n(2655),u=n(30971),d=n(35552),h=n(48091
+.on("finish",()=>{i.unlink(e,n)}),a.pipe(r).pipe(c)})}_createLogDirIfNotExist(e){i.existsSync(e)||i.mkdirSync(e,{recursive:!0})}}},95199:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!

@@ -1,0 +1,6 @@
+FilterSubMenu")}static{this.AgentSessionsInstallMenu=new xn("AgentSessionsInstallMenu")}static{this.AgentSessionsContext=new xn("AgentSessionsContext")}static{this.AgentSessionsCreateSubMenu=new xn("AgentSessionsCreateSu
+gesToolbar,description:g(15313,null),proposed:"chatSessionsProvider"},{key:"chat/chatSessions",id:q.AgentSessionsContext,description:g(15314,null),supportsSubmenus:!1,proposed:"chatSessionsProvider"},{key:"chatSessions/n
+key,e.isRead()]),r.push([Ti.isArchivedAgentSession.key,e.isArchived()]);const o=this.t.createMenu(q.AgentSessionsContext,this.j.createOverlay(r)),a={session:e,$mid:25};this.h.showContextMenu({getActions:()=>Tr.join(...o.
+s,s.provider,this.m,this.n),h=this.h.createOverlay(d),f=n.elementDisposable.add(this.g.createMenu(q.AgentSessionsContext,h)),p=()=>{n.actionBar.clear();const b={session:s,$mid:25},v=f.getActions({arg:b,shouldForwardArgs:
+ance(pl,{id:e.id,title:e.label,icon:ue.plus},void 0,void 0,void 0,void 0),s=this.s.getMenuActions(q.AgentSessionsContext,this.zb,{shouldForwardArgs:!0}),r=gb(s,"submenu").primary.filter(l=>{if(l instanceof pl&&e instance
+i,i.provider,this.m,this.ab),r=this.Db.createOverlay(s),o={session:i,$mid:25},a=this.s.createMenu(q.AgentSessionsContext,r),l=a.getActions({arg:o,shouldForwardArgs:!0}),{secondary:u}=gb(l,"inline");this.Bb.showContextMen
