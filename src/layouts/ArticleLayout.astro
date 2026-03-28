@@ -83,7 +83,7 @@ const articleSchema = JSON.stringify({
     <!-- Featured image -->
     {image && (
       <div class="article-image">
-        <img src={image} alt={imageAlt} width="1200" height="630" loading="eager" />
+        <img src={image} alt={imageAlt} width="1200" height="630" loading="eager" decoding="async" fetchpriority="high" />
       </div>
     )}
 
