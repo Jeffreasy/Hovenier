@@ -2,32 +2,34 @@
 naam: Enschede
 gemeente: Enschede
 provincie: Overijssel
-type: subsidie
-bedrag: "Tot €200"
-aanvraagUrl: https://www.enschede.nl/subsidie-klimaatadaptatie
+type: beplanting
+bedrag: "€7,50/m²"
+aanvraagUrl: https://www.enschede.nl/subsidie-groenblauw-enschede
 geldigTot: 2026-12-31
 actief: true
 ---
 
-# Subsidie Klimaatadaptatie Particuliere Tuin Enschede
+# Subsidie GroenBlauw Enschede
 
-Enschede investeert in klimaatadaptatie en biedt een subsidie voor inwoners die hun tuin vergroenen. Minder verharding betekent minder wateroverlast bij hevige regenval.
+Enschede investeert jaarlijks **€400.000** in klimaatadaptatie. Via de regeling **Subsidie GroenBlauw Enschede** ontvangen inwoners en ondernemers een bijdrage voor het vergroenen van hun tuin, groendaken, regentonnen en geveltuinen. De subsidie bedraagt maximaal 50% van de werkelijke kosten.
 
 ## Voorwaarden
 
-- Woonachtig in de gemeente Enschede
-- Minimaal **10 m²** verharding verwijderen
-- Vervanging door groen (geen kunstgras)
-- Aanvraag vóór aanvang
+- Eigenaar of huurder van een pand ouder dan 3 jaar in de gemeente Enschede
+- Verharding vervangen door beplanting (bloemen, planten of bomen)
+- Aanvraag vóór aanvang van de werkzaamheden
 
 ## Hoogte subsidie
 
-Tot **€200** eenmalig.
+**€7,50 per m²** voor het vervangen van verharding door groen. Groendak: €20–€30/m² (max. 50% kosten, max. €3.000). Bijdrage is maximaal 50% van de werkelijke kosten.
 
 ## Hoe aanvragen?
 
-1. Vul het aanvraagformulier in op enschede.nl
+1. Dien de aanvraag in via enschede.nl/subsidie-groenblauw vóór aanvang
 2. Ontvang goedkeuring
-3. Voer uit en lever bewijs in
+3. Voer de werkzaamheden uit
+4. Lever bewijs in (foto's voor/na + factuur)
 
-> **Tip:** Enschede heeft ook een waterberging-subsidie voor regentonnen.
+> **Tip:** Enschede biedt ook subsidie voor regentonnen, het afkoppelen van neerslag en geveltuinen — combineer voor meer voordeel.
+
+[Aanvragen via enschede.nl](https://www.enschede.nl/subsidie-groenblauw-enschede)

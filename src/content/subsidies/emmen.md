@@ -3,31 +3,26 @@ naam: Emmen
 gemeente: Emmen
 provincie: Drenthe
 type: subsidie
-bedrag: "Tot €150"
-aanvraagUrl: https://www.emmen.nl/subsidie-climat-tuin
+bedrag: "Geen gemeentelijke subsidie gevonden"
+aanvraagUrl: https://www.emmen.nl/duurzaamheid
 geldigTot: 2026-12-31
-actief: true
+actief: false
 ---
 
-# Subsidie Klimaattuin Emmen
+# Subsidie Tuinvergroening Emmen (niet gevonden)
 
-Emmen stimuleert inwoners tot tuinvergroening als maatregel tegen klimaatverandering. De subsidie is beschikbaar voor het verwijderen van tegels en het planten van groen.
+De gemeente Emmen heeft **geen actieve gemeentelijke subsidie** voor tuinvergroening of groene daken voor particulieren die bij onze kwartaalcheck in maart 2026 bekend is. De eerdere vermelding op deze pagina berust mogelijk op verouderde informatie.
 
-## Voorwaarden
+## Status
 
-- Woonachtig in de gemeente Emmen
-- Minimaal **10 m²** verharding vervangen
-- Vervanging door beplanting (geen kunstgras)
-- Aanvrag via het online loket
+**Niet actief.** Er is geen subsidieregeling voor tuinvergroening gevonden op de officiële website van de gemeente Emmen.
 
-## Hoogte subsidie
+## Alternatieven voor inwoners van Emmen
 
-Tot **€150** eenmalig.
+- **Provincie Drenthe – Subsidie vergroenen tuin:** De provincie Drenthe biedt via provincie.drenthe.nl subsidie aan voor tuinvergroening. Controleer de actuele status via de website.
+- **Drents Energieloket (drentsenergieloket.nl):** Biedt overzicht van actuele subsidies voor Drentse gemeenten.
+- **Waterschap Vechtstromen:** Bekijk of uw waterschap een subsidie biedt voor regentonnen of tuinvergroening.
 
-## Hoe aanvragen?
+> **Let op:** Controleer de officiële gemeentewebsite of het Drents Energieloket voor de meest actuele informatie. Een nieuwe gemeentelijke subsidie kan in de loop van 2026 alsnog worden ingevoerd.
 
-1. Registreer uw plan via emmen.nl
-2. Voer de vergroening uit
-3. Lever voor/na bewijs aan
-
-> **Tip:** Emmen werkt samen met Drents Landschap voor gratis plantadvies.
+[Duurzaamheidsinformatie via emmen.nl](https://www.emmen.nl/duurzaamheid)

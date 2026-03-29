@@ -2,33 +2,36 @@
 naam: "'s-Hertogenbosch"
 gemeente: "'s-Hertogenbosch"
 provincie: Noord-Brabant
-type: subsidie
-bedrag: "Tot €200"
-aanvraagUrl: https://www.s-hertogenbosch.nl/subsidie-klimaatadaptatie
-geldigTot: 2026-12-31
+type: groendak
+bedrag: "Tot €3.000 (groendak)"
+aanvraagUrl: https://www.s-hertogenbosch.nl/product/groenedaken/
+geldigTot: 2028-12-31
 actief: true
 ---
 
-# Subsidie Klimaatadaptatie Tuin 's-Hertogenbosch
+# Subsidie Groene Daken en Afkoppelen 's-Hertogenbosch
 
-Den Bosch stimuleert tuinvergroening als onderdeel van een breed klimaatadaptatieplan. De subsidie is bedoeld voor het onttegelen en beplanten van particuliere tuinen.
+Den Bosch biedt via de **Subsidie Groene Daken en Afkoppelen** een financiële bijdrage voor het aanleggen van een groendak en het afkoppelen van regenwater van het riool. De regeling loopt tot **31 december 2028**. Aanvullend biedt **Waterschap Aa en Maas** een subsidie voor klimaatbestendige maatregelen (max. €5.000).
 
 ## Voorwaarden
 
-- Woonachtig in de gemeente 's-Hertogenbosch
-- Minimaal **10 m²** verharding verwijderen
-- Geen kunstgras
-- Aanvraag vóór aanvang
+- Eigenaar van een woning of bedrijfspand in de gemeente 's-Hertogenbosch
+- Groendak aanleggen of regenwater afkoppelen
+- Aanvraag indienen vóór aanvang werkzaamheden
 
 ## Hoogte subsidie
 
-Tot **€200** eenmalig.
+- **Groendak (particulieren):** Tot **€3.000**
+- **Afkoppelen dakvlak (particulieren):** Tot **€5.000**
+- Aanvullend: Waterschap Aa en Maas max. €5.000 voor klimaatbestendige maatregelen
 
 ## Hoe aanvragen?
 
-1. Vul het formulier in via s-hertogenbosch.nl
+1. Vul het formulier in via s-hertogenbosch.nl/product/groenedaken vóór aanvang
 2. Wacht op bevestiging
 3. Voer de werkzaamheden uit
-4. Lever bewijs in
+4. Lever bewijs in (foto's + factuur)
 
-> **Tip:** Den Bosch biedt ook een regentonnenprogramma voor aansluiting op de drukriool.
+> **Tip:** Combineer de gemeentelijke subsidie met die van Waterschap Aa en Maas voor maximale bijdrage. Den Bosch biedt ook een regenwateropvangprogramma.
+
+[Aanvragen via s-hertogenbosch.nl](https://www.s-hertogenbosch.nl/product/groenedaken/)

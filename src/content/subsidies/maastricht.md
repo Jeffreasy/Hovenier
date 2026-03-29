@@ -2,32 +2,25 @@
 naam: Maastricht
 gemeente: Maastricht
 provincie: Limburg
-type: subsidie
-bedrag: "Tot €175"
-aanvraagUrl: https://www.gemeentemaastricht.nl/subsidie-groene-tuin
-geldigTot: 2026-12-31
-actief: true
+type: groendak
+bedrag: "Eerste 6 m² gratis (dakbloemenweide)"
+aanvraagUrl: https://www.gemeentemaastricht.nl/groen-en-vergroening
+geldigTot: 2025-09-15
+actief: false
 ---
 
-# Subsidie Groene Tuin Maastricht
+# Subsidie Dakbloemenweide Maastricht (vervallen)
 
-Maastricht stimuleert de vergroening van tuinen om hittestress en wateroverlast in de groeiende stad te verminderen.
+Maastricht bood via CNME de regeling **Dakbloemenweide** aan, waarbij de eerste 6 m² van een bloemenweide-dak gratis werden aangelegd (waarde €504). Inwoners konden aanvragen tot **15 september 2025**. Deze regeling is **niet verlengd** voor 2026.
 
-## Voorwaarden
+## Status
 
-- Woonachtig in de gemeente Maastricht
-- Minimaal **8 m²** verharding weghalen
-- Vervanging door levende beplanting
-- Één aanvraag per adres per jaar
+Deze subsidieregeling is **niet meer actief** per 2026. Voor informatie over nieuwe duurzaamheidssubsidies in Maastricht kunt u de gemeentepagina raadplegen.
 
-## Hoogte subsidie
+## Alternatieven
 
-Tot **€175** eenmalig.
+- Gemeente Maastricht biedt groen- en vergroeningsadvies via **CNME** (Centrum voor Natuur- en Milieueducatie).
+- Controleer **subsidies.gemeentemaastricht.nl** voor eventuele nieuwe regelingen in de loop van 2026.
+- **Limburg:** Raadpleeg de provincie Limburg voor eventuele provinciale subsidies voor klimaatadaptatie.
 
-## Hoe aanvragen?
-
-1. Dien uw aanvraag in via gemeentemaastricht.nl
-2. Voer de werkzaamheden uit
-3. Stuur bewijs in
-
-> **Tip:** Maastricht werkt samen met Limburgs Landschap voor advies over streekeigen beplanting.
+[Bekijk actuele subsidies via gemeentemaastricht.nl](https://www.gemeentemaastricht.nl/groen-en-vergroening)

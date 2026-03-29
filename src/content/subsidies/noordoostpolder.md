@@ -2,33 +2,36 @@
 naam: Noordoostpolder
 gemeente: Noordoostpolder
 provincie: Flevoland
-type: subsidie
-bedrag: "Tot €175"
-aanvraagUrl: https://www.noordoostpolder.nl/subsidie-tuinvergroening
+type: groendak
+bedrag: "€25–€35/m² (Flevoland provinciaal)"
+aanvraagUrl: https://www.flevoland.nl/loket/subsidies/groene-daken-en-gevels
 geldigTot: 2026-12-31
 actief: true
 ---
 
-# Subsidie Tuinvergroening Noordoostpolder
+# Subsidie Klimaatbestendig Maken Tuinen en Daken Noordoostpolder
 
-De gemeente Noordoostpolder (Emmeloord en omgeving) stimuleert tuinvergroening als onderdeel van het regionale klimaatprogramma Flevoland Klimaatbestendig.
+De gemeente Noordoostpolder (Emmeloord, Marknesse, Espel e.o.) maakt deel uit van het **KAF-samenwerkingsverband** (Klimaatadaptatie Flevoland). Via de provinciale regeling kunnen inwoners subsidie aanvragen voor groendaken, groene gevels en regentonnen. Zoek ook naar een lokale subsidie voor regenton via denoordoostpolder.nl.
 
 ## Voorwaarden
 
-- Woonachtig in de gemeente Noordoostpolder (o.a. Emmeloord, Marknesse, Espel)
-- Minimaal **10 m²** verharding vervangen door groen
-- Voorkeur voor streekeigen Flevolandse beplanting
-- Aanvraag vóór aanvang
+- Eigenaar of huurder van een woning in de gemeente Noordoostpolder (bebouwde kom)
+- Maatregelen zoals groendak, groene gevel of regenwatervoorziening
+- Aanvraag via het provinciale Flevoland-loket
 
 ## Hoogte subsidie
 
-Tot **€175** eenmalig.
+- **Sedumdak:** €25 per m²
+- **Biodiversiteitsdak (bloemenweide e.d.):** €35 per m²
+- Aanvullende bedragen voor groene gevels en regentonnen
 
 ## Hoe aanvragen?
 
-1. Neem contact op via noordoostpolder.nl of bel het gemeenteloket
-2. Dien een aanvraag in
-3. Voer de werkzaamheden uit
-4. Lever bewijs aan
+1. Ga naar flevoland.nl/loket/subsidies/groene-daken-en-gevels
+2. Dien een aanvraag in via het provinciale loket
+3. Voer de werkzaamheden uit na goedkeuring
+4. Lever bewijs aan (voor/na-foto's + factuur)
 
-> **Tip:** Noordoostpolder stimuleert ook de aanleg van insectenhotels bij tuinvergroening.
+> **Tip:** Controleer ook denoordoostpolder.nl voor eventuele gemeentelijke subsidies voor regentonnen of groen dak.
+
+[Aanvragen via flevoland.nl](https://www.flevoland.nl/loket/subsidies/groene-daken-en-gevels)

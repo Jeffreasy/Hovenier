@@ -2,33 +2,34 @@
 naam: Breda
 gemeente: Breda
 provincie: Noord-Brabant
-type: subsidie
-bedrag: "Tot €160"
-aanvraagUrl: https://www.breda.nl/subsidie-particulier-groen
-geldigTot: 2026-12-31
+type: beplanting
+bedrag: "€10/m², max €1.500"
+aanvraagUrl: https://www.breda.nl/subsidies-water-en-groen-voor-inwoners
+geldigTot: 2026-12-15
 actief: true
 ---
 
-# Subsidie Particulier Groen Breda
+# Subsidie Water en Groen Breda
 
-Breda zet in op het vergroenen van de stad als klimaatadaptatiemaatregel. Inwoners kunnen een subsidie aanvragen voor het onttegelen van hun tuin en het planten van groen.
+Breda biedt via de regeling **Subsidie Water en Groen** een bijdrage voor inwoners die verharding in hun tuin vervangen door beplanting. Het totale subsidieplafond voor 2026 is **€116.684** voor alle groene en watermaatregelen op eigen terrein.
 
 ## Voorwaarden
 
-- Woonachtig in de gemeente Breda
-- Minimaal **10 m²** steen of asfalt verwijderen
-- Vervanging door levende beplanting of grastegels
-- Eén aanvraag per adres per jaar
+- Woonachtig in de gemeente Breda (koopwoning)
+- Verharding volledig vervangen door beplanting (geen half/open verharding voor max. tarief)
+- Aanvraag indienen binnen **6 weken na afronding** van de werkzaamheden
+- Op volgorde van ontvangst; aanvragen tot 15 december 2026
 
 ## Hoogte subsidie
 
-Tot **€160** eenmalig.
+**€10 per m²** voor volledig onttegelde en begroeide oppervlakken, **€5 per m²** voor half-/open verharding. Maximum **€1.500 per adres**.
 
 ## Hoe aanvragen?
 
-1. Neem foto's van de huidige situatie
-2. Registreer uw aanvraag op breda.nl
-3. Voer de werkzaamheden uit
-4. Stuur bewijs op binnen 3 maanden na afronding
+1. Voer de werkzaamheden uit
+2. Dien de aanvraag in via breda.nl binnen 6 weken na afronding
+3. Voeg bewijs toe (foto's voor/na + factuur of kassabon)
 
-> **Tip:** Breda biedt ook gratis advies via de gemeentelijke tuinvizier. Vraag ernaar bij uw aanvraag.
+> **Tip:** Breda biedt ook subsidie voor regentonnen en groendaken. Combineer maatregelen voor een hogere bijdrage.
+
+[Aanvragen via breda.nl](https://www.breda.nl/subsidies-water-en-groen-voor-inwoners)

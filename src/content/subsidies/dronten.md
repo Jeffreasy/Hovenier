@@ -2,34 +2,36 @@
 naam: Dronten
 gemeente: Dronten
 provincie: Flevoland
-type: subsidie
-bedrag: "Tot €200"
-aanvraagUrl: https://www.dronten.nl/subsidie-tuinvergroening
+type: groendak
+bedrag: "€25–€35/m² (Flevoland provinciaal)"
+aanvraagUrl: https://www.flevoland.nl/loket/subsidies/groene-daken-en-gevels
 geldigTot: 2026-12-31
 actief: true
 ---
 
-# Subsidie Tuinvergroening Dronten
+# Subsidie Klimaatbestendig Maken Tuinen en Daken Dronten
 
-De gemeente Dronten, hart van Flevoland, stimuleert inwoners in Dronten, Swifterbant en Biddinghuizen om hun tuin te vergroenen. Dit past in het regionale Flevolandse klimaatprogramma.
+De gemeente Dronten maakt deel uit van het **KAF-samenwerkingsverband** (Klimaatadaptatie Flevoland) en sluit aan op de provinciale regeling **"Klimaatbestendig maken en vergroenen tuinen en daken"**. Inwoners van Dronten, Swifterbant en Biddinghuizen kunnen subsidie aanvragen voor groendaken, groene gevels en regentonnen.
 
 ## Voorwaarden
 
-- Woonachtig in de gemeente Dronten (kernen: Dronten, Swifterbant, Biddinghuizen)
-- Minimaal **10 m²** verharding vervangen door groen
-- Geen kunstgras of grind als vervanging
-- Aanvraag vóór aanvang werkzaamheden
+- Eigenaar of huurder van een woning in de gemeente Dronten (bebouwde kom)
+- Maatregelen zoals groendak, groene gevel of regenwatervoorziening
+- Aanvraag via het Flevoland subsidieloket
 
 ## Hoogte subsidie
 
-Tot **€200** eenmalig, afhankelijk van het vergroende oppervlak.
+- **Sedumdak:** €25 per m²
+- **Biodiversiteitsdak (bloemenweide e.d.):** €35 per m²
+- Aanvullende bedragen voor groene gevels en regentonnen
 
 ## Hoe aanvragen?
 
-1. Maak foto's van de huidige situatie
-2. Dien een aanvraag in via dronten.nl
-3. Ontvang goedkeuring (gemiddeld 3–4 weken)
-4. Voer de werkzaamheden uit
-5. Lever bewijs aan (voor/na-foto's + factuur)
+1. Ga naar flevoland.nl/loket/subsidies/groene-daken-en-gevels
+2. Dien een aanvraag in via het provinciale loket
+3. Voer de werkzaamheden uit na goedkeuring
+4. Lever bewijs aan (voor/na-foto's + factuur)
 
-> **Tip:** De gemeente Dronten werkt samen met Staatsbosbeheer Flevoland voor advies over streekeigen Flevolandse beplanting (zoals Ruig klokje, Grote ratelaar en inheemse wilgentwijgen).
+> **Tip:** Combineer de subsidie met gratis advies van Staatsbosbeheer Flevoland over streekeigen beplanting voor uw tuin.
+
+[Aanvragen via flevoland.nl](https://www.flevoland.nl/loket/subsidies/groene-daken-en-gevels)

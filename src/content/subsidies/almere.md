@@ -2,33 +2,36 @@
 naam: Almere
 gemeente: Almere
 provincie: Flevoland
-type: subsidie
-bedrag: "Tot €200"
-aanvraagUrl: https://www.almere.nl/subsidie-groene-tuin
+type: groendak
+bedrag: "€25–€35/m² (Flevoland provinciaal)"
+aanvraagUrl: https://www.flevoland.nl/loket/subsidies/groene-daken-en-gevels
 geldigTot: 2026-12-31
 actief: true
 ---
 
-# Subsidie Groene Tuin Almere
+# Subsidie Klimaatbestendig Maken Tuinen en Daken Almere
 
-Almere wil meer groen in de stad en biedt een subsidie aan inwoners die hun betegelde tuin omgrepen naar een groene, biodiverse tuin. Minder hittestress en meer biodiversiteit zijn de doelstellingen.
+Almere valt onder de provinciale regeling **"Klimaatbestendig maken en vergroenen tuinen en daken"** van Provincie Flevoland, beheerd door het KAF-samenwerkingsverband. Particulieren in de bebouwde kom van Almere kunnen subsidie aanvragen voor groendaken, groene gevels en regentonnen.
 
 ## Voorwaarden
 
-- Woonachtig in de gemeente Almere
-- Minimaal **8 m²** verharding verwijderen
-- Vervanging door beplanting (geen kunstgras of gravel)
-- Aanvraag indienen na voltooiing werkzaamheden (declaratiemodel)
+- Eigenaar of huurder van een woning in de gemeente Almere (bebouwde kom)
+- Maatregelen zoals groendak, groene gevel of regenwatervoorziening
+- Aanvraag indienen via het Flevoland-loket
 
 ## Hoogte subsidie
 
-Tot **€200** eenmalig.
+- **Sedumdak:** €25 per m²
+- **Biodiversiteitsdak (bloemenweide e.d.):** €35 per m²
+- Aanvullende bedragen voor groene gevels en regentonnen
 
 ## Hoe aanvragen?
 
-1. Voer de vergroening uit
-2. Maak voor/na-foto's
-3. Dien de declaratie in via almere.nl/subsidie-groene-tuin met factuur en foto's
-4. Ontvang uitbetaling binnen 6 weken
+1. Bekijk de subsidieregeling op flevoland.nl
+2. Dien een aanvraag in via het Flevoland subsidieloket
+3. Voer de werkzaamheden uit na goedkeuring
+4. Stuur bewijs in (foto's voor/na + factuur)
 
-> **Voordeel:** Almere werkt met een declaratiemodel, dus u hoeft niet vooraf goedkeuring aan te vragen.
+> **Tip:** U kunt ook samen met buren of de buurt aanvragen voor een hogere bijdrage. Bekijk ook het Almere Wijkbudget voor lokale groene initiatieven via almere.nl/subsidies.
+
+[Aanvragen via flevoland.nl](https://www.flevoland.nl/loket/subsidies/groene-daken-en-gevels)

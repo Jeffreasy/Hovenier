@@ -2,32 +2,28 @@
 naam: Middelburg
 gemeente: Middelburg
 provincie: Zeeland
-type: subsidie
-bedrag: "Tot €150"
-aanvraagUrl: https://www.middelburg.nl/subsidie-tuinvergroening
+type: algemeen
+bedrag: "In ontwikkeling (verwacht najaar 2026)"
+aanvraagUrl: https://www.middelburg.nl/subsidies-en-leningen-duurzaamheid
 geldigTot: 2026-12-31
-actief: true
+actief: false
 ---
 
-# Subsidie Tuinvergroening Middelburg
+# Nieuwe Duurzaamheidssubsidie Middelburg (in ontwikkeling)
 
-Middelburg zet in op een groenere, klimaatbestendige binnenstad. Via een subsidie worden inwoners gestimuleerd om tegels te vervangen door beplanting.
+De gemeente Middelburg werkt aan een **nieuwe brede subsidieregeling** voor klimaatadaptatie, energietransitie en circulariteit. Over een periode van vijf jaar wordt **€5,8 miljoen** beschikbaar gesteld. De regeling wordt verwacht te starten in **najaar 2026**. Tuinvergroening, groendaken en regenwateropvang vallen binnen de regeling.
 
-## Voorwaarden
+## Status
 
-- Woonachtig in de gemeente Middelburg
-- Minimaal **8 m²** stenen verwijderen
-- Vervanging door groen (geen kunstgras)
-- Aanvraag via gemeenteloket
+De nieuwe subsidieregeling is **nog niet actief**. De gemeente Middelburg heeft de regeling goedgekeurd maar de formele start is gepland voor later in 2026. Houd de gemeentepagina in de gaten voor de officiële aanvangsdatum en specifieke bedragen.
 
-## Hoogte subsidie
+## Wat kan in aanmerking komen (verwacht)?
 
-Tot **€150** eenmalig.
+- Tuinvergroening (tegels vervangen door beplanting)
+- Groendaken
+- Regenwateropvang
+- Energiemaatregelen
 
-## Hoe aanvragen?
+> **Tip:** Zowel huurders als kopers komen naar verwachting in aanmerking voor de nieuwe regeling. Check middelburg.nl/subsidies-en-leningen-duurzaamheid voor de meest actuele informatie.
 
-1. Neem contact op via middelburg.nl of gemeenteloket
-2. Voer de vergroening uit
-3. Lever bewijs aan
-
-> **Tip:** Middelburg heeft unieke kansen voor zoute/kuststreekeigen beplanting.
+[Actuele info via middelburg.nl](https://www.middelburg.nl/subsidies-en-leningen-duurzaamheid)

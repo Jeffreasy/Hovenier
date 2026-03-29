@@ -2,33 +2,36 @@
 naam: Lelystad
 gemeente: Lelystad
 provincie: Flevoland
-type: subsidie
-bedrag: "Tot €150"
-aanvraagUrl: https://www.lelystad.nl/subsidie-vergroening
+type: beplanting
+bedrag: "€10/m², max €500 (onttegelen)"
+aanvraagUrl: https://www.lelystad.nl/groenesubsidie
 geldigTot: 2026-12-31
 actief: true
 ---
 
-# Subsidie Tuinvergroening Lelystad
+# Subsidie Klimaatadaptatie Lelystad
 
-Lelystad stimuleert inwoners om hun tuin te vergroenen ter verbetering van het stadsklimaat en de biodiversiteit in de polder. Via de subsidieregeling tuinvergroening kunt u een bijdrage ontvangen.
+Lelystad biedt via de gemeentelijke **Subsidie Klimaatadaptatie** een bijdrage voor het verwijderen van verharding en het vergroenen van tuinen. Aanvullend kunnen inwoners ook gebruikmaken van de provinciale Flevoland-regeling voor groendaken en groene gevels.
 
 ## Voorwaarden
 
-- Woonachtig in de gemeente Lelystad
-- Minimaal **8 m²** verharding vervangen door groen
-- Geen kunstgras toegestaan als vervanging
-- Aanvragen vóór aanvang werkzaamheden
+- Eigenaar of huurder van een woning in de gemeente Lelystad (bebouwde kom)
+- Minimaal **4 m²** verharding verwijderen (ontharden)
+- Geen kunstgras als vervanging
 
 ## Hoogte subsidie
 
-Tot **€150** eenmalig, afhankelijk van het oppervlak.
+- **Onttegelen en vergroenen:** €10/m², max **€500**
+- Aanvullend per heester/boom/vaste plant: €10 extra
+- **Groene gevel:** €100/m², max €2.500
+- **Groendak (provinciaal Flevoland):** €25–€35/m² via flevoland.nl
 
 ## Hoe aanvragen?
 
-1. Maak foto's van de huidige situatie
-2. Meld uw plan via lelystad.nl/subsidie-vergroening
-3. Voer de werkzaamheden uit
-4. Lever bewijs in (voor/na foto's + factuur)
+1. Dien de aanvraag in via lelystad.nl/groenesubsidie
+2. Voer de werkzaamheden uit
+3. Lever bewijs aan (voor/na foto's + factuur)
 
-> **Tip:** Lelystad stimuleert bijzonder biodiversiteitsvriendelijke beplanting met extra punten.
+> **Tip:** Combineer de gemeentelijke subsidie voor onttegelen met de provinciale groendaksubsidie voor maximaal voordeel.
+
+[Aanvragen via lelystad.nl](https://www.lelystad.nl/groenesubsidie)

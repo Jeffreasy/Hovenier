@@ -2,33 +2,35 @@
 naam: Tilburg
 gemeente: Tilburg
 provincie: Noord-Brabant
-type: subsidie
-bedrag: "Tot €175"
-aanvraagUrl: https://www.tilburg.nl/groen-subsidie
-geldigTot: 2026-12-31
+type: beplanting
+bedrag: "€10/m², max €2.500"
+aanvraagUrl: https://www.tilburg.nl/inwoners/subsidies/subsidie-klimaatbestendig-tilburg/
+geldigTot: 2027-12-31
 actief: true
 ---
 
-# Subsidie Klimaatadaptatie Particuliere Tuinen Tilburg
+# Subsidie Klimaatbestendig Tilburg
 
-Tilburg investeert in een klimaatbestendige stad en biedt inwoners een subsidie voor het vergroenen van hun tuin. Minder verharding betekent minder wateroverlast bij hevige regenval.
+Tilburg heeft de subsidieregeling **Klimaatbestendig Tilburg** verlengd tot en met 2027. Particulieren kunnen tot **€2.500** ontvangen voor het vergroenen van hun tuin en het aanleggen van klimaatadaptieve maatregelen.
 
 ## Voorwaarden
 
-- Geldig voor bewoners met een koopwoning in Tilburg
-- Minimaal **10 m² steen of beton** vervangen door groen
-- Beplanting moet te infiltreren water bevorderen (geen kunstgras)
-- Aanvragen kan het hele jaar door
+- Geldig voor eigenaren van een woning in Tilburg
+- Minimaal **6 m²** verharding volledig vervangen door een groenvoorziening
+- Geen kunstgras als vervanging; beplanting moet waterinfiltratie bevorderen
+- Per kadastraal perceel eenmaal subsidie per maatregel
 
 ## Hoogte subsidie
 
-Tot **€175** eenmalig.
+**€10 per m²** voor volledig onttegelde en begroeide tuinoppervlakken. Maximum **€2.500 per particulier**. Aanvullend: €25–€40/m² voor dakgroen.
 
 ## Hoe aanvragen?
 
-1. Beschrijf uw plannen kort
-2. Dien de aanvraag in via tilburg.nl/groen-subsidie
-3. Voer de werkzaamheden uit na goedkeuring
-4. Lever bewijs aan en ontvang de subsidie
+1. Dien de aanvraag in via tilburg.nl vóór aanvang of na afronding
+2. Voer de werkzaamheden uit
+3. Lever bewijs aan (foto's voor/na + factuur)
+4. Ontvang de subsidie
 
-> **Tip:** Aanvragen in het voorjaar geeft de beste kansen op beschikbaar budget.
+> **Tip:** Combineer tuinvergroening met een groendak of regenwateropvang voor een hogere subsidie.
+
+[Aanvragen via tilburg.nl](https://www.tilburg.nl/inwoners/subsidies/subsidie-klimaatbestendig-tilburg/)

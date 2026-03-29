@@ -55,6 +55,9 @@ const HOVENIER_CATEGORIEEN = new Set([
   'Buitenruimte',
   'Groendak',
   'Buitenverlichting',
+  'Tuin- en landschapsarchitect',
+  'Tuinman',
+  'Tuinarchitect',
 ])
 
 /** Straatnaam-detectie: bedrijven waarvan naam -> een adres is */

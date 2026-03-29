@@ -3,31 +3,26 @@ naam: Venlo
 gemeente: Venlo
 provincie: Limburg
 type: subsidie
-bedrag: "Tot €175"
-aanvraagUrl: https://www.venlo.nl/subsidie-groene-omgeving
+bedrag: "Geen particuliere subsidie gevonden"
+aanvraagUrl: https://www.venlo.nl/subsidies
 geldigTot: 2026-12-31
-actief: true
+actief: false
 ---
 
-# Subsidie Groene Omgeving Venlo
+# Subsidie Groene Omgeving Venlo (niet beschikbaar voor particulieren)
 
-Venlo, bekend om zijn florasetor, stimuleert ook in de woonwijken meer groen via een subsidie voor tuinvergroening. Onderdeel van het Venlose klimaat- en biodiversiteitsplan.
+De gemeente Venlo biedt **geen specifieke subsidie voor particuliere tuinvergroening** die bij onze kwartaalcheck in maart 2026 is gevonden. De beschikbare Venlose subsidies richten zich op bedrijven, maatschappelijke organisaties en duurzame initiatieven voor rechtspersonen (Subsidie Duurzaam Initiatief: min. €250, max. €5.000).
 
-## Voorwaarden
+## Status
 
-- Woonachtig in de gemeente Venlo
-- Minimaal **8 m²** verharding vervangen door groen
-- Voorkeur voor productieve of biodiversiteitsrijke beplanting
-- Aanvraag vóór aanvang
+**Niet actief voor particulieren.** Geen subsidieregeling voor tuinvergroening door individuele huiseigenaren gevonden bij de officiële gemeente Venlo website.
 
-## Hoogte subsidie
+## Alternatieven voor inwoners van Venlo
 
-Tot **€175** eenmalig.
+- **Waterschap Limburg:** Controleer of er een subsidie beschikbaar is voor tuinvergroening of regentonnen via waterschaplimburg.nl.
+- **Provincie Limburg:** Raadpleeg de provincie voor eventuele groene subsidies via limburg.nl.
+- **Venlo Duurzaam:** Kijk op de duurzaamheidspagina van de gemeente voor niet-financiële ondersteuning zoals advies.
 
-## Hoe aanvragen?
+> **Let op:** Controleer regelmatig de officiële gemeentewebsite — Venlo kan in de loop van 2026 een nieuwe regeling introduceren.
 
-1. Dien een aanvraag in via venlo.nl
-2. Ontvang goedkeuring
-3. Voer de werkzaamheden uit en lever bewijs
-
-> **Tip:** Venlo heeft banden met de Floriade-erfenis en stimuleert innovatief tuinieren.
+[Actuele subsidies via venlo.nl](https://www.venlo.nl/subsidies)

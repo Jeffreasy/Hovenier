@@ -2,33 +2,34 @@
 naam: Utrecht
 gemeente: Utrecht
 provincie: Utrecht
-type: subsidie
-bedrag: "Tot €350"
-aanvraagUrl: https://www.utrecht.nl/subsidie-vergroening
+type: algemeen
+bedrag: "Gratis tegelophaal + Initiatievenfonds"
+aanvraagUrl: https://www.utrecht.nl/wonen-en-leven/duurzame-stad/groen-en-water/klimaatklaar-uw-omgeving-groener-maken-en-slim-water-opvangen
 geldigTot: 2026-12-31
 actief: true
 ---
 
-# Subsidie Vergroening Particuliere Tuinen Utrecht
+# Klimaatklaar Utrecht – Groen en Water
 
-Utrecht heeft een ambitieus klimaatadaptatieplan en biedt een van de hogere subsidies in Nederland voor tuinvergroening. Via de **Subsidie Vergroening Particuliere Tuinen** kunnen inwoners tot €350 ontvangen.
+De gemeente Utrecht biedt via het programma **Klimaatklaar** ondersteuning voor het vergroenen van tuinen. Er is geen directe subsidie per m² voor particulieren, maar de gemeente biedt wél een gratis tegelservice en financiering via het Initiatievenfonds voor buurtinitiatieven.
 
-## Voorwaarden
+## Wat biedt Utrecht?
 
-- Woonachtig in de gemeente Utrecht
-- Minimaal **12 m² verharding** vervangen door groen
-- Beplanting moet bijdragen aan biodiversiteit (bij voorkeur streekeigen gewassen)
-- Aanvragen maximaal 3 maanden na uitvoering
+- **Gratis tegelophaal (Tegeltaxi):** De gemeente haalt uw oude tuintegels kosteloos op als u ze vervangt door groen.
+- **Geveltuinen:** U kunt gratis een geveltuin aanleggen via het gemeenteprogramma.
+- **Initiatievenfonds:** Utrechters die samen met buurtgenoten een groen initiatief starten kunnen een bijdrage aanvragen. Bedragen worden per project bepaald.
 
-## Hoogte subsidie
+## Voorwaarden Initiatievenfonds
 
-Tot **€350** eenmalig. Het exacte bedrag is afhankelijk van het aantal m² vergroend en het type beplanting.
+- Minimaal een groepsaanvraag (meerdere adressen)
+- Maatregelen bijdragen aan biodiversiteit of wateropvang
+- Aanvraag via de gemeente of het Initiatievenfonds Utrecht
 
-## Hoe aanvragen?
+## Aanvullende regelingen
 
-1. Neem foto's van de beginsituatie
-2. Vul het aanvraagformulier in op utrecht.nl/subsidie-vergroening
-3. Laat de werkzaamheden uitvoeren
-4. Dien binnen 3 maanden de einddeclaratie in met foto's en factuur
+- **Waterschap HDSR – Blauwe Bewonersinitiatieven:** Max. €5.000 voor buurtgroepen die tuinen of straten vergroenen en watervriendelijk inrichten (maximaal 50% van de kosten).
+- **Provincie Utrecht:** Subsidie voor organisaties en rechtspersonen (VvE's, woningcorporaties) voor grotere groene of klimaatadaptieve projecten.
 
-> **Tip:** Kies voor streekeigen planten zoals Meidoorn of Gelderse Roos voor de hoogste bijdrage.
+> **Let op:** Er is in 2026 geen directe per-m²-subsidie voor individuele particulieren in de gemeente Utrecht. Neem contact op met de gemeente voor de actuele mogelijkheden.
+
+[Meer info via utrecht.nl](https://www.utrecht.nl/wonen-en-leven/duurzame-stad/groen-en-water/klimaatklaar-uw-omgeving-groener-maken-en-slim-water-opvangen)
