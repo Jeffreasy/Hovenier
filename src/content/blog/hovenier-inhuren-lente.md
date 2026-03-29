@@ -1,13 +1,13 @@
 ---
 title: "Hovenier inhuren in de lente: wanneer slim, wat kost het?"
-description: "Wanneer is het slim om een hovenier in te huren voor lentewerk? Wat zijn de tarieven in 2026? Praktisch overzicht van kosten, werkzaamheden en tips om een goede deal te sluiten."
+description: "Hovenier inhuren in de lente? Wat kost het in 2026, welke klussen laat je doen en hoe vind je een goede vakman? Praktisch overzicht met tarieven."
 publishDate: 2026-03-28
 category: kosten
 featured: false
 draft: false
 ---
 
-De lente is het drukste seizoen voor hoveniers. Iedereen wil zijn tuin klaar hebben voor de zomer. Dat betekent dat goede hoveniers snel volgeboekt zijn en dat je niet altijd kunt kiezen wanneer ze komen.
+De lente is het drukste seizoen voor hoveniers. Iedereen wil zijn tuin klaar hebben voor de zomer en een hovenier inhuren voor het zware werk. Dat betekent dat goede vakmensen snel volgeboekt zijn en dat je niet altijd kunt kiezen wanneer ze komen.
 
 Maar wanneer is het slim om een hovenier in te schakelen? En wat betaal je er eigenlijk voor?
 
@@ -16,9 +16,9 @@ Maar wanneer is het slim om een hovenier in te schakelen? En wat betaal je er ei
 Lentewerk voor een hovenier is breed. De meest gevraagde klussen in maart, april en mei:
 
 - Tuin opruimen na de winter: dood materiaal verwijderen, borders schoonmaken, bladresten afvoeren
-- Gazononderhoud: verticuteren, doorzaaien, bemesten, eerste maaibeurt
+- Gazononderhoud: [verticuteren](/blog/gazon-verticuteren-voorjaar), doorzaaien, bemesten, eerste maaibeurt
 - Snoeien: heesters, vaste planten, klimrozen terugknippen
-- Borders aanleggen of herinrichten: grond verbeteren, beplantingsplan, planten zetten
+- [Borders aanleggen](/blog/nieuwe-border-aanleggen) of herinrichten: grond verbeteren, beplantingsplan, planten zetten
 - Terras en paden schoonmaken: algen en mos verwijderen, voegen bijvullen
 - Plannen maken voor de rest van het seizoen
 
@@ -75,7 +75,7 @@ In de lente melden de meeste hoveniers zich niet zomaar beschikbaar. Goede vakme
 
 **Let op de offerte zelf.** Een gespecificeerde offerte met uurloon, materiaalkosten en een omschrijving van het werk zegt meer dan een kort mailtje met een totaalprijs. Een hovenier die zijn offerte toelicht is transparant.
 
-**Kijk naar reviews.** Online platforms, Google en sociale media geven je inzicht in ervaringen van anderen. Let op specifieke reacties over kwaliteit en communicatie, niet alleen op sterrenaantallen.
+**Kijk naar beoordelingen.** Online platforms, Google en sociale media geven je inzicht in ervaringen van anderen. Let op specifieke reacties over kwaliteit en communicatie, niet alleen op sterrenaantallen.
 
 **Vraag naar verzekering en btw-nummer.** Een serieuze hovenier is ingeschreven bij de Kamer van Koophandel en heeft een aansprakelijkheidsverzekering.
 

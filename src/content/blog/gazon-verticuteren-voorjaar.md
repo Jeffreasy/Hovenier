@@ -1,6 +1,6 @@
 ---
 title: "Gazon verticuteren in het voorjaar: wanneer, hoe en wat kost het?"
-description: "Wanneer is het goede moment om te verticuteren? Hoe doe je het stap voor stap? En wat kost een hovenier? Alles wat je wilt weten over gazon verticuteren in de lente."
+description: "Wanneer is het goede moment om te verticuteren? Hoe doe je het stap voor stap? Wat kost een hovenier? Alles wat je moet weten over gazon verticuteren."
 publishDate: 2026-03-28
 category: onderhoud
 featured: false
@@ -63,7 +63,7 @@ Schakel een hovenier in als:
 - er veel mos in zit en je ook wil doorzaaien en bemesten
 - je wil dat het in één keer goed wordt gedaan
 
-Een hovenier rekent voor verticuteren van 100 m² doorgaans tussen de 100 en 140 euro. Doorzaaien en bemesten kunnen daar bovenop komen. Vraag altijd of dat in de prijs zit.
+Een hovenier rekent voor verticuteren van 100 m² doorgaans tussen de 100 en 140 euro. Doorzaaien en bemesten kunnen daar bovenop komen. Vraag altijd of dat in de prijs zit. Meer weten over tarieven? Lees ons artikel over [een hovenier inhuren in de lente](/blog/hovenier-inhuren-lente).
 
 ## Wat kost een hovenier voor gazononderhoud?
 
@@ -75,6 +75,6 @@ Lente is het drukste seizoen voor hoveniers. Vroeg boeken loont.
 
 ## Aan de slag
 
-De fundering voor een donkergroene grasmat leg je direct in het vroege voorjaar. Verticuteren op het juiste moment, doorzaaien op de kale plekken en goed bemesten. Dan staat je gazon er de komende maanden goed bij.
+De fundering voor een donkergroene grasmat leg je direct in het vroege voorjaar. Verticuteren op het juiste moment, doorzaaien op de kale plekken en goed bemesten. Verticuteren is trouwens maar één onderdeel van je [tuinonderhoud in de lente](/blog/tuinonderhoud-lente). Dan staat je gazon er de komende maanden goed bij.
 
 Wil je dit laten doen door een hovenier in jouw buurt? Via TuinHub vergelijk je eenvoudig offertes en kies je de aanpak die bij je past. [Vraag een vrijblijvende offerte aan](/offerte).

@@ -1,13 +1,13 @@
 ---
 title: "Tuinonderhoud in de lente: zo zet je je tuin klaar voor het nieuwe seizoen"
-description: "De lente is begonnen. Ontdek wanneer je verticuteert, hoe je de eerste snoeibeurt aanpakt en wat je nu doet met borders en bloembollen. Praktisch advies voor huiseigenaren."
+description: "Tuinonderhoud in de lente: wanneer verticuteren, hoe je snoeit en wat je nu doet met borders en bloembollen. Praktisch advies voor huiseigenaren."
 publishDate: 2026-03-28
 category: onderhoud
 featured: false
 draft: false
 ---
 
-Na maanden van kou, wind en af en toe nachtvorst ziet de tuin er in maart niet bepaald florissant uit. Kale plekken in het gazon, bruine vaste planten die nog niet weten wat ze zijn, een laag oud blad tussen de borders. Herkenbaar?
+Na maanden van kou, wind en af en toe nachtvorst ziet de tuin er in maart niet bepaald florissant uit. Kale plekken in het gazon, bruine vaste planten die nog niet weten wat ze zijn, een laag oud blad tussen de borders. Herkenbaar? Dan is het tijd voor tuinonderhoud.
 
 De lente is begonnen, maar de tuin loopt op zijn eigen tempo. Goed nieuws: je hoeft niet alles tegelijk te doen. Met de juiste volgorde en een beetje geduld heb je de boel snel op orde.
 
@@ -23,7 +23,7 @@ Gewoon een stevige bladhark pakken is in deze fase meer dan genoeg. Hark licht o
 
 Veel mensen willen het gazon in maart direct verticuteren. Logisch, want het ziet er rommelig uit en je wilt actie. Toch is een paar weken wachten slim.
 
-Verticuteren is zwaar voor het gras. De machine trekt de vervilte laag eruit, maar beschadigt daarbij ook wortels. Als de grond nog koud is, herstelt het gras langzaam. **April of begin mei werkt veel beter**: de bodem is dan opgewarmd tot boven de tien graden en het gras groeit snel genoeg om de behandeling bij te benen.
+Verticuteren is zwaar voor het gras. De machine trekt de vervilte laag eruit, maar beschadigt daarbij ook wortels. Als de grond nog koud is, herstelt het gras langzaam. In ons artikel over [gazon verticuteren in het voorjaar](/blog/gazon-verticuteren-voorjaar) lees je precies hoe je dat aanpakt. **April of begin mei werkt veel beter**: de bodem is dan opgewarmd tot boven de tien graden en het gras groeit snel genoeg om de behandeling bij te benen.
 
 Wat je in maart wél kunt doen is de eerste maaibeurt. Zodra het gras vijf tot zes centimeter hoog staat, pak je de maaier. Stel die in op vijf à zes centimeter hoogte. Niet te laag. Te kort maaien vroeg in het seizoen stresst het gras meer dan het helpt.
 
@@ -45,7 +45,7 @@ Zorg éérst dat de bodem op orde is. Wied de border goed door voor je iets nieu
 
 Werk wat compost of rijpe tuinaarde door de grond als die hard en dicht is. Vaste planten die vorig jaar te groot zijn geworden, kun je nu verdelen. Een vork erin, helften uit elkaar trekken en herplanten. Een snelle manier om je border aan te vullen zonder geld uit te geven.
 
-Wil je een nieuwe border aanleggen? Wacht even tot half april. Dan is de kans op nachtvorst klein genoeg om gevoelige planten buiten te zetten. Winterharde vaste planten, zoals astilbe, geranium of hosta, kun je nu al in de grond. Zij overleven een nachtje lichte vorst zonder moeite.
+Wil je een [nieuwe border aanleggen](/blog/nieuwe-border-aanleggen)? Wacht even tot half april. Dan is de kans op nachtvorst klein genoeg om gevoelige planten buiten te zetten. Winterharde vaste planten, zoals astilbe, geranium of hosta, kun je nu al in de grond. Zij overleven een nachtje lichte vorst zonder moeite.
 
 ## 5. De voorjaarsbollen staan al klaar
 
@@ -63,7 +63,7 @@ Bij het aanleggen van een nieuwe border loont professionele hulp als je ook gron
 
 ## Wat kost lenteonderhoud door een hovenier?
 
-Een hovenier rekent doorgaans 45 tot 75 euro per uur. Voor een gemiddelde tuin van 80 tot 120 vierkante meter ben je al snel een dagdeel kwijt voor een grondige lenteschoonmaak. Verticuteren plus doorzaaien kost doorgaans 150 tot 350 euro, afhankelijk van de oppervlakte.
+Een hovenier rekent doorgaans 35 tot 75 euro per uur (excl. btw). Voor een gemiddelde tuin van 80 tot 120 vierkante meter ben je al snel een dagdeel kwijt voor een grondige lenteschoonmaak. Verticuteren plus doorzaaien kost doorgaans 150 tot 350 euro, afhankelijk van de oppervlakte.
 
 Een nieuwe border aanleggen inclusief grondverbetering en beplanting begint bij zo'n 300 euro en loopt op. Vraag altijd meerdere offertes op voor je kiest.
 

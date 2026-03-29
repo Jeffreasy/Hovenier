@@ -1,6 +1,6 @@
 ---
 title: "Een nieuwe border aanleggen: stappenplan voor de lente"
-description: "Wil je dit voorjaar een nieuwe border aanleggen? Lees het volledige stappenplan: grond voorbereiden, welke vaste planten kiezen en wat het kost met of zonder hovenier."
+description: "Wil je een nieuwe border aanleggen dit voorjaar? Stappenplan: grond voorbereiden, vaste planten kiezen en wat het kost met of zonder hovenier."
 publishDate: 2026-03-28
 category: beplanting
 featured: false
@@ -71,7 +71,7 @@ Mulch hoef je niet elk jaar te vernieuwen. Bijvullen waar het is weggezakt is ge
 
 Het aanleggen van een border is goed zelf te doen als de grond meevalt. Het kost een middag tot een volledige dag werk, afhankelijk van de grootte.
 
-Schakel een hovenier in als:
+Schakel een [hovenier in de lente](/blog/hovenier-inhuren-lente) in als:
 - je grond hard en kleiig is en verbetering nodig heeft
 - je grote planten of struiken wil verplaatsen
 - je een volledig beplantingsontwerp wil
@@ -87,6 +87,6 @@ Grondverbetering, drainage of het verplaatsen van bestaande planten zijn extra p
 
 ## Een border die jaren meegaat
 
-Een vaste plantenborder is een investering die zichzelf terugverdient. De planten worden elk jaar groter, bloeien beter en je kunt ze verdelen om nieuwe plekken te vullen. Na drie jaar oogt de border als een doorgewinterde tuin.
+Een vaste plantenborder is een investering die zichzelf terugverdient. De planten worden elk jaar groter, bloeien beter en je kunt ze verdelen om nieuwe plekken te vullen. Na drie jaar oogt de border als een doorgewinterde tuin. Combineer het aanleggen van een border met je overige [tuinonderhoud in de lente](/blog/tuinonderhoud-lente) voor het beste resultaat.
 
 Wil je dit jaar beginnen maar weet je niet hoe? Laat een hovenier het grondwerk doen en plant daarna zelf verder. [Vraag een offerte aan via TuinHub](/offerte) en vergelijk wat een hovenier in jouw regio rekent.
