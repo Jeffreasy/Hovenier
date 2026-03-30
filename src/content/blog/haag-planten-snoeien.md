@@ -4,7 +4,7 @@ description: "Haag planten? Vergelijk haagsoorten op prijs, groeisnelheid en ond
 publishDate: 2026-03-30
 category: beplanting
 featured: false
-draft: true
+draft: false
 ---
 
 Je wilt privacy in de tuin, maar die schutting is aan vervanging toe. Een haag planten lijkt de logische stap: groener, mooier en op termijn goedkoper dan hout of beton. Maar dan komen de vragen. Welke haagplant groeit snel genoeg? Hoeveel planten heb je per meter nodig? En hoe zit het eigenlijk met de buren en de erfgrens?
