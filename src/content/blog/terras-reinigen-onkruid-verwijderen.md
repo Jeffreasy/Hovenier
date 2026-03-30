@@ -4,7 +4,7 @@ description: "Terras reinigen en onkruid tussen tegels verwijderen? Bekijk koste
 publishDate: 2026-03-29
 category: onderhoud
 featured: false
-draft: true
+draft: false
 ---
 
 Je loopt de tuin in en je terras ziet er niet uit. Groene aanslag op de tegels, onkruid dat tussen elke voeg omhoogschiet en die hardnekkige zwarte vlekken van de winter. Je wilt niks liever dan lekker buiten zitten zodra het warm wordt. Maar eerst moet je dat terras reinigen. En dan die voegen. Waar begin je?
