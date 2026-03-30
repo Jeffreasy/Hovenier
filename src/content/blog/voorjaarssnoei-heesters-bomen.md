@@ -1,13 +1,11 @@
 ---
-title: "Voorjaarssnoei: Welke Heesters en Bomen Snoei je in April-Mei?"
-description: "Welke heesters en bomen snoei je in april-mei? Snoeikalender, kosten hovenier, broedseizoen-regels en veelgemaakte fouten. Vraag gratis offertes aan."
+title: "Voorjaarssnoei: Welke Heesters en Bomen Snoei je in April-Mei? (Snoeikalender + Kosten 2026)"
+description: "Voorjaarssnoei heesters en bomen: snoeikalender april-mei, kosten hovenier, broedseizoen-regels en veelgemaakte fouten. Vraag gratis offertes aan."
 publishDate: 2026-03-29
 category: onderhoud
 featured: false
 draft: true
 ---
-
-# Voorjaarssnoei: Welke Heesters en Bomen Snoei je in April-Mei? (Snoeikalender + Kosten 2026)
 
 De dagen worden langer, de eerste knoppen barsten open en je tuin staat op het punt om los te gaan. Maar jij staat met die snoeischaar in je hand en twijfelt. Welke struik mag nu geknipt? En welke laat je beter met rust? Een verkeerde knip en je vlinderstruik bloeit dit jaar niet. Of erger: je verstoort een broedend vogelnest en zit ineens fout met de wet.
 
@@ -27,7 +25,7 @@ Zomerbloeiers bloeien op nieuw hout. Dat betekent dat ze hun bloemknoppen vormen
 
 **Fuchsia's** die de winter hebben overleefd, snoei je zodra de eerste nieuwe scheuten verschijnen. Knip het dode hout weg en neem de levende takken terug tot net boven een paar gezonde knoppen.
 
-Andere zomerbloeiers die nu aan de beurt zijn: herfsanemoon, perovskia (Russische salie), caryopteris en late clematis-soorten (groep 3). Zomerbloeiers als vlinderstruik, spiraea en fuchsia snoei je in de vroege lente omdat zij bloeien op nieuw hout.
+Andere zomerbloeiers die nu aan de beurt zijn: herfstanemoon, perovskia (Russische salie), caryopteris en late clematis-soorten (groep 3). Zomerbloeiers als vlinderstruik, spiraea en fuchsia snoei je in de vroege lente omdat zij bloeien op nieuw hout.
 
 ### Hortensia's: het hangt ervan af
 
@@ -61,7 +59,7 @@ Dit is minstens zo belangrijk als weten wat je wél snoeit. Er zijn planten die 
 
 **Voorjaarsbloeiers laat je met rust.** Forsythia, sering en weigela vormen hun bloemknoppen al in de herfst, op het hout van vorig jaar. Snoei je ze nu, dan knip je letterlijk de bloemen weg. Snoei voorjaarsbloeiers als forsythia, sering en weigela daarom altijd direct na de bloei. Dan heeft de plant de rest van het seizoen om nieuw bloeihout aan te maken.
 
-**Steenvruchtbomen** noemden we al. Kers, pruim, perzik en abrikoos zijn gevoelig voor loodglans en bacteriekanker. Snoei ze niet bij nat weer in het voorjaar, maar na de oogst of eind voorjaar wanneer het droog is.
+**Steenvruchtbomen** noemden we al. Kers, pruim, perzik en abrikoos zijn gevoelig voor loodglans en bacteriekanker. Snoei ze niet bij nat weer in het voorjaar, maar na de oogst of in de late zomer wanneer het droog is.
 
 **Vroegbloeiende clematis** (groep 1, zoals Clematis montana en Clematis alpina) bloeit op oud hout. Snoei na de bloei, niet ervoor.
 
@@ -71,7 +69,7 @@ Een handige vuistregel: snoei nooit meer dan een derde van de totale vegetatie i
 
 ## Broedseizoen en snoeien: wat zegt de wet?
 
-Dit is een onderwerp dat bij geen enkele andere tuinsite goed wordt behandeld, terwijl het behoorlijk belangrijk is.
+Veel tuinbezitters vergeten dit, maar het kan je een flinke boete opleveren.
 
 Sinds 1 januari 2024 valt de bescherming van wilde vogels onder de Omgevingswet (voorheen de Wet Natuurbescherming). Alle inheemse vogels, hun nesten en eieren zijn beschermd. Dat betekent: als er een vogel broedt in jouw haag of struik, mag je niet snoeien. Punt.
 
