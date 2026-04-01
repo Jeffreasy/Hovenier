@@ -4,7 +4,7 @@ description: "Moestuin beginnen? Wat het kost, wanneer je zaait en welke groente
 publishDate: 2026-03-31
 category: tuinaanleg
 featured: false
-draft: true
+draft: false
 ---
 
 Een moestuin beginnen staat al tijden op je lijstje. Eigen tomaten, verse sla en kruiden recht uit de tuin, hoe fijn klinkt dat? Maar elke keer als je eraan begint, loop je vast. Is je tuin wel groot genoeg? Wat kost dat allemaal? En wanneer moet je eigenlijk beginnen met zaaien?

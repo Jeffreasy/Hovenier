@@ -1,13 +1,13 @@
 ---
 title: "Schutting plaatsen of vervangen: kosten, materialen en regels (2026)"
-description: "Wat kost een schutting laten plaatsen in 2026? Prijzen per meter (€50–€220), materiaalvergelijking en regels over hoogte en burenrecht. Vraag gratis offertes aan."
+description: "Wat kost een schutting laten plaatsen in 2026? Prijzen per meter (€50–€220), materiaalkeuze en regels over hoogte en burenrecht. Vraag gratis offertes aan."
 publishDate: 2026-04-01
 category: schutting
 featured: false
 draft: true
 ---
 
-Je schutting staat scheef na de laatste najaarsstorm, de planken zijn groen van de algen en de onderste latten zijn doorgerot. Elke keer dat je in de tuin zit, kijk je recht in de keuken van de buren — en zij in de jouwe. Ondertussen weet je niet of de buurman moet meebetalen, hoe hoog je mag bouwen, of welk materiaal niet weer na vijf jaar vergaan is.
+Je schutting staat scheef na de laatste najaarsstorm, de planken zijn groen van de algen en de onderste latten zijn doorgerot. Elke keer dat je in de tuin zit, kijk je recht in de keuken van de buren. En zij in de jouwe. Ondertussen weet je niet of de buurman moet meebetalen, hoe hoog je mag bouwen, of welk materiaal niet weer na vijf jaar vergaan is.
 
 Dit artikel geeft antwoord op alle drie de vragen tegelijk. Wat kost schutting plaatsen, welk materiaal is verstandig, en wat zegt de wet?
 
@@ -112,7 +112,7 @@ Het is verstandig dit soort afspraken schriftelijk vast te leggen. Een mail of a
 
 ### Praktisch: bespreek het gewoon
 
-In de meeste gevallen is er geen advocaat nodig. Een kort gesprek aan de schutting — letterlijk — is genoeg. Leg uit wat je wil doen, vraag of de buurman wil meebetalen, en noteer de afspraken. Wie goed begint, heeft er jaren lang profijt van.
+In de meeste gevallen is er geen advocaat nodig. Een kort gesprek aan de schutting (letterlijk) is genoeg. Leg uit wat je wil doen, vraag of de buurman wil meebetalen, en noteer de afspraken. Wie goed begint, heeft er jaren lang profijt van.
 
 Lees ook ons artikel over [haag planten en erfgrensregels](/blog/haag-planten-snoeien) als je overweegt de schutting te vervangen door een groene erfafscheiding.
 
@@ -122,10 +122,10 @@ Voor een handige doe-het-zelver is een houten schutting op een vlakke ondergrond
 
 Toch zijn er situaties waar je beter een vakman inschakelt.
 
-- **Sterk hellend terrein** — palen op een helling correct waterpas zetten is lastiger dan het lijkt
-- **Fundering in beton** — als de palen niet rechtstreeks in de grond maar in betonvoeten worden geset
-- **Meer dan 20 meter** — bij grote projecten loont het de moeite om de tijdsinvestering af te zetten tegen de loonkosten
-- **Hout-beton of metselwerk** — vraagt specifieke gereedschappen en techniek
+- **Sterk hellend terrein**: palen op een helling correct waterpas zetten is lastiger dan het lijkt
+- **Fundering in beton**: als de palen niet rechtstreeks in de grond maar in betonvoeten worden geset
+- **Meer dan 20 meter**: bij grote projecten loont het de moeite om de tijdsinvestering af te zetten tegen de loonkosten
+- **Hout-beton of metselwerk**: vraagt specifieke gereedschappen en techniek
 
 Zelf doen bespaart de montagekosten (€15–€30 per meter), maar bereken ook je eigen tijd mee. Voor een schutting van 15 meter ben je al gauw een volledige werkdag kwijt. Gaat er iets mis met de fundering, dan kost dat ook extra tijd om recht te zetten.
 
@@ -137,7 +137,7 @@ Prijsverschillen tussen aannemers en hoveniers kunnen flink oplopen, soms wel 30
 
 Een schutting gaat langer mee als je hem op het juiste moment de juiste aandacht geeft.
 
-**Geïmpregneerd hout:** Beits of olie jaarlijks, bij voorkeur in het voorjaar als het hout droog is. Schuur licht op voor een hechte laag. Behandel de onderkant van de planken extra goed — daar begint het rotten.
+**Geïmpregneerd hout:** Beits of olie jaarlijks, bij voorkeur in het voorjaar als het hout droog is. Schuur licht op voor een hechte laag. Behandel de onderkant van de planken extra goed: daar begint het rotten.
 
 **Douglas en hardhout:** Laat gerust vergrijzen als je van die kleur houdt. Wil je de bruine kleur behouden, gebruik dan een doordringende olie op hardhoutbasis. Eens per twee jaar is doorgaans voldoende.
 
@@ -146,3 +146,7 @@ Een schutting gaat langer mee als je hem op het juiste moment de juiste aandacht
 **Hout-beton:** De betonpalen onderhouden zichzelf. De houten invulplanken behandel je zoals geïmpregneerd hout. Controleer jaarlijks of de planken nog goed in de sleuven zitten en niet klemmen of doorzakken.
 
 **Kunststof:** Schoonmaken met zeepwater volstaat. Controleer de bevestigingspunten jaarlijks op loszittende clips of schroeven, zeker na een stormachtige winter.
+
+## Een vakman vinden voor jouw schutting
+
+Weet je wat je wil, maar wil je het niet zelf doen? Via [TuinHub](/offerte) vraag je gratis drie offertes aan bij erkende hoveniers en aannemers in jouw regio. Je vult eenmalig in wat je nodig hebt, en de offertes komen naar jou toe. Zo vergelijk je prijzen zonder zelf drie keer te bellen.

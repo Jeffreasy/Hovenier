@@ -4,7 +4,7 @@ description: "Onkruid bestrijden in je tuin en tussen tegels? Vergelijk 7 method
 publishDate: 2026-03-31
 category: onderhoud
 featured: false
-draft: true
+draft: false
 ---
 
 Onkruid bestrijden: elk voorjaar hetzelfde verhaal. De voegen van je terras barsten open met groen, je borders worden overgenomen door brandnetels en paardenbloemen, en die oprit ziet er uit alsof er al jaren niemand meer woont. Je hebt van alles geprobeerd. Azijn, zout, kokend water. Niks werkt definitief. En Roundup? Dat mag niet meer. Je wilt gewoon weten hoe je het aanpakt zonder elk weekend op je knieën te zitten.
