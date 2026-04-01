@@ -7,7 +7,7 @@ featured: false
 draft: true
 ---
 
-Je droomt al tijden van eigen tomaten, verse sla en kruiden recht uit de tuin. Maar elke keer als je eraan begint, loop je vast. Is je tuin wel groot genoeg? Wat kost dat allemaal? En wanneer moet je eigenlijk beginnen met zaaien?
+Een moestuin beginnen staat al tijden op je lijstje. Eigen tomaten, verse sla en kruiden recht uit de tuin, hoe fijn klinkt dat? Maar elke keer als je eraan begint, loop je vast. Is je tuin wel groot genoeg? Wat kost dat allemaal? En wanneer moet je eigenlijk beginnen met zaaien?
 
 Ondertussen tikken de wekelijkse boodschappen rustig door. Het idee is er, de handen jeuken, maar de drempel voelt hoog. Herkenbaar? Dan is dit artikel voor jou. Want een moestuin beginnen is makkelijker (en goedkoper) dan je denkt. Je hoeft niet meteen een halve akker om te spitten.
 
@@ -119,11 +119,13 @@ Maar een paar fouten kun je makkelijk voorkomen:
 
 **Niet dunnen.** Wortels en radijs moeten uitgedund worden als de zaailingen opkomen. Doe je dat niet, dan krijg je hele dunne, zielige groenten. Het voelt gemeen om plantjes weg te trekken, maar het is nodig.
 
-**Te weinig water.** Zaailingen en jonge planten hebben regelmatig water nodig, vooral in droge periodes. Eén keer per dag goed gieten is beter dan drie keer een beetje.
+**Te weinig water.** Zaailingen en jonge planten hebben regelmatig water nodig, vooral in droge periodes. Eén keer per dag goed gieten is beter dan drie keer een beetje. Gieten doe je bij voorkeur 's ochtends, zodat het blad overdag droogt en je schimmel voorkomt. Bij aanhoudende hitte mag je ook 's avonds nog een keer, maar probeer dan het blad droog te houden en alleen de grond te raken.
 
 **Verkeerde plek.** De meeste groenten willen minstens zes uur zon per dag. Kijk goed waar de zon in je tuin staat voordat je een plek kiest.
 
 **Alles tegelijk zaaien.** Spreid je zaaidata. Als je alle sla tegelijk zaait, heb je twee weken lang meer sla dan je kunt eten, en daarna niets meer.
+
+**Grond niet voeden.** Groenten onttrekken veel voedingsstoffen aan de bodem. Zonder aanvulling raken die op en groeien je planten langzamer of vallen ze halverwege het seizoen stil. Werk aan het begin van het groeiseizoen compost door de grond, een handvol per vierkante meter is genoeg. Halverwege de zomer, als de planten volop aan het produceren zijn, kun je bijvoeden met vloeibare organische mest, zo'n twee keer per maand. Dit kleine beetje extra moeite zie en proef je echt in je oogst.
 
 ## Welke methode past bij jou?
 

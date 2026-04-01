@@ -7,7 +7,7 @@ featured: false
 draft: true
 ---
 
-Elk voorjaar hetzelfde verhaal. De voegen van je terras barsten open met groen, je borders worden overgenomen door brandnetels en paardenbloemen, en die oprit ziet er uit alsof er al jaren niemand meer woont. Je hebt van alles geprobeerd. Azijn, zout, kokend water. Niks werkt definitief. En Roundup? Dat mag niet meer. Je wilt gewoon weten hoe je onkruid bestrijdt zonder elk weekend op je knieën te zitten.
+Onkruid bestrijden: elk voorjaar hetzelfde verhaal. De voegen van je terras barsten open met groen, je borders worden overgenomen door brandnetels en paardenbloemen, en die oprit ziet er uit alsof er al jaren niemand meer woont. Je hebt van alles geprobeerd. Azijn, zout, kokend water. Niks werkt definitief. En Roundup? Dat mag niet meer. Je wilt gewoon weten hoe je het aanpakt zonder elk weekend op je knieën te zitten.
 
 In dit artikel vergelijken we zeven methoden om onkruid te bestrijden. Wat werkt het beste, wat kost het, en wat mag eigenlijk nog wel en niet? Zodat jij kunt kiezen wat bij jouw situatie past.
 
@@ -128,13 +128,13 @@ Bestrijden is één ding. Voorkomen is beter. Hier een paar manieren om ervoor t
 
 **Voegzand vervangen.** Zoals hierboven beschreven: goed voegzand is de effectiefste manier om onkruid tussen tegels te voorkomen. Investeer één keer en je hebt er jaren profijt van.
 
-**Worteldoek in borders.** Anti-worteldoek kost €1 tot €3 per m² en leg je onder grind of beplanting. Het laat water door, maar houdt onkruidzaadjes tegen. Niet waterdicht (er komt toch wel wat door), maar het scheelt enorm.
+**Worteldoek in borders.** Anti-worteldoek kost €1 tot €3 per m² en leg je onder grind of beplanting. Het laat water door, maar houdt onkruidzaadjes tegen. Niet waterdicht (er komt toch wel wat door), maar het scheelt enorm. Kies voor worteldoek van minimaal 100 gram/m²; het dunnere vliestype scheurt snel en laat meer door. Lap de naden minstens 10 cm over elkaar en snij het iets groter dan je oppervlak. Als er toch onkruid doorkomt, zit dat in het organische materiaal dat zich bovenop het doek heeft opgehoopt. Dat laagje wegkrabben, niet onder het doek graven.
 
 **Mulch aanbrengen.** Een laag van 7 tot 10 cm boomschors of houtsnippers op je borders houdt onkruidzaadjes tegen en houdt vocht vast. Mulch kost €3 tot €8 per m², afhankelijk van het materiaal. Je brengt het aan na het wieden. Let op: te dun werkt niet, zaadjes ontkiemen dan toch. Twee keer per jaar bijvullen is genoeg.
 
-**Bodembedekkers planten.** In borders waar je steeds onkruid hebt: plant bodembedekkers. Die concurreren het onkruid weg. Denk aan geranium macrorrhizum, waldsteinia of pachysandra. Ze vullen kale plekken op en vergen weinig onderhoud.
+**Bodembedekkers planten.** In borders waar je steeds onkruid hebt: plant bodembedekkers. Die concurreren het onkruid weg. Denk aan geranium macrorrhizum, waldsteinia of pachysandra. Ze vullen kale plekken op en vergen weinig onderhoud. Plant ze op 20 tot 30 cm afstand van elkaar; de eerste zomer moet je nog wat wieden, maar daarna sluiten ze het dek. Zeker in schaduwrijke hoeken, waar andere planten het laten afweten, is dit een uitkomst. Bodembedekkers komen elk jaar terug, dus de aanschaf van een paar planten is een eenmalige investering.
 
-**Regelmatig vegen.** Klinkt simpel, is het ook. Organisch materiaal tussen voegen is voedingsbodem voor onkruid. Door je terras regelmatig aan te vegen, geef je zaadjes minder kans.
+**Regelmatig vegen.** Klinkt simpel, is het ook. Organisch materiaal tussen voegen is voedingsbodem voor onkruid. Door je terras regelmatig aan te vegen, geef je zaadjes minder kans. Doe het in het najaar extra grondig, als er veel bladeren liggen. En in het vroege voorjaar, nog voor je het eerste groen ziet: terras schoon en meteen een preventieve behandeling. Dat scheelt een hoop werk verderop in het seizoen.
 
 Heb je net je [terras gereinigd en het onkruid eruit gehaald](/blog/terras-reinigen-onkruid-verwijderen)? Dit is het moment om voegzand aan te brengen. Dan was dat meteen je laatste keer krabben.
 
