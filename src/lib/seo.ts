@@ -41,7 +41,7 @@ export function articleSchema(props: ArticleSchemaProps): string {
     },
     ...(props.image ? { image: props.image } : {}),
     mainEntityOfPage: {
-      '@type': '@id',
+      '@type': 'WebPage',
       '@id':   props.url,
     },
   })

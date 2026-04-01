@@ -1,20 +1,6 @@
 import { useState, useEffect, type FC } from 'react'
 import StarRating from './StarRating'
-
-interface Bedrijf {
-  _id:            string
-  naam:           string
-  stad?:          string
-  provincie?:     string
-  website?:       string
-  telefoon?:      string
-  googleScore?:   number
-  aantalReviews?: number
-  postcode?:      string
-  hoofdCategorie?: string
-  googleMapsUrl:  string
-  slug:           string
-}
+import { CATEGORIE_LABELS, type Bedrijf } from '../lib/types'
 
 interface Props {
   postcode: string
@@ -23,28 +9,13 @@ interface Props {
   stadSlug: string
 }
 
-const CATEGORIE_LABELS: Record<string, string> = {
-  'Tuin': 'Tuin',
-  'Tuin- en landschapaannemer': 'Tuinaannemer',
-  'Tuin- en landschapsaannemer': 'Tuinaannemer',
-  'Tuin- en landschapsarchitect': 'Tuinaannemer',
-  'Hoveniersbedrijf': 'Hovenier',
-  'Hovenier': 'Hovenier',
-  'Landschapsarchitect': 'Landschapsarchitect',
-  'Boomverzorging': 'Boomverzorging',
-  'Boomverzorgingsdienst': 'Boomverzorging',
-  'Tuinaannemer': 'Tuinaannemer',
-  'Tuinonderhoud': 'Tuinonderhoud',
-  'Tuinman': 'Tuinman',
-}
-
 const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
   const [bedrijven, setBedrijven] = useState<Bedrijf[]>([])
   const [loading, setLoading]     = useState(true)
   const [error, setError]         = useState(false)
 
   useEffect(() => {
-    const convexUrl = (import.meta as Record<string, any>).env?.PUBLIC_CONVEX_URL ?? ''
+    const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     if (!convexUrl) { setLoading(false); return }
 
     const path = stad ? 'bedrijven:zoekBedrijven' : 'bedrijven:getTopBedrijven'

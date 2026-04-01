@@ -5,7 +5,7 @@ import {
   type SchuttingMaterial,
 } from '../lib/pricing'
 import { formatRange } from '../lib/utils'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 
 interface MaterialInfo {
   id:            string
@@ -37,7 +37,7 @@ const SchuttingCalculator: FC = () => {
   const [buurman,  setBuurman]  = useState(false)
   const [material, setMaterial] = useState<SchuttingMaterial>(SCHUTTING_MATERIALS[0]!)
 
-  const result      = calculateSchuttingCosts(meters, material, hoogte)
+  const result      = useMemo(() => calculateSchuttingCosts(meters, material, hoogte), [meters, material, hoogte])
   const needsPermit = hoogte >= 2.0
   function shareWhatsApp() {
     const splitTekst = buurman

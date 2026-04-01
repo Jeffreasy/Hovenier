@@ -134,3 +134,35 @@ export interface SEOMeta {
   ogType?: 'website' | 'article'
   noindex?: boolean
 }
+
+// ─── Bedrijven (Google Places dataset) ───────────────────────────────────────
+
+export interface Bedrijf {
+  _id:             string
+  naam:            string
+  stad?:           string
+  provincie?:      string
+  website?:        string
+  telefoon?:       string
+  googleScore?:    number
+  aantalReviews?:  number
+  postcode?:       string
+  hoofdCategorie?: string
+  googleMapsUrl:   string
+  slug:            string
+}
+
+export const CATEGORIE_LABELS: Record<string, string> = {
+  'Tuin':                         'Tuin',
+  'Tuin- en landschapaannemer':   'Tuinaannemer',
+  'Tuin- en landschapsaannemer':  'Tuinaannemer',
+  'Tuin- en landschapsarchitect': 'Tuinaannemer',
+  'Hoveniersbedrijf':             'Hovenier',
+  'Hovenier':                     'Hovenier',
+  'Landschapsarchitect':          'Landschapsarchitect',
+  'Boomverzorging':               'Boomverzorging',
+  'Boomverzorgingsdienst':        'Boomverzorging',
+  'Tuinaannemer':                 'Tuinaannemer',
+  'Tuinonderhoud':                'Tuinonderhoud',
+  'Tuinman':                      'Tuinman',
+}

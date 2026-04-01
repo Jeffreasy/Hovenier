@@ -17,9 +17,12 @@ interface Props {
 // ─── Postcode → gemeente mapping ─────────────────────────────────────────────
 
 const POSTCODE_GEMEENTE: Array<{ prefixes: string[]; gemeente: string }> = [
+  // 4-digit specific prefixes first (highest priority match)
   { gemeente: 'Dronten',          prefixes: ['8250', '8251', '8252', '8253', '8254', '8255', '8256', '8257', '8258', '8259'] },
   { gemeente: 'Noordoostpolder',  prefixes: ['8300', '8301', '8302', '8310', '8313', '8314', '8315', '8316', '8317', '8318', '8319', '8320', '8321', '8322', '8323', '8324', '8325', '8326', '8327', '8328', '8329'] },
   { gemeente: 'Zeewolde',         prefixes: ['3890', '3891', '3892', '3893'] },
+  { gemeente: 'Deventer',         prefixes: ['7400', '7411', '7412', '7413', '7414', '7415', '7416', '7417', '7418', '7419', '7420', '7421'] },
+  // 2-digit broad prefixes (fallback)
   { gemeente: 'Almere',           prefixes: ['13', '14'] },
   { gemeente: 'Lelystad',         prefixes: ['82', '83'] },
   { gemeente: 'Amsterdam',       prefixes: ['10', '11', '12'] },
@@ -41,7 +44,6 @@ const POSTCODE_GEMEENTE: Array<{ prefixes: string[]; gemeente: string }> = [
   { gemeente: 'Apeldoorn',       prefixes: ['73', '74'] },
   { gemeente: 'Zwolle',          prefixes: ['80', '81'] },
   { gemeente: 'Enschede',        prefixes: ['75', '76', '77'] },
-  { gemeente: 'Deventer',        prefixes: ['74'] },
   { gemeente: 'Groningen',       prefixes: ['97', '98'] },
   { gemeente: 'Emmen',           prefixes: ['78', '79'] },
   { gemeente: 'Assen',           prefixes: ['94'] },

@@ -1,15 +1,7 @@
 import { useState, type FC } from 'react'
 import type { ServiceType } from '../lib/types'
+import { SERVICE_OPTIONS } from '../lib/constants'
 import { isValidPostcode } from '../lib/utils'
-
-const SERVICE_OPTIONS: { value: ServiceType; label: string }[] = [
-  { value: 'tuinaanleg',  label: 'Tuinaanleg' },
-  { value: 'onderhoud',   label: 'Onderhoud' },
-  { value: 'bestrating',  label: 'Bestrating / terras' },
-  { value: 'beplanting',  label: 'Beplanting' },
-  { value: 'schutting',   label: 'Schutting' },
-  { value: 'overig',      label: 'Iets anders' },
-]
 
 const Zoekbalk: FC = () => {
   const [postcode, setPostcode] = useState('')
