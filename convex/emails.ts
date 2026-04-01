@@ -38,7 +38,7 @@ export const sendLeadNotifications = internalAction({
 
     // Mail 1: Admin notificatie
     try {
-      await resend.emails.send({
+      const adminResult = await resend.emails.send({
         from: "TuinHub <noreply@tuinhub.nl>",
         to: "info@tuinhub.nl",
         subject: `Nieuwe lead: ${lead.dienst} in ${lead.postcode}`,
@@ -59,13 +59,14 @@ export const sendLeadNotifications = internalAction({
           </table>
         `,
       });
-    } catch (err) {
-      console.error("Admin email failed:", err);
+      console.log("Admin email result:", JSON.stringify(adminResult));
+    } catch (err: any) {
+      console.error("Admin email FAILED:", err?.message ?? err, JSON.stringify(err));
     }
 
     // Mail 2: Bevestiging naar consument (plain text = safe)
     try {
-      await resend.emails.send({
+      const consumerResult = await resend.emails.send({
         from: "TuinHub <noreply@tuinhub.nl>",
         to: lead.email,
         subject: "Je aanvraag bij TuinHub is ontvangen",
@@ -76,8 +77,9 @@ Bedankt voor je aanvraag! We bekijken je wensen persoonlijk en nemen binnen 24 u
 Groet,
 Team TuinHub`,
       });
-    } catch (err) {
-      console.error("Consumer confirmation email failed:", err);
+      console.log("Consumer email result:", JSON.stringify(consumerResult));
+    } catch (err: any) {
+      console.error("Consumer email FAILED:", err?.message ?? err, JSON.stringify(err));
     }
   },
 });
