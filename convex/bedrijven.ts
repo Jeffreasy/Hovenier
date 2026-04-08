@@ -296,9 +296,6 @@ export const getMyBedrijf = query({
 export const searchUnclaimedBedrijven = query({
   args: { zoekterm: v.string() },
   handler: async (ctx, { zoekterm }) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) return []
-
     const term = zoekterm.toLowerCase().trim()
     if (term.length < 2) return []
 
