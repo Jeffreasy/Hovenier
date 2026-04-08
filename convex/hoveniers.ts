@@ -2,47 +2,45 @@ import { mutation, query } from './_generated/server'
 import { v } from 'convex/values'
 
 // ══════════════════════════════════════════════════════════════════════════════
-// TOEKOMSTIG: Hovenier Portal (Clerk-accounts)
-// Deze functies zijn bedoeld voor een toekomstig hovenier-portal waar hoveniers
-// zich aanmelden via Clerk. Momenteel NIET actief — alle zoek/matching
-// verloopt via de `bedrijven` tabel (Google Places dataset, 5.067 records).
+// Hovenier Portal (LaventeCare Auth)
+// Auth is verified server-side by Astro middleware.
+// User identity is passed as argument (userId) instead of Clerk OIDC.
 // ══════════════════════════════════════════════════════════════════════════════
 
-// ── Hovenier profiel ophalen (server-side auth) ───────────────────────────────
+// ── Hovenier profiel ophalen ───────────────────────────────────────────────
 
 export const getMe = query({
-  args: {},
-  handler: async (ctx) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) return null
+  args: { userId: v.string() },
+  handler: async (ctx, { userId }) => {
+    if (!userId) return null
 
     return ctx.db
       .query('hoveniers')
-      .withIndex('by_clerk_id', (q) => q.eq('clerkId', identity.subject))
+      .withIndex('by_clerk_id', (q) => q.eq('clerkId', userId))
       .unique()
   },
 })
 
-// ── Profiel aanmaken of bijwerken (server-side auth) ─────────────────────────
+// ── Profiel aanmaken of bijwerken ─────────────────────────────────────────
 
 export const upsertHovenier = mutation({
   args: {
+    userId:         v.string(),
     naam:           v.string(),
     email:          v.string(),
     telefoon:       v.optional(v.string()),
-    regio:          v.array(v.string()),       // postcode prefixen, bijv. ["10","11"]
-    specialisaties: v.array(v.string()),       // ServiceType[]
+    regio:          v.array(v.string()),
+    specialisaties: v.array(v.string()),
     actief:         v.optional(v.boolean()),
   },
   handler: async (ctx, args) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) throw new Error('Niet ingelogd')
+    if (!args.userId) throw new Error('Niet ingelogd')
 
-    const clerkId = identity.subject
+    const userId = args.userId
 
     const existing = await ctx.db
       .query('hoveniers')
-      .withIndex('by_clerk_id', (q) => q.eq('clerkId', clerkId))
+      .withIndex('by_clerk_id', (q) => q.eq('clerkId', userId))
       .unique()
 
     if (existing) {
@@ -58,7 +56,7 @@ export const upsertHovenier = mutation({
     }
 
     return ctx.db.insert('hoveniers', {
-      clerkId,
+      clerkId:        userId,
       naam:           args.naam,
       email:          args.email,
       telefoon:       args.telefoon,

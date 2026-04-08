@@ -274,18 +274,18 @@ export const getAllSlugs = query({
 
 // ══════════════════════════════════════════════════════════════════════════════
 // PORTAL: Hovenier ↔ Bedrijf koppeling
+// Auth is verified server-side by Astro middleware — userId passed as argument
 // ══════════════════════════════════════════════════════════════════════════════
 
 // Haal het bedrijf op dat de ingelogde hovenier heeft geclaimd
 export const getMyBedrijf = query({
-  args: {},
-  handler: async (ctx) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) return null
+  args: { userId: v.string() },
+  handler: async (ctx, { userId }) => {
+    if (!userId) return null
 
     const bedrijf = await ctx.db
       .query('bedrijven')
-      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', identity.subject))
+      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', userId))
       .unique()
 
     return bedrijf
@@ -325,19 +325,19 @@ export const searchUnclaimedBedrijven = query({
   },
 })
 
-// Claim een bedrijf — koppelt Clerk userId aan bedrijf
+// Claim een bedrijf — koppelt userId aan bedrijf
 export const claimBedrijf = mutation({
-  args: { bedrijfId: v.id('bedrijven') },
-  handler: async (ctx, { bedrijfId }) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) throw new Error('Niet ingelogd')
-
-    const clerkId = identity.subject
+  args: {
+    bedrijfId: v.id('bedrijven'),
+    userId:    v.string(),
+  },
+  handler: async (ctx, { bedrijfId, userId }) => {
+    if (!userId) throw new Error('Niet ingelogd')
 
     // Check: heeft deze user al een bedrijf geclaimd?
     const existing = await ctx.db
       .query('bedrijven')
-      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', clerkId))
+      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', userId))
       .unique()
 
     if (existing) {
@@ -351,7 +351,7 @@ export const claimBedrijf = mutation({
       throw new Error('Dit bedrijf is al geclaimd door een andere gebruiker.')
     }
 
-    await ctx.db.patch(bedrijfId, { claimedByClerkId: clerkId })
+    await ctx.db.patch(bedrijfId, { claimedByClerkId: userId })
     return { success: true, naam: bedrijf.naam }
   },
 })

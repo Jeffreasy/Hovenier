@@ -2,9 +2,10 @@
 export const prerender = false
 import PortalLayout from '../../layouts/PortalLayout.astro'
 
-const { getToken } = Astro.locals.auth()
-const clerkToken = await getToken({ template: 'convex' }) ?? ''
+const authToken = Astro.locals.token ?? ''
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+const userId = Astro.locals.user?.id ?? ''
+const userEmail = Astro.locals.user?.email ?? ''
 ---
 
 <PortalLayout title="Dashboard" activeNav="dashboard">
@@ -48,7 +49,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     </div>
   </div>
 
-  <script define:vars={{ convexUrl, clerkToken }}>
+  <script define:vars={{ convexUrl, authToken, userId, userEmail }}>
     /** Escape HTML entities to prevent XSS */
     function esc(str) {
       const div = document.createElement('div')
@@ -71,9 +72,9 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${clerkToken}`,
+            'Authorization': `Bearer ${authToken}`,
           },
-          body: JSON.stringify({ path: 'leads:getMyLeads', args: {}, format: 'json' }),
+          body: JSON.stringify({ path: 'leads:getMyLeads', args: { userId }, format: 'json' }),
         })
         const { value: leads } = await res.json()
 
@@ -113,16 +114,16 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 </PortalLayout>
 
 <!-- Check if bedrijf is claimed -->
-<script define:vars={{ convexUrl, clerkToken }}>
+<script define:vars={{ convexUrl, authToken, userId }}>
   async function checkClaimStatus() {
     try {
       const res = await fetch(`${convexUrl}/api/query`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${clerkToken}`,
+          'Authorization': `Bearer ${authToken}`,
         },
-        body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: {}, format: 'json' }),
+        body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: { userId }, format: 'json' }),
       })
       const { value: bedrijf } = await res.json()
       if (!bedrijf) {

@@ -18,7 +18,7 @@ export default defineSchema({
 
     // Status & routing
     status:          v.union(v.literal('nieuw'), v.literal('klant_gesproken'), v.literal('gematcht'), v.literal('vervallen')),
-    toegewezenAan:   v.optional(v.string()),  // Clerk userId van hovenier
+    toegewezenAan:   v.optional(v.string()),  // LaventeCare userId van hovenier
     notities:        v.optional(v.string()),
 
     // Concierge MVP
@@ -30,10 +30,10 @@ export default defineSchema({
     .index('by_hovenier',       ['toegewezenAan'])
     .index('by_hovenier_status',['toegewezenAan', 'status']),
 
-  // ── Hoveniers (TOEKOMSTIG — ingelogde hovenier-accounts via Clerk) ──────────
+  // ── Hoveniers (ingelogde hovenier-accounts via LaventeCare Auth) ────────────
   // Momenteel niet actief. Alle zoek/matching verloopt via `bedrijven` tabel.
   hoveniers: defineTable({
-    clerkId:        v.string(),   // Clerk userId (uniek)
+    clerkId:        v.string(),   // LaventeCare userId (field name kept for migration compat)
     naam:           v.string(),   // Bedrijfsnaam
     email:          v.string(),
     telefoon:       v.optional(v.string()),
@@ -73,7 +73,7 @@ export default defineSchema({
     lng:                v.optional(v.float64()),
     beschrijving:       v.optional(v.string()),
 
-    // Portal: koppeling met Clerk hovenier-account
+    // Portal: koppeling met LaventeCare hovenier-account (field name kept for migration compat)
     claimedByClerkId:   v.optional(v.string()),
   })
     .index('by_provincie',       ['provincie'])

@@ -2,10 +2,10 @@
 export const prerender = false
 import PortalLayout from '../../../layouts/PortalLayout.astro'
 
-const { getToken } = Astro.locals.auth()
-const clerkToken = await getToken({ template: 'convex' }) ?? ''
+const authToken = Astro.locals.token ?? ''
 const { id } = Astro.params
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+const userId = Astro.locals.user?.id ?? ''
 ---
 
 <PortalLayout title="Lead detail" showBackLink maxWidth="900px">
@@ -17,7 +17,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     </div>
   </div>
 
-  <script define:vars={{ convexUrl, clerkToken, id }}>
+  <script define:vars={{ convexUrl, authToken, id, userId }}>
     /** Escape HTML entities to prevent XSS */
     function esc(str) {
       const div = document.createElement('div')
@@ -43,11 +43,11 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${clerkToken}`,
+            'Authorization': `Bearer ${authToken}`,
           },
           body: JSON.stringify({
             path: 'leads:getLeadById',
-            args: { id },
+            args: { id, userId },
             format: 'json',
           }),
         })
@@ -114,11 +114,11 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${clerkToken}`,
+            'Authorization': `Bearer ${authToken}`,
           },
           body: JSON.stringify({
             path: 'leads:updateLeadStatus',
-            args: { id: leadId, status },
+            args: { id: leadId, status, userId },
             format: 'json',
           }),
         })

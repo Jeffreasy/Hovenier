@@ -2,9 +2,9 @@
 export const prerender = false
 import PortalLayout from '../../layouts/PortalLayout.astro'
 
-const { getToken } = Astro.locals.auth()
-const clerkToken = await getToken({ template: 'convex' }) ?? ''
+const authToken = Astro.locals.token ?? ''
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+const userId = Astro.locals.user?.id ?? ''
 ---
 
 <PortalLayout title="Mijn profiel" activeNav="profiel" maxWidth="720px">
@@ -49,7 +49,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   <!-- Feedback -->
   <div id="claim-feedback" class="feedback" hidden></div>
 
-  <script define:vars={{ convexUrl, clerkToken }}>
+  <script define:vars={{ convexUrl, authToken, userId }}>
     function esc(str) {
       const div = document.createElement('div')
       div.textContent = String(str ?? '')
@@ -64,9 +64,9 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${clerkToken}`,
+            'Authorization': `Bearer ${authToken}`,
           },
-          body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: {}, format: 'json' }),
+          body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: { userId }, format: 'json' }),
         })
 
         document.getElementById('state-loading').style.display = 'none'
@@ -174,11 +174,11 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${clerkToken}`,
+            'Authorization': `Bearer ${authToken}`,
           },
           body: JSON.stringify({
             path: 'bedrijven:claimBedrijf',
-            args: { bedrijfId: id },
+            args: { bedrijfId: id, userId },
             format: 'json',
           }),
         })

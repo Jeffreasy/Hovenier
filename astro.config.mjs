@@ -4,7 +4,6 @@ import react from '@astrojs/react'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
 import vercel from '@astrojs/vercel'
-import clerk from '@clerk/astro'
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,10 +25,6 @@ export default defineConfig({
 
   // ── Integrations ────────────────────────────────────────────────────────────
   integrations: [
-    clerk({
-      signInUrl:  '/inloggen',
-      signUpUrl:  '/registreren',
-    }),           // Clerk auth — must be first
     react(),
     sitemap(),
   ],
@@ -45,8 +40,6 @@ export default defineConfig({
             if (id.includes('node_modules/convex')) return 'convex'
             // React ecosystem in eigen chunk
             if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) return 'react'
-            // Clerk auth in eigen chunk
-            if (id.includes('node_modules/@clerk')) return 'clerk'
           },
         },
       },

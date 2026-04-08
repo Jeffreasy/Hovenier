@@ -1,14 +1,16 @@
 /// <reference types="astro/client" />
-/// <reference types="@clerk/astro/types" />
 
-// Augment Astro.locals with Clerk's auth function
+interface User {
+  id: string
+  email: string
+  name?: string
+  full_name?: string
+  role: 'admin' | 'editor' | 'user' | 'viewer'
+}
+
 declare namespace App {
   interface Locals {
-    auth: () => {
-      userId: string | null
-      sessionId: string | null
-      getToken: () => Promise<string | null>
-    }
-    currentUser: () => Promise<import('@clerk/backend').User | null>
+    user: User | null
+    token: string | null
   }
 }

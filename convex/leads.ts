@@ -82,20 +82,19 @@ export const submitLead = mutation({
 })
 
 // ── Leads voor ingelogde hovenier ────────────────────────────────────────────
+// Auth is verified server-side by Astro middleware — userId passed as argument
 
 export const getMyLeads = query({
   args: {
+    userId: v.string(),
     status: v.optional(v.union(v.literal('nieuw'), v.literal('klant_gesproken'), v.literal('gematcht'), v.literal('vervallen'))),
   },
-  handler: async (ctx, { status }) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) return []
-
-    const clerkId = identity.subject
+  handler: async (ctx, { userId, status }) => {
+    if (!userId) return []
 
     const leads = await ctx.db
       .query('leads')
-      .withIndex('by_hovenier', (q) => q.eq('toegewezenAan', clerkId))
+      .withIndex('by_hovenier', (q) => q.eq('toegewezenAan', userId))
       .order('desc')
       .collect()
 
@@ -106,16 +105,17 @@ export const getMyLeads = query({
 // ── Eén lead ophalen ─────────────────────────────────────────────────────────
 
 export const getLeadById = query({
-  args: { id: v.id('leads') },
-  handler: async (ctx, { id }) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) return null
+  args: {
+    id: v.id('leads'),
+    userId: v.string(),
+  },
+  handler: async (ctx, { id, userId }) => {
+    if (!userId) return null
 
-    const clerkId = identity.subject
     const lead = await ctx.db.get(id)
 
     // Security: hovenier mag alleen eigen leads zien (IDOR preventie)
-    if (!lead || lead.toegewezenAan !== clerkId) return null
+    if (!lead || lead.toegewezenAan !== userId) return null
     return lead
   },
 })
@@ -125,17 +125,16 @@ export const getLeadById = query({
 export const updateLeadStatus = mutation({
   args: {
     id:       v.id('leads'),
+    userId:   v.string(),
     status:   v.union(v.literal('nieuw'), v.literal('klant_gesproken'), v.literal('gematcht'), v.literal('vervallen')),
     notities: v.optional(v.string()),
   },
-  handler: async (ctx, { id, status, notities }) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) throw new Error('Niet ingelogd')
+  handler: async (ctx, { id, userId, status, notities }) => {
+    if (!userId) throw new Error('Niet ingelogd')
 
-    const clerkId = identity.subject
     const lead = await ctx.db.get(id)
 
-    if (!lead || lead.toegewezenAan !== clerkId) {
+    if (!lead || lead.toegewezenAan !== userId) {
       throw new Error('Niet geautoriseerd')
     }
 
@@ -144,19 +143,19 @@ export const updateLeadStatus = mutation({
 })
 
 // ── Admin: alle leads ophalen ─────────────────────────────────────────────────
-// Beveiligd via email-whitelist (admin emails)
+// Auth verified via email-whitelist (admin emails)
 
 const ADMIN_EMAILS = ['jeffrey@laventecare.nl', 'info@tuinhub.nl']
 
 export const getAllLeads = query({
-  args: {},
-  handler: async (ctx) => {
-    const identity = await ctx.auth.getUserIdentity()
-    if (!identity) return []
+  args: {
+    userEmail: v.string(),
+  },
+  handler: async (ctx, { userEmail }) => {
+    if (!userEmail) return []
 
     // Admin check op email
-    const email = identity.email ?? ''
-    if (!ADMIN_EMAILS.includes(email.toLowerCase())) return []
+    if (!ADMIN_EMAILS.includes(userEmail.toLowerCase())) return []
 
     return await ctx.db
       .query('leads')
@@ -164,4 +163,3 @@ export const getAllLeads = query({
       .collect()
   },
 })
-

@@ -2,9 +2,9 @@
 export const prerender = false
 import PortalLayout from '../../layouts/PortalLayout.astro'
 
-const { getToken } = Astro.locals.auth()
-const clerkToken = await getToken({ template: 'convex' }) ?? ''
+const authToken = Astro.locals.token ?? ''
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+const userEmail = Astro.locals.user?.email ?? ''
 ---
 
 <PortalLayout title="Admin — Alle leads" activeNav="admin" maxWidth="1200px">
@@ -38,7 +38,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     </div>
   </div>
 
-  <script define:vars={{ convexUrl, clerkToken }}>
+  <script define:vars={{ convexUrl, authToken, userEmail }}>
     function esc(str) {
       const div = document.createElement('div')
       div.textContent = String(str ?? '')
@@ -72,9 +72,9 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${clerkToken}`,
+            'Authorization': `Bearer ${authToken}`,
           },
-          body: JSON.stringify({ path: 'leads:getAllLeads', args: {}, format: 'json' }),
+          body: JSON.stringify({ path: 'leads:getAllLeads', args: { userEmail }, format: 'json' }),
         })
 
         if (!res.ok) {
