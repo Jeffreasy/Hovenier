@@ -20,14 +20,15 @@ export const getLead = internalQuery({
 
 export const submitLead = mutation({
   args: {
-    naam:     v.string(),
-    email:    v.string(),
-    telefoon: v.string(),
-    postcode: v.string(),
-    dienst:   v.string(),
-    m2:       v.number(),
-    budget:   v.string(),
-    timing:   v.string(),
+    naam:         v.string(),
+    email:        v.string(),
+    telefoon:     v.string(),
+    postcode:     v.string(),
+    dienst:       v.string(),
+    m2:           v.number(),
+    budget:       v.string(),
+    timing:       v.string(),
+    bedrijf_naam: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
     // Server-side validatie — client kan omzeild worden
@@ -64,6 +65,7 @@ export const submitLead = mutation({
       postcode,
       status:             'nieuw',
       matched_bedrijf_id: match?._id,
+      bedrijf_naam:       args.bedrijf_naam ?? undefined,
     })
 
     return { leadId, matched: !!match }

@@ -37,14 +37,15 @@ http.route({
 
     try {
       const result = await ctx.runMutation(api.leads.submitLead, {
-        naam:     String(data.naam),
-        email:    String(data.email),
-        telefoon: String(data.telefoon),
-        postcode: String(data.postcode),
-        dienst:   String(data.dienst),
-        m2:       Number(data.m2),
-        budget:   String(data.budget),
-        timing:   String(data.timing),
+        naam:         String(data.naam),
+        email:        String(data.email),
+        telefoon:     String(data.telefoon),
+        postcode:     String(data.postcode),
+        dienst:       String(data.dienst),
+        m2:           Number(data.m2),
+        budget:       String(data.budget),
+        timing:       String(data.timing),
+        bedrijf_naam: data.bedrijf_naam ? String(data.bedrijf_naam) : undefined,
       })
 
       return new Response(JSON.stringify({ ok: true, ...result }), {

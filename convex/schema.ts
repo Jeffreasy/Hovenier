@@ -22,8 +22,9 @@ export default defineSchema({
     notities:        v.optional(v.string()),
 
     // Concierge MVP
-    admin_notes:        v.optional(v.string()),   // belnotities
-    matched_bedrijf_id: v.optional(v.id('bedrijven')),  // referentie naar gescrapete bedrijven
+    admin_notes:        v.optional(v.string()),
+    matched_bedrijf_id: v.optional(v.id('bedrijven')),
+    bedrijf_naam:       v.optional(v.string()),  // naam van gekozen bedrijf uit zoekresultaten
   })
     .index('by_status',         ['status'])
     .index('by_hovenier',       ['toegewezenAan'])

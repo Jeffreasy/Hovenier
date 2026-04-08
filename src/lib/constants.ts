@@ -58,10 +58,10 @@ export const NAV_LINKS = [
 // ─── Social Proof ─────────────────────────────────────────────────────────────
 
 export const SOCIAL_PROOF = {
-  offertes:  '12.400+',
-  hoveniers: '480+',
-  rating:    '4.8',
-  reviews:   '3.200+',
+  offertes:  '250+',
+  hoveniers: '5.000+',
+  rating:    '4.7',
+  reviews:   '850+',
 }
 
 // ─── Site Info ────────────────────────────────────────────────────────────────
