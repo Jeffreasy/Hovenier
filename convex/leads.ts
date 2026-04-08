@@ -66,6 +66,7 @@ export const submitLead = mutation({
       status:             'nieuw',
       matched_bedrijf_id: match?._id,
       bedrijf_naam:       args.bedrijf_naam ?? undefined,
+      toegewezenAan:      match?.claimedByClerkId ?? undefined,
     })
 
     return { leadId, matched: !!match }

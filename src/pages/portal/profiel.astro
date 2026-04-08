@@ -10,62 +10,55 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 <PortalLayout title="Mijn profiel" activeNav="profiel" maxWidth="720px">
 
   <div class="page-header">
-    <h1>Mijn profiel</h1>
-    <p class="page-sub">Beheer jouw bedrijfsgegevens en werkgebied.</p>
+    <h1>Mijn bedrijf</h1>
+    <p class="page-sub">Koppel je account aan je hoveniersbedrijf.</p>
   </div>
 
-  <form id="profiel-form" class="profiel-card">
-    <div class="form-section">
-      <h2>Bedrijfsgegevens</h2>
-      <div class="field-grid">
-        <div class="field">
-          <label for="naam">Bedrijfsnaam *</label>
-          <input id="naam" name="naam" type="text" placeholder="Jansen Groenvoorziening" required />
-        </div>
-        <div class="field">
-          <label for="email">E-mailadres *</label>
-          <input id="email" name="email" type="email" placeholder="info@jansenhovenier.nl" required />
-        </div>
-        <div class="field">
-          <label for="telefoon">Telefoonnummer</label>
-          <input id="telefoon" name="telefoon" type="tel" placeholder="06 12 34 56 78" />
-        </div>
+  <!-- State: Loading -->
+  <div id="state-loading" class="state-card">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+    Profiel laden...
+  </div>
+
+  <!-- State: Claimed (bedrijf gevonden) -->
+  <div id="state-claimed" class="profiel-card" style="display:none;">
+    <div class="claimed-header">
+      <div class="claimed-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Geclaimd
       </div>
+      <h2 id="claimed-naam"></h2>
+      <p id="claimed-meta" class="claimed-meta"></p>
     </div>
+    <div class="claimed-grid" id="claimed-details"></div>
+  </div>
 
-    <div class="form-section">
-      <h2>Werkgebied</h2>
-      <p class="hint">Voer de eerste 2 cijfers in van de postcodes in jouw werkgebied, komma-gescheiden.<br/>Voorbeeld: <code>10, 11, 12, 20</code> voor Amsterdam en omgeving.</p>
-      <div class="field">
-        <label for="regio">Postcodegebieden *</label>
-        <input id="regio" name="regio" type="text" placeholder="10, 11, 12, 20" required />
+  <!-- State: Unclaimed (zoek je bedrijf) -->
+  <div id="state-unclaimed" style="display:none;">
+    <div class="search-card">
+      <h2>Zoek jouw bedrijf</h2>
+      <p class="search-hint">Zoek op bedrijfsnaam om je listing te claimen. Je profiel wordt automatisch gekoppeld aan de bestaande bedrijfsdata.</p>
+      <div class="search-input-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search-input" type="text" placeholder="Bijv. Jansen Groenvoorziening" autocomplete="off" spellcheck="false" />
       </div>
+      <div id="search-results" class="search-results"></div>
     </div>
+  </div>
 
-    <div class="form-section">
-      <h2>Specialisaties</h2>
-      <div class="specialisaties-grid" id="specialisaties-grid">
-        {['tuinaanleg', 'onderhoud', 'bestrating', 'beplanting', 'schutting', 'overig'].map((s) => (
-          <label class="spec-option">
-            <input type="checkbox" name="specialisaties" value={s} />
-            <span>{s.charAt(0).toUpperCase() + s.slice(1)}</span>
-          </label>
-        ))}
-      </div>
-    </div>
-
-    <div id="form-feedback" class="feedback" hidden></div>
-
-    <div class="form-actions">
-      <button type="submit" class="save-btn">Opslaan</button>
-    </div>
-  </form>
+  <!-- Feedback -->
+  <div id="claim-feedback" class="feedback" hidden></div>
 
   <script define:vars={{ convexUrl, clerkToken }}>
-    const form = document.getElementById('profiel-form')
-    const feedback = document.getElementById('form-feedback')
+    function esc(str) {
+      const div = document.createElement('div')
+      div.textContent = String(str ?? '')
+      return div.innerHTML
+    }
 
-    async function loadProfiel() {
+    let debounceTimer = null
+
+    async function loadMyBedrijf() {
       try {
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
@@ -73,30 +66,104 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${clerkToken}`,
           },
-          body: JSON.stringify({ path: 'hoveniers:getMe', args: {}, format: 'json' }),
+          body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: {}, format: 'json' }),
         })
-        const { value: profiel } = await res.json()
-        if (!profiel) return
+        const { value: bedrijf } = await res.json()
 
-        form.naam.value     = profiel.naam     ?? ''
-        form.email.value    = profiel.email    ?? ''
-        form.telefoon.value = profiel.telefoon ?? ''
-        form.regio.value    = (profiel.regio   ?? []).join(', ')
+        document.getElementById('state-loading').style.display = 'none'
 
-        form.querySelectorAll('input[name="specialisaties"]').forEach((cb) => {
-          cb.checked = (profiel.specialisaties ?? []).includes(cb.value)
-        })
-      } catch {}
+        if (bedrijf) {
+          showClaimed(bedrijf)
+        } else {
+          document.getElementById('state-unclaimed').style.display = 'block'
+          setupSearch()
+        }
+      } catch {
+        document.getElementById('state-loading').innerHTML =
+          '<p style="color:#dc2626;">Laden mislukt. Ververs de pagina.</p>'
+      }
     }
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault()
-      const btn = form.querySelector('.save-btn')
-      btn.textContent = 'Opslaan...'
-      btn.disabled = true
+    function showClaimed(b) {
+      document.getElementById('state-claimed').style.display = 'block'
+      document.getElementById('state-unclaimed').style.display = 'none'
+      document.getElementById('claimed-naam').textContent = b.naam
+      document.getElementById('claimed-meta').textContent =
+        [b.hoofdCategorie, b.stad, b.provincie].filter(Boolean).join(' · ')
 
-      const regio = form.regio.value.split(',').map(s => s.trim()).filter(Boolean)
-      const specialisaties = [...form.querySelectorAll('input[name="specialisaties"]:checked')].map(cb => cb.value)
+      const details = document.getElementById('claimed-details')
+      const rows = []
+      if (b.googleScore) rows.push(`<div class="detail-row"><span>Google Score</span><strong>⭐ ${b.googleScore.toFixed(1)}/5 (${b.aantalReviews ?? 0} reviews)</strong></div>`)
+      if (b.stad) rows.push(`<div class="detail-row"><span>Stad</span><strong>${esc(b.stad)}</strong></div>`)
+      if (b.provincie) rows.push(`<div class="detail-row"><span>Provincie</span><strong>${esc(b.provincie)}</strong></div>`)
+      if (b.postcode) rows.push(`<div class="detail-row"><span>Postcode</span><strong>${esc(b.postcode)}</strong></div>`)
+      if (b.telefoon) rows.push(`<div class="detail-row"><span>Telefoon</span><strong><a href="tel:${esc(b.telefoon)}">${esc(b.telefoon)}</a></strong></div>`)
+      if (b.website) rows.push(`<div class="detail-row"><span>Website</span><strong><a href="${esc(b.website)}" target="_blank" rel="noopener">${esc(b.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></strong></div>`)
+      if (b.categorieen?.length) rows.push(`<div class="detail-row detail-row--full"><span>Categorieën</span><div class="cat-tags">${b.categorieen.map(c => `<span class="cat-tag">${esc(c)}</span>`).join('')}</div></div>`)
+      details.innerHTML = rows.join('')
+    }
+
+    function setupSearch() {
+      const input = document.getElementById('search-input')
+      input.addEventListener('input', () => {
+        clearTimeout(debounceTimer)
+        debounceTimer = setTimeout(() => searchBedrijven(input.value), 300)
+      })
+    }
+
+    async function searchBedrijven(query) {
+      const results = document.getElementById('search-results')
+      if (query.trim().length < 2) {
+        results.innerHTML = ''
+        return
+      }
+
+      results.innerHTML = '<div class="search-loading">Zoeken...</div>'
+
+      try {
+        const res = await fetch(`${convexUrl}/api/query`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${clerkToken}`,
+          },
+          body: JSON.stringify({
+            path: 'bedrijven:searchUnclaimedBedrijven',
+            args: { zoekterm: query },
+            format: 'json',
+          }),
+        })
+        const { value: bedrijven } = await res.json()
+
+        if (!bedrijven?.length) {
+          results.innerHTML = '<div class="search-empty">Geen bedrijven gevonden. Probeer een andere zoekterm.</div>'
+          return
+        }
+
+        results.innerHTML = bedrijven.map(b => `
+          <div class="search-result">
+            <div class="search-result-info">
+              <strong>${esc(b.naam)}</strong>
+              <span>${[b.stad, b.provincie].filter(Boolean).join(' · ')}${b.googleScore ? ` · ⭐ ${b.googleScore.toFixed(1)}` : ''}</span>
+            </div>
+            <button class="claim-btn" onclick="claimBedrijf('${esc(b._id)}', '${esc(b.naam)}')">
+              Dit is mijn bedrijf
+            </button>
+          </div>
+        `).join('')
+      } catch {
+        results.innerHTML = '<div class="search-empty">Zoeken mislukt. Probeer opnieuw.</div>'
+      }
+    }
+
+    async function claimBedrijf(id, naam) {
+      const feedback = document.getElementById('claim-feedback')
+
+      // Disable all claim buttons
+      document.querySelectorAll('.claim-btn').forEach(btn => {
+        btn.disabled = true
+        btn.textContent = 'Bezig...'
+      })
 
       try {
         const res = await fetch(`${convexUrl}/api/mutation`, {
@@ -106,27 +173,39 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
             'Authorization': `Bearer ${clerkToken}`,
           },
           body: JSON.stringify({
-            path: 'hoveniers:upsertHovenier',
-            args: { naam: form.naam.value, email: form.email.value, telefoon: form.telefoon.value || undefined, regio, specialisaties },
+            path: 'bedrijven:claimBedrijf',
+            args: { bedrijfId: id },
             format: 'json',
           }),
         })
-        if (!res.ok) throw new Error()
-        feedback.textContent = 'Profiel opgeslagen!'
+
+        if (!res.ok) {
+          const data = await res.json().catch(() => null)
+          throw new Error(data?.error ?? 'Claimen mislukt')
+        }
+
+        feedback.textContent = `✅ "${naam}" is nu aan je account gekoppeld!`
         feedback.className = 'feedback feedback--success'
         feedback.hidden = false
-      } catch {
-        feedback.textContent = 'Opslaan mislukt, probeer opnieuw.'
+
+        // Reload to show claimed state
+        setTimeout(() => location.reload(), 1500)
+      } catch (err) {
+        feedback.textContent = `❌ ${err.message}`
         feedback.className = 'feedback feedback--error'
         feedback.hidden = false
-      } finally {
-        btn.textContent = 'Opslaan'
-        btn.disabled = false
-        setTimeout(() => { feedback.hidden = true }, 4000)
-      }
-    })
 
-    loadProfiel()
+        document.querySelectorAll('.claim-btn').forEach(btn => {
+          btn.disabled = false
+          btn.textContent = 'Dit is mijn bedrijf'
+        })
+      }
+    }
+
+    // Make claimBedrijf available globally for onclick handlers
+    window.claimBedrijf = claimBedrijf
+
+    loadMyBedrijf()
   </script>
 
 </PortalLayout>
@@ -136,7 +215,23 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
   .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #282d31; }
   .page-sub { margin-top: 0.375rem; color: #475569; }
 
-  /* ── Profile form card ── */
+  /* ── States ── */
+  .state-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 3rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    color: #475569;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spin { animation: spin 1s linear infinite; }
+
+  /* ── Claimed state ── */
   .profiel-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -144,124 +239,197 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     overflow: hidden;
   }
 
-  .form-section {
-    padding: 1.5rem;
+  .claimed-header {
+    padding: 2rem 2rem 1.5rem;
     border-bottom: 1px solid #e2e8f0;
   }
 
-  .form-section:last-of-type { border-bottom: none; }
-
-  .form-section h2 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  .claimed-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.2rem 0.625rem;
+    border-radius: 99px;
+    background: rgba(16,185,129,0.08);
+    color: #059669;
     font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.10em;
     font-weight: 700;
-    color: #008d51;
-    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.75rem;
   }
 
-  .hint {
-    font-size: 0.8rem;
+  .claimed-header h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #282d31;
+    margin: 0 0 0.25rem;
+  }
+
+  .claimed-meta {
     color: #94a3b8;
-    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .claimed-grid { padding: 1.5rem 2rem; }
+
+  :global(.detail-row) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.9rem;
+  }
+
+  :global(.detail-row:last-child) { border-bottom: none; }
+  :global(.detail-row--full) { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  :global(.detail-row span:first-child) { color: #94a3b8; font-weight: 500; }
+  :global(.detail-row strong) { color: #282d31; font-weight: 600; }
+  :global(.detail-row a) { color: #008d51; text-decoration: none; }
+  :global(.detail-row a:hover) { text-decoration: underline; }
+
+  :global(.cat-tags) { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  :global(.cat-tag) {
+    padding: 0.2rem 0.5rem;
+    background: rgba(0,141,81,0.06);
+    border: 1px solid rgba(0,141,81,0.15);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #008d51;
+    font-weight: 500;
+  }
+
+  /* ── Search / Unclaimed ── */
+  .search-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 2rem;
+  }
+
+  .search-card h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #282d31;
+    margin: 0 0 0.375rem;
+  }
+
+  .search-hint {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin: 0 0 1.25rem;
     line-height: 1.6;
   }
 
-  .hint code {
-    background: #f1f5f9;
-    padding: 0.1em 0.4em;
-    border-radius: 4px;
-    font-size: 0.85em;
-    color: #475569;
+  .search-input-wrap {
+    position: relative;
   }
 
-  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .field { display: flex; flex-direction: column; gap: 0.375rem; }
-
-  .field label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #475569;
-    letter-spacing: 0.02em;
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    pointer-events: none;
   }
 
-  .field input {
-    padding: 0.65rem 0.875rem;
+  .search-input-wrap input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.75rem;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    border-radius: 10px;
+    font-size: 1rem;
     font-family: 'Inter', sans-serif;
     color: #282d31;
     background: #ffffff;
     transition: border-color 0.15s, box-shadow 0.15s;
+    box-sizing: border-box;
   }
 
-  .field input::placeholder { color: #cbd5e1; }
-  .field input:focus { outline: none; border-color: #008d51; box-shadow: 0 0 0 3px rgba(0,141,81,0.10); }
+  .search-input-wrap input:focus {
+    outline: none;
+    border-color: #008d51;
+    box-shadow: 0 0 0 3px rgba(0,141,81,0.10);
+  }
 
-  /* ── Specialisaties ── */
-  .specialisaties-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.625rem; }
+  .search-input-wrap input::placeholder { color: #cbd5e1; }
 
-  .spec-option {
+  .search-results {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  :global(.search-loading), :global(.search-empty) {
+    text-align: center;
+    padding: 1.5rem;
+    color: #94a3b8;
+    font-size: 0.875rem;
+  }
+
+  :global(.search-result) {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.625rem 0.875rem;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #475569;
-    transition: all 0.15s;
+    border-radius: 10px;
+    transition: border-color 0.15s;
   }
 
-  .spec-option:has(input:checked) {
-    border-color: #008d51;
-    background: rgba(0,141,81,0.06);
-    color: #008d51;
+  :global(.search-result:hover) { border-color: #cbd5e1; }
+
+  :global(.search-result-info) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  :global(.search-result-info strong) {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
+    color: #282d31;
+    font-size: 0.9375rem;
   }
 
-  .spec-option input { display: none; }
-
-  /* ── Feedback ── */
-  .feedback {
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin: 0 1.5rem;
+  :global(.search-result-info span) {
+    font-size: 0.8rem;
+    color: #94a3b8;
   }
 
-  .feedback--success { background: rgba(16,185,129,0.08); color: #059669; border: 1px solid rgba(16,185,129,0.20); }
-  .feedback--error   { background: rgba(220,38,38,0.08); color: #dc2626; border: 1px solid rgba(220,38,38,0.20); }
-
-  /* ── Actions ── */
-  .form-actions { padding: 1.5rem; border-top: 1px solid #e2e8f0; }
-
-  .save-btn {
-    padding: 0.75rem 2rem;
+  :global(.claim-btn) {
+    padding: 0.5rem 1rem;
     background: #008d51;
     color: #ffffff;
     border: none;
     border-radius: 8px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8125rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.15s;
+    white-space: nowrap;
+    transition: background 0.15s;
   }
 
-  .save-btn:hover:not(:disabled) {
-    background: #007a46;
+  :global(.claim-btn:hover:not(:disabled)) { background: #007a46; }
+  :global(.claim-btn:disabled) { opacity: 0.5; cursor: not-allowed; }
+
+  /* ── Feedback ── */
+  .feedback {
+    padding: 0.875rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 1rem;
   }
 
-  .save-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  @media (max-width: 640px) {
-    .field-grid { grid-template-columns: 1fr; }
-    .specialisaties-grid { grid-template-columns: 1fr 1fr; }
-  }
+  .feedback--success { background: rgba(16,185,129,0.08); color: #059669; border: 1px solid rgba(16,185,129,0.20); }
+  .feedback--error   { background: rgba(220,38,38,0.08); color: #dc2626; border: 1px solid rgba(220,38,38,0.20); }
 </style>

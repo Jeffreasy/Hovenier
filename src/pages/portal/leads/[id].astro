@@ -80,6 +80,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
             <section class="detail-card">
               <h2>Tuinproject</h2>
               <dl class="detail-list">
+                ${lead.bedrijf_naam ? `<div><dt>Bedrijf</dt><dd><strong>${esc(lead.bedrijf_naam)}</strong></dd></div>` : ''}
                 <div><dt>Dienst</dt><dd>${esc(lead.dienst)}</dd></div>
                 <div><dt>Tuinoppervlak</dt><dd>${esc(lead.m2)} m&sup2;</dd></div>
                 <div><dt>Budget</dt><dd>${esc(lead.budget)}</dd></div>

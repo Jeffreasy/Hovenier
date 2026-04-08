@@ -271,3 +271,91 @@ export const getAllSlugs = query({
     }
   },
 })
+
+// ══════════════════════════════════════════════════════════════════════════════
+// PORTAL: Hovenier ↔ Bedrijf koppeling
+// ══════════════════════════════════════════════════════════════════════════════
+
+// Haal het bedrijf op dat de ingelogde hovenier heeft geclaimd
+export const getMyBedrijf = query({
+  args: {},
+  handler: async (ctx) => {
+    const identity = await ctx.auth.getUserIdentity()
+    if (!identity) return null
+
+    const bedrijf = await ctx.db
+      .query('bedrijven')
+      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', identity.subject))
+      .unique()
+
+    return bedrijf
+  },
+})
+
+// Zoek ongeclaimde bedrijven op naam (voor de claim-flow)
+export const searchUnclaimedBedrijven = query({
+  args: { zoekterm: v.string() },
+  handler: async (ctx, { zoekterm }) => {
+    const identity = await ctx.auth.getUserIdentity()
+    if (!identity) return []
+
+    const term = zoekterm.toLowerCase().trim()
+    if (term.length < 2) return []
+
+    // Haal alle actieve bedrijven en filter client-side op naam
+    // (Convex heeft geen full-text search, maar bij 5K records is dit acceptabel)
+    const alle = await ctx.db
+      .query('bedrijven')
+      .filter((q) => q.eq(q.field('isActief'), true))
+      .collect()
+
+    return alle
+      .filter((b) =>
+        !b.claimedByClerkId &&
+        b.naam.toLowerCase().includes(term)
+      )
+      .slice(0, 10)
+      .map((b) => ({
+        _id:            b._id,
+        naam:           b.naam,
+        stad:           b.stad,
+        provincie:      b.provincie,
+        googleScore:    b.googleScore,
+        aantalReviews:  b.aantalReviews,
+        hoofdCategorie: b.hoofdCategorie,
+        postcode:       b.postcode,
+      }))
+  },
+})
+
+// Claim een bedrijf — koppelt Clerk userId aan bedrijf
+export const claimBedrijf = mutation({
+  args: { bedrijfId: v.id('bedrijven') },
+  handler: async (ctx, { bedrijfId }) => {
+    const identity = await ctx.auth.getUserIdentity()
+    if (!identity) throw new Error('Niet ingelogd')
+
+    const clerkId = identity.subject
+
+    // Check: heeft deze user al een bedrijf geclaimd?
+    const existing = await ctx.db
+      .query('bedrijven')
+      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', clerkId))
+      .unique()
+
+    if (existing) {
+      throw new Error('Je hebt al een bedrijf geclaimd. Neem contact op om te wisselen.')
+    }
+
+    // Check: is dit bedrijf al geclaimd door iemand anders?
+    const bedrijf = await ctx.db.get(bedrijfId)
+    if (!bedrijf) throw new Error('Bedrijf niet gevonden')
+    if (bedrijf.claimedByClerkId) {
+      throw new Error('Dit bedrijf is al geclaimd door een andere gebruiker.')
+    }
+
+    await ctx.db.patch(bedrijfId, { claimedByClerkId: clerkId })
+    return { success: true, naam: bedrijf.naam }
+  },
+})
+

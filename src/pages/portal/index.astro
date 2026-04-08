@@ -14,6 +14,16 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
     <p class="page-sub">Overzicht van alle offerte-aanvragen die bij jou passen.</p>
   </div>
 
+  <!-- Claim CTA (als geen bedrijf geclaimd) -->
+  <div id="claim-cta" class="claim-cta" style="display:none;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <div class="claim-cta-text">
+      <strong>Nog geen bedrijf gekoppeld</strong>
+      <span>Koppel je account aan je hoveniersbedrijf om leads te ontvangen.</span>
+    </div>
+    <a href="/portal/profiel" class="claim-cta-btn">Bedrijf koppelen</a>
+  </div>
+
   <!-- Stats -->
   <div class="stats-row">
     {[
@@ -84,7 +94,7 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
             <div class="lead-card-left">
               <span class="lead-status lead-status--${esc(l.status)}">${esc(STATUS_LABELS[l.status] ?? l.status)}</span>
               <strong class="lead-naam">${esc(l.naam)}</strong>
-              <span class="lead-meta">${esc(l.postcode)} &middot; ${esc(l.dienst)} &middot; ${esc(l.m2)} m&sup2;</span>
+              <span class="lead-meta">${l.bedrijf_naam ? esc(l.bedrijf_naam) + ' &middot; ' : ''}${esc(l.postcode)} &middot; ${esc(l.dienst)} &middot; ${esc(l.m2)} m&sup2;</span>
             </div>
             <div class="lead-card-right">
               <span class="lead-budget">${esc(l.budget)}</span>
@@ -97,14 +107,69 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
       }
     }
     loadLeads()
+    checkClaimStatus()
   </script>
 
 </PortalLayout>
+
+<!-- Check if bedrijf is claimed -->
+<script define:vars={{ convexUrl, clerkToken }}>
+  async function checkClaimStatus() {
+    try {
+      const res = await fetch(`${convexUrl}/api/query`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${clerkToken}`,
+        },
+        body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: {}, format: 'json' }),
+      })
+      const { value: bedrijf } = await res.json()
+      if (!bedrijf) {
+        const cta = document.getElementById('claim-cta')
+        if (cta) cta.style.display = 'flex'
+      }
+    } catch {}
+  }
+  checkClaimStatus()
+</script>
 
 <style>
   .page-header { margin-bottom: 2rem; }
   .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #282d31; }
   .page-sub { margin-top: 0.375rem; color: #475569; }
+
+  /* ── Claim CTA ── */
+  .claim-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(245,158,11,0.06);
+    border: 1px solid rgba(245,158,11,0.20);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    color: #d97706;
+  }
+
+  .claim-cta-text { display: flex; flex-direction: column; gap: 0.125rem; flex: 1; }
+  .claim-cta-text strong { font-size: 0.875rem; color: #92400e; }
+  .claim-cta-text span { font-size: 0.8rem; color: #b45309; }
+
+  .claim-cta-btn {
+    padding: 0.5rem 1rem;
+    background: #d97706;
+    color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+
+  .claim-cta-btn:hover { background: #b45309; }
 
   /* ── Stat cards ── */
   .stats-row {

@@ -108,6 +108,13 @@ const OfferteFormulier: FC = () => {
             name: form.naam ?? '',
             email: form.email ?? '',
             message: `[Offerte Aanvraag]\n\n${messageLines}`,
+            telefoon: form.telefoon ?? '',
+            dienst: dienstLabel,
+            m2: form.m2 ? String(form.m2) : '',
+            budget: budgetLabel,
+            timing: timingLabel,
+            postcode: form.postcode ?? '',
+            bedrijf: bedrijf || '',
           }),
         }),
         // Convex lead opslag (best-effort, matcht op bedrijven tabel)

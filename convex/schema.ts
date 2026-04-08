@@ -68,17 +68,21 @@ export default defineSchema({
     importedAt:     v.number(),   // ms timestamp
 
     // Fase 2
-    postcode:       v.optional(v.string()),
-    lat:            v.optional(v.float64()),
-    lng:            v.optional(v.float64()),
-    beschrijving:   v.optional(v.string()),
+    postcode:           v.optional(v.string()),
+    lat:                v.optional(v.float64()),
+    lng:                v.optional(v.float64()),
+    beschrijving:       v.optional(v.string()),
+
+    // Portal: koppeling met Clerk hovenier-account
+    claimedByClerkId:   v.optional(v.string()),
   })
     .index('by_provincie',       ['provincie'])
     .index('by_stad',            ['stad'])
     .index('by_stad_score',      ['stad', 'googleScore'])
     .index('by_slug',            ['slug'])
     .index('by_googlePlaceId',   ['googlePlaceId'])
-    .index('by_provincie_score', ['provincie', 'googleScore']),
+    .index('by_provincie_score', ['provincie', 'googleScore'])
+    .index('by_clerk_id',        ['claimedByClerkId']),
 
   // ── Steden (voor dynamische content op lokale landingspagina's) ────────────
   steden: defineTable({
