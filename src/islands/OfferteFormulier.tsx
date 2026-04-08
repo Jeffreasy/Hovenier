@@ -1,6 +1,6 @@
 import { useState, useEffect, type FC } from 'react'
 import type { BudgetRange, StartTiming, OfferteData } from '../lib/types'
-import { SERVICE_OPTIONS, BUDGET_OPTIONS, TIMING_OPTIONS } from '../lib/constants'
+import { SERVICE_OPTIONS, BUDGET_OPTIONS, TIMING_OPTIONS, LAVENTECARE_API } from '../lib/constants'
 import { isValidPostcode } from '../lib/utils'
 
 const TOTAL_STEPS = 5
@@ -76,25 +76,37 @@ const OfferteFormulier: FC = () => {
     setLoading(true)
     setSubmitError('')
     try {
-      const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
-      const siteUrl = convexUrl.replace('.convex.cloud', '.convex.site')
-      if (!siteUrl) throw new Error('Configuratiefout, probeer de pagina te herladen.')
+      const dienstLabel = SERVICE_OPTIONS.find(s => s.value === form.dienst)?.label ?? form.dienst ?? ''
+      const budgetLabel = BUDGET_OPTIONS.find(b => b.value === form.budget)?.label ?? form.budget ?? ''
+      const timingLabel = TIMING_OPTIONS.find(t => t.value === form.timing)?.label ?? form.timing ?? ''
 
-      const res = await fetch(`${siteUrl}/submit-lead`, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(form),
+      const messageLines = [
+        `Dienst: ${dienstLabel}`,
+        `Tuingrootte: ${form.m2 ?? '?'} m²`,
+        `Budget: ${budgetLabel}`,
+        `Planning: ${timingLabel}`,
+        form.postcode ? `Postcode: ${form.postcode}` : '',
+        form.telefoon ? `Telefoon: ${form.telefoon}` : '',
+      ].filter(Boolean).join('\n')
+
+      const res = await fetch(`${LAVENTECARE_API.baseUrl}/public/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Tenant-ID': LAVENTECARE_API.tenantId,
+        },
+        body: JSON.stringify({
+          name: form.naam ?? '',
+          email: form.email ?? '',
+          message: `[Offerte Aanvraag]\n\n${messageLines}`,
+        }),
       })
 
-      const text = await res.text()
-      let data: { ok: boolean; error?: string } = { ok: false }
-      try {
-        data = JSON.parse(text)
-      } catch {
-        throw new Error(res.ok ? 'Onverwachte serverrespons, probeer opnieuw.' : `Serverfout (${res.status})`)
+      if (!res.ok) {
+        const text = await res.text()
+        throw new Error(text || `Serverfout (${res.status})`)
       }
 
-      if (!res.ok || !data.ok) throw new Error(data.error ?? 'Onbekende fout')
       window.location.href = '/offerte/bedankt'
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Verzenden mislukt, probeer opnieuw.')

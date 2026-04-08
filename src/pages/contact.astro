@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Button from '../components/ui/Button.astro'
-import { SITE } from '../lib/constants'
+import { SITE, LAVENTECARE_API } from '../lib/constants'
 
 const seo = {
   title: 'Contact',
@@ -19,7 +19,8 @@ const seo = {
       </header>
 
       <div class="contact-grid">
-        <form class="contact-form reveal" action="#" method="post">
+        <form id="contact-form" class="contact-form reveal">
+          <div id="form-feedback" class="form-feedback" hidden></div>
           <div class="form-field">
             <label for="naam">Jouw naam</label>
             <input id="naam" name="naam" type="text" placeholder="Jan de Vries" required />
@@ -36,7 +37,7 @@ const seo = {
             <label for="bericht">Bericht</label>
             <textarea id="bericht" name="bericht" rows={5} placeholder="Jouw bericht..." required></textarea>
           </div>
-          <Button type="submit" size="lg">Verstuur bericht</Button>
+          <Button type="submit" size="lg" id="submit-btn">Verstuur bericht</Button>
         </form>
 
         <aside class="contact-info reveal delay-200">
@@ -67,6 +68,56 @@ const seo = {
     </div>
   </div>
 </BaseLayout>
+
+<script define:vars={{ apiUrl: LAVENTECARE_API.baseUrl, tenantId: LAVENTECARE_API.tenantId }}>
+  const form = document.getElementById('contact-form')
+  const feedback = document.getElementById('form-feedback')
+  const submitBtn = document.getElementById('submit-btn')
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    feedback.hidden = true
+    submitBtn.disabled = true
+    submitBtn.textContent = 'Verzenden…'
+
+    const naam = form.querySelector('#naam').value.trim()
+    const email = form.querySelector('#email').value.trim()
+    const onderwerp = form.querySelector('#onderwerp').value.trim()
+    const bericht = form.querySelector('#bericht').value.trim()
+
+    try {
+      const res = await fetch(`${apiUrl}/public/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Tenant-ID': tenantId,
+        },
+        body: JSON.stringify({
+          name: naam,
+          email: email,
+          message: `[${onderwerp}]\n\n${bericht}`,
+        }),
+      })
+
+      if (!res.ok) {
+        const text = await res.text()
+        throw new Error(text || `Serverfout (${res.status})`)
+      }
+
+      feedback.className = 'form-feedback form-feedback--success'
+      feedback.textContent = '✅ Bedankt! We hebben je bericht ontvangen en reageren binnen 1 werkdag.'
+      feedback.hidden = false
+      form.reset()
+    } catch (err) {
+      feedback.className = 'form-feedback form-feedback--error'
+      feedback.textContent = `❌ ${err.message || 'Verzenden mislukt. Probeer het later opnieuw.'}`
+      feedback.hidden = false
+    } finally {
+      submitBtn.disabled = false
+      submitBtn.textContent = 'Verstuur bericht'
+    }
+  })
+</script>
 
 <style>
   .contact-inner { max-width: 900px; }
@@ -170,5 +221,22 @@ const seo = {
     font-size: 0.875rem;
     color: var(--color-charcoal-light);
     line-height: 1.65;
+  }
+
+  .form-feedback {
+    padding: 0.875rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+  .form-feedback--success {
+    background: var(--color-primary-50);
+    border: 1px solid var(--color-primary-200);
+    color: var(--color-primary-700, #047857);
+  }
+  .form-feedback--error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
   }
 </style>

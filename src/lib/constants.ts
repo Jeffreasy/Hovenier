@@ -73,3 +73,10 @@ export const SITE = {
   url:         'https://www.tuinhub.nl',
   email:       'info@tuinhub.nl',
 }
+
+// ─── LaventeCare API (Email Infrastructure) ──────────────────────────────────
+
+export const LAVENTECARE_API = {
+  baseUrl:  'https://laventecareauthsystems.onrender.com/api/v1',
+  tenantId: '05cbd9a2-2ef6-4314-9e02-7b718a630bf9',
+}

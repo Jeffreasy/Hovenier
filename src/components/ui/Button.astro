@@ -7,6 +7,7 @@ interface Props {
   fullWidth?: boolean
   disabled?: boolean
   class?: string
+  id?: string
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   fullWidth = false,
   disabled = false,
   class: className = '',
+  id,
 } = Astro.props
 
 const baseStyles = [
@@ -47,11 +49,11 @@ const classes = [baseStyles, variantClasses[variant], sizeClasses[size], classNa
 ---
 
 {href ? (
-  <a href={href} class={classes} aria-disabled={disabled}>
+  <a href={href} class={classes} aria-disabled={disabled} id={id}>
     <slot />
   </a>
 ) : (
-  <button type={type} class={classes} disabled={disabled}>
+  <button type={type} class={classes} disabled={disabled} id={id}>
     <slot />
   </button>
 )}
