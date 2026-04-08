@@ -68,19 +68,24 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           },
           body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: {}, format: 'json' }),
         })
-        const { value: bedrijf } = await res.json()
 
         document.getElementById('state-loading').style.display = 'none'
 
-        if (bedrijf) {
-          showClaimed(bedrijf)
-        } else {
-          document.getElementById('state-unclaimed').style.display = 'block'
-          setupSearch()
+        if (res.ok) {
+          const { value: bedrijf } = await res.json()
+          if (bedrijf) {
+            showClaimed(bedrijf)
+            return
+          }
         }
+
+        // Geen bedrijf gevonden of auth-fout → toon zoekformulier
+        document.getElementById('state-unclaimed').style.display = 'block'
+        setupSearch()
       } catch {
-        document.getElementById('state-loading').innerHTML =
-          '<p style="color:#dc2626;">Laden mislukt. Ververs de pagina.</p>'
+        document.getElementById('state-loading').style.display = 'none'
+        document.getElementById('state-unclaimed').style.display = 'block'
+        setupSearch()
       }
     }
 
@@ -125,7 +130,6 @@ const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${clerkToken}`,
           },
           body: JSON.stringify({
             path: 'bedrijven:searchUnclaimedBedrijven',
