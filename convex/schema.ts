@@ -29,7 +29,8 @@ export default defineSchema({
     .index('by_hovenier',       ['toegewezenAan'])
     .index('by_hovenier_status',['toegewezenAan', 'status']),
 
-  // ── Hoveniers (ingelogde hovenier-accounts via Clerk) ─────────────────────
+  // ── Hoveniers (TOEKOMSTIG — ingelogde hovenier-accounts via Clerk) ──────────
+  // Momenteel niet actief. Alle zoek/matching verloopt via `bedrijven` tabel.
   hoveniers: defineTable({
     clerkId:        v.string(),   // Clerk userId (uniek)
     naam:           v.string(),   // Bedrijfsnaam

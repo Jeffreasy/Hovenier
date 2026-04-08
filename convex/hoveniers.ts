@@ -1,6 +1,13 @@
 import { mutation, query } from './_generated/server'
 import { v } from 'convex/values'
 
+// ══════════════════════════════════════════════════════════════════════════════
+// TOEKOMSTIG: Hovenier Portal (Clerk-accounts)
+// Deze functies zijn bedoeld voor een toekomstig hovenier-portal waar hoveniers
+// zich aanmelden via Clerk. Momenteel NIET actief — alle zoek/matching
+// verloopt via de `bedrijven` tabel (Google Places dataset, 5.067 records).
+// ══════════════════════════════════════════════════════════════════════════════
+
 // ── Hovenier profiel ophalen (server-side auth) ───────────────────────────────
 
 export const getMe = query({

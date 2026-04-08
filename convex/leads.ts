@@ -1,10 +1,8 @@
 import { mutation, query, internalQuery } from './_generated/server'
 import { v } from 'convex/values'
-import { internal } from './_generated/api'
 
 const EMAIL_RE   = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 const POSTCODE_RE = /^\d{4}\s?[A-Za-z]{2}$/
-const VALID_STATUSES = ['nieuw', 'klant_gesproken', 'gematcht', 'vervallen'] as const
 const VALID_DIENSTEN = ['tuinaanleg', 'onderhoud', 'bestrating', 'beplanting', 'schutting', 'overig']
 
 // ── Internal: lead ophalen voor achtergrond-actions ─────────────────────────
@@ -17,6 +15,8 @@ export const getLead = internalQuery({
 })
 
 // ── Submit een nieuwe lead (publiek, geen auth vereist) ───────────────────────
+// Matching gebeurt op de `bedrijven` tabel (Google Places dataset).
+// Email-notificaties verlopen via LaventeCare (frontend-side).
 
 export const submitLead = mutation({
   args: {
@@ -47,24 +47,24 @@ export const submitLead = mutation({
     // Normaliseer postcode naar "1234 AB" formaat
     const postcode = args.postcode.trim().toUpperCase().replace(/(\d{4})\s*([A-Z]{2})/, '$1 $2')
 
-    // Zoek beschikbare hovenier in postcodegebied (simpele matching op eerste 2 cijfers)
-    const prefix   = postcode.slice(0, 2)
-    const hoveniers = await ctx.db
-      .query('hoveniers')
-      .withIndex('by_actief', (q) => q.eq('actief', true))
+    // Zoek best-matchend bedrijf in de bedrijven tabel (postcode-prefix matching)
+    const prefix = postcode.slice(0, 2)
+    const kandidaten = await ctx.db
+      .query('bedrijven')
+      .filter((q) => q.eq(q.field('isActief'), true))
       .collect()
 
-    const match = hoveniers.find((h) => h.regio.includes(prefix))
+    // Filter op postcode-prefix match, sorteer op Google score
+    const match = kandidaten
+      .filter((b) => b.postcode?.startsWith(prefix))
+      .sort((a, b) => (b.googleScore ?? 0) - (a.googleScore ?? 0))[0]
 
     const leadId = await ctx.db.insert('leads', {
       ...args,
       postcode,
-      status:        'nieuw',
-      toegewezenAan: match?.clerkId,
+      status:             'nieuw',
+      matched_bedrijf_id: match?._id,
     })
-
-    // Fire-and-forget: e-mails worden async afgehandeld na commit
-    await ctx.scheduler.runAfter(0, internal.emails.sendLeadNotifications, { leadId })
 
     return { leadId, matched: !!match }
   },

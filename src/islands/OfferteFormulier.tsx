@@ -89,22 +89,50 @@ const OfferteFormulier: FC = () => {
         form.telefoon ? `Telefoon: ${form.telefoon}` : '',
       ].filter(Boolean).join('\n')
 
-      const res = await fetch(`${LAVENTECARE_API.baseUrl}/public/contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Tenant-ID': LAVENTECARE_API.tenantId,
-        },
-        body: JSON.stringify({
-          name: form.naam ?? '',
-          email: form.email ?? '',
-          message: `[Offerte Aanvraag]\n\n${messageLines}`,
-        }),
-      })
+      const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 
-      if (!res.ok) {
-        const text = await res.text()
-        throw new Error(text || `Serverfout (${res.status})`)
+      // Dual submit: Convex (lead opslag + matching) + LaventeCare (email)
+      const [emailResult, _convexResult] = await Promise.allSettled([
+        // LaventeCare email (master — bepaalt of submit "geslaagd" is)
+        fetch(`${LAVENTECARE_API.baseUrl}/public/contact`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Tenant-ID': LAVENTECARE_API.tenantId,
+          },
+          body: JSON.stringify({
+            name: form.naam ?? '',
+            email: form.email ?? '',
+            message: `[Offerte Aanvraag]\n\n${messageLines}`,
+          }),
+        }),
+        // Convex lead opslag (best-effort, matcht op bedrijven tabel)
+        convexUrl
+          ? fetch(`${convexUrl}/submit-lead`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                naam:     form.naam ?? '',
+                email:    form.email ?? '',
+                telefoon: form.telefoon ?? '',
+                postcode: form.postcode ?? '',
+                dienst:   form.dienst ?? '',
+                m2:       form.m2 ?? 0,
+                budget:   form.budget ?? '',
+                timing:   form.timing ?? '',
+              }),
+            })
+          : Promise.resolve(),
+      ])
+
+      // Email is leidend: als LaventeCare faalt, toon fout
+      if (emailResult.status === 'rejected') {
+        throw new Error(emailResult.reason?.message ?? 'Email verzenden mislukt')
+      }
+      const emailRes = emailResult.value as Response
+      if (!emailRes.ok) {
+        const text = await emailRes.text()
+        throw new Error(text || `Serverfout (${emailRes.status})`)
       }
 
       window.location.href = '/offerte/bedankt'
