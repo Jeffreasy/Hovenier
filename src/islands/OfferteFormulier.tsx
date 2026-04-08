@@ -140,6 +140,19 @@ const OfferteFormulier: FC = () => {
         throw new Error(text || `Serverfout (${emailRes.status})`)
       }
 
+      // Bewaar samenvatting voor bedankt-pagina
+      try {
+        sessionStorage.setItem('offerte_summary', JSON.stringify({
+          bedrijf: bedrijf || null,
+          dienst: dienstLabel,
+          m2: form.m2,
+          budget: budgetLabel,
+          timing: timingLabel,
+          naam: form.naam,
+          postcode: form.postcode,
+        }))
+      } catch { /* sessionStorage niet beschikbaar */ }
+
       window.location.href = '/offerte/bedankt'
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Verzenden mislukt, probeer opnieuw.')
