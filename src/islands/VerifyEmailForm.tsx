@@ -23,7 +23,7 @@ export default function VerifyEmailForm() {
 
   async function verifyEmail(token: string) {
     try {
-      await apiRequest('/auth/verify-email', {
+      await apiRequest('/auth/email/verify', {
         method: 'POST',
         body: JSON.stringify({ token }),
       })
