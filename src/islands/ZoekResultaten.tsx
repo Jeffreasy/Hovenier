@@ -31,8 +31,8 @@ const ZoekResultaten: FC<Props> = ({ postcode, dienst, stad, stadSlug }) => {
       .catch(() => { setError(true); setLoading(false) })
   }, [stad])
 
-  function buildOffertUrl(_b: Bedrijf): string {
-    const p = new URLSearchParams({ postcode, dienst, stad: stadSlug })
+  function buildOffertUrl(b: Bedrijf): string {
+    const p = new URLSearchParams({ postcode, dienst, stad: stadSlug, bedrijf: b.naam })
     return `/offerte?${p.toString()}`
   }
 

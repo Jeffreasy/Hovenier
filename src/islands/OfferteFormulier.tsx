@@ -16,32 +16,35 @@ const STEP_LABELS = [
 type FormState = Partial<OfferteData>
 
 /** Lees URL-params eenmalig bij mount (lazy initialiser = geen re-render). */
-function readUrlParams(): { form: FormState; step: number; stad: string } {
+function readUrlParams(): { form: FormState; step: number; stad: string; bedrijf: string } {
   const params = new URLSearchParams(window.location.search)
   const postcode = params.get('postcode')?.trim() ?? ''
   const dienst   = params.get('dienst')?.trim()   ?? ''
   const stad     = params.get('stad')?.trim()      ?? ''
+  const bedrijf  = params.get('bedrijf')?.trim()   ?? ''
   const form: FormState = {}
   if (postcode) form.postcode = postcode
   if (dienst)   form.dienst   = dienst as FormState['dienst']
   const step = dienst ? 2 : 1
-  return { form, step, stad }
+  return { form, step, stad, bedrijf }
 }
 
 const OfferteFormulier: FC = () => {
   const [step, setStep] = useState(1)
   const [form, setForm] = useState<FormState>({})
   const [stad, setStad] = useState('')
+  const [bedrijf, setBedrijf] = useState('')
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState('')
 
   // Lees URL-params na hydration (client-only)
   useEffect(() => {
-    const { form: initialForm, step: initialStep, stad: initialStad } = readUrlParams()
+    const { form: initialForm, step: initialStep, stad: initialStad, bedrijf: initialBedrijf } = readUrlParams()
     if (Object.keys(initialForm).length > 0) setForm(initialForm)
     if (initialStep > 1) setStep(initialStep)
     if (initialStad) setStad(initialStad)
+    if (initialBedrijf) setBedrijf(initialBedrijf)
   }, [])
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
@@ -81,6 +84,7 @@ const OfferteFormulier: FC = () => {
       const timingLabel = TIMING_OPTIONS.find(t => t.value === form.timing)?.label ?? form.timing ?? ''
 
       const messageLines = [
+        bedrijf ? `Gekozen bedrijf: ${bedrijf}` : '',
         `Dienst: ${dienstLabel}`,
         `Tuingrootte: ${form.m2 ?? '?'} m²`,
         `Budget: ${budgetLabel}`,
@@ -147,6 +151,16 @@ const OfferteFormulier: FC = () => {
 
   return (
     <div className="flex flex-col gap-6 font-body text-charcoal" style={{ width: '100%', maxWidth: '100%', minWidth: 0, boxSizing: 'border-box', overflow: 'hidden' }}>
+
+      {/* Bedrijf context banner */}
+      {bedrijf && (
+        <div className="flex items-center gap-2.5 py-3 px-4 bg-white border border-primary-300 rounded-md text-sm" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-500 shrink-0">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span className="text-charcoal-light">Offerte voor <strong className="text-charcoal font-bold">{bedrijf}</strong></span>
+        </div>
+      )}
 
       {/* Stad-context banner */}
       {stad && (

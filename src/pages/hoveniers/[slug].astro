@@ -58,6 +58,7 @@ const seo = {
 const offerteUrl = `/offerte?${new URLSearchParams({
   postcode: bedrijf.postcode ?? '',
   stad:     (bedrijf.stad ?? '').toLowerCase(),
+  bedrijf:  bedrijf.naam,
 }).toString()}`
 
 // Template beschrijving als beschrijving ontbreekt

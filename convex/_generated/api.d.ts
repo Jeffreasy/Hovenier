@@ -9,7 +9,6 @@
  */
 
 import type * as bedrijven from "../bedrijven.js";
-import type * as emails from "../emails.js";
 import type * as hoveniers from "../hoveniers.js";
 import type * as http from "../http.js";
 import type * as leads from "../leads.js";
@@ -22,7 +21,6 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   bedrijven: typeof bedrijven;
-  emails: typeof emails;
   hoveniers: typeof hoveniers;
   http: typeof http;
   leads: typeof leads;
