@@ -142,3 +142,26 @@ export const updateLeadStatus = mutation({
     await ctx.db.patch(id, { status, ...(notities !== undefined ? { notities } : {}) })
   },
 })
+
+// ── Admin: alle leads ophalen ─────────────────────────────────────────────────
+// Beveiligd via email-whitelist (admin emails)
+
+const ADMIN_EMAILS = ['jeffrey@laventecare.nl']
+
+export const getAllLeads = query({
+  args: {},
+  handler: async (ctx) => {
+    const identity = await ctx.auth.getUserIdentity()
+    if (!identity) return []
+
+    // Admin check op email
+    const email = identity.email ?? identity.emailAddresses?.[0] ?? ''
+    if (!ADMIN_EMAILS.includes(email.toLowerCase())) return []
+
+    return await ctx.db
+      .query('leads')
+      .order('desc')
+      .collect()
+  },
+})
+

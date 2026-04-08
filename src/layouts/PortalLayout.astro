@@ -3,7 +3,7 @@ import { UserButton } from '@clerk/astro/components'
 
 interface Props {
   title: string
-  activeNav?: 'dashboard' | 'profiel'
+  activeNav?: 'dashboard' | 'profiel' | 'admin'
   maxWidth?: string
   showBackLink?: boolean
 }
@@ -46,6 +46,7 @@ const {
           <nav class="portal-nav">
             <a href="/portal" class:list={["portal-nav-link", { "portal-nav-link--active": activeNav === 'dashboard' }]}>Dashboard</a>
             <a href="/portal/profiel" class:list={["portal-nav-link", { "portal-nav-link--active": activeNav === 'profiel' }]}>Mijn profiel</a>
+            <a href="/portal/admin" class:list={["portal-nav-link", { "portal-nav-link--active": activeNav === 'admin' }]}>Admin</a>
           </nav>
         </>
       )}

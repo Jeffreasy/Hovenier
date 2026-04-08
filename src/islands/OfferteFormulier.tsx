@@ -129,8 +129,8 @@ const OfferteFormulier: FC = () => {
                 postcode:     form.postcode ?? '',
                 dienst:       form.dienst ?? '',
                 m2:           form.m2 ?? 0,
-                budget:       form.budget ?? '',
-                timing:       form.timing ?? '',
+                budget:       budgetLabel,
+                timing:       timingLabel,
                 bedrijf_naam: bedrijf || undefined,
               }),
             })

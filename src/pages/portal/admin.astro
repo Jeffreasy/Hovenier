@@ -1,0 +1,247 @@
+---
+export const prerender = false
+import PortalLayout from '../../layouts/PortalLayout.astro'
+
+const { getToken } = Astro.locals.auth()
+const clerkToken = await getToken({ template: 'convex' }) ?? ''
+const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
+---
+
+<PortalLayout title="Admin — Alle leads" activeNav="admin" maxWidth="1200px">
+
+  <div class="page-header">
+    <h1>Alle leads</h1>
+    <p class="page-sub">Admin overzicht van alle offerte-aanvragen.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    {[
+      { label: 'Totaal',          color: '#282d31', id: 'totaal' },
+      { label: 'Nieuw',           color: '#3b82f6', id: 'nieuw' },
+      { label: 'Gematcht',        color: '#10b981', id: 'gematcht' },
+      { label: 'Toegewezen',      color: '#f59e0b', id: 'toegewezen' },
+    ].map((s) => (
+      <div class="stat-card" id={`stat-${s.id}`}>
+        <span class="stat-dot" style={`background: ${s.color};`}></span>
+        <span class="stat-label">{s.label}</span>
+        <strong class="stat-value" id={`count-${s.id}`}>&mdash;</strong>
+      </div>
+    ))}
+  </div>
+
+  <!-- Leads tabel -->
+  <div id="leads-table-wrap" class="table-wrap">
+    <div class="leads-loading">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+      Leads laden...
+    </div>
+  </div>
+
+  <script define:vars={{ convexUrl, clerkToken }}>
+    function esc(str) {
+      const div = document.createElement('div')
+      div.textContent = String(str ?? '')
+      return div.innerHTML
+    }
+
+    function timeAgo(ts) {
+      const diff = Date.now() - ts
+      const mins = Math.floor(diff / 60000)
+      if (mins < 1) return 'zojuist'
+      if (mins < 60) return `${mins}m geleden`
+      const hours = Math.floor(mins / 60)
+      if (hours < 24) return `${hours}u geleden`
+      const days = Math.floor(hours / 24)
+      return `${days}d geleden`
+    }
+
+    const STATUS_LABELS = {
+      nieuw: 'Nieuw',
+      klant_gesproken: 'Klant gesproken',
+      gematcht: 'Gematcht',
+      vervallen: 'Vervallen',
+    }
+
+    async function loadAllLeads() {
+      const wrap = document.getElementById('leads-table-wrap')
+      if (!wrap) return
+
+      try {
+        const res = await fetch(`${convexUrl}/api/query`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${clerkToken}`,
+          },
+          body: JSON.stringify({ path: 'leads:getAllLeads', args: {}, format: 'json' }),
+        })
+
+        if (!res.ok) {
+          wrap.innerHTML = '<div class="leads-empty">Geen toegang. Alleen admins kunnen alle leads zien.</div>'
+          return
+        }
+
+        const { value: leads } = await res.json()
+
+        if (!leads?.length) {
+          wrap.innerHTML = '<div class="leads-empty">Nog geen leads.</div>'
+          // Set all counters to 0
+          document.getElementById('count-totaal').textContent = '0'
+          document.getElementById('count-nieuw').textContent = '0'
+          document.getElementById('count-gematcht').textContent = '0'
+          document.getElementById('count-toegewezen').textContent = '0'
+          return
+        }
+
+        // Stats
+        document.getElementById('count-totaal').textContent = String(leads.length)
+        document.getElementById('count-nieuw').textContent = String(leads.filter(l => l.status === 'nieuw').length)
+        document.getElementById('count-gematcht').textContent = String(leads.filter(l => l.status === 'gematcht').length)
+        document.getElementById('count-toegewezen').textContent = String(leads.filter(l => l.toegewezenAan).length)
+
+        wrap.innerHTML = `
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Naam</th>
+                <th>Bedrijf</th>
+                <th>Dienst</th>
+                <th>Postcode</th>
+                <th>Budget</th>
+                <th>Toegewezen</th>
+                <th>Wanneer</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${leads.map(l => `
+                <tr>
+                  <td><span class="lead-status lead-status--${esc(l.status)}">${esc(STATUS_LABELS[l.status] ?? l.status)}</span></td>
+                  <td class="td-naam">
+                    <strong>${esc(l.naam)}</strong>
+                    <span class="td-meta">${esc(l.email)}</span>
+                  </td>
+                  <td>${l.bedrijf_naam ? esc(l.bedrijf_naam) : '<span class="td-muted">—</span>'}</td>
+                  <td>${esc(l.dienst)}</td>
+                  <td>${esc(l.postcode)}</td>
+                  <td>${esc(l.budget)}</td>
+                  <td>${l.toegewezenAan ? '<span class="td-assigned">✓ Ja</span>' : '<span class="td-muted">Nee</span>'}</td>
+                  <td class="td-muted">${timeAgo(l._creationTime)}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `
+      } catch {
+        wrap.innerHTML = '<div class="leads-empty">Laden mislukt. Ververs de pagina.</div>'
+      }
+    }
+
+    loadAllLeads()
+  </script>
+
+</PortalLayout>
+
+<style>
+  .page-header { margin-bottom: 2rem; }
+  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #282d31; }
+  .page-sub { margin-top: 0.375rem; color: #475569; }
+
+  /* ── Stats ── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .stat-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .stat-label { font-size: 0.8rem; color: #475569; font-weight: 500; }
+  .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #008d51; }
+
+  /* ── Table ── */
+  .table-wrap {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow-x: auto;
+  }
+
+  .leads-loading, .leads-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 3rem;
+    color: #475569;
+    font-size: 0.9rem;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spin { animation: spin 1s linear infinite; }
+
+  :global(.leads-table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  :global(.leads-table th) {
+    text-align: left;
+    padding: 0.875rem 1rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #94a3b8;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+  }
+
+  :global(.leads-table td) {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #282d31;
+    vertical-align: middle;
+  }
+
+  :global(.leads-table tbody tr:hover) { background: #f8fafc; }
+
+  :global(.td-naam) { display: flex; flex-direction: column; gap: 0.125rem; }
+  :global(.td-naam strong) { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
+  :global(.td-meta) { font-size: 0.75rem; color: #94a3b8; }
+  :global(.td-muted) { color: #cbd5e1; font-size: 0.8rem; }
+  :global(.td-assigned) { color: #059669; font-weight: 600; font-size: 0.8rem; }
+
+  /* ── Status badges ── */
+  :global(.lead-status) {
+    display: inline-flex;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+
+  :global(.lead-status--nieuw)            { background: rgba(59,130,246,0.10);  color: #2563eb; }
+  :global(.lead-status--klant_gesproken)  { background: rgba(245,158,11,0.10);  color: #d97706; }
+  :global(.lead-status--gematcht)         { background: rgba(16,185,129,0.10);  color: #059669; }
+  :global(.lead-status--vervallen)        { background: rgba(148,163,184,0.10); color: #64748b; }
+
+  @media (max-width: 768px) {
+    .stats-row { grid-template-columns: 1fr 1fr; }
+  }
+</style>
