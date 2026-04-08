@@ -146,7 +146,7 @@ export const updateLeadStatus = mutation({
 // ── Admin: alle leads ophalen ─────────────────────────────────────────────────
 // Beveiligd via email-whitelist (admin emails)
 
-const ADMIN_EMAILS = ['jeffrey@laventecare.nl']
+const ADMIN_EMAILS = ['jeffrey@laventecare.nl', 'info@tuinhub.nl']
 
 export const getAllLeads = query({
   args: {},
@@ -155,7 +155,7 @@ export const getAllLeads = query({
     if (!identity) return []
 
     // Admin check op email
-    const email = identity.email ?? identity.emailAddresses?.[0] ?? ''
+    const email = identity.email ?? ''
     if (!ADMIN_EMAILS.includes(email.toLowerCase())) return []
 
     return await ctx.db
