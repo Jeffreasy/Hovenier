@@ -48,9 +48,10 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
     <div>
       <h3 class="footer-heading">Project Team</h3>
       <div class="footer-team-card">
-        <p class="footer-team-role">Fullstack Prompt-engineer</p>
-        <div class="footer-team-name">
+        <p class="footer-team-role">Fullstack Prompt-engineers</p>
+        <div class="footer-team-names">
           <span>Jeffrey Lavente</span>
+          <span>Jason Lavente</span>
         </div>
       </div>
 
@@ -190,10 +191,10 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
     letter-spacing: 0.02em;
   }
 
-  .footer-team-name {
+  .footer-team-names {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.25rem;
     font-family: var(--font-heading);
     font-size: 0.9375rem;
     font-weight: 600;
