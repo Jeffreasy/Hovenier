@@ -44,36 +44,43 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
       </ul>
     </nav>
 
-    <!-- Contact / Legal -->
+    <!-- Project Team -->
     <div>
-      <h3 class="footer-heading">Contact</h3>
-      <ul class="footer-list" role="list">
-        <li><a href="/contact" class="footer-link">Contact</a></li>
-        <li><a href="/over-ons" class="footer-link">Over ons</a></li>
-        <li><a href="/privacybeleid" class="footer-link">Privacybeleid</a></li>
-        <li><a href="/algemene-voorwaarden" class="footer-link">Algemene voorwaarden</a></li>
-        <li><a href="/inloggen" class="footer-link footer-link--portal">Hovenier portal</a></li>
-      </ul>
-      <p class="footer-contact">
+      <h3 class="footer-heading">Project Team</h3>
+      <div class="footer-team-card">
+        <p class="footer-team-role">Fullstack Prompt-engineer</p>
+        <div class="footer-team-name">
+          <span>Jeffrey Lavente</span>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact-block">
+        <a href="/contact" class="footer-link">Contact</a>
         <a href={`mailto:${SITE.email}`} class="footer-link">{SITE.email}</a>
-      </p>
+        <a href="/inloggen" class="footer-link footer-link--portal">Hovenier portal</a>
+      </div>
     </div>
   </div>
 
-  <!-- Bottom bar -->
+  <!-- Bottom bar — LaventeCare branding -->
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <p class="footer-copyright">
-        &copy; {new Date().getFullYear()} {SITE.name}. Alle rechten voorbehouden.
+        &copy; {new Date().getFullYear()} LaventeCare. All rights reserved.
       </p>
-      <p class="footer-disclaimer">
-        {SITE.name} bemiddelt tussen particulieren en hoveniers. Wij zijn geen hoveniersbedrijf.
+      <p class="footer-powered">
+        Powered by <a
+          href="https://www.laventecare.nl"
+          class="footer-shimmer-link"
+        >LaventeCare AuthSystem</a>
       </p>
     </div>
   </div>
 </footer>
 
 <style>
+  /* ── Footer Container ─────────────────────────────────────────── */
   .site-footer {
     position: relative;
     background: var(--color-canvas-alt);
@@ -81,6 +88,7 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
     margin-top: 4rem;
   }
 
+  /* ── Grid Layout ───────────────────────────────────────────────── */
   .footer-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -97,6 +105,7 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
     .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
   }
 
+  /* ── Brand Column ──────────────────────────────────────────────── */
   .footer-logo {
     display: inline-block;
     text-decoration: none;
@@ -124,6 +133,7 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
     margin: 0;
   }
 
+  /* ── Navigation ────────────────────────────────────────────────── */
   .footer-heading {
     font-family: var(--font-heading);
     font-size: 0.7rem;
@@ -164,25 +174,106 @@ import { SITE, NAV_LINKS } from '../../lib/constants'
     color: var(--color-primary-500);
   }
 
-  .footer-contact { margin-top: 1rem; }
+  /* ── Project Team Card ─────────────────────────────────────────── */
+  .footer-team-card {
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.25rem;
+  }
 
+  .footer-team-role {
+    font-size: 0.75rem;
+    color: var(--color-charcoal-muted);
+    margin: 0 0 0.375rem;
+    letter-spacing: 0.02em;
+  }
+
+  .footer-team-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+  }
+
+
+
+  .footer-contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+
+  /* ── Bottom Bar — LaventeCare Branding ─────────────────────────── */
   .footer-bottom {
     border-top: 1px solid var(--color-border);
   }
 
   .footer-bottom-inner {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 0.5rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
-  .footer-copyright,
-  .footer-disclaimer {
+  @media (min-width: 640px) {
+    .footer-bottom-inner {
+      flex-direction: row;
+    }
+  }
+
+  .footer-copyright {
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     color: var(--color-charcoal-muted);
+  }
+
+  .footer-powered {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--color-charcoal-muted);
+  }
+
+  /* ── Shimmer Gradient Link ─────────────────────────────────────── */
+  .footer-shimmer-link {
+    font-weight: 600;
+    background: linear-gradient(
+      to right,
+      var(--color-primary-500),
+      var(--color-primary-300),
+      var(--color-primary-500)
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+    animation: shimmer 3s linear infinite;
+    transition: opacity var(--transition-fast);
+  }
+
+  .footer-shimmer-link:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-shimmer-link {
+      animation: none;
+    }
   }
 </style>
