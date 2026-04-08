@@ -48,17 +48,25 @@ export const submitLead = mutation({
     // Normaliseer postcode naar "1234 AB" formaat
     const postcode = args.postcode.trim().toUpperCase().replace(/(\d{4})\s*([A-Z]{2})/, '$1 $2')
 
-    // Zoek best-matchend bedrijf in de bedrijven tabel (postcode-prefix matching)
-    const prefix = postcode.slice(0, 2)
-    const kandidaten = await ctx.db
+    // Stap 1: Als een bedrijfsnaam gekozen is → zoek dat specifieke bedrijf
+    let match = null
+    const alleBedrijven = await ctx.db
       .query('bedrijven')
       .filter((q) => q.eq(q.field('isActief'), true))
       .collect()
 
-    // Filter op postcode-prefix match, sorteer op Google score
-    const match = kandidaten
-      .filter((b) => b.postcode?.startsWith(prefix))
-      .sort((a, b) => (b.googleScore ?? 0) - (a.googleScore ?? 0))[0]
+    if (args.bedrijf_naam) {
+      const naamLower = args.bedrijf_naam.toLowerCase().trim()
+      match = alleBedrijven.find((b) => b.naam.toLowerCase() === naamLower) ?? null
+    }
+
+    // Stap 2: Fallback — matcht op postcode-prefix als geen bedrijf gevonden
+    if (!match) {
+      const prefix = postcode.slice(0, 2)
+      match = alleBedrijven
+        .filter((b) => b.postcode?.startsWith(prefix))
+        .sort((a, b) => (b.googleScore ?? 0) - (a.googleScore ?? 0))[0] ?? null
+    }
 
     const leadId = await ctx.db.insert('leads', {
       ...args,
