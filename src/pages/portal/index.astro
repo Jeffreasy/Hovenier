@@ -2,7 +2,7 @@
 export const prerender = false
 import PortalLayout from '../../layouts/PortalLayout.astro'
 
-const authToken = Astro.locals.token ?? ''
+
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 const userId = Astro.locals.user?.id ?? ''
 const userEmail = Astro.locals.user?.email ?? ''
@@ -49,7 +49,7 @@ const userEmail = Astro.locals.user?.email ?? ''
     </div>
   </div>
 
-  <script define:vars={{ convexUrl, authToken, userId, userEmail }}>
+  <script define:vars={{ convexUrl, userId, userEmail }}>
     /** Escape HTML entities to prevent XSS */
     function esc(str) {
       const div = document.createElement('div')
@@ -70,10 +70,7 @@ const userEmail = Astro.locals.user?.email ?? ''
       try {
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`,
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ path: 'leads:getMyLeads', args: { userId }, format: 'json' }),
         })
         const { value: leads } = await res.json()
@@ -114,15 +111,12 @@ const userEmail = Astro.locals.user?.email ?? ''
 </PortalLayout>
 
 <!-- Check if bedrijf is claimed -->
-<script define:vars={{ convexUrl, authToken, userId }}>
+<script define:vars={{ convexUrl, userId }}>
   async function checkClaimStatus() {
     try {
       const res = await fetch(`${convexUrl}/api/query`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${authToken}`,
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: { userId }, format: 'json' }),
       })
       const { value: bedrijf } = await res.json()

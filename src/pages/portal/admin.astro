@@ -2,7 +2,7 @@
 export const prerender = false
 import PortalLayout from '../../layouts/PortalLayout.astro'
 
-const authToken = Astro.locals.token ?? ''
+
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 const userEmail = Astro.locals.user?.email ?? ''
 ---
@@ -38,7 +38,7 @@ const userEmail = Astro.locals.user?.email ?? ''
     </div>
   </div>
 
-  <script define:vars={{ convexUrl, authToken, userEmail }}>
+  <script define:vars={{ convexUrl, userEmail }}>
     function esc(str) {
       const div = document.createElement('div')
       div.textContent = String(str ?? '')
@@ -70,10 +70,7 @@ const userEmail = Astro.locals.user?.email ?? ''
       try {
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`,
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ path: 'leads:getAllLeads', args: { userEmail }, format: 'json' }),
         })
 

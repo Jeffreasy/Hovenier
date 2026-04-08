@@ -2,7 +2,7 @@
 export const prerender = false
 import PortalLayout from '../../../layouts/PortalLayout.astro'
 
-const authToken = Astro.locals.token ?? ''
+
 const { id } = Astro.params
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 const userId = Astro.locals.user?.id ?? ''
@@ -17,7 +17,7 @@ const userId = Astro.locals.user?.id ?? ''
     </div>
   </div>
 
-  <script define:vars={{ convexUrl, authToken, id, userId }}>
+  <script define:vars={{ convexUrl, id, userId }}>
     /** Escape HTML entities to prevent XSS */
     function esc(str) {
       const div = document.createElement('div')
@@ -41,10 +41,7 @@ const userId = Astro.locals.user?.id ?? ''
       try {
         const res = await fetch(`${convexUrl}/api/query`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`,
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             path: 'leads:getLeadById',
             args: { id, userId },
@@ -112,10 +109,7 @@ const userId = Astro.locals.user?.id ?? ''
       try {
         await fetch(`${convexUrl}/api/mutation`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`,
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             path: 'leads:updateLeadStatus',
             args: { id: leadId, status, userId },
