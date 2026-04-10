@@ -33,7 +33,7 @@ export default defineSchema({
   // ── Hoveniers (ingelogde hovenier-accounts via LaventeCare Auth) ────────────
   // Momenteel niet actief. Alle zoek/matching verloopt via `bedrijven` tabel.
   hoveniers: defineTable({
-    clerkId:        v.string(),   // LaventeCare userId (field name kept for migration compat)
+    userId:         v.string(),   // LaventeCare userId
     naam:           v.string(),   // Bedrijfsnaam
     email:          v.string(),
     telefoon:       v.optional(v.string()),
@@ -41,7 +41,7 @@ export default defineSchema({
     specialisaties: v.array(v.string()),       // ServiceType[]
     actief:         v.boolean(),
   })
-    .index('by_clerk_id', ['clerkId'])
+    .index('by_user_id',  ['userId'])
     .index('by_actief',   ['actief']),
 
   // ── Bedrijven (Google Places dataset — 5067 hoveniersbedrijven) ────────────
@@ -73,8 +73,8 @@ export default defineSchema({
     lng:                v.optional(v.float64()),
     beschrijving:       v.optional(v.string()),
 
-    // Portal: koppeling met LaventeCare hovenier-account (field name kept for migration compat)
-    claimedByClerkId:   v.optional(v.string()),
+    // Portal: koppeling met LaventeCare hovenier-account
+    claimedByUserId:   v.optional(v.string()),
   })
     .index('by_provincie',       ['provincie'])
     .index('by_stad',            ['stad'])
@@ -82,7 +82,7 @@ export default defineSchema({
     .index('by_slug',            ['slug'])
     .index('by_googlePlaceId',   ['googlePlaceId'])
     .index('by_provincie_score', ['provincie', 'googleScore'])
-    .index('by_clerk_id',        ['claimedByClerkId']),
+    .index('by_user_id',         ['claimedByUserId']),
 
   // ── Steden (voor dynamische content op lokale landingspagina's) ────────────
   steden: defineTable({

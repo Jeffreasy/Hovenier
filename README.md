@@ -1,104 +1,53 @@
-# Tuinplatform — Hovenier Matchmaking Platform
+# Tuinhub — The Master Handbook
 
-**Tuinplatform** (`tuinplatform.nl`) koppelt huiseigenaren aan gecertificeerde hoveniers in hun regio. Bezoekers vragen gratis offertes aan via een multi-step formulier; hoveniers beheren leads via een besloten portal.
+<div align="center">
 
----
+**Het landelijke lead- en matchingplatform voor Hoveniers**
 
-## Tech Stack
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://tuinhub.nl)
+[![Astro](https://img.shields.io/badge/Astro-5.x-orange?logo=astro)](https://astro.build)
+[![Convex](https://img.shields.io/badge/Database-Convex-purple?logo=convex)](https://convex.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://typescriptlang.org)
 
-| Laag      | Technologie                                           |
-| --------- | ----------------------------------------------------- |
-| Framework | [Astro 6](https://astro.build) — SSR via Vercel adapter |
-| UI        | React 19 Islands + Tailwind CSS v4                    |
-| Auth      | [Clerk](https://clerk.com) (JWT, middleware, betaald)   |
-| Database  | [Convex](https://convex.dev) (real-time, serverless, betaald) |
-| Deploy    | [Vercel](https://vercel.com) (Edge Functions, betaald)  |
-| Alternatief | [Render](https://render.com) (betaald, alternatief voor Vercel) |
-| Fonts     | Plus Jakarta Sans (headings) + Inter (body)           |
-| Node      | ≥ 24.0.0                                             |
+</div>
 
 ---
 
-## Lokale Ontwikkeling
+## 🚀 TL;DR
+
+Dit repository is de frontend en portal-applicatie voor Tuinhub. Het maakt gebruik van een 3-tier architectuur:
+
+1. **Astro (Frontend)**: Server-Side Rendered (SSR) pagina's voor publieke directories en SEO, met React 19 Islands voor client-side state.
+2. **Convex (Database)**: Serverless NoSQL datasource voor realtime verwerking van Leads, Hoveniersprofielen en de Google Places import-database.
+3. **LaventeCare Auth (Identity)**: De externe Go-backend die alle SSO, registraties en sessie-validatie via HttpOnly cookies afhandelt.
+
+---
+
+## 📚 Documentatie Overzicht
+
+Alle technische documentatie over de architectuur, schema's en workflows is opgedeeld in losse modules in de `docs/` folder:
+
+1. **[01. Architecture & Data Model](./docs/01_architecture_data.md)**: Tabellen, Convex typings (`schema.ts`) en roadmap features.
+2. **[02. Frontend & Design System](./docs/02_frontend_design.md)**: Astro Islands, layout structuur en componenten.
+3. **[03. Portal & Target Operations](./docs/03_portal_operations.md)**: API contracten (`/auth/me`), fail-states en error handling.
+4. **[04. Development & Testing Workflow](./docs/04_development_testing.md)**: Lokale opstart-instructies en CLI commando's.
+5. **[05. Deployment & Tools Reference](./docs/05_deployment_reference.md)**: Vercel configuraties, image pipelines, security policies en rate limits.
+
+---
+
+## 🛠️ Lokale Ontwikkeling
 
 ### Vereisten
+- Node.js 20.17+ (of 24+)
+- Convex project (toegewezen via `npx convex dev`)
+- Actief `.env` bestand met LaventeCare API-keys en toegewezen identiteit-tenant identifiers.
 
-- Node.js ≥ 24
-- Een Clerk account (betaalde tier)
-- Een Convex account (betaalde tier)
-
-### Setup
+### Setup Process
 
 ```bash
-# 1. Clone & installeer
-git clone <repo-url>
-cd Hovenier
 npm install
-
-# 2. Omgevingsvariabelen instellen
-cp .env.example .env.local
-# Vul CLERK_* en PUBLIC_CONVEX_URL in (zie .env.example)
-
-# 3. Start Convex (backend, apart terminal venster)
 npx convex dev
-
-# 4. Start Astro dev server
 npm run dev
-# → http://localhost:4321
 ```
 
-### Beschikbare Commands
-
-| Command                | Actie                                         |
-| ---------------------- | --------------------------------------------- |
-| `npm run dev`        | Start dev server op `localhost:4321`        |
-| `npm run build`      | Type-check + productie build naar `./dist/` |
-| `npm run preview`    | Preview van de productie build                |
-| `npm run type-check` | Alleen TypeScript validatie (geen build)      |
-| `npx convex dev`     | Start Convex realtime backend                 |
-
----
-
-## Omgevingsvariabelen
-
-Zie [`.env.example`](.env.example) voor alle variabelen met instructies.
-
-| Variabele                        | Verplicht | Beschrijving                        |
-| -------------------------------- | --------- | ----------------------------------- |
-| `PUBLIC_CLERK_PUBLISHABLE_KEY` | ✅        | Clerk publieke sleutel              |
-| `CLERK_SECRET_KEY`             | ✅        | Clerk geheime sleutel (server-only) |
-| `PUBLIC_CONVEX_URL`            | ✅        | Convex deployment URL               |
-
----
-
-## Deployment (Vercel)
-
-1. Verbind de repository met Vercel
-2. Voeg alle omgevingsvariabelen toe in het Vercel dashboard
-3. Vercel detecteert automatisch het Astro framework
-4. Elke push naar `main` triggert een automatische deploy
-
-> **Let op:** Convex draait apart van Vercel. Zorg dat `npx convex deploy` is uitgevoerd en de productie-URL matcht met `PUBLIC_CONVEX_URL`.
-
----
-
-## Projectstructuur (overzicht)
-
-```
-src/
-├── components/layout/   # Header, Footer
-├── content/             # Blog, FAQ, Steden, Subsidies (Markdown/JSON)
-├── islands/             # React Islands (calculators, formulieren)
-├── layouts/             # BaseLayout, ArticleLayout, LocalLayout, ToolLayout
-├── lib/                 # Business logic (types, constants, pricing, seo, utils)
-├── pages/               # Astro routes
-└── styles/              # global.css
-
-convex/
-├── schema.ts            # Database schema (leads, hoveniers)
-├── leads.ts             # Lead mutations & queries
-├── hoveniers.ts         # Hovenier mutations & queries
-└── http.ts              # HTTP endpoints (POST /submit-lead)
-```
-
-> **Technische documentatie** → zie [`CODEBASE.md`](CODEBASE.md)
+De lokale server luistert op `http://localhost:4321`.

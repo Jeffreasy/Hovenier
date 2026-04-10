@@ -285,7 +285,7 @@ export const getMyBedrijf = query({
 
     const bedrijf = await ctx.db
       .query('bedrijven')
-      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', userId))
+      .withIndex('by_user_id', (q) => q.eq('claimedByUserId', userId))
       .unique()
 
     return bedrijf
@@ -308,7 +308,7 @@ export const searchUnclaimedBedrijven = query({
 
     return alle
       .filter((b) =>
-        !b.claimedByClerkId &&
+        !b.claimedByUserId &&
         b.naam.toLowerCase().includes(term)
       )
       .slice(0, 10)
@@ -337,7 +337,7 @@ export const claimBedrijf = mutation({
     // Check: heeft deze user al een bedrijf geclaimd?
     const existing = await ctx.db
       .query('bedrijven')
-      .withIndex('by_clerk_id', (q) => q.eq('claimedByClerkId', userId))
+      .withIndex('by_user_id', (q) => q.eq('claimedByUserId', userId))
       .unique()
 
     if (existing) {
@@ -347,11 +347,11 @@ export const claimBedrijf = mutation({
     // Check: is dit bedrijf al geclaimd door iemand anders?
     const bedrijf = await ctx.db.get(bedrijfId)
     if (!bedrijf) throw new Error('Bedrijf niet gevonden')
-    if (bedrijf.claimedByClerkId) {
+    if (bedrijf.claimedByUserId) {
       throw new Error('Dit bedrijf is al geclaimd door een andere gebruiker.')
     }
 
-    await ctx.db.patch(bedrijfId, { claimedByClerkId: userId })
+    await ctx.db.patch(bedrijfId, { claimedByUserId: userId })
     return { success: true, naam: bedrijf.naam }
   },
 })

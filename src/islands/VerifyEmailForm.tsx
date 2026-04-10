@@ -36,7 +36,7 @@ export default function VerifyEmailForm() {
 
   if (status === 'loading') {
     return (
-      <div className="auth-card">
+      <div className="auth-card" aria-label="Authenticatie status">
         <div style={{ textAlign: 'center', padding: '2rem 0' }}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#008d51" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ animation: 'spin 1s linear infinite', marginBottom: '1rem' }}>
             <path d="M21 12a9 9 0 1 1-6.219-8.56" />

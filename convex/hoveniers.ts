@@ -16,7 +16,7 @@ export const getMe = query({
 
     return ctx.db
       .query('hoveniers')
-      .withIndex('by_clerk_id', (q) => q.eq('clerkId', userId))
+      .withIndex('by_user_id', (q) => q.eq('userId', userId))
       .unique()
   },
 })
@@ -40,7 +40,7 @@ export const upsertHovenier = mutation({
 
     const existing = await ctx.db
       .query('hoveniers')
-      .withIndex('by_clerk_id', (q) => q.eq('clerkId', userId))
+      .withIndex('by_user_id', (q) => q.eq('userId', userId))
       .unique()
 
     if (existing) {
@@ -56,7 +56,7 @@ export const upsertHovenier = mutation({
     }
 
     return ctx.db.insert('hoveniers', {
-      clerkId:        userId,
+      userId:         userId,
       naam:           args.naam,
       email:          args.email,
       telefoon:       args.telefoon,
