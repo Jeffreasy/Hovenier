@@ -183,7 +183,7 @@ const userEmail = Astro.locals.user?.email ?? ''
         }
       }
 
-      ;(window as any).claimLead = async function(leadId) {
+      ;(window as any).claimLead = async function(leadId: string) {
         if (!confirm('Weet je zeker dat je deze lead wil inzien voor 1 credit?')) return;
         // Disable clicked button immediately
         const btns = document.querySelectorAll('.btn-primary');
