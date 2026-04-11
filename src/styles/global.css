@@ -259,12 +259,8 @@ a:hover {
   color: var(--color-charcoal-light);
 }
 
-/* Contain wide tables within the prose column */
-.article-content.prose {
-  overflow-x: clip;
-}
-
-.article-content.prose table {
+/* Wide tables scroll horizontally within the prose column */
+.prose table {
   display: block;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
