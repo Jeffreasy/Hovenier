@@ -4,7 +4,7 @@ description: "Wat kost een schutting laten plaatsen in 2026? Prijzen per meter (
 publishDate: 2026-04-01
 category: schutting
 featured: false
-draft: true
+draft: false
 ---
 
 Je schutting staat scheef na de laatste najaarsstorm, de planken zijn groen van de algen en de onderste latten zijn doorgerot. Elke keer dat je in de tuin zit, kijk je recht in de keuken van de buren. En zij in de jouwe. Ondertussen weet je niet of de buurman moet meebetalen, hoe hoog je mag bouwen, of welk materiaal niet weer na vijf jaar vergaan is.
@@ -149,4 +149,4 @@ Een schutting gaat langer mee als je hem op het juiste moment de juiste aandacht
 
 ## Een vakman vinden voor jouw schutting
 
-Weet je wat je wil, maar wil je het niet zelf doen? Via [TuinHub](/offerte) vraag je gratis drie offertes aan bij erkende hoveniers en aannemers in jouw regio. Je vult eenmalig in wat je nodig hebt, en de offertes komen naar jou toe. Zo vergelijk je prijzen zonder zelf drie keer te bellen.
+Weet je wat je wil, maar wil je het niet zelf doen? Via [TuinHub](/offerte) vraag je gratis drie offertes aan bij erkende hoveniers en aannemers in jouw regio. Je vult eenmalig in wat je nodig hebt, en de offertes komen naar jou toe. Zo vergelijk je prijzen zonder zelf drie keer te bellen. Geen abonnement, geen verplichtingen. Gewoon drie offertes, en jij kiest de vakman die het beste bij jouw situatie past.
