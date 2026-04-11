@@ -5,8 +5,8 @@ publishDate: 2026-03-31
 category: tuinaanleg
 featured: false
 draft: false
-image: /blog/moestuin-beginnen.001.png
-imageAlt: "Infographic: moestuin beginnen - startkosten en besparing"
+image: /blog/moestuin-beginnen-hero.jpg
+imageAlt: "Verse groenten groeiend in een moestuinbed"
 ---
 
 Een moestuin beginnen staat al tijden op je lijstje. Eigen tomaten, verse sla en kruiden recht uit de tuin, hoe fijn klinkt dat? Maar elke keer als je eraan begint, loop je vast. Is je tuin wel groot genoeg? Wat kost dat allemaal? En wanneer moet je eigenlijk beginnen met zaaien?

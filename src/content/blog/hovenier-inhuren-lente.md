@@ -5,8 +5,8 @@ publishDate: 2026-03-28
 category: kosten
 featured: false
 draft: false
-image: /blog/hovenier-inhuren-lente.001.png
-imageAlt: "Infographic: hovenier inhuren in de lente - kosten en tarieven 2026"
+image: /blog/hovenier-inhuren-lente-hero.jpg
+imageAlt: "Hovenier aan het planten in een lentetuin"
 ---
 
 De lente is het drukste seizoen voor hoveniers. Iedereen wil zijn tuin klaar hebben voor de zomer en een hovenier inhuren voor het zware werk. Dat betekent dat goede vakmensen snel volgeboekt zijn en dat je niet altijd kunt kiezen wanneer ze komen.

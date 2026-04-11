@@ -5,8 +5,8 @@ publishDate: 2026-03-28
 category: onderhoud
 featured: false
 draft: false
-image: /blog/tuinonderhoud-lente.001.png
-imageAlt: "Infographic: tuinonderhoud in de lente - 10 stappen plan"
+image: /blog/tuinonderhoud-lente-hero.jpg
+imageAlt: "Kleurrijke tulpen en voorjaarsbloemen"
 ---
 
 Na maanden van kou, wind en af en toe nachtvorst ziet de tuin er in maart niet bepaald florissant uit. Kale plekken in het gazon, bruine vaste planten die nog niet weten wat ze zijn, een laag oud blad tussen de borders. Herkenbaar? Dan is het tijd voor tuinonderhoud.

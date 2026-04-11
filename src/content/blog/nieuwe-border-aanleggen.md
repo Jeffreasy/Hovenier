@@ -5,8 +5,8 @@ publishDate: 2026-03-28
 category: beplanting
 featured: false
 draft: false
-image: /blog/nieuwe-border.001.png
-imageAlt: "Infographic: nieuwe border aanleggen - stappenplan en kosten"
+image: /blog/nieuwe-border-aanleggen-hero.jpg
+imageAlt: "Kleurrijke bloementuin met vaste planten in bloei"
 ---
 
 Een nieuwe border aanleggen is een van de mooiste dingen die je in de lente kunt doen. Het vraagt wat voorbereiding, maar het resultaat houdt jaren mee. Vaste planten komen ieder jaar terug, ze groeien en bloeien steeds mooier. Na een goede aanleg heb je er amper nog omkijken naar.

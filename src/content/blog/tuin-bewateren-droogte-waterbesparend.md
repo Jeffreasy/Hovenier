@@ -5,8 +5,8 @@ publishDate: 2026-03-30
 category: onderhoud
 featured: false
 draft: false
-image: /blog/tuin-bewateren.001.png
-imageAlt: "Infographic: tuin bewateren - bewateringsmethoden en kosten"
+image: /blog/tuin-bewateren-hero.jpg
+imageAlt: "Tuinslang water geven aan planten"
 ---
 
 Je gazon was in april nog frisgroen. Maar halverwege juni? Een dor, geel vlak. De borders hangen erbij, je hortensia's laten hun blaadjes vallen, en het water uit de tuinslang lijkt gewoon van de kurkdroge grond af te rollen. Je sproeit elke avond een kwartiertje, maar het helpt voor geen meter.

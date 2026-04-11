@@ -5,8 +5,8 @@ publishDate: 2026-03-29
 category: onderhoud
 featured: false
 draft: false
-image: /blog/terras-reinigen.001.png
-imageAlt: "Infographic: terras reinigen - kosten en methoden 2026"
+image: /blog/terras-reinigen-hero.jpg
+imageAlt: "Schoon terras met groene klimplanten"
 ---
 
 Je loopt de tuin in en je terras ziet er niet uit. Groene aanslag op de tegels, onkruid dat tussen elke voeg omhoogschiet en die hardnekkige zwarte vlekken van de winter. Je wilt niks liever dan lekker buiten zitten zodra het warm wordt. Maar eerst moet je dat terras reinigen. En dan die voegen. Waar begin je?

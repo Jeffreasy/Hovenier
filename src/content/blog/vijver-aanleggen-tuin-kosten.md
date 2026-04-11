@@ -5,8 +5,8 @@ publishDate: 2026-04-02
 category: kosten
 featured: false
 draft: false
-image: /blog/vijver-aanleggen.001.png
-imageAlt: "Infographic: vijver aanleggen - kosten per type in 2026"
+image: /blog/vijver-aanleggen-hero.jpg
+imageAlt: "Tuinvijver met waterlelies en roze bloemen"
 ---
 
 Een vijver aanleggen in je tuin kost ergens tussen de €1.000 en €40.000. Dat is een eerlijk antwoord op een eerlijke vraag, maar het helpt je nog niet verder. Want wat bepaalt precies waar jij in die bandbreedte uitkomt? En wat betaal je daarna nog aan onderhoud, energie en producten?

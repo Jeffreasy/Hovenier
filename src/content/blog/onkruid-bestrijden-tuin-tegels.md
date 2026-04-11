@@ -5,8 +5,8 @@ publishDate: 2026-03-31
 category: onderhoud
 featured: false
 draft: false
-image: /blog/onkruid-bestrijden.001.png
-imageAlt: "Infographic: 7 methoden onkruid bestrijden vergeleken"
+image: /blog/onkruid-bestrijden-hero.jpg
+imageAlt: "Onkruid groeiend tussen stenen in een tuin"
 ---
 
 Onkruid bestrijden: elk voorjaar hetzelfde verhaal. De voegen van je terras barsten open met groen, je borders worden overgenomen door brandnetels en paardenbloemen, en die oprit ziet er uit alsof er al jaren niemand meer woont. Je hebt van alles geprobeerd. Azijn, zout, kokend water. Niks werkt definitief. En Roundup? Dat mag niet meer. Je wilt gewoon weten hoe je het aanpakt zonder elk weekend op je knieën te zitten.
