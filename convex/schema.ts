@@ -11,13 +11,13 @@ export default defineSchema({
     postcode: v.string(),   // genormaliseerd: "1234 AB"
 
     // Tuin info
-    dienst:  v.string(),    // ServiceType
-    m2:      v.number(),
-    budget:  v.string(),    // BudgetRange
-    timing:  v.string(),    // StartTiming
+    dienst:  v.optional(v.string()),    // ServiceType
+    m2:      v.optional(v.number()),
+    budget:  v.optional(v.string()),    // BudgetRange
+    timing:  v.optional(v.string()),    // StartTiming
 
     // Status & routing
-    status:          v.union(v.literal('nieuw'), v.literal('klant_gesproken'), v.literal('gematcht'), v.literal('vervallen')),
+    status:          v.optional(v.string()), // WAS union literal
     toegewezenAan:   v.optional(v.string()),  // LaventeCare userId van hovenier
     notities:        v.optional(v.string()),
 
@@ -40,6 +40,10 @@ export default defineSchema({
     regio:          v.array(v.string()),       // postcodegebieden, bijv. ["10", "11", "12"]
     specialisaties: v.array(v.string()),       // ServiceType[]
     actief:         v.boolean(),
+    // --- Money-Model ---
+    credits:        v.optional(v.number()),
+    tier:           v.optional(v.string()), // 'freemium', 'premium'
+    stripeCustomerId: v.optional(v.string()),
   })
     .index('by_user_id',  ['userId'])
     .index('by_actief',   ['actief']),

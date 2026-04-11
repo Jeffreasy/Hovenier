@@ -63,6 +63,46 @@ export const upsertHovenier = mutation({
       regio:          args.regio,
       specialisaties: args.specialisaties,
       actief:         args.actief ?? true,
+      credits:        0,
+      tier:           'freemium',
     })
+  },
+})
+
+// ── Test & Ontwikkeling ────────────────────────────────────────────────────────
+
+export const addMockCreditsByUserId = mutation({
+  args: { userId: v.string(), amount: v.optional(v.number()) },
+  handler: async (ctx, args) => {
+    if (!args.userId) throw new Error('Niet ingelogd')
+
+    let existing = await ctx.db
+      .query('hoveniers')
+      .withIndex('by_user_id', (q) => q.eq('userId', args.userId))
+      .unique()
+
+    // Auto-provision profiel als het nog niet bestaat (dev/test mode)
+    if (!existing) {
+      const newId = await ctx.db.insert('hoveniers', {
+        userId:         args.userId,
+        naam:           'Hovenier',
+        email:          args.userId,
+        regio:          [],
+        specialisaties: [],
+        actief:         true,
+        credits:        0,
+        tier:           'freemium',
+      })
+      existing = await ctx.db.get(newId)
+    }
+
+    if (!existing) throw new Error('Kon profiel niet aanmaken')
+
+    const current = existing.credits || 0
+    const toAdd = args.amount || 10
+
+    await ctx.db.patch(existing._id, { credits: current + toAdd })
+
+    return { success: true, newBalance: current + toAdd }
   },
 })

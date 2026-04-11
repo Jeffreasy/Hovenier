@@ -163,3 +163,67 @@ export const getAllLeads = query({
       .collect()
   },
 })
+
+// ── Beurs (Marketplace) ────────────────────────────────────────────────────────
+
+export const getOpenLeads = query({
+  args: {
+    userId: v.string(), // Ter info, we kunnen later op regio filteren
+  },
+  handler: async (ctx, { userId }) => {
+    if (!userId) return []
+
+    // Haal alle leads op waar toegewezenAan niet gezet is (en status = nieuw of vervallen mag ook meedoen later, nu checken we undefined bypass)
+    const allLeads = await ctx.db
+      .query('leads')
+      .order('desc')
+      .collect()
+
+    // Filter leads die nog ongeclaimed zijn
+    return allLeads.filter(l => !l.toegewezenAan)
+  },
+})
+
+export const claimLeadWithCredit = mutation({
+  args: {
+    leadId: v.id('leads'),
+    userId: v.string(),
+  },
+  handler: async (ctx, { leadId, userId }) => {
+    if (!userId) throw new Error('Niet ingelogd')
+
+    const hovenier = await ctx.db
+      .query('hoveniers')
+      .withIndex('by_user_id', (q) => q.eq('userId', userId))
+      .unique()
+
+    if (!hovenier) {
+      throw new Error('Profiel niet gevonden')
+    }
+
+    const currentCredits = hovenier.credits || 0
+    if (currentCredits < 1) {
+      throw new Error('Onvoldoende credits. Waardeer eerst je saldo op.')
+    }
+
+    const lead = await ctx.db.get(leadId)
+    if (!lead) throw new Error('Lead niet gevonden')
+
+    if (lead.toegewezenAan) {
+      throw new Error('Helaas, deze lead is zojuist geclaimd door een andere hovenier.')
+    }
+
+    // 1. Schrijf credit af
+    await ctx.db.patch(hovenier._id, {
+      credits: currentCredits - 1
+    })
+
+    // 2. Wijs lead toe
+    await ctx.db.patch(leadId, {
+      toegewezenAan: userId,
+      status: 'gematcht'
+    })
+
+    return { success: true, remainingCredits: currentCredits - 1 }
+  },
+})

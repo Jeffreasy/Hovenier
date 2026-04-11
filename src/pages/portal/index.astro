@@ -2,7 +2,6 @@
 export const prerender = false
 import PortalLayout from '../../layouts/PortalLayout.astro'
 
-
 const convexUrl = import.meta.env.PUBLIC_CONVEX_URL ?? ''
 const userId = Astro.locals.user?.id ?? ''
 const userEmail = Astro.locals.user?.email ?? ''
@@ -11,8 +10,8 @@ const userEmail = Astro.locals.user?.email ?? ''
 <PortalLayout title="Dashboard" activeNav="dashboard">
 
   <div class="page-header">
-    <h1>Jouw leads</h1>
-    <p class="page-sub">Overzicht van alle offerte-aanvragen die bij jou passen.</p>
+    <h1>Lead Beurs</h1>
+    <p class="page-sub">Koop leads in op de markt en beheer je actieve opdrachten.</p>
   </div>
 
   <!-- Claim CTA (als geen bedrijf geclaimd) -->
@@ -27,18 +26,38 @@ const userEmail = Astro.locals.user?.email ?? ''
 
   <!-- Stats -->
   <div class="stats-row">
-    {[
-      { label: 'Nieuw',           color: '#3b82f6', id: 'nieuw' },
-      { label: 'Klant gesproken', color: '#f59e0b', id: 'klant_gesproken' },
-      { label: 'Gematcht',        color: '#10b981', id: 'gematcht' },
-      { label: 'Vervallen',       color: '#94a3b8', id: 'vervallen' },
-    ].map((s) => (
-      <div class="stat-card" id={`stat-${s.id}`}>
-        <span class="stat-dot" style={`background: ${s.color};`}></span>
-        <span class="stat-label">{s.label}</span>
-        <strong class="stat-value" id={`count-${s.id}`}>&mdash;</strong>
-      </div>
-    ))}
+    {
+      [
+        { label: 'Nieuw',           color: '#3b82f6', id: 'nieuw' },
+        { label: 'Klant gesproken', color: '#f59e0b', id: 'klant_gesproken' },
+        { label: 'Gematcht',        color: '#10b981', id: 'gematcht' },
+        { label: 'Vervallen',       color: '#94a3b8', id: 'vervallen' },
+      ].map((s) => (
+        <div class="stat-card" id={`stat-${s.id}`} style={`--stat-color:${s.color}`}>
+          <span class="stat-label">{s.label}</span>
+          <strong class="stat-value" id={`count-${s.id}`}>&mdash;</strong>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="section-header">
+    <div class="section-title">
+      <span class="section-dot"></span>
+      Beschikbare Leads
+    </div>
+    <span class="section-badge">Live</span>
+  </div>
+
+  <div id="beurs-grid" class="beurs-grid">
+    <div class="leads-loading" style="grid-column: 1 / -1;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+      Beurs laden...
+    </div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-title">Jouw Actieve Opdrachten</div>
   </div>
 
   <!-- Leads lijst -->
@@ -49,89 +68,185 @@ const userEmail = Astro.locals.user?.email ?? ''
     </div>
   </div>
 
-  <script define:vars={{ convexUrl, userId, userEmail }}>
-    /** Escape HTML entities to prevent XSS */
-    function esc(str) {
-      const div = document.createElement('div')
-      div.textContent = String(str ?? '')
-      return div.innerHTML
-    }
+  <script>
+    import { ConvexHttpClient } from "convex/browser"
+    import { api } from "../../../convex/_generated/api.js"
 
-    const STATUS_LABELS = {
-      nieuw: 'Nieuw',
-      klant_gesproken: 'Klant gesproken',
-      gematcht: 'Gematcht',
-      vervallen: 'Vervallen',
-    }
+    const grid = document.getElementById('beurs-grid')
+    const list = document.getElementById('leads-list')
+    const userId = document.querySelector('meta[name="user-id"]')?.getAttribute('content') as string
+    const convexUrl = import.meta.env.PUBLIC_CONVEX_URL as string
 
-    async function loadLeads() {
-      const list = document.getElementById('leads-list')
-      if (!list) return
-      try {
-        const res = await fetch(`${convexUrl}/api/query`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ path: 'leads:getMyLeads', args: { userId }, format: 'json' }),
-        })
-        const { value: leads } = await res.json()
+    if (userId && convexUrl) {
+      const client = new ConvexHttpClient(convexUrl)
 
-        const counts = { nieuw: 0, klant_gesproken: 0, gematcht: 0, vervallen: 0 }
-        leads.forEach(l => { if (l.status in counts) counts[l.status]++ })
-        Object.entries(counts).forEach(([k, v]) => {
-          const el = document.getElementById(`count-${k}`)
-          if (el) el.textContent = String(v)
-        })
-
-        if (!leads.length) {
-          list.innerHTML = `<div class="leads-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><p>Nog geen leads toegewezen. Je ontvangt een e-mail zodra er een aanvraag binnenkomt.</p></div>`
-          return
-        }
-
-        list.innerHTML = leads.map(l => `
-          <a href="/portal/leads/${esc(l._id)}" class="lead-card">
-            <div class="lead-card-left">
-              <span class="lead-status lead-status--${esc(l.status)}">${esc(STATUS_LABELS[l.status] ?? l.status)}</span>
-              <strong class="lead-naam">${esc(l.naam)}</strong>
-              <span class="lead-meta">${l.bedrijf_naam ? esc(l.bedrijf_naam) + ' &middot; ' : ''}${esc(l.postcode)} &middot; ${esc(l.dienst)} &middot; ${esc(l.m2)} m&sup2;</span>
-            </div>
-            <div class="lead-card-right">
-              <span class="lead-budget">${esc(l.budget)}</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-            </div>
-          </a>
-        `).join('')
-      } catch {
-        list.innerHTML = `<div class="leads-empty"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>Laden mislukt. Ververs de pagina.</p></div>`
+      function esc(str: any) {
+        const div = document.createElement('div')
+        div.textContent = String(str ?? '')
+        return div.innerHTML
       }
+
+      const STATUS_LABELS: Record<string, string> = {
+        nieuw: 'Nieuw',
+        klant_gesproken: 'Klant gesproken',
+        gematcht: 'Gematcht',
+        vervallen: 'Vervallen',
+      }
+
+      async function loadLeads() {
+        if (!list) return
+        try {
+          const leads = await client.query(api.leads.getMyLeads, { userId })
+
+          const counts: Record<string, number> = { nieuw: 0, klant_gesproken: 0, gematcht: 0, vervallen: 0 }
+          leads.forEach((l: any) => { if (l.status in counts) counts[l.status]++ })
+          Object.entries(counts).forEach(([k, v]) => {
+            const el = document.getElementById(`count-${k}`)
+            if (el) el.textContent = String(v)
+          })
+
+          if (!leads.length) {
+            list.innerHTML = `<div class="leads-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><p>Nog geen leads toegewezen. Je ontvangt een e-mail zodra er een aanvraag binnenkomt.</p></div>`
+            return
+          }
+
+          list.innerHTML = leads.map((l: any) => {
+            let tagClass = 'tag--cold'; let tagLabel = 'COLD';
+            const budget = String(l.budget || '').toLowerCase();
+            if (budget.includes('5000') || budget.includes('10000')) {
+              tagClass = 'tag--hot'; tagLabel = 'HOT';
+            } else if (budget.includes('2500') || budget.includes('medium')) {
+              tagClass = 'tag--warm'; tagLabel = 'WARM';
+            }
+
+            return `
+              <a href="/portal/leads/${esc(l._id)}" class="lead-card">
+                <div class="lead-card-left">
+                  <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.25rem;">
+                    <span class="tag ${tagClass}">${tagLabel}</span>
+                    <span class="lead-status lead-status--${esc(l.status)}">${esc(STATUS_LABELS[l.status] ?? l.status)}</span>
+                  </div>
+                  <strong class="lead-naam">${esc(l.naam)}</strong>
+                  <span class="lead-meta">${l.bedrijf_naam ? esc(l.bedrijf_naam) + ' &middot; ' : ''}${esc(l.postcode)} &middot; ${esc(l.dienst)} &middot; ${esc(l.m2)} m&sup2;</span>
+                </div>
+                <div class="lead-card-right">
+                  <span class="lead-budget">${esc(l.budget)}</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </div>
+              </a>
+            `;
+          }).join('')
+        } catch {
+          list.innerHTML = `<div class="leads-empty"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>Laden mislukt. Ververs de pagina.</p></div>`
+        }
+      }
+
+      async function loadBeurs() {
+        if (!grid) return
+        try {
+          const leads = await client.query(api.leads.getOpenLeads, { userId })
+
+          if (!leads || !leads.length) {
+            grid.innerHTML = `<div class="leads-empty" style="grid-column:1/-1;"><p>Momenteel geen nieuwe leads beschikbaar op de beurs.</p></div>`
+            return
+          }
+
+          grid.innerHTML = leads.map((l: any) => {
+            let tagClass = 'tag--cold'; let tagLabel = 'COLD';
+            const budget = String(l.budget || '').toLowerCase();
+            if (budget.includes('5000') || budget.includes('10000')) {
+              tagClass = 'tag--hot'; tagLabel = 'HOT';
+            } else if (budget.includes('2500') || budget.includes('medium')) {
+              tagClass = 'tag--warm'; tagLabel = 'WARM';
+            }
+            const dispPrice = budget.includes('5000') ? '€ 5.000+' : (budget.includes('2500') ? '€ 2.500+' : 'Weet ik niet')
+
+            return `
+              <div class="beurs-card">
+                <div class="beurs-header">
+                  <span class="tag ${tagClass}">${tagLabel}</span>
+                  <strong class="beurs-price">${esc(dispPrice)}</strong>
+                </div>
+                <div class="beurs-body">
+                  <span class="beurs-meta">${esc(l.postcode)} &middot; ${esc(l.m2)} m&sup2; &middot; ${esc(l.timing)}</span>
+                  <strong class="beurs-title">${esc(l.dienst)} &mdash; ${esc(l.naam)} <em style="font-weight:400;color:var(--color-charcoal-muted);">(Afgeschermd)</em></strong>
+                </div>
+                <div class="beurs-footer">
+                  <span class="beurs-time">${new Date(l._creationTime).toLocaleDateString('nl-NL')}</span>
+                  <button class="btn-primary" onclick="window.claimLead('${l._id}')">Inzien &mdash; 1 credit</button>
+                </div>
+              </div>
+            `
+          }).join('')
+        } catch {
+          grid.innerHTML = `<div class="leads-empty" style="grid-column:1/-1;"><p>Fout bij laden van beurs.</p></div>`
+        }
+      }
+
+      ;(window as any).claimLead = async function(leadId) {
+        if (!confirm('Weet je zeker dat je deze lead wil inzien voor 1 credit?')) return;
+        // Disable clicked button immediately
+        const btns = document.querySelectorAll('.btn-primary');
+        btns.forEach((b) => { (b as HTMLButtonElement).disabled = true; (b as HTMLButtonElement).style.opacity = '0.6'; })
+        try {
+          await client.mutation(api.leads.claimLeadWithCredit, { leadId: leadId as any, userId })
+          window.dispatchEvent(new Event('credits-updated'))
+          loadBeurs()
+          loadLeads()
+        } catch (err: any) {
+          alert('Fout: ' + (err.message || 'Serverfout bij het claimen.'))
+          // Re-enable on error
+          btns.forEach((b) => { (b as HTMLButtonElement).disabled = false; (b as HTMLButtonElement).style.opacity = '' })
+        }
+      }
+
+      loadLeads()
+      loadBeurs()
     }
-    loadLeads()
   </script>
 
 </PortalLayout>
 
 <!-- Check if bedrijf is claimed -->
-<script define:vars={{ convexUrl, userId }}>
-  async function checkClaimStatus() {
-    try {
-      const res = await fetch(`${convexUrl}/api/query`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ path: 'bedrijven:getMyBedrijf', args: { userId }, format: 'json' }),
-      })
-      const { value: bedrijf } = await res.json()
-      if (!bedrijf) {
-        const cta = document.getElementById('claim-cta')
-        if (cta) cta.style.display = 'flex'
-      }
-    } catch {}
+<script>
+  import { ConvexHttpClient } from "convex/browser"
+  import { api } from "../../../convex/_generated/api.js"
+
+  const userId = document.querySelector('meta[name="user-id"]')?.getAttribute('content') as string
+  const convexUrl = import.meta.env.PUBLIC_CONVEX_URL as string
+
+  if (userId && convexUrl) {
+    const client = new ConvexHttpClient(convexUrl)
+    async function checkClaimStatus() {
+      try {
+        const bedrijf = await client.query(api.bedrijven.getMyBedrijf, { userId })
+        if (!bedrijf) {
+          const cta = document.getElementById('claim-cta')
+          if (cta) cta.style.display = 'flex'
+        }
+      } catch {}
+    }
+    checkClaimStatus()
   }
-  checkClaimStatus()
 </script>
 
-<style>
-  .page-header { margin-bottom: 2rem; }
-  .page-header h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #282d31; }
-  .page-sub { margin-top: 0.375rem; color: #475569; }
+<style is:global>
+  /* ========================================================
+     Portal Dashboard — Design Tokens van global.css
+     Alle kleuren via var(--color-*), fonts via var(--font-*)
+     ======================================================== */
+
+  .page-header { margin-bottom: 1.75rem; }
+  .page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.625rem;
+    font-weight: 800;
+    color: var(--color-charcoal);
+    letter-spacing: -0.025em;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .page-sub { margin-top: 0.375rem; font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.5; }
 
   /* ── Claim CTA ── */
   .claim-cta {
@@ -139,122 +254,252 @@ const userEmail = Astro.locals.user?.email ?? ''
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.25rem;
-    background: rgba(245,158,11,0.06);
-    border: 1px solid rgba(245,158,11,0.20);
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    color: #d97706;
+    background: var(--color-warning-light);
+    border: 1px solid #fde68a;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.75rem;
+    color: var(--color-warning);
   }
-
   .claim-cta-text { display: flex; flex-direction: column; gap: 0.125rem; flex: 1; }
-  .claim-cta-text strong { font-size: 0.875rem; color: #92400e; }
-  .claim-cta-text span { font-size: 0.8rem; color: #b45309; }
-
+  .claim-cta-text strong { font-size: var(--text-sm); color: #92400e; font-weight: 700; }
+  .claim-cta-text span { font-size: 0.8125rem; color: #b45309; }
   .claim-cta-btn {
-    padding: 0.5rem 1rem;
-    background: #d97706;
-    color: #ffffff;
-    border-radius: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 0.5rem 1.125rem;
+    background: var(--color-warning);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
     font-size: 0.8125rem;
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
-    transition: background 0.15s;
+    transition: background var(--transition-fast);
   }
-
-  .claim-cta-btn:hover { background: #b45309; }
+  .claim-cta-btn:hover { background: #b45309; text-decoration: none; }
 
   /* ── Stat cards ── */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 0.875rem;
+    margin-bottom: 2.25rem;
+  }
+  .stat-card {
+    background: var(--color-canvas);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--stat-color, var(--color-border));
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+  .stat-card:hover { border-color: var(--color-border-hover); box-shadow: var(--shadow-md); }
+  .stat-label { font-size: 0.8125rem; color: var(--color-charcoal-muted); font-weight: 500; }
+  .stat-value {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-charcoal);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  #count-gematcht { color: var(--color-primary-500); }
+
+  /* ── Section headers ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+  }
+  .section-dot {
+    width: 8px; height: 8px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-500);
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.75); }
+  }
+  .section-badge {
+    background: var(--color-primary-50);
+    color: var(--color-primary-500);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-primary-100);
   }
 
-  .stat-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+  /* ── Beurs grid ── */
+  .beurs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .beurs-card {
+    background: var(--color-canvas);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
-    transition: border-color 0.15s;
+    gap: 0.875rem;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+    box-shadow: var(--shadow-sm);
   }
+  .beurs-card:hover {
+    border-color: var(--color-primary-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+  .beurs-header { display: flex; justify-content: space-between; align-items: flex-start; }
+  .beurs-price { font-family: var(--font-heading); color: var(--color-primary-500); font-weight: 800; font-size: var(--text-lg); letter-spacing: -0.02em; }
+  .beurs-body { display: flex; flex-direction: column; gap: 0.25rem; }
+  .beurs-meta { font-size: var(--text-xs); color: var(--color-charcoal-muted); font-weight: 500; }
+  .beurs-title { font-family: var(--font-heading); color: var(--color-charcoal); line-height: 1.35; font-size: 0.9375rem; font-weight: 600; }
+  .beurs-footer {
+    margin-top: 0.25rem;
+    padding-top: 0.875rem;
+    border-top: 1px solid var(--color-border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .beurs-time { font-size: var(--text-xs); color: var(--color-charcoal-muted); font-weight: 500; }
 
-  .stat-card:hover { border-color: #cbd5e1; }
-
-  .stat-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .stat-label { font-size: 0.8rem; color: #475569; font-weight: 500; }
-  .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 700; color: #008d51; }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: var(--color-primary-500);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--color-primary-600); box-shadow: var(--shadow-md); transform: translateY(-1px); }
 
   /* ── Lead list ── */
-  .leads-list { display: flex; flex-direction: column; gap: 0.625rem; }
-
+  .leads-list { display: flex; flex-direction: column; gap: 0.625rem; margin-bottom: 1rem; }
   .leads-loading, .leads-empty {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    padding: 3rem;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    color: #475569;
-    font-size: 0.9rem;
+    padding: var(--spacing-12);
+    background: var(--color-canvas);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-xl);
+    color: var(--color-charcoal-muted);
+    font-size: var(--text-sm);
     text-align: center;
   }
-
-  .leads-empty svg { color: #94a3b8; }
+  .leads-empty svg { color: var(--color-border-hover); }
 
   @keyframes spin { to { transform: rotate(360deg); } }
-  .spin { animation: spin 1s linear infinite; }
+  .spin { animation: spin 0.9s linear infinite; }
 
   .lead-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
+    background: var(--color-canvas);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
     padding: 1rem 1.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
     color: inherit;
-    transition: all 0.15s;
+    transition: all var(--transition-fast);
+    gap: 1rem;
+    box-shadow: var(--shadow-xs);
   }
-
   .lead-card:hover {
-    border-color: #cbd5e1;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-color: var(--color-primary-200);
+    box-shadow: var(--shadow-md);
     transform: translateY(-1px);
+    text-decoration: none;
   }
-
-  .lead-card-left { display: flex; flex-direction: column; gap: 0.25rem; }
-  .lead-naam { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: #282d31; }
-  .lead-meta { font-size: 0.8rem; color: #94a3b8; }
-  .lead-card-right { display: flex; align-items: center; gap: 0.5rem; color: #94a3b8; }
-  .lead-budget { font-size: 0.875rem; color: #008d51; font-weight: 600; }
+  .lead-card-left { display: flex; flex-direction: column; gap: 0.3rem; flex: 1; min-width: 0; }
+  .lead-naam { font-family: var(--font-heading); font-size: 0.9375rem; font-weight: 700; color: var(--color-charcoal); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lead-meta { font-size: var(--text-xs); color: var(--color-charcoal-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lead-card-right { display: flex; align-items: center; gap: 0.625rem; flex-shrink: 0; }
+  .lead-budget { font-family: var(--font-heading); font-size: var(--text-sm); color: var(--color-primary-500); font-weight: 700; }
 
   .lead-status {
     display: inline-flex;
     align-items: center;
-    font-size: 0.7rem;
+    font-size: 0.6875rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    padding: 0.15rem 0.5rem;
-    border-radius: 99px;
-    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
   }
+  .lead-status--nieuw           { background: #eff6ff; color: #3b82f6; border: 1px solid #bfdbfe; }
+  .lead-status--klant_gesproken { background: var(--color-warning-light); color: var(--color-warning); border: 1px solid #fde68a; }
+  .lead-status--gematcht        { background: var(--color-success-light); color: var(--color-success); border: 1px solid var(--color-primary-100); }
+  .lead-status--vervallen       { background: var(--color-canvas-muted); color: var(--color-charcoal-muted); border: 1px solid var(--color-border); }
 
-  .lead-status--nieuw            { background: rgba(59,130,246,0.10);  color: #2563eb; }
-  .lead-status--klant_gesproken  { background: rgba(245,158,11,0.10);  color: #d97706; }
-  .lead-status--gematcht         { background: rgba(16,185,129,0.10);  color: #059669; }
-  .lead-status--vervallen        { background: rgba(148,163,184,0.10); color: #64748b; }
+  /* ── Tags ── */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.625rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .tag--hot  { background: var(--color-error-light);   color: var(--color-error);   border: 1px solid #fecaca; }
+  .tag--warm { background: var(--color-warning-light); color: var(--color-warning); border: 1px solid #fde68a; }
+  .tag--cold { background: var(--color-canvas-muted);  color: var(--color-charcoal-muted); border: 1px solid var(--color-border); }
 
-  @media (max-width: 640px) {
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .beurs-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
     .stats-row { grid-template-columns: 1fr; }
+    .page-header h1 { font-size: 1.375rem; }
   }
 </style>
