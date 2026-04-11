@@ -5,6 +5,8 @@ publishDate: 2026-03-29
 category: onderhoud
 featured: false
 draft: false
+image: /blog/voorjaarssnoei.001.png
+imageAlt: "Infographic: voorjaarssnoei - welke heesters en bomen snoeien in april-mei"
 ---
 
 De dagen worden langer, de eerste knoppen barsten open en je tuin staat op het punt om los te gaan. Maar jij staat met die snoeischaar in je hand en twijfelt. Welke struik mag nu geknipt? En welke laat je beter met rust? Een verkeerde knip en je vlinderstruik bloeit dit jaar niet. Of erger: je verstoort een broedend vogelnest en zit ineens fout met de wet.
@@ -66,6 +68,10 @@ Dit is minstens zo belangrijk als weten wat je wél snoeit. Er zijn planten die 
 **Coniferen tot op oud hout.** De meeste coniferen lopen niet meer uit op kaal hout. Snoei ze alleen in de groene zone. Ga je te diep, dan hou je een kaal gat over dat niet meer dichtgroeit.
 
 Een handige vuistregel: snoei nooit meer dan een derde van de totale vegetatie in één seizoen weg. Meer dan dat verzwakt de plant en kan leiden tot een slechte groei het jaar erop.
+
+<figure>
+<img src="/blog/voorjaarssnoei.002.png" alt="Snoeikalender: wat nu snoeien en wat niet" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Broedseizoen en snoeien: wat zegt de wet?
 

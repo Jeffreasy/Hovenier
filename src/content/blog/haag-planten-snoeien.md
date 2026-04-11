@@ -5,6 +5,8 @@ publishDate: 2026-03-30
 category: beplanting
 featured: false
 draft: false
+image: /blog/haag-planten-snoeien.001.png
+imageAlt: "Infographic: haagsoorten vergelijken op prijs en onderhoud"
 ---
 
 Je wilt privacy in de tuin, maar die schutting is aan vervanging toe. Een haag planten lijkt de logische stap: groener, mooier en op termijn goedkoper dan hout of beton. Maar dan komen de vragen. Welke haagplant groeit snel genoeg? Hoeveel planten heb je per meter nodig? En hoe zit het eigenlijk met de buren en de erfgrens?
@@ -35,6 +37,10 @@ Een beukenhaag is de betaalbare klassieker. Je plant 4 tot 5 planten per strekke
 Taxus is de Rolls-Royce onder de hagen. Langzaam, compact, nauwelijks onderhoud. Maar let op: taxus is giftig. Heb je kleine kinderen of huisdieren in de tuin? Houd daar serieus rekening mee.
 
 Laurier en Thuja Brabant zijn de snelle groeiers van dit lijstje. Beide soorten groeien 30 tot 50 cm per jaar. Binnen twee tot drie jaar heb je een behoorlijk dichte haag. De keerzijde: je snoeit ze twee keer per jaar om ze in vorm te houden.
+
+<figure>
+<img src="/blog/haag-planten-snoeien.002.png" alt="Haagsoorten vergeleken op prijs, groei en onderhoud" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Wat kost een haag planten?
 

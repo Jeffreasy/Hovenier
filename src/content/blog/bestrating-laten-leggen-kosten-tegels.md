@@ -5,6 +5,8 @@ publishDate: 2026-04-02
 category: kosten
 featured: false
 draft: true
+image: /blog/bestrating-laten-leggen.001.png
+imageAlt: "Infographic: kosten bestrating laten leggen per tegeltype in 2026"
 ---
 
 Bestrating laten leggen is een van de meest ingrijpende verbeteringen die je aan je tuin of oprit kunt doen. Je oprit is verzakt, je terras staat vol kale plekken en onkruid schiet op door de voegen. Na de winter ziet het er beroerd uit, en je weet niet waar je moet beginnen of wat het gaat kosten. Dit artikel geeft je alle cijfers die je nodig hebt om een weloverwogen keuze te maken.
@@ -37,6 +39,10 @@ Twee ervaringen van forums geven een realistisch beeld:
 "60 m² voor €960: opruimen, afvoeren, zand, leggen en aandrukken. Stenen apart: nog eens zo'n €900."
 
 Dat zijn gunstige prijzen voor eenvoudig werk met betonklinkers. Bij keramische tegels of een complex patroon liggen de kosten beduidend hoger.
+
+<figure>
+<img src="/blog/bestrating-laten-leggen.002.png" alt="Overzicht kosten bestrating per tegeltype" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Welk tegeltype past bij jou? Beton, keramisch, gebakken of natuursteen
 

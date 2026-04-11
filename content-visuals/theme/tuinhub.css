@@ -1,0 +1,154 @@
+/* @theme tuinhub */
+
+@import 'default';
+
+:root {
+  --primary: #008d51;
+  --primary-light: #e6f5ee;
+  --primary-dark: #006639;
+  --charcoal: #282d31;
+  --charcoal-light: #4a5056;
+  --canvas: #ffffff;
+  --canvas-alt: #f8fafc;
+  --border: #e2e8f0;
+  --success: #16a34a;
+  --warning: #d97706;
+  --error: #dc2626;
+}
+
+section {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--charcoal);
+  background: var(--canvas);
+  padding: 40px 60px;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: var(--charcoal);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.25rem;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+/* Hero/title slide */
+section.lead {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  text-align: center;
+}
+
+section.lead h1 {
+  color: white;
+  border-bottom-color: rgba(255,255,255,0.3);
+  font-size: 2.5rem;
+}
+
+section.lead h2 {
+  color: rgba(255,255,255,0.9);
+  font-weight: 400;
+}
+
+/* Invert for dark sections */
+section.invert {
+  background: var(--charcoal);
+  color: white;
+}
+
+section.invert h1,
+section.invert h2 {
+  color: white;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:nth-child(even) {
+  background: var(--canvas-alt);
+}
+
+/* Highlight box */
+blockquote {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+  font-style: normal;
+}
+
+blockquote strong {
+  color: var(--primary-dark);
+}
+
+/* Price/cost callout */
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Footer branding */
+footer {
+  font-size: 0.75rem;
+  color: var(--charcoal-light);
+}
+
+/* Comparison columns */
+section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Badge/tag styling */
+code {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* Warning/tip boxes */
+.tip {
+  background: #f0fdf4;
+  border-left: 4px solid var(--success);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+.warning {
+  background: #fffbeb;
+  border-left: 4px solid var(--warning);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+}

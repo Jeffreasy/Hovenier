@@ -5,6 +5,8 @@ publishDate: 2026-03-28
 category: onderhoud
 featured: false
 draft: false
+image: /blog/tuinonderhoud-lente.001.png
+imageAlt: "Infographic: tuinonderhoud in de lente - 10 stappen plan"
 ---
 
 Na maanden van kou, wind en af en toe nachtvorst ziet de tuin er in maart niet bepaald florissant uit. Kale plekken in het gazon, bruine vaste planten die nog niet weten wat ze zijn, een laag oud blad tussen de borders. Herkenbaar? Dan is het tijd voor tuinonderhoud.
@@ -52,6 +54,10 @@ Wil je een [nieuwe border aanleggen](/blog/nieuwe-border-aanleggen)? Wacht even 
 Narcissen, krokussen en de eerste tulpen bloeien of komen er nu aan. Hier hoef je niets voor te doen. Dat is het mooie van bollen: je hebt het werk vorig najaar gedaan en nu pluk je de vruchten.
 
 Wel een tip: **laat het blad van bloembollen na de bloei gewoon uitsterven**. Het is verleidelijk om de bruine slierten weg te knippen als de bloem eraf is, maar de plant slaat via dat blad voedsel op voor volgend jaar. Pas zes tot acht weken na de bloei knip je het groen weg.
+
+<figure>
+<img src="/blog/tuinonderhoud-lente.002.png" alt="Lenteplan: 10 stappen tuinonderhoud" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Wanneer een hovenier inschakelen?
 

@@ -5,6 +5,8 @@ publishDate: 2026-03-31
 category: tuinaanleg
 featured: false
 draft: false
+image: /blog/moestuin-beginnen.001.png
+imageAlt: "Infographic: moestuin beginnen - startkosten en besparing"
 ---
 
 Een moestuin beginnen staat al tijden op je lijstje. Eigen tomaten, verse sla en kruiden recht uit de tuin, hoe fijn klinkt dat? Maar elke keer als je eraan begint, loop je vast. Is je tuin wel groot genoeg? Wat kost dat allemaal? En wanneer moet je eigenlijk beginnen met zaaien?
@@ -50,6 +52,10 @@ Niet iedereen wil of kan zelf graven. Misschien heb je zware kleigrond die omges
 Hovenier voor moestuin-aanleg: €30 tot €70 per m² inclusief materiaal. Het uurtarief van een hovenier ligt tussen de €35 en €60. Een moestuinontwerp inclusief beplantingsplan kost zo'n €350 tot €490 voor circa 100 m². Voor een complete moestuin-aanleg van 10 m² kun je rekenen op €400 tot €900 all-in.
 
 Klinkt dat als een flinke investering? Bedenk dat je een goed aangelegde moestuin jarenlang meeneemt. En als je een hovenier zoekt voor de aanleg, kun je via TuinHub [gratis offertes aanvragen](/offerte) en prijzen vergelijken. Meer weten over wat een hovenier kost? Lees dan ook [wanneer het slim is om een hovenier in te huren](/blog/hovenier-inhuren-lente).
+
+<figure>
+<img src="/blog/moestuin-beginnen.002.png" alt="Startkosten moestuin per scenario" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Wat levert het op? De besparing op je boodschappen
 

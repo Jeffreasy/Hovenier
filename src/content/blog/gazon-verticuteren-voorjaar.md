@@ -5,6 +5,8 @@ publishDate: 2026-03-28
 category: onderhoud
 featured: false
 draft: false
+image: /blog/gazon-verticuteren.001.png
+imageAlt: "Infographic: gazon verticuteren stappenplan en kosten"
 ---
 
 Na de winter ziet een gazon er soms hopeloos uit. Mos dat het gras overneemt, kale plekken, gras dat geel en dun oogt. De meeste tuiniers denken dan meteen aan verticuteren. Maar wanneer is het goede moment en hoe pak je het goed aan?
@@ -41,6 +43,10 @@ Zet de grasmaaier bij de állereerste beurt op zes centimeter; je wilt de mat ni
 6. Strooi zand of een bodemverbeteraar over het gazon als de grond dicht of kleiig is.
 7. Zaai kale plekken bij met doorzaaimengsel. Zorg dat het zaad goed contact maakt met de grond.
 8. Bemest direct na het verticuteren met een lente- of zomermestmiddel.
+
+<figure>
+<img src="/blog/gazon-verticuteren.002.png" alt="Stappenplan gazon verticuteren en kosten" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Wat kun je daarna verwachten?
 

@@ -5,6 +5,8 @@ publishDate: 2026-03-31
 category: onderhoud
 featured: false
 draft: false
+image: /blog/onkruid-bestrijden.001.png
+imageAlt: "Infographic: 7 methoden onkruid bestrijden vergeleken"
 ---
 
 Onkruid bestrijden: elk voorjaar hetzelfde verhaal. De voegen van je terras barsten open met groen, je borders worden overgenomen door brandnetels en paardenbloemen, en die oprit ziet er uit alsof er al jaren niemand meer woont. Je hebt van alles geprobeerd. Azijn, zout, kokend water. Niks werkt definitief. En Roundup? Dat mag niet meer. Je wilt gewoon weten hoe je het aanpakt zonder elk weekend op je knieën te zitten.
@@ -80,6 +82,10 @@ Voordeel: je hoeft zelf niks te doen en het resultaat is grondig. Ideaal als je 
 Geen zin om het zelf bij te houden? Sommige hoveniers bieden een onderhoudsabonnement aan voor onkruidbestrijding, vanaf circa €10 per maand. Ze komen dan regelmatig langs om je terras en tuin onkruidvrij te houden.
 
 Op jaarbasis is dat €120 tot €240. Niet de goedkoopste optie, maar wel de makkelijkste.
+
+<figure>
+<img src="/blog/onkruid-bestrijden.002.png" alt="7 methoden onkruid bestrijden vergeleken" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Wat mag wel en wat mag niet? Regelgeving 2026
 
