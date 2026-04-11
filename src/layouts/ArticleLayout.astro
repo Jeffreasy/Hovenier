@@ -297,7 +297,7 @@ const articleSchema = JSON.stringify({
 </style>
 
 <script>
-  // Wrap wide tables in a scroll container
+  // Wrap all prose tables in a scroll wrapper for consistent overflow handling
   document.querySelectorAll('.prose table').forEach((table) => {
     if (table.parentElement?.classList.contains('table-scroll-wrapper')) return;
     const wrapper = document.createElement('div');

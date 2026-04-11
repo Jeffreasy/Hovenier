@@ -259,23 +259,30 @@ a:hover {
   color: var(--color-charcoal-light);
 }
 
-/* Wide tables scroll horizontally within the prose column */
-.prose table {
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 .prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-charcoal); }
 .prose h3 { margin-top: 2rem;   margin-bottom: 0.75rem; color: var(--color-charcoal); }
 .prose p  { margin-bottom: 1.25rem; }
 .prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
 .prose li { margin-bottom: 0.5rem; }
 
+/* --- Table scroll wrapper (added by client-side JS for wide tables) --- */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.table-scroll-wrapper table {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+}
+
 /* --- Tables --- */
 .prose table {
-  width: max-content;
-  min-width: 100%;
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   margin-bottom: 1.5rem;
@@ -283,7 +290,6 @@ a:hover {
   line-height: 1.5;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
 }
 
 .prose th {
