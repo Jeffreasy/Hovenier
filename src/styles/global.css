@@ -259,11 +259,89 @@ a:hover {
   color: var(--color-charcoal-light);
 }
 
+/* Contain wide tables within the prose column */
+.article-content.prose {
+  overflow-x: clip;
+}
+
+.article-content.prose table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-charcoal); }
 .prose h3 { margin-top: 2rem;   margin-bottom: 0.75rem; color: var(--color-charcoal); }
 .prose p  { margin-bottom: 1.25rem; }
 .prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
 .prose li { margin-bottom: 0.5rem; }
+
+/* --- Tables --- */
+.prose table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.prose th {
+  background: var(--color-primary-500);
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.prose td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+.prose tbody tr:nth-child(even) {
+  background: var(--color-canvas-alt);
+}
+
+.prose tbody tr:hover {
+  background: var(--color-primary-50);
+}
+
+.prose th:first-child,
+.prose td:first-child {
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+@media (max-width: 768px) {
+  .prose table { font-size: 0.8rem; }
+  .prose th, .prose td { padding: 0.4rem 0.5rem; }
+}
+
+/* --- Figures (inline infographics) --- */
+.prose figure {
+  margin: 2rem 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.prose figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .prose code {
   background: var(--color-canvas-muted);

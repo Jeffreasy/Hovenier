@@ -207,6 +207,12 @@ const articleSchema = JSON.stringify({
     grid-template-columns: 1fr;
     gap: 3rem;
     padding-top: 3rem;
+    min-width: 0;
+  }
+
+  .article-content {
+    min-width: 0;
+    overflow-x: auto;
   }
 
   @media (min-width: 1024px) {
@@ -289,3 +295,14 @@ const articleSchema = JSON.stringify({
     color: var(--color-charcoal);
   }
 </style>
+
+<script>
+  // Wrap wide tables in a scroll container
+  document.querySelectorAll('.prose table').forEach((table) => {
+    if (table.parentElement?.classList.contains('table-scroll-wrapper')) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'table-scroll-wrapper';
+    table.parentNode?.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+</script>
