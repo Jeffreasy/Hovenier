@@ -5,8 +5,8 @@ publishDate: 2026-04-01
 category: schutting
 featured: false
 draft: false
-image: /blog/schutting-plaatsen-kosten.001.png
-imageAlt: "Infographic: kosten schutting plaatsen per materiaal in 2026"
+image: /blog/schutting-plaatsen-hero.jpg
+imageAlt: "Tuin met houten schutting, gazon en overkapping"
 ---
 
 Je schutting staat scheef na de laatste najaarsstorm, de planken zijn groen van de algen en de onderste latten zijn doorgerot. Elke keer dat je in de tuin zit, kijk je recht in de keuken van de buren. En zij in de jouwe. Ondertussen weet je niet of de buurman moet meebetalen, hoe hoog je mag bouwen, of welk materiaal niet weer na vijf jaar vergaan is.

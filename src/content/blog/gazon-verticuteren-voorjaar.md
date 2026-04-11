@@ -5,8 +5,8 @@ publishDate: 2026-03-28
 category: onderhoud
 featured: false
 draft: false
-image: /blog/gazon-verticuteren.001.png
-imageAlt: "Infographic: gazon verticuteren stappenplan en kosten"
+image: /blog/gazon-verticuteren-hero.jpg
+imageAlt: "Groen gazon in verzorgde tuin"
 ---
 
 Na de winter ziet een gazon er soms hopeloos uit. Mos dat het gras overneemt, kale plekken, gras dat geel en dun oogt. De meeste tuiniers denken dan meteen aan verticuteren. Maar wanneer is het goede moment en hoe pak je het goed aan?

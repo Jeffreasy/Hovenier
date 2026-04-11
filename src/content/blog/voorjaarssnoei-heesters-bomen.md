@@ -5,8 +5,8 @@ publishDate: 2026-03-29
 category: onderhoud
 featured: false
 draft: false
-image: /blog/voorjaarssnoei.001.png
-imageAlt: "Infographic: voorjaarssnoei - welke heesters en bomen snoeien in april-mei"
+image: /blog/voorjaarssnoei-hero.jpg
+imageAlt: "Snoeischaar en tuingereedschap voor voorjaarssnoei"
 ---
 
 De dagen worden langer, de eerste knoppen barsten open en je tuin staat op het punt om los te gaan. Maar jij staat met die snoeischaar in je hand en twijfelt. Welke struik mag nu geknipt? En welke laat je beter met rust? Een verkeerde knip en je vlinderstruik bloeit dit jaar niet. Of erger: je verstoort een broedend vogelnest en zit ineens fout met de wet.

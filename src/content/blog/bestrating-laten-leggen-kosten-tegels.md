@@ -5,8 +5,8 @@ publishDate: 2026-04-02
 category: kosten
 featured: false
 draft: true
-image: /blog/bestrating-laten-leggen.001.png
-imageAlt: "Infographic: kosten bestrating laten leggen per tegeltype in 2026"
+image: /blog/bestrating-laten-leggen-hero.jpg
+imageAlt: "Strak bestraat tuinpad met groene beplanting"
 ---
 
 Bestrating laten leggen is een van de meest ingrijpende verbeteringen die je aan je tuin of oprit kunt doen. Je oprit is verzakt, je terras staat vol kale plekken en onkruid schiet op door de voegen. Na de winter ziet het er beroerd uit, en je weet niet waar je moet beginnen of wat het gaat kosten. Dit artikel geeft je alle cijfers die je nodig hebt om een weloverwogen keuze te maken.
