@@ -5,6 +5,8 @@ publishDate: 2026-03-28
 category: kosten
 featured: false
 draft: false
+image: /blog/hovenier-inhuren-lente.001.png
+imageAlt: "Infographic: hovenier inhuren in de lente - kosten en tarieven 2026"
 ---
 
 De lente is het drukste seizoen voor hoveniers. Iedereen wil zijn tuin klaar hebben voor de zomer en een hovenier inhuren voor het zware werk. Dat betekent dat goede vakmensen snel volgeboekt zijn en dat je niet altijd kunt kiezen wanneer ze komen.
@@ -66,6 +68,10 @@ Een grove indicatie voor veelgevraagde klussen:
 | Volledige lentebeurt | 300 tot 600 euro |
 
 Dit zijn indicaties. De werkelijke prijs hangt af van de staat van je tuin, de regio en de hovenier.
+
+<figure>
+<img src="/blog/hovenier-inhuren-lente.002.png" alt="Overzicht kosten hovenier inhuren in de lente" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Hoe vind je een betrouwbare hovenier?
 

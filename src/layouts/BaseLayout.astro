@@ -15,7 +15,7 @@ interface Props {
 const { seo, schema, bodyClass = '' } = Astro.props
 const canonical = seo.canonical ?? buildCanonical(Astro.url.pathname)
 const title = buildTitle(seo.title)
-const ogImage = seo.ogImage ?? `${SITE.url}/og-default.jpg`
+const ogImage = seo.ogImage ?? `${SITE.url}/og-default.png`
 ---
 
 <!doctype html>

@@ -5,6 +5,8 @@ publishDate: 2026-03-30
 category: onderhoud
 featured: false
 draft: false
+image: /blog/tuin-bewateren.001.png
+imageAlt: "Infographic: tuin bewateren - bewateringsmethoden en kosten"
 ---
 
 Je gazon was in april nog frisgroen. Maar halverwege juni? Een dor, geel vlak. De borders hangen erbij, je hortensia's laten hun blaadjes vallen, en het water uit de tuinslang lijkt gewoon van de kurkdroge grond af te rollen. Je sproeit elke avond een kwartiertje, maar het helpt voor geen meter.
@@ -73,6 +75,10 @@ Losse onderdelen: een irrigatietimer kost €70 tot €80, druppelaars (set van 
 | Sprinklerinstallatie | €350 - €575 | Gemiddeld | Deels |
 | Semi-automatisch (zones + timer) | €940 - €2.020 | Hoog | Nee |
 | Volledig automatisch (smart) | €1.940 - €4.220+ | Zeer hoog | Nee |
+
+<figure>
+<img src="/blog/tuin-bewateren.002.png" alt="Bewateringsmethoden vergeleken op kosten en waterbesparing" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Wat kost tuin bewateren? Prijzen 2026 op een rij
 

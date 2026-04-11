@@ -5,6 +5,8 @@ publishDate: 2026-04-01
 category: schutting
 featured: false
 draft: false
+image: /blog/schutting-plaatsen-kosten.001.png
+imageAlt: "Infographic: kosten schutting plaatsen per materiaal in 2026"
 ---
 
 Je schutting staat scheef na de laatste najaarsstorm, de planken zijn groen van de algen en de onderste latten zijn doorgerot. Elke keer dat je in de tuin zit, kijk je recht in de keuken van de buren. En zij in de jouwe. Ondertussen weet je niet of de buurman moet meebetalen, hoe hoog je mag bouwen, of welk materiaal niet weer na vijf jaar vergaan is.
@@ -23,6 +25,10 @@ De prijs hangt af van het materiaal en de lengte, maar de montagekosten zijn voo
 | Hout-beton | €136 – €229 |
 | Kunststof/PVC | €60 – €130 |
 | Natuurlijk (bamboe/wilgenmat) | €50 – €100 |
+
+<figure>
+<img src="/blog/schutting-plaatsen-kosten.002.png" alt="Overzicht kosten schutting plaatsen per materiaal" width="1200" height="675" loading="lazy" />
+</figure>
 
 ### Wat zit er in die prijs?
 
@@ -63,6 +69,10 @@ De aanschafprijs is één ding. Wat je over tien of vijftien jaar kwijt bent aan
 | Composiet (HKC) | 15–25 jaar | Alleen water + borstel | €80 – €180 |
 | Hout-beton | 15–20 jaar (hout korter) | Hout gedeelte onderhouden | €100 – €170 |
 | Kunststof/PVC | 20+ jaar | Nauwelijks | €45 – €100 |
+
+<figure>
+<img src="/blog/schutting-plaatsen-kosten.005.png" alt="Vergelijking schuttingmaterialen: hout vs composiet vs hout-beton" width="1200" height="675" loading="lazy" />
+</figure>
 
 Grenen en vuren zijn goedkoop in aanschaf, maar gaan zonder goed onderhoud maar **8–15 jaar** mee. Composiet doet het zonder groot onderhoud **15–25 jaar**. Op de lange termijn kan composiet dus goedkoper uitvallen dan hout, ook al betaal je meer bij aanschaf. Wie rekent over 20 jaar hoeft bij composiet geen tweede schutting te kopen.
 

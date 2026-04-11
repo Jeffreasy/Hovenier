@@ -5,6 +5,8 @@ publishDate: 2026-03-28
 category: beplanting
 featured: false
 draft: false
+image: /blog/nieuwe-border.001.png
+imageAlt: "Infographic: nieuwe border aanleggen - stappenplan en kosten"
 ---
 
 Een nieuwe border aanleggen is een van de mooiste dingen die je in de lente kunt doen. Het vraagt wat voorbereiding, maar het resultaat houdt jaren mee. Vaste planten komen ieder jaar terug, ze groeien en bloeien steeds mooier. Na een goede aanleg heb je er amper nog omkijken naar.
@@ -66,6 +68,10 @@ Houd afstand tussen de planten. Op de verpakking staat hoe groot ze worden. Doe 
 Een **laag mulch van drie tot vijf centimeter** over de border houdt onkruid tegen, behoudt vocht en ziet er verzorgd uit. Gebruik houtvezels, boomschors of kokos. Kies op natte kleigrond niet voor zware houtsnippers, want die verstikken de boel.
 
 Mulch hoef je niet elk jaar te vernieuwen. Bijvullen waar het is weggezakt is genoeg.
+
+<figure>
+<img src="/blog/nieuwe-border.002.png" alt="5 stappen naar een mooie border" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Zelf doen of een hovenier?
 

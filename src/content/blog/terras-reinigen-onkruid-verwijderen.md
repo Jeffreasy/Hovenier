@@ -5,6 +5,8 @@ publishDate: 2026-03-29
 category: onderhoud
 featured: false
 draft: false
+image: /blog/terras-reinigen.001.png
+imageAlt: "Infographic: terras reinigen - kosten en methoden 2026"
 ---
 
 Je loopt de tuin in en je terras ziet er niet uit. Groene aanslag op de tegels, onkruid dat tussen elke voeg omhoogschiet en die hardnekkige zwarte vlekken van de winter. Je wilt niks liever dan lekker buiten zitten zodra het warm wordt. Maar eerst moet je dat terras reinigen. En dan die voegen. Waar begin je?
@@ -72,6 +74,10 @@ Geschikt voor: hardhouten en softhouten terrassen.
 ### Hoeveel tijd kost het zelf?
 
 Reken voor een terras van 50 m² op zo'n 3 tot 5 uur als je het zelf doet met een hogedrukreiniger. Met bezem en groene zeep is dat eerder 6 tot 8 uur, verdeeld over twee dagen (inweken, schrobben, spoelen). Een professional doet dezelfde 50 m² in 2 tot 3 uur. Dat verschil in tijd is voor veel mensen de reden om het uit te besteden.
+
+<figure>
+<img src="/blog/terras-reinigen.002.png" alt="DIY vs professional terras reinigen kosten" width="1200" height="675" loading="lazy" />
+</figure>
 
 ## Onkruid tussen tegels: wat werkt (en wat niet)
 
