@@ -4,7 +4,7 @@ description: "Bestrating laten leggen kost €45–€115 per m². Bekijk de pri
 publishDate: 2026-04-02
 category: kosten
 featured: false
-draft: true
+draft: false
 image: /blog/bestrating-laten-leggen-hero.jpg
 imageAlt: "Strak bestraat tuinpad met groene beplanting"
 ---
