@@ -4,7 +4,7 @@ description: "Siertuin border aanleggen kost €130 tot €1.800 voor 10 m². Be
 publishDate: 2026-04-27
 category: beplanting
 featured: false
-draft: true
+draft: false
 ---
 
 Een siertuin border aanleggen kost €130 tot €1.800 voor 10 m², afhankelijk van of je zelf samenstelt, een kant-en-klaar borderpakket koopt of een hovenier het ontwerp en de aanleg laat doen. Klinkt overzichtelijk. Tot je in het tuincentrum staat met een vol karretje, drie soorten lavendel, wat rudbeckia die mooi stond bij de kassa, en geen idee of dat allemaal samen werkt op jouw kleigrond.
@@ -53,7 +53,7 @@ Wil je een snelle eerste schatting voor jouw oppervlakte? Gebruik onze [tuinkost
 
 ## Beplantingsplan: zelf maken, pakket of laten ontwerpen?
 
-Een goed beplantingsplan is het verschil tussen een border die elk jaar mooier wordt en een border die je in maart 3 al weer staat te herzien. Drie routes, drie prijspeilen.
+Een goed beplantingsplan is het verschil tussen een border die elk jaar mooier wordt en een border die je in maart al weer staat te herzien. Drie routes, drie prijspeilen.
 
 ### Route 1: zelf een beplantingsplan tekenen
 
@@ -136,7 +136,7 @@ Belangrijk bij zonborders: lavendel en veel mediterrane soorten haten natte voet
 
 ### Halfschaduwborder: geranium, astilbe, campanula
 
-Halfschaduw is 2 tot 4 uur directe zon, vaak ochtend- of avondzon [Bron: Intratuin, 2025]. Dit is de meest voorkomende standplaats in Nederlandse tuinen. Geranium (ooievaarsbek, halfschaduw, 7 tot 9 per m²) is hier de werkhorse, in combinatie met astilbe (halfschaduw, vochtige grond, 5 tot 7 per m²) en campanula (halfschaduw, 7 tot 9 per m²).
+Halfschaduw is 2 tot 4 uur directe zon, vaak ochtend- of avondzon [Bron: Intratuin, 2025]. Dit is de meest voorkomende standplaats in Nederlandse tuinen. Geranium (ooievaarsbek, halfschaduw, 7 tot 9 per m²) is hier het werkpaard, in combinatie met astilbe (halfschaduw, vochtige grond, 5 tot 7 per m²) en campanula (halfschaduw, 7 tot 9 per m²).
 
 ### Schaduwborder: hosta, varens, heuchera, bergenia
 

@@ -4,7 +4,7 @@ description: "Drainage tuin aanleggen ✓ Kosten 2026 per methode ✓ Drainagebu
 publishDate: 2026-04-27
 category: tuinaanleg
 featured: false
-draft: true
+draft: false
 ---
 
 Drainage tuin aanleggen kost gemiddeld €1.000 tot €1.500 voor een standaardproject, maar de prijs kan oplopen tot €7.000 als je de hele woning ringdrainage geeft. Welke methode je nodig hebt voor drainage in je tuin, hangt af van je bodemsoort en het type wateroverlast: een grindkoffer onder een regenpijp werkt heel anders dan een horizontaal drainagesysteem op kleigrond.
@@ -85,7 +85,7 @@ Twee opties die concurrenten zelden noemen. Een wadi is een ondiepe greppel met 
 
 Kleigrond is geen gewone grond. Het is dicht, houdt water vast en laat nauwelijks infiltreren. Daardoor faalt een grindkoffer of infiltratiekrat vaak: het water heeft geen kant op. Voor drainage in kleigrond gelden andere regels.
 
-**Buisdiameter en omhulling.** Op kleigrond gebruik je een drainagebuis met een PP700-omhulling (een kunststof omhulling met grovere maaswijdte). Een drainagebuis PP700 80 mm op rol van 50 meter kost €162,26 [Bron: IrriTech, 2025]. De grovere omhulling voorkomt dat fijne kleideeltjes de buis dichtslibben. Een kokos-omhulling is daarentegen perfect voor zandgrond: kokos heeft een fijnere structuur die zand tegenhoudt en heeft een levensduur tot 55 jaar.
+**Buisdiameter en omhulling.** Op kleigrond gebruik je een drainagebuis met een PP700-omhulling (een kunststof omhulling met grovere maaswijdte). Een drainagebuis PP700 80 mm op rol van 50 meter kost €162,26 [Bron: IrriTech, 2025]. De grovere omhulling voorkomt dat fijne kleideeltjes de buis dichtslibben. Voor zandgrond is een kokos-omhulling juist perfect: kokos heeft een fijnere structuur die zand tegenhoudt en heeft een levensduur tot 55 jaar.
 
 **Sleufdiepte en afstand.** Op kleigrond leg je horizontale drainagebuizen op 2 tot 3 meter afstand van elkaar [Bron: IrriTech, 2025]. Op zand kan dat ruimer (4 tot 6 meter) omdat het water zich daar makkelijker verspreidt. De standaard sleufdiepte is 60 cm, breedte 30 cm [Bron: Wooninstijl, 2026]. Bij dichte kleilagen ga je dieper: 50 tot 90 cm, soms door de kleilaag heen tot in de zandlaag.
 
@@ -213,7 +213,7 @@ Om de prijzen tastbaar te maken: dit is wat je in 2026 betaalt bij Hornbach, GAM
 
 ### Wat kost drainage aanleggen in een gemiddelde tuin?
 
-Voor een tuin van 50 tot 100 m² met een lokaal probleem ben je gemiddeld €1.000 tot €2.500 kwijt voor materiaal en arbeid samen. Een uitgebreid systeem rondom de woning loopt op tot €7.000. Per strekkende meter reken je gemiddeld €80, met een spreiding tussen €30 (DIY zandgrond) en €200 (complex hovenierwerk in klei).
+Voor een tuin van 50 tot 100 m² met een lokaal probleem ben je gemiddeld €1.000 tot €2.500 kwijt voor materiaal en arbeid samen. Een volledig systeem rondom de woning loopt op tot €7.000. Per strekkende meter reken je gemiddeld €80, met een spreiding tussen €30 (DIY zandgrond) en €200 (complex hovenierwerk in klei).
 
 ### Welke drainage past bij kleigrond?
 
