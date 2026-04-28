@@ -4,7 +4,7 @@ description: "Tuin laten ontwerpen kosten 2026: €250-€2.500. Tuinontwerper, 
 publishDate: 2026-04-28
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Een tuin laten ontwerpen kost in 2026 tussen de €250 voor een kleine schets en €4.500 voor een volledig pakket met 2D, 3D, beplantings- en lichtplan, en de kosten lopen vooral uiteen door wie je inhuurt en hoe groot je tuin is. Voor de meeste mensen met een gemiddelde achtertuin van 100 tot 200 m² komt de prijs uit op €450 tot €750 voor het ontwerp, of €700 tot €1.500 als je er ook een beplantingsplan en lichtplan bij wil [Bron: Homedeal.nl, 2026].

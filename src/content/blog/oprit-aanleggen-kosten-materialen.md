@@ -4,7 +4,7 @@ description: "Oprit aanleggen kosten 2026: klinkers, beton, grind & grasdallen v
 publishDate: 2026-04-28
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 De kosten voor een oprit aanleggen lopen in 2026 uiteen van 35 euro per m² voor basis betonklinkers tot 180 euro per m² voor natuursteen, en de uitritvergunning kan in sommige gemeenten alleen al meer dan 400 euro toevoegen. Zit je met een verzakte oprit waar onkruid uit elke voeg piept, of begin je vanaf de stoeprand opnieuw, dan hangt de eindprijs af van drie dingen: je materiaalkeuze, de grootte van de oprit, en wat de gemeente eist op het gebied van uitritvergunning en hemelwater.
