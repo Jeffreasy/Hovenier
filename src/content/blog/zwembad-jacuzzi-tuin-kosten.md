@@ -4,7 +4,7 @@ description: "Zwembad of jacuzzi in tuin kosten 2026 ✓ Eerlijke prijzen per ty
 publishDate: 2026-04-28
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Een zwembad of jacuzzi in je tuin laten plaatsen kost in 2026 tussen de €300 voor een opblaasbare jacuzzi en meer dan €100.000 voor een bouwkundig betonnen zwembad van 8 bij 4 meter. De kosten van een zwembad of jacuzzi in tuin lopen dus enorm uiteen, en welke kant je kiest hangt af van budget, beschikbare ruimte, gebruiksintentie en hoeveel je jaarlijks wil uitgeven aan stroom, water en onderhoud.

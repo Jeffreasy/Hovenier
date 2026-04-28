@@ -4,7 +4,7 @@ description: "Kunstgras leggen tuin: kosten €30 tot €70 per m², kwaliteitsk
 publishDate: 2026-04-28
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Kunstgras leggen in je tuin kost in 2026 tussen €30 en €70 per m² inclusief materiaal en leggen, maar de echte vraag is welke kwaliteit je kiest en of het rendabel is over tien jaar [Bron: Werkspot, 2026] [Bron: Hovenier.nl, 2026]. Voor een gemiddelde tuin van 50 m² betekent dat een totaalprijs van €1.500 tot €3.500, afhankelijk van of je een budget grastapijt uit de bouwmarkt kiest of een premium product met 15 jaar garantie laat plaatsen door een specialist.
