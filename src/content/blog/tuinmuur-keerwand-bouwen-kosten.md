@@ -4,7 +4,7 @@ description: "Tuinmuur bouwen kosten 2026: baksteen, beton en gabion vergeleken,
 publishDate: 2026-04-29
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 De tuinmuur bouwen kosten lopen in 2026 uiteen van 65 euro per strekkende meter voor een lage betonblokmuur tot 220 euro per strekkende meter voor 2 meter handgevormde baksteen, en daarbovenop komt vaak een fundering die alleen al 75 tot 125 euro per vierkante meter kost [Bron: Klussendirect, 2026] [Bron: Werkspot, 2026]. Loopt je tuin schuin af en zakt de aarde elke winter een stukje verder weg? Of wil je eindelijk privacy, geen wapperende schutting maar een echte muur die er over twintig jaar nog staat? Dan begin je te zoeken en kom je in een mist van prijzen terecht. De ene site noemt 65 euro per meter, de andere 220, en bij een derde is alles op offerte.
@@ -112,7 +112,7 @@ Eén: mondelinge afspraken. Een mandelige muur vraagt een schriftelijke afspraak
 
 Twee: kostenverdeling vooraf onduidelijk. Spreek af wie het materiaal koopt, wie de aannemer betaalt, en wie de fundering financiert. Een muur van 2 meter op 10 meter lengte met gewapende fundering kost al snel 5.000 euro. Vijftig procent achteraf opvragen bij een onwillige buur is een lange juridische weg.
 
-Drie: onderhoudsplicht vergeten. Mandeligheid betekent ook dat beide partijen verplicht meebetalen aan onderhoud. Als de voegen na 20 jaar moeten worden hersteld, of de muur na een bouwbouwbeschadiging gerepareerd moet worden, mag je niet alleen je buurman op de rekening zetten. Leg dit punt expliciet vast.
+Drie: onderhoudsplicht vergeten. Mandeligheid betekent ook dat beide partijen verplicht meebetalen aan onderhoud. Als de voegen na 20 jaar moeten worden hersteld, of de muur na een beschadiging gerepareerd moet worden, mag je niet alleen je buurman op de rekening zetten. Leg dit punt expliciet vast.
 
 ## Fundering: het onzichtbare deel waar je niet op moet besparen
 

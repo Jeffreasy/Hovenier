@@ -4,7 +4,7 @@ description: "Hovenier kosten per uur 2026: 35 tot 80 euro excl. BTW. ZZP vs bed
 publishDate: 2026-04-29
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Een hovenier rekent in 2026 tussen de 35 en 80 euro per uur exclusief BTW, afhankelijk van wie je belt en wat je laat doen [Bron: Homedeal.nl, 2026] [Bron: Offerteadviseur.nl, 2026]. De kosten per uur lopen op van rond 40 euro voor een startende ZZP'er tot 80 euro of meer voor een groter hoveniersbedrijf met VHG-keurmerk [Bron: Offerteadviseur.nl, 2026]. En dan heb je nog de specialisten in boomverzorging die zonder blozen 90 euro per uur vragen [Bron: Hoveniers in Nederland, 2026].
@@ -26,7 +26,7 @@ De brede markt-range voor 2026 ligt tussen 35 en 75 euro per uur exclusief BTW [
 
 [Bron: Offerteadviseur.nl, 2026] [Bron: Hoveniers in Nederland, 2026] [Bron: Werkspot.nl, 2026]
 
-Het gemiddelde uurtarief van een ZZP-hovenier ligt in 2026 op 44 tot 48 euro exclusief BTW [Bron: Klaar de Klus, 2026] [Bron: Bieb.knab.nl, 2026]. Dat is het cijfer dat je in je hoofd kunt houden als referentie. Alles daaronder is verdacht (geen verzekering, geen BTW-administratie, of iemand die weet dat hij te goedkoop zit). Alles daarboven moet zich verdienen door specialisme, ervaring of overhead.
+Een ZZP-hovenier rekent in 2026 gemiddeld 44 tot 48 euro per uur exclusief BTW [Bron: Klaar de Klus, 2026] [Bron: Bieb.knab.nl, 2026]. Dat is het cijfer dat je in je hoofd kunt houden als referentie. Alles daaronder is verdacht (geen verzekering, geen BTW-administratie, of iemand die weet dat hij te goedkoop zit). Alles daarboven moet zich verdienen door specialisme, ervaring of overhead.
 
 De prijsverschillen tussen aanbieders zijn niet willekeurig. Een groter hoveniersbedrijf rekent meer omdat het méér levert: kantoor, projectplanning, btw-administratie, doorlopende verzekering, gegarandeerde nazorg en een ploeg die op tijd komt. Een ZZP'er kan goedkoper omdat hij die overhead niet heeft, maar moet wel zijn eigen vakantie, ziektekosten en verzekering uit dat uurtarief halen. Een tuinman zonder titelbescherming rekent 30 tot 50 euro per uur en doet vooral basis-onderhoud, geen aanleg [Bron: Werkspot.nl, 2026].
 
