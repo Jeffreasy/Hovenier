@@ -4,7 +4,7 @@ description: "Boom kappen kosten 2026: prijs per hoogte, stronk verwijderen, kap
 publishDate: 2026-04-29
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Een boom kappen kost in 2026 grofweg 300 euro voor een kleine boom tot 5.000 euro voor een reuzenboom van 20 meter of hoger, en de kapvergunning komt daar in sommige gemeenten zoals Utrecht alleen al met 735 euro bovenop [Bron: Utrecht.nl, 2026]. Heb je een berk in de achtertuin die de tegels van je terras tilt, of een dode tak boven de schuur die bij elke storm dreigt af te breken, dan staat de hovenier zelden zomaar voor de deur. Eerst de regels, dan de prijs, en pas daarna de zaag.

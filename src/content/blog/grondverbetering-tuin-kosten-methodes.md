@@ -4,7 +4,7 @@ description: "Grondverbetering tuin: kosten per m², methodes per grondsoort (kl
 publishDate: 2026-04-29
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Grondverbetering in je tuin kost ongeveer €2 tot €15 per m² als je het zelf aanpakt en €15 tot €40 per m² met een hovenier, afhankelijk van je grondsoort en hoe diep je ingrijpt. De juiste methode hangt af van wat je grond mankeert: kleigrond vraagt iets totaal anders dan zand, en veengrond heeft soms helemaal geen verbetering nodig maar drainage.
