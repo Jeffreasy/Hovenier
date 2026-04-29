@@ -4,7 +4,7 @@ description: "Tuin renoveren kosten 2026: €2.000-€25.000. Per m² €50-€1
 publishDate: 2026-04-29
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Een tuin renoveren kost in 2026 tussen €2.000 en €25.000, afhankelijk van wat je laat doen en hoeveel je zelf oppakt. Voor een gemiddelde tuin van 80 tot 100 m² liggen de kosten van een complete tuinrenovatie meestal tussen €5.000 en €12.000, met uitschieters naar boven of beneden afhankelijk van staat, materialen en grondwerk.
@@ -30,7 +30,7 @@ Wat valt op in deze cijfers? Het verschil tussen "budget" en "compleet" is een f
 
 Er is nog iets dat veel mensen onderschatten. Voor een budget-renovatie verwacht je misschien dat je veel kunt voor weinig, maar tuinen die jaren onderhoud hebben gemist (oude bestrating, verzakte fundering, slechte afwatering) glijden snel naar het gemiddelde of complete niveau. Niet vanwege jouw wensen, maar omdat het ondergrondse werk simpelweg gedaan moet worden. Wie een 30 jaar oude tuin opknapt zonder grondwerk en drainage opnieuw aan te pakken, betaalt het verschil binnen vijf jaar opnieuw aan herstel.
 
-Een eerlijk advies: als je offertes binnenkrijgt die fors uiteenlopen, is dat niet automatisch een rode vlag. Het kan zijn dat de duurste hovenier wél heeft gekeken naar verzakkingen, drainage en fundering, en de goedkoopste niet. De vergelijking gaat alleen op als je drie offertes met dezelfde scope vergelijkt.
+Een eerlijk advies: als je offertes binnenkrijgt die fors uiteenlopen, is dat niet automatisch een rode vlag. Het kan zijn dat de duurste hovenier wél heeft gekeken naar verzakkingen, drainage en fundering, en de goedkoopste niet. De vergelijking gaat alleen op als je drie offertes met dezelfde uitvraag vergelijkt.
 
 ## Prijs per vierkante meter: van €30 tot €300
 
@@ -215,8 +215,8 @@ Op exact dezelfde tuinrenovatie kunnen offertes €5.000 uit elkaar liggen. Seve
 
 Vier checks die het meeste verschil maken:
 
-1. **Vraag drie offertes met dezelfde scope.** Stuur niet "even een offerte voor mijn tuin", maar een korte beschrijving inclusief m², gewenste materialen en gewenste werkzaamheden. Anders vergelijk je appels met peren.
-2. **Eis uitsplitsing.** Arbeid, materialen, voorbereiding, afvoer apart. Een lump sum maakt vergelijken onmogelijk en geeft je geen ruimte om te onderhandelen.
+1. **Vraag drie offertes met dezelfde uitvraag.** Stuur niet "even een offerte voor mijn tuin", maar een korte beschrijving inclusief m², gewenste materialen en gewenste werkzaamheden. Anders vergelijk je appels met peren.
+2. **Eis uitsplitsing.** Arbeid, materialen, voorbereiding, afvoer apart. Een totaalprijs zonder uitsplitsing maakt vergelijken onmogelijk en geeft je geen ruimte om te onderhandelen.
 3. **Check of grondwerk en drainage in de offerte zit.** Bij offertes die ver onder elkaar liggen, is dit meestal het verschil. De goedkope offerte gaat ervan uit dat de bestaande fundering blijft. De duurste vervangt alles. Vraag expliciet: gaan de bestaande tegels eruit, komt er nieuwe fundering onder, en wat doe je aan afwatering?
 4. **Vraag referenties uit de afgelopen twaalf maanden.** Twee adressen waar je langs kunt fietsen, beslecht meer twijfel dan een mooie website.
 

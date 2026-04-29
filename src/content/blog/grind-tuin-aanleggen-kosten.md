@@ -4,7 +4,7 @@ description: "Grindtuin aanleggen 2026: 10-15 euro/m² DIY of 30-60 euro/m² hov
 publishDate: 2026-04-29
 category: kosten
 featured: false
-draft: true
+draft: false
 ---
 
 Grind in je tuin aanleggen kost 10 tot 15 euro per m² als je het zelf doet, en 30 tot 60 euro per m² als je een hovenier inschakelt. Voor een oprit gaan beide bedragen omhoog: DIY zit op 18 tot 28 euro per m², met vakman betaal je 45 tot 90 euro per m² omdat je dan een dikke fundering nodig hebt die niet wegzakt onder een autoband [Bron: Offerteadviseur.nl, 2026] [Bron: Tuinplaats.nl, 2026].
@@ -238,9 +238,9 @@ Het kortste verdict: kies grind voor ontwerp en losse uitstraling, kies tegels v
 
 ## Veelgemaakte fouten en wanneer een grindtuin GEEN goed idee is
 
-Niet elke tuin is grind-tuin. Vier situaties waarin je beter iets anders kiest:
+Niet elke tuin is een grindtuin. Vier situaties waarin je beter iets anders kiest:
 
-1. **Veel schaduw of grote bomen.** Bladval onder bomen plus mos op schaduwzijde gelijk grind dat na 3 jaar groen kleurt en niet meer schoon te krijgen is.
+1. **Veel schaduw of grote bomen.** Bladval onder bomen plus mos op de schaduwzijde geeft grind dat na 3 jaar groen kleurt en niet meer schoon te krijgen is.
 2. **Kleine kinderen of ouders die slecht ter been zijn.** Grind is wiebelig, fietsen er overheen werkt niet, een rollator zakt erin. "Je kunt er niet eenvoudig overheen fietsen, afstappen is daarom een must," vatte een Olivette-gebruiker het samen [Bron: Olivette.nl, 2024].
 3. **Tuinmeubelen met dunne pootjes.** Een ronde bistroset zakt in en wiebelt. Wil je een tafel op grind? Plaats een tegelvloertje van 1 m² eronder.
 4. **Ondergrond zonder drainage.** Klei zonder drainage plus grind op worteldoek geeft een piepschuim-effect. Het water blijft staan, het worteldoek schimmelt, de grind komt los te liggen.
