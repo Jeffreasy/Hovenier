@@ -25,7 +25,7 @@ Drie fouten die bijna iedereen maakt:
 
 - **Te kort sproeien.** Vijf minuten per dag is weggegooid water. De grond wordt amper vochtig.
 - **Overdag sproeien.** De zon verdampt meer dan er de grond in gaat.
-- **Gazon te kort maaien.** Maai je gazon niet korter dan 4-5 cm bij droogte. Korter maaien verhoogt de verdamping, waardoor je nóg meer water nodig hebt.
+- **Gazon te kort maaien.** Maai je gazon niet korter dan 4-5 cm bij droogte. Korter maaien verhoogt de verdamping, waardoor je nóg meer water nodig hebt. Lees ook [welk zomeronderhoud je gazon nodig heeft](/blog/gazon-onderhoud-zomer-maaien-bemesten) om droogteschade voor te zijn.
 
 Dat je tuin verdroogt is trouwens niet uitzonderlijk. In 2025 bereikte het neerslagtekort volgens het KNMI 265 mm eind augustus. Dat hoort bij de 5% droogste jaren. De verwachting is dat dit soort droge zomers vaker gaat voorkomen.
 
@@ -58,7 +58,7 @@ Sprinklers zijn de klassieke oplossing voor grote gazons. Ze verdelen het water 
 
 ### Volledig automatisch systeem (smart control)
 
-Wil je het helemaal uit handen geven? Een volledig automatisch irrigatiesysteem met slimme sensoren en zones kost €1.800 tot €4.000 of meer. Je stelt het één keer in en het systeem meet zelf de bodemvochtigheid, checkt het weer en bepaalt wanneer er gesproeid wordt.
+Wil je het helemaal uit handen geven? Een volledig automatisch irrigatiesysteem met slimme sensoren en zones kost €1.800 tot €4.000 of meer. In ons overzicht van [aanlegkosten per type bewateringssysteem](/blog/bewateringssysteem-tuin-aanleggen-kosten) lees je waar het verschil zit tussen druppelslang, pop-up sproeiers en smart-systemen. Je stelt het één keer in en het systeem meet zelf de bodemvochtigheid, checkt het weer en bepaalt wanneer er gesproeid wordt.
 
 Losse onderdelen: een irrigatietimer kost €70 tot €80, druppelaars (set van 20 stuks) €25 tot €35 en een slimme bodemvochtsensor zit tussen de €60 en €150. Magneetventielen kosten €40 tot €120 per stuk.
 
@@ -84,7 +84,7 @@ Losse onderdelen: een irrigatietimer kost €70 tot €80, druppelaars (set van 
 
 Tijd voor de echte vraag: wat betaal je als je een hovenier inschakelt?
 
-Een hovenier rekent voor de aanleg van een beregeningsinstallatie €35 tot €75 per uur. De meeste installaties zijn binnen een halve dag klaar.
+Een hovenier rekent voor de aanleg van een beregeningsinstallatie [€35 tot €75 per uur in 2026](/blog/hovenier-tarieven-kosten-per-uur). De meeste installaties zijn binnen een halve dag klaar.
 
 | Systeem | Materiaal (incl. BTW) | Arbeid hovenier | Totaal (50 m²) |
 |---------|----------------------|-----------------|----------------|
@@ -159,7 +159,7 @@ Kraanwater uit de leiding mag je meestal wel gebruiken, maar sommige gemeenten s
 
 ### Regenwater opvangen
 
-Een regenton is een simpele manier om je waterverbruik te verlagen. Bij Gamma vind je regentonnen vanaf €39,99 (100 liter) tot €199,20 (330 liter muurmodel).
+Een regenton is een simpele manier om je waterverbruik te verlagen. Voor wie meer wil opslaan, vergelijken we [regenton, ondergrondse tank en IBC-container per kostenpost](/blog/regenwateropvang-tuin-regenton-ondergronds-kosten). Bij Gamma vind je regentonnen vanaf €39,99 (100 liter) tot €199,20 (330 liter muurmodel).
 
 | Regenton | Capaciteit | Prijs |
 |----------|-----------|-------|

@@ -65,7 +65,7 @@ Eerlijk is eerlijk: mooi is het niet zonder ombouw. En je hebt er wel de ruimte 
 
 Hier wordt het interessant. Steeds meer gemeenten en waterschappen willen dat jij regenwater opvangt. Het scheelt hen namelijk rioolcapaciteit en overstromingsrisico. En dat betalen ze je.
 
-Circa 50% van de waterschappen biedt inmiddels een vorm van subsidie voor regenwateropvang. Drie concrete voorbeelden:
+Circa 50% van de waterschappen biedt inmiddels een vorm van subsidie voor regenwateropvang. In veel regelingen wordt regenwaterafkoppelen gekoppeld aan infiltratie, dus combineer je opvang vaak met [drainage of een infiltratiekrat onder de tuin](/blog/drainage-tuin-aanleggen-kosten-methodes). Drie concrete voorbeelden:
 
 **Den Haag** vergoedt 50% van de kosten, mits je minimaal 1.000 liter opvangcapaciteit hebt. Het totale budget is €200.000, dus wie eerst komt...
 
@@ -81,7 +81,7 @@ Andere gemeenten en waterschappen hebben vergelijkbare regelingen. Check altijd 
 
 **Een ondergrondse tank is een ander verhaal.** Je moet graven (soms diep), de tank waterpas leggen, leidingen aansluiten en zorgen dat de overloop goed is geregeld. Fouten bij de aanleg merk je pas als het te laat is: een tank die opdrijft bij hoge grondwaterstand, of een aansluiting die lekt.
 
-Laat je het professioneel doen? Reken dan op €500 tot €1.500 extra voor het graafwerk alleen al. Maar je hebt wel de zekerheid dat het goed zit.
+Laat je het professioneel doen? Reken dan op €500 tot €1.500 extra voor het graafwerk alleen al, plus het [uurtarief dat hoveniers in 2026 hanteren](/blog/hovenier-tarieven-kosten-per-uur). Maar je hebt wel de zekerheid dat het goed zit.
 
 Denk je aan een compleet systeem met binnenshuis hergebruik? Dat is sowieso vakwerk. De leidingen moeten gescheiden blijven van het drinkwaternet, en daar gelden regels voor.
 

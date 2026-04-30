@@ -85,7 +85,7 @@ Kleigrond is geen gewone grond. Het is dicht, houdt water vast en laat nauwelijk
 
 **Verticale drainage door de kleilaag.** Heb je geluk met een doorlatende zandlaag onder je klei? Dan kun je verticale drainagegaten boren tot in die zandlaag, op ongeveer 2 meter uit elkaar. Forumgebruiker Boertje125 verwoordt het zo: "Als je een grindput kan maken tot door de klei in een watervoerende laag zoals zand werkt dat primma." Dit is goedkoop (€50 tot €450 in materiaalkosten) en effectief, mits de bodemopbouw klopt. Geen zandlaag eronder? Dan werkt het niet.
 
-**Veengrond is een eigen verhaal.** Daar zakt de bodem na ontwatering, en een passieve drainage werkt nauwelijks. Bij veen kijk je naar een actief systeem met pomp of een professional die de hele tuinopbouw aanpakt.
+**Veengrond is een eigen verhaal.** Daar zakt de bodem na ontwatering, en een passieve drainage werkt nauwelijks. Bij veen kijk je naar een actief systeem met pomp of een professional die de hele tuinopbouw aanpakt. Vaak loont het in dat geval om drainage te combineren met [grondverbetering en de bijbehorende methodes en kosten](/blog/grondverbetering-tuin-kosten-methodes), zodat je de bodemstructuur in één werkgang aanpast.
 
 ## Stappenplan: drainage zelf aanleggen
 
@@ -107,7 +107,7 @@ Bij twijfel over het afschot of de aansluiting op het riool: vraag dan toch een 
 
 ## DIY of hovenier laten doen?
 
-Het verschil zit in de arbeid. Materialen kosten bij beide hetzelfde, het uurtarief van een hovenier ligt in 2026 tussen €40 en €60 per uur. Een hovenier rekent voor de aanleg van 100 meter basis-drainage tussen €1.000 en €1.500 totaal. Hieronder een eerlijke vergelijking voor een tuin van 50 m² met ongeveer 30 meter drainage.
+Het verschil zit in de arbeid. Materialen kosten bij beide hetzelfde, het [uurtarief van een hovenier ligt in 2026 tussen €40 en €60 per uur](/blog/hovenier-tarieven-kosten-per-uur). Een hovenier rekent voor de aanleg van 100 meter basis-drainage tussen €1.000 en €1.500 totaal. Hieronder een eerlijke vergelijking voor een tuin van 50 m² met ongeveer 30 meter drainage.
 
 | Onderdeel | Zelf doen | Hovenier |
 |---|---|---|

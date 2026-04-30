@@ -50,7 +50,9 @@ Voordat je een beslissing neemt op basis van kosten, is het goed om te weten wat
 
 **Zwemvijver.** Een biologisch zwembad waarbij de plantenzones het water filteren. Populair bij mensen die duurzaamheid en esthetiek combineren. Het is een project voor de lange termijn. De aanlegkosten zijn hoog, maar energiekosten voor verwarming of chemicaliën vallen weg. Wie de ruimte heeft en het budget, ervaart het als het beste van twee werelden.
 
-Wil je je tuin verder vormgeven rondom de vijver? Het [aanleggen van een nieuwe border](/blog/nieuwe-border-aanleggen) combineert goed met een vijver als middelpunt van de tuin.
+Geen ruimte of budget voor open water? Een [waterornament of fontein in de tuin](/blog/waterornament-fontein-tuin-kosten) levert het kabbelende geluid en de visuele rust met aanzienlijk minder graafwerk en onderhoud.
+
+Wil je je tuin verder vormgeven rondom de vijver? Het [aanleggen van een nieuwe border](/blog/nieuwe-border-aanleggen) combineert goed met een vijver als middelpunt van de tuin. En als je niet alleen het waterelement maar de hele indeling onder de loep wil nemen, helpt een gericht [tuinontwerp met de bijbehorende kostenposten](/blog/tuin-laten-ontwerpen-kosten) om de zichtlijnen, zonzijde en plantvakken in één plan te krijgen.
 
 ## Materiaalkosten: folie, pomp en filter
 
@@ -140,7 +142,7 @@ Wie een natuurvijver heeft, heeft minder technisch onderhoud. Maar bladval en ov
 
 Een eerlijk rekensommetje helpt hier meer dan een algemeen advies.
 
-Een hovenier rekent €40 tot €75 per uur. Uitgraven kost €25 tot €60 per m² aan arbeid. Dat is niet goedkoop, maar je betaalt ook voor kennis van waterhuishouding, correcte folieplaatsing en de aansluiting van pomp en filter. Een verkeerd geplaatste folie of een filterkast die niet goed ontluchtt, kost meer om te herstellen dan de arbeidskosten die je hebt bespaard.
+Een hovenier rekent [€40 tot €75 per uur](/blog/hovenier-tarieven-kosten-per-uur), met regionale verschillen tussen stad en platteland. Uitgraven kost €25 tot €60 per m² aan arbeid. Dat is niet goedkoop, maar je betaalt ook voor kennis van waterhuishouding, correcte folieplaatsing en de aansluiting van pomp en filter. Een verkeerd geplaatste folie of een filterkast die niet goed ontluchtt, kost meer om te herstellen dan de arbeidskosten die je hebt bespaard.
 
 Zelf aanleggen is goed haalbaar voor een natuurvijver of kleine siervijver. Je hebt dan in grote lijnen nodig:
 - Een vrijdag/zaterdag om uit te graven
@@ -151,7 +153,7 @@ Een ervaren vijvereigenaar op het Pondlibrary forum verwoordde het treffend: *"D
 
 Voor een kleine siervijver scheelt zelf doen ruwweg 30 tot 50% op de totale kosten. Dat is een paar honderd euro op een project van €1.500 tot €2.000. Of dat de tijdsinvestering waard is, hangt af van je beschikbare tijd en affiniteit met tuinkluswerk.
 
-Praktische tip van bouwers met ervaring: gebruik altijd EPDM folie in plaats van PVC, en bedenk de volledige opzet vooraf. Verborgen kosten zoals extra folie voor ongeplande vormen, een te kleine pomp die je binnen twee jaar vervangt, of randafwerking die je achteraf anders wil, lopen snel op.
+Praktische tip van bouwers met ervaring: gebruik altijd EPDM folie in plaats van PVC, en bedenk de volledige opzet vooraf. Verborgen kosten zoals extra folie voor ongeplande vormen, een te kleine pomp die je binnen twee jaar vervangt, of randafwerking die je achteraf anders wil, lopen snel op. Bij hoge grondwaterstand of kleigrond is het verstandig om vooraf [drainage-aanleg en bodemkosten](/blog/drainage-tuin-aanleggen-kosten-methodes) in kaart te brengen, want anders kan een lege vijverbak na een natte winter zelfs omhoog drijven.
 
 Als je ook andere aanlegprojecten in de tuin overweegt, kan het lonen om een hovenier meerdere klussen tegelijk te laten uitvoeren. Een [moestuin beginnen](/blog/moestuin-beginnen-aanleg-kosten) of nieuwe borders aanleggen, gecombineerd met de vijver, bespaart je op mobiliteits- en voorbereidingstijd van de hovenier.
 

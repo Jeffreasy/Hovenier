@@ -28,7 +28,7 @@ Dit zijn kant-en-klare elementen die je in de tuin zet, aansluit op stroom (of o
 - **Watervalsets met RVS en LED-verlichting.** Modern, opvallend, en je betaalt daar €219 tot €349 voor.
 - **Design waterornamenten (groot formaat).** De categorie voor wie een blikvanger wil. Prijzen lopen op van €400 tot €1.700.
 
-Het mooie van plug and play: je hebt geen hovenier nodig. Uitpakken, vullen, aansluiten. Sommige modellen werken zelfs op een kleine zonnepaneel-pomp.
+Het mooie van plug and play: je hebt geen hovenier nodig. Uitpakken, vullen, aansluiten. Sommige modellen werken zelfs op een kleine zonnepaneel-pomp. Wil je het waterornament wel laten passen in een breder plan voor zichtlijnen, beplanting en terras? Dan is het slim om een [tuinontwerp en de bijbehorende kosten](/blog/tuin-laten-ontwerpen-kosten) mee te nemen, zodat de fontein niet als losse blikvanger blijft staan.
 
 ### Ingebouwde waterpartij of fontein
 
@@ -113,7 +113,7 @@ Ja. Een waterornament met gesloten reservoir is de makkelijkste optie. Geen open
 Reken op ongeveer €8,75 per Watt per jaar. Een pomp van 20 Watt kost dus circa €175 per jaar. Zonnepompen zijn een alternatief, maar leveren minder vermogen.
 
 **Heb ik een hovenier nodig voor een waterornament?**
-Voor een plug-and-play ornament niet. Voor een ingebouwde waterpartij met grondwerk en elektra wel. Hoveniers rekenen €35 tot €75 per uur.
+Voor een plug-and-play ornament niet. Voor een ingebouwde waterpartij met grondwerk en elektra wel. Hoveniers rekenen [€35 tot €75 per uur](/blog/hovenier-tarieven-kosten-per-uur), met regionale verschillen tussen Randstad en regio.
 
 **Hoe maak ik mijn waterornament winterklaar?**
 Haal de pomp eruit of zet hem uit. Vul het reservoir tot de rand, zodat ijs het niet kapot drukt. Of haal het water er helemaal uit en dek het af.

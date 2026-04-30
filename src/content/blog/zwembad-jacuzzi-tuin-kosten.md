@@ -37,7 +37,7 @@ Voor wie kleiner wil beginnen is er de plunge pool. Een **plunge pool kost €12
 
 ### Wat kost de plaatsing?
 
-De **arbeid van een hovenier of zwembadbouwer ligt in 2026 tussen €40 en €60 per uur**, en **voor inbouw van een zwembad reken je in totaal op €6.000 tot €12.000**. Dat omvat graafwerk, fundering, leidingen, techniek aansluiten en grondafvoer.
+De **arbeid van een [hovenier of zwembadbouwer ligt in 2026 tussen €40 en €60 per uur](/blog/hovenier-tarieven-kosten-per-uur)**, en **voor inbouw van een zwembad reken je in totaal op €6.000 tot €12.000**. Dat omvat graafwerk, fundering, leidingen, techniek aansluiten en grondafvoer.
 
 Bij polyester en staal zit een groot deel van die arbeid al in de "incl. plaatsing" prijs. Bij beton is het bouwwerk zelf het grootste arbeidsbrok en de prijs reflecteert dat.
 
@@ -62,9 +62,9 @@ Een **premium jacuzzi kost €8.000 tot €15.000 of meer voor 5 tot 7 personen*
 
 Een jacuzzi heeft drie installatieposten:
 
-- **Betonplaat van 3 × 3 meter:** €200 tot €500. Een spa weegt vol algauw 1.500 kilo. Een houten terrasvloer houdt dat niet zonder versterking.
+- **Betonplaat van 3 × 3 meter:** €200 tot €500. Een spa weegt vol algauw 1.500 kilo. Een houten terrasvloer houdt dat niet zonder versterking. In plaats van een losse plaat kun je ook een afgestemd terras laten leggen, de [kosten van bestrating en terrastegels per m²](/blog/bestrating-laten-leggen-kosten-tegels) tellen op tot een iets duurdere maar visueel rustiger geheel.
 - **32A-aansluiting door erkend elektricien:** €150 tot €400. De meeste vaste jacuzzi's verbruiken zoveel piekvermogen dat een gewone wandcontactdoos niet volstaat.
-- **Inbouw in terras of half verzonken plaatsing:** €2.000 tot €8.000. Vraagt om grondwerk, drainage en soms een onderhoudsluik aan de zijkant.
+- **Inbouw in terras of half verzonken plaatsing:** €2.000 tot €8.000. Vraagt om grondwerk, [drainage met passende methode](/blog/drainage-tuin-aanleggen-kosten-methodes) en soms een onderhoudsluik aan de zijkant.
 
 Een opblaasbare jacuzzi heeft niets van dat alles nodig. Stopcontact en vlakke ondergrond. Klaar.
 

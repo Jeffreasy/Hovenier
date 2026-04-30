@@ -26,7 +26,7 @@ De kosten hangen sterk af van het type systeem en de grootte van je tuin. Hieron
 
 Per vierkante meter zit je op €3 tot €7,50 voor de meeste systemen. Een basissysteem met druppelslang kost €3 tot €5 per m², een middensegment met pop-up sproeiers €5 tot €7,50 per m², en een compleet automatisch systeem €7 tot €12 per m².
 
-Gemiddelde aanlegkosten voor een beregeningsinstallatie liggen rond de €350. Het uurtarief van een hovenier schommelt tussen €35 en €75 per uur.
+Gemiddelde aanlegkosten voor een beregeningsinstallatie liggen rond de €350. Het [uurtarief van een hovenier in 2026](/blog/hovenier-tarieven-kosten-per-uur) schommelt tussen €35 en €75 per uur.
 
 Wil je direct weten wat het voor jouw tuin kost? [Vraag een offerte aan](/offerte) en vergelijk prijzen van hoveniers bij jou in de buurt.
 
@@ -86,7 +86,7 @@ Materiaalkosten voor een gemiddelde tuin: €200 tot €500. Je bespaart de €1
 
 ### Laat doen: pop-up sproeiers en ingraafwerk
 
-Bij pop-up sproeiers moet je sleuven graven, leidingen leggen en sproeierkoppen op de juiste afstand plaatsen. Een ingegraven leiding kost €8 tot €18 per strekkende meter. Fouten bij de aanleg (te weinig druk, verkeerde sproeikoppen, slecht afgestelde hoeken) zorgen voor droge plekken of wateroverlast.
+Bij pop-up sproeiers moet je sleuven graven, leidingen leggen en sproeierkoppen op de juiste afstand plaatsen. Een ingegraven leiding kost €8 tot €18 per strekkende meter. Heb je in dezelfde tuin last van wateroverlast op kleigrond? Combineer dan met [drainage aanleggen volgens een doordachte methode](/blog/drainage-tuin-aanleggen-kosten-methodes), zo scheelt het graafwerk en hoef je het gazon maar één keer te herstellen. Fouten bij de aanleg (te weinig druk, verkeerde sproeikoppen, slecht afgestelde hoeken) zorgen voor droge plekken of wateroverlast.
 
 Een hovenier rekent voor een compleet systeem €350 tot €750 aan installatie. Bij grote tuinen met meerdere zones loopt dat op tot €1.000 tot €2.000. Het verschil met DIY is niet alleen het geld, maar ook de garantie dat het systeem goed werkt.
 
@@ -111,7 +111,7 @@ Wie zuinig wil bewateren, is met een druppelslang voor borders en een gericht sp
 
 ## Regenwater gebruiken: subsidies en integratie
 
-Een regenton is de simpelste manier om te besparen. Een bovengrondse regenton van 200 tot 500 liter kost €30 tot €150. Sluit je druppelslang aan met een dompelpomp (€230 tot €770) en je bewatering kost nul cent aan leidingwater.
+Een regenton is de simpelste manier om te besparen. Een bovengrondse regenton van 200 tot 500 liter kost €30 tot €150. Sluit je druppelslang aan met een dompelpomp (€230 tot €770) en je bewatering kost nul cent aan leidingwater. Voor een complete vergelijking van [opvangopties van regenton tot ondergrondse tank](/blog/regenwateropvang-tuin-regenton-ondergronds-kosten) lopen we per situatie de getallen langs.
 
 Wil je groter? Een ondergrondse regenwatertank van 3.000 tot 10.000 liter kost €1.200 tot €3.500 inclusief graafwerk. Met een filter (€250 tot €350) erbij heb je een compleet regenwatersysteem voor €1.500 tot €4.000. Dat klinkt als veel, maar over tien jaar bespaar je honderden euro's aan waterleidingkosten.
 
