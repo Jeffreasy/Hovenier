@@ -7,13 +7,13 @@ featured: false
 draft: false
 ---
 
-De tuinmuur bouwen kosten lopen in 2026 uiteen van 65 euro per strekkende meter voor een lage betonblokmuur tot 220 euro per strekkende meter voor 2 meter handgevormde baksteen, en daarbovenop komt vaak een fundering die alleen al 75 tot 125 euro per vierkante meter kost [Bron: Klussendirect, 2026] [Bron: Werkspot, 2026]. Loopt je tuin schuin af en zakt de aarde elke winter een stukje verder weg? Of wil je eindelijk privacy, geen wapperende schutting maar een echte muur die er over twintig jaar nog staat? Dan begin je te zoeken en kom je in een mist van prijzen terecht. De ene site noemt 65 euro per meter, de andere 220, en bij een derde is alles op offerte.
+De tuinmuur bouwen kosten lopen in 2026 uiteen van 65 euro per strekkende meter voor een lage betonblokmuur tot 220 euro per strekkende meter voor 2 meter handgevormde baksteen, en daarbovenop komt vaak een fundering die alleen al 75 tot 125 euro per vierkante meter kost. Loopt je tuin schuin af en zakt de aarde elke winter een stukje verder weg? Of wil je eindelijk privacy, geen wapperende schutting maar een echte muur die er over twintig jaar nog staat? Dan begin je te zoeken en kom je in een mist van prijzen terecht. De ene site noemt 65 euro per meter, de andere 220, en bij een derde is alles op offerte.
 
 In dit artikel zet je drie dingen tegelijk op een rij. Wat een tuinmuur of keerwand precies kost in 2026, welk materiaal past bij jouw situatie, en wat de Omgevingswet sinds 1 januari 2024 toestaat zonder vergunning. Plus een paar dingen die je in concurrent-artikelen niet zo snel vindt: dat steigerwerk vanaf 3 meter al 150 tot 400 euro per dag tikt, dat de buurman volgens artikel 5:62 van het Burgerlijk Wetboek meebetaalt als je op de erfgrens bouwt, en dat een verzakte muur door een te ondiepe fundering altijd duurder uitvalt dan vooraf 80 cm graven.
 
 ## Wat kost een tuinmuur bouwen?
 
-De prijs hangt af van het materiaal, de muurdikte en de hoogte. Voor een gemetselde baksteenmuur betaal je in 2026 inclusief arbeid 100 tot 150 euro per vierkante meter [Bron: kvinl, 2026]. Betonblokken (sierbeton of kalkzandsteen) zitten lager, op 75 tot 100 euro per vierkante meter [Bron: kvinl, 2026]. Natuursteen ligt aan de bovenkant met 120 tot 180 euro per vierkante meter [Bron: kvinl, 2026]. Wil je een zware volsteens muur (1,5 of 2 stenen dik) voor extra massa en levensduur, dan reken je op 150 tot 200 euro per vierkante meter [Bron: kvinl, 2026]. Werkspot rapporteert voor algemeen metselwerk inclusief fundering een totaalrange van 120 tot 200 euro per vierkante meter [Bron: Werkspot, 2026].
+De prijs hangt af van het materiaal, de muurdikte en de hoogte. Voor een gemetselde baksteenmuur betaal je in 2026 inclusief arbeid 100 tot 150 euro per vierkante meter. Betonblokken (sierbeton of kalkzandsteen) zitten lager, op 75 tot 100 euro per vierkante meter. Natuursteen ligt aan de bovenkant met 120 tot 180 euro per vierkante meter. Wil je een zware volsteens muur (1,5 of 2 stenen dik) voor extra massa en levensduur, dan reken je op 150 tot 200 euro per vierkante meter. Werkspot rapporteert voor algemeen metselwerk inclusief fundering een totaalrange van 120 tot 200 euro per vierkante meter.
 
 | Materiaal | Prijs per m² | Levensduur | Onderhoud |
 |-----------|--------------|------------|-----------|
@@ -26,15 +26,15 @@ De prijs hangt af van het materiaal, de muurdikte en de hoogte. Voor een gemetse
 | Baksteen volsteens | €150 – €200 | 75+ jaar | Laag |
 | Hoogwaardig handvorm metselwerk | €130 – €220 | 75+ jaar | Laag |
 
-Veel mensen rekenen liever per strekkende meter, omdat een tuinmuur in de praktijk een lengte heeft en niet zo snel een vierkant. Klussendirect geeft daarvoor de volgende richtlijn voor 2026: een muur van 1 meter hoog kost 65 tot 110 euro per strekkende meter, 1,5 meter hoog kost 100 tot 170 euro, en 2 meter hoog komt op 130 tot 220 euro per strekkende meter [Bron: Klussendirect, 2026]. Een muur van 10 meter bij 2 meter zit dus tussen de 1.300 en 2.200 euro, exclusief eventueel extra grondwerk of een zwaardere fundering.
+Veel mensen rekenen liever per strekkende meter, omdat een tuinmuur in de praktijk een lengte heeft en niet zo snel een vierkant. Klussendirect geeft daarvoor de volgende richtlijn voor 2026: een muur van 1 meter hoog kost 65 tot 110 euro per strekkende meter, 1,5 meter hoog kost 100 tot 170 euro, en 2 meter hoog komt op 130 tot 220 euro per strekkende meter. Een muur van 10 meter bij 2 meter zit dus tussen de 1.300 en 2.200 euro, exclusief eventueel extra grondwerk of een zwaardere fundering.
 
-Wat zit daarin? De materiaalkosten van de stenen, de basisfundering, het voegwerk en het arbeidsloon. Wat zit er niet in? Sloop van een bestaande muur (35 tot 60 euro per vierkante meter [Bron: Klussendirect, 2026]), steigerwerk vanaf 3 meter hoog (150 tot 400 euro per dag [Bron: Klussendirect, 2026]) en transport van bijzondere bakstenen of natuursteen. Een metselaar haalt op een gewone werkdag 3 tot 5 vierkante meter, dus reken voor een muur van 10 meter bij 2 meter al snel op 4 tot 7 werkdagen [Bron: Klussendirect, 2026]. Het uurtarief van een metselaar ligt op 30 tot 45 euro voor een dagtarief, oplopend tot 35 tot 65 euro per uur in de Randstad of bij premium werk. Het dagtarief zelf zit tussen 250 en 350 euro [Bron: Werkspot, 2026].
+Wat zit daarin? De materiaalkosten van de stenen, de basisfundering, het voegwerk en het arbeidsloon. Wat zit er niet in? Sloop van een bestaande muur (35 tot 60 euro per vierkante meter), steigerwerk vanaf 3 meter hoog (150 tot 400 euro per dag) en transport van bijzondere bakstenen of natuursteen. Een metselaar haalt op een gewone werkdag 3 tot 5 vierkante meter, dus reken voor een muur van 10 meter bij 2 meter al snel op 4 tot 7 werkdagen. Het uurtarief van een metselaar ligt op 30 tot 45 euro voor een dagtarief, oplopend tot 35 tot 65 euro per uur in de Randstad of bij premium werk. Het dagtarief zelf zit tussen 250 en 350 euro.
 
 Vergelijken loont. Voor een tuin op de grens tussen privacy en bouwwerk kun je [een schutting plaatsen of vervangen](/blog/schutting-plaatsen-kosten-regels) als kostenefficiënter alternatief, maar voor levensduur en geluidsdemping wint de muur het altijd.
 
 ## Wat kost een keerwand?
 
-Een keerwand is geen siermuur maar een constructie die grond tegenhoudt. Daardoor is de prijsopbouw anders. Beton-L-elementen zijn de meest gebruikte oplossing voor permanente keerwanden, en de fabrikant levert ze per stuk. AgriBeton publiceert een complete prijslijst (excl. 21 procent btw, excl. transport) die representatief is voor de Nederlandse markt [Bron: AgriBeton, 2025-2026].
+Een keerwand is geen siermuur maar een constructie die grond tegenhoudt. Daardoor is de prijsopbouw anders. Beton-L-elementen zijn de meest gebruikte oplossing voor permanente keerwanden, en de fabrikant levert ze per stuk. AgriBeton publiceert een complete prijslijst (excl. 21 procent btw, excl. transport) die representatief is voor de Nederlandse markt.
 
 | Hoogte × breedte × dikte (cm) | Prijs |
 |-------------------------------|-------|
@@ -52,13 +52,13 @@ Een keerwand is geen siermuur maar een constructie die grond tegenhoudt. Daardoo
 | Hoekkeerwand 100 cm hoog | €220,00 |
 | Hoekkeerwand 200 cm hoog | €360,00 |
 
-Een praktijkvoorbeeld. Voor een keerwand van 10 strekkende meter, 100 cm hoog, heb je 5 elementen van 100 × 200 × 60 cm nodig. Dat is 5 keer 180 euro = 900 euro exclusief btw, ofwel 1.089 euro inclusief, exclusief transport, fundering en plaatsing [Bron: AgriBeton, 2025-2026]. Reken voor de plaatsing met kraan en arbeider op 50 tot 100 euro per element, plus de gewapende strookfundering. Inclusief alles ben je voor zo'n 10 meter keerwand van 1 meter hoog op 1.800 tot 2.800 euro uit. Voor een keerwand van 2 meter hoog kruip je richting 4.000 tot 7.000 euro per 10 meter, omdat de elementen zwaarder zijn (een blok van 200 × 400 × 100 cm weegt 800 tot 1.200 kg) en de fundering dieper en breder moet.
+Een praktijkvoorbeeld. Voor een keerwand van 10 strekkende meter, 100 cm hoog, heb je 5 elementen van 100 × 200 × 60 cm nodig. Dat is 5 keer 180 euro = 900 euro exclusief btw, ofwel 1.089 euro inclusief, exclusief transport, fundering en plaatsing. Reken voor de plaatsing met kraan en arbeider op 50 tot 100 euro per element, plus de gewapende strookfundering. Inclusief alles ben je voor zo'n 10 meter keerwand van 1 meter hoog op 1.800 tot 2.800 euro uit. Voor een keerwand van 2 meter hoog kruip je richting 4.000 tot 7.000 euro per 10 meter, omdat de elementen zwaarder zijn (een blok van 200 × 400 × 100 cm weegt 800 tot 1.200 kg) en de fundering dieper en breder moet.
 
 Wil je goedkoper? Dan zijn er twee alternatieven die concurrent-artikelen nauwelijks noemen.
 
-**Gabion of schanskorf.** Een schanskorf van 100 × 22 × 200 cm kost los 151,95 euro [Bron: Gabion-Schanskorven, 2025]. Vulstenen basalt of kalksteen kosten 0,14 euro per kg, en bijzondere stenen zoals Lava Krotzen 0,21 euro per kg [Bron: Gabion-Schanskorven, 2025]. Een schanskorf van 1 vierkante meter doorsnede heeft 350 tot 450 kg vulling nodig, dus 49 tot 63 euro vulkosten per element. Inclusief vulling en fundering kom je all-in op ongeveer 200 euro per strekkende meter [Bron: Tuinen-jk, 2025]. De funderingskosten van een gabion liggen separaat op 100 tot 150 euro per strekkende meter [Bron: Tuinen-jk, 2025]. Voor een doe-het-zelver met een huurkraantje is dit de goedkoopste degelijke keerwand.
+**Gabion of schanskorf.** Een schanskorf van 100 × 22 × 200 cm kost los 151,95 euro. Vulstenen basalt of kalksteen kosten 0,14 euro per kg, en bijzondere stenen zoals Lava Krotzen 0,21 euro per kg. Een schanskorf van 1 vierkante meter doorsnede heeft 350 tot 450 kg vulling nodig, dus 49 tot 63 euro vulkosten per element. Inclusief vulling en fundering kom je all-in op ongeveer 200 euro per strekkende meter. De funderingskosten van een gabion liggen separaat op 100 tot 150 euro per strekkende meter. Voor een doe-het-zelver met een huurkraantje is dit de goedkoopste degelijke keerwand.
 
-**Stapelblokken.** Voor lage muurtjes en plantenbakken tot 60 cm hoog zijn stapelblokken in sierbeton een snelle oplossing. Vanaf 3,95 euro per stuk bij Onlinebestrating, met blokken van 60 cm lengte [Bron: Onlinebestrating, 2026]. Excluton Linia Excellence van 15 × 15 × 60 cm kost vanaf 4,50 euro per stuk, wat neerkomt op ongeveer 50 euro per strekkende meter muur van 60 cm hoog [Bron: 123Sierbestrating, 2026]. Boven 60 cm of bij echte gronddruk: lijmen of ankers verplicht.
+**Stapelblokken.** Voor lage muurtjes en plantenbakken tot 60 cm hoog zijn stapelblokken in sierbeton een snelle oplossing. Vanaf 3,95 euro per stuk bij Onlinebestrating, met blokken van 60 cm lengte. Excluton Linia Excellence van 15 × 15 × 60 cm kost vanaf 4,50 euro per stuk, wat neerkomt op ongeveer 50 euro per strekkende meter muur van 60 cm hoog. Boven 60 cm of bij echte gronddruk: lijmen of ankers verplicht.
 
 ## Tuinmuur, keerwand of talud: welke kies je?
 
@@ -75,8 +75,6 @@ Gebruik onderstaande beslissingsboom om snel te zien welke richting bij jouw tui
 | Hoogteverschil > 2 m of grondbelasting (oprit, erf) | Beton-L-element + gewapende fundering, vakman | €400 – €700+ per m |
 | Beperkte ruimte achter, beplanting mogelijk | Talud (1:1,5 helling) met grondkering of geotextiel | €40 – €80 per m² talud (DIY) |
 
-[Bron: Hovenier.nl, 2025] [Bron: AgriBeton, 2025] [Bron: Tuinafscheiding.nl, 2025]
-
 Een talud is de vergeten optie. Heb je 2 meter ruimte achter het hoogteverschil en wil je geen massieve betonconstructie, dan is een schuine helling met grondkerende beplanting (zoals heide, vetkruid of klimop) vaak goedkoper én beter voor afwatering. Reken op 40 tot 80 euro per vierkante meter aanleg als je het zelf doet. Combineer je een keerwand met een nieuwe oprit, kijk dan ook even naar de [oprit aanleggen kosten en materialen](/blog/oprit-aanleggen-kosten-materialen), want grondwerk en bestrating doe je in dezelfde fase het goedkoopst.
 
 ## Vergunning: wat mag wel en wat mag niet onder de Omgevingswet?
@@ -92,21 +90,19 @@ Sinds 1 januari 2024 is de Omgevingswet van kracht. Daarmee verviel de oude Wabo
 | Op een monument of in beschermd stads- of dorpsgezicht | Altijd vergunningplichtig |
 | Welstandsexcessen (ernstige afwijking van omgeving) | Vergunningplichtig, ongeacht hoogte |
 
-[Bron: IPLO, 2024] [Bron: Juridisch Loket, 2026]
-
 Drie aandachtspunten die mensen vaak missen.
 
 Ten eerste: het verschil tussen "achter de voorkant" en "vóór de voorkant" van je huis. De gevellijn van het hoofdgebouw is daarin de scheidslijn. Een muur van 1,80 m in je achtertuin valt meestal binnen vergunningvrij. Dezelfde muur naast je oprit, dichter bij de straat dan je voordeur: vergunning nodig zodra hij hoger is dan 1 meter.
 
 Ten tweede: het omgevingsplan van jouw gemeente. Sinds de Omgevingswet kunnen gemeenten via dat plan strenger of soepeler zijn dan het landelijke Bbl. Sommige gemeenten beperken hoogte aan de straatzijde tot 80 cm, andere staan iets meer toe. Doe daarom altijd de Vergunningcheck via het [Omgevingsloket](https://omgevingswet.overheid.nl/) voordat je begint. Dat kost vijf minuten en voorkomt een handhaver die de muur na drie weken weer wil zien verdwijnen.
 
-Ten derde: keerwanden. Een keerwand boven 1 meter is vrijwel altijd vergunningplichtig, óók in de achtertuin, omdat hij een grondkerende functie heeft en daarmee onder constructie-eisen valt. Forumlid IJkenhout op Klusidee verwoordt het kort: "Let erop dat voor een keerwand hoger dan 1m een vergunning nodig is" [Bron: Klusidee.nl, 2024-2026]. Reken bij een keerwand-aanvraag op een doorlooptijd van 8 tot 14 weken voor de omgevingsvergunning, plus de bouwmelding voor het technische deel.
+Ten derde: keerwanden. Een keerwand boven 1 meter is vrijwel altijd vergunningplichtig, óók in de achtertuin, omdat hij een grondkerende functie heeft en daarmee onder constructie-eisen valt. Forumlid IJkenhout op Klusidee verwoordt het kort: "Let erop dat voor een keerwand hoger dan 1m een vergunning nodig is". Reken bij een keerwand-aanvraag op een doorlooptijd van 8 tot 14 weken voor de omgevingsvergunning, plus de bouwmelding voor het technische deel.
 
 ## Burenrecht en erfgrens: wie betaalt wat?
 
 Bouw je een tuinmuur op je eigen grond, ook al staat hij vlak tegen de erfgrens aan, dan heb je geen toestemming van de buren nodig. De vergunningregels gelden, maar de muur is en blijft jouw eigendom. Je mag hem schilderen, slopen of vervangen zonder iemand te raadplegen.
 
-Bouw je exact op de erfgrens, dan wordt de muur juridisch mandelig. Dat betekent volgens artikel 5:62 van het Burgerlijk Wetboek dat de muur gedeelde eigendom én gedeelde kosten kent [Bron: WA.nl, 2025] [Bron: Watmagikbouwen.nl, 2025]. Beide buren betalen mee aan bouw, onderhoud en eventuele sloop. In de praktijk zien we drie veelvoorkomende fouten.
+Bouw je exact op de erfgrens, dan wordt de muur juridisch mandelig. Dat betekent volgens artikel 5:62 van het Burgerlijk Wetboek dat de muur gedeelde eigendom én gedeelde kosten kent. Beide buren betalen mee aan bouw, onderhoud en eventuele sloop. In de praktijk zien we drie veelvoorkomende fouten.
 
 Eén: mondelinge afspraken. Een mandelige muur vraagt een schriftelijke afspraak, en bij voorkeur een notariële akte die in het kadaster wordt ingeschreven. Doe je dat niet, dan ontstaat bij verkoop van een van de huizen vrijwel altijd discussie over wie wat heeft betaald.
 
@@ -125,11 +121,9 @@ Vraag tien doe-het-zelvers waar de meeste tuinmuren mis gaan, en negen wijzen na
 | 1 – 2 m (permanent) | 80 cm (vorstvrij) | 70 – 90 cm (2 – 3× muurdikte) | Gewapende strookfundering |
 | > 2 m of keerwand met grondbelasting | 80 cm + extra hiel | 3× muurdikte | Gewapend, soms paalfundering |
 
-[Bron: Hornbach, 2025] [Bron: Karwei, 2025] [Bron: Werkspot, 2026] [Bron: Bouwmaterialenkopen, 2025]
-
 In Nederland is 80 cm de vorstvrije diepte voor permanente bouwwerken. Daaronder bevriest de grond niet meer in een normale winter, dus de fundering heeft geen last van de jaarlijkse vries-dooi-cyclus die anders haarscheurtjes en verzakking veroorzaakt. Bouwmarkten zijn niet altijd consequent in hun communicatie. kvinl noemt 30 cm, Hornbach en Karwei zeggen 80 cm. Allebei klopt, maar voor verschillende muurtypes. Laag muurtje? 30 tot 40 cm volstaat. Permanent en hoger dan 1 meter? 80 cm is verplicht.
 
-Wat kost een fundering? Beton storten zit op 75 tot 125 euro per vierkante meter (of per kuub, afhankelijk van de aanbieder) [Bron: Werkspot, 2026]. Het uitgraven kost 40 tot 60 euro per uur grondwerk, en bekisting plaatsen en weer ontkisten 45 tot 70 euro per uur [Bron: Werkspot, 2026]. Voor een muur van 10 meter bij 2 meter hoog reken je op een fundering van ongeveer 8 tot 12 vierkante meter (10 m × 0,80 m diep × 0,80 m breed met wat extra), wat neerkomt op 600 tot 1.500 euro alleen aan fundering.
+Wat kost een fundering? Beton storten zit op 75 tot 125 euro per vierkante meter (of per kuub, afhankelijk van de aanbieder). Het uitgraven kost 40 tot 60 euro per uur grondwerk, en bekisting plaatsen en weer ontkisten 45 tot 70 euro per uur. Voor een muur van 10 meter bij 2 meter hoog reken je op een fundering van ongeveer 8 tot 12 vierkante meter (10 m × 0,80 m diep × 0,80 m breed met wat extra), wat neerkomt op 600 tot 1.500 euro alleen aan fundering.
 
 Heb je een natte tuin of staat de muur op klei? Bekijk dan ook drainage achter en onder de muur. Een gevulde drainagebuis voorkomt waterdruk tegen de keerwand en verlengt de levensduur fors. Hoeveel dat kost staat in het artikel over [drainage in de tuin aanleggen](/blog/drainage-tuin-aanleggen-kosten-methodes).
 
@@ -147,7 +141,7 @@ Voor wie zelf aan de slag wil met een muurtje tot ongeveer 1 meter hoog, doorloo
 8. **Voegen en afwerken.** Strakker eindresultaat krijg je met platvol voegwerk. Bij gabion: spannen, met staaldraad sluiten, en vullen in lagen van 30 cm.
 9. **Drainage en backfill bij keerwand.** Plaats achter de muur een drainagebuis met grindkoffer. Vul terug in lagen van 30 cm, niet alles in één keer.
 
-> Forumlid Boertje125 op Klusidee waarschuwt: "Dit is niet iets wat je zelf even doet daar heb je materieel voor nodig" [Bron: Klusidee.nl, 2024-2026]. Een keerwand-element van 200 cm hoog weegt 800 tot 1.200 kg. Dat plaats je niet zonder hijswerktuig.
+> Forumlid Boertje125 op Klusidee waarschuwt: "Dit is niet iets wat je zelf even doet daar heb je materieel voor nodig". Een keerwand-element van 200 cm hoog weegt 800 tot 1.200 kg. Dat plaats je niet zonder hijswerktuig.
 
 ## Zelf doen of metselaar inhuren?
 
@@ -182,25 +176,25 @@ Tuinmuren hebben de reputatie onderhoudsvrij te zijn, en dat klopt voor het groo
 ## FAQ
 
 **Wat kost een tuinmuur bouwen?**
-Baksteen 100 tot 150 euro per vierkante meter, betonblokken 75 tot 100 euro, natuursteen 120 tot 180 euro, en volsteens baksteen 150 tot 200 euro [Bron: kvinl, 2026]. Per strekkende meter: 1 meter hoog 65 tot 110 euro, 2 meter hoog 130 tot 220 euro [Bron: Klussendirect, 2026]. Een muur van 10 bij 2 meter kost gemiddeld 2.000 tot 2.400 euro inclusief arbeid en basisfundering.
+Baksteen 100 tot 150 euro per vierkante meter, betonblokken 75 tot 100 euro, natuursteen 120 tot 180 euro, en volsteens baksteen 150 tot 200 euro. Per strekkende meter: 1 meter hoog 65 tot 110 euro, 2 meter hoog 130 tot 220 euro. Een muur van 10 bij 2 meter kost gemiddeld 2.000 tot 2.400 euro inclusief arbeid en basisfundering.
 
 **Heb ik een vergunning nodig voor een tuinmuur?**
-Tot 1 meter hoogte: nooit, dat is landelijk vergunningvrij (artikel 2.29 onder j Bbl) [Bron: IPLO, 2024]. Tot 2 meter, achter de voorkant van je huis: meestal niet, mits het omgevingsplan dat toestaat (artikel 22.27 of 22.36 Bbl). Aan de straatkant: vanaf 1 meter vergunningplichtig. Boven 2 meter: bouwmelding én omgevingsvergunning. Doe altijd de Vergunningcheck via Omgevingsloket.
+Tot 1 meter hoogte: nooit, dat is landelijk vergunningvrij (artikel 2.29 onder j Bbl). Tot 2 meter, achter de voorkant van je huis: meestal niet, mits het omgevingsplan dat toestaat (artikel 22.27 of 22.36 Bbl). Aan de straatkant: vanaf 1 meter vergunningplichtig. Boven 2 meter: bouwmelding én omgevingsvergunning. Doe altijd de Vergunningcheck via Omgevingsloket.
 
 **Wat kost een keerwand?**
-Beton-L-elementen variëren van 82,50 euro voor een blok van 30 cm hoog tot 630 euro voor een blok van 200 × 400 × 100 cm, exclusief btw en transport [Bron: AgriBeton, 2025-2026]. Inclusief plaatsing en fundering ben je 200 tot 700 euro per strekkende meter kwijt, afhankelijk van de hoogte. Gabion all-in komt op ongeveer 200 euro per strekkende meter [Bron: Tuinen-jk, 2025].
+Beton-L-elementen variëren van 82,50 euro voor een blok van 30 cm hoog tot 630 euro voor een blok van 200 × 400 × 100 cm, exclusief btw en transport. Inclusief plaatsing en fundering ben je 200 tot 700 euro per strekkende meter kwijt, afhankelijk van de hoogte. Gabion all-in komt op ongeveer 200 euro per strekkende meter.
 
 **Hoe diep moet de fundering van een tuinmuur?**
-Voor lage muurtjes onder 60 cm volstaat 30 tot 40 cm met stampbeton of grindstrook. Voor permanente muren tussen 1 en 2 meter is 80 cm vorstvrije strookfundering verplicht, met een breedte van 70 tot 90 cm (2 tot 3 keer de muurdikte) [Bron: Hornbach, 2025] [Bron: Karwei, 2025]. Beton storten kost 75 tot 125 euro per vierkante meter, grondwerk 40 tot 60 euro per uur [Bron: Werkspot, 2026].
+Voor lage muurtjes onder 60 cm volstaat 30 tot 40 cm met stampbeton of grindstrook. Voor permanente muren tussen 1 en 2 meter is 80 cm vorstvrije strookfundering verplicht, met een breedte van 70 tot 90 cm (2 tot 3 keer de muurdikte). Beton storten kost 75 tot 125 euro per vierkante meter, grondwerk 40 tot 60 euro per uur.
 
 **Kan ik een tuinmuur of keerwand zelf bouwen?**
 Lage stapelblokken-muurtjes en gabions tot 1 meter zijn prima doe-het-zelf-werk en besparen 1.000 tot 2.500 euro arbeid op 10 meter muur. Gemetselde baksteenmuren vragen ervaring (dagproductie 3 tot 5 vierkante meter). Keerwand-elementen boven 100 cm: kraan nodig, niet doe-het-zelf-vriendelijk. Voor permanente muren boven 1,5 meter: vakman aanbevolen voor fundering en wapening.
 
 **Moet de buurman meebetalen aan een tuinmuur op de erfgrens?**
-Ja, mits de muur exact op de erfgrens staat. Dan is de muur mandelig volgens artikel 5:62 van het Burgerlijk Wetboek, en delen beide buren eigendom én kosten van bouw en onderhoud [Bron: WA.nl, 2025]. Leg dit schriftelijk vast, bij voorkeur in een notariële akte. Bouw je geheel op eigen grond, ook al staat de muur tegen de erfgrens aan, dan ben jij volledig eigenaar en betaal je alles zelf.
+Ja, mits de muur exact op de erfgrens staat. Dan is de muur mandelig volgens artikel 5:62 van het Burgerlijk Wetboek, en delen beide buren eigendom én kosten van bouw en onderhoud. Leg dit schriftelijk vast, bij voorkeur in een notariële akte. Bouw je geheel op eigen grond, ook al staat de muur tegen de erfgrens aan, dan ben jij volledig eigenaar en betaal je alles zelf.
 
 **Wanneer is een steiger nodig?**
-Vanaf 3 meter hoogte is een steiger verplicht voor veilig werk. Reken op 150 tot 400 euro per dag voor een huursteiger, afhankelijk van lengte en complexiteit [Bron: Klussendirect, 2026]. Voor muren tot 2 meter volstaat meestal een rolsteiger of een paar werkplankjes op trapsteunen.
+Vanaf 3 meter hoogte is een steiger verplicht voor veilig werk. Reken op 150 tot 400 euro per dag voor een huursteiger, afhankelijk van lengte en complexiteit. Voor muren tot 2 meter volstaat meestal een rolsteiger of een paar werkplankjes op trapsteunen.
 
 ## Conclusie en volgende stap
 

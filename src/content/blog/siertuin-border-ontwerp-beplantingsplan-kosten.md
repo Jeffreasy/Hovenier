@@ -24,8 +24,6 @@ Er zijn grofweg vier manieren om een siertuin border aan te leggen. Elke route h
 | Beplantingsplan op maat + zelf planten | €175 tot €250 | €100 tot €300 | €30 tot €80 | €0 (eigen tijd) | **€305 tot €630** |
 | Hovenier ontwerp + aanleg | €175 tot €350 | €150 tot €600 | €50 tot €150 | €350 tot €700 | **€725 tot €1.800** |
 
-[Bron: Tuinvoordeel.eu, 2025] [Bron: Werkspot, 2026] [Bron: Hovenier.website, 2026] [Bron: Sprinklr, 2026]
-
 ### Welke route past bij jouw situatie?
 
 Een korte beslis-flow voorkomt urenlang twijfelen.
@@ -35,7 +33,7 @@ Een korte beslis-flow voorkomt urenlang twijfelen.
 * **Heb je een lastige standplaats, een grote oppervlakte of een specifiek thema (vlinders, prairie, schaduw)?** Laat een beplantingsplan op maat maken voor €175 tot €250.
 * **Wil je het uit handen geven of mis je tijd en kennis?** Schakel een hovenier in voor het hele traject. Reken op €725 tot €1.800 voor 10 m² inclusief grond, planten en arbeid.
 
-Het verschil tussen €130 en €1.800 zit niet in betere planten. Het zit in arbeid, ontwerptijd en garantie op aanslaan. Een hovenier rekent €35 tot €60 per uur en levert vaak een korte garantieperiode op het plantgoed [Bron: Werkspot, 2026] [Bron: Trustoo, 2025].
+Het verschil tussen €130 en €1.800 zit niet in betere planten. Het zit in arbeid, ontwerptijd en garantie op aanslaan. Een hovenier rekent €35 tot €60 per uur en levert vaak een korte garantieperiode op het plantgoed.
 
 ### Kosten per m² alleen plantgoed
 
@@ -46,8 +44,6 @@ Als je alleen het plantmateriaal wilt budgetteren, gebruik dan deze richtlijn.
 | Vaste planten en struiken (basis) | €10 tot €30 |
 | Border met bomen of bijzondere soorten | €15 tot €60 |
 | Plantgoed inclusief grondverbetering | €60 tot €80 |
-
-[Bron: Hovenier.website, 2026] [Bron: Werkspot, 2026] [Bron: Tuinvoordeel.eu, 2025]
 
 Wil je een snelle eerste schatting voor jouw oppervlakte? Gebruik onze [tuinkosten-calculator](/tools/tuinkosten-calculator) om in één klik een prijsindicatie te krijgen.
 
@@ -75,13 +71,11 @@ Een borderpakket is een vooraf samengestelde plantencombinatie inclusief platteg
 | Sprinklr Smalle border (paars) | wisselend | vanaf €120,00 |
 | Kwekerij Klein themaborder (Rijkbloeiend, Prairie, Vlinder) | 3,5 tot 4 m² | €49,95 |
 
-[Bron: Directplant/Sprinklr, 2026] [Bron: Kwekerij Klein, 2026]
-
-Pakketten zijn handig, maar er is een vaak genoemde valkuil. Forumleden klagen geregeld dat geleverde aantallen niet kloppen, dat er geen duidelijk plan bij zat of dat planten niet op hun standplaats werkten [Bron: BouwInfo, 2018]. Het verschil tussen een geslaagd en een mislukt pakket zit bijna altijd in de match tussen jouw situatie en het pakket-thema. Een vlindertuinpakket op een schaduwplek werkt niet, hoe goed het pakket ook is.
+Pakketten zijn handig, maar er is een vaak genoemde valkuil. Forumleden klagen geregeld dat geleverde aantallen niet kloppen, dat er geen duidelijk plan bij zat of dat planten niet op hun standplaats werkten. Het verschil tussen een geslaagd en een mislukt pakket zit bijna altijd in de match tussen jouw situatie en het pakket-thema. Een vlindertuinpakket op een schaduwplek werkt niet, hoe goed het pakket ook is.
 
 ### Route 3: beplantingsplan op maat
 
-Een tuinontwerper of gespecialiseerd beplantingsbureau tekent een plan dat is afgestemd op jouw maten, grond, lichtinval en wensen. Een los beplantingsplan voor één border kost €175 tot €250 [Bron: Temm-tuin.nl, 2025]. Voor een groter project met tuinontwerp én beplantingsplan zit je op €400 tot €2.500. Bij grote, complexe tuinen kan dat oplopen tot boven de €3.000 [Bron: Beplantingsbureau.nl, 2025].
+Een tuinontwerper of gespecialiseerd beplantingsbureau tekent een plan dat is afgestemd op jouw maten, grond, lichtinval en wensen. Een los beplantingsplan voor één border kost €175 tot €250. Voor een groter project met tuinontwerp én beplantingsplan zit je op €400 tot €2.500. Bij grote, complexe tuinen kan dat oplopen tot boven de €3.000.
 
 Wanneer is dit de moeite waard? Bij borders groter dan 15 m², bij lastige standplaatsen (kleigrond, veel wortelopslag, half overdekt), of wanneer je een specifieke sfeer wilt (Engelse cottage, prairie, Japans). Een goed plan voorkomt dat je drie keer plantgoed moet aanschaffen voordat de border werkt.
 
@@ -99,13 +93,11 @@ Te ver uit elkaar en je border ziet er nog jaren ijl uit. Te dicht op elkaar en 
 | Siergrassen Miscanthus (groot) | 1 tot 3 |
 | Klimplanten langs schutting | 3 per strekkende meter |
 
-[Bron: 123planten.nl, 2025] [Bron: Tuinplaats.nl, 2025]
-
-Voor populaire soorten gelden specifieke aantallen. Lavendel zet je op 5 tot 7 per m², salvia nemorosa op 8 tot 10 per m², en geranium (ooievaarsbek) op 7 tot 9 per m² [Bron: 123planten.nl, 2025].
+Voor populaire soorten gelden specifieke aantallen. Lavendel zet je op 5 tot 7 per m², salvia nemorosa op 8 tot 10 per m², en geranium (ooievaarsbek) op 7 tot 9 per m².
 
 ### De hart-op-hart methode
 
-Plantafstand meet je vanuit het hart van de ene plant tot het hart van de volgende. De afstand tot de rand van de border is ongeveer de helft van de plantafstand [Bron: Tuinplaats.nl, 2025]. Dus bij een plantafstand van 30 cm zet je de buitenste plant op 15 cm van de rand.
+Plantafstand meet je vanuit het hart van de ene plant tot het hart van de volgende. De afstand tot de rand van de border is ongeveer de helft van de plantafstand. Dus bij een plantafstand van 30 cm zet je de buitenste plant op 15 cm van de rand.
 
 Klein rekenvoorbeeld. Een border van 5 meter lang en 1 meter diep is 5 m². Je wilt drie lagen: voorin bodembedekkers, midden gemiddelde vaste planten, achterin een paar solitairen. Dat geeft ruwweg 30 tot 40 bodembedekkers, 25 tot 35 middenplanten en 3 tot 5 grote planten. Reken op 60 tot 80 P9-potjes voor 5 m².
 
@@ -126,17 +118,15 @@ De grootste fout bij een siertuin border aanleggen: de verkeerde plant op de ver
 | Schaduw | 0 tot 2 uur | Heuchera | 7 tot 9 |
 | Schaduw | 0 tot 2 uur | Bergenia | 5 tot 7 |
 
-[Bron: Pokon, 2025] [Bron: Intratuin, 2025] [Bron: Florum.nl, 2025]
-
 ### Zonborder: lavendel, salvia, echinacea
 
-Een zonborder krijgt minimaal 4 uur directe zon per dag [Bron: Intratuin, 2025]. Klassieke combinatie: lavendel (zon, droge grond, 5 tot 7 per m²), salvia nemorosa (zon, gewone tuingrond, 8 tot 10 per m²) en echinacea (zon, voedzame grond, 5 tot 7 per m²). Voeg eventueel een siergras toe als Stipa of een kleine Miscanthus voor structuur.
+Een zonborder krijgt minimaal 4 uur directe zon per dag. Klassieke combinatie: lavendel (zon, droge grond, 5 tot 7 per m²), salvia nemorosa (zon, gewone tuingrond, 8 tot 10 per m²) en echinacea (zon, voedzame grond, 5 tot 7 per m²). Voeg eventueel een siergras toe als Stipa of een kleine Miscanthus voor structuur.
 
 Belangrijk bij zonborders: lavendel en veel mediterrane soorten haten natte voeten. Op kleigrond moet je extra zand en compost door de grond werken, of beter, kies vaste planten die kleigrond wel aankunnen zoals geranium 'Rozanne' of monarda.
 
 ### Halfschaduwborder: geranium, astilbe, campanula
 
-Halfschaduw is 2 tot 4 uur directe zon, vaak ochtend- of avondzon [Bron: Intratuin, 2025]. Dit is de meest voorkomende standplaats in Nederlandse tuinen. Geranium (ooievaarsbek, halfschaduw, 7 tot 9 per m²) is hier het werkpaard, in combinatie met astilbe (halfschaduw, vochtige grond, 5 tot 7 per m²) en campanula (halfschaduw, 7 tot 9 per m²).
+Halfschaduw is 2 tot 4 uur directe zon, vaak ochtend- of avondzon. Dit is de meest voorkomende standplaats in Nederlandse tuinen. Geranium (ooievaarsbek, halfschaduw, 7 tot 9 per m²) is hier het werkpaard, in combinatie met astilbe (halfschaduw, vochtige grond, 5 tot 7 per m²) en campanula (halfschaduw, 7 tot 9 per m²).
 
 ### Schaduwborder: hosta, varens, heuchera, bergenia
 
@@ -155,17 +145,15 @@ Bijna elk online artikel springt direct van plantkeuze naar planten zetten. Dat 
 | Worteldoek/gronddoek 1m breed | naar wens 5 tot 10 m | €1 tot €3 per m | €5 tot €30 |
 | Mulch (boomschors) per zak 60L | 2 tot 4 zakken | €5 tot €10 per zak | €10 tot €40 |
 
-[Bron: Praxis, 2026] [Bron: GAMMA, 2026] [Bron: Steck Utrecht, 2025]
-
 Reken op €58 tot €155 aan materialen voor 10 m², afhankelijk van je grond en of je mulcht. Op kleigrond verdubbel je de compost, op zandgrond werk je extra organische stof door.
 
 ### Substraatlaag: 15 tot 30 cm
 
-Op de bestaande grond breng je een laag van 15 tot 30 cm goede tuinaarde aan, gemengd met compost [Bron: Steck Utrecht, 2025]. Niet meer, niet minder. Te dun en wortels zakken in onkruidwortels, te dik en je krijgt verzakking en planten zakken weg.
+Op de bestaande grond breng je een laag van 15 tot 30 cm goede tuinaarde aan, gemengd met compost. Niet meer, niet minder. Te dun en wortels zakken in onkruidwortels, te dik en je krijgt verzakking en planten zakken weg.
 
 ### Wortelwerk: het stuk dat ervaren tuiniers benoemen
 
-Een terugkerende klacht in fora: "heb 3 kruiwagens aan wortelgestel verwijderd voordat ik kon planten" [Bron: BouwInfo, 2018]. Onderschat dit niet. Bij bestaande grond met haagwinde, kweekgras of klimop loont het om een seizoen vooraf de wortels eruit te halen voordat je gaat planten. Anders staat het binnen één jaar weer terug, deze keer dwars door je nieuwe vaste planten heen.
+Een terugkerende klacht in fora: "heb 3 kruiwagens aan wortelgestel verwijderd voordat ik kon planten". Onderschat dit niet. Bij bestaande grond met haagwinde, kweekgras of klimop loont het om een seizoen vooraf de wortels eruit te halen voordat je gaat planten. Anders staat het binnen één jaar weer terug, deze keer dwars door je nieuwe vaste planten heen.
 
 Wil je een goedkope manier om je grond structureel te verbeteren? Een eigen composthoop levert na een jaar gratis bodemverbeteraar. Lees onze gids [composteren in de tuin](/blog/composteren-tuin-methodes-kosten) voor methodes en kosten.
 
@@ -173,7 +161,7 @@ Wil je een goedkope manier om je grond structureel te verbeteren? Een eigen comp
 
 Deze volgorde werkt voor een border tot 15 m² op een gemiddelde standplaats. Reken op een weekend werk voor 10 m², plus een dag voor het inkopen.
 
-**Stap 1. Meet en teken.** Markeer de borderomtrek met een tuinslang of touw. Borderdiepte minimaal 50 cm, ideaal 1 tot 2 meter [Bron: Yarinde.nl, 2025]. Onder de 50 cm wordt het te smal voor gelaagde beplanting.
+**Stap 1. Meet en teken.** Markeer de borderomtrek met een tuinslang of touw. Borderdiepte minimaal 50 cm, ideaal 1 tot 2 meter. Onder de 50 cm wordt het te smal voor gelaagde beplanting.
 
 **Stap 2. Bepaal standplaats.** Kijk een dag lang hoe de zon over de plek loopt. Tel de uren directe zon. Op basis daarvan kies je zon, halfschaduw of schaduwbeplanting.
 
@@ -181,7 +169,7 @@ Deze volgorde werkt voor een border tot 15 m² op een gemiddelde standplaats. Re
 
 **Stap 4. Plan tekenen.** Maak een schets op schaal. Hoge planten achterin, lage voorin. Plan op bloeitijd: vroege bloei (april/mei), zomerbloei (juni/juli/augustus), late bloei (september/oktober). Houd hart-op-hart afstanden aan en zet de buitenste plant op halve plantafstand van de rand.
 
-**Stap 5. Planten zetten.** Het beste plantmoment is voorjaar (maart en april) of najaar (september en oktober) [Bron: Directplant, 2025]. Zet alle potten eerst neer volgens je plan voordat je gaat planten. Pas dan ga je gaten graven. Plantgat tweemaal de potmaat, plant niet dieper dan in de pot.
+**Stap 5. Planten zetten.** Het beste plantmoment is voorjaar (maart en april) of najaar (september en oktober). Zet alle potten eerst neer volgens je plan voordat je gaat planten. Pas dan ga je gaten graven. Plantgat tweemaal de potmaat, plant niet dieper dan in de pot.
 
 **Stap 6. Water geven en mulchen.** Geef direct na het planten ruim water. De eerste 6 tot 8 weken nat houden, ook bij regen. Daarna 1 tot 2 keer per week diep watergeven in plaats van vaak een beetje. Een laag mulch (3 tot 5 cm boomschors) houdt vocht vast en onderdrukt onkruid.
 
@@ -191,15 +179,15 @@ Voor een seizoens-specifiek stappenplan met meer focus op timing in de lente, le
 
 Beide vakmensen werken aan tuinen, maar ze leveren een ander product.
 
-**Een tuinontwerper levert een plan op papier.** Hij of zij meet jouw tuin in, vraagt naar wensen en standplaats, en levert een tekening met plantenlijst en aanlegadvies. Kosten: €175 tot €250 voor een los beplantingsplan, €400 tot €2.500 voor een volledig tuinontwerp [Bron: Temm-tuin.nl, 2025] [Bron: Beplantingsbureau.nl, 2025]. Je doet vervolgens zelf de aanleg, of laat dat door een hovenier uitvoeren.
+**Een tuinontwerper levert een plan op papier.** Hij of zij meet jouw tuin in, vraagt naar wensen en standplaats, en levert een tekening met plantenlijst en aanlegadvies. Kosten: €175 tot €250 voor een los beplantingsplan, €400 tot €2.500 voor een volledig tuinontwerp. Je doet vervolgens zelf de aanleg, of laat dat door een hovenier uitvoeren.
 
-**Een hovenier voert uit.** Soms maakt de hovenier zelf een eenvoudig plan, soms werkt hij met een ontwerp van een ander. Uurtarief €35 tot €60 per uur [Bron: Werkspot, 2026]. Voor border-aanleg incl. arbeid en plantgoed reken je €50 tot €100 per m² [Bron: Hovenier.website, 2026].
+**Een hovenier voert uit.** Soms maakt de hovenier zelf een eenvoudig plan, soms werkt hij met een ontwerp van een ander. Uurtarief €35 tot €60 per uur. Voor border-aanleg incl. arbeid en plantgoed reken je €50 tot €100 per m².
 
 Wanneer kies je een tuinontwerper plus eigen aanleg? Bij een groter project waar je het denkwerk uit handen wilt geven, maar de uitvoering zelf wilt doen. Wanneer kies je alleen een hovenier? Bij een eenvoudige border met duidelijke standplaats en een redelijk idee van wat je wilt. Een goede hovenier vinden in jouw regio kan via onze [hoveniers-directory](/hoveniers).
 
 ## Rijpingstijd: wat verwachten en wanneer?
 
-De grootste verwachtingsmismatch bij een nieuwe border zit hier. Een siertuin border ziet er pas na 2 tot 3 seizoenen volgroeid uit [Bron: BouwInfo + branche-consensus, 2025]. Niet na drie maanden.
+De grootste verwachtingsmismatch bij een nieuwe border zit hier. Een siertuin border ziet er pas na 2 tot 3 seizoenen volgroeid uit. Niet na drie maanden.
 
 **Jaar 1.** Vaste planten investeren in wortels, niet in massa bovengronds. De border ziet er ijl uit, je ziet veel grond tussen de planten. Dat is normaal, niet verkeerd. Veel mensen kopen in paniek extra planten en stoppen die ertussen. Doe dat niet.
 
@@ -211,7 +199,7 @@ Als je dat ritme van tevoren weet, plant je niet te dicht en heb je geen "border
 
 ## Veelgemaakte fouten bij een siertuin border aanleggen
 
-**Te smal beginnen.** Een border van 30 cm diep ziet er nooit volwassen uit. Aanvaardbaar minimum is 50 cm, ideaal is 1 tot 2 meter [Bron: Yarinde.nl, 2025]. Liever korter en dieper dan langer en smaller.
+**Te smal beginnen.** Een border van 30 cm diep ziet er nooit volwassen uit. Aanvaardbaar minimum is 50 cm, ideaal is 1 tot 2 meter. Liever korter en dieper dan langer en smaller.
 
 **Te dicht planten.** "Het ziet er nu zo leeg uit" is verleidelijk, maar planten verdubbelen of verdrievoudigen in het tweede en derde seizoen. Dichte aanplant geeft schimmel, slappe bloei en plantruzie.
 
@@ -227,23 +215,23 @@ Als je dat ritme van tevoren weet, plant je niet te dicht en heb je geen "border
 
 ### Hoeveel kost een border aanleggen voor 10 m²?
 
-Tussen €130 en €1.800 inclusief BTW, afhankelijk van de route. DIY zelf samenstellen €130 tot €380, borderpakket €150 tot €490, beplantingsplan op maat plus zelf planten €305 tot €630, en volledig hovenier-traject €725 tot €1.800 [Bron: Werkspot, 2026] [Bron: Hovenier.website, 2026].
+Tussen €130 en €1.800 inclusief BTW, afhankelijk van de route. DIY zelf samenstellen €130 tot €380, borderpakket €150 tot €490, beplantingsplan op maat plus zelf planten €305 tot €630, en volledig hovenier-traject €725 tot €1.800.
 
 ### Hoeveel planten heb ik nodig per m²?
 
-Vuistregel voor P9-potten: bodembedekkers 9 tot 12, gemiddelde vaste planten 7 tot 9, middelhoge planten 5 tot 7, grote solitairen 1 tot 3, siergrassen 3 tot 5 per m² [Bron: 123planten.nl, 2025]. Voor lavendel reken je 5 tot 7 per m², voor salvia nemorosa 8 tot 10.
+Vuistregel voor P9-potten: bodembedekkers 9 tot 12, gemiddelde vaste planten 7 tot 9, middelhoge planten 5 tot 7, grote solitairen 1 tot 3, siergrassen 3 tot 5 per m². Voor lavendel reken je 5 tot 7 per m², voor salvia nemorosa 8 tot 10.
 
 ### Wat kost een beplantingsplan laten maken?
 
-Een los beplantingsplan voor één border kost €175 tot €250. Een volledig tuinontwerp inclusief beplantingsplan kost €400 tot €2.500, bij grote tuinen tot €3.000 of meer [Bron: Temm-tuin.nl, 2025] [Bron: Beplantingsbureau.nl, 2025].
+Een los beplantingsplan voor één border kost €175 tot €250. Een volledig tuinontwerp inclusief beplantingsplan kost €400 tot €2.500, bij grote tuinen tot €3.000 of meer.
 
 ### Welke planten passen bij mijn standplaats?
 
-Volle zon (meer dan 4 uur direct licht): lavendel, salvia, echinacea. Halfschaduw (2 tot 4 uur): geranium, astilbe, campanula. Schaduw (0 tot 2 uur): hosta, varens, heuchera, bergenia [Bron: Pokon, 2025] [Bron: Intratuin, 2025].
+Volle zon (meer dan 4 uur direct licht): lavendel, salvia, echinacea. Halfschaduw (2 tot 4 uur): geranium, astilbe, campanula. Schaduw (0 tot 2 uur): hosta, varens, heuchera, bergenia.
 
 ### Wanneer is het beste moment om een border aan te leggen?
 
-Voorjaar (maart en april) of najaar (september en oktober). Bodemtemperatuur en regenval zijn dan optimaal voor wortelvorming [Bron: Directplant, 2025]. Vermijd planten in volle zomer of bij vorst.
+Voorjaar (maart en april) of najaar (september en oktober). Bodemtemperatuur en regenval zijn dan optimaal voor wortelvorming. Vermijd planten in volle zomer of bij vorst.
 
 ### Hoe lang duurt het voordat een border volgroeid is?
 
@@ -251,11 +239,11 @@ Voorjaar (maart en april) of najaar (september en oktober). Bodemtemperatuur en 
 
 ### Is een borderpakket de moeite waard?
 
-Voor kleine borders (2 tot 4,5 m²) op een duidelijke standplaats: ja. Sprinklr-pakketten kosten €44 tot €165, Kwekerij Klein levert themaborders vanaf €49,95 [Bron: Sprinklr, 2026] [Bron: Kwekerij Klein, 2026]. Let goed op of het pakket-thema bij jouw zon-situatie past, dat is de grootste valkuil.
+Voor kleine borders (2 tot 4,5 m²) op een duidelijke standplaats: ja. Sprinklr-pakketten kosten €44 tot €165, Kwekerij Klein levert themaborders vanaf €49,95. Let goed op of het pakket-thema bij jouw zon-situatie past, dat is de grootste valkuil.
 
 ### Hoe diep moet een border zijn?
 
-Minimaal 50 cm voor een functionele border, ideaal 1 tot 2 meter voor gelaagde beplanting [Bron: Yarinde.nl, 2025]. De aarde-laag bovenop bestaande grond is 15 tot 30 cm.
+Minimaal 50 cm voor een functionele border, ideaal 1 tot 2 meter voor gelaagde beplanting. De aarde-laag bovenop bestaande grond is 15 tot 30 cm.
 
 ## Klaar om jouw border aan te leggen?
 

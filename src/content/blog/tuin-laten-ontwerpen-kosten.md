@@ -7,7 +7,7 @@ featured: false
 draft: false
 ---
 
-Een tuin laten ontwerpen kost in 2026 tussen de €250 voor een kleine schets en €4.500 voor een volledig pakket met 2D, 3D, beplantings- en lichtplan, en de kosten lopen vooral uiteen door wie je inhuurt en hoe groot je tuin is. Voor de meeste mensen met een gemiddelde achtertuin van 100 tot 200 m² komt de prijs uit op €450 tot €750 voor het ontwerp, of €700 tot €1.500 als je er ook een beplantingsplan en lichtplan bij wil [Bron: Homedeal.nl, 2026].
+Een tuin laten ontwerpen kost in 2026 tussen de €250 voor een kleine schets en €4.500 voor een volledig pakket met 2D, 3D, beplantings- en lichtplan, en de kosten lopen vooral uiteen door wie je inhuurt en hoe groot je tuin is. Voor de meeste mensen met een gemiddelde achtertuin van 100 tot 200 m² komt de prijs uit op €450 tot €750 voor het ontwerp, of €700 tot €1.500 als je er ook een beplantingsplan en lichtplan bij wil.
 
 Je staat met een kop koffie voor de schuifpui en kijkt naar je achtertuin. Een kale plek waar de oude schuur stond, een terras dat geen logische vorm meer heeft, wat planten die alleen in mei een week mooi zijn. Je hebt een Pinterest-bord met 47 pins, drie offertes van hoveniers die compleet uiteenlopen, en geen plan dat je het gevoel geeft dat het straks ook werkt. €1.500 voor een tuinontwerp lijkt veel, totdat je beseft dat je zonder plan de helft van een aanlegbudget van €25.000 kunt verspijkeren aan keuzes waar je over twee jaar weer spijt van hebt.
 
@@ -28,9 +28,7 @@ De prijs voor een tuinontwerp wordt door twee dingen bepaald: hoe groot je tuin 
 | XL professioneel | 500-1.000 m² | €1.800 tot €2.700 | €2.000 tot €3.000+ |
 | Landgoed | 1.000+ m² | vanaf €3.000 | op aanvraag |
 
-[Bron: Homedeal.nl, 2026] [Bron: Temm-tuin.nl, 2025] [Bron: Hovenier.website, 2025]
-
-De algemene markt-range voor een compleet tuinontwerp ligt tussen €400 en €2.500, met uitschieters tot €3.000+ voor premium pakketten waar alle plannen in zitten [Bron: Temm-tuin.nl, 2025]. Houd er rekening mee: dit zijn ontwerpkosten, geen aanlegkosten. De aanleg zelf kost gemiddeld €50 tot €100 per m², en bij complex grondwerk loopt dat op tot €100 tot €200 per m² [Bron: Homedeal.nl, 2026]. Een vuistregel uit de vakmedia: het ontwerp is 5 tot 10% van het totaalbudget, en bij een echt tuinarchitectuur-project reserveer je ongeveer 20% van het aanlegbudget voor ontwerpdiensten [Bron: LINDA.nl, 2024] [Bron: NIBC, 2025].
+De algemene markt-range voor een compleet tuinontwerp ligt tussen €400 en €2.500, met uitschieters tot €3.000+ voor premium pakketten waar alle plannen in zitten. Houd er rekening mee: dit zijn ontwerpkosten, geen aanlegkosten. De aanleg zelf kost gemiddeld €50 tot €100 per m², en bij complex grondwerk loopt dat op tot €100 tot €200 per m². Een vuistregel uit de vakmedia: het ontwerp is 5 tot 10% van het totaalbudget, en bij een echt tuinarchitectuur-project reserveer je ongeveer 20% van het aanlegbudget voor ontwerpdiensten.
 
 ### Vier routes vergeleken (tuin van 150 m²)
 
@@ -41,9 +39,7 @@ De algemene markt-range voor een compleet tuinontwerp ligt tussen €400 en €2
 | Tuinarchitect | 2D + 3D, beplantingsplan, lichtplan, technische tekeningen | 4-8 weken | €1.500 tot €4.500 |
 | Hovenier met ontwerpdienst | Schets/2D + offerte aanleg, vaak verrekend in aanlegprijs | 2-3 weken | €0 tot €750 (vaak verrekend) |
 
-[Bron: Florum.nl, 2025] [Bron: Hovenier.website, 2025] [Bron: Homedeal.nl, 2026]
-
-Voor wie graag in vierkante meters denkt: een kleine tuin tot 100 m² zit rond €3,50 per m², 100-200 m² zakt naar €2,75 per m², en bij grote tuinen van 400-800 m² loop je naar €1,06 per m². Hoe groter de tuin, hoe lager de prijs per vierkante meter [Bron: Hovenier.website, 2025].
+Voor wie graag in vierkante meters denkt: een kleine tuin tot 100 m² zit rond €3,50 per m², 100-200 m² zakt naar €2,75 per m², en bij grote tuinen van 400-800 m² loop je naar €1,06 per m². Hoe groter de tuin, hoe lager de prijs per vierkante meter.
 
 Wil je meteen een idee van wat het bij jou wordt? Vraag [vrijblijvend offertes voor tuinontwerp aan via TuinHub](/offerte) en vergelijk meerdere routes naast elkaar.
 
@@ -53,19 +49,19 @@ Drie titels, drie verdienmodellen, drie soorten output. De keuze maakt makkelijk
 
 ### Tuinontwerper
 
-Onbeschermde titel, geen vaste opleidingseis. In de praktijk zijn dit zelfstandigen met een vakopleiding tuin- en landschapsinrichting, vaak een MBO- of HBO-achtergrond. Ze richten zich op private tuinen tot pakweg 500 m² en leveren meestal een 2D-plattegrond, een beplantingsplan op aanvraag en materiaaladvies. Uurtarief: €50 tot €100 per uur, met startende ontwerpers rond €50-€75 en ervaren ontwerpers rond €60-€100 [Bron: Temm-tuin.nl, 2025] [Bron: Tuinontwerper.nl, 2025].
+Onbeschermde titel, geen vaste opleidingseis. In de praktijk zijn dit zelfstandigen met een vakopleiding tuin- en landschapsinrichting, vaak een MBO- of HBO-achtergrond. Ze richten zich op private tuinen tot pakweg 500 m² en leveren meestal een 2D-plattegrond, een beplantingsplan op aanvraag en materiaaladvies. Uurtarief: €50 tot €100 per uur, met startende ontwerpers rond €50-€75 en ervaren ontwerpers rond €60-€100.
 
 Voor wie? Renovatie of aanleg van een gemiddelde achtertuin zonder grote technische uitdagingen. Goed prijs-kwaliteit, persoonlijke aanpak, korte lijnen.
 
 ### Tuinarchitect
 
-Ook geen wettelijk beschermde titel, maar in de praktijk meestal HBO of WO landschapsarchitectuur of tuin- en landschapsinrichting [Bron: GesselGroen, 2025] [Bron: ProductieTuin, 2025]. Tuinarchitecten werken aan complexere projecten: tuinen met hoogteverschillen, vergunningsplichten, vijvers, zwembaden, of integratie met architectuur van het huis. Output is uitgebreider: 2D + 3D-visualisaties, beplantingsplan, lichtplan, technische uitvoeringstekeningen. Uurtarief: €60 tot €90 per uur gemiddeld, en tot €150-€200 per uur voor toparchitecten [Bron: Homedeal.nl, 2026] [Bron: Tuinontwerper.nl, 2025].
+Ook geen wettelijk beschermde titel, maar in de praktijk meestal HBO of WO landschapsarchitectuur of tuin- en landschapsinrichting. Tuinarchitecten werken aan complexere projecten: tuinen met hoogteverschillen, vergunningsplichten, vijvers, zwembaden, of integratie met architectuur van het huis. Output is uitgebreider: 2D + 3D-visualisaties, beplantingsplan, lichtplan, technische uitvoeringstekeningen. Uurtarief: €60 tot €90 per uur gemiddeld, en tot €150-€200 per uur voor toparchitecten.
 
 Voor wie? Tuinen vanaf 200 m² met complexiteit, of als je een statement-tuin wil die in alles samenhang heeft. Reken op een ontwerptraject van 4 tot 8 weken.
 
 ### Hovenier met ontwerpdienst
 
-Een hovenier is in eerste instantie een aanlegger en onderhouder, geen ontwerper. Veel hoveniers bieden een schets of een eenvoudig 2D-ontwerp aan, vaak gekoppeld aan een aanlegofferte. Uurtarief hovenier-basis: €35 tot €65 per uur [Bron: Trustoo, 2025]. De ontwerpdienst zelf zit vaak rond €45 tot €60 per uur, en wordt regelmatig verrekend in de aanlegprijs als je daar ook tekent. Voor het volledige beeld van uurtarieven per type aanbieder, zie onze pagina over [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
+Een hovenier is in eerste instantie een aanlegger en onderhouder, geen ontwerper. Veel hoveniers bieden een schets of een eenvoudig 2D-ontwerp aan, vaak gekoppeld aan een aanlegofferte. Uurtarief hovenier-basis: €35 tot €65 per uur. De ontwerpdienst zelf zit vaak rond €45 tot €60 per uur, en wordt regelmatig verrekend in de aanlegprijs als je daar ook tekent. Voor het volledige beeld van uurtarieven per type aanbieder, zie onze pagina over [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
 Voor wie? Mensen die snel willen, geen losse ontwerptraject willen managen, en bereid zijn om bij dezelfde partij aanleg af te nemen. Verderop in dit artikel kijken we kritisch naar het "gratis ontwerp"-aanbod.
 
@@ -77,7 +73,7 @@ Een "tuinontwerp" is geen één-pakket-product. Het bestaat uit losse onderdelen
 
 ### Schetsadvies en schetsontwerp
 
-Een tuinontwerper komt 2 tot 4 uur op locatie, kijkt rond, stelt vragen, en levert een handgetekende schets met een richtinggevend idee. Geen exacte planten, geen maatvoering. Prijs: €150 tot €600, afhankelijk van duur en uitwerking [Bron: Tuinontwerper.nl, 2025].
+Een tuinontwerper komt 2 tot 4 uur op locatie, kijkt rond, stelt vragen, en levert een handgetekende schets met een richtinggevend idee. Geen exacte planten, geen maatvoering. Prijs: €150 tot €600, afhankelijk van duur en uitwerking.
 
 Goed voor wie het basisidee mist en zelf verder wil tekenen of plannen. Niet genoeg om een hovenier mee aan te sturen.
 
@@ -92,8 +88,6 @@ Het standaard tuinontwerp: een plattegrond op schaal met paden, terras, borders,
 | 2D digitaal compleet (Photoshop/CAD) | €450 tot €1.100 |
 | 2D handgetekend compleet | €300 tot €800 |
 
-[Bron: Homedeal.nl, 2026] [Bron: Florum.nl, 2025]
-
 ### 3D-visualisatie
 
 Een 3D-render laat zien hoe de tuin er over drie jaar uitziet, met materialen, hoogtes en plantvolumes. Handig om te overtuigen (jezelf of je partner) en om hoveniers offertes te laten maken op basis van iets concreets.
@@ -103,18 +97,14 @@ Een 3D-render laat zien hoe de tuin er over drie jaar uitziet, met materialen, h
 | Digitaal 3D-beeld (per beeld) | €300 tot €500 |
 | Premium volledige 3D | €500 tot €1.500 |
 
-[Bron: Florum.nl, 2025] [Bron: Homedeal.nl, 2026]
-
 ### Beplantingsplan
 
-Vaak het verschil tussen "leuk plan" en "tuin die werkt". Een beplantingsplan zegt welke plant op welke plek komt, hoeveel exemplaren per m², en welke combinaties bloeien wanneer. Het beplantingsplan is een opslag van 40 tot 60% van de ontwerpkosten [Bron: Homedeal.nl, 2026].
+Vaak het verschil tussen "leuk plan" en "tuin die werkt". Een beplantingsplan zegt welke plant op welke plek komt, hoeveel exemplaren per m², en welke combinaties bloeien wanneer. Het beplantingsplan is een opslag van 40 tot 60% van de ontwerpkosten.
 
 | Variant | Prijs |
 |---------|-------|
 | Beplantingsplan basis | €175 tot €400 |
 | Beplantingsplan premium | €300 tot €700 |
-
-[Bron: Homedeal.nl, 2026] [Bron: Florum.nl, 2025]
 
 Wil je alleen je borders aanpakken zonder volledige tuinrenovatie? Lees dan ons artikel over [siertuin border aanleggen en beplantingsplan kosten](/blog/siertuin-border-ontwerp-beplantingsplan-kosten). Voor het concrete stappenplan in de tuin zelf, zie de gids over [een nieuwe border aanleggen](/blog/nieuwe-border-aanleggen).
 
@@ -126,8 +116,6 @@ Wil je alleen je borders aanpakken zonder volledige tuinrenovatie? Lees dan ons 
 | Technische tekening / detailtekening | €75 tot €250 per element |
 | Materiaal- en sfeeradvies | meestal inbegrepen |
 | Locatiebezoek / intake | €120 tot €250 |
-
-[Bron: Florum.nl, 2025] [Bron: Homedeal.nl, 2026]
 
 Een lichtplan is bij avondtuinen en bij tuinen met statement-elementen (vijver, pergola, zwembad) een aanrader. Technische tekeningen zijn vooral relevant als de hovenier ze nodig heeft voor offertes en uitvoering, bijvoorbeeld voor een waterelement of een verdiepte zitkuil.
 
@@ -146,13 +134,11 @@ Sommige bureaus werken met vaste pakketten zodat je vooraf weet wat je betaalt. 
 | GesselGroen | L | 200-500 m² | €1.500 |
 | GesselGroen | XL | 500-1.000 m² | €1.750 |
 
-[Bron: Temm-tuin.nl, 2025] [Bron: GesselGroen, 2026]
-
 Het verschil tussen die twee is meestal de uitwerking: TEMM-pakketten zijn inclusief 3D, beplantingsplan en revisierondes, GesselGroen-pakketten houden het bij een kerngerichte 2D met optionele extra's.
 
 ## Online tuinontwerp vs lokaal: voor wie wat?
 
-Online tuinontwerp is de afgelopen jaren een serieuze route geworden. Je upload foto's, een plattegrond en een vragenlijst, en krijgt binnen 2 tot 4 weken een 2D-plan, beplantingsadvies en soms een 3D-render terug. Prijs: €300 tot €750, ongeveer 30 tot 50% goedkoper dan een lokale ontwerper voor vergelijkbare scope [Bron: branche-vergelijking 2025-2026].
+Online tuinontwerp is de afgelopen jaren een serieuze route geworden. Je upload foto's, een plattegrond en een vragenlijst, en krijgt binnen 2 tot 4 weken een 2D-plan, beplantingsadvies en soms een 3D-render terug. Prijs: €300 tot €750, ongeveer 30 tot 50% goedkoper dan een lokale ontwerper voor vergelijkbare scope.
 
 ### Wanneer past online?
 
@@ -167,11 +153,11 @@ Online tuinontwerp is de afgelopen jaren een serieuze route geworden. Je upload 
 - Tuinen waar het samenspel met de architectuur van het huis kritisch is.
 - Mensen die hun gedachten niet makkelijk via formulieren overbrengen en liever in gesprek aan de keukentafel zitten.
 
-Een tuinontwerper Angelique Brevé waarschuwt in LINDA.nl voor de andere kant van het spectrum: hele goedkope tuinschetsen van rond €100. "If it sounds too good to be true, it probably is", aldus Brevé over die schetsen, die in haar ervaring praktisch nutteloos zijn voor uitvoering [Bron: LINDA.nl, 2024]. Een serieus online ontwerp begint bij €300, niet bij €100.
+Een tuinontwerper Angelique Brevé waarschuwt in LINDA.nl voor de andere kant van het spectrum: hele goedkope tuinschetsen van rond €100. "If it sounds too good to be true, it probably is", aldus Brevé over die schetsen, die in haar ervaring praktisch nutteloos zijn voor uitvoering. Een serieus online ontwerp begint bij €300, niet bij €100.
 
 ## Hoe verloopt het ontwerpproces?
 
-Een tuinontwerptraject heeft drie hoofdfasen, met daarbinnen onderdelen die je los of in combinatie kunt bestellen [Bron: Studio Ruinard, 2025] [Bron: Natuurlijktuinontwerp.nl, 2025].
+Een tuinontwerptraject heeft drie hoofdfasen, met daarbinnen onderdelen die je los of in combinatie kunt bestellen.
 
 ### Fase 1: Intake en inventarisatie (1-2 weken)
 
@@ -195,8 +181,6 @@ Optioneel, maar nodig als de hovenier een precieze offerte moet maken. Hier kome
 | **Totaal ontwerpproces** | **2-12 weken (afhankelijk van scope)** |
 | **Uitvoering aanleg na ontwerp** | **8-16 weken** |
 
-[Bron: Studio Ruinard, 2025] [Bron: GesselGroen, 2026] [Bron: Natuurlijktuinontwerp.nl, 2025]
-
 Plan dus realistisch: van eerste belletje tot beplante tuin ben je al snel 4 tot 7 maanden verder. Wil je dit voorjaar tuinieren? Dan had je in december moeten beginnen.
 
 ## Gratis tuinontwerp bij een hovenier: hoe zit dat echt?
@@ -211,7 +195,7 @@ De hovenier maakt het ontwerp omdat hij de aanlegopdracht wil. Zijn marge op de 
 
 **Voordelen.** Geen losse rekening voor het ontwerp. Korte lijnen: dezelfde partij ontwerpt en legt aan, dus minder afstemmingsproblemen. Snel te realiseren als je toch al voor die hovenier had gekozen.
 
-**Nadelen.** Je verliest onderhandelingspositie op de aanlegprijs. Een ervaren forumlid op BouwInfo formuleerde het scherp: "Uitvoeringsprijzen liggen 50% tot 100% (en meer) duurder dan wanneer je zelf de onderaannemers contacteert" [Bron: BouwInfo, 2009] [INDICATIEF, pre-2024]. Het ontwerp is daarnaast vaak een eenvoudig 2D, geen 3D of beplantingsplan op tuinarchitect-niveau. En je bent gebonden aan de stijl en de leveranciers van die ene hovenier.
+**Nadelen.** Je verliest onderhandelingspositie op de aanlegprijs. Een ervaren forumlid op BouwInfo formuleerde het scherp: "Uitvoeringsprijzen liggen 50% tot 100% (en meer) duurder dan wanneer je zelf de onderaannemers contacteert" [INDICATIEF, pre-2024]. Het ontwerp is daarnaast vaak een eenvoudig 2D, geen 3D of beplantingsplan op tuinarchitect-niveau. En je bent gebonden aan de stijl en de leveranciers van die ene hovenier.
 
 ### Wanneer is het toch slim?
 
@@ -249,9 +233,9 @@ Eerlijk: niet elke tuin heeft een ontwerp van €1.500 nodig. Hieronder een besl
 
 ### Wat levert het op?
 
-Een goed-ontworpen en aangelegde tuin verhoogt de woningwaarde met 5 tot 12%, en met statement-elementen zoals een zwembad of pergola loopt dat op tot 15% [Bron: Eilanden van Hain, 2025] [Bron: UW-woonmagazine, 2025]. Op een woning van €450.000 is dat €22.500 tot €67.500 extra waarde. Tegen een ontwerpkostenpost van €750 tot €2.500 is dat een verhouding waar weinig huiseigenaren over nadenken.
+Een goed-ontworpen en aangelegde tuin verhoogt de woningwaarde met 5 tot 12%, en met statement-elementen zoals een zwembad of pergola loopt dat op tot 15%. Op een woning van €450.000 is dat €22.500 tot €67.500 extra waarde. Tegen een ontwerpkostenpost van €750 tot €2.500 is dat een verhouding waar weinig huiseigenaren over nadenken.
 
-Forumlid aBart vatte de kwalitatieve kant samen: "Het plan waar hij mee afgekomen is had ik echt nooit zelf uit mijn mouw kunnen schudden" [Bron: BouwInfo, 2009] [INDICATIEF, pre-2024]. Een ervaren ontwerper komt vaak met oplossingen waar je zelf niet op was gekomen, juist omdat hij honderden tuinen heeft gezien en weet wat werkt.
+Forumlid aBart vatte de kwalitatieve kant samen: "Het plan waar hij mee afgekomen is had ik echt nooit zelf uit mijn mouw kunnen schudden" [INDICATIEF, pre-2024]. Een ervaren ontwerper komt vaak met oplossingen waar je zelf niet op was gekomen, juist omdat hij honderden tuinen heeft gezien en weet wat werkt.
 
 ## Bespaartips zonder kwaliteit in te leveren
 
@@ -259,7 +243,7 @@ Een tuinontwerp goedkoper laten zijn zonder dat je een nutteloos plan overhoudt?
 
 ### 1. Lever zelf de meting en foto's
 
-Veel ontwerpers rekenen €120 tot €250 voor een locatiebezoek met opmeting [Bron: Homedeal.nl, 2026]. Als je zelf nauwkeurig kunt meten (laser-meter, papier op schaal) en heldere foto's vanaf vier hoeken aanlevert, kun je die kosten besparen. Werkt vooral bij online tuinontwerp.
+Veel ontwerpers rekenen €120 tot €250 voor een locatiebezoek met opmeting. Als je zelf nauwkeurig kunt meten (laser-meter, papier op schaal) en heldere foto's vanaf vier hoeken aanlevert, kun je die kosten besparen. Werkt vooral bij online tuinontwerp.
 
 ### 2. Begin met een schetsontwerp
 
@@ -271,11 +255,11 @@ Het concept (zonering, structuur, hoofdlijnen) is waar de waarde zit. 3D-visuali
 
 ### 4. Faseer de aanleg, niet het ontwerp
 
-Het hele ontwerp in één keer laten maken (totaalplan), maar de aanleg over twee of drie jaar uitsmeren. Voorkomt dat je halverwege merkt dat je vorig jaar iets hebt aangelegd dat niet past in een nieuw idee. Tuinontwerp als percentage van het totaalbudget blijft 5 tot 10% [Bron: LINDA.nl, 2024], maar de cashflow is beheersbaarder.
+Het hele ontwerp in één keer laten maken (totaalplan), maar de aanleg over twee of drie jaar uitsmeren. Voorkomt dat je halverwege merkt dat je vorig jaar iets hebt aangelegd dat niet past in een nieuw idee. Tuinontwerp als percentage van het totaalbudget blijft 5 tot 10%, maar de cashflow is beheersbaarder.
 
 ### 5. Vergelijk minimaal drie offertes
 
-Eén tuinontwerper vraagt €1.200 voor wat een ander voor €750 doet. De spreiding is groot, juist omdat het geen wettelijk gereguleerd vak is. Vraag drie offertes met dezelfde scope-omschrijving en kijk wat je krijgt voor wat. Forumlid sdep was hier scherp over: "De prijs die ze vragen voor een plan is precies afhankelijk van de financiële draagkracht van de klant" [Bron: BouwInfo, 2009] [INDICATIEF, pre-2024]. Vergelijken is dus geen optie maar gewoon nodig.
+Eén tuinontwerper vraagt €1.200 voor wat een ander voor €750 doet. De spreiding is groot, juist omdat het geen wettelijk gereguleerd vak is. Vraag drie offertes met dezelfde scope-omschrijving en kijk wat je krijgt voor wat. Forumlid sdep was hier scherp over: "De prijs die ze vragen voor een plan is precies afhankelijk van de financiële draagkracht van de klant" [INDICATIEF, pre-2024]. Vergelijken is dus geen optie maar gewoon nodig.
 
 ### 6. Kies de route die bij je tuin past
 
@@ -285,27 +269,27 @@ Een tuinarchitect inhuren voor een achtertuin van 60 m² is geld weggooien. Een 
 
 ### Wat kost een tuin laten ontwerpen voor een gemiddelde achtertuin?
 
-Voor een tuin van 100 tot 200 m² betaal je gemiddeld €450 tot €750 voor een basis-ontwerp en €700 tot €1.500 voor een ontwerp inclusief beplantings- en lichtplan [Bron: Homedeal.nl, 2026]. Dat is bij een tuinontwerper, niet bij een tuinarchitect. Online tuinontwerp ligt 30 tot 50% lager voor vergelijkbare scope.
+Voor een tuin van 100 tot 200 m² betaal je gemiddeld €450 tot €750 voor een basis-ontwerp en €700 tot €1.500 voor een ontwerp inclusief beplantings- en lichtplan. Dat is bij een tuinontwerper, niet bij een tuinarchitect. Online tuinontwerp ligt 30 tot 50% lager voor vergelijkbare scope.
 
 ### Wat is het verschil tussen een tuinontwerper en een tuinarchitect?
 
-Tuinontwerper is een onbeschermde titel zonder vereiste opleiding. Tuinarchitect is in praktijk iemand met een HBO of WO opleiding landschapsarchitectuur of tuin- en landschapsinrichting [Bron: GesselGroen, 2025] [Bron: ProductieTuin, 2025]. Tuinarchitecten doen complexere projecten, leveren 3D, lichtplan en technische tekeningen, en rekenen €60 tot €90 per uur (top tot €200 per uur). Tuinontwerpers richten zich op private tuinen en rekenen €50 tot €100 per uur [Bron: Temm-tuin.nl, 2025] [Bron: Tuinontwerper.nl, 2025] [Bron: Homedeal.nl, 2026].
+Tuinontwerper is een onbeschermde titel zonder vereiste opleiding. Tuinarchitect is in praktijk iemand met een HBO of WO opleiding landschapsarchitectuur of tuin- en landschapsinrichting. Tuinarchitecten doen complexere projecten, leveren 3D, lichtplan en technische tekeningen, en rekenen €60 tot €90 per uur (top tot €200 per uur). Tuinontwerpers richten zich op private tuinen en rekenen €50 tot €100 per uur.
 
 ### Is online tuinontwerp echt goedkoper en hoe zit het met de kwaliteit?
 
-Ja, online tuinontwerp kost €300 tot €750 en is daarmee 30 tot 50% goedkoper dan lokaal. De kwaliteit is bij standaardachtige tuinen prima, maar je mist het locatiebezoek waarmee een ontwerper zonloop, bodem en hoogtes kan inschatten. Voor tuinen met complexiteit (hoogteverschillen, vijver, vergunningen) is lokaal beter [Bron: branche-vergelijking 2025-2026].
+Ja, online tuinontwerp kost €300 tot €750 en is daarmee 30 tot 50% goedkoper dan lokaal. De kwaliteit is bij standaardachtige tuinen prima, maar je mist het locatiebezoek waarmee een ontwerper zonloop, bodem en hoogtes kan inschatten. Voor tuinen met complexiteit (hoogteverschillen, vijver, vergunningen) is lokaal beter.
 
 ### Is gratis tuinontwerp bij een hovenier echt gratis?
 
-Nee. Gratis is in dit geval verrekend in de aanlegofferte, niet weggegeven. De hovenier verdient de ontwerpuren terug op zijn marge in de aanlegprijs. Voordelen: geen aparte rekening, korte lijnen. Nadeel: je verliest onderhandelingspositie en uitvoeringsprijzen kunnen hoger liggen dan wanneer je losse onderaannemers vergelijkt [Bron: BouwInfo, 2009] [INDICATIEF, pre-2024]. Vraag altijd één losse ontwerpofferte voor de marktprijs.
+Nee. Gratis is in dit geval verrekend in de aanlegofferte, niet weggegeven. De hovenier verdient de ontwerpuren terug op zijn marge in de aanlegprijs. Voordelen: geen aparte rekening, korte lijnen. Nadeel: je verliest onderhandelingspositie en uitvoeringsprijzen kunnen hoger liggen dan wanneer je losse onderaannemers vergelijkt [INDICATIEF, pre-2024]. Vraag altijd één losse ontwerpofferte voor de marktprijs.
 
 ### Hoe lang duurt het voordat mijn tuin klaar is na de start van het ontwerp?
 
-Het ontwerptraject duurt 2 tot 12 weken afhankelijk van scope. De aanleg na ontwerp duurt nog eens 8 tot 16 weken [Bron: Studio Ruinard, 2025] [Bron: GesselGroen, 2026]. Reken dus op 4 tot 7 maanden van eerste afspraak tot beplante tuin. Wil je in mei genieten? Begin in november het jaar ervoor.
+Het ontwerptraject duurt 2 tot 12 weken afhankelijk van scope. De aanleg na ontwerp duurt nog eens 8 tot 16 weken. Reken dus op 4 tot 7 maanden van eerste afspraak tot beplante tuin. Wil je in mei genieten? Begin in november het jaar ervoor.
 
 ### Hoeveel mag een tuinontwerp kosten ten opzichte van de aanleg?
 
-Gemiddeld 5 tot 10% van het totaalbudget, en bij een tuinarchitectuurproject reserveer je ongeveer 20% van het aanlegbudget voor ontwerpdiensten [Bron: LINDA.nl, 2024] [Bron: NIBC, 2025]. Bij een richtprijs van €300 per m² voor een complete tuin (materialen + aanleg) betekent dat voor een tuin van 100 m² een totaalbudget rond €30.000, waarvan €1.500 tot €3.000 ontwerp [Bron: LINDA.nl, 2024].
+Gemiddeld 5 tot 10% van het totaalbudget, en bij een tuinarchitectuurproject reserveer je ongeveer 20% van het aanlegbudget voor ontwerpdiensten. Bij een richtprijs van €300 per m² voor een complete tuin (materialen + aanleg) betekent dat voor een tuin van 100 m² een totaalbudget rond €30.000, waarvan €1.500 tot €3.000 ontwerp.
 
 ## Volgende stap: kosten en routes vergelijken
 

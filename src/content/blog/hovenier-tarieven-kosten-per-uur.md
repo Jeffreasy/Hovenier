@@ -7,13 +7,13 @@ featured: false
 draft: false
 ---
 
-Een hovenier rekent in 2026 tussen de 35 en 80 euro per uur exclusief BTW, afhankelijk van wie je belt en wat je laat doen [Bron: Homedeal.nl, 2026] [Bron: Offerteadviseur.nl, 2026]. De kosten per uur lopen op van rond 40 euro voor een startende ZZP'er tot 80 euro of meer voor een groter hoveniersbedrijf met VHG-keurmerk [Bron: Offerteadviseur.nl, 2026]. En dan heb je nog de specialisten in boomverzorging die zonder blozen 90 euro per uur vragen [Bron: Hoveniers in Nederland, 2026].
+Een hovenier rekent in 2026 tussen de 35 en 80 euro per uur exclusief BTW, afhankelijk van wie je belt en wat je laat doen. De kosten per uur lopen op van rond 40 euro voor een startende ZZP'er tot 80 euro of meer voor een groter hoveniersbedrijf met VHG-keurmerk. En dan heb je nog de specialisten in boomverzorging die zonder blozen 90 euro per uur vragen.
 
-Klinkt nog wel te overzien. Tot je drie offertes voor exact hetzelfde werk op tafel hebt liggen. De ene zegt 38 euro per uur, de ander 65, de derde rekent een vaste projectprijs van 1.450 euro. Verschillen tot 45 procent tussen offertes voor identiek werk komen regelmatig voor [Bron: Tuinaanleg-concurrent.nl, 2026]. Geen idee wie eerlijk rekent, geen idee waarom die ZZP'er met witte bus de helft minder vraagt dan het bedrijf met website en BTW-administratie. En ondertussen vraag je je af waarom Jan-uit-de-straat 30 euro cash rekent en jij 70 euro inclusief BTW betaalt. Tijd om die uurtarieven uit elkaar te trekken.
+Klinkt nog wel te overzien. Tot je drie offertes voor exact hetzelfde werk op tafel hebt liggen. De ene zegt 38 euro per uur, de ander 65, de derde rekent een vaste projectprijs van 1.450 euro. Verschillen tot 45 procent tussen offertes voor identiek werk komen regelmatig voor. Geen idee wie eerlijk rekent, geen idee waarom die ZZP'er met witte bus de helft minder vraagt dan het bedrijf met website en BTW-administratie. En ondertussen vraag je je af waarom Jan-uit-de-straat 30 euro cash rekent en jij 70 euro inclusief BTW betaalt. Tijd om die uurtarieven uit elkaar te trekken.
 
 ## Wat kost een hovenier per uur in 2026?
 
-De brede markt-range voor 2026 ligt tussen 35 en 75 euro per uur exclusief BTW [Bron: Homedeal.nl, 2026] [Bron: Klaar de Klus, 2026]. Maar die range zegt niet zoveel zonder context. Wie aan welke kant zit, hangt af van het type aanbieder.
+De brede markt-range voor 2026 ligt tussen 35 en 75 euro per uur exclusief BTW. Maar die range zegt niet zoveel zonder context. Wie aan welke kant zit, hangt af van het type aanbieder.
 
 | Type aanbieder | Uurtarief excl. BTW | Uurtarief incl. 21% BTW |
 |----------------|---------------------|-------------------------|
@@ -24,17 +24,15 @@ De brede markt-range voor 2026 ligt tussen 35 en 75 euro per uur exclusief BTW [
 | Groter hoveniersbedrijf (5+) | 60 tot 80 euro | 73 tot 97 euro |
 | Specialist (boomverzorging, klimwerk) | 70 tot 90+ euro | 85 tot 109+ euro |
 
-[Bron: Offerteadviseur.nl, 2026] [Bron: Hoveniers in Nederland, 2026] [Bron: Werkspot.nl, 2026]
+Een ZZP-hovenier rekent in 2026 gemiddeld 44 tot 48 euro per uur exclusief BTW. Dat is het cijfer dat je in je hoofd kunt houden als referentie. Alles daaronder is verdacht (geen verzekering, geen BTW-administratie, of iemand die weet dat hij te goedkoop zit). Alles daarboven moet zich verdienen door specialisme, ervaring of overhead.
 
-Een ZZP-hovenier rekent in 2026 gemiddeld 44 tot 48 euro per uur exclusief BTW [Bron: Klaar de Klus, 2026] [Bron: Bieb.knab.nl, 2026]. Dat is het cijfer dat je in je hoofd kunt houden als referentie. Alles daaronder is verdacht (geen verzekering, geen BTW-administratie, of iemand die weet dat hij te goedkoop zit). Alles daarboven moet zich verdienen door specialisme, ervaring of overhead.
+De prijsverschillen tussen aanbieders zijn niet willekeurig. Een groter hoveniersbedrijf rekent meer omdat het méér levert: kantoor, projectplanning, btw-administratie, doorlopende verzekering, gegarandeerde nazorg en een ploeg die op tijd komt. Een ZZP'er kan goedkoper omdat hij die overhead niet heeft, maar moet wel zijn eigen vakantie, ziektekosten en verzekering uit dat uurtarief halen. Een tuinman zonder titelbescherming rekent 30 tot 50 euro per uur en doet vooral basis-onderhoud, geen aanleg.
 
-De prijsverschillen tussen aanbieders zijn niet willekeurig. Een groter hoveniersbedrijf rekent meer omdat het méér levert: kantoor, projectplanning, btw-administratie, doorlopende verzekering, gegarandeerde nazorg en een ploeg die op tijd komt. Een ZZP'er kan goedkoper omdat hij die overhead niet heeft, maar moet wel zijn eigen vakantie, ziektekosten en verzekering uit dat uurtarief halen. Een tuinman zonder titelbescherming rekent 30 tot 50 euro per uur en doet vooral basis-onderhoud, geen aanleg [Bron: Werkspot.nl, 2026].
-
-De cijfers zijn ook niet uit de lucht komen vallen. Per 1 januari 2026 ging het wettelijk minimumloon naar 14,71 euro per uur, en de CAO Hoveniersbedrijf gaf op dezelfde datum een loonstijging van 2,5 procent [Bron: Vakblad de Hovenier, 2026] [Bron: VHG.nl, 2026]. Dat tikt door in elk uurtarief, vooral bij bedrijven die met loondienst werken in plaats van ZZP'ers.
+De cijfers zijn ook niet uit de lucht komen vallen. Per 1 januari 2026 ging het wettelijk minimumloon naar 14,71 euro per uur, en de CAO Hoveniersbedrijf gaf op dezelfde datum een loonstijging van 2,5 procent. Dat tikt door in elk uurtarief, vooral bij bedrijven die met loondienst werken in plaats van ZZP'ers.
 
 ## Wat zit er nou in dat uurtarief?
 
-Veel klanten denken dat een uurtarief van 65 euro betekent dat de hovenier 65 euro op zijn rekening krijgt. Zo werkt het niet. De opbouw van een gemiddeld hovenier-uurtarief ziet er ongeveer zo uit [Bron: Homedeal.nl, 2026]:
+Veel klanten denken dat een uurtarief van 65 euro betekent dat de hovenier 65 euro op zijn rekening krijgt. Zo werkt het niet. De opbouw van een gemiddeld hovenier-uurtarief ziet er ongeveer zo uit:
 
 | Onderdeel | Aandeel |
 |-----------|---------|
@@ -45,7 +43,7 @@ Veel klanten denken dat een uurtarief van 65 euro betekent dat de hovenier 65 eu
 
 Op een uurtarief van 60 euro is dus rond 30 euro daadwerkelijk loon, 18 euro materiaal, 6 euro machinekosten en 6 euro overhead. En van die 30 euro loon gaat nog werkgeverslasten af bij een bedrijf, of pensioen en verzekeringen bij een ZZP'er. Wat overblijft als netto inkomen is bij een ZZP'er vaak rond 40 procent van het uurtarief.
 
-Branchediscussies in vakbladen laten een interessant geluid horen: hoveniers vinden zelf dat de tarifering en rentabiliteit in de sector te laag zijn voor de overhead die ze dragen [Bron: Vakblad de Hovenier, 2024]. Dus terwijl jij denkt dat 65 euro per uur veel is, zegt de hovenier dat hij er amper aan verdient. Dat verklaart waarom abonnementen vaak goedkoper zijn dan losse opdrachten: de hovenier krijgt voorspelbaar werk en kan administratie spreiden.
+Branchediscussies in vakbladen laten een interessant geluid horen: hoveniers vinden zelf dat de tarifering en rentabiliteit in de sector te laag zijn voor de overhead die ze dragen. Dus terwijl jij denkt dat 65 euro per uur veel is, zegt de hovenier dat hij er amper aan verdient. Dat verklaart waarom abonnementen vaak goedkoper zijn dan losse opdrachten: de hovenier krijgt voorspelbaar werk en kan administratie spreiden.
 
 ## Hovenier, tuinman of ZZP'er: wat is het verschil?
 
@@ -53,17 +51,17 @@ Drie termen die door elkaar worden gebruikt en je merkt het verschil pas als er 
 
 Een **hovenier** is een vakman met opleiding (vaak via VHG-aangesloten scholing), een ingeschreven KvK-bedrijf, doorlopende bedrijfsaansprakelijkheid en een BTW-administratie. Hij of zij kan in loondienst werken bij een hoveniersbedrijf of als ZZP'er actief zijn. Het uurtarief ligt op 40 tot 80 euro exclusief BTW, afhankelijk van ervaring en bedrijfsgrootte.
 
-Een **ZZP-hovenier** is een zelfstandig vakman met dezelfde opleiding en verzekering als een hovenier in loondienst, maar zonder bedrijfsstructuur eromheen. Voordeel: vaak iets goedkoper (44 tot 48 euro per uur gemiddeld) en kortere lijnen [Bron: Klaar de Klus, 2026]. Nadeel: bij ziekte of vakantie ligt jouw klus stil, en de continuïteit op lange termijn is minder zeker dan bij een groter bedrijf.
+Een **ZZP-hovenier** is een zelfstandig vakman met dezelfde opleiding en verzekering als een hovenier in loondienst, maar zonder bedrijfsstructuur eromheen. Voordeel: vaak iets goedkoper (44 tot 48 euro per uur gemiddeld) en kortere lijnen. Nadeel: bij ziekte of vakantie ligt jouw klus stil, en de continuïteit op lange termijn is minder zeker dan bij een groter bedrijf.
 
-Een **tuinman** is een veel breder begrip zonder titelbescherming. Iedereen mag zich tuinman noemen. Vaak gaat het om iemand die basis-onderhoud doet (gras maaien, heg knippen, onkruid wieden), soms in vaste dienst bij een particulier, soms als zelfstandige. Het uurtarief ligt lager (30 tot 50 euro), maar je moet zelf checken of er een verzekering is en of de tuinman BTW rekent [Bron: Werkspot.nl, 2026]. Voor losse maaibeurten prima. Voor aanleg, snoei van grote bomen of werk met machines: kies een hovenier.
+Een **tuinman** is een veel breder begrip zonder titelbescherming. Iedereen mag zich tuinman noemen. Vaak gaat het om iemand die basis-onderhoud doet (gras maaien, heg knippen, onkruid wieden), soms in vaste dienst bij een particulier, soms als zelfstandige. Het uurtarief ligt lager (30 tot 50 euro), maar je moet zelf checken of er een verzekering is en of de tuinman BTW rekent. Voor losse maaibeurten prima. Voor aanleg, snoei van grote bomen of werk met machines: kies een hovenier.
 
 Een vraag die op fora vaak terugkomt: kan ik niet gewoon een tuinman cash betalen om BTW uit te sparen? Officieel: nee, dat is zwart werk. Praktisch: het komt voor, maar je hebt geen factuur, geen aansprakelijkheid en geen recht op nazorg. Als de tuinman de verkeerde plant doodspuit met onkruidverdelger, sta je met lege handen. Een gespecificeerde factuur is geen administratieve rompslomp maar je verzekeringspolis. Voor wie zoekt naar een betrouwbare partner: lees onze [hovenier-keuzewijzer](/blog/hoe-kies-je-de-beste-hovenier) voor wat je echt moet vragen voordat je tekent.
 
 ## BTW: 9% of 21%? De fout die bijna iedereen maakt
 
-Hier zit de grootste informatiefout op het Nederlandse hovenier-internet. Bijna elke vergelijkingssite suggereert dat hovenier-arbeid voor woningen ouder dan 2 jaar onder het 9 procent BTW-tarief valt. Veel sites schrijven dat hovenier-arbeid voor woningen ouder dan 2 jaar onder 9% BTW valt. Dat klopt niet sinds 1 juli 2015 [Bron: Vantuinen.nl, 2015].
+Hier zit de grootste informatiefout op het Nederlandse hovenier-internet. Bijna elke vergelijkingssite suggereert dat hovenier-arbeid voor woningen ouder dan 2 jaar onder het 9 procent BTW-tarief valt. Veel sites schrijven dat hovenier-arbeid voor woningen ouder dan 2 jaar onder 9% BTW valt. Dat klopt niet sinds 1 juli 2015.
 
-De Belastingdienst is duidelijk: de aanleg en het onderhoud van tuinen, parken, groendaken en sportvelden valt, inclusief de geleverde materialen, onder het 21 procent-tarief [Bron: Belastingdienst.nl, 2026]. Het 9 procent-tarief geldt alleen voor meegeleverde sierteeltproducten zoals planten, bomen, struiken en bloembollen [Bron: Belastingdienst.nl, 2026].
+De Belastingdienst is duidelijk: de aanleg en het onderhoud van tuinen, parken, groendaken en sportvelden valt, inclusief de geleverde materialen, onder het 21 procent-tarief. Het 9 procent-tarief geldt alleen voor meegeleverde sierteeltproducten zoals planten, bomen, struiken en bloembollen.
 
 Even systematisch op een rij wat in 2026 geldt:
 
@@ -77,11 +75,9 @@ Even systematisch op een rij wat in 2026 geldt:
 | Tuinwerk aan nieuwbouw jonger dan 2 jaar | 21% | blijft 21% |
 | Tuinontwerp (los advies, zonder aanleg) | 21% | blijft 21% |
 
-[Bron: Belastingdienst.nl, 2026] [Bron: Vantuinen.nl, 2015]
+De verwarring komt door het verlaagde BTW-tarief op arbeid dat tussen 2010 en 2015 wél bestond. Dat tarief is per 1 juli 2015 vervallen. De 9 procent-regel voor woningen ouder dan 2 jaar geldt nog steeds, maar alleen voor isoleren, schilderen, stukadoren en behangen. Dus voor een schilder ja, voor een hovenier nee.
 
-De verwarring komt door het verlaagde BTW-tarief op arbeid dat tussen 2010 en 2015 wél bestond. Dat tarief is per 1 juli 2015 vervallen [Bron: Vantuinen.nl, 2015]. De 9 procent-regel voor woningen ouder dan 2 jaar geldt nog steeds, maar alleen voor isoleren, schilderen, stukadoren en behangen. Dus voor een schilder ja, voor een hovenier nee.
-
-En dan komt er per 1 januari 2028 nog een wijziging aan: het 9 procent-tarief op sierteeltproducten verdwijnt en alles gaat naar 21 procent [Bron: Borrie.nl, 2026] [Bron: Westerveldvossers.nl, 2026]. Dat betekent concreet 12 procentpunt extra op alle plantaankoop. Voor een border-aanleg van 800 euro plantmateriaal is dat een verschil van bijna 100 euro. Lees offertes vanaf eind 2027 dus extra zorgvuldig: een hovenier mag pas 21 procent rekenen vanaf de leverdatum, niet vanaf de offertedatum.
+En dan komt er per 1 januari 2028 nog een wijziging aan: het 9 procent-tarief op sierteeltproducten verdwijnt en alles gaat naar 21 procent. Dat betekent concreet 12 procentpunt extra op alle plantaankoop. Voor een border-aanleg van 800 euro plantmateriaal is dat een verschil van bijna 100 euro. Lees offertes vanaf eind 2027 dus extra zorgvuldig: een hovenier mag pas 21 procent rekenen vanaf de leverdatum, niet vanaf de offertedatum.
 
 Wat betekent dit voor jou? Een offerte met "9% BTW op arbeid" is in 2026 simpelweg fout. Vraag de hovenier om correctie. Een offerte die arbeid en sierteelt apart specificeert (21% op arbeid, 9% op planten) is goed. Een all-in offerte met 21% over het totaal is iets duurder dan strikt nodig, maar wel correct.
 
@@ -108,8 +104,6 @@ Voor de meeste tuinklussen rekent een hovenier liever per klus dan per uur. Dat 
 | Complete tuinaanleg (premium) | 100 tot 245 euro per m² | 121 tot 296 euro per m² |
 | Dagprijs hoveniersploeg (all-in) | ongeveer 745 euro | ongeveer 900 euro |
 
-[Bron: Hovenier.nl, 2026] [Bron: Hovenier.website, 2026] [Bron: Klussendirect.nl, 2026] [Bron: Homedeal.nl, 2026] [Bron: Kosten-hovenier.nl, 2026] [Bron: Topvakmannen.nl, 2025]
-
 Een paar zaken die uit deze tabel meteen opvallen. Een eenmalige onderhoudsbeurt van 200 tot 750 euro klinkt als veel geld voor één dag werk. Maar reken even mee: bij een uurtarief van 55 euro en een ploeg van twee man, drie uur lang, kom je al op 330 euro. Plus afvoer van groenafval, materiaal en voorrijkosten. Dan is 400 euro voor een grondige beurt geen overvragen.
 
 Voor wie regelmatig hulp wil: een onderhoudsabonnement met vaste bezoekprijs (75 tot 180 euro per bezoek) is bijna altijd goedkoper dan losse opdrachten. De hovenier kan plannen, hoeft minder offertes te maken en geeft vaak 5 tot 15 euro per uur korting bij een vast contract.
@@ -129,23 +123,19 @@ Het lastigste keuzemoment in elke offerte: vraag je een vaste projectprijs of la
 | Kleine klus tot 2 uur | Uurtarief plus minimum-uurtarief | Vaste prijs is vaak duurder door overhead |
 | Renovatie deelproject | Vaste prijs | Voorkomt verrassingen achteraf |
 
-[Bron: Offerteadviseur.nl, 2026] [Bron: Topvakmannen.nl, 2025]
-
 Vuistregel: hoe groter en duidelijker de scope, hoe meer je profiteert van een vaste prijs. Hoe rommeliger en onvoorspelbaarder, hoe eerlijker een uurtarief. Een vaste prijs bevat altijd een marge voor tegenvallers (10 tot 20 procent), dus voor klein werk dat sneller klaar is dan verwacht betaal je relatief te veel. Voor groot werk dat tegen kan vallen ben je juist beschermd.
 
 Wat je niet wilt: een uurtarief zonder maximumprijs voor een grote klus. Dan kan de eindrekening zomaar het dubbele worden van wat je verwachtte. Vraag bij uurtarief altijd om een schatting van het aantal uren plus een afspraak dat de hovenier belt voordat hij eroverheen gaat.
 
 ## Regionale verschillen: stad versus platteland
 
-De locatie waar je woont kan een verschil maken van 15 tot 25 euro per uur op het hoveniertarief [Bron: Hoveniers in Nederland, 2026].
+De locatie waar je woont kan een verschil maken van 15 tot 25 euro per uur op het hoveniertarief.
 
 | Regio | Gemiddeld uurtarief excl. BTW |
 |-------|--------------------------------|
 | Randstad (Amsterdam, Utrecht, Rotterdam, Den Haag) | 60 tot 80 euro (specialisten 90+ euro) |
 | Brabant, Limburg, Gelderland (stedelijk) | 45 tot 65 euro |
 | Friesland, Drenthe, Overijssel (platteland) | 40 tot 55 euro |
-
-[Bron: Offerteadviseur.nl, 2026] [Bron: Hovenier.website, 2026]
 
 Waarom is een Amsterdamse hovenier duurder? Hogere bedrijfslasten (huur opslag, parkeerkosten, files), schaarse vakmensen en hogere klantverwachtingen. Plus: in stadscentra moet vaak met een kleine bus, op afspraak laden en lossen, en met handmateriaal in plaats van zware machines.
 
@@ -165,8 +155,6 @@ Het uurtarief is niet alles. De volgende posten staan vaak onderaan de offerte (
 | Reistijd doorberekend als arbeid | uurtarief × reistijd |
 | Bij projectprijs | meestal inbegrepen |
 
-[Bron: Hoveniersbedrijfoverbeek.nl, 2025] [Bron: Hoveniers in Nederland, 2026]
-
 Andere posten die gemakkelijk worden vergeten:
 
 - **Afvoer groenafval**: 50 tot 150 euro per aanhanger, afhankelijk van milieustraat-tarief en hoeveelheid.
@@ -175,11 +163,11 @@ Andere posten die gemakkelijk worden vergeten:
 - **Parkeerkosten**: in stadscentra rekent de hovenier soms zijn parkeerticket door (vergunning of meter).
 - **Spoedtoeslag**: bij kort dag tijd, weekend of na storm: 20 tot 30 procent op het uurtarief.
 
-Veel klachten over hoveniers gaan niet over het uurtarief op zich, maar over onduidelijkheid achteraf. Een vaak teruggehoorde klacht in fora over hovenierfacturen: dat de hovenier zegt dat de factuur voor zijn eigen boekhouding is en niet voor de klant [Bron: Viva Forum, 2024]. Geen detailregels, geen specificatie van uren, materiaal en voorrijkosten. Eis altijd een gespecificeerde factuur. Bij weigering: stop met betalen tot je die hebt. Een vakman die zijn werk goed doet, kan altijd uitleggen waar elke regel vandaan komt.
+Veel klachten over hoveniers gaan niet over het uurtarief op zich, maar over onduidelijkheid achteraf. Een vaak teruggehoorde klacht in fora over hovenierfacturen: dat de hovenier zegt dat de factuur voor zijn eigen boekhouding is en niet voor de klant. Geen detailregels, geen specificatie van uren, materiaal en voorrijkosten. Eis altijd een gespecificeerde factuur. Bij weigering: stop met betalen tot je die hebt. Een vakman die zijn werk goed doet, kan altijd uitleggen waar elke regel vandaan komt.
 
 ## Hoe vergelijk je drie offertes goed?
 
-Vraag minimaal drie offertes voor exact hetzelfde werk. Dat is geen formaliteit: prijsverschillen tot 45 procent komen voor [Bron: Tuinaanleg-concurrent.nl, 2026]. Maar ze vergelijken op alleen het totaalbedrag is vragen om misverstanden. Loop deze checklist langs.
+Vraag minimaal drie offertes voor exact hetzelfde werk. Dat is geen formaliteit: prijsverschillen tot 45 procent komen voor. Maar ze vergelijken op alleen het totaalbedrag is vragen om misverstanden. Loop deze checklist langs.
 
 **1. Uurtarief en uren-schatting apart**
 Niet alleen "totaal 1.450 euro", maar "X uur tegen Y euro per uur". Een hovenier die 12 uur rekent voor wat een ander in 8 uur doet, is niet per se duurder per uur, maar wel per klus.
@@ -222,19 +210,19 @@ Lager uitkomen op je hovenierrekening kan, zonder bij de eerste de beste prijsve
 ## Veelgestelde vragen
 
 **Wat kost een hovenier per uur in 2026?**
-Tussen 35 en 75 euro per uur exclusief BTW als brede markt-range [Bron: Homedeal.nl, 2026]. Een ZZP-hovenier rekent gemiddeld 44 tot 48 euro per uur exclusief BTW [Bron: Klaar de Klus, 2026]. Een klein hoveniersbedrijf zit op 55 tot 70 euro, een groter bedrijf op 60 tot 80 euro, een specialist tot 90 euro of meer [Bron: Offerteadviseur.nl, 2026]. Inclusief 21 procent BTW kom je uit op ongeveer 42 tot 97 euro per uur.
+Tussen 35 en 75 euro per uur exclusief BTW als brede markt-range. Een ZZP-hovenier rekent gemiddeld 44 tot 48 euro per uur exclusief BTW. Een klein hoveniersbedrijf zit op 55 tot 70 euro, een groter bedrijf op 60 tot 80 euro, een specialist tot 90 euro of meer. Inclusief 21 procent BTW kom je uit op ongeveer 42 tot 97 euro per uur.
 
 **Geldt 9 of 21 procent BTW op hovenierswerk?**
-21 procent BTW geldt op alle arbeid en geleverde materialen [Bron: Belastingdienst.nl, 2026]. Het oude verlaagde tarief op hovenier-arbeid is per 1 juli 2015 vervallen [Bron: Vantuinen.nl, 2015]. Alleen meegeleverde sierteeltproducten (planten, bomen, struiken) krijgen 9 procent. Vanaf 1 januari 2028 wordt ook dit 21 procent [Bron: Borrie.nl, 2026].
+21 procent BTW geldt op alle arbeid en geleverde materialen. Het oude verlaagde tarief op hovenier-arbeid is per 1 juli 2015 vervallen. Alleen meegeleverde sierteeltproducten (planten, bomen, struiken) krijgen 9 procent. Vanaf 1 januari 2028 wordt ook dit 21 procent.
 
 **Wat is het verschil tussen een hovenier, tuinman en ZZP-hovenier?**
-Hovenier is een vakman met opleiding (vaak VHG-aangesloten), KvK-bedrijf en verzekering, in loondienst of als ZZP'er, met BTW-administratie. Een ZZP-hovenier is een zelfstandig vakman met dezelfde achtergrond, vaak iets goedkoper (44 tot 48 euro per uur). Een tuinman is een breder begrip zonder titelbescherming, vaak voor basis-onderhoud, met een uurtarief van 30 tot 50 euro [Bron: Werkspot.nl, 2026]. Voor aanleg en specialistisch werk: kies een hovenier. Voor maaibeurten en heg knippen: een tuinman volstaat vaak.
+Hovenier is een vakman met opleiding (vaak VHG-aangesloten), KvK-bedrijf en verzekering, in loondienst of als ZZP'er, met BTW-administratie. Een ZZP-hovenier is een zelfstandig vakman met dezelfde achtergrond, vaak iets goedkoper (44 tot 48 euro per uur). Een tuinman is een breder begrip zonder titelbescherming, vaak voor basis-onderhoud, met een uurtarief van 30 tot 50 euro. Voor aanleg en specialistisch werk: kies een hovenier. Voor maaibeurten en heg knippen: een tuinman volstaat vaak.
 
 **Wanneer kies je vaste prijs en wanneer uurtarief?**
 Vaste prijs werkt het beste bij complete aanleg, grote snoeibeurten en periodieke onderhoudsabonnementen. Uurtarief past bij eenmalige klussen met onbekende omvang en kleine reparaties. Een vaste prijs verlaagt jouw risico maar bevat een marge voor tegenvallers. Een uurtarief is eerlijker bij snel werk, maar onvoorspelbaar bij tegenvallers. Vraag bij uurtarief altijd om een schatting van het aantal uren plus afspraak dat de hovenier belt voor hij eroverheen gaat.
 
 **Hoe vergelijk je hovenier-offertes goed?**
-Vraag minimaal drie offertes voor exact hetzelfde werk; verschillen tot 45 procent komen voor [Bron: Tuinaanleg-concurrent.nl, 2026]. Let op: gespecificeerd uurtarief en uren-schatting, voorrijkosten (0,23 tot 1,00 euro per km of vast 25 tot 50 euro), materiaalkosten per item, afvoer groenafval, machinehuur, BTW-tarief per onderdeel, garantie, betalingscondities en eindprijs inclusief BTW. Een goedkope basisofferte met alles extra apart is vaak duurder dan een iets hogere all-in.
+Vraag minimaal drie offertes voor exact hetzelfde werk; verschillen tot 45 procent komen voor. Let op: gespecificeerd uurtarief en uren-schatting, voorrijkosten (0,23 tot 1,00 euro per km of vast 25 tot 50 euro), materiaalkosten per item, afvoer groenafval, machinehuur, BTW-tarief per onderdeel, garantie, betalingscondities en eindprijs inclusief BTW. Een goedkope basisofferte met alles extra apart is vaak duurder dan een iets hogere all-in.
 
 ## Wat te doen?
 

@@ -25,8 +25,6 @@ De totaalprijs hangt af van drie dingen: de gekozen methode, de lengte aan drain
 | Grindkoffer (DIY zonder afvoer) | €250 tot €500 | €0 tot €600 | €250 tot €1.100 |
 | Drainagegaten boren (verticale drainage) | €50 tot €150 | €0 tot €300 | €50 tot €450 |
 
-[Bron: Offerteadviseur, 2026] [Bron: Werkspot, 2026] [Bron: Tuinaanleg-concurrent, 2026] [Bron: VanDongen, 2026]
-
 ### Per strekkende meter drainage
 
 Heb je liever een eenheidsprijs, omdat je tuin afwijkt van de gemiddelden? Reken dan met onderstaande bedragen per meter, inclusief arbeid.
@@ -39,9 +37,7 @@ Heb je liever een eenheidsprijs, omdat je tuin afwijkt van de gemiddelden? Reken
 | Grindlaag per meter | €10 | €17 | €25 |
 | Drainagedoek per meter | €2 | €3 | €5 |
 
-[Bron: Offerteadviseur, 2026]
-
-De kostenopbouw is in een gemiddeld project ongeveer 40 tot 45% arbeid, 30 tot 35% materialen en 15 tot 20% voorbereiding (uitzetten, afvoer regelen, herstel gazon) [Bron: Offerteadviseur, 2026]. Dat is dus de reden dat zelf graven het project soms halveert in prijs. Ik kom daar later op terug.
+De kostenopbouw is in een gemiddeld project ongeveer 40 tot 45% arbeid, 30 tot 35% materialen en 15 tot 20% voorbereiding (uitzetten, afvoer regelen, herstel gazon). Dat is dus de reden dat zelf graven het project soms halveert in prijs. Ik kom daar later op terug.
 
 ### Welke prijs hoort bij welke tuingrootte?
 
@@ -51,8 +47,6 @@ De kostenopbouw is in een gemiddeld project ongeveer 40 tot 45% arbeid, 30 tot 3
 | Gemiddelde tuin | 40 tot 60 m | €2.000 tot €7.000 |
 | Grote tuin of erf | 80 tot 120 m | €4.000 tot €14.000 |
 | Rondom woning (ringdrainage) | volle perimeter | €5.000 tot €20.000+ |
-
-[Bron: Offerteadviseur, 2026]
 
 Tuinaanleg-concurrent en Werkspot zitten met hun cijfers in dezelfde range, met als gemiddelde ongeveer €80 per vierkante meter aangelegde tuin met drainage. Voor een snelle prijsindicatie is dat een handige vuistregel.
 
@@ -85,9 +79,9 @@ Twee opties die concurrenten zelden noemen. Een wadi is een ondiepe greppel met 
 
 Kleigrond is geen gewone grond. Het is dicht, houdt water vast en laat nauwelijks infiltreren. Daardoor faalt een grindkoffer of infiltratiekrat vaak: het water heeft geen kant op. Voor drainage in kleigrond gelden andere regels.
 
-**Buisdiameter en omhulling.** Op kleigrond gebruik je een drainagebuis met een PP700-omhulling (een kunststof omhulling met grovere maaswijdte). Een drainagebuis PP700 80 mm op rol van 50 meter kost €162,26 [Bron: IrriTech, 2025]. De grovere omhulling voorkomt dat fijne kleideeltjes de buis dichtslibben. Voor zandgrond is een kokos-omhulling juist perfect: kokos heeft een fijnere structuur die zand tegenhoudt en heeft een levensduur tot 55 jaar.
+**Buisdiameter en omhulling.** Op kleigrond gebruik je een drainagebuis met een PP700-omhulling (een kunststof omhulling met grovere maaswijdte). Een drainagebuis PP700 80 mm op rol van 50 meter kost €162,26. De grovere omhulling voorkomt dat fijne kleideeltjes de buis dichtslibben. Voor zandgrond is een kokos-omhulling juist perfect: kokos heeft een fijnere structuur die zand tegenhoudt en heeft een levensduur tot 55 jaar.
 
-**Sleufdiepte en afstand.** Op kleigrond leg je horizontale drainagebuizen op 2 tot 3 meter afstand van elkaar [Bron: IrriTech, 2025]. Op zand kan dat ruimer (4 tot 6 meter) omdat het water zich daar makkelijker verspreidt. De standaard sleufdiepte is 60 cm, breedte 30 cm [Bron: Wooninstijl, 2026]. Bij dichte kleilagen ga je dieper: 50 tot 90 cm, soms door de kleilaag heen tot in de zandlaag.
+**Sleufdiepte en afstand.** Op kleigrond leg je horizontale drainagebuizen op 2 tot 3 meter afstand van elkaar. Op zand kan dat ruimer (4 tot 6 meter) omdat het water zich daar makkelijker verspreidt. De standaard sleufdiepte is 60 cm, breedte 30 cm. Bij dichte kleilagen ga je dieper: 50 tot 90 cm, soms door de kleilaag heen tot in de zandlaag.
 
 **Verticale drainage door de kleilaag.** Heb je geluk met een doorlatende zandlaag onder je klei? Dan kun je verticale drainagegaten boren tot in die zandlaag, op ongeveer 2 meter uit elkaar. Forumgebruiker Boertje125 verwoordt het zo: "Als je een grindput kan maken tot door de klei in een watervoerende laag zoals zand werkt dat primma." Dit is goedkoop (€50 tot €450 in materiaalkosten) en effectief, mits de bodemopbouw klopt. Geen zandlaag eronder? Dan werkt het niet.
 
@@ -99,7 +93,7 @@ Wil je het zelf doen? Voor een rechte sleuf met drainagebuis en aansluiting op d
 
 **1. Plan en uitzetten.** Bepaal waar het water heen moet. Een sloot, een infiltratieput, het regenwaterriool of een grindkoffer onderin de tuin. Zonder afvoerpunt is een drainagebuis nutteloos. Zet de loop uit met piketpalen.
 
-**2. Sleuf graven.** Sleufdiepte 60 cm, breedte 30 cm [Bron: Wooninstijl, 2026]. Belangrijk: leg een afschot van 1 cm per meter aan, in de richting van het afvoerpunt [Bron: Wooninstijl, 2026]. Een waterpas met lange lat helpt om het afschot consequent te houden. Op 30 meter daalt je sleuf dus 30 cm.
+**2. Sleuf graven.** Sleufdiepte 60 cm, breedte 30 cm. Belangrijk: leg een afschot van 1 cm per meter aan, in de richting van het afvoerpunt. Een waterpas met lange lat helpt om het afschot consequent te houden. Op 30 meter daalt je sleuf dus 30 cm.
 
 **3. Drainagedoek en grindbed.** Bekleed de sleufbodem met drainagedoek (geotextiel) en stort er een laag grind van 4 tot 16 mm op, zo'n 5 cm dik. Dit voorkomt dat de buis verzakt en dat fijne grond de buis dichtslibt.
 
@@ -113,7 +107,7 @@ Bij twijfel over het afschot of de aansluiting op het riool: vraag dan toch een 
 
 ## DIY of hovenier laten doen?
 
-Het verschil zit in de arbeid. Materialen kosten bij beide hetzelfde, het uurtarief van een hovenier ligt in 2026 tussen €40 en €60 per uur [Bron: Wooninstijl, 2026] [Bron: Werkspot, 2026]. Een hovenier rekent voor de aanleg van 100 meter basis-drainage tussen €1.000 en €1.500 totaal [Bron: Werkspot, 2026]. Hieronder een eerlijke vergelijking voor een tuin van 50 m² met ongeveer 30 meter drainage.
+Het verschil zit in de arbeid. Materialen kosten bij beide hetzelfde, het uurtarief van een hovenier ligt in 2026 tussen €40 en €60 per uur. Een hovenier rekent voor de aanleg van 100 meter basis-drainage tussen €1.000 en €1.500 totaal. Hieronder een eerlijke vergelijking voor een tuin van 50 m² met ongeveer 30 meter drainage.
 
 | Onderdeel | Zelf doen | Hovenier |
 |---|---|---|
@@ -151,17 +145,15 @@ Drainage zelf wordt zelden gesubsidieerd, maar het afkoppelen van je regenpijp v
 | Waterschap Aa en Maas | Tot €5.000 | Per m² afgekoppeld dak |
 | Asten | Variabel | Afkoppelen + groen dak |
 
-[Bron: Roermond.nl, 2026] [Bron: Aaenmaas.nl, 2026] [Bron: Helmondnu.nl, 2026] [Bron: Meerssen.nl, 2026] [Bron: Gemeentebeek.nl, 2026]
-
 Even rekenen: een gemiddelde rijwoning heeft ongeveer 50 m² dakoppervlak. Bij Roermond is dat dus €900 subsidie als je dat afkoppelt op een infiltratiekrat. Bij Waterschap Aa en Maas kun je tot €5.000 ophalen voor grotere projecten.
 
 > Subsidies verschillen sterk per gemeente. Check altijd je eigen gemeente- en waterschap-website voor actuele voorwaarden. De Groene Subsidiewijzer van Milieu Centraal bundelt veel regelingen op één plek.
 
 ### Capaciteit infiltratiekrat berekenen
 
-De vuistregel: reken 20 liter krat per m² afgekoppeld dakoppervlak [Bron: Milieu Centraal, 2026]. Voor 50 m² dak heb je dus 1.000 liter krat nodig. Dat is twee infiltratiekratten van 500 liter (vanaf €150 per stuk) of vijf kratten van 200 liter inclusief geotextiel en zandvanger (vanaf €400 per stuk). Een grindkoffer doet ongeveer 130 liter buffer per strekkende meter [Bron: Bustotaal, 2025], dus voor dezelfde capaciteit reken je ongeveer 7,5 meter grindkoffer.
+De vuistregel: reken 20 liter krat per m² afgekoppeld dakoppervlak. Voor 50 m² dak heb je dus 1.000 liter krat nodig. Dat is twee infiltratiekratten van 500 liter (vanaf €150 per stuk) of vijf kratten van 200 liter inclusief geotextiel en zandvanger (vanaf €400 per stuk). Een grindkoffer doet ongeveer 130 liter buffer per strekkende meter, dus voor dezelfde capaciteit reken je ongeveer 7,5 meter grindkoffer.
 
-Het kostenverschil is groot. Een infiltratiekrat van 200 liter inclusief geotextiel begint vanaf €400, terwijl een grindkoffer van 200 liter rond de €60 tot €80 kost [Bron: IrriTech, 2025]. De krat heeft daar tegenover een veel langere levensduur en compactere ondergrondse footprint, en kun je belopen of bestraten.
+Het kostenverschil is groot. Een infiltratiekrat van 200 liter inclusief geotextiel begint vanaf €400, terwijl een grindkoffer van 200 liter rond de €60 tot €80 kost. De krat heeft daar tegenover een veel langere levensduur en compactere ondergrondse footprint, en kun je belopen of bestraten.
 
 Wil je niet alleen afkoppelen maar het regenwater ook hergebruiken? In dat geval combineer je een ondergrondse tank met infiltratie. Lees meer over de [kosten van regenwateropvang met regenton, ondergrondse tank en IBC](/blog/regenwateropvang-tuin-regenton-ondergronds-kosten/).
 
@@ -182,8 +174,6 @@ Om de prijzen tastbaar te maken: dit is wat je in 2026 betaalt bij Hornbach, GAM
 | Klikmof 80 mm | per stuk | €4,95 |
 | T-stuk PVC 80 mm | per stuk | €12,95 |
 
-[Bron: Hornbach, 2026] [Bron: GAMMA, 2025] [Bron: IrriTech, 2025]
-
 ### Vulmateriaal per Big Bag (1.000 kg)
 
 | Materiaal | Prijs |
@@ -193,8 +183,6 @@ Om de prijzen tastbaar te maken: dit is wat je in 2026 betaalt bij Hornbach, GAM
 | Grind 16 tot 32 mm (grindkoffer) | €204,95 |
 | Limburgs wit 16 tot 32 mm | €209,95 |
 | Schelpen | €155 |
-
-[Bron: Tuinaanleg-concurrent, 2026] [Bron: Goedkoopgrind, 2025]
 
 ### Infiltratie en kolken
 
@@ -206,8 +194,6 @@ Om de prijzen tastbaar te maken: dit is wat je in 2026 betaalt bij Hornbach, GAM
 | Infiltratiekolk 70 L/min | €115 (excl. BTW) |
 | Infiltratiekolk 140 L/min | €150 (excl. BTW) |
 | Hydroblob blok (220 L absorptie) | indicatief €100 tot €200 |
-
-[Bron: IrriTech, 2025] [Bron: VanDongen, 2026] [Bron: Drainagebuizen.nl, 2025]
 
 ## Veelgestelde vragen
 

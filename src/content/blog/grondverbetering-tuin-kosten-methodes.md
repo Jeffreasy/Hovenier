@@ -54,8 +54,6 @@ Voor de exacte cijfers moet je een test laten doen. De prijzen lopen sterk uitee
 | Eurofins Agro BemestingsWijzer Compleet | €90,50 + €7,50 advies (totaal €98) | volledig profiel inclusief sporenelementen |
 | Bodemkundige Dienst (BE) Tuindoosje | vanaf €80 | pH, organische stof, NPK, bemestingsadvies |
 
-[Bron: Eurofins-Agro.com, 2025; Welkoop.nl, 2025; BDB.be, 2025]
-
 Voor een doorsnee siertuin of moestuin is het Eurofins BemestingsWijzer Basis-pakket van €67 het beste prijs-kwaliteitspunt. Je krijgt pH, organische stof én de hoofdvoedingsstoffen, en op basis daarvan kun je gericht aanvullen. De gratis Welkoop-test geeft alleen pH; dat dekt bekalken, maar niet of je grond te weinig organische stof bevat of in welk opzicht je voedingsbalans scheef zit.
 
 Een sample sturen is simpel: graaf op vijf à zes plekken in je tuin een kuiltje van een spadesteek diep, neem van elk plekje een handje grond, meng dat in een emmer, vul daarmee het zakje van het lab. Niet uit de bovenste centimeter scheppen, want daar zit alleen mulch en oppervlakkig humus.
@@ -75,11 +73,11 @@ Wat werkt:
 - Bekalken alleen als de pH onder 6,5 zit. Met **DCM Groen-kalk 20 kg (€12,95)** dek je 200 tot 250 m².
 
 Wat je vooral níet moet doen:
-- **Geen zee- of duinzand bij klei.** Dat verergert de plak juist, omdat de fijne deeltjes samenklitten met de klei. Alleen rivierzand of grof bouwzand werkt [Bron: Stihl.nl, 2025; Velt.nu, 2025].
+- **Geen zee- of duinzand bij klei.** Dat verergert de plak juist, omdat de fijne deeltjes samenklitten met de klei. Alleen rivierzand of grof bouwzand werkt.
 - Niet spitten als de grond te nat is. Dan verdicht je de bodem nog verder.
 - Geen kant-en-klare tuinaarde over zware klei storten zonder mengen. Je krijgt een laagjesbodem waar wortels op blijven hangen.
 
-Een tuinder uit Brabant noteerde het mooi: "Door bij kleigrond compost en grof rivierzand toe te voegen krijg je luchtigere structuur. Maar gebruik géén zee- of duinzand, dat verergert de plak. Spit ook niet als de grond te nat is, dan verdicht je hem juist." [Bron: Tuinadvies.nl forum / Velt.nu, 2025]
+Een tuinder uit Brabant noteerde het mooi: "Door bij kleigrond compost en grof rivierzand toe te voegen krijg je luchtigere structuur. Maar gebruik géén zee- of duinzand, dat verergert de plak. Spit ook niet als de grond te nat is, dan verdicht je hem juist."
 
 ### Zandgrond verbeteren
 
@@ -92,7 +90,7 @@ Wat werkt:
 - Mulchen, altijd mulchen. Zand zonder mulch droogt in juni al uit.
 
 Wat je vooral níet moet doen:
-- **Geen leem inwerken.** Dat klinkt logisch, maar leem spoelt op zandgrond zo weer uit. Compost is grover en blijft beter hangen [Bron: Tuinadvies.nl / Stihl.nl, 2025].
+- **Geen leem inwerken.** Dat klinkt logisch, maar leem spoelt op zandgrond zo weer uit. Compost is grover en blijft beter hangen.
 - Niet bekalken zonder bodemtest. Veel zandgronden hebben een lage pH, maar niet allemaal.
 
 Een gevoelsregel: als je elk voorjaar een dunne laag compost en mulch toevoegt, bouw je in drie tot vijf jaar een echt betere zandbodem op. Het is geen sprint.
@@ -124,15 +122,13 @@ Drie woorden die op het eerste gezicht hetzelfde lijken, maar in werkelijkheid h
 | **Compost** | gerijpt organisch materiaal, voedt en verbetert structuur | €6,39 tot €7,79 per 40 L | jaarlijkse onderhoudsgift, mulchen, structuur |
 | **Bodemverbeteraar** | minerale of biologische correctie (kalk, bentoniet, basaltmeel) | €11,50 tot €25,95 per zak | gerichte ingreep tegen specifiek probleem |
 
-[Bron: Hornbach.nl, 2025; Welkoop.nl, 2025; ZaadhandelvanderWal.nl, 2025]
-
 Tuinaarde gebruik je als je gáten moet vullen. Een nieuwe border, een verzakte plek in het gazon, of het ophogen van een te lage hoek. Niet als bodemverbeteraar in de strikte zin: het verbetert je grond niet, het vervangt een stuk ervan.
 
 Compost is wat je elk najaar of voorjaar over je borders strooit. Het voedt het bodemleven, verbetert de structuur, en houdt vocht vast. Voor een doorsnee tuin met borders en gazon is dit verreweg het belangrijkste product.
 
 Bodemverbeteraars zijn correctief. Bentoniet bij zand, basaltmeel of lava bij klei, kalk bij verzuring. Je koopt ze gericht op basis van een bodemtest of een duidelijk probleem.
 
-Als je voor een bigbag gaat in plaats van losse zakken, betaal je grofweg €125 voor 1.500 kg bemeste tuinaarde [Bron: Hovenier.nl, 2026]. Voor zwarte grond of teelaarde los gestort reken je op €15 tot €36,50 per m³, afhankelijk van leverancier en regio [Bron: Grondverzet.nu, 2025; Zwartegrond.com, 2025]. Een bigbag zand kost €65, een bigbag gebroken puin €80 [Bron: Hovenier.nl, 2026]. Daar bovenop komen transportkosten van €70 tot €90 per uur als je iets laat afleveren los gestort.
+Als je voor een bigbag gaat in plaats van losse zakken, betaal je grofweg €125 voor 1.500 kg bemeste tuinaarde. Voor zwarte grond of teelaarde los gestort reken je op €15 tot €36,50 per m³, afhankelijk van leverancier en regio. Een bigbag zand kost €65, een bigbag gebroken puin €80. Daar bovenop komen transportkosten van €70 tot €90 per uur als je iets laat afleveren los gestort.
 
 ## Grondverbetering per doel: gazon, border, moestuin
 
@@ -154,7 +150,7 @@ De methode hangt af van je grondsoort én van wat erbovenop komt. Een gazon vraa
 
 ### Moestuin
 
-- Lichte verbetering: 20 tot 40 L compost per m² (2 tot 4 cm laag) per jaar [Bron: Bodemgigant.nl, 2025; Vlaco.be, 2025].
+- Lichte verbetering: 20 tot 40 L compost per m² (2 tot 4 cm laag) per jaar.
 - Intensieve verbetering: 50 tot 60 L compost per m² (5 tot 6 cm laag) bij aanleg.
 - Op kleigrond: één kruiwagen compost per 10 m² jaarlijks volstaat als onderhoud.
 - Gewasrotatie en groenbemesters (klaver, bladrammenas) doen meer voor je bodem dan een dikke compostgift. Voor de start zie [moestuin beginnen, aanleg en kosten](/blog/moestuin-beginnen-aanleg-kosten).
@@ -176,8 +172,6 @@ Veel mensen onderschatten het verschil tussen "een paar zakken compost erover" e
 | Uitgraven 20 tot 25 cm plus afvoeren | €15 tot €20 per m² |
 | Grondverzet (per m³) | €7 tot €12 per m³ |
 | Totaal grondwerk-project | €275 tot €3.000 (gemiddeld €900) |
-
-[Bron: Hovenier.nl, 2026; Topvakmannen.nl, 2025; Klaardeklus.nl, 2026; Purperinterior.nl, 2025]
 
 Belangrijk om te weten: "grondwerk" en "bodemverbetering" zijn in offertes niet altijd hetzelfde. Grondwerk gaat over verzetten, egaliseren, ophogen, afvoeren. Bodemverbetering gaat over wat je in die grond doet aan amendementen. Vraag een hovenier expliciet of de offerte alleen het grondwerk dekt of ook de materialen voor de bodemverbetering, anders krijg je achteraf een verrassing.
 

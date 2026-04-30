@@ -37,7 +37,7 @@ Voor wie kleiner wil beginnen is er de plunge pool. Een **plunge pool kost €12
 
 ### Wat kost de plaatsing?
 
-De **arbeid van een hovenier of zwembadbouwer ligt in 2026 tussen €40 en €60 per uur**, en **voor inbouw van een zwembad reken je in totaal op €6.000 tot €12.000** [Bron: Werkspot via Hovenier.nl, 2026]. Dat omvat graafwerk, fundering, leidingen, techniek aansluiten en grondafvoer.
+De **arbeid van een hovenier of zwembadbouwer ligt in 2026 tussen €40 en €60 per uur**, en **voor inbouw van een zwembad reken je in totaal op €6.000 tot €12.000**. Dat omvat graafwerk, fundering, leidingen, techniek aansluiten en grondafvoer.
 
 Bij polyester en staal zit een groot deel van die arbeid al in de "incl. plaatsing" prijs. Bij beton is het bouwwerk zelf het grootste arbeidsbrok en de prijs reflecteert dat.
 
@@ -74,7 +74,7 @@ Sinds januari 2024 zijn de regels voor bouwwerken in de tuin geregeld in de Omge
 
 ### Wanneer vergunningsvrij?
 
-**Vergunningsvrij is je zwembad of jacuzzi mits aan alle voorwaarden tegelijk voldaan wordt: erf bij woning, geen overkapping, geen monument; in beschermd dorpsgezicht uitsluitend achtertuin** [Bron: Aanleggen-zwembad.nl, 2026].
+**Vergunningsvrij is je zwembad of jacuzzi mits aan alle voorwaarden tegelijk voldaan wordt: erf bij woning, geen overkapping, geen monument; in beschermd dorpsgezicht uitsluitend achtertuin**.
 
 Wat houdt dat concreet in?
 
@@ -87,7 +87,7 @@ Voor een gemiddeld rijtjeshuis in een gewone wijk geldt: jacuzzi of bovengronds 
 
 ### Wanneer wel een omgevingsvergunning?
 
-Twijfel je? **Voor een uitgebreide check gebruik je Omgevingsloket.nl, waar de doorlooptijd maximaal 8 weken is** [Bron: Aanleggen-zwembad.nl, 2026]. Plaats je een poolhouse, technische berging of overkapping erbij? Dan is er sneller toetsing nodig. Hetzelfde geldt voor zeer grote zwembaden waarbij grondwaterbeheer of afwatering naar het riool een rol speelt: de gemeente kan een melding of vergunning vragen.
+Twijfel je? **Voor een uitgebreide check gebruik je Omgevingsloket.nl, waar de doorlooptijd maximaal 8 weken is**. Plaats je een poolhouse, technische berging of overkapping erbij? Dan is er sneller toetsing nodig. Hetzelfde geldt voor zeer grote zwembaden waarbij grondwaterbeheer of afwatering naar het riool een rol speelt: de gemeente kan een melding of vergunning vragen.
 
 Voor de zekerheid: doe altijd een vergunning-check via het Omgevingsloket vóórdat je tekent voor de aanleg. De vergunningsregels lijken op die van een [tuinhuisje of berging plaatsen](/blog/tuinhuisje-berging-plaatsen-kosten), waar dezelfde "achtererfgebied + max 5 meter hoogte" logica geldt.
 
@@ -106,11 +106,9 @@ Hier loont het om eerlijk te zijn. Verkopers reciteren al vijftien jaar dat een 
 | Bijvullen water | €30 | €20 |
 | **Totaal per jaar** | **€3.000 – €5.000** | **€1.000 – €2.000** |
 
-[Bron: Swimm.nl, 2026 / Homedeal, 2026 / Aanleggen-zwembad.nl, 2026]
-
 De **jaarkosten voor een standaard zwembad van 12 bij 4 bij 1,5 meter komen uit op €3.000 tot €5.000 per jaar**. Voor een **klein of goed geïsoleerd zwembad praat je over €1.000 tot €2.000 per jaar**. Het verschil zit hem voor 70% in de verwarming, voor 15% in het onderhoud, en de rest verspreid over chemicaliën en water.
 
-De warmtepomp-stroom losgekoppeld: 500 tot 2.500 kWh per jaar afhankelijk van gebruik = €150 tot €750 bij €0,30/kWh [Bron: Bouwzelfjezwembad.nl, 2026]. Een tuineigenaar op het Zwembadforum.eu (2024) bevestigt dat de warmtepomp bij intensief zomergebruik 2 tot 3 uur per dag draait, totaal ongeveer €200 in juli en augustus.
+De warmtepomp-stroom losgekoppeld: 500 tot 2.500 kWh per jaar afhankelijk van gebruik = €150 tot €750 bij €0,30/kWh. Een tuineigenaar op het Zwembadforum.eu (2024) bevestigt dat de warmtepomp bij intensief zomergebruik 2 tot 3 uur per dag draait, totaal ongeveer €200 in juli en augustus.
 
 ### Jaarkosten jacuzzi (1.200 liter, vaste spa)
 
@@ -122,9 +120,7 @@ De warmtepomp-stroom losgekoppeld: 500 tot 2.500 kWh per jaar afhankelijk van ge
 | Bijvullen water | €20 – €40 | €20 – €40 |
 | **Totaal per jaar** | **€570 – €940** | **€350 – €640** |
 
-[Bron: Fonteyn Spas, 2026]
-
-Hier komt de eerlijkheids-USP. **Een vaste jacuzzi van 1.200 liter verbruikt rond 6 kWh per dag = ongeveer €591 per jaar bij het ANWB-rekenmodel met 2024-tarief van €0,27 per kWh** [Bron: ANWB, 2024]. Bij het 2026-tarief van rond €0,30 per kWh wordt dat ongeveer €657 per jaar. Dat is iets heel anders dan de "€1 per dag" die verkopers gebruiken.
+Hier komt de eerlijkheids-USP. **Een vaste jacuzzi van 1.200 liter verbruikt rond 6 kWh per dag = ongeveer €591 per jaar bij het ANWB-rekenmodel met 2024-tarief van €0,27 per kWh**. Bij het 2026-tarief van rond €0,30 per kWh wordt dat ongeveer €657 per jaar. Dat is iets heel anders dan de "€1 per dag" die verkopers gebruiken.
 
 Een gebruiker op het Radar Forum (AVROTROS) constateerde al jaren geleden dat zijn echte verbruik 25 kWh per dag was, in plaats van de beloofde 7. En een forumlid op BouwInfo schreef: "Op beurzen vertellen verkopers dat het bijna niks kost. Da's wat anders dan wat het écht is." Het narratief is in 2026 niet veranderd, alleen de stroomprijs is hoger geworden.
 

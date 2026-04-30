@@ -24,8 +24,6 @@ De tuinrenovatie-kosten zijn lastig te benoemen zonder te weten wat je eigenlijk
 | Compleet / hoog segment | Volledige sloop, drainage, ophogen of uitgraven, keramische tegels of natuursteen, beplantingsplan, hardhout schutting, verlichting, klein bouwwerk | €12.000 – €25.000 |
 | Luxe / ontwerp | Tuinarchitect, premium materialen, vijver of waterornament, overkapping, buitenkeuken, robotmaaier-installatie | €25.000 – €60.000+ |
 
-[Bron: Homedeal.nl, 2026] [Bron: Hovenier.nl, 2026] [Bron: Topvakmannen.nl, 2025] [Bron: PUUR Hoveniers, 2026] [Bron: Bevergroep.nl, 2026]
-
 Wat valt op in deze cijfers? Het verschil tussen "budget" en "compleet" is een factor zes, terwijl de oppervlakte gelijk blijft. Dat zit vrijwel volledig in twee posten: hoeveel grondwerk er nodig is, en welke materialen je kiest. Voor €5.000 ga je naar betontegels en gazoninzaai. Voor €12.000 stap je over op klinkers en een echte border. Voor €25.000 zit je op keramische tegels of natuursteen, hardhout schutting en een ontwerp van een [tuinarchitect](/blog/tuin-laten-ontwerpen-kosten).
 
 Er is nog iets dat veel mensen onderschatten. Voor een budget-renovatie verwacht je misschien dat je veel kunt voor weinig, maar tuinen die jaren onderhoud hebben gemist (oude bestrating, verzakte fundering, slechte afwatering) glijden snel naar het gemiddelde of complete niveau. Niet vanwege jouw wensen, maar omdat het ondergrondse werk simpelweg gedaan moet worden. Wie een 30 jaar oude tuin opknapt zonder grondwerk en drainage opnieuw aan te pakken, betaalt het verschil binnen vijf jaar opnieuw aan herstel.
@@ -43,8 +41,6 @@ Wie liever in m² rekent dan in totaalbedragen, kan onderstaande richtprijzen ge
 | Compleet | €100 – €150 / m² | Drainage, keramiek of natuursteen, beplantingsplan, hardhout |
 | Luxe / premium | €150 – €300+ / m² | Specialistische uitvoering, ontwerp, grote elementen |
 
-[Bron: Homedeal.nl, 2026] [Bron: Hovenier.nl, 2026] [Bron: PUUR Hoveniers, 2026] [Bron: Topvakmannen.nl, 2025] [Bron: Hovenier-gigant.nl, 2026]
-
 Belangrijk om te onthouden: m²-prijzen werken het beste bij rechthoekige tuinen met weinig hoogteverschil. Een lange smalle tuin met trap, niveauverschil of slechte toegang voor een kraan rekent in de praktijk hoger uit. Een hovenier verrekent dat soms in de m²-prijs en soms als aparte post (transport, machines, handmatig werk).
 
 Voor een tuin van 60 m² die je standaard wil aanpakken, kom je dus uit op €3.000 tot €6.000 exclusief BTW. Voor 100 m² rond €5.000 tot €10.000. Tel daar voor incl. BTW het 21%-tarief bij op (zie de [BTW-sectie](#btw-21-of-9-de-fout-die-concurrenten-herhalen) verderop).
@@ -59,8 +55,6 @@ Veel sites herhalen "60% arbeid, 40% materialen". Dat klopt niet. De feitelijke 
 | Materialen | 30 – 40% | Tegels, hout, planten, fundering-zand, splitt |
 | Ontwerp en voorbereiding | 5 – 15% | Tuinontwerp, beplantingsplan, vergunningcheck |
 | Transport, afvoer en machines | 5 – 10% | Container, kraan, splitt-aanvoer, groenafval-afvoer |
-
-[Bron: Homedeal.nl, 2026] [Bron: Bevergroep.nl, 2026]
 
 Die laatste post wordt het vaakst onderschat. Wie 18 m³ grond moet afvoeren bij een renovatie waarbij de tuin een halve meter omlaag gaat, kijkt al snel tegen €600 tot €1.200 alleen aan containerkosten en kraanwerk aan. Bij een gemiddelde renovatie van €8.000 is dat zomaar 10% van het totale budget aan iets dat na drie dagen verdwenen is.
 
@@ -98,13 +92,11 @@ Hieronder de richtprijzen per werkonderdeel voor 2026, exclusief 21% BTW.
 | Tuinontwerp door tuinarchitect | €250 – €2.500 |
 | Uurtarief hovenier | €35 – €80 / uur |
 
-[Bron: Homedeal.nl, 2026] [Bron: PUUR Hoveniers, 2026] [Bron: Hovenier.nl, 2026] [Bron: Hovenier-gigant.nl, 2026] [Bron: Hovenier.website, 2026] [Bron: Topvakmannen.nl, 2025]
-
 Voor verdiepende prijzen per onderdeel hebben we per categorie een aparte pagina. Voor terras en bestrating, zie [bestrating laten leggen kosten](/blog/bestrating-laten-leggen-kosten-tegels). Voor schutting, [tuinafscheiding kosten](/blog/tuinafscheiding-creatief-privacy-kosten) en de pagina over [schutting plaatsen kosten en regels](/blog/schutting-plaatsen-kosten-regels). Voor borders en planten, [siertuin border ontwerp en beplantingsplan](/blog/siertuin-border-ontwerp-beplantingsplan-kosten). Voor afwateringsproblemen, de pagina over [drainage in de tuin aanleggen](/blog/drainage-tuin-aanleggen-kosten-methodes). En voor wie liever met een hovenier doorrekent op uurtarief, [hovenier-tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
 ## BTW: 21% of 9%? De fout die concurrenten herhalen
 
-Veel sites schrijven dat tuinrenovatie onder 9% BTW valt voor woningen ouder dan twee jaar. Dat klopt niet sinds 1 juli 2015. Het verlaagde BTW-tarief op hovenier-arbeid is destijds vervallen [Bron: Vantuinen.nl, 2015]. De Belastingdienst is in 2026 helder: tuinaanleg en -onderhoud zijn 21% BTW, zowel voor de arbeid als voor door de hovenier geleverde materialen [Bron: Belastingdienst.nl, 2026].
+Veel sites schrijven dat tuinrenovatie onder 9% BTW valt voor woningen ouder dan twee jaar. Dat klopt niet sinds 1 juli 2015. Het verlaagde BTW-tarief op hovenier-arbeid is destijds vervallen. De Belastingdienst is in 2026 helder: tuinaanleg en -onderhoud zijn 21% BTW, zowel voor de arbeid als voor door de hovenier geleverde materialen.
 
 | Werkzaamheid | BTW 2026 | Wijziging 2028 |
 |--------------|----------|-----------------|
@@ -113,9 +105,7 @@ Veel sites schrijven dat tuinrenovatie onder 9% BTW valt voor woningen ouder dan
 | Door hovenier meegeleverde sierteeltproducten (planten, bomen, struiken) | 9% | wordt 21% per 1-1-2028 |
 | Tuinontwerp (los) | 21% | blijft 21% |
 
-[Bron: Belastingdienst.nl, 2026] [Bron: Borrie.nl, 2026]
-
-De enige uitzondering in 2026 is sierteelt: de planten, bomen en struiken die de hovenier zelf levert vallen onder 9%, omdat ze als sierteeltproduct gelden. Per 1 januari 2028 verdwijnt ook dat tarief en wordt alles 21% [Bron: Borrie.nl, 2026]. Wie nu een grote beplantingsklus inplant, kan dus iets schelen door de plantenpost in 2026 of 2027 te laten doen in plaats van in 2028.
+De enige uitzondering in 2026 is sierteelt: de planten, bomen en struiken die de hovenier zelf levert vallen onder 9%, omdat ze als sierteeltproduct gelden. Per 1 januari 2028 verdwijnt ook dat tarief en wordt alles 21%. Wie nu een grote beplantingsklus inplant, kan dus iets schelen door de plantenpost in 2026 of 2027 te laten doen in plaats van in 2028.
 
 Wat betekent dit voor je offerte? Een tuinrenovatie van €10.000 exclusief BTW komt op €12.100 inclusief BTW. Een offerte die als "incl. BTW" wordt gepresenteerd zonder splitsing tussen arbeid (21%) en planten (9%) verdient navraag. Vraag of de hovenier de plantenpost apart wil specificeren. Op een €1.500 plantenpost scheelt dat 12% over die deelpost, ofwel €180.
 
@@ -130,8 +120,6 @@ De doorlooptijd hangt af van oppervlakte, planning, weer en materiaalbestelling.
 | Groot (150 – 250 m²) | 4 – 8 dagen | 7 – 14 dagen | 3 – 6 dagen | 4 – 8 weken |
 | Met vijver of waterelement | extra 5 – 10 dagen | n.v.t. | n.v.t. | 6 – 12 weken |
 | Met zwembad | extra 3 – 6 weken | n.v.t. | n.v.t. | 8 – 16+ weken |
-
-[Bron: Schraven Hoveniers, 2026] [Bron: PUUR Hoveniers, 2026] [Bron: Homedeal.nl, 2026]
 
 De totale doorlooptijd is langer dan de som van de werkdagen, en dat verrast veel mensen. De reden is dat ontwerp (1 tot 4 weken) en materiaalbestelling (1 tot 6 weken) parallel lopen vóór de uitvoering, en dat regen of vorst tussen werkfases gaten kan slaan. Een hovenier die in januari een offerte tekent voor uitvoering in maart, plant voor de zekerheid een week buffer in.
 
@@ -152,15 +140,13 @@ Een tuinrenovatie volgt acht fasen. De grootste kostenposten ontstaan niet door 
 | 7 | Verlichting + irrigatie | 1 – 3 dagen | Kabels vergeten, loopgraven door nieuw gazon |
 | 8 | Beplanting + gazon | 1 – 5 dagen | Beplanting vóór bestrating klaar, planten vertrapt door bouwverkeer |
 
-[Bron: Schraven Hoveniers, 2026] [Bron: Bosma Boomkwekerij, 2026] [Bron: PUUR Hoveniers, 2026]
-
 De drie duurste fouten die je hieruit kunt halen: drainage vergeten in fase 4, geen fundering onder bestrating in fase 6, en beplanting plaatsen vóór de bestrating klaar is in fase 8. Elk van die drie kost in herstel het tweevoudige van het oorspronkelijke werk. Wie zelf de regie voert over een renovatie, doet er goed aan op die drie momenten extra te checken.
 
 Voor [grondverbetering](/blog/grondverbetering-tuin-kosten-methodes), [bewateringssystemen](/blog/bewateringssysteem-tuin-aanleggen-kosten) en [tuinverlichting](/blog/tuinverlichting-aanleggen-kosten) hebben we losse pagina's met de specifieke aandachtspunten.
 
 ## DIY versus hovenier: wat doe je zelf, wat laat je doen?
 
-De grootste besparing in een tuinrenovatie zit in voorbereidend werk. Sevencouches berekende voor de eigen renovatie een besparing van ongeveer €1.500 op een totaalrenovatie van €8.000 tot €15.000 door zelf de tuin leeg te halen, oude tegels te verwijderen en afvoer te regelen [Bron: Sevencouches.nl, 2021]. Werkspot komt uit op een vergelijkbaar bedrag voor wie het slim aanpakt [Bron: Werkspot.nl, 2026].
+De grootste besparing in een tuinrenovatie zit in voorbereidend werk. Sevencouches berekende voor de eigen renovatie een besparing van ongeveer €1.500 op een totaalrenovatie van €8.000 tot €15.000 door zelf de tuin leeg te halen, oude tegels te verwijderen en afvoer te regelen. Werkspot komt uit op een vergelijkbaar bedrag voor wie het slim aanpakt.
 
 | Onderdeel | DIY mogelijk? | Geschatte besparing | Risico bij DIY |
 |-----------|----------------|----------------------|-----------------|
@@ -175,15 +161,13 @@ De grootste besparing in een tuinrenovatie zit in voorbereidend werk. Sevencouch
 | Drainage aanleggen | Niet | n.v.t. | Vereist berekening en aansluiting op riool of put |
 | Elektra (verlichting, pomp) | Alleen erkend elektricien | n.v.t. | Wettelijke aansprakelijkheid en verzekeringsdekking |
 
-[Bron: Sevencouches.nl, 2021] [Bron: Werkspot.nl, 2026]
-
 De vuistregel: alles boven de grond kun je zelf, alles in de grond beter niet. Tegels eruit halen en afvoeren is fysiek werk maar geen vakmanschap. Gazon inzaaien is een zonnige zaterdagochtend met een hark. Bestrating leggen lijkt simpel maar valt of staat met de fundering: 10 cm split, ingewasht en aangetrild. Wie dat laatste oversla, betaalt binnen één tot twee winters terug aan herstel wat hij dacht te besparen.
 
 Een tussenoplossing die in de praktijk goed werkt: zelf de eerste twee dagen voorbereiden (tuin leeg, tegels eruit, container vol) en de hovenier dan laten beginnen bij grondwerk. Zo bespaar je het ongeschoolde werk en huur je de hovenier in voor wat hij echt goed doet. Vraag voor je dat doet wel of de hovenier ermee akkoord gaat: sommige bedrijven willen het hele werk doen om de garantie af te kunnen geven.
 
 ## Subsidies 2026: tot €500 voor tegels eruit, tot €60/m² groen dak
 
-Sinds 2023 hebben steeds meer Nederlandse gemeenten een potje voor klimaatadaptatie en vergroening. In 2026 hebben meer dan 200 van de 342 gemeenten zo'n regeling [Bron: NK Tegelwippen, 2026]. Voor een gemiddelde renovatie waarbij een deel verharding eruit gaat, komt dat neer op €250 tot €500 cash terug op je bankrekening.
+Sinds 2023 hebben steeds meer Nederlandse gemeenten een potje voor klimaatadaptatie en vergroening. In 2026 hebben meer dan 200 van de 342 gemeenten zo'n regeling. Voor een gemiddelde renovatie waarbij een deel verharding eruit gaat, komt dat neer op €250 tot €500 cash terug op je bankrekening.
 
 | Subsidie | Bedrag | Maximum |
 |----------|--------|---------|
@@ -195,9 +179,7 @@ Sinds 2023 hebben steeds meer Nederlandse gemeenten een potje voor klimaatadapta
 | Klimaatadaptatie Rotterdam (Waterschap Hollandse Delta) | 20% van projectkosten | €5.000 particulier, vanaf €250 project |
 | Tegeltaxi (gratis tegels-ophalen) | gratis | n.v.t. |
 
-[Bron: Gemeente Deventer, 2026] [Bron: Gemeente Kampen, 2026] [Bron: Gemeente Breda, 2026] [Bron: Gemeente Groningen, 2026] [Bron: Gemeente Amsterdam, 2026] [Bron: NK Tegelwippen, 2026]
-
-Drie tips om hier zoveel mogelijk uit te halen. Eén: check vóór je begint of je gemeente een regeling heeft. De meest complete bron is de Groenesubsidiewijzer van Milieu Centraal [Bron: Milieu Centraal, 2026]. Twee: tegels eruit en aanvragen kan vaak achteraf met foto's, maar lang niet altijd. Sommige gemeenten willen een aanvraag vooraf. Drie: het NK Tegelwippen 2026 loopt van 19 maart tot 31 oktober 2026, waarbij ook tegels meetellen die tussen 1 november 2025 en 31 oktober 2026 zijn weggehaald [Bron: NK Tegelwippen, 2026].
+Drie tips om hier zoveel mogelijk uit te halen. Eén: check vóór je begint of je gemeente een regeling heeft. De meest complete bron is de Groenesubsidiewijzer van Milieu Centraal. Twee: tegels eruit en aanvragen kan vaak achteraf met foto's, maar lang niet altijd. Sommige gemeenten willen een aanvraag vooraf. Drie: het NK Tegelwippen 2026 loopt van 19 maart tot 31 oktober 2026, waarbij ook tegels meetellen die tussen 1 november 2025 en 31 oktober 2026 zijn weggehaald.
 
 Voor wie meer wil dan alleen tegels eruit, biedt [regenwateropvang in de tuin](/blog/regenwateropvang-tuin-regenton-ondergronds-kosten) extra opties. Een ondergrondse waterbuffer of een groene daklaag op een schuur, telt vaak ook mee voor de subsidie. Combineer slim: een renovatie waarbij 30 m² betontegel wordt vervangen door grindborder, plus een groen dak op het tuinhuis, kan al gauw €250 tegelwip + €400 groen dak opleveren. Bij een gemiddelde renovatie van €8.000 betekent dat €650 cash terug, ofwel 8% van het totaalbudget.
 
@@ -211,7 +193,7 @@ Vermijd zo mogelijk december, januari en februari voor groot grondwerk. Vorst en
 
 ## Drie offertes vergelijken: hoe voorkom je €5.000 prijsverschil?
 
-Op exact dezelfde tuinrenovatie kunnen offertes €5.000 uit elkaar liggen. Sevencouches beschreef het zelf: tussen hovenier A en hovenier B zat een verschil van €5.000 op de totaalfactuur [Bron: Sevencouches.nl, 2021]. Een Bokt-forumdiscussie noemde voor 10 m² zand en gazon offertes van €1.400 tot €5.000, waarbij de €1.400-offerte ook nog eens "heel goed werk" opleverde [Bron: Bokt.nl forum, 2026]. Hoe voorkom je dat je verkeerd kiest?
+Op exact dezelfde tuinrenovatie kunnen offertes €5.000 uit elkaar liggen. Sevencouches beschreef het zelf: tussen hovenier A en hovenier B zat een verschil van €5.000 op de totaalfactuur. Een Bokt-forumdiscussie noemde voor 10 m² zand en gazon offertes van €1.400 tot €5.000, waarbij de €1.400-offerte ook nog eens "heel goed werk" opleverde. Hoe voorkom je dat je verkeerd kiest?
 
 Vier checks die het meeste verschil maken:
 
@@ -226,10 +208,10 @@ Voor wie wil weten hoe je het juiste tuinbedrijf kiest, hebben we een aparte pag
 
 Vijf concrete besparingen die in de praktijk werken zonder dat je inlevert op duurzaamheid:
 
-1. Doe het sloop- en afvoerwerk zelf. Een container van 6 m³ huur je vanaf €150 tot €400 [Bron: PUUR Hoveniers, 2026]. Wie de tuin een weekend leegruimt en tegels stapelt, bespaart al snel €600 tot €1.500 aan ploegtijd.
-2. Kies klinkers of betontegels in plaats van keramiek. €30 tot €60 per m² in plaats van €60 tot €100 per m² [Bron: PUUR Hoveniers, 2026]. Op 60 m² praat je over €1.800 tot €2.400 verschil. Klinkers verouderen mooier en zijn makkelijker te herstellen.
-3. Combineer met een tegelwip-subsidie. €5 per m² tot maximaal €500, bij 200+ gemeenten beschikbaar [Bron: NK Tegelwippen, 2026]. Op 50 m² levert dat €250 op.
-4. Plant zelf de borders. Hovenier rekent €20 tot €80 per m² aan borderbeplanting inclusief plantmateriaal en arbeid [Bron: PUUR Hoveniers, 2026]. Wie zelf bij de tuincentrum bestelt en plant, kan op een 15 m² border €300 tot €600 besparen. Wel het juiste seizoen kiezen (najaar of vroege voorjaar).
+1. Doe het sloop- en afvoerwerk zelf. Een container van 6 m³ huur je vanaf €150 tot €400. Wie de tuin een weekend leegruimt en tegels stapelt, bespaart al snel €600 tot €1.500 aan ploegtijd.
+2. Kies klinkers of betontegels in plaats van keramiek. €30 tot €60 per m² in plaats van €60 tot €100 per m². Op 60 m² praat je over €1.800 tot €2.400 verschil. Klinkers verouderen mooier en zijn makkelijker te herstellen.
+3. Combineer met een tegelwip-subsidie. €5 per m² tot maximaal €500, bij 200+ gemeenten beschikbaar. Op 50 m² levert dat €250 op.
+4. Plant zelf de borders. Hovenier rekent €20 tot €80 per m² aan borderbeplanting inclusief plantmateriaal en arbeid. Wie zelf bij de tuincentrum bestelt en plant, kan op een 15 m² border €300 tot €600 besparen. Wel het juiste seizoen kiezen (najaar of vroege voorjaar).
 5. Vraag offertes in januari of februari voor uitvoering in september of oktober. Hoveniers willen graag de planning vullen voor het rustige seizoen en zijn dan vaker bereid 5 tot 10% korting te geven.
 
 Een laatste opmerking. Bespaar niet op de fundering onder de bestrating. Wie €600 bespaart op fundering en een jaar later de tegels weer eruit moet halen, betaalt de oorspronkelijke aanleg twee keer. Datzelfde geldt voor [drainage](/blog/drainage-tuin-aanleggen-kosten-methodes) bij tuinen waar het water blijft staan: vooraf €15 tot €30 per strekkende meter is altijd goedkoper dan achteraf alles eraf en opnieuw.
@@ -237,22 +219,22 @@ Een laatste opmerking. Bespaar niet op de fundering onder de bestrating. Wie €
 ## Veelgestelde vragen
 
 **Wat kost een complete tuinrenovatie in 2026?**
-Voor een tuin van 80 tot 100 m² ligt het budget tussen €2.000 en €5.000 (eenvoudig opknappen), €5.000 en €12.000 (gemiddeld), €12.000 en €25.000 (compleet) of €25.000 en meer (luxe met ontwerp en grote elementen). Per m² komt dat neer op €30 tot €300, afhankelijk van afwerkingsniveau. Bedragen exclusief 21% BTW [Bron: Homedeal.nl, 2026] [Bron: Hovenier.nl, 2026] [Bron: PUUR Hoveniers, 2026].
+Voor een tuin van 80 tot 100 m² ligt het budget tussen €2.000 en €5.000 (eenvoudig opknappen), €5.000 en €12.000 (gemiddeld), €12.000 en €25.000 (compleet) of €25.000 en meer (luxe met ontwerp en grote elementen). Per m² komt dat neer op €30 tot €300, afhankelijk van afwerkingsniveau. Bedragen exclusief 21% BTW.
 
 **Hoe lang duurt een tuinrenovatie?**
-Klein (30-50 m²) één tot drie weken, gemiddeld (80-120 m²) twee tot vier weken, groot (150-250 m²) vier tot acht weken. Tel daarbij één tot vier weken voor ontwerp en materiaalbestelling die parallel loopt. Een vijver voegt vijf tot tien dagen toe, een zwembad drie tot zes weken extra [Bron: Schraven Hoveniers, 2026] [Bron: PUUR Hoveniers, 2026].
+Klein (30-50 m²) één tot drie weken, gemiddeld (80-120 m²) twee tot vier weken, groot (150-250 m²) vier tot acht weken. Tel daarbij één tot vier weken voor ontwerp en materiaalbestelling die parallel loopt. Een vijver voegt vijf tot tien dagen toe, een zwembad drie tot zes weken extra.
 
 **In welke volgorde pak je een tuinrenovatie aan?**
-Acht fasen: ontwerp en offertes, materiaalbestelling, sloop, grondwerk plus drainage en kabels, bouwwerken zoals muur en schutting, bestrating, verlichting en irrigatie, beplanting en gazon. De grootste fout is drainage vergeten in fase vier of beplanting plaatsen vóór bestrating klaar is in fase acht [Bron: Schraven Hoveniers, 2026] [Bron: Bosma Boomkwekerij, 2026].
+Acht fasen: ontwerp en offertes, materiaalbestelling, sloop, grondwerk plus drainage en kabels, bouwwerken zoals muur en schutting, bestrating, verlichting en irrigatie, beplanting en gazon. De grootste fout is drainage vergeten in fase vier of beplanting plaatsen vóór bestrating klaar is in fase acht.
 
 **Welk werk kun je zelf doen?**
-Tuin leeghalen, oude tegels eruit halen, afvoer regelen, gazon inzaaien en eenvoudige beplanting kun je prima zelf. Grondwerk, drainage, fundering bestrating en elektra liever niet. Door zelf voorbereidend werk te doen bespaar je gemiddeld €1.500 op een renovatie van €8.000 tot €15.000 [Bron: Sevencouches.nl, 2021] [Bron: Werkspot.nl, 2026].
+Tuin leeghalen, oude tegels eruit halen, afvoer regelen, gazon inzaaien en eenvoudige beplanting kun je prima zelf. Grondwerk, drainage, fundering bestrating en elektra liever niet. Door zelf voorbereidend werk te doen bespaar je gemiddeld €1.500 op een renovatie van €8.000 tot €15.000.
 
 **Welke subsidies kan ik krijgen?**
-De tegels-eruit-subsidie geeft €5 per m² verwijderde verharding tot maximaal €500 in 200+ gemeenten. Bij drie of meer buren die meedoen, krijg je 25% bovenop. Een groen dak levert €20 tot €60 per m² afhankelijk van gemeente (Amsterdam tot €60, Breda en Groningen rond €25). Rotterdam heeft via Waterschap Hollandse Delta een regeling van 20% van de projectkosten tot €5.000 voor particulieren [Bron: NK Tegelwippen, 2026] [Bron: Gemeente Amsterdam, 2026]. Check je eigen gemeente via de Groenesubsidiewijzer van Milieu Centraal.
+De tegels-eruit-subsidie geeft €5 per m² verwijderde verharding tot maximaal €500 in 200+ gemeenten. Bij drie of meer buren die meedoen, krijg je 25% bovenop. Een groen dak levert €20 tot €60 per m² afhankelijk van gemeente (Amsterdam tot €60, Breda en Groningen rond €25). Rotterdam heeft via Waterschap Hollandse Delta een regeling van 20% van de projectkosten tot €5.000 voor particulieren. Check je eigen gemeente via de Groenesubsidiewijzer van Milieu Centraal.
 
 **Welk BTW-tarief geldt voor tuinrenovatie?**
-21% op arbeid en door de hovenier geleverde materialen. 9% op door de hovenier meegeleverde sierteeltproducten (planten, bomen, struiken) in 2026, dat wordt 21% per 1 januari 2028. Het verlaagde tarief op hovenier-arbeid is vervallen op 1 juli 2015. Veel sites herhalen de oude regel nog [Bron: Belastingdienst.nl, 2026] [Bron: Borrie.nl, 2026].
+21% op arbeid en door de hovenier geleverde materialen. 9% op door de hovenier meegeleverde sierteeltproducten (planten, bomen, struiken) in 2026, dat wordt 21% per 1 januari 2028. Het verlaagde tarief op hovenier-arbeid is vervallen op 1 juli 2015. Veel sites herhalen de oude regel nog.
 
 **Kan ik mijn tuin in fases renoveren?**
 Ja, en dat is vaak een slim plan om de kosten te spreiden. Begin altijd met grondwerk en drainage als die nodig zijn, omdat je daar later niet meer bij kunt zonder alles eraf te halen. Bestrating en hoofdpaden kunnen apart gepland, en beplanting kan jaar voor jaar uitgebouwd. Vraag de hovenier vooraf of hij in fases werkt en hoe je tussen fases de tuin tijdelijk bruikbaar houdt.
