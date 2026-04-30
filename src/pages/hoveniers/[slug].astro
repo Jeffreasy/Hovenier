@@ -50,9 +50,18 @@ const catLabel: Record<string, string> = {
 
 const hoofdLabel = catLabel[bedrijf.hoofdCategorie] ?? bedrijf.hoofdCategorie ?? 'Hovenier'
 
+// CTR-hook: rating + reviewcount in title als ze er zijn — komt in SERP-snippet
+// als visuele anker. Google toont deze ster-data ook bij rich-results dankzij
+// de aggregateRating in JSON-LD.
+const ratingHook = bedrijf.googleScore && bedrijf.aantalReviews
+  ? ` ★ ${bedrijf.googleScore.toFixed(1)} (${bedrijf.aantalReviews})`
+  : ''
+
+const stadLabel = bedrijf.stad ?? 'Nederland'
+
 const seo = {
-  title: `${bedrijf.naam} | ${hoofdLabel} in ${bedrijf.stad ?? 'Nederland'}`,
-  description: `${bedrijf.naam} in ${bedrijf.stad ?? 'Nederland'} · Google score ${bedrijf.googleScore ?? '?'}/5 · ${bedrijf.aantalReviews ?? 0} reviews. Vraag gratis offerte aan via TuinHub.`,
+  title: `${bedrijf.naam}${ratingHook} | ${hoofdLabel} in ${stadLabel}`,
+  description: `${bedrijf.naam} in ${stadLabel} · Google score ${bedrijf.googleScore ?? '?'}/5 · ${bedrijf.aantalReviews ?? 0} reviews. Vraag gratis offerte aan via TuinHub.`,
 }
 
 // Bouw offerte URL

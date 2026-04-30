@@ -39,8 +39,12 @@ const faqs: FAQItem[] = [
   },
 ]
 
+// Title geoptimaliseerd voor CTR: jaartal + "tarieven/reviews/gratis" zijn de
+// drie hooks die in NL hovenier-SERPs het hoogst scoren (vgl. Trustoo/Werkspot).
+const currentYear = new Date().getFullYear()
+
 const seo = {
-  title: `Hovenier in ${stad.naam} | vergelijk en vind de beste`,
+  title: `Hovenier in ${stad.naam} ${currentYear} | tarieven, reviews & gratis offertes`,
   description: stad.description,
   canonical: `/steden/${stad.slug}`,
 }
