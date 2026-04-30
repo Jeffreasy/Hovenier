@@ -52,7 +52,7 @@ Voor de klusser die het zelf wil doen, hier de materiaallijst voor een 3×4 mete
 
 Zelfbouw materiaal voor een pergola van 3×4 meter kost dus €410 tot €700. Dat is een fractie van wat een vakman rekent, maar je moet wel weten wat je doet. Meer daarover verderop.
 
-Wil je nu al een offerte aanvragen bij een hovenier of timmerman in jouw regio? [Vraag gratis offertes aan via TuinHub](/offertes) en vergelijk prijzen.
+Wil je nu al een offerte aanvragen bij een hovenier of timmerman in jouw regio? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk prijzen.
 
 ## Houtsoorten voor je pergola: welke kies je?
 
@@ -157,4 +157,4 @@ Kies minimaal douglas, liever hardhout. Blauweregen wordt zwaar als de plant vol
 
 Je weet nu wat een pergola met klimplanten kost, welke houtsoort bij je situatie past en welke planten het mooist groeien. De volgende stap? Vergelijk offertes van hoveniers en timmerlieden in je regio. Zo weet je precies wat het in jouw situatie kost.
 
-[Vergelijk gratis offertes via TuinHub](/offertes) en ontvang binnen 48 uur reactie van vakmensen bij jou in de buurt.
+[Vergelijk gratis offertes via TuinHub](/offerte) en ontvang binnen 48 uur reactie van vakmensen bij jou in de buurt.

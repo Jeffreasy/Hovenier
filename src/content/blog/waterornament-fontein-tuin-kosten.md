@@ -122,4 +122,4 @@ Haal de pomp eruit of zet hem uit. Vul het reservoir tot de rand, zodat ijs het 
 
 *Prijzen zijn indicatief en gebaseerd op marktgegevens uit 2025-2026. Hovenier-tarieven zijn vanaf-prijzen en variëren per regio. Vraag altijd meerdere offertes aan voor een actuele prijs.*
 
-Wil je weten wat een waterornament of fontein in jouw tuin kost? [Vraag gratis offertes aan via TuinHub](/offertes) en vergelijk hoveniers bij jou in de buurt.
+Wil je weten wat een waterornament of fontein in jouw tuin kost? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk hoveniers bij jou in de buurt.

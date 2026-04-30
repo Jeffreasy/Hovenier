@@ -118,6 +118,6 @@ Denk aan tuinen met flinke hoogteverschillen (meer dan 25% helling), meerdere ge
 
 Een [goede hovenier](/blog/hoe-kies-je-de-beste-hovenier) helpt je niet alleen met de installatie, maar ook met het optimaliseren van je gazon zodat de robotmaaier zijn werk goed kan doen. Denk aan het egaliseren van oneffenheden, het aanpassen van borders en het verwijderen van obstakels.
 
-Wil je weten wat een hovenier in jouw regio rekent? [Vraag gratis offertes aan](/offertes) via TuinHub en vergelijk prijzen van hoveniers bij jou in de buurt.
+Wil je weten wat een hovenier in jouw regio rekent? [Vraag gratis offertes aan](/offerte) via TuinHub en vergelijk prijzen van hoveniers bij jou in de buurt.
 
 Combineer je een robotmaaier met goed [gazononderhoud](/blog/gazon-onderhoud-zomer-maaien-bemesten), zoals [verticuteren in het voorjaar](/blog/gazon-verticuteren-voorjaar) en bemesten in het najaar? Dan heb je het hele jaar door een gazon waar je blij van wordt. Zonder er zelf achter een maaier voor te hoeven lopen. Voor wie het hele maai- en onderhoudsverhaal liever helemaal kwijt is: [kunstgras laten leggen in de tuin](/blog/kunstgras-leggen-tuin-kosten) is dan een serieus alternatief, met zijn eigen prijskaartje en aandachtspunten.

@@ -48,7 +48,7 @@ Werk je vanuit huis en zoek je een geïsoleerde werkruimte? Dan zit je in een an
 | Beitsen of schilderen (onderhoud) | €55 per uur incl. materiaal |
 | Vergunning gemeente | €100 – €500 |
 
-Wil je nu al een offerte aanvragen bij een hovenier of timmerman in jouw regio? [Vraag gratis offertes aan via TuinHub](/offertes) en vergelijk wat het bij jou kost.
+Wil je nu al een offerte aanvragen bij een hovenier of timmerman in jouw regio? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk wat het bij jou kost.
 
 ## Hout, metaal of kunststof: welk materiaal past bij jou?
 
@@ -164,4 +164,4 @@ Een prefab metalen of kunststof berging plaats je prima zelf. Een houten prefab 
 
 Je weet nu wat een tuinhuisje plaatsen kost, welk materiaal bij jouw situatie past en wanneer je een vergunning nodig hebt. De volgende stap? Vergelijk offertes van hoveniers en timmerlieden in jouw regio. Zo weet je precies wat het in jouw situatie kost, zonder verrassingen achteraf.
 
-[Vergelijk gratis offertes via TuinHub](/offertes) en ontvang binnen 48 uur reactie van vakmensen bij jou in de buurt.
+[Vergelijk gratis offertes via TuinHub](/offerte) en ontvang binnen 48 uur reactie van vakmensen bij jou in de buurt.
