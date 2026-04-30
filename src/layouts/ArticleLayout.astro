@@ -2,8 +2,9 @@
 import BaseLayout from './BaseLayout.astro'
 import CTABlock from '../components/ui/CTABlock.astro'
 import type { SEOMeta, FAQItem } from '../lib/types'
+import type { ParsedHowTo } from '../lib/utils'
 import { formatDate } from '../lib/utils'
-import { faqSchema, breadcrumbSchema } from '../lib/seo'
+import { faqSchema, breadcrumbSchema, howToSchema } from '../lib/seo'
 import { SITE } from '../lib/constants'
 
 interface Props {
@@ -18,6 +19,7 @@ interface Props {
   imageAlt?: string
   relatedPosts?: { title: string; href: string; category: string }[]
   faqs?: FAQItem[]
+  howTo?: ParsedHowTo | null
   slug?: string
 }
 
@@ -32,6 +34,7 @@ const {
   imageAlt = title,
   relatedPosts = [],
   faqs = [],
+  howTo,
   slug,
 } = Astro.props
 
@@ -65,6 +68,11 @@ const articleSchema = JSON.stringify({
 // FAQ schema only if at least one FAQ was parsed from the markdown body
 const faqJsonLd = faqs.length > 0 ? faqSchema(faqs) : undefined
 
+// HowTo schema only if step-by-step instructions were parsed
+const howToJsonLd = howTo && howTo.steps.length >= 2
+  ? howToSchema({ name: title, description, steps: howTo.steps })
+  : undefined
+
 // Breadcrumb: Home > Tuingids > [Title]
 const breadcrumbJsonLd = slug ? breadcrumbSchema([
   { name: 'Home',     href: '/' },
@@ -72,7 +80,7 @@ const breadcrumbJsonLd = slug ? breadcrumbSchema([
   { name: title,      href: `/blog/${slug}` },
 ]) : undefined
 
-const combinedSchema = [articleSchema, faqJsonLd, breadcrumbJsonLd]
+const combinedSchema = [articleSchema, faqJsonLd, howToJsonLd, breadcrumbJsonLd]
   .filter(Boolean)
   .join('\n')
 ---

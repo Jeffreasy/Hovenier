@@ -128,10 +128,16 @@ export function parseFAQs(markdown: string): FAQItem[] {
       continue
     }
 
-    // New FAQ question
+    // New FAQ question: `### Question` (H3) or `**Question?**` (bold paragraph)
     if (/^###\s+/.test(line)) {
       flush()
       currentQuestion = line.replace(/^###\s+/, '').trim()
+      continue
+    }
+    const boldQ = line.match(/^\*\*(.+?\?)\*\*\s*$/)
+    if (boldQ) {
+      flush()
+      currentQuestion = boldQ[1].trim()
       continue
     }
 
@@ -145,4 +151,93 @@ export function parseFAQs(markdown: string): FAQItem[] {
   flush()
 
   return faqs
+}
+
+// ─── HowTo parser (extract step-by-step instructions from markdown body) ────
+
+export interface ParsedHowTo {
+  sectionTitle: string
+  steps: { name: string; text: string }[]
+}
+
+export function parseHowToSteps(markdown: string): ParsedHowTo | null {
+  if (!markdown) return null
+
+  const lines = markdown.split('\n')
+
+  // Pattern 1: `## Stap N: Title` as H2 headers
+  const h2Steps: { name: string; textLines: string[] }[] = []
+  let activeH2Step: { name: string; textLines: string[] } | null = null
+
+  for (const line of lines) {
+    const h2Match = line.match(/^##\s+Stap\s+\d+[:.]\s*(.+)/i)
+    if (h2Match) {
+      if (activeH2Step) h2Steps.push(activeH2Step)
+      activeH2Step = { name: h2Match[1].trim(), textLines: [] }
+      continue
+    }
+    if (activeH2Step) {
+      if (/^##\s+/.test(line) && !/^##\s+Stap\s+\d+/i.test(line)) {
+        h2Steps.push(activeH2Step)
+        activeH2Step = null
+        continue
+      }
+      if (line.trim()) activeH2Step.textLines.push(line.trim())
+    }
+  }
+  if (activeH2Step) h2Steps.push(activeH2Step)
+
+  if (h2Steps.length >= 2) {
+    return {
+      sectionTitle: 'Stappenplan',
+      steps: h2Steps.map((s) => ({
+        name: s.name,
+        text: s.textLines.join(' ').replace(/\s+/g, ' ').trim(),
+      })),
+    }
+  }
+
+  // Pattern 2: `## Stappenplan: ...` H2 with numbered steps inline
+  // Handles: `**Stap N: Title.** text`, `**N. Title.** text`, `N. **Title.** text`
+  let inSection = false
+  let sectionTitle = ''
+  const inlineSteps: { name: string; text: string }[] = []
+
+  for (const line of lines) {
+    const sectionMatch = line.match(/^##\s+(Stappenplan[:\s].+)/i)
+    if (sectionMatch) {
+      inSection = true
+      sectionTitle = sectionMatch[1].replace(/^Stappenplan[:\s]+/i, '').trim()
+      continue
+    }
+    if (inSection && /^##\s+/.test(line) && !/^##\s+Stappenplan/i.test(line)) {
+      break
+    }
+    if (!inSection) continue
+
+    // `**Stap N: Title.** text` or `**N. Title.** text`
+    const boldFirst = line.match(/^\*\*(?:Stap\s+)?\d+[.:]\s*(.+?)\.\*\*\s*(.*)/i)
+    if (boldFirst) {
+      inlineSteps.push({
+        name: boldFirst[1].trim(),
+        text: boldFirst[2].trim(),
+      })
+      continue
+    }
+
+    // `N. **Title.** text` (numbered list with bold title)
+    const listBold = line.match(/^\d+\.\s+\*\*(.+?)\.\*\*\s*(.*)/i)
+    if (listBold) {
+      inlineSteps.push({
+        name: listBold[1].trim(),
+        text: listBold[2].trim(),
+      })
+    }
+  }
+
+  if (inlineSteps.length >= 2) {
+    return { sectionTitle: sectionTitle || 'Stappenplan', steps: inlineSteps }
+  }
+
+  return null
 }

@@ -1,7 +1,7 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro'
 import { getCollection } from 'astro:content'
-import { getReadingTime, parseFAQs } from '../../lib/utils'
+import { getReadingTime, parseFAQs, parseHowToSteps } from '../../lib/utils'
 import { render } from 'astro:content'
 
 export const prerender = true
@@ -20,6 +20,7 @@ const { Content, headings } = await render(post)
 const slug = post.id.replace(/\.md$/, '')
 const readingTime = getReadingTime(post.body ?? '')
 const faqs = parseFAQs(post.body ?? '')
+const howTo = parseHowToSteps(post.body ?? '')
 
 const seo = {
   title: post.data.title,
@@ -33,6 +34,7 @@ const seo = {
   {seo}
   {slug}
   {faqs}
+  {howTo}
   title={post.data.title}
   description={post.data.description}
   publishDate={post.data.publishDate}
