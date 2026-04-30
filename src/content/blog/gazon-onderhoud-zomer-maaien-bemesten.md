@@ -34,7 +34,7 @@ Staat je gazon grotendeels in de schaduw? Stel de maaihoogte dan in op 6 tot 8 c
 | Robotmaaier | €400 tot €4.000 | Vanaf 200 m², onbemand |
 | Benzine maaier | €200 tot €800 | Grote gazons (meer dan 500 m²) |
 
-Een robotmaaier is een flinke investering, maar voor grotere gazons kan het de moeite waard zijn. Het gras wordt continu op lengte gehouden, waardoor het dichter groeit.
+Een robotmaaier is een flinke investering, maar voor grotere gazons kan het de moeite waard zijn. Het gras wordt continu op lengte gehouden, waardoor het dichter groeit. Wil je dieper ingaan op merken en modellen? Lees dan de uitgebreide vergelijking van [robotmaaier kosten en populaire merken](/blog/gazon-robotmaaier-kosten-merken).
 
 ## Gazon bemesten: welke meststof, wanneer en hoeveel?
 
@@ -99,7 +99,7 @@ Bij warm weer (boven 20°C) heeft je gazon 2 tot 3 keer per week water nodig. Ho
 - **Zandgrond**: 10 tot 15 liter per m² per beurt
 - **Kleigrond**: 15 tot 20 liter per m² per beurt
 
-Sproei altijd 's ochtends vroeg. Dan verdampt er minder water en heeft het gras de hele dag om op te drogen, wat schimmel voorkomt.
+Sproei altijd 's ochtends vroeg. Dan verdampt er minder water en heeft het gras de hele dag om op te drogen, wat schimmel voorkomt. Wie een groot gazon vaak moet beregenen, kan overwegen om een [bewateringssysteem in de tuin aan te laten leggen](/blog/bewateringssysteem-tuin-aanleggen-kosten); op de lange termijn bespaart dat tijd én water.
 
 ### Sproeiverbod: wat mag wel en niet?
 
@@ -137,7 +137,7 @@ Goed om te weten: gras gaat bij langdurige droogte in een soort slaapstand. Het 
 | Kantsnijden | €0,50 tot €0,75 per meter |
 | Uurtarief hovenier | €35 tot €55 per uur |
 
-Voor een gemiddeld gazon van 100 m² ben je aan een hovenier per beurt €25 tot €30 kwijt voor alleen maaien. Wil je het volledige seizoensonderhoud uitbesteden (verticuteren, bemesten, maaien), dan loopt dat op. Zeker bij een groter gazon kan het slim zijn om offertes te vergelijken.
+Voor een gemiddeld gazon van 100 m² ben je aan een hovenier per beurt €25 tot €30 kwijt voor alleen maaien. Wil je het volledige seizoensonderhoud uitbesteden (verticuteren, bemesten, maaien), dan loopt dat op. Zeker bij een groter gazon kan het slim zijn om offertes te vergelijken. Wat een hovenier precies rekent en welke posten je terug zou moeten zien op de offerte, lees je in onze gids over [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
 ### Offerte aanvragen
 

@@ -114,10 +114,10 @@ Op vijf jaar bekeken wel. Een budget-robotmaaier voor 500 m² kost je in totaal 
 
 Een robotmaaier installeer je in de meeste gevallen prima zelf. Maar er zijn situaties waarin een professional het verschil maakt.
 
-Denk aan tuinen met flinke hoogteverschillen (meer dan 25% helling), meerdere gescheiden grasperken die via smalle doorgangen verbonden zijn, of een combinatie van gazon, borders en bomen die een complex draadpatroon vereist. Ook als je twijfelt over welk model geschikt is voor jouw specifieke situatie, kan een hovenier of robotmaaier-dealer je gericht adviseren.
+Denk aan tuinen met flinke hoogteverschillen (meer dan 25% helling), meerdere gescheiden grasperken die via smalle doorgangen verbonden zijn, of een combinatie van gazon, borders en bomen die een complex draadpatroon vereist. Ook als je twijfelt over welk model geschikt is voor jouw specifieke situatie, kan een hovenier of robotmaaier-dealer je gericht adviseren. Wat zo'n hovenier per uur rekent en welke posten je terug moet zien in de offerte, lees je in onze gids over [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
 Een [goede hovenier](/blog/hoe-kies-je-de-beste-hovenier) helpt je niet alleen met de installatie, maar ook met het optimaliseren van je gazon zodat de robotmaaier zijn werk goed kan doen. Denk aan het egaliseren van oneffenheden, het aanpassen van borders en het verwijderen van obstakels.
 
 Wil je weten wat een hovenier in jouw regio rekent? [Vraag gratis offertes aan](/offertes) via TuinHub en vergelijk prijzen van hoveniers bij jou in de buurt.
 
-Combineer je een robotmaaier met goed [gazononderhoud](/blog/gazon-onderhoud-zomer-maaien-bemesten), zoals verticuteren in het voorjaar en bemesten in het najaar? Dan heb je het hele jaar door een gazon waar je blij van wordt. Zonder er zelf achter een maaier voor te hoeven lopen.
+Combineer je een robotmaaier met goed [gazononderhoud](/blog/gazon-onderhoud-zomer-maaien-bemesten), zoals [verticuteren in het voorjaar](/blog/gazon-verticuteren-voorjaar) en bemesten in het najaar? Dan heb je het hele jaar door een gazon waar je blij van wordt. Zonder er zelf achter een maaier voor te hoeven lopen. Voor wie het hele maai- en onderhoudsverhaal liever helemaal kwijt is: [kunstgras laten leggen in de tuin](/blog/kunstgras-leggen-tuin-kosten) is dan een serieus alternatief, met zijn eigen prijskaartje en aandachtspunten.

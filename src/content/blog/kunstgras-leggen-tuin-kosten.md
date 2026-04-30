@@ -42,7 +42,7 @@ Een specialist rekent voor een voorbeeldproject van 20 m² ongeveer €720 totaa
 
 [Bron: Hovenier.nl, 2026] [Bron: Werkspot, 2026] [Bron: Slimster, 2024]
 
-De materiaalprijs varieert sterk: van €9,95 per m² voor een budget grastapijt tot €54,95 per m² voor een premium mat van een speciaalzaak [Bron: Kunstgrasgigant, 2026] [Bron: Kunstgrashuis, 2026]. Het gemiddelde voor een fatsoenlijke tuinmat ligt rond €27,50 per m² [Bron: Werkspot, 2026]. Hoveniers rekenen in 2026 €40 tot €60 per uur, en een specialist legt tot 100 m² in één dag [Bron: Slimster, 2024] [Bron: Werkspot, 2026].
+De materiaalprijs varieert sterk: van €9,95 per m² voor een budget grastapijt tot €54,95 per m² voor een premium mat van een speciaalzaak [Bron: Kunstgrasgigant, 2026] [Bron: Kunstgrashuis, 2026]. Het gemiddelde voor een fatsoenlijke tuinmat ligt rond €27,50 per m² [Bron: Werkspot, 2026]. Hoveniers rekenen in 2026 €40 tot €60 per uur, en een specialist legt tot 100 m² in één dag [Bron: Slimster, 2024] [Bron: Werkspot, 2026]. Voor een bredere kijk op wat hoveniers in jouw regio rekenen, zie onze gids over [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
 ### Specialist-tarieven gestaffeld
 
@@ -136,7 +136,7 @@ Voor 50 m² echt gras betekent dat €500 tot €750 per jaar aan benzine, kunst
 
 Over tien jaar is kunstgras dus simpelweg goedkoper dan echt gras dat je netjes onderhoudt. Een middenklasse mat van €2.500 tot €5.000 totaal staat tegenover €5.000 tot €8.100 voor echt gras met regulier onderhoud. Het verschil financiert ruim een nieuwe pergola of een fatsoenlijke [overkapping](/blog/overkapping-veranda-bouwen-kosten/).
 
-Maar pas op met deze rekensom. Hij geldt alleen als je echt gras netjes onderhoudt. Wie z'n gazon laat verloederen tot een mosveld, geeft natuurlijk geen €750 per jaar uit. Dan vergelijk je een onderhouden kunstgras met een verwaarloosd echt gazon, en is de keuze meer een gevoelskwestie dan een rekensom. Wie de echte rekensom wil maken op echt gras, vindt in onze gids over [gazon-onderhoud in de zomer](/blog/gazon-onderhoud-zomer-maaien-bemesten/) wat maaien, bemesten en sproeien werkelijk kosten.
+Maar pas op met deze rekensom. Hij geldt alleen als je echt gras netjes onderhoudt. Wie z'n gazon laat verloederen tot een mosveld, geeft natuurlijk geen €750 per jaar uit. Dan vergelijk je een onderhouden kunstgras met een verwaarloosd echt gazon, en is de keuze meer een gevoelskwestie dan een rekensom. Wie de echte rekensom wil maken op echt gras, vindt in onze gids over [gazon-onderhoud in de zomer](/blog/gazon-onderhoud-zomer-maaien-bemesten/) wat maaien, bemesten en sproeien werkelijk kosten. En wie het maaien zelf niet ziet zitten, kan de rekensom voor [een robotmaaier en de bijhorende kosten](/blog/gazon-robotmaaier-kosten-merken) ernaast leggen voor je beslist.
 
 ## Zelf leggen of door een specialist?
 
@@ -209,7 +209,7 @@ Eis bij hond in huis: een PU- of drainage-backing met volledig doorlatend opperv
 
 Kunstgras is geen onschuldige vloer. 43% van de Nederlanders gaf in een peiling uit april 2024 aan dat kunstgras in particuliere tuinen verboden moet worden [Bron: Vakblad De Hovenier, 2024]. De Stichting Steenbreek hanteert een richtlijn voor tuinen groter dan 15 m²: maximaal 20% verharding en 80% groen, waarbij kunstgras tot verharding wordt gerekend [Bron: Stichting Steenbreek, 2026]. Dat is geen wet, maar veel gemeentes baseren beleid en subsidies hierop.
 
-Wat dit voor jou betekent: een tuin met 100% kunstgras telt voor je gemeente waarschijnlijk als verstening. Bij sommige gemeentes zijn er subsidies om verharding (en dus ook kunstgras) te vervangen door echt groen. Andere gemeentes zien kunstgras als acceptabel zolang er ergens nog beplanting is. Check bij twijfel je gemeente.
+Wat dit voor jou betekent: een tuin met 100% kunstgras telt voor je gemeente waarschijnlijk als verstening. Bij sommige gemeentes zijn er subsidies om verharding (en dus ook kunstgras) te vervangen door echt groen. Andere gemeentes zien kunstgras als acceptabel zolang er ergens nog beplanting is. Check bij twijfel je gemeente. Wie kunstgras combineert met een terras of pad, vindt de prijzen daarvoor terug in onze gids over [bestrating laten leggen en de kosten per tegel](/blog/bestrating-laten-leggen-kosten-tegels).
 
 > **Let op:** Het EU-verbod op microplastic-infill geldt voor sportvelden met rubbergranulaat, niet voor particulier kunstgras in de tuin. Particulier kunstgras heeft meestal géén rubbergranulaat-infill maar instrooizand. Niet verwarren met de discussie over voetbalvelden.
 
@@ -263,6 +263,6 @@ Ja, mits je echt gras ook netjes onderhoudt. Voor 50 m² kost echt gras €5.000
 
 Kunstgras leggen in de tuin loont als je drie dingen waardeert: tijdwinst, een tuin die altijd af is, en een investering die over tien jaar goedkoper uitvalt dan een goed onderhouden gazon. Reken op €30 tot €70 per m² inclusief leggen, en kies voor de zoete plek in de middenklasse (€26 tot €35 per m² materiaal) tenzij je hond drainage-backing nodig heeft, dan loont premium.
 
-Het loont minder als je een vol-zuid terras hebt zonder schaduw, een tuin onder grote bomen, of als je gemeente actief vergroening stimuleert en je daar in mee wilt. Voor wie twijfelt: een tussenoplossing van een [siertuin border met vaste planten](/blog/siertuin-border-ontwerp-beplantingsplan-kosten/) rond een kleiner kunstgras-vlak combineert het beste van twee werelden.
+Het loont minder als je een vol-zuid terras hebt zonder schaduw, een tuin onder grote bomen, of als je gemeente actief vergroening stimuleert en je daar in mee wilt. Voor wie twijfelt: een tussenoplossing van een [siertuin border met vaste planten](/blog/siertuin-border-ontwerp-beplantingsplan-kosten/) rond een kleiner kunstgras-vlak combineert het beste van twee werelden. Twijfel je nog of kunstgras überhaupt het juiste startpunt is en denk je breder na over je tuin? Bekijk dan eerst onze gids over [een tuin renoveren of opknappen en de bijhorende kosten](/blog/tuin-renoveren-opknappen-kosten).
 
 Wil je een offerte op maat voor kunstgras leggen in jouw tuin? [Vraag vrijblijvend een offerte aan via TuinHub](/offerte) en vergelijk lokale specialisten met ervaring in jouw type tuin en bodem.

@@ -31,7 +31,7 @@ Verticuteer ook nooit bij droogte of aanhoudende hitte. Dan is het gras al gestr
 
 Voor je verticuteert, maai je het gazon een keer op lage hoogte. Vier à vijf centimeter is goed. Zo werkt de verticuteermachine beter en pakt hij het vilt makkelijker.
 
-Zet de grasmaaier bij de állereerste beurt op zes centimeter; je wilt de mat niet direct in de stress laten schieten. Verlaag daarna geleidelijk bij elke volgende maaibeurt.
+Zet de grasmaaier bij de állereerste beurt op zes centimeter; je wilt de mat niet direct in de stress laten schieten. Verlaag daarna geleidelijk bij elke volgende maaibeurt. Wie het maaien in de zomer wil automatiseren, kan eens kijken naar de [verschillende soorten robotmaaiers en hun prijzen](/blog/gazon-robotmaaier-kosten-merken).
 
 ## Stap voor stap: zo verticuteer je je gazon
 
@@ -52,7 +52,7 @@ Zet de grasmaaier bij de állereerste beurt op zes centimeter; je wilt de mat ni
 
 De eerste dagen ziet het gazon er somber uit. Kale strepen, geelgrijs restgras. Dat is normaal. Na een week begint het gras bij te trekken. Na twee à drie weken is het verschil al goed zichtbaar.
 
-Bewater de komende periode als het droog is, want zaad en gras hebben water nodig om te herstellen en kiemen. Maaien mag weer zodra het nieuwe gras een centimeter of zeven staat.
+Bewater de komende periode als het droog is, want zaad en gras hebben water nodig om te herstellen en kiemen. Maaien mag weer zodra het nieuwe gras een centimeter of zeven staat. Vanaf mei pak je dan het reguliere [gazononderhoud in de zomer met maaien en bemesten](/blog/gazon-onderhoud-zomer-maaien-bemesten) weer op.
 
 ## Hoe vaak moet je verticuteren?
 
@@ -73,7 +73,7 @@ Een hovenier rekent voor verticuteren van 100 m² doorgaans tussen de 100 en 140
 
 ## Wat kost een hovenier voor gazononderhoud?
 
-Het uurtarief van een hovenier in Nederland ligt gemiddeld op 44 euro (excl. btw), met een bandbreedte van 35 tot 75 euro afhankelijk van ervaring en regio. Bovenop het uurloon komen voorrijkosten en materiaal.
+Het uurtarief van een hovenier in Nederland ligt gemiddeld op 44 euro (excl. btw), met een bandbreedte van 35 tot 75 euro afhankelijk van ervaring en regio. Bovenop het uurloon komen voorrijkosten en materiaal. Een complete uitsplitsing van [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur) helpt je inschatten of een offerte realistisch is.
 
 Voor een compleet lentebeurt voor een gazon van 80 tot 120 m², inclusief verticuteren, bijzaaien en bemesting, betaal je al snel 200 tot 350 euro. Dat is inclusief materiaal en arbeidskosten.
 
