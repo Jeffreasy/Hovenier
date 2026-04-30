@@ -25,7 +25,7 @@ De prijs is nooit alleen de bestrating. De totaalkosten zijn opgebouwd uit:
 - Drainage of afwatering: 150 tot 500 euro per project.
 - Voorrijkosten: 0,25 tot 0,40 euro per kilometer.
 
-Een stratenmaker rekent in 2026 een uurtarief van 35 tot 65 euro. Voor een oprit van 50 m² is hij ongeveer 5 werkdagen kwijt. Reken daar bovenop een eventuele uitritvergunning. Die kan tussen de 49 en 421 euro liggen, afhankelijk van je gemeente.
+Een stratenmaker rekent in 2026 een uurtarief van 35 tot 65 euro. Een gedetailleerd overzicht van [wat hoveniers, ZZP-ers en stratenmakers per uur kosten](/blog/hovenier-tarieven-kosten-per-uur) helpt bij het beoordelen van offertes. Voor een oprit van 50 m² is hij ongeveer 5 werkdagen kwijt. Reken daar bovenop een eventuele uitritvergunning. Die kan tussen de 49 en 421 euro liggen, afhankelijk van je gemeente.
 
 Wat je niet vergeet bij de begroting: kies je voor een visgraat-patroon, dan komt er 5 tot 15 euro per m² toeslag bij omdat het meer zaagwerk en arbeid kost. Wil je halverwege de aanleg toch een ander patroon, dan betaal je dat dubbel.
 
@@ -57,7 +57,7 @@ De materiaalkeuze bepaalt 60 procent van je tevredenheid over de jaren. Hieronde
 
 **Asfalt** zit op 45 tot 150 euro per m² en heeft een levensduur van 15 tot 25 jaar. Voor lange opritten op het platteland is asfalt nog steeds een goede prijs-kwaliteit-keuze, maar bij stadshuizen zie je het zelden.
 
-**Grind** is met 25 tot 110 euro per m² de goedkoopste optie, maar reken op flink onderhoud: bijvullen, schoffelen, en bij elke regenbui glijdt er een laag de straat op. Voor woonhuizen waar dagelijks auto's keren, zelden de juiste keuze.
+**Grind** is met 25 tot 110 euro per m² de goedkoopste optie, maar reken op flink onderhoud: bijvullen, schoffelen, en bij elke regenbui glijdt er een laag de straat op. Voor woonhuizen waar dagelijks auto's keren, zelden de juiste keuze. De prijzen per grindsoort en welke fundering je nodig hebt, lees je in de gids over [grind aanleggen in de tuin met worteldoek en opsluitbanden](/blog/grind-tuin-aanleggen-kosten).
 
 **Grasdallen** zijn waterdoorlatend, kosten 30 tot 80 euro per m² en zijn populair geworden door de hemelwaterregels. Ze hebben wel maaibeurten nodig.
 

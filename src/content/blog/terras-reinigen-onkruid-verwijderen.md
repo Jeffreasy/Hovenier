@@ -103,7 +103,7 @@ Je kunt je terras nog zo mooi schoonmaken. Zolang er onkruid tussen de voegen gr
 
 ### Het eerlijke verhaal
 
-Onkruid in voegen is nooit helemaal te voorkomen. Zelfs de beste methode vereist herhaling. Wie moeite heeft met het bijhouden, doet er goed aan om twee keer per jaar de voegen professioneel te laten reinigen. Duurder op korte termijn, maar minder frustratie op de lange.
+Onkruid in voegen is nooit helemaal te voorkomen. Zelfs de beste methode vereist herhaling. Wie moeite heeft met het bijhouden, doet er goed aan om twee keer per jaar de voegen professioneel te laten reinigen. Duurder op korte termijn, maar minder frustratie op de lange. Voor een uitgebreide aanpak van [onkruid tussen tegels en grind structureel weghouden](/blog/onkruid-bestrijden-tuin-tegels) staat een aparte gids klaar.
 
 ## Wat kost terrasreiniging? DIY vs. professional vergelijken
 
@@ -132,7 +132,7 @@ Totaalkosten zelf doen: **€30 – €250**, afhankelijk van wat je al in huis 
 
 Professionele terrasreiniging kost €3 – €8 per m² afhankelijk van methode en tegeltype. Natuursteen reinigen is duurder: €5 – €9 per m². Wil je het terras daarna beschermen tegen nieuwe aanslag? Nabehandeling met impregneren kost €0,50 – €2 per m² extra.
 
-Het uurtarief van een professionele terrasreiniger ligt op €40 – €80. Voor een terras van 50 m² is een professional doorgaans 2 tot 3 uur bezig.
+Het uurtarief van een professionele terrasreiniger ligt op €40 – €80. Een vergelijking van [tarieven van hoveniers en vakmannen per uur](/blog/hovenier-tarieven-kosten-per-uur) helpt bij het inschatten van offertes. Voor een terras van 50 m² is een professional doorgaans 2 tot 3 uur bezig.
 
 *Alle prijzen inclusief BTW. Prijzen 2025, onder voorbehoud van prijswijzigingen.*
 
@@ -154,7 +154,7 @@ Voorkomen is minder werk dan genezen. Een paar dingen die echt helpen.
 
 **Gebruik onkruidwerend voegzand.** Na het uitkrabben van de voegen vul je ze opnieuw met polymeer voegzand. Dit hardt licht uit en maakt het voor zaadjes moeilijker om te kiemen. Geen garantie, maar het scheelt flink.
 
-**Zorg voor goede afwatering.** Stilstaand water is de grootste vriend van groene aanslag. Controleer of je terras voldoende afschot heeft, minimaal 1 cm per meter, van het huis af. Blijft er na een regenbui lang water staan op bepaalde plekken? Dan is het slim om die tegels opnieuw te laten leggen.
+**Zorg voor goede afwatering.** Stilstaand water is de grootste vriend van groene aanslag. Controleer of je terras voldoende afschot heeft, minimaal 1 cm per meter, van het huis af. Blijft er na een regenbui lang water staan op bepaalde plekken? Dan is het slim om die tegels opnieuw te laten leggen. Wat dat in 2026 kost per tegeltype lees je in de gids over [tegels en bestrating laten leggen met arbeids- en materiaalprijzen](/blog/bestrating-laten-leggen-kosten-tegels).
 
 **Veeg regelmatig.** Klinkt simpel, is het ook. Bladeren en vuil dat op het terras blijft liggen houdt vocht vast. Dat vocht trekt mos aan. Een keer per week vegen in het najaar scheelt je een flinke schoonmaakbeurt in het voorjaar.
 

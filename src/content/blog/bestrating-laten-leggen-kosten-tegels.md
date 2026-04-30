@@ -74,7 +74,7 @@ Graniet en flagstone ogen hoogwaardig en gaan een leven lang mee. Materiaalprijs
 
 ### Grind en split
 
-De goedkoopste optie, maar ook met nadelen: grind verspringt bij gebruik, en je hebt een goede afbakening nodig. Handig voor kleine tussenruimtes of decoratieve vlakken, minder geschikt als hoofdverharding van een oprit.
+De goedkoopste optie, maar ook met nadelen: grind verspringt bij gebruik, en je hebt een goede afbakening nodig. Handig voor kleine tussenruimtes of decoratieve vlakken, minder geschikt als hoofdverharding van een oprit. Wil je een complete [grindtuin met de juiste fundering en worteldoek aanleggen](/blog/grind-tuin-aanleggen-kosten), dan zet de aparte gids de aanpak en kosten op een rij.
 
 ## De volledige kostenopbouw: materiaal, arbeid en bijkomende kosten
 
@@ -93,7 +93,7 @@ Uitgraven is bijna altijd nodig. Reken op **€10–€25 per m²** extra als er
 
 ### Wat verdient een stratenmaker?
 
-Arbeidskosten voor een stratenmaker liggen op **€30–€50 per m²** voor gewone projecten, of **€30–€60 per uur**. Een vakman legt gemiddeld ±3 m² per uur bij een eenvoudig patroon. Verwacht geen €15/m². Dat soort aanbiedingen zie je wel voorbijkomen, maar dan wordt er vaak geknabbeld op de fundering of het voegwerk.
+Arbeidskosten voor een stratenmaker liggen op **€30–€50 per m²** voor gewone projecten, of **€30–€60 per uur**. Voor een breder beeld van [wat hoveniers en vakmannen per uur rekenen in 2026](/blog/hovenier-tarieven-kosten-per-uur) staat een aparte gids op TuinHub. Een vakman legt gemiddeld ±3 m² per uur bij een eenvoudig patroon. Verwacht geen €15/m². Dat soort aanbiedingen zie je wel voorbijkomen, maar dan wordt er vaak geknabbeld op de fundering of het voegwerk.
 
 ## Oprit, terras of tuinpad: wat zijn de verschillen?
 
@@ -101,9 +101,9 @@ Niet elke toepassing vraagt om hetzelfde.
 
 **Terras**: de verharding hoeft geen auto's te dragen. Je kunt kiezen voor lichtere of meer decoratieve tegels. Geen extra funderingseisen.
 
-**Oprit**: een auto weegt 1.000–2.500 kg. De grond moet zwaarder gefundeerd worden: minimaal 20 cm verdicht zandbed, en je materiaal moet minimaal 8–10 cm dik zijn. Dat kost **€5–€15 per m² extra** ten opzichte van een terras.
+**Oprit**: een auto weegt 1.000–2.500 kg. De grond moet zwaarder gefundeerd worden: minimaal 20 cm verdicht zandbed, en je materiaal moet minimaal 8–10 cm dik zijn. Dat kost **€5–€15 per m² extra** ten opzichte van een terras. Voor de complete uitwerking van [een oprit aanleggen met materialen, vergunning en hemelwaterregels](/blog/oprit-aanleggen-kosten-materialen) ligt een aparte gids klaar.
 
-**Tuinpad**: een smal pad heeft relatief veel kantopsluiters nodig in verhouding tot het oppervlak. Reken op **€3–€8 per m² extra** door die kantopsluiters. Qua verharding zelf is het eenvoudiger dan een oprit.
+**Tuinpad**: een smal pad heeft relatief veel kantopsluiters nodig in verhouding tot het oppervlak. Reken op **€3–€8 per m² extra** door die kantopsluiters. Qua verharding zelf is het eenvoudiger dan een oprit. Welk materiaal bij jouw [tuinpad past op basis van prijs, onderhoud en uitstraling](/blog/tuinpad-aanleggen-materialen-kosten) lees je in de losse padgids.
 
 ## Vergunning, seizoen en planning: wat je vooraf moet regelen
 
@@ -143,7 +143,7 @@ Dat is een veelgehoorde ervaring. Een slecht gefundeerde verharding leidt tot ve
 - Aanpassen van hellingen of waterafvoer
 - Keramische of natuurstenen tegels (breekbaarder, precisiewerk)
 
-Bij de grotere projecten weeg je de besparing af tegen het risico op fouten. Lees ook onze tips over [onkruid verwijderen uit tegels](/blog/onkruid-bestrijden-tuin-tegels), want ook de mooiste bestrating heeft daarna onderhoud nodig.
+Bij de grotere projecten weeg je de besparing af tegen het risico op fouten. Lees ook onze tips over [onkruid verwijderen uit tegels](/blog/onkruid-bestrijden-tuin-tegels) en [hoe je tegels en voegen na de winter weer schoon krijgt](/blog/terras-reinigen-onkruid-verwijderen), want ook de mooiste bestrating heeft daarna onderhoud nodig.
 
 ## Klaar om offertes te vergelijken?
 

@@ -25,7 +25,7 @@ Iets duurder dan beton (€20 tot €30 per m²), maar ze hebben een warmere, na
 
 ### Grind en split
 
-De goedkoopste optie qua materiaal: €7 tot €10 per m². Grind is snel gelegd en geeft een landelijke uitstraling. Maar er zitten nadelen aan. Zoals een forumgebruiker het treffend zegt: "Ik kan je vertellen dat het een zware wandeling wordt, evenals een fiets door zo'n laag grind duwen." Zonder goede afboording en worteldoek groeit er ook snel onkruid doorheen. Een grindlaag van 5 tot 8 cm dik is ideaal.
+De goedkoopste optie qua materiaal: €7 tot €10 per m². Grind is snel gelegd en geeft een landelijke uitstraling. Maar er zitten nadelen aan. Zoals een forumgebruiker het treffend zegt: "Ik kan je vertellen dat het een zware wandeling wordt, evenals een fiets door zo'n laag grind duwen." Zonder goede afboording en worteldoek groeit er ook snel onkruid doorheen. Een grindlaag van 5 tot 8 cm dik is ideaal. De complete kostenopbouw en grindsoorten lees je in de aparte gids over [een grindtuin aanleggen met worteldoek en opsluitbanden](/blog/grind-tuin-aanleggen-kosten).
 
 ### Natuursteen
 
@@ -70,7 +70,7 @@ De totaalkosten hangen af van je materiaalkeuze, de staat van de ondergrond en o
 
 ### Arbeidskosten
 
-Een stratenmaker rekent gemiddeld €15 tot €40 per m² aan arbeid, of €25 tot €40 per uur. Schakel je een hovenier in voor het complete plaatje (inclusief beplanting en ontwerp), dan betaal je €40 tot €60 per uur.
+Een stratenmaker rekent gemiddeld €15 tot €40 per m² aan arbeid, of €25 tot €40 per uur. Schakel je een hovenier in voor het complete plaatje (inclusief beplanting en ontwerp), dan betaal je €40 tot €60 per uur. Wat [hoveniers en stratenmakers per uur kosten in 2026](/blog/hovenier-tarieven-kosten-per-uur) staat in een uitgesplitste tarievengids.
 
 ### Bijkomende kosten waar je rekening mee moet houden
 
@@ -149,7 +149,7 @@ Het mooiste tuinpad is weinig waard als je er elk weekend mee bezig bent. Hieron
 
 ## Volgende stap
 
-Een tuinpad is een van die klussen waar je jarenlang plezier van hebt als het goed wordt aangelegd. Wil je het zelf doen? Met het stappenplan hierboven en de juiste materialen kom je ver. Liever uitbesteden? Dan loont het om meerdere offertes te vergelijken. Prijzen variëren per regio en per vakman.
+Een tuinpad is een van die klussen waar je jarenlang plezier van hebt als het goed wordt aangelegd. Wil je het zelf doen? Met het stappenplan hierboven en de juiste materialen kom je ver. Liever uitbesteden? Dan loont het om meerdere offertes te vergelijken. Prijzen variëren per regio en per vakman. Wil je het pad ook 's avonds gebruiken? Combineer de aanleg meteen met [verlichting langs het pad plaatsen, met kosten per type lamp](/blog/tuinverlichting-aanleggen-kosten).
 
 [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk stratenmakers en hoveniers bij jou in de buurt.
 
