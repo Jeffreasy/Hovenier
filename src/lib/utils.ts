@@ -197,41 +197,60 @@ export function parseHowToSteps(markdown: string): ParsedHowTo | null {
     }
   }
 
-  // Pattern 2: `## Stappenplan: ...` H2 with numbered steps inline
-  // Handles: `**Stap N: Title.** text`, `**N. Title.** text`, `N. **Title.** text`
+  // Pattern 2: Section heading with "stappenplan" or "stap voor stap" (H2/H3),
+  // followed by numbered steps in various inline formats
   let inSection = false
   let sectionTitle = ''
+  let sectionLevel = 2
   const inlineSteps: { name: string; text: string }[] = []
 
   for (const line of lines) {
-    const sectionMatch = line.match(/^##\s+(Stappenplan[:\s].+)/i)
+    const sectionMatch = line.match(/^(#{2,3})\s+(.*(?:stappenplan|stap voor stap).*)/i)
     if (sectionMatch) {
+      if (inSection && inlineSteps.length >= 2) break
+      inlineSteps.length = 0
       inSection = true
-      sectionTitle = sectionMatch[1].replace(/^Stappenplan[:\s]+/i, '').trim()
+      sectionLevel = sectionMatch[1].length
+      sectionTitle = sectionMatch[2]
+        .replace(/stappenplan[:\s]*/gi, '')
+        .replace(/stap voor stap[:\s]*/gi, '')
+        .replace(/[:\s]+$/g, '')
+        .trim()
       continue
     }
-    if (inSection && /^##\s+/.test(line) && !/^##\s+Stappenplan/i.test(line)) {
-      break
+    if (inSection) {
+      const headingMatch = line.match(/^(#{1,6})\s+/)
+      if (headingMatch && headingMatch[1].length <= sectionLevel) {
+        break
+      }
     }
     if (!inSection) continue
 
-    // `**Stap N: Title.** text` or `**N. Title.** text`
+    // A: `**Stap N: Title.** text` or `**N. Title.** text`
     const boldFirst = line.match(/^\*\*(?:Stap\s+)?\d+[.:]\s*(.+?)\.\*\*\s*(.*)/i)
     if (boldFirst) {
-      inlineSteps.push({
-        name: boldFirst[1].trim(),
-        text: boldFirst[2].trim(),
-      })
+      inlineSteps.push({ name: boldFirst[1].trim(), text: boldFirst[2].trim() })
       continue
     }
 
-    // `N. **Title.** text` (numbered list with bold title)
+    // B: `N. **Title.** text` (ordered list with bold title)
     const listBold = line.match(/^\d+\.\s+\*\*(.+?)\.\*\*\s*(.*)/i)
     if (listBold) {
-      inlineSteps.push({
-        name: listBold[1].trim(),
-        text: listBold[2].trim(),
-      })
+      inlineSteps.push({ name: listBold[1].trim(), text: listBold[2].trim() })
+      continue
+    }
+
+    // C: `N. text` (plain ordered list — first sentence becomes name)
+    const plainList = line.match(/^\d+\.\s+(.+)/)
+    if (plainList) {
+      const fullText = plainList[1].trim()
+      const sentenceEnd = fullText.match(/^(.+?\.)\s+(.+)/)
+      if (sentenceEnd) {
+        inlineSteps.push({ name: sentenceEnd[1], text: sentenceEnd[2] })
+      } else {
+        inlineSteps.push({ name: fullText.replace(/\.$/, ''), text: fullText })
+      }
+      continue
     }
   }
 
