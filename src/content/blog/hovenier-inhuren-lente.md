@@ -36,11 +36,11 @@ Niet elk klusje vraagt om een professional. Een hovenier is slim als:
 - je een nieuw tuinontwerp wil
 - je weinig tijd hebt maar wel een verzorgde tuin wilt
 
-Simpel onderhoud, zoals onkruid wegtikken of maaien, overleef je prima zelf. Je hoeft niet voor alles een hovenier te bellen.
+Simpel onderhoud, zoals onkruid wegtikken of maaien, overleef je prima zelf. Je hoeft niet voor alles een hovenier te bellen. Wie zelf de regie wil houden, vindt in onze gids over [tuinonderhoud in de lente](/blog/tuinonderhoud-lente) een seizoenschecklist met de belangrijkste klussen per maand.
 
 ## Wat kost een hovenier per uur in 2026?
 
-Het gemiddelde uurtarief van een zzp-hovenier in Nederland ligt in 2026 op **circa 44 euro excl. btw**. Met btw erbij (21%) kom je op ruim 53 euro. De bandbreedte is breed: startende hoveniers rekenen soms rond de 35 euro, ervaren vakmannen met specialisaties vragen tot 75 euro per uur.
+Het gemiddelde uurtarief van een zzp-hovenier in Nederland ligt in 2026 op **circa 44 euro excl. btw**. Met btw erbij (21%) kom je op ruim 53 euro. De bandbreedte is breed: startende hoveniers rekenen soms rond de 35 euro, ervaren vakmannen met specialisaties vragen tot 75 euro per uur. Voor een uitgebreide uitsplitsing per type aanbieder, zie onze pagina over [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
 De prijs hangt af van:
 
@@ -83,7 +83,7 @@ In de lente melden de meeste hoveniers zich niet zomaar beschikbaar. Goede vakme
 
 **Kijk naar beoordelingen.** Online platforms, Google en sociale media geven je inzicht in ervaringen van anderen. Let op specifieke reacties over kwaliteit en communicatie, niet alleen op sterrenaantallen.
 
-**Vraag naar verzekering en btw-nummer.** Een serieuze hovenier is ingeschreven bij de Kamer van Koophandel en heeft een aansprakelijkheidsverzekering.
+**Vraag naar verzekering en btw-nummer.** Een serieuze hovenier is ingeschreven bij de Kamer van Koophandel en heeft een aansprakelijkheidsverzekering. Een uitgebreide checklist voor het selecteren van een betrouwbare vakman vind je in onze [keuzewijzer voor de beste hovenier](/blog/hoe-kies-je-de-beste-hovenier).
 
 ## Slimmer inhuren: bespaar zonder in te leveren op kwaliteit
 

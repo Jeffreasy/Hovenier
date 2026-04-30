@@ -114,7 +114,7 @@ Een paar zaken die uit deze tabel meteen opvallen. Een eenmalige onderhoudsbeurt
 
 Voor wie regelmatig hulp wil: een onderhoudsabonnement met vaste bezoekprijs (75 tot 180 euro per bezoek) is bijna altijd goedkoper dan losse opdrachten. De hovenier kan plannen, hoeft minder offertes te maken en geeft vaak 5 tot 15 euro per uur korting bij een vast contract.
 
-Voor grote bomen verwijzen we naar onze aparte gids over [boom kappen of snoeien kosten](/blog/bomen-kappen-snoeien-kosten), waarin de prijs per boomhoogte plus de kapvergunning per gemeente staat. Voor wie een complete nieuwe tuin overweegt, helpt de pagina over [tuin laten ontwerpen kosten](/blog/tuin-laten-ontwerpen-kosten) met de fase vóór aanleg.
+Voor grote bomen verwijzen we naar onze aparte gids over [boom kappen of snoeien kosten](/blog/bomen-kappen-snoeien-kosten), waarin de prijs per boomhoogte plus de kapvergunning per gemeente staat. Voor wie een complete nieuwe tuin overweegt, helpt de pagina over [tuin laten ontwerpen kosten](/blog/tuin-laten-ontwerpen-kosten) met de fase vóór aanleg. Wie een bestaande tuin wil opfrissen in plaats van vervangen, kan beter starten bij [wat een complete tuinrenovatie écht kost](/blog/tuin-renoveren-opknappen-kosten).
 
 ## Vaste prijs of uurtarief: wanneer welk model?
 
@@ -211,7 +211,7 @@ Een offerte die op één pagina past en alleen "totaal X euro" vermeldt, is geen
 
 Lager uitkomen op je hovenierrekening kan, zonder bij de eerste de beste prijsvechter te belanden.
 
-- **Plan onderhoud buiten het hoogseizoen.** Maart, april, september en oktober zijn de drukste maanden. Vraag in juni of november een offerte aan en je hebt vaak meer ruimte voor onderhandeling.
+- **Plan onderhoud buiten het hoogseizoen.** Maart, april, september en oktober zijn de drukste maanden. Vraag in juni of november een offerte aan en je hebt vaak meer ruimte voor onderhandeling. Specifiek voor lentewerk geeft onze gids over [een hovenier inhuren in de lente](/blog/hovenier-inhuren-lente) handvatten om nog op tijd een goede vakman te vinden.
 - **Combineer klussen.** Eén bezoek voor heg snoeien, gazon verticuteren én borders inboeten is goedkoper dan drie losse afspraken. Voorrijkosten betaal je maar één keer.
 - **Sluit een onderhoudsabonnement.** Een vast contract van bijvoorbeeld zes bezoeken per jaar levert vaak 5 tot 15 euro per uur korting op ten opzichte van losse opdrachten.
 - **Doe het kleine werk zelf.** Onkruid wieden, bladeren ruimen en bemesten kun je zelf, zelfs als je geen groene vingers hebt. Laat de hovenier komen voor wat machines, kennis of klimwerk vergt.

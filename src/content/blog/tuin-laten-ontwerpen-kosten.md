@@ -65,7 +65,7 @@ Voor wie? Tuinen vanaf 200 m² met complexiteit, of als je een statement-tuin wi
 
 ### Hovenier met ontwerpdienst
 
-Een hovenier is in eerste instantie een aanlegger en onderhouder, geen ontwerper. Veel hoveniers bieden een schets of een eenvoudig 2D-ontwerp aan, vaak gekoppeld aan een aanlegofferte. Uurtarief hovenier-basis: €35 tot €65 per uur [Bron: Trustoo, 2025]. De ontwerpdienst zelf zit vaak rond €45 tot €60 per uur, en wordt regelmatig verrekend in de aanlegprijs als je daar ook tekent.
+Een hovenier is in eerste instantie een aanlegger en onderhouder, geen ontwerper. Veel hoveniers bieden een schets of een eenvoudig 2D-ontwerp aan, vaak gekoppeld aan een aanlegofferte. Uurtarief hovenier-basis: €35 tot €65 per uur [Bron: Trustoo, 2025]. De ontwerpdienst zelf zit vaak rond €45 tot €60 per uur, en wordt regelmatig verrekend in de aanlegprijs als je daar ook tekent. Voor het volledige beeld van uurtarieven per type aanbieder, zie onze pagina over [hovenier tarieven en kosten per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
 Voor wie? Mensen die snel willen, geen losse ontwerptraject willen managen, en bereid zijn om bij dezelfde partij aanleg af te nemen. Verderop in dit artikel kijken we kritisch naar het "gratis ontwerp"-aanbod.
 
@@ -116,7 +116,7 @@ Vaak het verschil tussen "leuk plan" en "tuin die werkt". Een beplantingsplan ze
 
 [Bron: Homedeal.nl, 2026] [Bron: Florum.nl, 2025]
 
-Wil je alleen je borders aanpakken zonder volledige tuinrenovatie? Lees dan ons artikel over [siertuin border aanleggen en beplantingsplan kosten](/blog/siertuin-border-ontwerp-beplantingsplan-kosten).
+Wil je alleen je borders aanpakken zonder volledige tuinrenovatie? Lees dan ons artikel over [siertuin border aanleggen en beplantingsplan kosten](/blog/siertuin-border-ontwerp-beplantingsplan-kosten). Voor het concrete stappenplan in de tuin zelf, zie de gids over [een nieuwe border aanleggen](/blog/nieuwe-border-aanleggen).
 
 ### Lichtplan en technische tekening
 
@@ -231,7 +231,7 @@ Eerlijk: niet elke tuin heeft een ontwerp van €1.500 nodig. Hieronder een besl
 
 ### Tuinontwerper logisch
 
-- Tuin van 50 tot 150 m² renovatie zonder vergunningsverhalen.
+- Tuin van 50 tot 150 m² renovatie zonder vergunningsverhalen. Wie eerst grip wil op het budget, leest parallel onze gids over [tuin renoveren en opknappen kosten](/blog/tuin-renoveren-opknappen-kosten).
 - Je wil één samenhangend plan voor planten, materialen en zones, maar geen 3D of technische tekeningen.
 - Budget voor totaal (ontwerp + aanleg) ligt tussen €10.000 en €30.000.
 
