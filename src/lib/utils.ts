@@ -2,6 +2,8 @@
  * Utility functions for the Hovenier Platform
  */
 
+import type { FAQItem } from './types'
+
 // ─── String helpers ───────────────────────────────────────────────────────────
 
 export function slugify(text: string): string {
@@ -80,4 +82,67 @@ export function buildCanonical(path: string, base = 'https://www.tuinhub.nl'): s
 
 export function cn(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(' ')
+}
+
+// ─── FAQ parser (extract `## Veelgestelde vragen` from markdown body) ─────────
+
+/**
+ * Extracts FAQ items from a markdown body. Looks for a `## Veelgestelde vragen`
+ * H2-section, and parses each `### question` block beneath it. The answer is
+ * everything from the question up to the next `### `, the next H2, or end of
+ * document. Used by ArticleLayout to render `FAQPage` JSON-LD on blog posts.
+ */
+export function parseFAQs(markdown: string): FAQItem[] {
+  if (!markdown) return []
+
+  const lines = markdown.split('\n')
+  const faqs: FAQItem[] = []
+  let inFAQSection = false
+  let currentQuestion: string | null = null
+  let currentAnswerLines: string[] = []
+
+  const flush = () => {
+    if (currentQuestion && currentAnswerLines.length > 0) {
+      const answer = currentAnswerLines.join(' ').replace(/\s+/g, ' ').trim()
+      if (answer) {
+        faqs.push({ question: currentQuestion, answer, category: 'blog' })
+      }
+    }
+    currentQuestion = null
+    currentAnswerLines = []
+  }
+
+  for (const line of lines) {
+    // Section start
+    if (/^##\s+Veelgestelde\s+vragen/i.test(line)) {
+      inFAQSection = true
+      continue
+    }
+
+    if (!inFAQSection) continue
+
+    // End of FAQ section: any other H2
+    if (/^##\s+/.test(line) && !/^##\s+Veelgestelde\s+vragen/i.test(line)) {
+      flush()
+      inFAQSection = false
+      continue
+    }
+
+    // New FAQ question
+    if (/^###\s+/.test(line)) {
+      flush()
+      currentQuestion = line.replace(/^###\s+/, '').trim()
+      continue
+    }
+
+    // Answer body (non-empty lines accumulate)
+    if (currentQuestion && line.trim()) {
+      currentAnswerLines.push(line.trim())
+    }
+  }
+
+  // Flush final FAQ if file ends inside the section
+  flush()
+
+  return faqs
 }

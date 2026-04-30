@@ -1,0 +1,52 @@
+# TuinHub.nl
+
+> TuinHub is hét Nederlandse vergelijkingsplatform voor hoveniers. Gebruikers vergelijken hoveniers in hun gemeente, vragen gratis offertes aan en raadplegen kosten-gidsen voor tuinaanleg, bestrating, beplanting en onderhoud.
+
+## Kerngegevens
+
+- **Doelgroep**: Nederlandse tuineigenaren die een hovenier zoeken of tuinkosten willen begroten.
+- **Dekking**: 1.500+ hoveniersbedrijven in 1.386 Nederlandse gemeenten.
+- **Tools**: Tuinkosten-calculator, schutting-calculator, subsidie-checker.
+- **Contact**: info@tuinhub.nl
+
+## Kosten-gidsen (2026)
+
+- [Hovenier tarieven en kosten per uur](https://www.tuinhub.nl/blog/hovenier-tarieven-kosten-per-uur)
+- [Robotmaaier kosten 2026: prijzen, merken, vergelijking](https://www.tuinhub.nl/blog/gazon-robotmaaier-kosten-merken)
+- [Bestrating laten leggen — kosten per m²](https://www.tuinhub.nl/blog/bestrating-laten-leggen-kosten-tegels)
+- [Tuin laten ontwerpen — kosten en proces](https://www.tuinhub.nl/blog/tuin-laten-ontwerpen-kosten)
+- [Tuin renoveren / opknappen kosten](https://www.tuinhub.nl/blog/tuin-renoveren-opknappen-kosten)
+- [Schutting plaatsen — kosten en regels](https://www.tuinhub.nl/blog/schutting-plaatsen-kosten-regels)
+- [Oprit aanleggen — kosten en materialen](https://www.tuinhub.nl/blog/oprit-aanleggen-kosten-materialen)
+- [Pergola met klimplanten — kosten en houtsoorten](https://www.tuinhub.nl/blog/pergola-klimplanten-kosten-houtsoorten)
+- [Tuinhuisje / berging plaatsen kosten](https://www.tuinhub.nl/blog/tuinhuisje-berging-plaatsen-kosten)
+- [Overkapping en veranda bouwen kosten](https://www.tuinhub.nl/blog/overkapping-veranda-bouwen-kosten)
+- [Vijver aanleggen in de tuin kosten](https://www.tuinhub.nl/blog/vijver-aanleggen-tuin-kosten)
+- [Kunstgras leggen — kosten en proces](https://www.tuinhub.nl/blog/kunstgras-leggen-tuin-kosten)
+
+## Praktische gidsen
+
+- [Hoe kies je de beste hovenier](https://www.tuinhub.nl/blog/hoe-kies-je-de-beste-hovenier)
+- [Hovenier inhuren in de lente](https://www.tuinhub.nl/blog/hovenier-inhuren-lente)
+- [Tuinonderhoud in de lente](https://www.tuinhub.nl/blog/tuinonderhoud-lente)
+- [Gazon verticuteren in het voorjaar](https://www.tuinhub.nl/blog/gazon-verticuteren-voorjaar)
+- [Onkruid bestrijden in de tuin en tussen tegels](https://www.tuinhub.nl/blog/onkruid-bestrijden-tuin-tegels)
+- [Voorjaarssnoei van heesters en bomen](https://www.tuinhub.nl/blog/voorjaarssnoei-heesters-bomen)
+
+## Tools
+
+- [Tuinkosten-calculator](https://www.tuinhub.nl/tools/tuinkosten-calculator)
+- [Schutting-calculator](https://www.tuinhub.nl/tools/schutting-kosten-calculator)
+- [Subsidie-check](https://www.tuinhub.nl/tools/subsidie-check)
+
+## Offerte aanvragen
+
+- [Gratis 3 offertes van hoveniers](https://www.tuinhub.nl/offerte)
+
+## Optional
+
+- [Volledige sitemap](https://www.tuinhub.nl/sitemap-index.xml)
+- [Tuingids overzicht](https://www.tuinhub.nl/blog)
+- [Steden-overzicht](https://www.tuinhub.nl/steden)
+- [Veelgestelde vragen](https://www.tuinhub.nl/faq)
+- [Over TuinHub](https://www.tuinhub.nl/over-ons)

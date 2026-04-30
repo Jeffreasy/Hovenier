@@ -1,8 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 import CTABlock from '../components/ui/CTABlock.astro'
-import type { SEOMeta } from '../lib/types'
+import type { SEOMeta, FAQItem } from '../lib/types'
 import { formatDate } from '../lib/utils'
+import { faqSchema, breadcrumbSchema } from '../lib/seo'
+import { SITE } from '../lib/constants'
 
 interface Props {
   seo: SEOMeta
@@ -15,6 +17,8 @@ interface Props {
   image?: string
   imageAlt?: string
   relatedPosts?: { title: string; href: string; category: string }[]
+  faqs?: FAQItem[]
+  slug?: string
 }
 
 const {
@@ -27,7 +31,12 @@ const {
   image,
   imageAlt = title,
   relatedPosts = [],
+  faqs = [],
+  slug,
 } = Astro.props
+
+// ─── Combined JSON-LD: Article + FAQPage + BreadcrumbList ──────────────────────
+const articleUrl = slug ? `${SITE.url}/blog/${slug}` : `${SITE.url}/blog`
 
 const articleSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -40,17 +49,35 @@ const articleSchema = JSON.stringify({
   author: {
     '@type': 'Organization',
     name: 'TuinHub',
-    url: 'https://www.tuinhub.nl',
+    url: SITE.url,
   },
   publisher: {
     '@type': 'Organization',
     name: 'TuinHub',
-    url: 'https://www.tuinhub.nl',
+    url: SITE.url,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': articleUrl,
   },
 })
+
+// FAQ schema only if at least one FAQ was parsed from the markdown body
+const faqJsonLd = faqs.length > 0 ? faqSchema(faqs) : undefined
+
+// Breadcrumb: Home > Tuingids > [Title]
+const breadcrumbJsonLd = slug ? breadcrumbSchema([
+  { name: 'Home',     href: '/' },
+  { name: 'Tuingids', href: '/blog' },
+  { name: title,      href: `/blog/${slug}` },
+]) : undefined
+
+const combinedSchema = [articleSchema, faqJsonLd, breadcrumbJsonLd]
+  .filter(Boolean)
+  .join('\n')
 ---
 
-<BaseLayout seo={{ ...seo, ogType: 'article', ogImage: image }} schema={articleSchema}>
+<BaseLayout seo={{ ...seo, ogType: 'article', ogImage: image }} schema={combinedSchema}>
   <article class="article-layout">
     <!-- Article header -->
     <header class="article-header">

@@ -1,6 +1,7 @@
 ---
 export const prerender = false
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { breadcrumbSchema } from '../../lib/seo'
 
 const { slug } = Astro.params
 
@@ -75,7 +76,7 @@ const fullStars = Math.floor(bedrijf.googleScore ?? 0)
 const hasHalf   = (bedrijf.googleScore ?? 0) - fullStars >= 0.25
 const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0)
 
-const jsonLd = JSON.stringify({
+const localBusinessLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: bedrijf.naam,
@@ -96,6 +97,15 @@ const jsonLd = JSON.stringify({
     worstRating: 1,
   } : undefined,
 })
+
+const breadcrumbLd = breadcrumbSchema([
+  { name: 'Home',       href: '/' },
+  { name: 'Hoveniers',  href: '/hoveniers' },
+  ...(bedrijf.stad ? [{ name: bedrijf.stad, href: `/steden/${(bedrijf.stad as string).toLowerCase()}` }] : []),
+  { name: bedrijf.naam, href: `/hoveniers/${slug}` },
+])
+
+const jsonLd = [localBusinessLd, breadcrumbLd].join('\n')
 ---
 
 <BaseLayout {seo}>

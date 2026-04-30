@@ -1,14 +1,30 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import OfferteFormulier from '../../islands/OfferteFormulier'
+import { serviceSchema, breadcrumbSchema } from '../../lib/seo'
+import { SITE } from '../../lib/constants'
 
 const seo = {
   title: 'Gratis offertes aanvragen',
   description: 'Vraag gratis offertes aan bij hoveniers in jouw regio. Vul je wensen in en ontvang binnen 48 uur maximaal 3 passende offertes.',
 }
+
+const offerteSchema = [
+  serviceSchema({
+    name:        'Gratis hovenier-offertes via TuinHub',
+    description: 'Ontvang binnen 48 uur maximaal 3 offertes van hoveniers bij jou in de buurt. Gratis en vrijblijvend.',
+    url:         `${SITE.url}/offerte`,
+    priceRange:  'Gratis (offerte-aanvraag)',
+    serviceType: 'GardeningService',
+  }),
+  breadcrumbSchema([
+    { name: 'Home',                     href: '/' },
+    { name: 'Gratis offerte aanvragen', href: '/offerte' },
+  ]),
+].join('\n')
 ---
 
-<BaseLayout {seo}>
+<BaseLayout {seo} schema={offerteSchema}>
   <div class="offerte-page section-gap">
     <div class="container offerte-inner">
       <div class="offerte-hero reveal">

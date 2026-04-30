@@ -5,9 +5,10 @@ import TrustBadges from '../components/home/TrustBadges.astro'
 import Button from '../components/ui/Button.astro'
 import Card from '../components/ui/Card.astro'
 import Badge from '../components/ui/Badge.astro'
-import { SITE, SOCIAL_PROOF } from '../lib/constants'
+import { SOCIAL_PROOF } from '../lib/constants'
 import { getCollection } from 'astro:content'
 import { formatDate } from '../lib/utils'
+import { websiteSchema, organizationSchema } from '../lib/seo'
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft)
 const recentPosts = allPosts
@@ -19,17 +20,12 @@ const seo = {
   description: 'Vind de beste hovenier in jouw buurt. Vergelijk tarieven, lees reviews en vraag gratis offertes aan. Nu al ' + SOCIAL_PROOF.offertes + ' offertes aangevraagd.',
 }
 
-const homeSchema = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: SITE.name,
-  url: SITE.url,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${SITE.url}/offerte?postcode={postcode}`,
-    'query-input': 'required name=postcode',
-  },
-})
+// Combined JSON-LD: Organization (E-E-A-T baseline) + WebSite (with SearchAction).
+// Voeg `sameAs` URLs toe zodra social profielen live zijn.
+const homeSchema = [
+  organizationSchema({ /* sameAs: ['https://www.linkedin.com/...', ...] */ }),
+  websiteSchema(),
+].join('\n')
 ---
 
 <BaseLayout {seo} schema={homeSchema}>

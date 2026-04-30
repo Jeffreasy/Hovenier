@@ -1,0 +1,50 @@
+# TuinHub.nl — robots.txt
+# Last updated: 2026-04-28
+
+# AI-search bots: explicit allow
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Default policy
+User-agent: *
+Allow: /
+Disallow: /auth/
+Disallow: /portal/
+Disallow: /inloggen
+Disallow: /registreren
+Disallow: /api/
+Disallow: /zoeken?
+
+# Sitemaps
+Sitemap: https://www.tuinhub.nl/sitemap-index.xml
+Sitemap: https://www.tuinhub.nl/sitemap-hoveniers.xml

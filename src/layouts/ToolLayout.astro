@@ -3,28 +3,55 @@ import BaseLayout from './BaseLayout.astro'
 import CTABlock from '../components/ui/CTABlock.astro'
 import Accordion from '../components/ui/Accordion.astro'
 import type { SEOMeta, FAQItem } from '../lib/types'
+import {
+  faqSchema as buildFaqSchema,
+  webApplicationSchema,
+  breadcrumbSchema,
+} from '../lib/seo'
+import { SITE } from '../lib/constants'
 
 interface Props {
   seo: SEOMeta
   title: string
   intro: string
   faqs?: FAQItem[]
+  /** Slug onder /tools/, bijv. "tuinkosten-calculator". Activeert WebApplication + BreadcrumbList. */
+  toolSlug?: string
+  /** Override schema.org applicationCategory; default "FinanceApplication". */
+  applicationCategory?: string
 }
 
-const { seo, title, intro, faqs = [] } = Astro.props
+const {
+  seo,
+  title,
+  intro,
+  faqs = [],
+  toolSlug,
+  applicationCategory,
+} = Astro.props
 
-const faqSchema = faqs.length > 0 ? JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
-    '@type': 'Question',
-    name: faq.question,
-    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-  })),
-}) : undefined
+const toolUrl = toolSlug ? `${SITE.url}/tools/${toolSlug}` : undefined
+
+const faqJsonLd = faqs.length > 0
+  ? buildFaqSchema(faqs.map((f) => ({ question: f.question, answer: f.answer })))
+  : undefined
+
+const webAppJsonLd = toolUrl
+  ? webApplicationSchema({ name: title, description: intro, url: toolUrl, applicationCategory })
+  : undefined
+
+const breadcrumbJsonLd = toolSlug ? breadcrumbSchema([
+  { name: 'Home',  href: '/' },
+  { name: 'Tools', href: '/tools/tuinkosten-calculator' },
+  { name: title,   href: `/tools/${toolSlug}` },
+]) : undefined
+
+const combinedSchema = [webAppJsonLd, faqJsonLd, breadcrumbJsonLd]
+  .filter(Boolean)
+  .join('\n')
 ---
 
-<BaseLayout seo={seo} schema={faqSchema}>
+<BaseLayout seo={seo} schema={combinedSchema || undefined}>
   <div class="tool-layout">
     <!-- Tool Header -->
     <header class="tool-header">

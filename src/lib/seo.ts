@@ -72,6 +72,15 @@ interface LocalBusinessSchemaProps {
   description:    string
   aantalHoveniers?: number
   gemiddeldePrijs?: string
+  /**
+   * Real review aggregate. ONLY pass this when actual reviews exist in Convex
+   * (counted from `bedrijven` reviews, not synthesised). Without this prop the
+   * schema omits `aggregateRating` entirely — preferable to a fake rating.
+   */
+  reviewAggregate?: {
+    ratingValue: number
+    reviewCount: number
+  }
 }
 
 export function localBusinessSchema(props: LocalBusinessSchemaProps): string {
@@ -84,15 +93,16 @@ export function localBusinessSchema(props: LocalBusinessSchemaProps): string {
     areaServed: {
       '@type':   'City',
       name:      props.stad,
-      '@id':     `https://www.wikidata.org/wiki/${props.stad}`,
     },
-    aggregateRating: props.aantalHoveniers ? {
-      '@type':      'AggregateRating',
-      ratingValue:  '4.7',
-      reviewCount:  String(props.aantalHoveniers * 3),
-      bestRating:   '5',
-      worstRating:  '1',
-    } : undefined,
+    ...(props.reviewAggregate ? {
+      aggregateRating: {
+        '@type':      'AggregateRating',
+        ratingValue:  String(props.reviewAggregate.ratingValue),
+        reviewCount:  String(props.reviewAggregate.reviewCount),
+        bestRating:   '5',
+        worstRating:  '1',
+      },
+    } : {}),
   })
 }
 
@@ -154,13 +164,108 @@ export function websiteSchema(): string {
   return JSON.stringify({
     '@context': 'https://schema.org',
     '@type':    'WebSite',
+    '@id':      `${SITE.url}/#website`,
     name:       SITE.name,
     url:        SITE.url,
     description: SITE.tagline,
+    inLanguage: 'nl-NL',
+    publisher:  { '@id': `${SITE.url}/#organization` },
     potentialAction: {
       '@type':       'SearchAction',
       target:        `${SITE.url}/offerte?postcode={postcode}`,
       'query-input': 'required name=postcode',
     },
+  })
+}
+
+// ─── Organization Schema (homepage / E-E-A-T baseline) ───────────────────────
+
+interface OrganizationSchemaProps {
+  /** Optional list of social/profile URLs (LinkedIn, Instagram, etc.). */
+  sameAs?: string[]
+}
+
+export function organizationSchema(props: OrganizationSchemaProps = {}): string {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type':    'Organization',
+    '@id':      `${SITE.url}/#organization`,
+    name:       SITE.name,
+    url:        SITE.url,
+    logo:       `${SITE.url}/og-default.png`,
+    description: SITE.description,
+    email:      SITE.email,
+    areaServed: { '@type': 'Country', name: 'Netherlands' },
+    ...(props.sameAs && props.sameAs.length > 0 ? { sameAs: props.sameAs } : {}),
+    contactPoint: {
+      '@type':           'ContactPoint',
+      email:             SITE.email,
+      contactType:       'customer support',
+      areaServed:        'NL',
+      availableLanguage: ['Dutch', 'nl-NL'],
+    },
+  })
+}
+
+// ─── Service Schema (offerte / lead-gen) ─────────────────────────────────────
+
+interface ServiceSchemaProps {
+  name:        string
+  description: string
+  url:         string
+  /** Free text price range, e.g. "€45 – €75 per uur" or "Gratis offerte". */
+  priceRange?: string
+  /** Schema.org service type slug, e.g. "GardeningService". */
+  serviceType?: string
+}
+
+export function serviceSchema(props: ServiceSchemaProps): string {
+  return JSON.stringify({
+    '@context':   'https://schema.org',
+    '@type':      'Service',
+    name:         props.name,
+    description:  props.description,
+    url:          props.url,
+    serviceType:  props.serviceType ?? 'GardeningService',
+    provider:     { '@id': `${SITE.url}/#organization` },
+    areaServed:   { '@type': 'Country', name: 'Netherlands' },
+    ...(props.priceRange ? { priceRange: props.priceRange } : {}),
+    audience: {
+      '@type':         'Audience',
+      audienceType:    'Tuineigenaren in Nederland',
+      geographicArea:  { '@type': 'Country', name: 'Netherlands' },
+    },
+  })
+}
+
+// ─── WebApplication Schema (calculators) ─────────────────────────────────────
+
+interface WebApplicationSchemaProps {
+  name:        string
+  description: string
+  url:         string
+  /** "FinanceApplication" voor kosten-tools, "UtilitiesApplication" voor checks. */
+  applicationCategory?: string
+}
+
+export function webApplicationSchema(props: WebApplicationSchemaProps): string {
+  return JSON.stringify({
+    '@context':           'https://schema.org',
+    '@type':              'WebApplication',
+    name:                 props.name,
+    description:          props.description,
+    url:                  props.url,
+    applicationCategory:  props.applicationCategory ?? 'FinanceApplication',
+    operatingSystem:      'Any',
+    browserRequirements:  'Requires JavaScript',
+    inLanguage:           'nl-NL',
+    isAccessibleForFree:  true,
+    offers: {
+      '@type':         'Offer',
+      price:           '0',
+      priceCurrency:   'EUR',
+      availability:    'https://schema.org/InStock',
+    },
+    publisher: { '@id': `${SITE.url}/#organization` },
   })
 }

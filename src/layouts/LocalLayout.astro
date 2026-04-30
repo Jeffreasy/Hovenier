@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro'
 import Accordion from '../components/ui/Accordion.astro'
 import type { SEOMeta, FAQItem, Stad } from '../lib/types'
+import { faqSchema as buildFaqSchema, breadcrumbSchema } from '../lib/seo'
 
 interface Props {
   seo: SEOMeta
@@ -32,17 +33,19 @@ const localSchema = JSON.stringify({
   url: `https://www.tuinhub.nl/steden/${stad.slug}`,
 })
 
-const faqSchema = faqs.length > 0 ? JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
-    '@type': 'Question',
-    name: faq.question,
-    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-  })),
-}) : undefined
+const faqJsonLd = faqs.length > 0
+  ? buildFaqSchema(faqs.map((f) => ({ question: f.question, answer: f.answer })))
+  : undefined
 
-const combinedSchema = [localSchema, faqSchema].filter(Boolean).join('\n')
+const breadcrumbJsonLd = breadcrumbSchema([
+  { name: 'Home',            href: '/' },
+  { name: 'Steden',          href: '/steden' },
+  { name: stad.naam,         href: `/steden/${stad.slug}` },
+])
+
+const combinedSchema = [localSchema, faqJsonLd, breadcrumbJsonLd]
+  .filter(Boolean)
+  .join('\n')
 ---
 
 <BaseLayout seo={seo} schema={combinedSchema}>
