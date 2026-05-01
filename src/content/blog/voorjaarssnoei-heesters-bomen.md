@@ -39,7 +39,7 @@ Bij hortensia's gaat het vaak mis, want niet elke hortensia vraagt hetzelfde. Er
 
 ### Hagen en groenblijvende struiken
 
-De meeste hagen kun je vanaf half april in vorm brengen. Buxus, liguster, haagbeuk en coniferen mogen nu een eerste snoeibeurt krijgen. Wacht bij voorkeur tot de ergste nachtvorst voorbij is, want verse snoeiwonden zijn gevoelig voor vriesschade.
+De meeste hagen kun je vanaf half april in vorm brengen. Buxus, liguster, haagbeuk en coniferen mogen nu een eerste snoeibeurt krijgen. Wacht bij voorkeur tot de ergste nachtvorst voorbij is, want verse snoeiwonden zijn gevoelig voor vriesschade. Wil je weten hoe je een nieuwe haag aanplant en in vorm houdt? Lees ons artikel over [een haag planten en jaarlijks snoeien](/blog/haag-planten-snoeien).
 
 Snoei hagen bij bewolkt weer. Zon op vers geknipte bladeren geeft bruine brandplekken, vooral bij buxus en laurier.
 
@@ -119,7 +119,7 @@ Soms is het slimmer om het snoeien uit handen te geven. Een grote tuin met hoge 
 
 ### Uurtarieven hovenier
 
-Een hovenier rekent gemiddeld **€45 tot €70 per uur** voor snoeiwerk. Beginnende hoveniers zitten aan de onderkant (€35 tot €45), terwijl een specialist of boomverzorger al snel **€60 tot €75 per uur** vraagt. Bij grotere klussen wordt vaak een dagdeel of een vaste prijs per klus afgesproken.
+Een hovenier rekent gemiddeld **€45 tot €70 per uur** voor snoeiwerk. Beginnende hoveniers zitten aan de onderkant (€35 tot €45), terwijl een specialist of boomverzorger al snel **€60 tot €75 per uur** vraagt. Bij grotere klussen wordt vaak een dagdeel of een vaste prijs per klus afgesproken. Een volledige uitsplitsing per discipline en regio vind je in ons overzicht van [hoveniertarieven en uurprijzen in 2026](/blog/hovenier-tarieven-kosten-per-uur).
 
 ### Kosten per type snoeiwerk
 
@@ -147,7 +147,7 @@ Wil je weten wat snoeiwerk in jouw tuin kost? [Vraag gratis offertes aan bij hov
 
 Bij een paar struiken en een lage haag kun je prima zelf aan de slag. Maar er zijn situaties waarin een hovenier de betere keuze is.
 
-- **Bomen hoger dan 3 meter.** Werken op hoogte met een zaag is gevaarlijk zonder de juiste ervaring en uitrusting.
+- **Bomen hoger dan 3 meter.** Werken op hoogte met een zaag is gevaarlijk zonder de juiste ervaring en uitrusting. Voor kosten en de keuze tussen kappen en snoeien zie ons overzicht van [boom kappen of snoeien: kosten en regels](/blog/bomen-kappen-snoeien-kosten).
 - **Beschermde bomen.** In sommige gemeenten heb je een kapvergunning of snoeivergunning nodig voor bepaalde bomen. Een hovenier weet wat de lokale regels zijn.
 - **Verwaarloosde tuinen.** Als er jaren niet gesnoeid is, kan een renovatiesnoei nodig zijn. Dat vergt kennis om de plant niet te beschadigen.
 - **Twijfel over broedende vogels.** Een ervaren hovenier herkent de tekenen van een bezet nest sneller dan de meeste tuinbezitters.

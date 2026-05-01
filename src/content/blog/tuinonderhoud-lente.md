@@ -41,9 +41,11 @@ Klimrozen pak je wél nu aan. Snoeien voor ze uitlopen geeft jou en de plant het
 
 Vaste planten die je vorig jaar bewust hebt laten staan voor de vogels en de winterstructuur, knip je nu terug. Tot op tien à vijftien centimeter boven de grond. Ze groeien de komende weken snel terug en staan er voor de zomer weer vol bij.
 
+Niet zeker welke struik nu wel mag en welke je beter laat staan? In ons [overzicht van de voorjaarssnoei per heester en boom](/blog/voorjaarssnoei-heesters-bomen) staat per soort de juiste timing.
+
 ## 4. Borders: opruimen en plantklaar maken
 
-Zorg éérst dat de bodem op orde is. Wied de border goed door voor je iets nieuws plant. Kleefkruid en herderstasje staan er al en zijn in het vroege voorjaar makkelijker te verwijderen dan later, als ze vol in de groei zitten.
+Zorg éérst dat de bodem op orde is. Wied de border goed door voor je iets nieuws plant. Kleefkruid en herderstasje staan er al en zijn in het vroege voorjaar makkelijker te verwijderen dan later, als ze vol in de groei zitten. Ook tussen je terrastegels en op de oprit pak je het onkruid het beste nu aan; we vergelijken zeven methoden in ons artikel over [onkruid weghalen in tuin en tussen tegels](/blog/onkruid-bestrijden-tuin-tegels).
 
 Werk wat compost of rijpe tuinaarde door de grond als die hard en dicht is. Vaste planten die vorig jaar te groot zijn geworden, kun je nu verdelen. Een vork erin, helften uit elkaar trekken en herplanten. Een snelle manier om je border aan te vullen zonder geld uit te geven.
 
@@ -65,11 +67,11 @@ De meeste lenteonderhoudswerkzaamheden zijn prima zelf te doen. Maar soms is hul
 
 Als het gazon vol mos zit, grote kale plekken heeft en verticuteren alleen niet genoeg is, kan een hovenier een compleet doorzaaiprogramma uitvoeren. Dat is effectiever dan zelf een dun laagje zaad strooien over harde grond.
 
-Bij het aanleggen van een nieuwe border loont professionele hulp als je ook grondwerk nodig hebt. Harde kleigrond verbeteren, drainage aanleggen, grote planten verplaatsen. Dat soort werk gaat sneller met iemand die het vaker heeft gedaan en het juiste gereedschap meeneemt.
+Bij het aanleggen van een nieuwe border loont professionele hulp als je ook grondwerk nodig hebt. Harde kleigrond verbeteren, drainage aanleggen, grote planten verplaatsen. Dat soort werk gaat sneller met iemand die het vaker heeft gedaan en het juiste gereedschap meeneemt. Welke voorjaarsklussen je het beste uitbesteedt en wat dat ongeveer kost lees je in [wanneer schakel je in het voorjaar een hovenier in](/blog/hovenier-inhuren-lente).
 
 ## Wat kost lenteonderhoud door een hovenier?
 
-Een hovenier rekent doorgaans 35 tot 75 euro per uur (excl. btw). Voor een gemiddelde tuin van 80 tot 120 vierkante meter ben je al snel een dagdeel kwijt voor een grondige lenteschoonmaak. Verticuteren plus doorzaaien kost doorgaans 150 tot 350 euro, afhankelijk van de oppervlakte.
+Een hovenier rekent doorgaans 35 tot 75 euro per uur (excl. btw); een complete uitsplitsing per type werk vind je in ons overzicht van [actuele hoveniertarieven en uurprijzen](/blog/hovenier-tarieven-kosten-per-uur). Voor een gemiddelde tuin van 80 tot 120 vierkante meter ben je al snel een dagdeel kwijt voor een grondige lenteschoonmaak. Verticuteren plus doorzaaien kost doorgaans 150 tot 350 euro, afhankelijk van de oppervlakte.
 
 Een nieuwe border aanleggen inclusief grondverbetering en beplanting begint bij zo'n 300 euro en loopt op. Vraag altijd meerdere offertes op voor je kiest.
 

@@ -125,6 +125,8 @@ Niet elk materiaal vraagt dezelfde aandacht op hetzelfde moment.
 - Hout: eerste oliebeurt of beitsbeurt van het jaar.
 - Smeedijzer: controleer op roestplekken en lak bij waar nodig.
 
+Wil je het meubelonderhoud meenemen in een breder voorjaarsschema voor je tuin? Bekijk onze [checklist voor lente-tuinonderhoud](/blog/tuinonderhoud-lente) voor de volgorde en timing van de andere klussen.
+
 **Zomer (juni/juli):**
 - Kunststof en polyrattan: tussentijds afnemen als er veel pollen of stof op zit.
 - Hout: controleer of de olie nog goed zit. Als water niet meer parelt op het oppervlak, is het tijd om bij te oliën.
@@ -159,7 +161,7 @@ Wanneer zijn hoezen de investering waard? Eigenlijk altijd als je meubelen buite
 
 De meeste tuinmeubelonderhoud kun je prima zelf doen. Schoonmaken, oliën, een roestplek bijwerken: met de juiste producten en een vrije zaterdagochtend ben je klaar.
 
-Wanneer toch een professional? Als je een grote collectie hebt (denk aan een horecaterras of een uitgebreide loungehoek), als er serieuze houtrot zit, of als je simpelweg geen zin hebt. Een hovenier rekent €30 tot €60 per uur voor tuinonderhoud. Tuinmeubelonderhoud valt daar soms onder als onderdeel van een bredere onderhoudsklus.
+Wanneer toch een professional? Als je een grote collectie hebt (denk aan een horecaterras of een uitgebreide loungehoek), als er serieuze houtrot zit, of als je simpelweg geen zin hebt. Een hovenier rekent €30 tot €60 per uur voor tuinonderhoud; een complete uitsplitsing van [hoveniertarieven 2026 per type werk](/blog/hovenier-tarieven-kosten-per-uur) helpt je inschatten wat een dagdeel oppoetsen ongeveer kost. Tuinmeubelonderhoud valt daar soms onder als onderdeel van een bredere onderhoudsklus.
 
 Specifieke tarieven voor alleen tuinmeubelreiniging als losse dienst zijn lastig te vinden. Dit is in Nederland geen standaard product. Vraag bij een hovenier in jouw regio naar de mogelijkheden.
 
@@ -167,4 +169,4 @@ Specifieke tarieven voor alleen tuinmeubelreiniging als losse dienst zijn lastig
 
 Wil je dit voorjaar je tuinmeubelen weer in topvorm brengen maar liever niet zelf aan de slag? Of zoek je een hovenier voor breder tuinonderhoud? [Vraag een offerte aan](/offerte) en vergelijk hoveniers bij jou in de buurt.
 
-Lees ook: [Zo schilder en behandel je een schutting](/blog/schutting-schilderen-behandelen-kosten) of bekijk wat een [overkapping of veranda bouwen kost](/blog/overkapping-veranda-bouwen-kosten).
+Lees ook: [Zo schilder en behandel je een schutting](/blog/schutting-schilderen-behandelen-kosten), bekijk wat een [overkapping of veranda bouwen kost](/blog/overkapping-veranda-bouwen-kosten), of haal inspiratie uit ons artikel over [een buitenkeuken of bbq-hoek bouwen](/blog/buitenkeuken-bbq-hoek-bouwen-kosten) voor de zomer.

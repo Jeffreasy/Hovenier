@@ -15,7 +15,7 @@ In dit artikel vergelijken we vier composteermethodes op kosten, snelheid en gem
 
 Elke week sleep je groene containers vol grasmaaisel, snoeihout en groenteresten naar de straat. Ondertussen koop je zakken tuincompost om je borders te voeden. Dat kan anders.
 
-Zelf composteren levert je gratis bodemverbeteraar op. Je grond wordt luchtig, houdt beter vocht vast en zit vol voedingsstoffen. Wormen en bodemleven floreren, waardoor planten sterker groeien.
+Zelf composteren levert je gratis bodemverbeteraar op. Je grond wordt luchtig, houdt beter vocht vast en zit vol voedingsstoffen. Wormen en bodemleven floreren, waardoor planten sterker groeien. Heb je zwaardere kleigrond of zandgrond die niet op compost alleen reageert? Dan helpt ons overzicht van [grondverbetering: methodes en kosten](/blog/grondverbetering-tuin-kosten-methodes) bij de keuze tussen kalk, zand of menggrond.
 
 En dan is er de portemonnee. Een gemiddelde tuin van 50 m² verbruikt zo'n 200 liter compost per jaar. Dat zijn 5 zakken van 40 liter, tegen €7,79 per stuk. Bijna €39 per jaar dus. Een compostsilo kost je eenmalig €27 tot €78. Na iets meer dan een jaar heb je die investering terugverdiend.
 
@@ -142,7 +142,7 @@ Dit is waar veel beginners mee worstelen. Je gooit er van alles in en dan... wac
 | Bokashi (fermentatie + nacompostering) | 2-3 weken + 4-6 weken in de grond |
 | Wormenbak | Doorlopend, eerste oogst na 3-4 maanden |
 
-Begin je in april? Dan heb je bij actief composteren voor de herfst bruikbare compost. Precies op tijd om je borders winterklaar te voeden.
+Begin je in april? Dan heb je bij actief composteren voor de herfst bruikbare compost. Precies op tijd om je borders winterklaar te voeden, of om mee te nemen in het plan voor [een nieuwe border aanleggen in het najaar](/blog/nieuwe-border-aanleggen).
 
 Wil je meer weten over het onderhouden van je [moestuin](/blog/moestuin-beginnen-aanleg-kosten)? Compost is de beste start.
 
@@ -159,6 +159,6 @@ De regelingen verschillen per gemeente en per jaar. Check de website van jouw ge
 
 ## Zelf aan de slag of een hovenier inschakelen?
 
-Composteren is bij uitstek iets dat je zelf kunt doen. Een compostsilo neerzetten is een kwartiertje werk. Maar als je je hele tuin wilt herinrichten met compostering als onderdeel van een groter plan, denk aan [tuinaanleg met moestuin en borders](/blog/tuinonderhoud-lente), dan kan een hovenier je helpen met een doordacht ontwerp.
+Composteren is bij uitstek iets dat je zelf kunt doen. Een compostsilo neerzetten is een kwartiertje werk. Maar als je je hele tuin wilt herinrichten met compostering als onderdeel van een groter plan, denk aan [tuinaanleg met moestuin en borders](/blog/tuinonderhoud-lente), dan kan een hovenier je helpen met een doordacht ontwerp. Reken voor zo'n adviestraject op het reguliere uurtarief; we zetten de [actuele hoveniertarieven per uur](/blog/hovenier-tarieven-kosten-per-uur) op een rij.
 
 Wil je weten wat een hovenier kost voor jouw tuinproject? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk prijzen in jouw regio.

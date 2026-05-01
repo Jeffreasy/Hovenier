@@ -107,11 +107,11 @@ Zelf doen is prima voor een klein terras of een paar borders. Maar er zijn situa
 
 **Bij hardnekkig onkruid met diepe wortels.** Japanse duizendknoop, zevenblad of heermoes? Daar kom je met een krabber niet vanaf. Een hovenier weet hoe je dit structureel aanpakt.
 
-**Bij een complete renovatie.** Als je voegen helemaal kapot zijn en het onkruid overal zit, kan het slimmer zijn om in één keer het terras te laten reinigen, opnieuw te voegen en onkruidvrij voegzand aan te brengen.
+**Bij een complete renovatie.** Als je voegen helemaal kapot zijn en het onkruid overal zit, kan het slimmer zijn om in één keer het terras te laten reinigen, opnieuw te voegen en onkruidvrij voegzand aan te brengen. Twijfel je of vervangen niet voordeliger is dan herstellen? Vergelijk de prijzen in onze gids over [bestrating laten leggen: kosten per type tegel](/blog/bestrating-laten-leggen-kosten-tegels).
 
 ## Wat kost een hovenier voor onkruidbestrijding?
 
-Het uurtarief van een hovenier voor onkruidbestrijding ligt tussen €35 en €55 per uur. Dat is het tarief voor 2025-2026, gebaseerd op meerdere offerteplatforms.
+Het uurtarief van een hovenier voor onkruidbestrijding ligt tussen €35 en €55 per uur. Dat is het tarief voor 2025-2026, gebaseerd op meerdere offerteplatforms. Een breder beeld van [hoveniertarieven 2026 per discipline](/blog/hovenier-tarieven-kosten-per-uur) helpt om je offertes te toetsen aan de markt.
 
 Hier een overzicht van de kosten:
 
@@ -134,7 +134,7 @@ Bestrijden is één ding. Voorkomen is beter. Hier een paar manieren om ervoor t
 
 **Voegzand vervangen.** Zoals hierboven beschreven: goed voegzand is de effectiefste manier om onkruid tussen tegels te voorkomen. Investeer één keer en je hebt er jaren profijt van.
 
-**Worteldoek in borders.** Anti-worteldoek kost €1 tot €3 per m² en leg je onder grind of beplanting. Het laat water door, maar houdt onkruidzaadjes tegen. Niet waterdicht (er komt toch wel wat door), maar het scheelt enorm. Kies voor worteldoek van minimaal 100 gram/m²; het dunnere vliestype scheurt snel en laat meer door. Lap de naden minstens 10 cm over elkaar en snij het iets groter dan je oppervlak. Als er toch onkruid doorkomt, zit dat in het organische materiaal dat zich bovenop het doek heeft opgehoopt. Dat laagje wegkrabben, niet onder het doek graven.
+**Worteldoek in borders.** Anti-worteldoek kost €1 tot €3 per m² en leg je onder grind of beplanting. Het laat water door, maar houdt onkruidzaadjes tegen. Niet waterdicht (er komt toch wel wat door), maar het scheelt enorm. Kies voor worteldoek van minimaal 100 gram/m²; het dunnere vliestype scheurt snel en laat meer door. Lap de naden minstens 10 cm over elkaar en snij het iets groter dan je oppervlak. Als er toch onkruid doorkomt, zit dat in het organische materiaal dat zich bovenop het doek heeft opgehoopt. Dat laagje wegkrabben, niet onder het doek graven. Overweeg je een grindstrook in plaats van borders? Lees onze gids over [een grindtuin aanleggen: kosten en stappen](/blog/grind-tuin-aanleggen-kosten).
 
 **Mulch aanbrengen.** Een laag van 7 tot 10 cm boomschors of houtsnippers op je borders houdt onkruidzaadjes tegen en houdt vocht vast. Mulch kost €3 tot €8 per m², afhankelijk van het materiaal. Je brengt het aan na het wieden. Let op: te dun werkt niet, zaadjes ontkiemen dan toch. Twee keer per jaar bijvullen is genoeg.
 

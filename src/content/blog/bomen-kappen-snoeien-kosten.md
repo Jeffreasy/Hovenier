@@ -53,9 +53,9 @@ Naast standaard snoei zijn er bewerkingen die meer specialistisch zijn. Een boom
 
 Twijfel je of een boom nog veilig is? Een VTA-keuring (Visual Tree Assessment) door een gecertificeerde boomverzorger kost 100 tot 200 euro per boom. Dat is goedkoper dan onnodig kappen, en het rapport heb je later nodig als de gemeente om onderbouwing vraagt. Wil je een boom verplaatsen naar een nieuwe plek in de tuin? Reken op 2.000 tot 12.000 euro. Dat klinkt fors, maar voor een volwassen boom is het zelden de moeite waard om te kappen en opnieuw aan te planten.
 
-Het uurtarief van een hovenier voor lichte snoei tot 4 meter ligt op 35 tot 55 euro. Reguliere hoveniersnoei breder genomen ligt op 45 tot 70 euro per uur. Een boomverzorger of boomchirurg vraagt 30 tot 70 euro per uur, en is per uur dus niet duurder, maar wel breder gespecialiseerd.
+Het uurtarief van een hovenier voor lichte snoei tot 4 meter ligt op 35 tot 55 euro. Reguliere hoveniersnoei breder genomen ligt op 45 tot 70 euro per uur. Een boomverzorger of boomchirurg vraagt 30 tot 70 euro per uur, en is per uur dus niet duurder, maar wel breder gespecialiseerd. Een uitgebreidere prijsuitsplitsing per discipline en regio vind je in ons overzicht van [hoveniertarieven 2026 per uur](/blog/hovenier-tarieven-kosten-per-uur).
 
-Wanneer je snoeit, maakt veel uit voor de boomgezondheid. Daarover later meer in de paragraaf over snoeitijden per boomsoort. Voor de standaard voorjaarssnoei van heesters en jonge bomen vind je een [stappenplan voor voorjaarssnoei](/blog/voorjaarssnoei-heesters-bomen) elders op TuinHub.
+Wanneer je snoeit, maakt veel uit voor de boomgezondheid. Daarover later meer in de paragraaf over snoeitijden per boomsoort. Voor de standaard voorjaarssnoei van heesters en jonge bomen vind je een [stappenplan voor voorjaarssnoei](/blog/voorjaarssnoei-heesters-bomen) elders op TuinHub. Heb je naast de boom ook een haag of beukenwand die in vorm gebracht moet worden? Lees dan ook onze gids over [een haag aanplanten en jaarlijks snoeien](/blog/haag-planten-snoeien).
 
 ## Stronk verwijderen: frezen, uitgraven of laten rotten?
 
@@ -102,7 +102,7 @@ Heeft de gemeente jouw boom op de lijst van monumentale of waardevolle bomen sta
 
 ### Herplantplicht
 
-Veel gemeenten, waaronder Amsterdam en Utrecht, koppelen aan een kapvergunning een herplantplicht: een vervangende boom planten of een compensatiebedrag betalen. Een laanboom van 14 tot 16 cm omtrek kost inclusief plantgat 200 tot 600 euro. Reken die kosten dus mee in je begroting, zeker als je een grotere boom kapt.
+Veel gemeenten, waaronder Amsterdam en Utrecht, koppelen aan een kapvergunning een herplantplicht: een vervangende boom planten of een compensatiebedrag betalen. Een laanboom van 14 tot 16 cm omtrek kost inclusief plantgat 200 tot 600 euro. Reken die kosten dus mee in je begroting, zeker als je een grotere boom kapt. Combineer je de kap met een bredere [tuinrenovatie of opknapbeurt](/blog/tuin-renoveren-opknappen-kosten), dan kun je vaak voordeel halen op grond- en plantwerk.
 
 ## Mag ik kappen in het broedseizoen?
 
