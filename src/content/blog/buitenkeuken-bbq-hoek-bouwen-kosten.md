@@ -25,7 +25,7 @@ De kosten van een buitenkeuken hangen af van twee dingen: bouw je het zelf of la
 
 De populairste DIY-optie is een vaste steigerhout-keuken. Voor €800 tot €1.500 aan materiaal heb je een degelijk werkblad met opbergruimte. Wil je een kamado of Big Green Egg inbouwen? Reken dan op €1.500 tot €2.500 alleen voor de constructie, exclusief de BBQ zelf.
 
-Een slimme budgetoptie: U-elementen van beton. Bij de Gamma kost een U-element ongeveer €15 per stuk. Stapel ze op, leg er tegels of een houten werkblad op, en je hebt een stevige basis voor weinig geld.
+Een slimme budgetoptie: U-elementen van beton. Bij de Gamma kost een U-element ongeveer €15 per stuk. Stapel ze op, leg er tegels of een houten werkblad op, en je hebt een stevige basis voor weinig geld. De prijs van [bestratingstegels per m²](/blog/bestrating-laten-leggen-kosten-tegels) vind je in ons aparte artikel.
 
 Ga je voor een gemetselde buitenkeuken met overkapping? Dan verdubbelen de kosten al snel. Reken op €2.500 tot €5.000 of meer. Overweeg je een [overkapping of veranda](/blog/overkapping-veranda-bouwen-kosten)? Lees dan ons artikel over de kosten daarvan.
 
@@ -89,7 +89,7 @@ Maar wees eerlijk tegen jezelf. Zoals een ervaren DIY'er het formuleerde: "Ik he
 | Loodgieter (ZZP) | €45 – €50 per uur |
 | Loodgieter (MKB) | €50 – €80 per uur |
 
-Voor een complete buitenkeuken laten bouwen (exclusief materiaal en apparatuur) ben je al snel 20 tot 40 uur aan arbeid kwijt. Afhankelijk van de vakman komt dat neer op €700 tot €3.000.
+Voor een complete buitenkeuken laten bouwen (exclusief materiaal en apparatuur) ben je al snel 20 tot 40 uur aan arbeid kwijt. Afhankelijk van de vakman komt dat neer op €700 tot €3.000. Een uitgebreid overzicht van [actuele uurtarieven van hoveniers in 2026](/blog/hovenier-tarieven-kosten-per-uur) helpt om te bepalen wat reëel is.
 
 ## Vergunning nodig? De regels onder de Omgevingswet
 
@@ -99,7 +99,7 @@ Goed nieuws: in veel gevallen heb je geen vergunning nodig voor een buitenkeuken
 - Minimaal 1 meter afstand tot de erfgrens
 - Maximaal 3 meter hoog
 
-Bouw je een grotere constructie, of staat je keuken dichter bij de erfgrens? Dan moet je een omgevingsvergunning aanvragen bij je gemeente. Dat geldt ook als je een overkapping erboven plaatst, want die telt mee in het totale bouwvolume.
+Bouw je een grotere constructie, of staat je keuken dichter bij de erfgrens? Dan moet je een omgevingsvergunning aanvragen bij je gemeente. Dat geldt ook als je een overkapping erboven plaatst, want die telt mee in het totale bouwvolume. Een lichtere oplossing als [een zonnescherm of pergola met zonwering](/blog/zonnescherm-zonwering-tuin-kosten) is meestal vergunningsvrij.
 
 Twijfel je? Check het Omgevingsloket of neem contact op met je gemeente. Liever niet achteraf een probleem.
 
@@ -114,7 +114,7 @@ Dit is de kostenpost die veel mensen vergeten. Je buitenkeuken zelf bouwen voor 
 | Elektra aansluiting | €500 – €1.500 |
 | **Totaal aansluitingen (gemiddeld)** | **€500 – €3.000** |
 
-Een gasleiding aanleggen kost €25 tot €45 per meter. Staat je buitenkeuken 10 meter van je meterkast? Dan ben je alleen aan gasleiding al €250 tot €450 kwijt. Elektra is vaak de duurste post: €500 tot €1.500, afhankelijk van de afstand en het aantal aansluitpunten.
+Een gasleiding aanleggen kost €25 tot €45 per meter. Staat je buitenkeuken 10 meter van je meterkast? Dan ben je alleen aan gasleiding al €250 tot €450 kwijt. Elektra is vaak de duurste post: €500 tot €1.500, afhankelijk van de afstand en het aantal aansluitpunten. Combineer dit eventueel met [tuinverlichting rondom je buitenkeuken](/blog/tuinverlichting-aanleggen-kosten), zodat je in één keer kabels kunt leggen.
 
 Belangrijk: gas- en elektra-aansluitingen moeten door een erkend installateur worden gedaan. Dit is geen klus om zelf te doen, ook niet als je verder alles zelf bouwt.
 

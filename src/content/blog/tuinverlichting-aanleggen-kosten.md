@@ -77,9 +77,9 @@ IP-ratings geven aan hoe goed een lamp beschermd is tegen water en vuil. Voor bu
 | IP67 | Onderdompelbaar tot 1m (30 min) | Grondspots in oprit, paden waar water blijft staan |
 | IP68 | Permanent onder water | Vijververlichting, waterpartijen |
 
-De meeste mensen kiezen IP65. Dat is voldoende voor een tuinspot of wandlamp die vrij in de tuin staat. Ga je grondspots plaatsen in je oprit, waar auto's overheen rijden en regenwater blijft staan? Dan wil je minimaal IP67.
+De meeste mensen kiezen IP65. Dat is voldoende voor een tuinspot of wandlamp die vrij in de tuin staat. Onder een [overkapping of veranda met dak](/blog/overkapping-veranda-bouwen-kosten) volstaat IP44, omdat de lampen daar beschut hangen. Ga je grondspots plaatsen in je oprit of langs een [pas aangelegd tuinpad](/blog/tuinpad-aanleggen-materialen-kosten), waar regenwater blijft staan en soms auto's overheen rijden? Dan wil je minimaal IP67.
 
-Heb je een vijver met verlichting? Dan is IP68 de enige optie. Alles daaronder gaat vroeg of laat lekken.
+Heb je een [vijver in je tuin](/blog/vijver-aanleggen-tuin-kosten) met verlichting? Dan is IP68 de enige optie. Alles daaronder gaat vroeg of laat lekken.
 
 ## Zelf doen of een elektricien inhuren?
 
@@ -110,7 +110,7 @@ Koop geen losse lampen maar een starterset. Merken als Ludeco bieden startersets
 
 Vermijd de allergoedkoopste solar lampjes. Die van €5 per stuk geven nauwelijks licht en gaan zelden langer dan één seizoen mee. Investeer je in solar? Ga dan voor kwaliteit vanaf €15 per stuk.
 
-Overweeg een lichtplan als je meer dan 6 lichtpunten wilt. Ja, dat kost €100 – €200. Maar het voorkomt dat je achteraf lampen moet verplaatsen of bijkopen. Een [hovenier of tuinontwerper](/hovenier-inhuren) kan je hierbij helpen.
+Overweeg een lichtplan als je meer dan 6 lichtpunten wilt. Ja, dat kost €100 – €200. Maar het voorkomt dat je achteraf lampen moet verplaatsen of bijkopen. Een [hovenier of tuinontwerper](/hovenier-inhuren) kan je hierbij helpen, en in ons overzicht van [actuele uurtarieven van hoveniers in 2026](/blog/hovenier-tarieven-kosten-per-uur) zie je wat redelijke tarieven zijn.
 
 Nog een tip: leg altijd extra kabel. Een paar meter extra kost bijna niks, maar scheelt enorm als je later wilt uitbreiden.
 

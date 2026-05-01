@@ -48,7 +48,7 @@ Werk je vanuit huis en zoek je een geïsoleerde werkruimte? Dan zit je in een an
 | Beitsen of schilderen (onderhoud) | €55 per uur incl. materiaal |
 | Vergunning gemeente | €100 – €500 |
 
-Wil je nu al een offerte aanvragen bij een hovenier of timmerman in jouw regio? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk wat het bij jou kost.
+Wil je nu al een offerte aanvragen bij een hovenier of timmerman in jouw regio? Vergelijk eerst de [actuele uurtarieven van hoveniers in 2026](/blog/hovenier-tarieven-kosten-per-uur) en [vraag daarna gratis offertes aan via TuinHub](/offerte) zodat je weet wat het bij jou kost.
 
 ## Hout, metaal of kunststof: welk materiaal past bij jou?
 
@@ -114,7 +114,7 @@ Een tuinhuis staat alleen stevig op een goede fundering. Welke je nodig hebt, ha
 | Betonvloer (gestort) | €80 – €125 | Zware tuinhuizen, blokhutten, gemetselde bergingen |
 | Schroefpalen | €55 – €130 | Slappe of ongelijke grond, grote tuinhuizen |
 
-**Tegels op opsluitbanden** is de populairste keuze voor een standaard tuinhuis. Snel, betaalbaar en goed genoeg voor 90% van de gevallen. Voor een tuinhuis van 10 m² ben je tussen de €140 en €600 kwijt aan fundering.
+**Tegels op opsluitbanden** is de populairste keuze voor een standaard tuinhuis. Snel, betaalbaar en goed genoeg voor 90% van de gevallen. Voor een tuinhuis van 10 m² ben je tussen de €140 en €600 kwijt aan fundering. De prijs per m² van de tegels zelf vind je in ons overzicht van [bestrating laten leggen en de kosten per m²](/blog/bestrating-laten-leggen-kosten-tegels).
 
 **Een gestorte betonvloer** is nodig als je een blokhut, gemetselde berging of zwaar maatwerk-tuinhuis plaatst. Reken voor 10 m² op €800 tot €1.250. Duurder, maar je hebt een vlakke, droge vloer die decennia meegaat.
 
@@ -134,7 +134,7 @@ Niet elk tuinhuis leent zich voor zelfbouw. De haalbaarheid hangt af van het typ
 
 **Blokhut:** beperkt geschikt voor zelfbouw. Het hout is zwaar, de wanddelen moeten exact stapelen en de fundering moet kaarsrecht zijn. Bij een wanddikte boven 44 mm zou ik aanraden om een vakman in te schakelen.
 
-**Maatwerk tuinhuis of geïsoleerd tuinkantoor:** dit is geen DIY-project. Je hebt te maken met isolatiewaarden, dampopen folies, elektra en bouwkundige eisen. Hier huur je een timmerman, hovenier of gespecialiseerd bedrijf in.
+**Maatwerk tuinhuis of geïsoleerd tuinkantoor:** dit is geen DIY-project. Je hebt te maken met isolatiewaarden, dampopen folies, [elektra voor verlichting en stopcontacten](/blog/tuinverlichting-aanleggen-kosten) en bouwkundige eisen. Hier huur je een timmerman, hovenier of gespecialiseerd bedrijf in.
 
 Wil je weten welke vakman bij jouw klus past? Lees [hovenier inhuren in de lente](/blog/hovenier-inhuren-lente) voor tips over offertes vergelijken en kwaliteitseisen.
 

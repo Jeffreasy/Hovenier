@@ -22,7 +22,7 @@ De prijs van een overkapping verschilt enorm per type. Hieronder een overzicht v
 | Veranda aanbouw (maatwerk, 3x5m) | - | - | €4.500 - €10.000 |
 | Pergola met zonwering | - | - | €600 - €7.500 |
 
-De kostenverdeling is ruwweg 60% materiaal, 35% arbeid en 5% voorrijkosten. Daar komen mogelijk nog extra's bij: fundering (betonpoeren) kost €150 tot €1.500, een regenpijp of afwatering circa €250, en elektra aanleggen zo'n €400.
+De kostenverdeling is ruwweg 60% materiaal, 35% arbeid en 5% voorrijkosten. Daar komen mogelijk nog extra's bij: fundering (betonpoeren) kost €150 tot €1.500, een regenpijp of afwatering circa €250, en het [aanleggen van tuinverlichting onder je overkapping](/blog/tuinverlichting-aanleggen-kosten) zo'n €400.
 
 Bij de bouwmarkt vind je kant-en-klare bouwpakketten. Een GAMMA Douglas overkapping van 495x255 cm (circa 13 m²) kost €2.199. Voor een kleiner formaat van 205x255 cm betaal je €1.119. Handig als startpunt, al heb je bij maatwerk meer vrijheid.
 
@@ -86,7 +86,7 @@ Een aluminium overkapping zelf monteren is lastiger. De constructie vereist prec
 | Hovenier | €42 - €91/uur |
 | Aannemer/monteur | €42 - €67/uur |
 
-Voor een complete plaatsing (inclusief fundering en afwerking) ben je bij een vakman meestal €500 tot €1.500 kwijt aan arbeid. Bij een maatwerk aluminium overkapping kan dat oplopen.
+Voor een complete plaatsing (inclusief fundering en afwerking) ben je bij een vakman meestal €500 tot €1.500 kwijt aan arbeid. Bij een maatwerk aluminium overkapping kan dat oplopen. Wil je weten waar deze tarieven vandaan komen, bekijk dan ons overzicht van [actuele uurtarieven van hoveniers in 2026](/blog/hovenier-tarieven-kosten-per-uur).
 
 ### Wanneer wil je zeker een vakman?
 
@@ -103,15 +103,15 @@ Een **overkapping** is de brede term voor elke constructie met een dak boven je 
 
 Een **veranda** is eigenlijk een overdekt terras dat aan je woning vastzit. Denk aan een soort uitbouw, maar dan zonder volledige wanden. Een veranda voelt als een verlengstuk van je woonkamer. Prefab veranda's beginnen bij €2.000 voor een 3x5m model, maatwerk loopt op tot €10.000.
 
-Een **pergola** is een open constructie met balken of lamellen, zonder volledig gesloten dak. Ideaal als je schaduw wilt maar geen volledig dichte overkapping. Met een schaduwdoek of lamellendak erbij zit je al snel goed. Prijzen lopen van €600 voor een eenvoudige pergola tot €7.500 voor een luxe variant met zonwering.
+Een **pergola** is een open constructie met balken of lamellen, zonder volledig gesloten dak. Ideaal als je schaduw wilt maar geen volledig dichte overkapping. Met een schaduwdoek of lamellendak erbij zit je al snel goed. Prijzen lopen van €600 voor een eenvoudige pergola tot €7.500 voor een luxe variant met zonwering. Voor het complete plaatje met [houtsoorten en de beste klimplanten voor een pergola](/blog/pergola-klimplanten-kosten-houtsoorten) hebben we een apart artikel.
 
-Welke je kiest hangt af van hoe je je buitenruimte gebruikt. Zit je er dagelijks, van maart tot november? Dan is een overkapping of veranda de investering waard. Wil je vooral af en toe schaduw op een zonnig terras? Dan volstaat een pergola prima.
+Welke je kiest hangt af van hoe je je buitenruimte gebruikt. Zit je er dagelijks, van maart tot november? Dan is een overkapping of veranda de investering waard. Wil je vooral af en toe schaduw op een zonnig terras? Dan volstaat een pergola prima, eventueel uitgebreid met [een zonnescherm of ander zonweringssysteem](/blog/zonnescherm-zonwering-tuin-kosten) voor de heetste dagen.
 
 ## Wat levert een overkapping op?
 
 Een overkapping is niet alleen een uitgave. Het verhoogt de waarde van je woning. Makelaars schatten dat een goed geplaatste veranda of overkapping 50 tot 100% van de investering terugverdient bij verkoop. Je vergroot namelijk het bruikbare woonoppervlak, en dat telt mee in de taxatie.
 
-Daarnaast verleng je het buitenseizoen. Waar je zonder overkapping misschien vijf maanden van je terras geniet, wordt dat met een overkapping zeven tot acht maanden. Van maart tot november, elke dag als je wilt.
+Daarnaast verleng je het buitenseizoen. Waar je zonder overkapping misschien vijf maanden van je terras geniet, wordt dat met een overkapping zeven tot acht maanden. Van maart tot november, elke dag als je wilt. Een populair vervolgproject onder de overkapping is [zelf een buitenkeuken of BBQ-hoek bouwen](/blog/buitenkeuken-bbq-hoek-bouwen-kosten).
 
 ## Wanneer bouwen? Seizoensadvies en levertijden
 

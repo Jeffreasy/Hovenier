@@ -89,7 +89,7 @@ Een schaduwdoek van 3×4 meter in standaarduitvoering kost €35 – €80. Dat 
 
 Voor wie het groter wil aanpakken.
 
-Een pergola met schaduwdoek (3×4m) kost €600 – €2.500. Een pergola met lamellendak (3×5m) zit je al snel op €10.000 – €18.000. Dat is een andere prijsklasse, maar je hebt dan ook een constructie die tientallen jaren meegaat en bestand is tegen flinke wind.
+Een pergola met schaduwdoek (3×4m) kost €600 – €2.500. Een pergola met lamellendak (3×5m) zit je al snel op €10.000 – €18.000. Dat is een andere prijsklasse, maar je hebt dan ook een constructie die tientallen jaren meegaat en bestand is tegen flinke wind. Wil je hem ook laten begroeien? Lees ons artikel over [een pergola met klimplanten en de keuze van houtsoorten](/blog/pergola-klimplanten-kosten-houtsoorten).
 
 ## Elektrisch of handmatig zonnescherm: wat scheelt het?
 
@@ -119,7 +119,7 @@ Bij een smal uitvalscherm van 2 meter? Dan volstaat handmatig prima.
 | Arbeidstarief vakman | €45 – €75 per uur |
 | Voorrijkosten | €25 – €60 |
 
-De geschatte werkduur voor montage is 2 – 4 uur. Reken dus op €90 – €300 aan arbeid, plus voorrijkosten en eventueel inmeten.
+De geschatte werkduur voor montage is 2 – 4 uur. Reken dus op €90 – €300 aan arbeid, plus voorrijkosten en eventueel inmeten. Voor een vergelijking met andere vakmannen, bekijk de [actuele uurtarieven van hoveniers in 2026](/blog/hovenier-tarieven-kosten-per-uur).
 
 ### Kan je het zelf?
 
@@ -171,5 +171,7 @@ Drie dingen die de levensduur het meest beïnvloeden:
 ## Wat kost jouw ideale zonwering?
 
 De juiste zonwering hangt af van je budget, je terras en hoeveel wind er bij jou staat. Een schaduwdoek van €50 kan precies genoeg zijn. Een elektrisch knikarmscherm met windautomaat van €2.000 ook.
+
+Plan je [een buitenkeuken of BBQ-hoek onder je nieuwe zonwering](/blog/buitenkeuken-bbq-hoek-bouwen-kosten)? Dan kun je de elektriciteit en aansluitingen meteen meenemen in de planning.
 
 Wil je weten wat zonwering voor jouw specifieke situatie kost? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk prijzen van vakmannen bij jou in de buurt. Zo weet je zeker dat je een eerlijke prijs betaalt.

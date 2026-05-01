@@ -32,7 +32,7 @@ Laten we beginnen bij de kern: de prijs. Hieronder vind je de totaalkosten voor 
 | Klimplantenbevestiging | €30 – €80 | Inbegrepen in arbeid |
 | **Totaal** | **€560 – €1.020** | **€1.760 – €4.240** |
 
-Dat verschil zit 'm vooral in arbeid. Een hovenier of timmerman rekent €35 tot €55 per uur. Voor een standaard pergola van 3×4 meter ben je al snel een dag of twee kwijt. Reken op een dagtarief van €280 tot €600.
+Dat verschil zit 'm vooral in arbeid. Een hovenier of timmerman rekent €35 tot €55 per uur (zie ons overzicht van [actuele uurtarieven van hoveniers in 2026](/blog/hovenier-tarieven-kosten-per-uur)). Voor een standaard pergola van 3×4 meter ben je al snel een dag of twee kwijt. Reken op een dagtarief van €280 tot €600.
 
 Wil je het breder bekijken? Pergola laten plaatsen kost gemiddeld €1.800 tot €4.000 voor een standaard houten model, afhankelijk van houtsoort en afwerking.
 
@@ -90,7 +90,7 @@ Nu het leuke deel: welke planten laat je over je pergola groeien? Hier zijn de z
 
 ### Blauweregen: de droomkandidaat
 
-Blauweregen is verreweg de populairste klimplant voor pergola's. Vanaf €19 per plant heb je er al eentje. De paars-blauwe trossen in april en mei zijn prachtig. Maar wees gewaarschuwd: blauweregen is een krachtige groeier. Na 3 tot 5 jaar is de plant volgroeid en kan die flinke kracht uitoefenen op je constructie. Zorg dat je pergola stevig genoeg is.
+Blauweregen is verreweg de populairste klimplant voor pergola's. Vanaf €19 per plant heb je er al eentje. De paars-blauwe trossen in april en mei zijn prachtig. Maar wees gewaarschuwd: blauweregen is een krachtige groeier. Na 3 tot 5 jaar is de plant volgroeid en kan die flinke kracht uitoefenen op je constructie. Zorg dat je pergola stevig genoeg is, en plan jaarlijks snoeionderhoud net zoals je dat bij een [haag of dichte beplanting zou doen](/blog/haag-planten-snoeien).
 
 ### Klimroos voor langdurige bloei
 
@@ -104,7 +104,7 @@ Kamperfoelie is de goedkoopste optie (vanaf €10 per plant) en geurt heerlijk i
 
 Een pergola met druivenranken. In september pluk je je eigen druiven. Klinkt goed? De klimdruif is een uitstekende keuze voor een zonnige, beschutte plek. Houd er rekening mee dat de plant in het najaar zijn blad verliest.
 
-Belangrijk om te weten: het duurt 3 tot 5 jaar voordat klimplanten een pergola volledig bedekken. Geduld is hier het sleutelwoord.
+Belangrijk om te weten: het duurt 3 tot 5 jaar voordat klimplanten een pergola volledig bedekken. Geduld is hier het sleutelwoord. In de eerste jaren zorgt [tuinverlichting onder de pergola](/blog/tuinverlichting-aanleggen-kosten) alvast voor sfeer in de avonduren.
 
 ## Pergola zelf bouwen of laten plaatsen?
 
