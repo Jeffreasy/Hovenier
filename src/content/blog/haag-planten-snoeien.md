@@ -9,7 +9,7 @@ image: /blog/haag-planten-snoeien-hero.jpg
 imageAlt: "Tuinpad met strak gesnoeide hagen en bloemen"
 ---
 
-Je wilt privacy in de tuin, maar die schutting is aan vervanging toe. Een haag planten lijkt de logische stap: groener, mooier en op termijn goedkoper dan hout of beton. Maar dan komen de vragen. Welke haagplant groeit snel genoeg? Hoeveel planten heb je per meter nodig? En hoe zit het eigenlijk met de buren en de erfgrens?
+Je wilt [privacy in de tuin](/blog/tuinafscheiding-creatief-privacy-kosten), maar die [schutting is aan vervanging toe](/blog/schutting-plaatsen-kosten-regels). Een haag planten lijkt de logische stap: groener, mooier en op termijn goedkoper dan hout of beton. Maar dan komen de vragen. Welke haagplant groeit snel genoeg? Hoeveel planten heb je per meter nodig? En hoe zit het eigenlijk met de buren en de erfgrens?
 
 Dit artikel helpt je kiezen. Je vergelijkt de populairste haagplanten op prijs, groeisnelheid en onderhoud. Je leest wat een haag kost per strekkende meter, wanneer je snoeit en wat het burenrecht zegt over afstanden.
 
@@ -125,7 +125,7 @@ Snoeien houdt je haag dicht en in vorm. Maar niet elke haag vraagt evenveel aand
 | Taxus | Augustus/september | Niet nodig | 1x |
 | Conifeer (Thuja) | Mei/juni | Augustus/september | 2x |
 
-Voor groenblijvende hagen geldt: de eerste snoeibeurt valt in mei of juni, de tweede in augustus of september. Wacht met snoeien tot de nachtvorst geweken is. Een late nachtvorst op vers geknipte scheuten kan flinke schade aanrichten.
+Voor groenblijvende hagen geldt: de eerste snoeibeurt valt in mei of juni, de tweede in augustus of september. Wacht met snoeien tot de nachtvorst geweken is, net als bij [voorjaarssnoei van heesters en bomen](/blog/voorjaarssnoei-heesters-bomen). Een late nachtvorst op vers geknipte scheuten kan flinke schade aanrichten.
 
 Drie tips om goed te snoeien:
 
@@ -158,7 +158,7 @@ Maar er zijn situaties waarin een [hovenier inhuren](/blog/hovenier-inhuren-lent
 - Je wilt grote planten (150 cm en hoger) die zwaar zijn om te verplaatsen
 - Je twijfelt over de juiste soort of het beplantingsplan
 
-Een hovenier kost gemiddeld €45 per uur (landelijk gemiddelde 2026). Voor het planten van een haag inclusief grondwerk betaal je €50 tot €75 per strekkende meter. Dat is een investering, maar je weet dat het vakkundig gebeurt. En bij veel hoveniers zit advies over de juiste soort en plantafstand inbegrepen.
+Een [hovenier kost gemiddeld €45 per uur](/blog/hovenier-tarieven-kosten-per-uur) (landelijk gemiddelde 2026). Voor het planten van een haag inclusief grondwerk betaal je €50 tot €75 per strekkende meter. Dat is een investering, maar je weet dat het vakkundig gebeurt. En bij veel hoveniers zit advies over de juiste soort en plantafstand inbegrepen.
 
 ## Subsidie voor een groene erfafscheiding
 

@@ -139,11 +139,11 @@ De methode hangt af van je grondsoort én van wat erbovenop komt. Een gazon vraa
 - 10 tot 15 L compost per m², niet meer. Gras houdt niet van een dik pakket organische stof in één keer.
 - Bekalken als de pH onder 5,5 zit (mosgazon-signaal). Reken op 1 tot 1,5 kg kalk per 10 m². Een 20 kg-zak dekt 200 tot 250 m².
 - **Triferto Korrelkalk 20 kg (€19,90)** met magnesium voor combigewassen, of **DCM Groen-kalk 20 kg (€12,95)** voor algemeen gebruik.
-- Voorjaar verticuteren plus topdressen met fijne compost is de standaardroutine voor een verwaarloosd gazon. Meer hierover in [gazon-onderhoud zomer en bemesten](/blog/gazon-onderhoud-zomer-maaien-bemesten).
+- [Voorjaar verticuteren plus topdressen](/blog/gazon-verticuteren-voorjaar) met fijne compost is de standaardroutine voor een verwaarloosd gazon. Meer hierover in [gazon-onderhoud zomer en bemesten](/blog/gazon-onderhoud-zomer-maaien-bemesten).
 
 ### Borders
 
-- 50 tot 100 L compost per m² als mulch (5 tot 10 cm laag) bij aanleg, daarna 2 tot 3 cm jaarlijks.
+- 50 tot 100 L compost per m² als mulch (5 tot 10 cm laag) bij [aanleg van een nieuwe border](/blog/nieuwe-border-aanleggen), daarna 2 tot 3 cm jaarlijks.
 - Bij kleibodem: 1 tot 2 zakken basaltmeel per 30 m² inwerken bij aanleg.
 - Bij zandbodem: 1 zak bentoniet per 20 tot 25 m² door de bovenlaag.
 - Niet jaarlijks omspitten. Eén keer goed bij aanleg, daarna mulchen en de fauna doet de rest. Zie ook het [siertuin-border ontwerp en beplantingsplan](/blog/siertuin-border-ontwerp-beplantingsplan-kosten).
@@ -159,7 +159,7 @@ Wat compost betreft kun je natuurlijk ook zelf maken. Een composthoop kost niets
 
 ## Wat kost grondverbetering door een hovenier?
 
-Veel mensen onderschatten het verschil tussen "een paar zakken compost erover" en wat een hovenier doet bij echt grondwerk. Een hovenier rekent op uurbasis óf per m², en bij grotere projecten loopt dat snel op.
+Veel mensen onderschatten het verschil tussen "een paar zakken compost erover" en wat een hovenier doet bij echt grondwerk. Een hovenier rekent [op uurbasis óf per m²](/blog/hovenier-tarieven-kosten-per-uur), en bij grotere projecten loopt dat snel op.
 
 | Werkzaamheid | Tarief 2026 |
 |---|---|

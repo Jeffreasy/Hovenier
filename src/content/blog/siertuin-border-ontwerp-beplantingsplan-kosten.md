@@ -33,7 +33,7 @@ Een korte beslis-flow voorkomt urenlang twijfelen.
 * **Heb je een lastige standplaats, een grote oppervlakte of een specifiek thema (vlinders, prairie, schaduw)?** Laat een beplantingsplan op maat maken voor €175 tot €250.
 * **Wil je het uit handen geven of mis je tijd en kennis?** Schakel een hovenier in voor het hele traject. Reken op €725 tot €1.800 voor 10 m² inclusief grond, planten en arbeid.
 
-Het verschil tussen €130 en €1.800 zit niet in betere planten. Het zit in arbeid, ontwerptijd en garantie op aanslaan. Een hovenier rekent €35 tot €60 per uur en levert vaak een korte garantieperiode op het plantgoed.
+Het verschil tussen €130 en €1.800 zit niet in betere planten. Het zit in arbeid, ontwerptijd en garantie op aanslaan. Een [hovenier rekent €35 tot €60 per uur](/blog/hovenier-tarieven-kosten-per-uur) en levert vaak een korte garantieperiode op het plantgoed.
 
 ### Kosten per m² alleen plantgoed
 
@@ -75,7 +75,7 @@ Pakketten zijn handig, maar er is een vaak genoemde valkuil. Forumleden klagen g
 
 ### Route 3: beplantingsplan op maat
 
-Een tuinontwerper of gespecialiseerd beplantingsbureau tekent een plan dat is afgestemd op jouw maten, grond, lichtinval en wensen. Een los beplantingsplan voor één border kost €175 tot €250. Voor een groter project met tuinontwerp én beplantingsplan zit je op €400 tot €2.500. Bij grote, complexe tuinen kan dat oplopen tot boven de €3.000.
+Een tuinontwerper of gespecialiseerd beplantingsbureau tekent een plan dat is afgestemd op jouw maten, grond, lichtinval en wensen. Een los beplantingsplan voor één border kost €175 tot €250. Voor een groter project met [tuinontwerp én beplantingsplan op maat](/blog/tuin-laten-ontwerpen-kosten) zit je op €400 tot €2.500. Bij grote, complexe tuinen kan dat oplopen tot boven de €3.000.
 
 Wanneer is dit de moeite waard? Bij borders groter dan 15 m², bij lastige standplaatsen (kleigrond, veel wortelopslag, half overdekt), of wanneer je een specifieke sfeer wilt (Engelse cottage, prairie, Japans). Een goed plan voorkomt dat je drie keer plantgoed moet aanschaffen voordat de border werkt.
 
@@ -145,7 +145,7 @@ Bijna elk online artikel springt direct van plantkeuze naar planten zetten. Dat 
 | Worteldoek/gronddoek 1m breed | naar wens 5 tot 10 m | €1 tot €3 per m | €5 tot €30 |
 | Mulch (boomschors) per zak 60L | 2 tot 4 zakken | €5 tot €10 per zak | €10 tot €40 |
 
-Reken op €58 tot €155 aan materialen voor 10 m², afhankelijk van je grond en of je mulcht. Op kleigrond verdubbel je de compost, op zandgrond werk je extra organische stof door.
+Reken op €58 tot €155 aan materialen voor 10 m², afhankelijk van je grond en of je mulcht. Op [kleigrond verdubbel je de compost](/blog/grondverbetering-tuin-kosten-methodes), op zandgrond werk je extra organische stof door.
 
 ### Substraatlaag: 15 tot 30 cm
 
@@ -247,4 +247,4 @@ Minimaal 50 cm voor een functionele border, ideaal 1 tot 2 meter voor gelaagde b
 
 ## Klaar om jouw border aan te leggen?
 
-Begin niet bij de planten, begin bij de grond en het plan. Een paar uur tekenen en een weekend goed grondwerk verdienen zichzelf binnen één seizoen terug. Wil je een prijsindicatie voor jouw oppervlakte? Probeer onze [tuinkosten-calculator](/tools/tuinkosten-calculator) of [vraag een vrijblijvende offerte aan](/offerte) bij een hovenier in jouw regio. Twijfel je nog tussen DIY of uitbesteden? Lees ook hoe je [de beste hovenier kiest](/blog/hoe-kies-je-de-beste-hovenier) voordat je opdracht geeft.
+Begin niet bij de planten, begin bij de grond en het plan. Een paar uur tekenen en een weekend goed grondwerk verdienen zichzelf binnen één seizoen terug. Wil je een prijsindicatie voor jouw oppervlakte? Probeer onze [tuinkosten-calculator](/tools/tuinkosten-calculator) of [vraag een vrijblijvende offerte aan](/offerte) bij een hovenier in jouw regio. Twijfel je nog tussen DIY of uitbesteden? Lees ook hoe je [de beste hovenier kiest](/blog/hoe-kies-je-de-beste-hovenier) voordat je opdracht geeft, of combineer de border met een [groene haag als achterwand](/blog/haag-planten-snoeien) voor extra structuur en privacy.

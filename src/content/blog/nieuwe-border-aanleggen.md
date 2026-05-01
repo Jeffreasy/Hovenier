@@ -29,13 +29,13 @@ Let op het licht. Staat de plek vol in de zon, half in de schaduw of vrijwel noo
 
 Verwijder alle gras en onkruid van de plek. Doe dit grondig. Kleefkruid, distels en klaver zijn lastig te verwijderen als planten er al tussen staan.
 
-Werk de grond daarna door. Gebruik een spade of vork om de bovenste dertig centimeter los te maken. Voeg compost, tuinaarde of wat stalmest toe en meng dat goed door de grond. Zo geef je planten een goede start.
+Werk de grond daarna door. Gebruik een spade of vork om de bovenste dertig centimeter los te maken. Voeg [zelfgemaakte compost](/blog/composteren-tuin-methodes-kosten), tuinaarde of wat stalmest toe en meng dat goed door de grond. Zo geef je planten een goede start.
 
-Zware kleigrond kun je verbeteren met zand en compost. Dat kost wat moeite maar maakt een groot verschil in hoe goed planten aanslaan.
+Zware kleigrond kun je [verbeteren met zand en compost](/blog/grondverbetering-tuin-kosten-methodes). Dat kost wat moeite maar maakt een groot verschil in hoe goed planten aanslaan.
 
 ## Stap 3: Maak een eenvoudig beplantingsplan
 
-Een solide beplantingsplan is simpeler dan je denkt. Teken de border op papier, noteer de afmetingen en geef aan welke plekken zon of schaduw zijn. Verdeel de border in drie zones: groot achteraan, middelgroot in het midden, laag vooraan.
+Een solide [beplantingsplan met aantallen per m²](/blog/siertuin-border-ontwerp-beplantingsplan-kosten) is simpeler dan je denkt. Teken de border op papier, noteer de afmetingen en geef aan welke plekken zon of schaduw zijn. Verdeel de border in drie zones: groot achteraan, middelgroot in het midden, laag vooraan.
 
 Kies **drie tot vijf soorten vaste planten** en gebruik van elke soort meerdere exemplaren. Dat oogt natuurlijker dan veel losse planten van tien verschillende soorten.
 
@@ -80,14 +80,14 @@ Het aanleggen van een border is goed zelf te doen als de grond meevalt. Het kost
 Schakel een [hovenier in de lente](/blog/hovenier-inhuren-lente) in als:
 - je grond hard en kleiig is en verbetering nodig heeft
 - je grote planten of struiken wil verplaatsen
-- je een volledig beplantingsontwerp wil
+- je een [volledig tuinontwerp door een specialist](/blog/tuin-laten-ontwerpen-kosten) wil
 - de border meer dan 20 vierkante meter beslaat
 
 ## Wat kost een border aanleggen?
 
 Alleen de planten al kosten gemiddeld 7 tot 15 euro per vierkante meter, afhankelijk van de soorten en de dichtheid. Een border van 10 m² kost je dan 70 tot 150 euro aan planten.
 
-Een hovenier die de grond voorbereidt, een beplantingsplan maakt en de planten zet, rekent daarboven arbeidskosten. Voor een volledige aanleg van 10 m² inclusief beplanting en arbeidskosten betaal je al snel 300 tot 600 euro. Bij grotere oppervlaktes is de investering logischerwijs hoger.
+Een hovenier die de grond voorbereidt, een beplantingsplan maakt en de planten zet, rekent daarboven [arbeidskosten op uurbasis](/blog/hovenier-tarieven-kosten-per-uur). Voor een volledige aanleg van 10 m² inclusief beplanting en arbeidskosten betaal je al snel 300 tot 600 euro. Bij grotere oppervlaktes is de investering logischerwijs hoger.
 
 Grondverbetering, drainage of het verplaatsen van bestaande planten zijn extra posten. Vraag vooraf een gespecificeerde offerte.
 

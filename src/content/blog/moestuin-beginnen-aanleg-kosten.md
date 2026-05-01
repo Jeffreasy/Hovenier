@@ -49,7 +49,7 @@ Startkosten moestuin in volle grond: €50 tot €200, afhankelijk van oppervlak
 
 Niet iedereen wil of kan zelf graven. Misschien heb je zware kleigrond die omgespit moet worden, of wil je een mooi ontwerp met meerdere bakken en paden ertussen. Dan kun je een hovenier inschakelen voor de aanleg.
 
-Hovenier voor moestuin-aanleg: €30 tot €70 per m² inclusief materiaal. Het uurtarief van een hovenier ligt tussen de €35 en €60. Een moestuinontwerp inclusief beplantingsplan kost zo'n €350 tot €490 voor circa 100 m². Voor een complete moestuin-aanleg van 10 m² kun je rekenen op €400 tot €900 all-in.
+Hovenier voor moestuin-aanleg: €30 tot €70 per m² inclusief materiaal. Het [uurtarief van een hovenier](/blog/hovenier-tarieven-kosten-per-uur) ligt tussen de €35 en €60. Een moestuinontwerp inclusief beplantingsplan kost zo'n €350 tot €490 voor circa 100 m². Voor een complete moestuin-aanleg van 10 m² kun je rekenen op €400 tot €900 all-in.
 
 Klinkt dat als een flinke investering? Bedenk dat je een goed aangelegde moestuin jarenlang meeneemt. En als je een hovenier zoekt voor de aanleg, kun je via TuinHub [gratis offertes aanvragen](/offerte) en prijzen vergelijken. Meer weten over wat een hovenier kost? Lees dan ook [wanneer het slim is om een hovenier in te huren](/blog/hovenier-inhuren-lente).
 
@@ -131,7 +131,7 @@ Maar een paar fouten kun je makkelijk voorkomen:
 
 **Alles tegelijk zaaien.** Spreid je zaaidata. Als je alle sla tegelijk zaait, heb je twee weken lang meer sla dan je kunt eten, en daarna niets meer.
 
-**Grond niet voeden.** Groenten onttrekken veel voedingsstoffen aan de bodem. Zonder aanvulling raken die op en groeien je planten langzamer of vallen ze halverwege het seizoen stil. Werk aan het begin van het groeiseizoen compost door de grond, een handvol per vierkante meter is genoeg. Halverwege de zomer, als de planten volop aan het produceren zijn, kun je bijvoeden met vloeibare organische mest, zo'n twee keer per maand. Dit kleine beetje extra moeite zie en proef je echt in je oogst.
+**Grond niet voeden.** Groenten onttrekken veel voedingsstoffen aan de bodem. Zonder aanvulling raken die op en groeien je planten langzamer of vallen ze halverwege het seizoen stil. Werk aan het begin van het groeiseizoen [zelfgemaakte compost door de grond](/blog/composteren-tuin-methodes-kosten), een handvol per vierkante meter is genoeg. Halverwege de zomer, als de planten volop aan het produceren zijn, kun je bijvoeden met vloeibare organische mest, zo'n twee keer per maand. Dit kleine beetje extra moeite zie en proef je echt in je oogst.
 
 ## Welke methode past bij jou?
 
@@ -139,7 +139,7 @@ Er zijn grofweg drie manieren om een moestuin aan te leggen. Elk heeft z'n voord
 
 **Volle grond** is de goedkoopste optie. Je werkt direct in de tuingrond. Voordeel: veel ruimte, lage kosten. Nadeel: je hebt misschien slechte grond die je moet verbeteren, en onkruid is een groter issue.
 
-**Verhoogde bakken** zijn populair, en terecht. Je werkt op een prettige hoogte, hebt controle over de grondkwaliteit en minder last van onkruid. Verhoogde moestuinbak in hout: vanaf ~€100. Cortenstaal of premium: €200 tot €400. Ideaal als je kleigrond hebt of rugklachten.
+**Verhoogde bakken** zijn populair, en terecht. Je werkt op een prettige hoogte, hebt controle over de grondkwaliteit en minder last van onkruid. Verhoogde moestuinbak in hout: vanaf ~€100. Cortenstaal of premium: €200 tot €400. Ideaal als je [kleigrond hebt en wilt verbeteren](/blog/grondverbetering-tuin-kosten-methodes) of rugklachten.
 
 **Kas of foliekas** verlengt het seizoen. Je kunt eerder starten en later dooroogsten. Een kleine foliekas kost €100 tot €250. Handig voor tomaten en paprika's, die in Nederland buiten niet altijd goed gedijen.
 
@@ -151,7 +151,7 @@ Zelf een moestuin aanleggen is goed te doen. Maar soms is een hovenier de slimme
 
 Bij zware grondbewerking, bijvoorbeeld als je een betonnen terras wilt vervangen door een moestuin, heb je sloopwerk en afvoer nodig. Dat doe je niet met een tuinschepje.
 
-Als je een groter ontwerp wilt met paden, irrigatie en meerdere bakken, kan een hovenier dat efficiënter realiseren. En als je simpelweg geen tijd hebt om te graven en grond aan te vullen, is uitbesteden geen luxe maar een praktische keuze.
+Als je een groter ontwerp wilt met paden, [een bewateringssysteem](/blog/bewateringssysteem-tuin-aanleggen-kosten) en meerdere bakken, kan een hovenier dat efficiënter realiseren. En als je simpelweg geen tijd hebt om te graven en grond aan te vullen, is uitbesteden geen luxe maar een praktische keuze.
 
 Wil je weten wat dat kost in jouw regio? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk hoveniers bij jou in de buurt.
 
