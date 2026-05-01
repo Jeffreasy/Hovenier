@@ -71,7 +71,7 @@ Hier zit het verschil. Zelf beitsen kost je een weekend en wat tientjes aan mate
 
 **Rekenvoorbeeld:** 50 m² schutting met CETABEVER. Je hebt 5 liter per laag nodig (50 m² gedeeld door 10 m²/liter). Twee lagen betekent 10 liter, maal €8,70 per liter = €87 aan materiaal.
 
-Professioneel beitsen kost €22 tot €29 per m² inclusief BTW en materiaal. Professioneel schilderen met verf komt op €30 tot €35 per m². Het uurtarief van een schilder voor buitenwerk ligt op €40 tot €55 per uur.
+Professioneel beitsen kost €22 tot €29 per m² inclusief BTW en materiaal. Professioneel schilderen met verf komt op €30 tot €35 per m². Het uurtarief van een schilder voor buitenwerk ligt op €40 tot €55 per uur. Een [hovenier hanteert vergelijkbare uurtarieven voor tuinwerk](/blog/hovenier-tarieven-kosten-per-uur).
 
 Handig om te weten: bij woningen ouder dan 2 jaar valt schilderwerk onder het lage BTW-tarief van 9% in plaats van 21%.
 
@@ -135,10 +135,10 @@ Timing maakt verschil. Beits die je aanbrengt bij de verkeerde omstandigheden dr
 
 **Niet beitsen bij:** vorst, regen, felle zon (dan droogt de beits te snel en krijg je strepen), of als het hout nog vochtig is van dauw of neerslag.
 
-Het voorjaar is het perfecte moment. De temperaturen zijn mild, het hout heeft de winter achter de rug, en je beschermt het voor de zomer en herfst. April en mei zijn ideaal. September kan ook nog, als je een droge periode te pakken hebt.
+Het voorjaar is het perfecte moment. De temperaturen zijn mild, het hout heeft de winter achter de rug, en je beschermt het voor de zomer en herfst. April en mei zijn ideaal. September kan ook nog, als je een droge periode te pakken hebt. Plan dit in samen met je andere [voorjaarsklussen in de tuin](/blog/tuinonderhoud-lente), zoals snoeien en bemesten.
 
 ## De volgende stap
 
-Is je schutting eigenlijk al te ver heen? Als het hout rot is, de planken los zitten of de palen scheef staan, is behandelen dweilen met de kraan open. Lees dan [wat een nieuwe schutting kost en waar je op moet letten](/blog/schutting-plaatsen-kosten-regels).
+Is je schutting eigenlijk al te ver heen? Als het hout rot is, de planken los zitten of de palen scheef staan, is behandelen dweilen met de kraan open. Lees dan [wat een nieuwe schutting kost en waar je op moet letten](/blog/schutting-plaatsen-kosten-regels), of overweeg [creatieve alternatieven voor een schutting](/blog/tuinafscheiding-creatief-privacy-kosten) zoals een hedera scherm of gabion.
 
 Wil je je schutting laten behandelen door een professional? [Vraag gratis offertes aan via TuinHub](/offerte) en vergelijk prijzen van schilders en hoveniers bij jou in de buurt. Zo weet je zeker dat je een eerlijke prijs betaalt.

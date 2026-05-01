@@ -11,7 +11,7 @@ imageAlt: "Tuin met houten schutting, gazon en overkapping"
 
 Je schutting staat scheef na de laatste najaarsstorm, de planken zijn groen van de algen en de onderste latten zijn doorgerot. Elke keer dat je in de tuin zit, kijk je recht in de keuken van de buren. En zij in de jouwe. Ondertussen weet je niet of de buurman moet meebetalen, hoe hoog je mag bouwen, of welk materiaal niet weer na vijf jaar vergaan is.
 
-Dit artikel geeft antwoord op alle drie de vragen tegelijk. Wat kost schutting plaatsen, welk materiaal is verstandig, en wat zegt de wet?
+Dit artikel geeft antwoord op alle drie de vragen tegelijk. Wat kost schutting plaatsen, welk materiaal is verstandig, en wat zegt de wet? Liever geen klassieke schutting? Bekijk dan ook [creatieve tuinafscheidingen](/blog/tuinafscheiding-creatief-privacy-kosten) zoals hedera schermen, gabions en haagplanten.
 
 ## Wat kost een schutting laten plaatsen?
 
@@ -34,7 +34,7 @@ De prijs hangt af van het materiaal en de lengte, maar de montagekosten zijn voo
 
 De bovenstaande bedragen dekken het materiaal en het plaatsen. Maar een schutting staat niet op zichzelf. Er zijn vaste palen nodig, vaak in beton of grond gezet, en bij vervanging moet de oude schutting ook weg.
 
-Een vakman rekent **€35–€75 per uur**, afhankelijk van de regio en het type werk. Voor specialistisch werk, zoals het stellen van palen in beton of het herstellen van een lastige fundering, betaal je aan de bovenkant van die range.
+Een vakman rekent **€35–€75 per uur**, afhankelijk van de regio en het type werk. Voor specialistisch werk, zoals het stellen van palen in beton of het herstellen van een lastige fundering, betaal je aan de bovenkant van die range. Een complete vergelijking van [wat een hovenier per uur kost in 2026](/blog/hovenier-tarieven-kosten-per-uur) helpt bij het beoordelen van offertes.
 
 ### Rekenvoorbeeld: 15 meter schutting
 
@@ -78,7 +78,7 @@ Grenen en vuren zijn goedkoop in aanschaf, maar gaan zonder goed onderhoud maar 
 
 ### Douglas en hardhout: weinig gedoe, lang mooi
 
-Douglas is een populaire keuze voor wie iets meer wil dan behandeld grenen maar geen hardhoutbudget heeft. Het vergrijst mooi naar een zilvergrijs, vraagt nauwelijks behandeling en gaat 10 tot 15 jaar mee. Hardhout (azobé, bangkirai, ipé) loopt op tot 20–30 jaar. Hogere aanschaf, maar je vervangt de schutting een generatie lang niet.
+Douglas is een populaire keuze voor wie iets meer wil dan behandeld grenen maar geen hardhoutbudget heeft. Het vergrijst mooi naar een zilvergrijs, vraagt nauwelijks behandeling en gaat 10 tot 15 jaar mee. Hardhout (azobé, bangkirai, ipé) loopt op tot 20–30 jaar. Hogere aanschaf, maar je vervangt de schutting een generatie lang niet. Wie nog langer mee wil, kiest voor [een gemetselde tuinmuur of keerwand](/blog/tuinmuur-keerwand-bouwen-kosten) die 50 tot 75 jaar meegaat.
 
 ### Kunststof: praktisch maar niet voor iedereen
 
@@ -147,7 +147,7 @@ Prijsverschillen tussen aannemers en hoveniers kunnen flink oplopen, soms wel 30
 
 Een schutting gaat langer mee als je hem op het juiste moment de juiste aandacht geeft.
 
-**Geïmpregneerd hout:** Beits of olie jaarlijks, bij voorkeur in het voorjaar als het hout droog is. Schuur licht op voor een hechte laag. Behandel de onderkant van de planken extra goed: daar begint het rotten.
+**Geïmpregneerd hout:** Beits of olie jaarlijks, bij voorkeur in het voorjaar als het hout droog is. Schuur licht op voor een hechte laag. Behandel de onderkant van de planken extra goed: daar begint het rotten. Een volledig stappenplan voor [een houten schutting beitsen en behandelen](/blog/schutting-schilderen-behandelen-kosten) staat in ons aparte artikel.
 
 **Douglas en hardhout:** Laat gerust vergrijzen als je van die kleur houdt. Wil je de bruine kleur behouden, gebruik dan een doordringende olie op hardhoutbasis. Eens per twee jaar is doorgaans voldoende.
 

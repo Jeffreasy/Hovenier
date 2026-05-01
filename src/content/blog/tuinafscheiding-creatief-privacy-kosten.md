@@ -63,7 +63,7 @@ Wil je de look van groen zonder het onderhoud? Een kunsthaag hedera van 150×300
 
 Een gabion is een draadkorfsysteem gevuld met stenen. Stevig, modern, en vrijwel onverwoestbaar. Een schanskorf schutting van 100×200 cm kost €142,95 tot €184,95. Daar komt nog vulmateriaal bij (basalt of graniet kost circa €0,14 tot €0,21 per kg) en de arbeid voor plaatsing inclusief fundering: €100 tot €150 per meter.
 
-Het totaalplaatje voor 10 meter gabion komt daarmee op €3.000 tot €4.500. Niet goedkoop, maar de levensduur van 30 jaar of meer maakt het per jaar gezien aantrekkelijker dan het lijkt.
+Het totaalplaatje voor 10 meter gabion komt daarmee op €3.000 tot €4.500. Niet goedkoop, maar de levensduur van 30 jaar of meer maakt het per jaar gezien aantrekkelijker dan het lijkt. Voor een gemetselde variant kun je [wat een tuinmuur of keerwand kost](/blog/tuinmuur-keerwand-bouwen-kosten) vergelijken.
 
 ### Haagplanten
 
@@ -77,7 +77,7 @@ Twee opties die we apart noemen omdat ze een andere aanpak vragen.
 
 **Siergrassen** zoals Miscanthus kosten €16 tot €50 per meter (reken op 3 tot 5 planten per meter). Ze geven een zachte, wuivende afscheiding. Privacy-score: 3 van 5, dus meer sfeer dan afscherming. In het voorjaar snoei je ze terug tot de grond.
 
-**Een pergola met klimplanten** kost €80 tot €200 per meter, afhankelijk van het materiaal. De privacy groeit letterlijk met de jaren mee: van een score van 3 naar 4. Een houten pergola gaat 15 tot 25 jaar mee. Je moet de klimplant wel begeleiden en snoeien.
+**Een pergola met klimplanten** kost €80 tot €200 per meter, afhankelijk van het materiaal. De privacy groeit letterlijk met de jaren mee: van een score van 3 naar 4. Een houten pergola gaat 15 tot 25 jaar mee. Je moet de klimplant wel begeleiden en snoeien. Lees meer over [het kiezen van houtsoorten en klimplanten voor een pergola](/blog/pergola-klimplanten-kosten-houtsoorten).
 
 ## Wat kost een tuinafscheiding? Voorbeeldberekening voor 10 meter
 
@@ -93,7 +93,7 @@ Stel, je wilt je achtertuin van 10 meter afscheiden. Dit kost het, inclusief mat
 | Gabion (200 cm) | €1.430 - €1.850 + vulling | €1.000 - €1.500 | **€3.000 - €4.500** |
 | Haagplanten (conifeer) | €150 - €400 | €100 - €200 | **€250 - €600** |
 
-Een hovenier rekent gemiddeld €35 tot €50 per uur (excl. BTW). Voor het plaatsen van een scherm of schutting betaal je zo'n €15 tot €20 per strekkende meter aan arbeid.
+Een hovenier rekent gemiddeld €35 tot €50 per uur (excl. BTW). Voor het plaatsen van een scherm of schutting betaal je zo'n €15 tot €20 per strekkende meter aan arbeid. Een uitgebreide vergelijking van [hovenier tarieven en uurprijzen in 2026](/blog/hovenier-tarieven-kosten-per-uur) helpt bij het inschatten van de totale kosten.
 
 Wil je precies weten wat jouw tuinafscheiding kost? [Vraag gratis offertes aan](/offerte) bij hoveniers in jouw regio.
 
