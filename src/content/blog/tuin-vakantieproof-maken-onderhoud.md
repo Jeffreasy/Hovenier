@@ -4,7 +4,7 @@ description: "Op vakantie zonder dode planten? Bewatering vanaf €15, plantenop
 publishDate: 2026-05-08
 category: tips
 featured: false
-draft: true
+draft: false
 ---
 
 Tuin vakantie onderhoud is het verschil tussen thuiskomen bij een groene oase of een verdroogde woestijn. Een vakantieproof tuin maken kost in 2026 tussen €15 en €350, afhankelijk van je oplossing: een vakantieschakelaar voor verlichting kost €14,95, een complete druppelslang met timer €60 tot €150, en een professionele plantenoppas rekent €14,95 tot €17,95 per bezoek. De drie pijlers zijn bewatering (timer + druppelslang of plantenoppas), onderhoud (laatst maaien op 5 cm hoogte, mulchen, onkruid weg) en beveiliging (sensorverlichting, tijdschakelaar). Hieronder vergelijken we automatische systemen, DIY-oplossingen en oppas-tarieven, met een complete checklist voor 1 week, 2 weken en 3 weken weg.
