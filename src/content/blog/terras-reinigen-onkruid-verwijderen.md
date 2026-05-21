@@ -1,7 +1,8 @@
 ---
-title: "Terras reinigen en onkruid verwijderen: kosten, methoden en tips [2026]"
-description: "Terras reinigen en onkruid tussen tegels verwijderen? Bekijk kosten, methoden per tegeltype en wanneer je een professional inschakelt. Inclusief prijzen 2026."
+title: "Terras reinigen 2026: methoden per tegeltype, kosten en groene aanslag voorkomen"
+description: "Terras reinigen 2026: 6 methoden per tegeltype (hogedruk, soda, SoftWash, stoom), kosten DIY vs hovenier en hoe je groene aanslag voorkomt."
 publishDate: 2026-03-29
+updatedDate: 2026-05-08
 category: onderhoud
 featured: false
 draft: false
@@ -9,9 +10,9 @@ image: /blog/terras-reinigen-hero.jpg
 imageAlt: "Schoon terras met groene klimplanten"
 ---
 
-Je loopt de tuin in en je terras ziet er niet uit. Groene aanslag op de tegels, onkruid dat tussen elke voeg omhoogschiet en die hardnekkige zwarte vlekken van de winter. Je wilt niks liever dan lekker buiten zitten zodra het warm wordt. Maar eerst moet je dat terras reinigen. En dan die voegen. Waar begin je?
+Je loopt de tuin in en je terras ziet er niet uit. Groene aanslag op de tegels, hardnekkige zwarte vlekken van de winter, voegen vol vuil. Je wilt niks liever dan lekker buiten zitten zodra het warm wordt. Maar eerst moet je dat terras reinigen. Waar begin je?
 
-In dit artikel vind je alles wat je nodig hebt: welke methode past bij jouw terras, hoe je onkruid verwijdert zonder dat het meteen terugkomt, en wat het kost om het zelf te doen of uit te besteden.
+In dit artikel vind je alles wat je nodig hebt: welke methode past bij jouw tegeltype, wat het kost om het zelf te doen of een professional in te schakelen, en hoe je groene aanslag in de toekomst voorkomt. Voor de aanpak van onkruid tussen je voegen verwijzen we je naar onze [aparte gids over onkruid bestrijden in tuin en tussen tegels](/blog/onkruid-bestrijden-tuin-tegels) — daar staan zeven methoden vergeleken op kosten, effectiviteit en milieu-impact.
 
 ## Waarom je terras reinigen in het voorjaar? (en wanneer het écht moet)
 
@@ -79,31 +80,11 @@ Reken voor een terras van 50 m² op zo'n 3 tot 5 uur als je het zelf doet met ee
 <img src="/blog/terras-reinigen.002.png" alt="DIY vs professional terras reinigen kosten" width="1200" height="675" loading="lazy" />
 </figure>
 
-## Onkruid tussen tegels: wat werkt (en wat niet)
+## Onkruid in de voegen: kort gezegd
 
-Je kunt je terras nog zo mooi schoonmaken. Zolang er onkruid tussen de voegen groeit, ziet het er binnen een paar weken weer rommelig uit.
+Je kunt je terras nog zo mooi schoonmaken: zolang er onkruid tussen de voegen groeit, ziet het er binnen een paar weken weer rommelig uit. Een handvoegenkrabber van €2,89 helpt, een onkruidbrander van €15 – €40 ook, en professionele voegenreiniging kost €3 – €6 per m². Zout en schoonmaakazijn zijn verboden vanwege bodemschade.
 
-### Wat wél werkt
-
-**Handmatig wieden met een voegenkrabber.** Saai maar effectief. Een handvoegenkrabber kost €2,89, een versie met steel (Gardena) €13,99. Voor grotere terrassen is de SKIL accu-onkruidverwijderaar (€109) een serieuze tijdsbesparing.
-
-**Kokend water.** Giet een volle ketel over de voegen. Het onkruid verschrompelt direct. Herhaal dit om de paar weken in het groeiseizoen. Gratis, geen middelen nodig. Het nadeel: je moet het blijven herhalen, want de wortels overleven het meestal.
-
-**Branden.** Een onkruidbrander (gas of elektrisch) verschroeit het onkruid inclusief een deel van de wortel. Effectiever dan kokend water, maar ook hier moet je om de paar weken over de voegen lopen. Kosten: €15 – €40 voor een gasbrander.
-
-**Professionele voegenreiniging.** Een professional haalt de voegen grondig leeg en kan ze opnieuw vullen met voegzand dat onkruidgroei remt. Kosten: €3 – €6 per m².
-
-### Wat NIET werkt (of niet mag)
-
-**Azijn.** Je leest het overal als huismiddeltje, maar de regels zijn streng. Azijn tegen onkruid: alleen tafelazijn (max 6% azijnzuur) is toegestaan. Schoonmaakazijn is NIET toegestaan. En eerlijk? Tafelazijn werkt matig. Het onkruid verdort bovengronds maar de wortel blijft gewoon zitten.
-
-**Zout.** Zout strooien tegen onkruid is verboden vanwege schade aan bodem en grondwater. Doe het niet, hoe vaak je het ook als tip tegenkomt op internet.
-
-**Chloor of bleekmiddel.** Te agressief voor tegels en funest voor de bodem. Vermijd dit.
-
-### Het eerlijke verhaal
-
-Onkruid in voegen is nooit helemaal te voorkomen. Zelfs de beste methode vereist herhaling. Wie moeite heeft met het bijhouden, doet er goed aan om twee keer per jaar de voegen professioneel te laten reinigen. Duurder op korte termijn, maar minder frustratie op de lange. Voor een uitgebreide aanpak van [onkruid tussen tegels en grind structureel weghouden](/blog/onkruid-bestrijden-tuin-tegels) staat een aparte gids klaar.
+Voor een complete vergelijking van 7 methoden, regelgeving 2026 en wat structureel werkt om voegonkruid weg te houden, lees onze [gids over onkruid bestrijden in de tuin en tussen tegels](/blog/onkruid-bestrijden-tuin-tegels). In deze gids houden we het bij terras-schoonmaak.
 
 ## Wat kost terrasreiniging? DIY vs. professional vergelijken
 
@@ -146,13 +127,11 @@ Hoveniers op Werkspot scoren gemiddeld 4,8/5 (3.991 reviews). Dat geeft vertrouw
 
 Wil je weten wat het in jouw situatie kost? [Vraag een vrijblijvende offerte aan via TuinHub](/offerte) en vergelijk prijzen van professionals in jouw regio.
 
-## Zo voorkom je onkruid en groene aanslag voorgoed
+## Zo voorkom je groene aanslag voorgoed
 
 Voorkomen is minder werk dan genezen. Een paar dingen die echt helpen.
 
 **Impregneer je tegels.** Na het reinigen breng je een impregneermiddel aan. Dit sluit de poriën van de tegel af, waardoor vocht, mos en algen minder grip krijgen. Kosten: €0,50 – €2 per m² als een professional het doet, of €15 – €30 voor een fles doe-het-zelf impregneermiddel voor 10 tot 15 m².
-
-**Gebruik onkruidwerend voegzand.** Na het uitkrabben van de voegen vul je ze opnieuw met polymeer voegzand. Dit hardt licht uit en maakt het voor zaadjes moeilijker om te kiemen. Geen garantie, maar het scheelt flink.
 
 **Zorg voor goede afwatering.** Stilstaand water is de grootste vriend van groene aanslag. Controleer of je terras voldoende afschot heeft, minimaal 1 cm per meter, van het huis af. Blijft er na een regenbui lang water staan op bepaalde plekken? Dan is het slim om die tegels opnieuw te laten leggen. Wat dat in 2026 kost per tegeltype lees je in de gids over [tegels en bestrating laten leggen met arbeids- en materiaalprijzen](/blog/bestrating-laten-leggen-kosten-tegels).
 
@@ -162,6 +141,6 @@ Staan er naast het terras nog meer klussen op de planning? In ons artikel over [
 
 ## Aan de slag met je terras
 
-Je terras weer schoon en onkruidvrij krijgen hoeft geen dagtaak te zijn. Kies de methode die past bij jouw tegeltype, pak het onkruid structureel aan en overweeg impregneren om het resultaat langer vast te houden.
+Je terras weer schoon krijgen hoeft geen dagtaak te zijn. Kies de methode die past bij jouw tegeltype en overweeg impregneren om het resultaat langer vast te houden.
 
 Liever het werk uit handen geven? Via TuinHub vergelijk je snel professionals in jouw buurt. [Vraag een gratis offerte aan](/offerte) en weet binnen een dag wat het kost.

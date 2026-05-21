@@ -106,7 +106,7 @@ Vaak het verschil tussen "leuk plan" en "tuin die werkt". Een beplantingsplan ze
 | Beplantingsplan basis | €175 tot €400 |
 | Beplantingsplan premium | €300 tot €700 |
 
-Wil je alleen je borders aanpakken zonder volledige tuinrenovatie? Lees dan ons artikel over [siertuin border aanleggen en beplantingsplan kosten](/blog/siertuin-border-ontwerp-beplantingsplan-kosten). Voor het concrete stappenplan in de tuin zelf, zie de gids over [een nieuwe border aanleggen](/blog/nieuwe-border-aanleggen).
+Wil je alleen je borders aanpakken zonder volledige tuinrenovatie? Lees dan ons artikel over [siertuin border aanleggen en beplantingsplan kosten](/blog/siertuin-border-ontwerp-beplantingsplan-kosten). Voor het concrete stappenplan in de tuin zelf, zie de gids over [een nieuwe border aanleggen](/blog/siertuin-border-ontwerp-beplantingsplan-kosten).
 
 ### Lichtplan en technische tekening
 

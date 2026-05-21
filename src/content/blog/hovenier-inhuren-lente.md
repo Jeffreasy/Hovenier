@@ -20,7 +20,7 @@ Lentewerk voor een hovenier is breed. De meest gevraagde klussen in maart, april
 - Tuin opruimen na de winter: dood materiaal verwijderen, borders schoonmaken, bladresten afvoeren
 - Gazononderhoud: [verticuteren](/blog/gazon-verticuteren-voorjaar), doorzaaien, bemesten, eerste maaibeurt
 - Snoeien: heesters, vaste planten, klimrozen terugknippen
-- [Borders aanleggen](/blog/nieuwe-border-aanleggen) of herinrichten: grond verbeteren, beplantingsplan, planten zetten
+- [Borders aanleggen](/blog/siertuin-border-ontwerp-beplantingsplan-kosten) of herinrichten: grond verbeteren, beplantingsplan, planten zetten
 - Terras en paden schoonmaken: algen en mos verwijderen, voegen bijvullen
 - Plannen maken voor de rest van het seizoen
 

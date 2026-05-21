@@ -49,7 +49,7 @@ Zorg éérst dat de bodem op orde is. Wied de border goed door voor je iets nieu
 
 Werk wat compost of rijpe tuinaarde door de grond als die hard en dicht is. Vaste planten die vorig jaar te groot zijn geworden, kun je nu verdelen. Een vork erin, helften uit elkaar trekken en herplanten. Een snelle manier om je border aan te vullen zonder geld uit te geven.
 
-Wil je een [nieuwe border aanleggen](/blog/nieuwe-border-aanleggen)? Wacht even tot half april. Dan is de kans op nachtvorst klein genoeg om gevoelige planten buiten te zetten. Winterharde vaste planten, zoals astilbe, geranium of hosta, kun je nu al in de grond. Zij overleven een nachtje lichte vorst zonder moeite.
+Wil je een [nieuwe border aanleggen](/blog/siertuin-border-ontwerp-beplantingsplan-kosten)? Wacht even tot half april. Dan is de kans op nachtvorst klein genoeg om gevoelige planten buiten te zetten. Winterharde vaste planten, zoals astilbe, geranium of hosta, kun je nu al in de grond. Zij overleven een nachtje lichte vorst zonder moeite.
 
 ## 5. De voorjaarsbollen staan al klaar
 

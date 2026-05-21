@@ -109,7 +109,7 @@ Potplanten kun je het hele jaar door planten, behalve bij vorst. Ze zijn duurder
 4. Vul de sleuf aan en druk de grond licht aan rondom elke plant.
 5. Geef direct flink water. Blijf de eerste weken regelmatig gieten, zeker bij droog weer.
 
-Planten die nu in maart of april de grond ingaan, hebben een vol groeiseizoen voor de boeg. Tegen de herfst zie je al verschil. En heb je ruimte over langs de haag? Overweeg dan om er een [border voor aan te leggen](/blog/nieuwe-border-aanleggen). Dat maakt het geheel meteen af.
+Planten die nu in maart of april de grond ingaan, hebben een vol groeiseizoen voor de boeg. Tegen de herfst zie je al verschil. En heb je ruimte over langs de haag? Overweeg dan om er een [border voor aan te leggen](/blog/siertuin-border-ontwerp-beplantingsplan-kosten). Dat maakt het geheel meteen af.
 
 ## Haag snoeien: wanneer en hoe vaak?
 

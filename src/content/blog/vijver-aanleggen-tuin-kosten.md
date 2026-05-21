@@ -52,7 +52,7 @@ Voordat je een beslissing neemt op basis van kosten, is het goed om te weten wat
 
 Geen ruimte of budget voor open water? Een [waterornament of fontein in de tuin](/blog/waterornament-fontein-tuin-kosten) levert het kabbelende geluid en de visuele rust met aanzienlijk minder graafwerk en onderhoud.
 
-Wil je je tuin verder vormgeven rondom de vijver? Het [aanleggen van een nieuwe border](/blog/nieuwe-border-aanleggen) combineert goed met een vijver als middelpunt van de tuin. En als je niet alleen het waterelement maar de hele indeling onder de loep wil nemen, helpt een gericht [tuinontwerp met de bijbehorende kostenposten](/blog/tuin-laten-ontwerpen-kosten) om de zichtlijnen, zonzijde en plantvakken in één plan te krijgen.
+Wil je je tuin verder vormgeven rondom de vijver? Het [aanleggen van een nieuwe border](/blog/siertuin-border-ontwerp-beplantingsplan-kosten) combineert goed met een vijver als middelpunt van de tuin. En als je niet alleen het waterelement maar de hele indeling onder de loep wil nemen, helpt een gericht [tuinontwerp met de bijbehorende kostenposten](/blog/tuin-laten-ontwerpen-kosten) om de zichtlijnen, zonzijde en plantvakken in één plan te krijgen.
 
 ## Materiaalkosten: folie, pomp en filter
 

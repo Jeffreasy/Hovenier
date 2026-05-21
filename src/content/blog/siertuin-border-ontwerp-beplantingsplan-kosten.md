@@ -173,7 +173,7 @@ Deze volgorde werkt voor een border tot 15 m² op een gemiddelde standplaats. Re
 
 **Stap 6. Water geven en mulchen.** Geef direct na het planten ruim water. De eerste 6 tot 8 weken nat houden, ook bij regen. Daarna 1 tot 2 keer per week diep watergeven in plaats van vaak een beetje. Een laag mulch (3 tot 5 cm boomschors) houdt vocht vast en onderdrukt onkruid.
 
-Voor een seizoens-specifiek stappenplan met meer focus op timing in de lente, lees onze [gids over een nieuwe border aanleggen](/blog/nieuwe-border-aanleggen).
+Voor een seizoens-specifiek stappenplan met meer focus op timing in de lente, lees onze [gids over een nieuwe border aanleggen](/blog/vaste-planten-zomerborder-kosten).
 
 ## Hovenier of tuinontwerper: wanneer welke?
 

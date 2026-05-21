@@ -5,6 +5,16 @@
       "has": [{ "type": "host", "value": "tuinhub.nl" }],
       "destination": "https://www.tuinhub.nl/$1",
       "permanent": true
+    },
+    {
+      "source": "/blog/nieuwe-border-aanleggen",
+      "destination": "/blog/siertuin-border-ontwerp-beplantingsplan-kosten",
+      "permanent": true
+    },
+    {
+      "source": "/blog/nieuwe-border-aanleggen/",
+      "destination": "/blog/siertuin-border-ontwerp-beplantingsplan-kosten",
+      "permanent": true
     }
   ],
   "headers": [

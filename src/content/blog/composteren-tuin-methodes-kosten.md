@@ -142,7 +142,7 @@ Dit is waar veel beginners mee worstelen. Je gooit er van alles in en dan... wac
 | Bokashi (fermentatie + nacompostering) | 2-3 weken + 4-6 weken in de grond |
 | Wormenbak | Doorlopend, eerste oogst na 3-4 maanden |
 
-Begin je in april? Dan heb je bij actief composteren voor de herfst bruikbare compost. Precies op tijd om je borders winterklaar te voeden, of om mee te nemen in het plan voor [een nieuwe border aanleggen in het najaar](/blog/nieuwe-border-aanleggen).
+Begin je in april? Dan heb je bij actief composteren voor de herfst bruikbare compost. Precies op tijd om je borders winterklaar te voeden, of om mee te nemen in het plan voor [een nieuwe border aanleggen in het najaar](/blog/siertuin-border-ontwerp-beplantingsplan-kosten).
 
 Wil je meer weten over het onderhouden van je [moestuin](/blog/moestuin-beginnen-aanleg-kosten)? Compost is de beste start.
 

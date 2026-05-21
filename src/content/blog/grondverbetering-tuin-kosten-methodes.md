@@ -143,7 +143,7 @@ De methode hangt af van je grondsoort én van wat erbovenop komt. Een gazon vraa
 
 ### Borders
 
-- 50 tot 100 L compost per m² als mulch (5 tot 10 cm laag) bij [aanleg van een nieuwe border](/blog/nieuwe-border-aanleggen), daarna 2 tot 3 cm jaarlijks.
+- 50 tot 100 L compost per m² als mulch (5 tot 10 cm laag) bij [aanleg van een nieuwe border](/blog/siertuin-border-ontwerp-beplantingsplan-kosten), daarna 2 tot 3 cm jaarlijks.
 - Bij kleibodem: 1 tot 2 zakken basaltmeel per 30 m² inwerken bij aanleg.
 - Bij zandbodem: 1 zak bentoniet per 20 tot 25 m² door de bovenlaag.
 - Niet jaarlijks omspitten. Eén keer goed bij aanleg, daarna mulchen en de fauna doet de rest. Zie ook het [siertuin-border ontwerp en beplantingsplan](/blog/siertuin-border-ontwerp-beplantingsplan-kosten).
